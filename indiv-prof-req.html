@@ -6,6 +6,8 @@
 <!--  To test application on varoius screen reolutions https://screenfly.org/ -->
 <!--  1. Services  2. Products or Skills  3. Addrese are three good headers for company e-profile -->
 <!--  1. category or sector for companies instead title -->
+<!--  1THIS VERSION RUNNING CORRECTLY -->
+
 
 
 
@@ -33,10 +35,10 @@
       </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="pamp-main-codes.html">Main</a></li>
-              <li class="nav-item"><a class="nav-link active" href="startup-prof-sample.html">Sample</a></li>
-           <li class="nav-item"><a class="nav-link active" href="#" id="Helplink">Help</a></li>    
-        
+           <li class="nav-item"><a class="nav-link active" href="pamp-main-codes.html">Main</a></li>
+           <li class="nav-item"><a class="nav-link active" href="indv-prof-sample.html">Sample</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#" id="Helplink">Help</a></li>     
+          
         </ul>
       </div>
     </div>
@@ -50,7 +52,8 @@
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5">
   
    <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
-       <h3 style="text-align: center; text-decoration: underline">Web Profile For Startups</h3> 
+       <h3 style="text-align: center; text-decoration: underline">Web Profile For Individuals</h3> 
+       
       
        
         
@@ -61,53 +64,75 @@
 
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
        
-       <form onsubmit="handleSubmit(event)">
+       <form id="contactForm" onsubmit="handleSubmit(event)">
     <br><br><br> 
-    <img src="sectors-thumb.jpg"><label for="sector">&nbsp&nbspSector:</label><br><br>
-<input list="sectors" id="sector" name="sector" class="form-control" placeholder="Select your Startup sector, or type.">
-<datalist id="sectors">
-  <option value="Kiosks">
-  <option value="Shops">
-  <option value="Periodical Markets">
-   <option value="Manufacturing">
-  <option value="Selling">
-  <option value="Services">
-  <option value="Plumbing">
-  <option value="Electring">
-  <option value="Medicine">
-  <option value="Government">
-  <option value="Financial">
-  <option value="">
+    <img src="title-thumb.jpg"><label for="usertitle">&nbsp&nbspProfession:</label><br><br>
+<input list="usertitles" id="usertitle" name="usertitle" class="form-control" placeholder="Select your profession, or type.">
+<datalist id="usertitles">
+  <option value="Banker">
+  <option value="Engineer">
+  <option value="Doctor">
+  <option value="Student">
+  <option value="Professor">
+  <option value="Self Employed">
+  <option value="Shopkeeper">
+  <option value="Agent">
+  <option value="Nurse">
+  <option value="Technician">
+  <option value="Retired">
+  <option value="Volunteer">
 </datalist>  
-
   <br><br>
-  <img src="name-thumb.jpg"><label for="username">&nbsp&nbspTitle:</label><br><br>
-    <input type="text" id="username"  class="form-control"  required><br><br> 
+   <img src="name-thumb.jpg"><label for="username">&nbsp&nbspName:</label><br><br>
+    <input type="text" id="username"  class="form-control"  required><br><br>  
+   
      <img src="email-thumb.jpg"><label for="useremail">&nbsp&nbspEmail:</label><br><br>
     <input type="text" id="useremail" class="form-control"><br><br>
-    <img src="biography-thumb.jpg"><label for="bio">&nbsp&nbspProfile: Max 10 lines.</label><br><br>
-    <textarea id="bio" rows="7" class="form-control" cols="30" ></textarea><br><br>
-   <img src="product-thumb.jpg"> <label for="qlf1">&nbsp&nbspProducts or Skills:</label><br><br>
+    <img src="biography-thumb.jpg"><label for="bio">&nbsp&nbspBiography: Max 10 lines.</label><br><br>
+    <textarea id="bio" rows="10" class="form-control" ></textarea><br><br>
+    <img src="qlf-thumb1.png"><label for="qlf1">&nbsp&nbspQualifications:</label><br><br>
     <input type="text" id="qlf1" class="form-control" ><br>
 <!--    <label for="qlf2">Second Qualification:</label><br>  -->   
- <!--    <input type="text" id="qlf2" size="40" ><br>  -->   
+ <!--    <input type="text" id="qlf2" size="30" ><br>  -->   
 <input type="search" id="qlf2" name="search" placeholder=""  class="form-control"/><br>
  <input type="search" id="qlf3" name="search" placeholder=""  class="form-control"/><br>
 <input type="search" id="qlf4" name="search" placeholder=""  class="form-control"/><br>
 <input type="search" id="qlf5" name="search" placeholder=""  class="form-control"/><br><br>
-  <img src="services-thumb2.png"><label for="exp1">&nbsp&nbspServices:</label><br><br>
-    <input type="text" id="exp1" class="form-control" ><br>
+ <img src="services-thumb2.png"><label for="exp1">&nbsp&nbspExperiences:</label><br><br>
+    <input type="text" id="exp1"  class="form-control" ><br>
 <input type="search" id="exp2" name="search" placeholder=""  class="form-control"/><br>
  <input type="search" id="exp3" name="search" placeholder=""  class="form-control"/><br>
 <input type="search" id="exp4" name="search" placeholder=""  class="form-control"/><br>
 <input type="search" id="exp5" name="search" placeholder=""  class="form-control"/><br><br>
- <img src="address-thumb.jpg"><label for="adr1">&nbsp&nbspLocation:</label><br><br>
+ <img src="address-thumb.jpg"><label for="adr1">&nbsp&nbspAddress:</label><br><br>
     <input type="text" id="adr1" class="form-control" ><br>
 <input type="search" id="adr2" name="search" placeholder=""  class="form-control"/><br>
  <input type="search" id="adr3" name="search" placeholder=""  class="form-control"/><br>
- <input type="search" id="adr4" name="search" placeholder=""  class="form-control"/><br>
- <input type="search" id="adr5" name="search" placeholder=""  class="form-control"/><br><br>
+<input type="search" id="adr4" name="search" placeholder=""  class="form-control"/><br>
+<input type="search" id="adr5" name="search" placeholder=""  class="form-control"/><br><br>
     <button type="submit" style="font-weight: 550; font-size: 18px">Submit</button>
+  </form>
+
+   <form id="hcontactForm" action="https://xxxformspree.io/f/myzbzwnv" method="POST">
+  <input type="hidden" id="husertitle" name="husertitle">
+   <input type="hidden" id="husername" name="husername">
+ <input type="hidden" id="huseremail" name="huseremail">
+ <input type="hidden" id="hbio" name="hbio">
+  <input type="hidden" id="hqlf1" name="hqlf1">
+  <input type="hidden" id="hqlf2" name="hqlf2">
+  <input type="hidden" id="hqlf3" name="hqlf3">
+  <input type="hidden" id="hqlf4" name="hqlf4">
+  <input type="hidden" id="hqlf5" name="hqlf5">
+ <input type="hidden" id="hexp1" name="hexp1">
+  <input type="hidden" id="hexp2" name="hexp2">
+  <input type="hidden" id="hexp3" name="hexp3">
+   <input type="hidden" id="hexp4" name="hexp4">
+  <input type="hidden" id="hexp5" name="hexp5">
+ <input type="hidden" id="hadr1" name="hadr1">
+  <input type="hidden" id="hadr2" name="hadr2">
+  <input type="hidden" id="hadr3" name="hadr3">
+  <input type="hidden" id="hadr4" name="hadr4">
+  <input type="hidden" id="hadr5" name="hadr5">
   </form>
 
   
@@ -133,8 +158,10 @@
        <div id="VR1" class="row">
                  <div id="VR1_D1" class="col-sm-12">
                 
-       <!--       <img src="company1.png" class="img-fluid"   alt="fromphp" >   -->  
-              <img src="kiosk.jpg" class="img-fluid"   alt="fromphp" >  
+      <!--        <img src="individualjp1.jpg" class="img-fluid"   alt="fromphp" >   -->   
+               <img src="face-girl2.jpg" class="img-fluid"   alt="fromphp" >  
+                
+                
                </div> 
           
         </div>  
@@ -157,10 +184,11 @@
         <div id="VR2" class="row">
             <div id="VR2_D1" class="col-sm-12"> 
                   <br>
-                  <p id="VP2-1">third missing</p>  
-                  <p id="VP1">first missing</p>
-                  <p id="VP2">SEcond Missing</p>  
-                  <a href="mailto:you@example.com" class="btn">Email Us</a>
+                  <p id="VP2-1"></p>
+                  <p id="VP1"></p>
+                  <p id="VP2"></p>  
+                   
+                  <a href="mailto:you@example.com" class="btn">email me</a>
                   <br>
              
                               
@@ -206,13 +234,13 @@
            <div id="VR3_D1" class="col-sm-12">
                 <div id="VR3-D1-BIO"></div>       
                   <br><br>
-                <p id="VP4" ></p><img src="product-thumb.jpg"><br>
-                <ul id="qlflist"></ul>  
-                <br>
-                <p id="VP6" ></p><img src="services-thumb2.png"><br>      
-                <ul id="explist"></ul>  
-                <br>                                    
-                <p id="VP8" ></p><img src="address-thumb.jpg"><br>
+                <p id="VP4" ></p><img src="qlf-thumb1.png"><br>
+                <ul id="qlflist">   </ul>  
+                <br><br>
+                <p id="VP6" ></p><img src="services-thumb2.png"><br>
+                <ul id="explist">   </ul>  
+                <br><br>                                    
+               <p id="VP8" ></p><img src="address-thumb.jpg"><br>
                 <ul id="adrlist"> </ul>        
                 
           <!--       <a href="#" class="btn btn-primary btn-sm">Read More</a>   -->
@@ -238,17 +266,18 @@
 
    document.getElementById("Helplink").addEventListener("click", function(event) {
   event.preventDefault(); // stop link navigation
-alert("Hello! Please read following for a free web profile for your startup. \n\n" +
+  alert("Hello! Please read following fora free web profile for you. \n\n" +
            "First view the sample profile by clicking at 'sample' tab \n" +
-           "and if you like it then complete your startup details \n" +
+           "and if you like it then complete your details \n" +
            "in the Profile request form & click submit button. \n" +
-            "We will construct and deploy your startup web profile on  \n" +
+            "We will construct and deploy your web profile on  \n" +
              "world’s most widely adopted developer platform GitHub \n" +
-           "and send your startup profile weblink to you through your email. \n" +
-           "Your startup Photo will replace the standard phto, if you send us at  \n" +
+           "and send your profile weblink to you through your email. \n" +
+           "Your Photo will replace the standard phto, if you send us at  \n" +
            "asadsayeed@hotmail.com"
 );
 });
+
         //
               //   alert("Right-click is disabled on this page.");
 //    document.addEventListener('contextmenu', function (e) {
@@ -261,18 +290,25 @@ alert("Hello! Please read following for a free web profile for your startup. \n\
       // Prevent the form from reloading the page
       event.preventDefault();
       // Get user input   
-      let name = document.getElementById("username").value;
-       let email = document.getElementById("useremail").value;
+      let pusertitle = document.getElementById("usertitle").value;
+       let pusername = document.getElementById("username").value;
+       let puseremail = document.getElementById("useremail").value;
        let pbio = document.getElementById("bio").value;
      let pqlf1 = document.getElementById("qlf1").value;
       let pqlf2 = document.getElementById("qlf2").value;
        let pqlf3 = document.getElementById("qlf3").value;
+      let pqlf4 = document.getElementById("qlf4").value;
+       let pqlf5 = document.getElementById("qlf5").value;
       let pexp1 = document.getElementById("exp1").value;
       let pexp2 = document.getElementById("exp2").value;
        let pexp3 = document.getElementById("exp3").value;
+      let pexp4 = document.getElementById("exp4").value;
+       let pexp5 = document.getElementById("exp5").value;
       let padr1 = document.getElementById("adr1").value;
       let padr2 = document.getElementById("adr2").value;
        let padr3 = document.getElementById("adr3").value;
+      let padr4 = document.getElementById("adr4").value;
+       let padr5 = document.getElementById("adr5").value;
 
  
  
@@ -280,20 +316,20 @@ alert("Hello! Please read following for a free web profile for your startup. \n\
   //    document.getElementById('P1').innerHTML = "Hello, " + email + "!";
       document.getElementById('VP1').innerHTML = document.getElementById("username").value;
        document.getElementById('VP2').innerHTML = document.getElementById("useremail").value;
-       document.getElementById('VP2-1').innerHTML = document.getElementById("sector").value;    
+       document.getElementById('VP2-1').innerHTML = document.getElementById("usertitle").value;    
         
     
 
 
 
              
-            document.getElementById('VP4').innerHTML = '<Normal>Products/Skills:&nbsp&nbsp ' +                                                                                                               
+            document.getElementById('VP4').innerHTML = '<Normal>Qualification:&nbsp&nbsp ' +                                                                                                               
                                                           '</Normal>';
 
-            document.getElementById('VP6').innerHTML = '<Normal>Services:&nbsp&nbsp ' +                                                                                                               
+            document.getElementById('VP6').innerHTML = '<Normal>Experience:&nbsp&nbsp ' +                                                                                                               
                                                           '</Normal>';
     
-         document.getElementById('VP8').innerHTML = '<Normal>Company Location:&nbsp&nbsp ' +                                                                                                               
+         document.getElementById('VP8').innerHTML = '<Normal>Address:&nbsp&nbsp ' +                                                                                                               
                                                           '</Normal>';
 
         document.getElementById('VR3-D1-BIO').innerHTML = document.getElementById("bio").value;       
@@ -326,7 +362,7 @@ alert("Hello! Please read following for a free web profile for your startup. \n\
      document.getElementById("qlflist").appendChild(node);
   }
 
- if (document.getElementById("qlf4").value === "") {    
+  if (document.getElementById("qlf4").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -335,7 +371,7 @@ alert("Hello! Please read following for a free web profile for your startup. \n\
      document.getElementById("qlflist").appendChild(node);
   }
 
- if (document.getElementById("qlf5").value === "") {    
+  if (document.getElementById("qlf5").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -372,7 +408,7 @@ alert("Hello! Please read following for a free web profile for your startup. \n\
      document.getElementById("explist").appendChild(node);
   }
 
-if (document.getElementById("exp4").value === "") {    
+  if (document.getElementById("exp4").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -381,7 +417,7 @@ if (document.getElementById("exp4").value === "") {
      document.getElementById("explist").appendChild(node);
   }
 
-if (document.getElementById("exp5").value === "") {    
+  if (document.getElementById("exp5").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -417,7 +453,7 @@ if (document.getElementById("exp5").value === "") {
      document.getElementById("adrlist").appendChild(node);
   }
 
- if (document.getElementById("adr4").value === "") {    
+  if (document.getElementById("adr4").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -426,7 +462,7 @@ if (document.getElementById("exp5").value === "") {
      document.getElementById("adrlist").appendChild(node);
   }
 
- if (document.getElementById("adr5").value === "") {    
+  if (document.getElementById("adr5").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -437,10 +473,31 @@ if (document.getElementById("exp5").value === "") {
  
    document.getElementById("container-div-second").style.display = "block";
    document.getElementById("container-div").style.display = "none";
-   alert("Review the created Digital page and contact us for its deployment on web");
-    
-                                   
+   alert("Review the created Digital page and contact us for its deployment on web");                                
                                                       
+
+  // Move data to Form 2
+    document.getElementById("husertitle").value = pusertitle;
+    document.getElementById("husername").value = pusername;
+    document.getElementById("huseremail").value = puseremail;
+    document.getElementById("hbio").value = pbio;
+    document.getElementById("hqlf1").value = pqlf1;
+     document.getElementById("hqlf2").value = pqlf2;
+     document.getElementById("hqlf3").value = pqlf3;
+     document.getElementById("hqlf4").value = pqlf4;
+     document.getElementById("hqlf5").value = pqlf5;
+     document.getElementById("hexp1").value = pexp1;
+    document.getElementById("hexp2").value = pexp2;
+    document.getElementById("hexp3").value = pexp3;
+    document.getElementById("hexp4").value = pexp4;
+    document.getElementById("hexp5").value = pexp5;
+     document.getElementById("hadr1").value = padr1;
+     document.getElementById("hadr2").value = padr2;
+     document.getElementById("hadr3").value = padr3;
+      document.getElementById("hadr4").value = padr4;
+      document.getElementById("hadr5").value = padr5;
+
+
 
     }
 
