@@ -15,14 +15,11 @@
 
 .custom-container {
    /*   background-color: #f8f9fa;  */   
-      border: 2px solid #ddd;
-      border-radius: 30px;
+      border: 0px solid #ddd;
+      border-radius: 0px;
       padding: 0px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-     background-color: white;   
-     background-color: #91C7EB;
-     background-color: black; 
-     background-image:  url(black_background_wood-wallpaper.jpg);
+      
+     
       
     }
 
@@ -38,14 +35,14 @@
  /* #46D1F3 is a light blue color */
 border: 0px solid #333;
   border-radius: 0px;
-text-align: center;
+text-align: left;
 font-family: Arial;
 font-size:  16px;
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
 /* font-size: 2.6vw;  */
   font-weight: 1000;
- Color: white;   
+ Color: Black;   
   }
 
 #R2-D2 {
@@ -100,7 +97,7 @@ font-size:  18px;
  /* font-size: 12.5vh; */
 /* font-size: 2.6vw;  */
   font-weight: 1000;
- Color: white;   
+ Color: Black;   
  /*    background-color: transparent;  */
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
@@ -113,7 +110,7 @@ font-family: Arial;
  /* font-size: 12.5vh; */
 /* font-size: 2.2vw;   */
  font-weight: 1000;
- Color: white;   
+ Color: Black;   
  /*    background-color: transparent;  */
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
