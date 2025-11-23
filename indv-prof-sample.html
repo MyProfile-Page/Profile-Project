@@ -163,7 +163,9 @@
   <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
   <script>
-alert("Hello! Please read following carefully \n\n" +
+ document.getElementById("Helplink").addEventListener("click", function(event) {
+ //  event.preventDefault(); // stop link navigation
+  alert("Hello! Please read following carefully \n\n" +
            "Select or Type your details like Title, name, etc in the data form. \n" +
             "Type one or more lines (maximum 5) for your qualification, \n" +
              "experience and address depending on your situation.\n" +
@@ -174,8 +176,6 @@ alert("Hello! Please read following carefully \n\n" +
           "Your Photo will replace the standard phto, if you send us."
 );
 });
-   document.getElementById("Helplink").addEventListener("click", function(event) {
- //  event.preventDefault(); // stop link navigation
  
 
       document.getElementById('VP1').innerHTML = "Savanah Juliet Yuki";
