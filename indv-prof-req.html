@@ -63,7 +63,9 @@
 
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
        
-       <form id="contactForm" onsubmit="handleSubmit(event)">
+ <!--      <form id="contactForm" onsubmit="handleSubmit(event)">   -->   
+        <form id="contactForm" action="https://formspree.io/f/myzbzwnv" method="POST">
+
     <br><br><br> 
     <img src="title-thumb.jpg"><label for="usertitle">&nbsp&nbspProfession:</label><br><br>
 <input list="usertitles" id="usertitle" name="usertitle" class="form-control" placeholder="Select your profession, or type.">
@@ -72,7 +74,7 @@
   <option value="Engineer">
   <option value="Doctor">
   <option value="Student">
-  <option value="Professor">
+  <option value="Teacher">
   <option value="Self Employed">
   <option value="Shopkeeper">
   <option value="Agent">
