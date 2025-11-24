@@ -7,16 +7,9 @@
  
 
 .body_cls {
-          background-color: lightyellow;
+          background-color: lightblue;
           line-height: 1.5;
             }
-
- .container {
-     
-      border: 0px solid #ddd;
-     
-     
-    }
 
  .custom-container {
       background-color: #f8f9fa;
@@ -24,10 +17,8 @@
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 20px; /* spacing from top */
-      margin-bottom: 20px; /* spacing from bottom */
-      background-color: lightblue;
-      
+      margin-top: 40px; /* spacing from top */
+      margin-bottom: 40px; /* spacing from bottom */
     }
 
 #R1_D1 {
@@ -63,10 +54,10 @@
 #P1 {
 font-family: calibri;
 font-size:  22px;
-font-weight: 600;
- Color: darkred;   
+font-weight: 500;
+ Color: black;   
+text-decoration: underline;
 
-text-align: center;
   }
 
 
@@ -75,20 +66,20 @@ text-align: center;
 
 #P2 {
 font-family: calibri;
-font-size:  22px;
+font-size:  18px;
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
-  font-weight: 600;
- Color: darkred;   
+  font-weight: 400;
+ Color: black;   
  /*    background-color: transparent;  */
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
    /* border: solid 0.0vh red; */
-text-align: center;
+text-align: left;
   }
 
 #P3 {
-font-family: Arial;
+font-family: calibri;
 font-size:  22px;
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
@@ -115,7 +106,7 @@ font-size:  18px;
   }
 
 #P5 {
-font-family: Arial;
+font-family: calibri;
  font-size: 22px;
  /* font-size: 12.5vh; */
  font-weight: 500;

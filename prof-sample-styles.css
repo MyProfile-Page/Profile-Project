@@ -217,6 +217,9 @@ text-decoration: underline;
  /*  background: linear-gradient(to right, #007bff, #00c6ff);  */
   /* #46D1F3 is a light blue color */
  text-align: left;
+font-family: calibri;
+font-size:  17px;
+font-weight: 400;
   
   }
 
@@ -232,24 +235,24 @@ text-decoration: underline;
 
 #adrlist {
   list-style-type: none; /* Remove bullets */
-font-family: Arial;
-font-size:  16px;
-font-weight: 200;
+font-family: calibri;
+font-size:  17px;
+font-weight: 400;
  Color: black;   
 }
 
 #qlflist {
- font-family: Arial;
-font-size:  16px;
-font-weight: 200;
+font-family: calibri;
+font-size:  17px;
+font-weight: 400;
  Color: black;   
 }
 
 #explist {
   
-font-family: Arial;
-font-size:  16px;
-font-weight: 200;
+font-family: calibri;
+font-size:  17px;
+font-weight: 400;
  Color: black;   
 }
 

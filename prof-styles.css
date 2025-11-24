@@ -232,24 +232,24 @@ text-decoration: underline;
 
 #adrlist {
   list-style-type: none; /* Remove bullets */
-font-family: Arial;
-font-size:  16px;
+font-family: calibri;
+font-size:  17px;
 font-weight: 400;
  Color: black;   
 }
 
 #qlflist {
   
-font-family: Arial;
-font-size:  16px;
+font-family: calibri;
+font-size:  17px;
 font-weight: 400;
  Color: black;   
 }
 
 #explist {
   
-font-family: Arial;
-font-size:  16px;
+font-family: calibri;
+font-size:  17px;
 font-weight: 400;
  Color: black;   
 }
