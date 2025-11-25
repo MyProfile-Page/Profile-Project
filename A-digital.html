@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
+<! ––-
+   
+   ****   The 2 meta and 2 links above and their order are necessary.
+          never specify division height nor try to change in javascript.  
+
+          R1
+               C1
+                 C1.R1
+                  BOX1
+                 C1.R2
+                  BOX2
+                 C2.R1
+                  BOX3 
+               C2
+                C2.R1
+                  BOX4
+                C2.R2
+                  BOX5
+                                
+–->
+ 
+  <head>
+    <style type="text/css">
+        .BDR1 { border: 0px solid black;}
+        .BDR2 { border: 0px solid red;}
+        .C-UD4 {width: 98%; margin-top: 0vh; 
+                 display: block; margin-left: 0.2%; }
+        .C-UD5 {width: 20%; height: 4vh; margin-top: 0.5vh; background-color: white; margin-left: 0.5%;
+                border-radius: 0.6vh 0.6vh 0.0vh 0.0vh;}
+        .C-UD5-1 {width: 98%; margin-top: 0vh; background-color: white; margin-left: 0.5%; margin-bottom: 1vh;}
+        .r1-1 { color:blue; text-shadow: 0.35vh 0.2vh black; font-size: 4.0vh;}
+        .r2-1 { background-color: white; color: black; font-size: 2.3vh; font-weight: bold;}
+        .r3-1 { background: linear-gradient(to left, #30CFD0 0%, #330867 100%);}
+      
+        .shd-1 { color: white; font-size: 2.6vh; font-weight: bold; margin-top: 0vh;}
+        .shd-2 { color: white; font-size: 2.3vh; font-weight: bold;}
+        
+        .C-BOX1 { border: 0px solid yellow;  margin-left:5%; }
+        .P-BOX1 { border: 0px solid WHITE; color: white; font-size: 2vh;  margin-top:4.5vh;
+                  margin-left:5%; }              
+        .I-BOX1 { border: 0px solid red; width: 45%; margin-top:5vh; height: 17.5vh; padding-right: 2%;}        
+
+        .C-BOX2 { border: 0px solid red; margin-left:5%;}
+        .P-BOX2 { border: 0px solid yellow; color: white; font-size: 2.0vh;  padding-top:3%; margin-left:5%;
+                  }
+        .I-BOX2 { border: 0px solid red; width: 50%; padding-left:2%; margin-bottom: 2vh; margin-top:2vh;
+                  filter: brightness(200%); filter: contrast(150%); height: 11.5vh; padding-right: 2%; }
+        .C-BOX3 { border: 0px solid orange; height: 70vh;}
+        .I-BOX3 { border: 0px solid red; width: 70%; margin-left:15%; margin-top:5vh; margin-bottom:1vh; 
+                  transform: rotate(0deg); display: block; }
+ 
+        .C-BOX4 { width: 90%;  }
+        .P-BOX4 { margin-left:11%; color: white; font-size: 2.0vh; width: 80%; }
+
+        
+        .C-BOX5 { border: 0px solid black;}
+        .P-BOX5 { border: 0px solid yellow; color: black; font-size: 2.0vh; width: 80%; padding-top:1%; padding-bottom:2%;
+                  margin-left:2%; text-align: left; }
+        .I-BOX5 { border: 0px solid red; width: 30%; margin-left:1%; margin-right:4%; margin-top:4%; margin-bottom:0%;
+                  filter: brightness(200%); filter: contrast(150%); }    
+        .body_cls { background-image: url("black_background_light-wallpaper.jpg"); background-repeat: no-repeat; background-size: cover; }
+        .tl_cls { background-image: url("white-marble.jpg"); background-repeat: no-repeat; background-size: cover; }
+    </style>
+</head>
+<body oncontextmenu="return false" class="tl-cls" >  
+  <div class="container display:flex" ><br>
+            <div class="row" >
+                      <div class="r1-1 col-sm-12 text-left">The Digital Transformation
+                      </div>
+            </div><br>
+            <div class="row">
+                      <div class="r2-1 col-sm-12" >
+                                <a href="under-digital.html">Home&nbsp&nbsp&nbsp</a> <a href="under-digital.html">
+                                   About Us&nbsp&nbsp&nbsp
+                                </a>
+                                <a href="under-digital.html">Our Services&nbsp&nbsp&nbsp</a> <a href="under-digital.html">
+                                   Portfolio&nbsp&nbsp&nbsp
+                                </a>
+                      </div>
+             </div><br>
+             <div class="row " >
+                       <div class=" r3-1 col-sm-6" >
+                                 <div  class="row">           
+                                            <div class="col-sm-6">
+                                                      <div class="row">
+ <! ––-------------------------------------------BOX 1----------------------------------------------------------------  –>
+                                                                <div class="col-sm-12 C-BOX1 " >                                          
+                                                                          <img id="I-BOX1" src="I-DIG-8.jpg"
+                                                                          class="img-rounded img-fluid pull-left I-BOX1 "
+                                                                          title = "ins">
+                                                                          <p id = "P-BOX1" class= "P-BOX1">
+                                                                          </p>  
+                                                                </div>                 
+ <! ––-------------------------------------------END OF BOX1-----------------------------------------------------------  –>
+                                                     </div><br>>                                  
+                                                     <div class="row">
+ <! ––--------------------------------------------BOX 2---------------------------------------------------------------  –>
+                                                               <div class="col-sm-12 C-BOX2">                                                          
+                                                                         <img id = "I-BOX2" src="I-DIG-5.png"
+                                                                         class="img-rounded img-fluid pull-left I-BOX2" 
+                                                                         title = "ins">
+                                                                         <p id="P-BOX2" CLASS="P-BOX2">                                                                          
+                                                                         </p>
+                                                                </div>
+ <! ––--------------------------------------------END OF BOX2----------------------------------------------------------  –>                  
+                                                     </div>  
+                                           </div>  
+ <! ––---------------------------------------------BOX 3--------------------------------------------------------------  –> 
+                         <div class="col-sm-6 C-BOX3 ">                                  
+                                   <img id="I-BOX3" src="I-DIG-7.png" class="I-BOX3 img-rounded img-fluid pull-center "
+                                   title = "ins">                      
+                         </div> 
+ <! ––---------------------------------------------END OF BOX3---------------------------------------------------------  –>         
+         </div>        
+       </div>     
+                 <div class=" col-sm-6" style=" background-color: #054282; border: 0px solid black;  "><br>       
+                           <div class="row" style="border: 0px solid green;">
+ <! ––---------------------------------------------BOX 4--------------------------------------------------------------  –>
+                                     <div class="col-sm-12 C-BOX4 BDR1 ">
+                                           <div class="BDR2 C-UD4">
+                                               <h2 class="text-center shd-1 BDR1">START YOUR DIGITAL TRANSFORMATION TODAY
+                                               </h2> 
+                                               <h2 class="text-center shd-2">Digital Transformation has never been so rewarding 
+                                               </h2>                       
+                                               <p id="P-BOX4" class="P-BOX4 BDR1" >    
+                                               </p>
+                                                
+                                          </div>
+                                    </div>
+ <! ––----------------------------------------------END OF BOX4----------------------------------------------------------  –>
+                          </div>        
+                          <div class="row" style="border: 0px solid black; ">
+ <! ––----------------------------------------------BOX 5-------------------------------------------------------------  –>
+                                    <div class="col-sm-12 C-BOX5 "> 
+                                       <div class=" BDR1 C-UD5">
+                                       </div>
+                                       <div class="BDR1 C-UD5-1">                
+                                              <img id="I-BOX5" src="I-DIG-4.png" class="img-rounded img-fluid pull-right I-BOX5"
+                                              title = "ins">
+                                              <p id="P-BOX5" class="P-BOX5" >                  
+                                              </p>
+                                       </div>
+                                    </div>
+<! ––----------------------------------------------END OF BOX5--------------------------------------------------------  –>
+                         </div>
+                 </div>
+     </div>     
+   </div>
+ <script type="text/javascript"> 
+          
+          
+        
+
+        
+          document.getElementById("P-BOX4").textContent = 'Now, more than ever, digital transformation is a critical' +
+                                                          ' transformation for all businesses, brands, and enterprises.' +
+                                                          ' Keep in mind that digital transformation can be a difficult' + 
+                                                          ' transition for some businesses. With the right communication,' +
+                                                          ' tools, and leadership. As digital transformation and innovations' +
+                                                          ' emerge more rapidly, industries are going to be more connected' +
+                                                          ' than ever. Find out more about how brands are helping during a crisis.';
+           
+          document.getElementById("P-BOX1").textContent = 'At the moment, virtually every job is more tech-enabled than it' +
+                                                          ' was a few months ago due to either remote changing customer needs,' +
+                                                          ' government restrictions, or a host of other factors. This is creating' +
+                                                          ' tech support needs at an unprecedented scale.';     
+          document.getElementById("P-BOX2").textContent = 'Digital Transformation video Transmission. can be viewed on any' +
+                                                          ' platform but better response on Android';
+          document.getElementById("P-BOX5").textContent = 'Luckily, Google is offering free access to advanced Hangouts Meet' +
+                                                          ' with video conferencing mostly. Employee experience of digital' +
+                                                          ' technology has gone from "nice to have" to "the only way work gets' +
+                                                          ' done We live in a rapidly progressing world where technology is' +
+                                                          ' developing and progressing every single day. It changes and improves' +
+                                                          ' at a rate which man could not have once predicted, but one general' +
+                                                          ' concept of technology has remained fundamentally the same.';
+                                                          
+                                                          
+
+         
+           var d = document.getElementById("P-BOX4");
+           if( screen.height < 600 )  
+           {           
+           
+           } 
+
+           if( screen.height > 600 )  
+           {
+           
+           }
+        
+     
+                                
+         
+</script>
+ </body>
+</html>
