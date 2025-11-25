@@ -443,7 +443,7 @@ font-size:  18px;
      }
 
 
-#sh-ot-image1 {  width: 25%;  float: left; 
+#sh-ot-image1 {  width: 25%;  float: right; 
   
 /*    Image at left    */
         filter: brightness(200%);
