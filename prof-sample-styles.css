@@ -443,6 +443,41 @@ font-size:  18px;
      }
 
 
+#sh-ot-image1 {  width: 25%;  float: left; 
+  
+/*    Image at left    */
+        filter: brightness(200%);
+  filter: contrast(100%);  
+   border: solid 8px white;  
+
+ 
+      -webkit-shape-outside: url(individualjp1.jpg);  
+         
+   -webkit-shape-margin: 22%;
+  shape-image-threshold: 5.5; 
+   -webkit-shape-image-threshold: 5.5; 
+ 
+}
+
+.sh-ot-text4 { text-align: left;
+  font-family: 'calibri';
+  font-size: 18px;
+  font-weight: 400;
+  Color: black;
+  border: solid 0.0vh maroon;
+}
+
+#container4 {  position: absolute;
+/*  width: 34%;   */
+/*   height: 51vh;   */
+/*  Top: 27vh;   */
+/*  left: 31%;   */
+  border: solid 0.0vh red;
+/* background-color: #1a1a1a;  */
+}
+
+
+
 
 
 

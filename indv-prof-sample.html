@@ -21,7 +21,15 @@
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">  
     <meta charset="UTF-8"> 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My Responsive Web Page</title>
+   <title></title>
+
+
+ 
+     
+  
+    
+
+
    
 </head>
 <body class = "body_cls";>
@@ -51,21 +59,40 @@
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5">
 
    <br>
-  <!-- FIRST  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
-      
-       <div id="VR1" class="row">
-                 <div id="VR1_D1" class="col-sm-12">
-                
-      <!--        <img src="individualjp1.jpg" class="img-fluid"   alt="fromphp" >   -->   
-               <img src="singlemanbusiness.jpg" class="img-fluid"   alt="fromphp" >  
-                
-                
-               </div> 
-          
-        </div>  
   
-     <!-- FIRST ROW ENDS --> 
+ <!-- SECOND ROW (One Column) One header & one Paragraph in the only column -->
 
+        <div id="VR2" class="row">
+            <div id="VR2_D1" class="col-sm-12"> 
+                  <br>
+                  <p id="VP2-1"></p>
+                  <p id="VP1"></p>
+               
+             
+                              
+            </div>  
+       </div>   
+
+   <!-- SECOND ROW ENDS -->
+
+ <!-- TEXT WRAP STARTS -->
+<div id="VRX" class="row">
+                  
+           <div id="VRX_D1" class="col-sm-12">
+<div class="container4">
+  <!--    <img src="IND-MED.jpg" class = "sh-ot-image1" title = "sh-ot-image1" alt="error loading" ; />  -->
+      <img id = "sh-ot-image1"  src="individualjp1.jpg" class="img-fluid"   alt="fromphp" > 
+          
+          <P  class = "sh-ot-text4">I am Chief Accounting Manager at New Technologies. I have responsibility for keeping records of all company transactions. Before joining New Technologies, I worked at several companies building my skills in developing computerized accounting systems. Prior to that I served as a junior and then as a senior officer in many small companies in USA for more than four years. During my initial job assignments I kept on studying in vocational colleges to increase my knowledge base. At present I am very happy with my job and love to meet new people.
+          </P>
+   
+    
+</div>
+
+   </div>
+         </div>
+
+<!-- TEXT WRAP ENDS -->
 
 
 
@@ -82,8 +109,7 @@
         <div id="VR2" class="row">
             <div id="VR2_D1" class="col-sm-12"> 
                   <br>
-                  <p id="VP2-1"></p>
-                  <p id="VP1"></p>
+                 
                   <p id="VP2"></p>  
                    
                   <a href="mailto:you@example.com" class="btn">email me</a>
@@ -122,23 +148,7 @@
 
 
 
-
-
-
-   <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
-       <br>
-       <div id="VR3" class="row">
-                  
-           <div id="VR3_D1" class="col-sm-12">
-                <div id="VR3-D1-BIO">
-                </div>       
-                  <br><br>
-       
-               
-          </div>
-         </div>
-  
-     <!-- THIRD ROW ENDS -->   
+   
 
   <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
 
@@ -261,17 +271,7 @@
          document.getElementById('VP8').innerHTML = '<Normal>Address:&nbsp&nbsp ' +                                                                                                               
                                                           '</Normal>';
 
-        document.getElementById('VR3-D1-BIO').innerHTML =  '<Normal>' +      
-                                                         ' I am Chief Accounting Manager at New Technologies. ' +
-                                                         '  I have responsibility for keeping records of all company transactions. ' +
-                                                         ' Before joining New Technologies, I worked at several companies ' + 
-                                                         ' building my skills in developing computerized accounting systems. ' +
-                                                         ' Prior to that I served as a junior and then as a senior officer in ' +
-                                                         ' many small companies in USA for more than four years. During my ' +
-                                                         ' initial job assignments I kept on studying in vocational colleges to ' +
-                                                         ' increase my knowledge base. At present I am very happy with my job ' +
-                                                         ' and love to meet new people. ' +                                                                                                         
-                                                          '</Normal>';       
+       
        
       const node1 = document.createElement("li");
        const textnode1 = document.createTextNode("Secondary School Certificate.");
