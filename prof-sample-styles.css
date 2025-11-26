@@ -478,7 +478,7 @@ font-size:  18px;
 }
 
  .C-BOX5 { border: 0px solid black;}
- #P-BOX5 { border: 0px solid yellow; color: black; font-family: 'calibri';  font-size: 18px; font-weight: 400;  width: 97%; padding-top:1%; padding-bottom:2%;
+ #P-BOX5 { border: 0px solid yellow; color: black; font-family: 'calibri';  font-size: 18px; font-weight: 400;  width: 97%; padding-top:0%; padding-bottom:0%;
                   margin-left:2%; text-align: left; }
   #I-BOX5 { border: 0px solid red; width: 30%; margin-left:2%; margin-right:3%; margin-top:2%; margin-bottom:2%;
                   filter: brightness(200%); filter: contrast(150%);  }     
