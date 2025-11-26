@@ -474,7 +474,14 @@ font-size:  18px;
 /*  left: 31%;   */
   border: solid 0.0vh red;
 /* background-color: #1a1a1a;  */
+
 }
+
+ .C-BOX5 { border: 2px solid black;}
+ #P-BOX5 { border: 2px solid yellow; color: black; font-family: 'calibri';  font-size: 18px; font-weight: 400;  width: 80%; padding-top:1%; padding-bottom:2%;
+                  margin-left:2%; text-align: left; }
+  #I-BOX5 { border: 2px solid red; width: 30%; margin-left:1%; margin-right:4%; margin-top:4%; margin-bottom:0%;
+                  filter: brightness(200%); filter: contrast(150%);  }     
 
 
 
