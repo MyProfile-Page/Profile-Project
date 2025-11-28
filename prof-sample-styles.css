@@ -291,16 +291,17 @@ font-size:  18px;
 
 #VP1 {
 font-family: Arial;
-font-size:  18px;
+font-size:  19px;
  /* font-size: 12.5vh; */
 text-align: center;
   
-  font-weight: 400;
+  font-weight: 650;
  Color: black;   
  /*    background-color: transparent;  */
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
    /* border: solid 0.0vh red; */
+text-decoration: underline;
 
   }
 
@@ -333,7 +334,6 @@ font-size:  20px;
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
    /* border: solid 0.0vh red; */
-text-decoration: underline;
 text-align: center;
 
   }
