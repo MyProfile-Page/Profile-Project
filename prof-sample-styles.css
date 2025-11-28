@@ -316,6 +316,8 @@ font-size:  18px;
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
    /* border: solid 0.0vh red; */
+text-align: center;
+  
 
   }
 
@@ -332,6 +334,7 @@ font-size:  20px;
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
    /* border: solid 0.0vh red; */
 text-decoration: underline;
+text-align: center;
 
   }
 
