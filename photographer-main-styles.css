@@ -158,9 +158,10 @@ font-size:  16px;
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
    /* border: solid 0.0vh red; */
-
 display:inline-block;
   }
+
+
 
   a {
     cursor: pointer;
@@ -170,6 +171,14 @@ display:inline-block;
   a:hover {
     text-decoration: underline;
   }
+
+#C-BOX5 { border: 0px solid black;}
+ #P-BOX5 { border: 0px solid yellow; color: white; font-family: 'calibri';  font-size: 18px; font-weight: 400;  width: 97%; padding-top:0%; padding-bottom:0%;
+                  margin-left:2%; text-align: left; }
+  #I-BOX5 { border: 0px solid red; width: 30%; margin-left:2%; margin-right:3%; margin-top:0%; margin-bottom:1.5%;
+                  filter: brightness(200%); filter: contrast(150%);  }    
+
+
 
 
 
