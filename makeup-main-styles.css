@@ -137,19 +137,29 @@ border: 2px solid blue;
     border-left: 4px solid #4a8cff;
     margin: 10px 0 20px 0;
     border-radius: 6px;
-  }
+  }   
 
-  
-
-  
-
-  .sectionBox {
-    display: none;
+  .menuBox {
     padding: 15px;
-    background: #eef5ff;
+    background: black;
     border-left: 4px solid #4a8cff;
     margin: 10px 0 20px 0;
     border-radius: 6px;
+  }
+
+ .menuPara {
+font-family: Calibri;
+font-size:  20px;
+ /* font-size: 12.5vh; */
+ /* font-size: 12.5vh; */
+  font-weight: 600;
+ Color: white;   
+ /*    background-color: transparent;  */
+ /* #46D1F3 is a light blue color */
+  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
+   /* border: solid 0.0vh red; */
+text-decoration: underline;
+display:inline-block;
   }
 
   a {

@@ -72,27 +72,31 @@
 
 <div id="main-container-first" class="container">
  <div id="main-container-second" class="main-container-second row justify-content-center">
-      <div id="main-container-third" class= "main-container-third col-11 col-sm-10 col-md-8 col-lg-6 col-xl-7">
+      <div id="main-container-third" class= "main-container-third col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
 
    <br>    
 
 
 
  
-        
-<p><a onclick="openSection('s1')">About Us</a></p>
+ <div  id="s0" class="menuBox">
+
+<p class = "menuPara"><a onclick="toggleSection('s1')">About Us</a></p>
+<p class = "menuPara"><a onclick="toggleSection('s2')">Services</a></p>
+<p class = "menuPara"><a onclick="toggleSection('s3')">Contact</a></p>
+ </div> 
 <div id="s1" class="sectionBox">
-  Content for section 1.
+ We are certified Make up Professionals.
 </div>
 
-<p><a onclick="openSection('s2')">Services</a></p>
+
 <div id="s2" class="sectionBox">
-  Content for section 2.
+  our services include bridal makeup and party make up.
 </div>
 
-<p><a onclick="openSection('s3')">Contact</a></p>
+
 <div id="s3" class="sectionBox">
-  Content for section 3.
+  New City, Lake Road, Ontario.
 </div>
 
  <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
@@ -122,20 +126,9 @@
   <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
   <script>
-function openSection(id) {
-
-  // 1. Close ALL sections
-  const all = document.getElementsByClassName("sectionBox");
-  for (let box of all) {
-    box.style.display = "none";
-  }
-
-  // 2. Open ONLY the clicked section
+function toggleSection(id) {
   const sec = document.getElementById(id);
-  sec.style.display = "block";
-
-  // 3. Scroll into view (optional)
-  sec.scrollIntoView({ behavior: "smooth" });
+  sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
 </script>
       
