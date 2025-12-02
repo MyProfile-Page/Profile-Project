@@ -53,7 +53,7 @@
 
 #P1 {
 font-family: calibri;
-font-size:  22px;
+font-size: clamp(1rem, 3.0vw, 1.5rem);
 font-weight: 500;
  Color: black;   
 text-decoration: underline;
@@ -66,7 +66,7 @@ text-decoration: underline;
 
 #P2 {
 font-family: calibri;
-font-size:  18px;
+font-size: clamp(1rem, 1.2vw, 1.5rem);
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
   font-weight: 400;
@@ -80,7 +80,7 @@ text-align: left;
 
 #P3 {
 font-family: calibri;
-font-size:  22px;
+font-size: clamp(1rem, 3.0vw, 1.5rem);
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
   font-weight: 500;
@@ -94,7 +94,7 @@ text-decoration: underline;
 
 #P4 {
 font-family: calibri;
-font-size:  18px;
+font-size: clamp(1rem, 1.2vw, 1.5rem);
 /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
   font-weight: 400;
@@ -107,7 +107,7 @@ font-size:  18px;
 
 #P5 {
 font-family: calibri;
- font-size: 22px;
+ font-size: clamp(1rem, 3.0vw, 1.5rem);
  /* font-size: 12.5vh; */
  font-weight: 500;
  Color: black;   
@@ -121,7 +121,7 @@ text-decoration: underline;
 
 #P6 {
 font-family: calibri;
-font-size:  18px;
+font-size: clamp(1rem, 1.2vw, 1.5rem);
   font-weight: 400;
  Color: black;  
  
@@ -129,7 +129,7 @@ font-size:  18px;
 
 #P7 {
 font-family: Arial;
-font-size:  16px;
+font-size: clamp(1rem, 2.2vw, 1.5rem);
 font-weight: 500;
  Color: black;  
  
@@ -138,7 +138,7 @@ font-weight: 500;
 
 #P8 {
 font-family: Arial;
-font-size:  18px;
+font-size: clamp(1rem, 2.5vw, 1.5rem);
 font-weight: 500;
  Color: white;   
 text-decoration: underline;
@@ -147,7 +147,7 @@ text-decoration: underline;
 
 #P9 {
 font-family: Arial;
-font-size:  16px;
+font-size: clamp(1rem, 2.2vw, 1.5rem);
 font-weight: 500;
  Color: black;   
 
