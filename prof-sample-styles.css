@@ -236,14 +236,14 @@ font-weight: 400;
 #adrlist {
   list-style-type: none; /* Remove bullets */
 font-family: calibri;
-font-size: clamp(1rem, 2.3vw, 1.5rem);;
+font-size: clamp(1rem, 2.5vw, 1.5rem);;
 font-weight: 400;
  Color: black;   
 }
 
 #qlflist {
 font-family: calibri;
-font-size: clamp(1rem, 2.3vw, 1.5rem);
+font-size: clamp(1rem, 2.5vw, 1.5rem);
 font-weight: 400;
  Color: black;   
 }
@@ -251,7 +251,7 @@ font-weight: 400;
 #explist {
   
 font-family: calibri;
-font-size: clamp(1rem, 2.3vw, 1.5rem);
+font-size: clamp(1rem, 2.5vw, 1.5rem);
 font-weight: 400;
  Color: black;   
 }
@@ -291,7 +291,7 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);
 
 #VP1 {
 font-family: Arial;
-font-size: clamp(1rem, 3.0vw, 1.5rem);
+font-size: clamp(1rem, 3.5vw, 1.5rem);
  /* font-size: 12.5vh; */
 text-align: center;
   
@@ -308,7 +308,7 @@ text-decoration: underline;
 #VP2 {
 font-family: Arial;
 /* font-family: 'Tangerine';  */
-font-size: clamp(1rem, 2.5vw, 1.5rem);
+font-size: clamp(1rem, 2.8vw, 1.5rem);
 
 /*  font-size: 12.5vh;  */ 
   font-weight: 400;
@@ -325,7 +325,7 @@ text-align: center;
 #VP2-1 {
 font-family: Arial;
 /* font-family: 'Tangerine';  */
-font-size: clamp(1rem, 3.5vw, 1.5rem);
+font-size: clamp(1rem, 3.0vw, 1.5rem);
 
 /*  font-size: 12.5vh;  */ 
   font-weight: 450;
@@ -385,7 +385,7 @@ text-align: left;
 
 #VP6 {
 font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
+font-size: clamp(1rem, 3.0vw, 1.5rem);
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
   font-weight: 450;
@@ -413,7 +413,7 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);
 
 #VP8 {
 font-family: Arial;
- font-size: clamp(1rem, 2.5vw, 1.5rem);
+ font-size: clamp(1rem, 3.0vw, 1.5rem);
  /* font-size: 12.5vh; */
  font-weight: 450;
  Color: black;   
