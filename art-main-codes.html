@@ -65,7 +65,7 @@
 
 <p id = "P2" class = "menuPara"><a onclick="toggleSection('s1')">About Us</a></p>
 <p id = "P3"  class = "menuPara"><a onclick="toggleSection('s2')">&nbspCourses</a></p>
-<p id = "P4"  class = "menuPara"><a onclick="toggleSection('s3')">&nbspContact</a></p>
+<p id = "P4"  class = "menuPara"><a onclick="toggleSection('s3')">&nbspAddress</a></p>
  </div> 
 <div id="s1" class="sectionBox">
 
@@ -77,12 +77,14 @@
                                               title = "ins">
                                               <p id="P-BOX5" class="P-BOX5" >                  
                                               </p>
-<br><br><br><br>
+<br><br>
+<img src="stripe1.jpg" class="Istripe1">
+<br><br>
  <P id="P5" class="P5"></P>
  <P id="P6" class="P6"></P>
  <P id="P7" class="P7"></P>
-<br><br><br><br><br>
-&nbsp&nbsp&nbsp<P id="P8" class="P8"></P>
+<br><br><br>
+<P id="P8" class="P8"></P>
 
 </div>
 <br>
@@ -96,18 +98,38 @@
                                              <br><br><br>
                                              <ul id="servlist" class="servlist">   </ul> 
 
-<br><br><br><br><br><br><br>
+<img src="stripe2.jpg" class="Istripe1 img-fluid rounded">
+<br><br>
   <P id="P52" class="P52"></P>
  <P id="P62" class="P62"></P>
  <P id="P72" class="P72"></P>
-<br><br><br><br><br>
+<br><br>
 &nbsp&nbsp&nbsp<P id="P8-1" class="P8-1"></P>
 </div>
 
 
 <div id="s3" class="sectionBox">
-   <h4 style="text-decoration: underline;"> Our Contact:</h4>
-   <ul id="adrlist" class="adrlist">   </ul> 
+
+<br><br>
+ <P id="P10" class="P10"></P>
+<br><br>
+ <img id="I-BOX5" src="art-address-image.jpg" class="img-rounded img-fluid pull-left I-BOX5"
+                                              title = "ins">
+                                             <br><br><br>
+                                             <ul id="adrlist" class="adrlist">   </ul> 
+<br><br>
+<img src="stripe3.jpg" class="Istripe1 img-fluid rounded">
+<br><br>
+  <P id="P53" class="P53"></P>
+ <P id="P63" class="P63"></P>
+ <P id="P73" class="P73"></P>
+<br><br>
+&nbsp&nbsp&nbsp<P id="P8-2" class="P8-2"></P>
+
+
+
+ 
+<br><br>
 </div>
 
  <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
@@ -146,14 +168,19 @@ function toggleSection(id) {
 
 document.getElementById("P5").textContent = 'Sophia ';
 document.getElementById("P52").textContent = 'Sophia ';
+document.getElementById("P53").textContent = 'Sophia ';
 document.getElementById("P6").textContent = 'Art ';
 document.getElementById("P62").textContent = 'Art ';
+document.getElementById("P63").textContent = 'Art ';
 document.getElementById("P7").textContent = 'Intl. ';
 document.getElementById("P72").textContent = 'Intl. ';
+document.getElementById("P73").textContent = 'Intl. ';
 document.getElementById("P8").textContent = '9999 Sheppard Avenue East, New City Area, Toronto, Ontario, Z9Y 9Z9 ';
 document.getElementById("P8-1").textContent = '9999 Sheppard Avenue East, New City Area, Toronto, Ontario, Z9Y 9Z9 ';
+document.getElementById("P8-2").textContent = '9999 Sheppard Avenue East, New City Area, Toronto, Ontario, Z9Y 9Z9 ';
 document.getElementById("P4-1").textContent = 'About Us: ';
 document.getElementById("P9").textContent = 'Courses: ';
+document.getElementById("P10").textContent = 'Address: ';
 document.getElementById("P-BOX5").textContent = 'We are one of the most distinguish art schools ' +
                                                           ' in our city.  We have vast selection of art courses for all students ' +
                                                           ' irrespective of wether thay are regular student or only attending  ' +
@@ -167,27 +194,27 @@ document.getElementById("P-BOX5").textContent = 'We are one of the most distingu
                                                           ' We are proud of our high standards.  ';
 
   const node1 = document.createElement("li");
-       const textnode1 = document.createTextNode("Drawing Nature Portraits.");
+       const textnode1 = document.createTextNode("1. Drawing Nature Portraits.");
       node1.appendChild(textnode1);
       document.getElementById("servlist").appendChild(node1);
 
       const node2 = document.createElement("li");
-      const textnode2 = document.createTextNode("Drawing Human Portraits.");
+      const textnode2 = document.createTextNode("2. Drawing Human Portraits.");
       node2.appendChild(textnode2);
       document.getElementById("servlist").appendChild(node2);
 
        const node3 = document.createElement("li");
-       const textnode3 = document.createTextNode("Color Combinations.");
+       const textnode3 = document.createTextNode("3. Color Combinations.");
       node3.appendChild(textnode3);
       document.getElementById("servlist").appendChild(node3);
 
       const node4 = document.createElement("li");
-      const textnode4 = document.createTextNode("Architecture");
+      const textnode4 = document.createTextNode("4. Architecture");
       node4.appendChild(textnode4);
       document.getElementById("servlist").appendChild(node4);
 
        const node5 = document.createElement("li");
-       const textnode5 = document.createTextNode("Interior Design.");
+       const textnode5 = document.createTextNode("5. Interior Design.");
       node5.appendChild(textnode5);
       document.getElementById("servlist").appendChild(node5);
 
@@ -225,6 +252,8 @@ document.getElementById("P-BOX5").textContent = 'We are one of the most distingu
       const textnode17 = document.createTextNode("e-mail:  Sophia@gmail.com ");
       node17.appendChild(textnode17);
       document.getElementById("adrlist").appendChild(node17);
+
+     
 
 
 

@@ -72,7 +72,7 @@ font-family: Calibri;
 font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
-
+margin-left:2%;
 text-align: left;
   }
 #P6 {
@@ -80,7 +80,7 @@ font-family: Calibri;
 font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
-
+margin-left:2%;
 text-align: left;
   }
 #P7 {
@@ -88,7 +88,7 @@ font-family: Calibri;
 font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
-
+margin-left:2%;
 text-align: left;
   }
 
@@ -109,12 +109,20 @@ Color: black;
 
 text-align: left;
   }
+#P8-2 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
 
+text-align: left;
+  }
 #P52 {
 font-family: Calibri;
 font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
-Color: black;   
+Color: black;  
+margin-left:2%; 
 
 text-align: left;
   }
@@ -123,6 +131,7 @@ font-family: Calibri;
 font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
+margin-left:2%;
 
 text-align: left;
   }
@@ -131,7 +140,34 @@ font-family: Calibri;
 font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
+margin-left:2%;
+text-align: left;
+  }
 
+#P53 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;  
+margin-left:2%; 
+
+text-align: left;
+  }
+#P63 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+
+text-align: left;
+  }
+#P73 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
 text-align: left;
   }
 #P9 {
@@ -142,7 +178,14 @@ Color: black;
 text-decoration: underline;
 text-align: left;
   }
-
+#P10 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-weight: 550;
+Color: black;   
+text-decoration: underline;
+text-align: left;
+  }
 
 
 .img-fluid {
@@ -270,6 +313,7 @@ display:inline-block;
                   margin-left:2%; text-align: left; }
   #I-BOX5 { border: 0px solid red; width: 40%; margin-left:2%; margin-right:2%; margin-top:2%; margin-bottom:1.5%;
                   filter: brightness(200%); filter: contrast(150%); }  
+ .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
 
  
 #servlist {
