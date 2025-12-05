@@ -40,11 +40,8 @@
 
 #P0 {
 font-family: Calibri;
-
-
-
 font-size: clamp(1rem, 1.5vw, 2.5rem); 
-font-size: 21px; 
+/* font-size: 21px;  */ 
 Color: black;   
 text-decoration: underline;
 text-align: center;
