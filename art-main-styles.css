@@ -14,7 +14,9 @@
           line-height: 0.8;
             }
 
-
+.gap20 {
+  height: 20px;   /* or any size you want; mobile = desktop */
+}
 
  #main-container-third {
       background-color: #f8f9fa;
