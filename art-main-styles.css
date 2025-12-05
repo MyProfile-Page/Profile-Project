@@ -18,6 +18,10 @@
   height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
 }
 
+.gap10vw {
+  height: clamp(1rem, 1.0vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
  #main-container-third {
       background-color: #f8f9fa;
       background: lightyellow;  
@@ -39,7 +43,6 @@
   /* #46D1F3 is a light blue color */
   text-align: center;
   }
-
 
 
 #P1 {
@@ -107,7 +110,6 @@ font-family: Calibri;
 font-size: clamp(1rem, 1.1vw, 2.0rem); 
 font-weight: 700;
 Color: black;   
-
 text-align: left;
   }
 #P8-2A {
@@ -115,7 +117,6 @@ font-family: Calibri;
 font-size: clamp(1rem, 1.1vw, 2.0rem); 
 font-weight: 700;
 Color: black;   
-
 text-align: left;
   }
 #P8-1 {
@@ -123,7 +124,6 @@ font-family: Calibri;
 font-size: clamp(1rem, 1.1vw, 2.0rem); 
 font-weight: 700;
 Color: black;   
-
 text-align: left;
   }
 #P8-2 {
@@ -131,7 +131,6 @@ font-family: Calibri;
 font-size: clamp(1rem, 1.1vw, 2.0rem); 
 font-weight: 700;
 Color: black;   
-
 text-align: left;
   }
 #P52 {
@@ -140,7 +139,6 @@ font-size: clamp(1rem, 2.0vw, 2.9rem);
 font-weight: 700;
 Color: black;  
 margin-left:2%; 
-
 text-align: left;
   }
 #P62 {
@@ -149,7 +147,6 @@ font-size: clamp(1rem, 2.0vw, 2.9rem);
 font-weight: 700;
 Color: black;   
 margin-left:2%;
-
 text-align: left;
   }
 #P72 {
@@ -167,7 +164,6 @@ font-size: clamp(1rem, 2.0vw, 2.9rem);
 font-weight: 700;
 Color: black;  
 margin-left:2%; 
-
 text-align: left;
   }
 #P63 {
@@ -176,7 +172,6 @@ font-size: clamp(1rem, 2.0vw, 2.9rem);
 font-weight: 700;
 Color: black;   
 margin-left:2%;
-
 text-align: left;
   }
 #P73 {
@@ -204,24 +199,19 @@ text-decoration: underline;
 text-align: left;
   }
 
-
-
 .img-fluid {
   width: auto;
-  
    height: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-
 #main-container-first {
 /*    display: none;   */
     top: 0;
       left: 0;
 border: 0px solid yellow;
- 
   }
 
 #main-container-second {
@@ -229,8 +219,7 @@ border: 0px solid yellow;
 /*    top: 0;     */
 /*      left: 0;   */
 border: 0px solid blue;
- 
-  }
+   }
 
 #R1_D1 {
     border: 0px solid #333;
@@ -238,10 +227,7 @@ border: 0px solid blue;
   /* padding: 15px;  */
   /* background: linear-gradient(to right, #007bff, #00c6ff);  */
   /* #46D1F3 is a light blue color */
- 
-  }
-
-
+   }
 
 .btn {
       display: inline-block;
@@ -255,17 +241,13 @@ border: 0px solid blue;
       margin-top: 0.6rem;
      }
 
-
 #sh-ot-image1 {  width: 25%;  float: right; 
   
 /*    Image at left    */
         filter: brightness(200%);
   filter: contrast(100%);  
    border: solid 8px white;  
-
- 
-      -webkit-shape-outside: url(individualjp1.jpg);  
-         
+   -webkit-shape-outside: url(individualjp1.jpg);   
    -webkit-shape-margin: 22%;
   shape-image-threshold: 5.5; 
    -webkit-shape-image-threshold: 5.5; 
@@ -288,8 +270,7 @@ border: 0px solid blue;
     margin: 10px 0 20px 0;
     border-radius: 6px;
      border: 0px solid red;
-     width: 75%;
-     
+     width: 75%;  
    
   }   
 
@@ -304,19 +285,17 @@ border: 0px solid blue;
  .menuPara {
 font-family: Calibri;
 font-size:  16px;
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 600;
+font-weight: 600;
  Color: white;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
 display:inline-block;
   }
-
-
-
+ #P4A {
+font-family: Calibri;
+font-size:  16px;
+font-weight: 600;
+ Color: yellow;   
+display:inline-block;
+  }
   a {
     cursor: pointer;
     color: #0066cc;
