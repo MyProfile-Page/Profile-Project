@@ -98,6 +98,30 @@ Color: black;
 text-align: left;
   }
 
+#P8A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+
+text-align: left;
+  }
+#P8-1A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+
+text-align: left;
+  }
+#P8-2A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+
+text-align: left;
+  }
 #P8-1 {
 font-family: Calibri;
 font-size: clamp(1rem, 1.1vw, 2.0rem); 
@@ -183,6 +207,7 @@ Color: black;
 text-decoration: underline;
 text-align: left;
   }
+
 
 
 .img-fluid {
