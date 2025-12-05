@@ -14,7 +14,7 @@
           line-height: 0.8;
             }
 
-.gap20 {
+.gap14vw {
   height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
 }
 
