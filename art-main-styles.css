@@ -289,13 +289,7 @@ font-weight: 600;
  Color: white;   
 display:inline-block;
   }
- #P4A {
-font-family: Calibri;
-font-size:  16px;
-font-weight: 600;
- Color: yellow;   
-display:inline-block;
-  }
+
   a {
     cursor: pointer;
     color: #0066cc;
