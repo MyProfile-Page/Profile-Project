@@ -15,7 +15,7 @@
             }
 
 .gap20 {
-  height: 10px;   /* or any size you want; mobile = desktop */
+  height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
 }
 
  #main-container-third {
