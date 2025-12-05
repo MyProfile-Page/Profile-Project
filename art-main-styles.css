@@ -38,18 +38,12 @@
   text-align: center;
   }
 
-#P0 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 2.5rem); 
-font-size: 21px;   
-Color: black;   
-text-decoration: underline;
-text-align: center;
-  }
+
 
 #P1 {
 font-family: Calibri;
 font-size: clamp(1rem, 1.9vw, 2.9rem); 
+font-size: 21px;
 font-weight: 700;
 Color: white;   
 text-decoration: underline;
