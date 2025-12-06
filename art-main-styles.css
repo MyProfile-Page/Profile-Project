@@ -271,9 +271,13 @@ border: 0px solid blue;
     border-radius: 6px;
      border: 0px solid red;
      width: 75%;  
-   
+     animation: zoomIn .5s ease;
+     transition: .55s ease; 
   }   
-
+@keyframes zoomIn {
+  from { transform: scale(0.75); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
   .menuBox {
     padding: 1px;
     background: black;
@@ -300,7 +304,7 @@ display:inline-block;
   }
 
 #C-BOX5 { border:0px solid black; display: none;}
- #P-BOX5 { border: 0px solid yellow; color: black; font-family: 'calibri';  font-size: clamp(1rem, 1.2vw, 1.8rem); font-weight: 450;  width: 99%; padding-top:0%; padding-bottom:0%;
+ #P-BOX5 { border: 0px solid yellow; color: black; font-family: calibri;   font-size: clamp(1rem, 1.2vw, 1.8rem); font-weight: 450;  width: 99%; padding-top:0%; padding-bottom:0%;
                   margin-left:2%; text-align: left; }
   #I-BOX5 { border: 0px solid red; width: 70%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
                   filter: brightness(200%); filter: contrast(150%); }  
