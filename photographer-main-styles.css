@@ -271,8 +271,13 @@ border: 0px solid blue;
     border-radius: 6px;
      border: 0px solid red;
      width: 75%;  
-   
+    animation: zoomIn .5s ease;
   }   
+
+@keyframes zoomIn {
+  from { transform: scale(0.75); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
 
   .menuBox {
     padding: 1px;
