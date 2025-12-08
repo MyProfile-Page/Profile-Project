@@ -1,0 +1,70 @@
+<!--
+
+Here’s a complete, responsive HTML + CSS example to display text centered inside a circle.
+It works without images or JavaScript, and it adapts to different screen sizes.
+
+-->
+
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Inside Circle</title>
+<style>
+  /* Circle container */
+  .circle {
+    width: 200px;              /* Circle diameter */
+    height: 200px;
+    background-color: #4CAF50; /* Circle color */
+    border-radius: 50%;        /* Makes it a perfect circle */
+    display: flex;             /* Flexbox for centering */
+    align-items: center;       /* Vertical center */
+    justify-content: center;   /* Horizontal center */
+    color: white;              /* Text color */
+    font-size: 1.5rem;          /* Text size */
+    font-weight: bold;
+    text-align: center;        /* Center text if multiline */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow */
+  }
+
+  /* Responsive scaling */
+  @media (max-width: 500px) {
+    .circle {
+      width: 150px;
+      height: 150px;
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="circle">
+  Hello World
+</div>
+
+</body>
+</html>
+
+<!--
+
+How it works:
+
+border-radius: 50% makes the element perfectly round.
+Flexbox (display: flex) centers the text both vertically and horizontally.
+Responsive media query adjusts size for smaller screens.
+box-shadow is optional for a 3D effect.
+
+
+✅ Advantages:
+
+No images needed.
+Works in all modern browsers.
+Easily customizable (color, size, font).
+
+
+If you want text along the edge of a circle instead of inside it, I can give you an SVG + CSS version next.
+Do you want me to prepare that?
+
+-->
