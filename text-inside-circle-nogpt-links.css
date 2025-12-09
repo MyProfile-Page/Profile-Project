@@ -38,8 +38,8 @@ border: 2px solid blue;
     }
   /* Circle container */
   .circle {
-    width: clamp(1rem, 9.9vw, 10.9rem);               /* Circle diameter */
-    height: clamp(1rem, 9.9vw, 10.9rem); 
+    width: clamp(1rem, 15.9vw, 16.9rem);               /* Circle diameter */
+    height: clamp(1rem, 15.9vw, 16.9rem); 
     background-color: #4CAF50; /* Circle color */
     border-radius: 50%;        /* Makes it a perfect circle */
     display: flex;             /* Flexbox for centering */
