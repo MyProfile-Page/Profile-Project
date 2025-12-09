@@ -8,7 +8,14 @@
           background: lightblue;
           line-height: 0.8;
             }
-
+.P1 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.9vw, 3.0rem); 
+font-size: 25px; 
+font-weight: 700;
+Color: white;   
+text-align: center;
+  }
 
 #main-container-first {
 /*    display: none;   */
@@ -90,6 +97,8 @@ border: 2px solid blue;
       font-size: 1.2rem;
     }
   }
+
+
 
 
 
