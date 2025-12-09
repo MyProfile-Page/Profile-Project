@@ -51,8 +51,8 @@ border: 2px solid blue;
     text-align: center;        /* Center text if multiline */
    /*  box-shadow: 0 4px 8px rgba(0,0,0,0.2);   */  /* Optional shadow */
     border: 1px solid red;
-   margin-top: clamp(0.5rem, 0.3vw, 0.5rem);   /* spacing from top */
-    margin-left: clamp(0.5rem, 0.3vw, 0.5rem);   /* spacing from bottom */
+ /*  margin-top: clamp(0.5rem, 0.3vw, 0.5rem);  */  /* spacing from top */
+ /*   margin-left: clamp(0.5rem, 0.3vw, 0.5rem);  */   /* spacing from bottom */
       
 
   /* Responsive scaling */
