@@ -46,8 +46,8 @@ border: 2px solid blue;
     align-items: center;       /* Vertical center */
     justify-content: center;   /* Horizontal center */
     color: white;              /* Text color */
-    font-size: clamp(1rem, 1.4vw, 1.9rem);           /* Text size */
-    font-weight: bold;
+    font-size: clamp(1rem, 1.8vw, 1.9rem);           /* Text size */
+    font-weight: 300;
     text-align: center;        /* Center text if multiline */
    /*  box-shadow: 0 4px 8px rgba(0,0,0,0.2);   */  /* Optional shadow */
     border: 1px solid red;
