@@ -1,0 +1,95 @@
+#html_cls {
+    }
+
+.body_cls {
+          background-color: white;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background-color: black;
+          background: lightblue;
+          line-height: 0.8;
+            }
+
+
+#main-container-first {
+/*    display: none;   */
+    top: 0;
+      left: 0;
+border: 2px solid yellow;
+  }
+
+#main-container-second {
+/*    display: none;   */
+/*    top: 0;     */
+/*      left: 0;   */
+border: 2px solid blue;
+   }
+
+#main-container-third {
+      background-color: #f8f9fa;
+      background: lightyellow;  
+      background-color: black; 
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 40px; /* spacing from top */
+      margin-bottom: 40px; /* spacing from bottom */
+      border: 2px solid red;
+    }
+  /* Circle container */
+  .circle {
+    width: 200px;              /* Circle diameter */
+    height: 200px;
+    background-color: #4CAF50; /* Circle color */
+    border-radius: 50%;        /* Makes it a perfect circle */
+    display: flex;             /* Flexbox for centering */
+    align-items: center;       /* Vertical center */
+    justify-content: center;   /* Horizontal center */
+    color: white;              /* Text color */
+    font-size: 1.5rem;          /* Text size */
+    font-weight: bold;
+    text-align: center;        /* Center text if multiline */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow */
+    border: 2px solid red;
+   margin-top: 60px; /* spacing from top */
+    margin-left: 70px; /* spacing from bottom */
+      
+
+  /* Responsive scaling */
+  @media (max-width: 500px) {
+    .circle {
+      width: 150px;
+      height: 150px;
+      font-size: 1.2rem;
+    }
+  }
+
+  .circle1 {
+    width: 200px;              /* Circle diameter */
+    height: 200px;
+    background-color: #4CAF50; /* Circle color */
+    border-radius: 50%;        /* Makes it a perfect circle */
+    display: flex;             /* Flexbox for centering */
+    align-items: center;       /* Vertical center */
+    justify-content: center;   /* Horizontal center */
+    color: white;              /* Text color */
+    font-size: 1.5rem;          /* Text size */
+    font-weight: bold;
+    text-align: center;        /* Center text if multiline */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional shadow */
+    border: 2px solid red;
+   margin-top: 160px; /* spacing from top */
+    margin-left: 90px; /* spacing from bottom */
+      
+
+  /* Responsive scaling */
+  @media (max-width: 500px) {
+    .circle1 {
+      width: 150px;
+      height: 150px;
+      font-size: 1.2rem;
+    }
+  }
+
+
+
