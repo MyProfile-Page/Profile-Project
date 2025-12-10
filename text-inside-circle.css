@@ -8,6 +8,15 @@
           background: lightblue;
           line-height: 0.8;
             }
+
+.gap14vw {
+  height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+.gap10vw {
+  height: clamp(1rem, 1.0vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
 #P1 {
 font-family: Calibri;
 font-size: clamp(1rem, 1.2vw, 1.6rem); 
