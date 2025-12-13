@@ -9,32 +9,34 @@
 .body_cls {
           background-color: white;
           background: linear-gradient(to right, #007bff, #00c6ff);
-          background-color: white;
+          background-color: black;
           background: lightblue;
           line-height: 0.8;
             }
 
-  .contactForm {
-      max-width: 600px;
-      background: linear-gradient(to right, #007bff, #00c6ff);
-      background: lightyellow;  
-      margin: 60px auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-   /*   color: white;   */
-    }
+#mobile { display: none; background: #eef; padding: 15px; }
+        #desktop { display: none; background: #efe; padding: 15px; }
 
- .custom-container {
+
+.gap14vw {
+  height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+.gap10vw {
+  height: clamp(1rem, 1.0vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+ #main-container-third {
       background-color: #f8f9fa;
       background: lightyellow;  
-      background-color: white; 
+      background-color: black; 
       border: 2px solid #ddd;
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-top: 40px; /* spacing from top */
       margin-bottom: 40px; /* spacing from bottom */
+      border: 0px solid red;
     }
 
 #R1_D1 {
@@ -46,139 +48,212 @@
   text-align: center;
   }
 
-#R2_D1 {
-    border: 0px solid #333;
-  border-radius: 0px;
-  /* padding: 15px;  */
-   background: linear-gradient(to right, #007bff, #00c6ff); 
-  /* #46D1F3 is a light blue color */
-  
-  }
 
 #P1 {
-font-family: Arial;
-font-size: clamp(1rem, 3.1vw, 1.5rem);
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 600;
- Color: white;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-decoration: underline;
+font-family: Calibri;
+font-size: clamp(1rem, 3.9vw, 4.3rem); 
+font-weight: 900;
+Color: white;   
+text-align: center;
   }
 
 #P2 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 400;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-align: left;
+font-size: clamp(1rem, 2.0vw, 2.2rem); 
+font-weight: 700;
+Color: white;   
+text-align: center;
   }
 
 #P3 {
-font-family: Arial;
-font-size: clamp(1rem, 3.7vw, 1.5rem);
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 600;
- Color: white; 
-text-decoration: underline;  
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.2rem); 
+font-weight: 700;
+Color: white;   
+text-align: center;
+  }
+
+#P3A {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.2rem); 
+font-weight: 700;
+Color: white;   
+text-align: center;
   }
 
 #P4 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-/* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 400;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
+font-size: clamp(1rem, 2.0vw, 2.2rem); 
+font-weight: 700;
+Color: white;   
+text-align: center;
   }
 
-#P5 {
-font-family: Arial;
- font-size: clamp(1rem, 3.7vw, 1.5rem);
- /* font-size: 12.5vh; */
- font-weight: 600;
- Color: white;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
+#P4-1 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-weight: 550;
+Color: black;   
 text-decoration: underline;
+text-align: left;
   }
-
-
+#P5 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
 #P6 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-
-  font-weight: 400;
- Color: black;  
- 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
   }
-
 #P7 {
-font-family: Arial;
-font-size: clamp(1rem, 2.1vw, 1.5rem);
-font-weight: 500;
- Color: black;  
- 
-
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
   }
 
 #P8 {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-font-weight: 500;
- Color: black;   
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
 
-
+text-align: left;
   }
 
+#P8A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+
+text-align: left;
+  }
+#P8-1A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-2A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-1 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-2 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P52 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;  
+margin-left:2%; 
+text-align: left;
+  }
+#P62 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+#P72 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+
+#P53 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;  
+margin-left:2%; 
+text-align: left;
+  }
+#P63 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+#P73 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
 #P9 {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-font-weight: 500;
- Color: white;   
+font-family: Calibri;
+font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-weight: 550;
+Color: black;   
 text-decoration: underline;
-
-
+text-align: left;
   }
-
+#P10 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-weight: 550;
+Color: black;   
+text-decoration: underline;
+text-align: left;
+  }
 
 .img-fluid {
   width: auto;
-  
    height: auto;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-
-#container-div-second {
+#main-container-first {
 /*    display: none;   */
     top: 0;
       left: 0;
-
- 
+border: 0px solid yellow;
   }
+
+#main-container-second {
+/*    display: none;   */
+/*    top: 0;     */
+/*      left: 0;   */
+border: 0px solid blue;
+   }
 
 #R1_D1 {
     border: 0px solid #333;
@@ -186,251 +261,6 @@ text-decoration: underline;
   /* padding: 15px;  */
   /* background: linear-gradient(to right, #007bff, #00c6ff);  */
   /* #46D1F3 is a light blue color */
- 
-  }
-
-#R2_D1 {
-    border: 0px solid #333;
-  border-radius: 0px;
-  /* padding: 15px;  */
- /*  background: linear-gradient(to right, #007bff, #00c6ff);  */
-  /* #46D1F3 is a light blue color */
- text-align: center;
-  
-  }
-
-#VR2_D1 {
-    border: 0px solid #333;
-  border-radius: 0px;
-  /* padding: 15px;  */
- /*  background: linear-gradient(to right, #007bff, #00c6ff);  */
-  /* #46D1F3 is a light blue color */
- text-align: center;
- 
-  
-  }
-
-#VR3-D1-BIO {
-    border: 0px solid #333;
-  border-radius: 0px;
-  /* padding: 15px;  */
- /*  background: linear-gradient(to right, #007bff, #00c6ff);  */
-  /* #46D1F3 is a light blue color */
- text-align: left;
-font-family: calibri;
-font-size: clamp(1rem, 2.3vw, 1.5rem);
-font-weight: 400;
-  
-  }
-
-#VR3-D1-QLF {
-    border: 0px solid #333;
-  border-radius: 0px;
-  /* padding: 15px;  */
- /*  background: linear-gradient(to right, #007bff, #00c6ff);  */
-  /* #46D1F3 is a light blue color */
- text-align: left;
-  
-  }
-
-#adrlist {
-  list-style-type: none; /* Remove bullets */
-font-family: calibri;
-font-size: clamp(1rem, 2.5vw, 1.5rem);;
-font-weight: 400;
- Color: black;   
-}
-
-#qlflist {
-font-family: calibri;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-font-weight: 400;
- Color: black;   
-}
-
-#explist {
-  
-font-family: calibri;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-font-weight: 400;
- Color: black;   
-}
-
-
-
-
-
-.LC {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
- /* font-size: 12.5vh; */
-  
-  font-weight: 500;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-
-  }
-
-.VLC {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
- /* font-size: 12.5vh; */
-  
-  font-weight: 500;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-
-  }
-
-
-#VP1 {
-font-family: Arial;
-font-size: clamp(1rem, 3.5vw, 1.5rem);
- /* font-size: 12.5vh; */
-text-align: center;
-  
-  font-weight: 650;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-decoration: underline;
-
-  }
-
-#VP2 {
-font-family: Arial;
-/* font-family: 'Tangerine';  */
-font-size: clamp(1rem, 2.8vw, 1.5rem);
-
-/*  font-size: 12.5vh;  */ 
-  font-weight: 400;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-align: center;
-  
-
-  }
-
-#VP2-1 {
-font-family: Arial;
-/* font-family: 'Tangerine';  */
-font-size: clamp(1rem, 3.0vw, 1.5rem);
-
-/*  font-size: 12.5vh;  */ 
-  font-weight: 450;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-align: center;
-
-  }
-
-
-#VP3 {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-
-  font-weight: 400;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-align: left;
-  }
-
-
-#VP4 {
-font-family: Arial;
-font-size: clamp(1rem, 3.0vw, 1.5rem);
-font-weight: 450;
- Color: Black;   
-
-display:inline-block;
-
-  }
-
-
-
-
-
-#VP5 {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 400;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-align: left;
-  }
-
-#VP6 {
-font-family: Arial;
-font-size: clamp(1rem, 3.0vw, 1.5rem);
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 450;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-
-display:inline-block;
-  }
-
-#VP7 {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-/* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 400;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-  }
-
-#VP8 {
-font-family: Arial;
- font-size: clamp(1rem, 3.0vw, 1.5rem);
- /* font-size: 12.5vh; */
- font-weight: 450;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-
-display:inline-block;
-  }
-
-
-#VP9 {
-font-family: Arial;
-font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 400;
- Color: black;  
    }
 
 .btn {
@@ -445,17 +275,13 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);
       margin-top: 0.6rem;
      }
 
-
 #sh-ot-image1 {  width: 25%;  float: right; 
   
 /*    Image at left    */
         filter: brightness(200%);
   filter: contrast(100%);  
    border: solid 8px white;  
-
- 
-      -webkit-shape-outside: url(individualjp1.jpg);  
-         
+   -webkit-shape-outside: url(individualjp1.jpg);   
    -webkit-shape-margin: 22%;
   shape-image-threshold: 5.5; 
    -webkit-shape-image-threshold: 5.5; 
@@ -464,27 +290,75 @@ font-size: clamp(1rem, 2.5vw, 1.5rem);
 
 .sh-ot-text4 { text-align: left;
   font-family: 'calibri';
-  font-size: clamp(1rem, 2.5vw, 1.5rem);;
+  font-size: 18px;
   font-weight: 400;
   Color: black;
   border: solid 0.0vh maroon;
 }
 
-#container4 {  position: absolute;
-/*  width: 34%;   */
-/*   height: 51vh;   */
-/*  Top: 27vh;   */
-/*  left: 31%;   */
-  border: solid 0.0vh red;
-/* background-color: #1a1a1a;  */
+ .sectionBox {
+    display: none;
+    padding: 15px;
+    background: #eef5ff;
+    border-left: 4px solid #4a8cff;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+     border: 0px solid red;
+     width: 90%;  
+     animation: zoomIn .5s ease;
+     transition: .55s ease; 
+  }   
+@keyframes zoomIn {
+  from { transform: scale(0.75); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+  .menuBox {
+    padding: 1px;
+    background: black;
+    border-left: 4px solid black;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+  }
 
+ .menuPara {
+font-family: Calibri;
+font-size:  16px;
+font-weight: 600;
+ Color: white;   
+display:inline-block;
+  }
+
+  a {
+    cursor: pointer;
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+#C-BOX5 { border:0px solid black; display: none;}
+ #P-BOX5 { border: 0px solid yellow; color: black; font-family: calibri;   font-size: clamp(1rem, 1.2vw, 1.8rem); font-weight: 450;  width: 99%; padding-top:0%; padding-bottom:0%;
+                  margin-left:2%; text-align: left; }
+  #I-BOX5 { border: 0px solid red; width: 70%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
+                  filter: brightness(200%); filter: contrast(150%); }  
+ .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
+
+ 
+#servlist {
+font-family: calibri;
+font-size: clamp(1rem, 2.5vw, 1.5rem);
+font-weight: 400;
+ Color: black;   
 }
 
- .C-BOX5 { border: 0px solid black;}
- #P-BOX5 { border: 0px solid yellow; color: black; font-family: 'calibri';   font-size: clamp(1rem, 2.5vw, 1.5rem); font-weight: 400;  width: 97%; padding-top:0%; padding-bottom:0%;
-                  margin-left:2%; text-align: left; }
-  #I-BOX5 { border: 0px solid red; width: 30%; margin-left:2%; margin-right:3%; margin-top:0%; margin-bottom:1.5%;
-                  filter: brightness(200%); filter: contrast(150%);  }     
+#adrlist {
+  list-style-type: none; /* Remove bullets */
+font-family: calibri;
+font-size: clamp(1rem, 2.5vw, 1.5rem);;
+font-weight: 400;
+ Color: black;   
+}
 
 
 
