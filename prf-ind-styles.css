@@ -54,38 +54,7 @@ Color: white;
 text-align: center;
   }
 
-#P2 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.4vw, 2.9rem); 
-font-weight: 550;
-Color: white;   
 
-text-align: left;
-  }
-#P3 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.4vw, 2.9rem); 
-font-weight: 550;
-Color: white;   
-
-text-align: left;
-  }
-#P3A {
-font-family: Calibri;
-font-size: clamp(1rem, 1.4vw, 2.9rem); 
-font-weight: white;
-Color: white;   
-
-text-align: left;
-  }
-#P4 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.4vw, 2.9rem); 
-font-weight: 550;
-Color: white;   
-
-text-align: left;
-  }
 #P4-1 {
 font-family: Calibri;
 font-size: clamp(1rem, 1.8vw, 2.9rem); 
@@ -158,6 +127,20 @@ Color: black;
 text-align: left;
   }
 #P8-2 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-3 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-3A {
 font-family: Calibri;
 font-size: clamp(1rem, 1.1vw, 2.0rem); 
 font-weight: 700;
@@ -351,7 +334,7 @@ border: 0px solid blue;
 
  .menuPara {
 font-family: Calibri;
-font-size:  16px;
+font-size: clamp(1rem, 1.6vw, 1.9rem); 
 font-weight: 600;
  Color: white;   
 display:inline-block;
@@ -376,7 +359,7 @@ display:inline-block;
  
 #explist {
 font-family: calibri;
-font-size: clamp(1rem, 1.5vw, 3.0rem);
+font-size: clamp(1rem, 1.3vw, 2.5rem);
 font-weight: 500;
  Color: black;   
 }
@@ -384,14 +367,14 @@ font-weight: 500;
 #adrlist {
 /*  list-style-type: none;   */ /* Remove bullets */
 font-family: calibri;
-font-size: clamp(1rem, 1.5vw, 3.0rem);;
+font-size: clamp(1rem, 1.3vw, 2.5rem);;
 font-weight: 500;
  Color: black;   
 }
 
 #qlflist {
 font-family: calibri;
-font-size: clamp(1rem, 1.5vw, 3.0rem);;
+font-size: clamp(1rem, 1.3vw, 2.5rem);;
 font-weight: 500;
  Color: black;   
 }
