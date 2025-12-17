@@ -7,11 +7,11 @@
     }
 
 .body_cls {
-          background-color: white;
-          background: linear-gradient(to right, #007bff, #00c6ff);
-          background-color: black;
-          background: lightblue;
+         
           line-height: 0.8;
+          background-image: url('human-face-2.jpg');
+/*    background-repeat: no-repeat;   */    
+    background-position: center;
             }
 
 .gap14vw {

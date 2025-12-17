@@ -1,10 +1,10 @@
+﻿ 
+ 
 
 
 
 #html_cls {
     }
-
- 
 
 .body_cls {
          
@@ -14,6 +14,71 @@
     background-position: center;
 
             }
+
+
+.gap14vw {
+  height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+.gap10vw {
+  height: clamp(1rem, 1.0vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+ #main-container-third {
+      background-color: #f8f9fa;
+      background: lightyellow;  
+      background-color: black; 
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 10px; /* spacing from top */
+      margin-bottom: 40px; /* spacing from bottom */
+      border: 0px solid red;
+      align: left;
+    }
+
+#main-container-first {
+/*    display: none;   */
+    top: 0;
+      left: 0;
+border: 0px solid yellow;
+  }
+
+#main-container-second {
+/*    display: none;   */
+/*    top: 0;     */
+/*      left: 0;   */
+border: 0px solid blue;
+   }
+
+ .sectionBox {
+    display: none;
+    padding: 15px;
+    background: #eef5ff;
+    border-left: 4px solid #4a8cff;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+     border: 0px solid red;
+     width: 90%;  
+     animation: zoomIn .5s ease;
+     transition: .55s ease; 
+  }   
+@keyframes zoomIn {
+  from { transform: scale(0.75); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+
+ .menuPara {
+font-family: Calibri;
+font-size: clamp(1rem, 1.6vw, 1.9rem); 
+font-weight: 600;
+ Color: white;   
+ /* display:inline-block; */ 
+  }
+
+
 
  .container {
      
@@ -28,7 +93,7 @@
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 20px; /* spacing from top */
+      margin-top: 3px; /* spacing from top */
       margin-bottom: 20px; /* spacing from bottom */
       background-color: lightblue;
       
@@ -67,4 +132,14 @@ text-align: left;
   }
 
 .aclass { font-size: clamp(1rem, 1.2vw, 1.4rem); font-family: calibri; font-weight: 550; color:black; text-align:left; display:block; }
+
+
+
+
+
+
+
+
+
+
  
