@@ -9,8 +9,8 @@
 .body_cls {
          
           line-height: 1.5;
-          background-image: url('main-image1.jpg');
-  /*  background-repeat: no-repeat;   */
+          background-image: url('index-image.jpg');
+    background-repeat: no-repeat;   
     background-position: center;
 
             }
