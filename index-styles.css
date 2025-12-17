@@ -7,8 +7,12 @@
  
 
 .body_cls {
-          background-color: lightyellow;
+         
           line-height: 1.5;
+          background-image: url('main-image1.jpg');
+  /*  background-repeat: no-repeat;   */
+    background-position: center;
+
             }
 
  .container {
@@ -30,31 +34,10 @@
       
     }
 
-#R1_D1 {
-    border: 0px solid #333;
-  border-radius: 0px;
-  /* padding: 15px;  */
-  /* background: linear-gradient(to right, #007bff, #00c6ff);  */
-  /* #46D1F3 is a light blue color */
-  text-align: center;
-  }
-
-#R2_D1 {
-    border: 0px solid #333;
-  border-radius: 0px;
-  /* padding: 15px;  */
-/*  background: linear-gradient(to right, #007bff, #00c6ff);  */ 
-/*  background: lightblue;  */
-  /* #46D1F3 is a light blue color */
-  
-  }
-
-
 
 .img-fluid {
   width: auto;
- 
-  height: auto; 
+   height: auto; 
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -62,20 +45,16 @@
 
 #P1 {
 font-family: calibri;
-font-size:  22px;
+font-size: clamp(1rem, 1.6vw, 2.0rem); 
 font-weight: 600;
  Color: darkred;   
-
-text-align: center;
+text-align: left;
   }
-
-
-
 
 
 #P2 {
 font-family: calibri;
-font-size:  22px;
+font-size: clamp(1rem, 1.6vw, 2.0rem); 
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
   font-weight: 600;
@@ -84,87 +63,8 @@ font-size:  22px;
  /* #46D1F3 is a light blue color */
   /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
    /* border: solid 0.0vh red; */
-text-align: center;
+text-align: left;
   }
 
-#P3 {
-font-family: Arial;
-font-size:  22px;
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 500;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-decoration: underline;
-  }
-
-#P4 {
-font-family: calibri;
-font-size:  18px;
-/* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 400;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-  }
-
-#P5 {
-font-family: Arial;
- font-size: 22px;
- /* font-size: 12.5vh; */
- font-weight: 500;
- Color: black;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-decoration: underline;
-  }
-
-
-#P6 {
-font-family: calibri;
-font-size:  18px;
-  font-weight: 400;
- Color: black;  
- 
-  }
-
-#P7 {
-font-family: Arial;
-font-size:  16px;
-font-weight: 500;
- Color: black;  
- 
-
-  }
-
-#P8 {
-font-family: Arial;
-font-size:  18px;
-font-weight: 500;
- Color: white;   
-text-decoration: underline;
-
-  }
-
-#P9 {
-font-family: Arial;
-font-size:  16px;
-font-weight: 500;
- Color: black;   
-
-
-  }
-
-
-
-
-
+.aclass { font-size:  18px; font-family: calibri; font-weight: 550; color:black; text-align:left; display:block; }
  
