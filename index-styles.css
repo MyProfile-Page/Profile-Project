@@ -66,5 +66,5 @@ font-size: clamp(1rem, 1.6vw, 2.0rem);
 text-align: left;
   }
 
-.aclass { font-size:  18px; font-family: calibri; font-weight: 550; color:black; text-align:left; display:block; }
+.aclass { font-size: clamp(1rem, 1.2vw, 1.4rem); font-family: calibri; font-weight: 550; color:black; text-align:left; display:block; }
  
