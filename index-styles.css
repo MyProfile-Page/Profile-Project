@@ -17,7 +17,7 @@
   top: clamp(4rem, 5.9vh, 6.0rem);  
   left: 16px;
   font-size: clamp(1rem, 2.1vw, 2.5rem); 
-  color: white; 
+  color: blue; 
 }
 
 .top-left1 {
@@ -25,7 +25,7 @@
    top: clamp(7rem, 8.9vh, 9.0rem);  
   left: 16px;
  font-size: clamp(1rem, 2.1vw, 2.5rem);  
-   color: white; 
+   color: blue; 
 }
 
 .gap14vw {
@@ -61,10 +61,11 @@
 
 #P1 {
 font-family: calibri;
-font-size: clamp(1rem, 1.9vw, 2.0rem); 
+font-size: clamp(1rem, 2.2vw, 2.5rem); 
 font-weight: 600;
- Color: darkred;   
+ Color: blue;   
 text-align: left;
+text-decoration: underline;
   }
 
 
