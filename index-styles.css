@@ -14,17 +14,17 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(7rem, 7.9vw, 8.0rem);  
+  top: clamp(4rem, 5.9vw, 6.0rem);  
   left: 16px;
-  font-size: clamp(1rem, 1.9vw, 2.0rem); 
+  font-size: clamp(1rem, 2.1vw, 2.5rem); 
   color: white; 
 }
 
 .top-left1 {
   position: absolute;
-   top: clamp(9rem, 10.9vw, 11.0rem);  
+   top: clamp(7rem, 8.9vw, 9.0rem);  
   left: 16px;
- font-size: clamp(1rem, 1.9vw, 2.0rem);  
+ font-size: clamp(1rem, 2.1vw, 2.5rem);  
    color: white; 
 }
 
