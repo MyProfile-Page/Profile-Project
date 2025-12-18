@@ -14,7 +14,7 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(4rem, 5.9vw, 6.0rem);  
+  top: clamp(4rem, 5.9vh, 6.0rem);  
   left: 16px;
   font-size: clamp(1rem, 2.1vw, 2.5rem); 
   color: white; 
@@ -22,7 +22,7 @@
 
 .top-left1 {
   position: absolute;
-   top: clamp(7rem, 8.9vw, 9.0rem);  
+   top: clamp(7rem, 8.9vh, 9.0rem);  
   left: 16px;
  font-size: clamp(1rem, 2.1vw, 2.5rem);  
    color: white; 
