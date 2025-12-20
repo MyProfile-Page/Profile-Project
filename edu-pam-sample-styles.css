@@ -8,32 +8,66 @@
 
 .body_cls {
           background-color: white;
-       /*   background: linear-gradient(to right, #007bff, #00c6ff);   */
-            background-color: black;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background-color: black;
+          background: lightblue;
           line-height: 0.8;
             }
-.top-left {
-  position: absolute;
-  top: clamp(4rem, 3.9vh, 4.0rem);  
-  left: 16px;
-  font-size: clamp(1rem, 1.8vw, 2.0rem);
-  color: white; 
+
+.sh-ot-shape2 {  width: 95%;  height: 53vh; float: right; 
+       background-image: url("CONTACT-PIC.jpg");  background-repeat: no-repeat;   
+ 
+
+ /*    4 corner poly shape at right    */
+
+        shape-outside: polygon(50% 0%, 100% 0%, 100% 100%, 30% 100%);       
+       clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 30% 100%);          
+
+       -webkit-shape-outside: polygon(40% 0%, 90% 0%, 100% 100%, 30% 100%);       
+       -webkit-clip-path: polygon(40% 0%, 90% 0%, 100% 100%, 30% 100%);          
+         
+       -ms-shape-outside: polygon(50% 0%, 100% 0%, 100% 100%, 30% 100%);       
+       -ms-clip-path: polygon(50% 0%, 80% 0%, 100% 100%, 30% 100%);          
+         
+        
+   shape-margin: 2.5%;
+   border: solid 0.0vh red;
+    background-size: cover;   
 }
 
-.top-left1 {
-  position: absolute;
-  top: clamp(7rem, 6.9vh, 7.0rem);  
-  left: 16px;
- font-size: clamp(1rem, 1.8vw, 2.0rem);
- color: white; 
+#sh-ot-text2 { text-align: right;
+  font-family: 'Arial';
+  font-size: 20px;
+  font-weight: normal;
+  Color: white;
+  border: solid 0.0vh maroon;
 }
 
-.gap14vh {
-  height: clamp(0.5rem, 1.9vh, 2.0rem);   /* or any size you want; mobile = desktop */
+.moving-div {
+  background: red;
+  margin-top: 50px;
+  animation: upToDown 2s infinite;
 }
 
-.gap10vh {
-  height: clamp(0.4rem, 1.5vh, 1.9rem);   /* or any size you want; mobile = desktop */
+@keyframes upToDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.gap14vw {
+  height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+.gap10vw {
+  height: clamp(1rem, 1.0vw, 1.8rem);   /* or any size you want; mobile = desktop */
 }
 
  #main-container-third {
@@ -59,47 +93,27 @@
   }
 
 
-.P1 {
-font-family: calibri;
-font-size: clamp(1rem, 1.9vw, 2.2rem); 
-font-weight: 600;
- Color: blue;   
-text-align: left;
+.moving-P {
+font-family: Calibri;
+font-size: clamp(1rem, 1.9vw, 2.9rem); 
+font-size: 30px;
+font-weight: 700;
+Color: white;   
 text-decoration: underline;
+text-align: center;
   }
-
-
-#P2 {
-font-family: calibri;
-font-size: clamp(1rem, 1.9vw, 2.0rem); 
- /* font-size: 12.5vh; */
- /* font-size: 12.5vh; */
-  font-weight: 600;
- Color: darkred;   
- /*    background-color: transparent;  */
- /* #46D1F3 is a light blue color */
-  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
-   /* border: solid 0.0vh red; */
-text-align: left;
-  }
-
-.aclass { font-size: clamp(1rem, 1.6vw, 1.9rem); font-family: calibri; font-weight: 500; color:black; text-align:left; display:block; }
-
-
-
-
 
 #P4-1 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.8vw, 2.9rem); 
+font-size: 25px;
 font-weight: 550;
-Color: black;   
+Color: white;   
 text-decoration: underline;
-text-align: left;
+text-align: center;
   }
 #P5 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -107,7 +121,7 @@ text-align: left;
   }
 #P6 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -115,7 +129,7 @@ text-align: left;
   }
 #P7 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -167,23 +181,9 @@ font-weight: 700;
 Color: black;   
 text-align: left;
   }
-#P8-3 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
-font-weight: 700;
-Color: black;   
-text-align: left;
-  }
-#P8-3A {
-font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
-font-weight: 700;
-Color: black;   
-text-align: left;
-  }
 #P52 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;  
 margin-left:2%; 
@@ -191,7 +191,7 @@ text-align: left;
   }
 #P62 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -199,7 +199,7 @@ text-align: left;
   }
 #P72 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -208,15 +208,7 @@ text-align: left;
 
 #P53 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
-font-weight: 700;
-Color: black;  
-margin-left:2%; 
-text-align: left;
-  }
-#P54 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;  
 margin-left:2%; 
@@ -224,15 +216,7 @@ text-align: left;
   }
 #P63 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
-font-weight: 700;
-Color: black;   
-margin-left:2%;
-text-align: left;
-  }
-#P64 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -240,29 +224,13 @@ text-align: left;
   }
 #P73 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
-font-weight: 700;
-Color: black;   
-margin-left:2%;
-text-align: left;
-  }
-#P74 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
 text-align: left;
   }
 #P9 {
-font-family: Calibri;
-font-size: clamp(1rem, 1.6vw, 2.9rem); 
-font-weight: 550;
-Color: black;   
-text-decoration: underline;
-text-align: left;
-  }
-#P9A {
 font-family: Calibri;
 font-size: clamp(1rem, 1.6vw, 2.9rem); 
 font-weight: 550;
@@ -350,7 +318,7 @@ border: 0px solid blue;
     margin: 10px 0 20px 0;
     border-radius: 6px;
      border: 0px solid red;
-     width: 100%;  
+     width: 90%;  
      animation: zoomIn .5s ease;
      transition: .55s ease; 
   }   
@@ -368,9 +336,9 @@ border: 0px solid blue;
 
  .menuPara {
 font-family: Calibri;
-font-size: clamp(1rem, 1.9vw, 2.2rem); 
+font-size:  16px;
 font-weight: 600;
- Color: yellow;   
+ Color: white;   
 display:inline-block;
   }
 
@@ -384,32 +352,25 @@ display:inline-block;
   }
 
 #C-BOX5 { border:0px solid black; display: none;}
- #P-BOX5 { border: 0px solid yellow; color: black; font-family: calibri;   font-size: clamp(1rem, 1.2vw, 1.8rem); font-weight: 450;  width: 99%; padding-top:0%; padding-bottom:0%;
+ #P-BOX5 { border: 0px solid yellow; color: white; font-family: calibri;   font-size: clamp(1rem, 1.9vw, 2.0rem);  font-weight: 450;  width: 99%; padding-top:0%; padding-bottom:0%;
                   margin-left:2%; text-align: left; }
-  #I-BOX5 { border: 0px solid red; width: 25%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
+  #I-BOX5 { border: 0px solid red; width: 30%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
                   filter: brightness(200%); filter: contrast(150%); }  
  .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
 
  
-#explist {
+#servlist {
 font-family: calibri;
-font-size: clamp(1rem, 1.3vw, 2.5rem);
-font-weight: 500;
+font-size: clamp(1rem, 2.5vw, 1.5rem);
+font-weight: 400;
  Color: black;   
 }
 
 #adrlist {
-/*  list-style-type: none;   */ /* Remove bullets */
+  list-style-type: none; /* Remove bullets */
 font-family: calibri;
-font-size: clamp(1rem, 1.3vw, 2.5rem);;
-font-weight: 500;
- Color: black;   
-}
-
-#qlflist {
-font-family: calibri;
-font-size: clamp(1rem, 1.3vw, 2.5rem);;
-font-weight: 500;
+font-size: clamp(1rem, 2.5vw, 1.5rem);;
+font-weight: 400;
  Color: black;   
 }
 
