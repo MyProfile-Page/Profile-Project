@@ -44,7 +44,7 @@
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 40px; /* spacing from top */
+      margin-top: 3px; /* spacing from top */
       margin-bottom: 40px; /* spacing from bottom */
       border: 0px solid red;
     }
