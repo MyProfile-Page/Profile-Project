@@ -25,21 +25,39 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title></title>
 </head>
-
 <body class = "body_cls"; font-family: 'Poppins', sans-serif; >
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-<div style="text-align: center;">
-<p id = "P2" class = "menuPara"><a onclick="toggleSection('s1')">About Us</a></p>
-<p id = "P3"  class = "menuPara"><a onclick="toggleSection('s2')">&nbsp&nbsp&nbsp&nbspCourses</a></p>
-<p id = "P4"  class = "menuPara"><a onclick="toggleSection('s3')">&nbsp&nbsp&nbsp&nbspAddress</a></p>
-<p id = "P4B"  class = "menuPara"><a href="index.html">&nbsp&nbsp&nbsp&nbspBack</a></p>
-</div> 
+
+ 
+
+
+
+
    <!--  Main Container   -->
 
 <div id="main-container-first" class="container">
  <div id="main-container-second" class="main-container-second row justify-content-center">
       <div id="main-container-third" class= "main-container-third col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
+
+<!-- 🌍 Navigation Bar starts -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNav"  >
+        <ul class="navbar-nav ms-auto" >
+          
+           <li class="nav-item"><a class="nav-link active" style="font-size: clamp(1rem, 1.6vw, 1.9rem); " onclick="toggleSection('s1')">About us</a></li>
+            <li class="nav-item"><a class="nav-link active"  style="font-size: clamp(1rem, 1.6vw, 1.9rem);" onclick="toggleSection('s2')">&nbsp&nbspCourses</a></li>
+            <li class="nav-item"><a class="nav-link active" style="font-size: clamp(1rem, 1.6vw, 1.9rem);"  onclick="toggleSection('s3')">&nbsp&nbspAddress</a></li>
+            <li class="nav-item"><a class="nav-link active" style="font-size: clamp(1rem, 1.4vw, 1.7rem);color: blue;"  href="index.html">Back</a></li>        
+        
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <!-- 🌍 Navigation Bar ends -->
 
 <div id="s1" class="sectionBox">
  <P id="P4-1" class="P4-1"></P>
