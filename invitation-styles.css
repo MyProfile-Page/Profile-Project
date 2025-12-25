@@ -1,0 +1,386 @@
+﻿ 
+ 
+
+
+
+#html_cls {
+    }
+
+.body_cls {
+          background-color: white;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background-color: black;
+          background: lightblue;
+          line-height: 0.8;
+            }
+
+.sh-ot-shape2 {  width: 95%;  height: 53vh; float: right; 
+       background-image: url("CONTACT-PIC.jpg");  background-repeat: no-repeat;   
+ 
+
+ /*    4 corner poly shape at right    */
+
+        shape-outside: polygon(50% 0%, 100% 0%, 100% 100%, 30% 100%);       
+       clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 30% 100%);          
+
+       -webkit-shape-outside: polygon(40% 0%, 90% 0%, 100% 100%, 30% 100%);       
+       -webkit-clip-path: polygon(40% 0%, 90% 0%, 100% 100%, 30% 100%);          
+         
+       -ms-shape-outside: polygon(50% 0%, 100% 0%, 100% 100%, 30% 100%);       
+       -ms-clip-path: polygon(50% 0%, 80% 0%, 100% 100%, 30% 100%);          
+         
+        
+   shape-margin: 2.5%;
+   border: solid 0.0vh red;
+    background-size: cover;   
+}
+
+#sh-ot-text2 { text-align: right;
+  font-family: 'Arial';
+  font-size: 20px;
+  font-weight: normal;
+  Color: white;
+  border: solid 0.0vh maroon;
+}
+
+.moving-div {
+  background: #EB050E;
+  margin-top: 40px;
+  animation: upToDown 2s infinite;
+}
+
+@keyframes upToDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.gap14vw {
+  height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+.gap10vw {
+  height: clamp(1rem, 1.0vw, 1.8rem);   /* or any size you want; mobile = desktop */
+}
+
+ #main-container-third {
+      background-color: #f8f9fa;
+      background: lightyellow;  
+      background-color: #140459; 
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 15px; /* spacing from top */
+      margin-bottom: 40px; /* spacing from bottom */
+      border: 0px solid red;
+    }
+
+#R1_D1 {
+    border: 0px solid #333;
+  border-radius: 0px;
+  /* padding: 15px;  */
+  /* background: linear-gradient(to right, #007bff, #00c6ff);  */
+  /* #46D1F3 is a light blue color */
+  text-align: center;
+  }
+
+
+.moving-P {
+font-family: Calibri;
+font-size: clamp(1rem, 1.9vw, 2.9rem); 
+font-size: 30px;
+font-weight: 700;
+Color: white;   
+text-decoration: underline;
+text-align: center;
+  }
+
+#P4-1 {
+font-family: Calibri;
+font-size: 25px;
+font-weight: 550;
+Color: white;   
+text-decoration: underline;
+text-align: center;
+  }
+#P5 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+#P6 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+#P7 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+
+#P8 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+
+text-align: left;
+  }
+
+#P8A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+
+text-align: left;
+  }
+#P8-1A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-2A {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-1 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P8-2 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-weight: 700;
+Color: black;   
+text-align: left;
+  }
+#P52 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;  
+margin-left:2%; 
+text-align: left;
+  }
+#P62 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+#P72 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+
+#P53 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;  
+margin-left:2%; 
+text-align: left;
+  }
+#P63 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+#P73 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.9rem); 
+font-weight: 700;
+Color: black;   
+margin-left:2%;
+text-align: left;
+  }
+#P9 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-weight: 550;
+Color: black;   
+text-decoration: underline;
+text-align: left;
+  }
+#P10 {
+font-family: Calibri;
+font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-weight: 550;
+Color: black;   
+text-decoration: underline;
+text-align: left;
+  }
+
+.img-fluid {
+  width: auto;
+   height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#main-container-first {
+/*    display: none;   */
+    top: 0;
+      left: 0;
+border: 0px solid yellow;
+  }
+
+#main-container-second {
+/*    display: none;   */
+/*    top: 0;     */
+/*      left: 0;   */
+border: 0px solid blue;
+   }
+
+#R1_D1 {
+    border: 0px solid #333;
+  border-radius: 0px;
+  /* padding: 15px;  */
+  /* background: linear-gradient(to right, #007bff, #00c6ff);  */
+  /* #46D1F3 is a light blue color */
+   }
+
+.btn {
+      display: inline-block;
+   /*   background: #0066ff;   */
+      background: black; 
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 0.6rem;
+     }
+
+#sh-ot-image1 {  width: 25%;  float: right; 
+  
+/*    Image at left    */
+        filter: brightness(200%);
+  filter: contrast(100%);  
+   border: solid 8px white;  
+   -webkit-shape-outside: url(individualjp1.jpg);   
+   -webkit-shape-margin: 22%;
+  shape-image-threshold: 5.5; 
+   -webkit-shape-image-threshold: 5.5; 
+ 
+}
+
+.sh-ot-text4 { text-align: left;
+  font-family: 'calibri';
+  font-size: 18px;
+  font-weight: 400;
+  Color: black;
+  border: solid 0.0vh maroon;
+}
+
+ .sectionBox {
+    display: none;
+    padding: 15px;
+    background: #eef5ff;
+    border-left: 4px solid #4a8cff;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+     border: 0px solid red;
+     width: 90%;  
+     animation: zoomIn .5s ease;
+     transition: .55s ease; 
+  }   
+@keyframes zoomIn {
+  from { transform: scale(0.75); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+  .menuBox {
+    padding: 1px;
+    background: black;
+    border-left: 4px solid black;
+    margin: 10px 0 20px 0;
+    border-radius: 6px;
+  }
+
+ .menuPara {
+font-family: Calibri;
+font-size:  16px;
+font-weight: 600;
+ Color: white;   
+display:inline-block;
+  }
+
+  a {
+    cursor: pointer;
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+#C-BOX5 { border:0px solid black; display: none;}
+ #P-BOX5 { border: 0px solid yellow; color: white; font-family: calibri;   font-size: clamp(1rem, 1.9vw, 2.0rem);  font-weight: 450;  width: 99%; padding-top:0%; padding-bottom:0%;
+                  margin-left:2%; text-align: left; }
+  #I-BOX5 { border: 0px solid red; width: 75%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
+                  filter: brightness(200%); filter: contrast(150%); }  
+ .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
+
+ 
+#servlist {
+font-family: calibri;
+font-size: clamp(1rem, 2.5vw, 1.5rem);
+font-weight: 400;
+ Color: black;   
+}
+
+#adrlist {
+  list-style-type: none; /* Remove bullets */
+font-family: calibri;
+font-size: clamp(1rem, 2.5vw, 1.5rem);;
+font-weight: 400;
+ Color: black;   
+}
+
+
+
+
+
+
+
+
+
+
+ 
