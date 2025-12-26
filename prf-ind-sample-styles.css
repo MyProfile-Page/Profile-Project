@@ -87,6 +87,14 @@ Color: white;
 text-align: center;
   }
 
+ .a1 {
+font-family: Calibri;
+font-size: clamp(1rem, 2.0vw, 2.2rem); 
+font-weight: 600;
+ Color: white; 
+
+  }
+
 
 #P4-1 {
 font-family: Calibri;
