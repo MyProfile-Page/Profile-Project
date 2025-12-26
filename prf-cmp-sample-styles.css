@@ -19,6 +19,7 @@
   left: 30px;
   font-size: clamp(1rem, 1.8vw, 2.0rem);
   color: white; 
+ text-decoration: underline;  
 }
 
 .top-left1 {
@@ -27,6 +28,7 @@
   left: 30px;
  font-size: clamp(1rem, 1.8vw, 2.0rem);
  color: white; 
+text-decoration: underline;  
 }
 .gap14vw {
   height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
