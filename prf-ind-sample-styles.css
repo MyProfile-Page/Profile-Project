@@ -21,6 +21,7 @@
   font-size: clamp(1rem, 1.8vw, 2.0rem);
   color: white; 
   text-decoration: underline;  
+  font-weight: 950;
 }
 
 .top-left1 {
