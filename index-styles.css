@@ -87,10 +87,9 @@ text-align: left;
 
  .a1 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.0vw, 2.2rem); 
-font-weight: 600;
- Color: white;   
-text-decoration: underline;
+font-size: clamp(1rem, 2.1vw, 2.5rem); 
+Color: yellow;   
+/* text-decoration: underline;  */
   }
 
 
@@ -382,8 +381,10 @@ display:inline-block;
 
   a {
     cursor: pointer;
-    color: #0066cc;
-    text-decoration: none;
+    font-family: Calibri;
+    font-size: clamp(1rem, 5.0vw, 5.2rem); 
+    font-weight: 600;
+    Color: red;      
   }
   a:hover {
     text-decoration: underline;
