@@ -101,7 +101,7 @@ text-decoration: underline;
 
 #P4-1 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.8vw, 2.9rem); 
+font-size: 20px;
 font-weight: 550;
 Color: black;   
 text-decoration: underline;
@@ -109,7 +109,7 @@ text-align: left;
   }
 #P5 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -117,7 +117,7 @@ text-align: left;
   }
 #P6 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -125,7 +125,7 @@ text-align: left;
   }
 #P7 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -134,7 +134,7 @@ text-align: left;
 
 #P8 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px;
 font-weight: 700;
 Color: black;   
 
@@ -143,7 +143,7 @@ text-align: left;
 
 #P8A {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px;
 font-weight: 700;
 Color: black;   
 
@@ -151,49 +151,49 @@ text-align: left;
   }
 #P8-1A {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px;
 font-weight: 700;
 Color: black;   
 text-align: left;
   }
 #P8-2A {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px;
 font-weight: 700;
 Color: black;   
 text-align: left;
   }
 #P8-1 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px;
 font-weight: 700;
 Color: black;   
 text-align: left;
   }
 #P8-2 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px;
 font-weight: 700;
 Color: black;   
 text-align: left;
   }
 #P8-3 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px;
 font-weight: 700;
 Color: black;   
 text-align: left;
   }
 #P8-3A {
 font-family: Calibri;
-font-size: clamp(1rem, 1.1vw, 2.0rem); 
+font-size: 15px; 
 font-weight: 700;
 Color: black;   
 text-align: left;
   }
 #P52 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;  
 margin-left:2%; 
@@ -201,7 +201,7 @@ text-align: left;
   }
 #P62 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -209,7 +209,7 @@ text-align: left;
   }
 #P72 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -218,7 +218,7 @@ text-align: left;
 
 #P53 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;  
 margin-left:2%; 
@@ -226,7 +226,7 @@ text-align: left;
   }
 #P54 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px; 
 font-weight: 700;
 Color: black;  
 margin-left:2%; 
@@ -234,7 +234,7 @@ text-align: left;
   }
 #P63 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -242,7 +242,7 @@ text-align: left;
   }
 #P64 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -250,7 +250,7 @@ text-align: left;
   }
 #P73 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;; 
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -258,7 +258,7 @@ text-align: left;
   }
 #P74 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.5vw, 1.9rem); 
+font-size: 18px;
 font-weight: 700;
 Color: black;   
 margin-left:2%;
@@ -266,7 +266,7 @@ text-align: left;
   }
 #P9 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-size: 20px;
 font-weight: 550;
 Color: black;   
 text-decoration: underline;
@@ -274,7 +274,7 @@ text-align: left;
   }
 #P9A {
 font-family: Calibri;
-font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-size: 20px;
 font-weight: 550;
 Color: black;   
 text-decoration: underline;
@@ -282,7 +282,7 @@ text-align: left;
   }
 #P10 {
 font-family: Calibri;
-font-size: clamp(1rem, 1.6vw, 2.9rem); 
+font-size: 20px;
 font-weight: 550;
 Color: black;   
 text-decoration: underline;
