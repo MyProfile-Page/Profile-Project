@@ -15,7 +15,7 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(12rem, 13.9vh, 15.0rem);  
+  top: clamp(3rem, 4.9vh, 5.0rem);  
   left: 50px;
   font-size: clamp(1rem, 2.1vw, 2.3rem);
  font-weight: 550;
@@ -24,7 +24,7 @@
 
 .top-left0-1 {
   position: absolute;
-  top: clamp(12rem, 13.9vh, 15.0rem);  
+  top: clamp(3rem, 4.9vh, 5.0rem);  
   left: 15px;
  
 }
@@ -32,7 +32,7 @@
 .top-left1 {
 
   position: absolute;
-  top: clamp(16rem, 17.9vh, 19.0rem);  
+  top: clamp(6rem, 7.9vh, 8.0rem);  
   left: 50px;
  font-size: clamp(1rem, 2.1vw, 2.3rem);
  font-weight: 550;
@@ -42,7 +42,7 @@
 .top-left1-1 {
 
   position: absolute;
-  top: clamp(16rem, 17.9vh, 19.0rem);  
+  top: clamp(6rem, 7.9vh, 8.0rem);  
   left: 15px;
  
 }
