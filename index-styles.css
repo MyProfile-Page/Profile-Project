@@ -81,7 +81,7 @@
 
 .P1 {
 font-family: calibri;
-font-size: clamp(1rem, 1.9vw, 2.2rem); 
+font-size: 20px; 
 font-weight: 600;
  Color: blue;   
 text-align: left;
@@ -107,7 +107,7 @@ text-align: left;
 
  .a1 {
 font-family: Calibri;
-font-size: 20px; 
+font-size: 18px; 
 Color: white;   
  font-weight: 550;
 /* text-decoration: underline;  */
