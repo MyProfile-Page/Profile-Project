@@ -403,7 +403,7 @@ display:inline-block;
  
 #explist {
 font-family: calibri;
-font-size: clamp(1rem, 1.3vw, 2.5rem);
+font-size: 18px;
 font-weight: 500;
  Color: black;   
 }
@@ -411,14 +411,14 @@ font-weight: 500;
 #adrlist {
 /*  list-style-type: none;   */ /* Remove bullets */
 font-family: calibri;
-font-size: clamp(1rem, 1.3vw, 2.5rem);;
-font-weight: 500;
+font-size: 18px;
+font-weigh: 500;
  Color: black;   
 }
 
 #qlflist {
 font-family: calibri;
-font-size: clamp(1rem, 1.3vw, 2.5rem);;
+font-size: 18px;
 font-weight: 500;
  Color: black;   
 }
