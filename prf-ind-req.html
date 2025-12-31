@@ -51,7 +51,7 @@
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
   
    <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
-       <h5 style="text-align: center; text-decoration: underline">Web Profile Request Form For Individuals</h5> 
+       <h5 id="h5" style="text-align: center; text-decoration: underline"></h5> 
        
       
        
@@ -64,7 +64,7 @@
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
        
  <!--      <form id="contactForm" onsubmit="handleSubmit(event)">   -->   
-           <form id="contactForm" action="https://formspree.io/f/myzbzwnv" method="POST">     
+           <form id="EcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST">     
   <!--      <form id="contactForm" action= "https://formsubmit.co/asadsayeed@hotmail.com" method="POST">  -->
      <div class="gap14vh"></div>
      <div class="gap14vh"></div>
@@ -154,6 +154,99 @@
 <div class="gap14vh"></div>
     <button type="submit" style="font-weight: 600; font-size: clamp(1rem, 1.4vw, 1.6rem);">Submit</button>
   </form>
+
+ <!--      <form id="contactForm" onsubmit="handleSubmit(event)">   -->   
+           <form id="TcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST">     
+  <!--      <form id="contactForm" action= "https://formsubmit.co/asadsayeed@hotmail.com" method="POST">  -->
+     <div class="gap14vh"></div>
+     <div class="gap14vh"></div>
+     <div class="gap14vh"></div>
+    <img src="thumb-title.jpg"><label for="usertitle">&nbsp&nbspMeslek:</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+<input list="usertitlesT" id="usertitleT" name="usertitle" class="form-control" placeholder="Mesleğinizi seçin veya yazın."  required>
+<datalist id="usertitlesT">
+  <option value="Bankacı">
+  <option value="Mühendis">
+  <option value="Doktor">
+  <option value="Öğrenci">
+  <option value="Öğretmen">
+  <option value="Serbest meslek">
+  <option value="Dükkâncı">
+  <option value="Ajan">
+  <option value="Hemşire">
+  <option value="Teknisyen">
+  <option value="Emekli">
+  <option value="Gönüllü">
+</datalist>  
+  <div class="gap14vh"></div>Emekli
+  <div class="gap14vh"></div>
+   <img src="thumb-name.jpg"><label for="username">&nbsp&nbspİsim:</label>
+   <div class="gap14vh"></div>
+   <div class="gap14vh"></div>
+    <input type="text" id="username" name="username"  class="form-control"  required>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>  
+   
+     <img src="thumb-email.jpg"><label for="useremail">&nbsp&nbspE-posta:</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <input type="text" id="useremail" name="useremail"  class="form-control">
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <img src="thumb-biography.jpg"><label for="bio">&nbsp&nbspBiyografi: en fazla 10 satır.</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <textarea id="bio" rows="10"  name="bio" class="form-control"  required ></textarea>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <img src="thumb-qlf.png"><label for="qlf1">&nbsp&nbspNitelikler:</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <input type="text" id="qlf1"  name="qlf1" class="form-control" >
+    <div class="gap14vh"></div>
+<!--    <label for="qlf2">Second Qualification:</label><div class="gap14vh"></div>  -->   
+ <!--    <input type="text" id="qlf2" size="30" ><div class="gap14vh"></div>  -->   
+<input type="text" id="qlf2" name="qlf2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="text" id="qlf3" name="qlf3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="qlf4" name="qlf4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="qlf5" name="qlf5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+ <img src="thumb-services.png"><label for="exp1">&nbsp&nbspDeneyimler:</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <input type="text" id="exp1"  name="exp1" class="form-control" >
+<div class="gap14vh"></div>
+<input type="text" id="exp2" name="exp2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="text" id="exp3" name="exp3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="exp4" name="exp4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="exp5" name="exp5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+ <img src="thumb-address.jpg"><label for="adr1">&nbsp&nbspAdres:</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <input type="text" id="adr1" name="adr1" class="form-control" >
+<div class="gap14vh"></div>
+<input type="text" id="adr2" name="adr2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="text" id="adr3" name="adr3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="adr4" name="sdr4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="adr5" name="adr5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <button type="submit" style="font-weight: 600; font-size: clamp(1rem, 1.4vw, 1.6rem);">Gönder </button>
+  </form>
+
 
    <form id="hcontactForm" action="https://xxxformspree.io/f/myzbzwnv" method="POST">
   <input type="hidden" id="husertitle" name="husertitle">
@@ -321,7 +414,14 @@
 //      e.preventDefault();     
 //    });
 
-
+ if (localStorage.getItem("website") === "s1") {
+     document.getElementById("TcontactForm").style.display = "none";
+     document.getElementById('h5').innerHTML = 'Web Profile Request Form For Individuals ';        
+    }
+ if (localStorage.getItem("website") === "s2") {
+     document.getElementById("EcontactForm").style.display = "none";
+     document.getElementById('h5').innerHTML = 'Bireyler İçin Web Profil Talep Formu';   
+    }
 
  function handleSubmit(event) {
       // Prevent the form from reloading the page

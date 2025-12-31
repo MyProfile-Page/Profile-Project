@@ -31,15 +31,15 @@
 <div style="text-align: center; background-color: #382A2A; ">
 <div class="gap14vh"></div>
 
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>Biography</a>
+<a  id = "abio" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>Biography</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Education</a>
+<a   id = "aedu" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Education</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2A')"><span id="icon">^</span>Experience</a>
+<a   id = "aexp" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2A')"><span id="icon">^</span>Experience</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
+<a   id = "aadr" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
+<a  id = "abac" href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
 
 </div> 
  
@@ -203,6 +203,7 @@ function toggleSection(id) {
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
 
+if (localStorage.getItem("website") === "s1") {
 
 document.getElementById("P5").textContent = 'Chief Accountant ';
 document.getElementById("P52").textContent = 'Chief Accountant ';
@@ -241,7 +242,7 @@ document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager a
                                                            ' In my spare time I love to go on long drives if i have enough time   ' +
                                                           ' to spare and enjoy seeing the beautiful country side. but if i do not have  ' +
                                                            ' enough to time to spare then i go to some nearby library and read the recent  ' +
-                                                          ' sports and entertainment Savanah Juliet Yukiicles which are published in international magazines.  ';
+                                                          ' sports and entertainment which are published in international magazines.  ';
 
 
 
@@ -292,7 +293,7 @@ document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager a
       document.getElementById("explist").appendChild(node9);
 
      const node10 = document.createElement("li");
-      const textnode10 = document.createTextNode("Consultant at Agro savanah@newoutlook.com  2019 - Present.");
+      const textnode10 = document.createTextNode("Consultant at Agro 2019 - Present.");
       node10.appendChild(textnode10);
       document.getElementById("explist").appendChild(node10);
 
@@ -332,6 +333,151 @@ document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager a
       const textnode17 = document.createTextNode("e-mail:  Chief Accountant@gmail.com ");
       node17.appendChild(textnode17);
       document.getElementById("adrlist").appendChild(node17); 
+
+}
+
+if (localStorage.getItem("website") === "s2") {
+
+document.getElementById("abio").textContent = 'Biyografi ';
+document.getElementById("aedu").textContent = 'Eğitim ';
+document.getElementById("aexp").textContent = 'Deneyim ';
+document.getElementById("aadr").textContent = 'Adres ';
+document.getElementById("abac").textContent = 'Geri ';
+
+document.getElementById("P5").textContent = 'Baş Muhasebeci ';
+document.getElementById("P52").textContent = 'Baş Muhasebeci ';
+document.getElementById("P53").textContent = 'Baş Muhasebeci ';
+document.getElementById("P54").textContent = 'Baş Muhasebeci ';
+document.getElementById("P6").textContent = 'Savanah Juliet Yuki ';
+document.getElementById("P62").textContent = 'Savanah Juliet Yuki ';
+document.getElementById("P63").textContent = 'Savanah Juliet Yuki ';
+document.getElementById("P64").textContent = 'Savanah Juliet Yuki ';
+document.getElementById("P7").textContent = 'savanah@newoutlook.com ';
+document.getElementById("P72").textContent = 'savanah@newoutlook.com ';
+document.getElementById("P73").textContent = 'savanah@newoutlook.com ';
+document.getElementById("P74").textContent = 'savanah@newoutlook.com ';
+document.getElementById("P8").textContent = '100 New Street, Garden East ';
+document.getElementById("P8A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-1").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-1A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-2").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-2A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-3").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-3A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P4-1").textContent = 'Biyografi: ';
+document.getElementById("P9").textContent = 'Eğitim: ';
+document.getElementById("P9A").textContent = 'Deneyim: ';
+document.getElementById("P10").textContent = 'Adres: ';
+
+document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager at New Technologies. I have ' +
+                                                          ' responsibility for keeping records of all company transactions. ' +
+                                                          ' Before joining New Technologies, I worked at several companies ' +
+                                                          ' building my skills in developing computerized accounting systems. ' +
+                                                          ' Prior to that I served as a junior and then as a senior officer in ' +
+                                                          ' many small companies in USA for more than four years. During my ' +
+                                                          ' initial job assignments I kept on studying in vocational colleges to ' +
+                                                          ' increase my knowledge base. At present I am very happy with my  ' +
+                                                          ' job and love to meet new people.  ' +
+                                                           ' In my spare time I love to go on long drives if i have enough time   ' +
+                                                          ' to spare and enjoy seeing the beautiful country side. but if i do not have  ' +
+                                                           ' enough to time to spare then i go to some nearby library and read the recent  ' +
+                                                          ' sports and entertainment which are published in international magazines.  ';
+
+
+
+
+
+    const node1 = document.createElement("li");
+       const textnode1 = document.createTextNode("Ortaokul Diploması.");
+      node1.appendChild(textnode1);
+      document.getElementById("qlflist").appendChild(node1);
+
+      const node2 = document.createElement("li");
+      const textnode2 = document.createTextNode("Yüksek Ortaöğretim.");
+      node2.appendChild(textnode2);
+      document.getElementById("qlflist").appendChild(node2);
+
+       const node3 = document.createElement("li");
+       const textnode3 = document.createTextNode("Lisans Çalışmaları.");
+      node3.appendChild(textnode3);
+      document.getElementById("qlflist").appendChild(node3);
+
+      const node4 = document.createElement("li");
+      const textnode4 = document.createTextNode("Lisansüstü Çalışmalar.");
+      node4.appendChild(textnode4);
+      document.getElementById("qlflist").appendChild(node4);
+
+       const node5 = document.createElement("li");
+       const textnode5 = document.createTextNode("Doktora.");
+      node5.appendChild(textnode5);
+      document.getElementById("qlflist").appendChild(node5);
+
+
+      const node6 = document.createElement("li");
+      const textnode6 = document.createTextNode("Genç Katip   2012 - 2014.");
+      node6.appendChild(textnode6);
+      document.getElementById("explist").appendChild(node6);
+
+       const node7 = document.createElement("li");
+      const textnode7 = document.createTextNode("Kıdemli Katip   2014 - 2016.");
+      node7.appendChild(textnode7);
+      document.getElementById("explist").appendChild(node7);
+
+       const node8 = document.createElement("li");
+      const textnode8 = document.createTextNode("Muhasebe Müdür Yardımcısı  2016 - 2017.");
+      node8.appendChild(textnode8);
+      document.getElementById("explist").appendChild(node8);
+
+       const node9 = document.createElement("li");
+      const textnode9 = document.createTextNode("Kıdemli Muhasebe Müdürü  2017 - 2019.");
+      node9.appendChild(textnode9);
+      document.getElementById("explist").appendChild(node9);
+
+     const node10 = document.createElement("li");
+      const textnode10 = document.createTextNode("Agro'da Danışman  2019 - Present.");
+      node10.appendChild(textnode10);
+      document.getElementById("explist").appendChild(node10);
+
+
+
+  const node11 = document.createElement("li");
+      const textnode11 = document.createTextNode("100. New Street,");
+      node11.appendChild(textnode11);
+      document.getElementById("adrlist").appendChild(node11);
+
+      const node12 = document.createElement("li");
+      const textnode12 = document.createTextNode("Garden East,");
+      node12.appendChild(textnode12);
+      document.getElementById("adrlist").appendChild(node12);
+
+       const node13 = document.createElement("li");
+      const textnode13 = document.createTextNode("New City,");
+      node13.appendChild(textnode13);
+      document.getElementById("adrlist").appendChild(node13);
+
+      const node14 = document.createElement("li");
+      const textnode14 = document.createTextNode("North Province,");
+      node14.appendChild(textnode14);
+      document.getElementById("adrlist").appendChild(node14);
+
+       const node15 = document.createElement("li");
+      const textnode15 = document.createTextNode("Far East Country.");
+      node15.appendChild(textnode15);
+      document.getElementById("adrlist").appendChild(node15);
+
+     const node16 = document.createElement("li");
+      const textnode16 = document.createTextNode("Tel:    647-766-5597");
+      node16.appendChild(textnode16);
+      document.getElementById("adrlist").appendChild(node16);
+
+      const node17 = document.createElement("li");
+      const textnode17 = document.createTextNode("e-mail:  Chief Accountant@gmail.com ");
+      node17.appendChild(textnode17);
+      document.getElementById("adrlist").appendChild(node17); 
+
+   }
+
+
 
 </script> 
       

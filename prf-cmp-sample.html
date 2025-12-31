@@ -31,15 +31,15 @@
 <div style="text-align: center; background-color: #382A2A; ">
 <div class="gap14vh"></div>
 
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>Biography</a>
+<a  id="abio" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>Biography</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Products</a>
+<a   id="aprd" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Products</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2A')"><span id="icon">^</span>Services</a>
+<a   id="aser" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2A')"><span id="icon">^</span>Services</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Location</a>
+<a   id="aloc" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Location</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
+<a  id="abac" href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
 
 </div> 
  
@@ -203,6 +203,8 @@ function toggleSection(id) {
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
 
+if (localStorage.getItem("website") === "s1") {
+
 document.getElementById("P4-1").textContent = 'Company Biography: ';
 document.getElementById("P9").textContent = 'Products: ';
 document.getElementById("P9A").textContent = 'Services/Technology: ';
@@ -324,6 +326,140 @@ document.getElementById("P8-3A").textContent = 'New City, North Province, Z9Y 9Z
       const textnode15 = document.createTextNode("North West Country.");
       node15.appendChild(textnode15);
       document.getElementById("adrlist").appendChild(node15);
+
+}
+
+if (localStorage.getItem("website") === "s2") {
+
+document.getElementById("abio").textContent = 'Şirket Biyografisi ';
+document.getElementById("aprd").textContent = 'Ürünler ';
+document.getElementById("aser").textContent = 'Hizmetler/Teknolojiler ';
+document.getElementById("aloc").textContent = 'Konum ';
+document.getElementById("abac").textContent = 'Geri ';
+document.getElementById("P4-1").textContent = 'Şirket Biyografisi: ';
+document.getElementById("P9").textContent = 'Ürünler: ';
+document.getElementById("P9A").textContent = 'Hizmetler/Teknolojiler: ';
+document.getElementById("P10").textContent = 'Konum: ';
+
+document.getElementById("P5").textContent = 'Kingston & Sons ';
+document.getElementById("P52").textContent = 'Kingston & Sons';
+document.getElementById("P53").textContent = 'Kingston & Sons ';
+document.getElementById("P54").textContent = 'Kingston & Sons ';
+document.getElementById("P6").textContent = 'Soğuk İçecekler ';
+document.getElementById("P62").textContent = 'Soğuk İçecekler ';
+document.getElementById("P63").textContent = 'Soğuk İçecekler ';
+document.getElementById("P64").textContent = 'Soğuk İçecekler ';
+document.getElementById("P7").textContent = 'şirketi ';
+document.getElementById("P72").textContent = 'şirketi ';
+document.getElementById("P73").textContent = 'şirketi ';
+document.getElementById("P74").textContent =  'şirketi ';
+document.getElementById("P8").textContent = '100 New Street, Garden East ';
+document.getElementById("P8A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-1").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-1A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-2").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-3").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-2A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-3A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+   
+
+
+
+             
+      
+
+        document.getElementById('P-BOX5').innerHTML =  '<Normal>' +      
+                                                         ' I was always an Innovative Sales Leader with a proven track  ' +
+                                                         '  record of driving successful results, so I decided to enter in my own sales  ' +
+                                                         ' business where I could use my sales abilities. I looked around and  ' + 
+                                                         ' found that most of the working age population is very busy . ' +
+                                                         'and tries to devote as much less time at a meal location. ' +
+                                                         ' This brought up the idea of selling food in Kiosks near offices where  ' +
+                                                         ' workers find little time during lunch break. At present I  ' +
+                                                         ' am operating ten Kiosks at different locations of the city and  ' +
+                                                           ' market has much more demand which i am not able to fulfil.  ' +
+                                                         ' New people are gradually coming in this business and i myself also  ' +
+                                                         ' hope to increase my business further in near future.  ' +    
+                                                          ' More capital is needed to open new Kiosk shops and Banks are faciliating ';                                                                                                      
+                                                          '</Normal>';       
+       
+      const node1 = document.createElement("li");
+       const textnode1 = document.createTextNode("Kahve ve İçecekler.");
+      node1.appendChild(textnode1);
+      document.getElementById("qlflist").appendChild(node1);
+
+      const node2 = document.createElement("li");
+      const textnode2 = document.createTextNode("El Yapımı Sandviçler.");
+      node2.appendChild(textnode2);
+      document.getElementById("qlflist").appendChild(node2);
+
+       const node3 = document.createElement("li");
+       const textnode3 = document.createTextNode("Patlamış Mısır ve Atıştırmalıklar.");
+      node3.appendChild(textnode3);
+      document.getElementById("qlflist").appendChild(node3);
+
+      const node4 = document.createElement("li");
+      const textnode4 = document.createTextNode("Smoothie ve Meyve Suları.");
+      node4.appendChild(textnode4);
+      document.getElementById("qlflist").appendChild(node4);
+
+       const node5 = document.createElement("li");
+       const textnode5 = document.createTextNode("Tatlılar.");
+      node5.appendChild(textnode5);
+      document.getElementById("qlflist").appendChild(node5);
+
+      const node6 = document.createElement("li");
+      const textnode6 = document.createTextNode("Eve Teslimat.");
+      node6.appendChild(textnode6);
+      document.getElementById("explist").appendChild(node6);
+
+       const node7 = document.createElement("li");
+      const textnode7 = document.createTextNode("Çevrimiçi Siparişler.");
+      node7.appendChild(textnode7);
+      document.getElementById("explist").appendChild(node7);
+
+       const node8 = document.createElement("li");
+      const textnode8 = document.createTextNode("Parti rezervasyonu.");
+      node8.appendChild(textnode8);
+      document.getElementById("explist").appendChild(node8);
+
+       const node9 = document.createElement("li");
+      const textnode9 = document.createTextNode("Çocuk Oyunları.");
+      node9.appendChild(textnode9);
+      document.getElementById("explist").appendChild(node9);
+
+     const node10 = document.createElement("li");
+      const textnode10 = document.createTextNode("Dekorasyonlar.");
+      node10.appendChild(textnode10);
+      document.getElementById("explist").appendChild(node10);
+
+     const node11 = document.createElement("li");
+      const textnode11 = document.createTextNode("22. Flower Avenue,");
+      node11.appendChild(textnode11);
+      document.getElementById("adrlist").appendChild(node11);
+
+      const node12 = document.createElement("li");
+      const textnode12 = document.createTextNode("New Castle,");
+      node12.appendChild(textnode12);
+      document.getElementById("adrlist").appendChild(node12);
+
+       const node13 = document.createElement("li");
+      const textnode13 = document.createTextNode("Lake City,");
+      node13.appendChild(textnode13);
+      document.getElementById("adrlist").appendChild(node13);
+
+      const node14 = document.createElement("li");
+      const textnode14 = document.createTextNode("South Province,");
+      node14.appendChild(textnode14);
+      document.getElementById("adrlist").appendChild(node14);
+
+       const node15 = document.createElement("li");
+      const textnode15 = document.createTextNode("North West Country.");
+      node15.appendChild(textnode15);
+      document.getElementById("adrlist").appendChild(node15);
+
+
+}
 
 
 </script> 

@@ -32,13 +32,13 @@
 <div style="text-align: center; background-color: #382A2A; ">
 <div class="gap14vh"></div>
 
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>About us</a>
+<a  id="aabout" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>About us</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Courses</a>
+<a  id="acourses" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Courses</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
+<a  id="aaddress" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
+<a id="aback" href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
 </div> 
 
    <!--  Main Container   -->
@@ -136,7 +136,7 @@
         <div id="R1" class="row">
             <div id="R1_D1" class="col-sm-12">        
                   <img src="edu-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-                   <div class="top-left" >Sophia Arts Intl.</div> 
+                   <div id="dintl" class="top-left" >Sophia Arts Intl.</div> 
             </div>  
             
        </div>  
@@ -159,6 +159,7 @@ function toggleSection(id) {
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
 
+ if (localStorage.getItem("website") === "s1") {
 
 document.getElementById("P5").textContent = 'Sophia ';
 document.getElementById("P52").textContent = 'Sophia ';
@@ -175,7 +176,7 @@ document.getElementById("P8-1").textContent = '100 New Street, Garden East ';
 document.getElementById("P8-1A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
 document.getElementById("P8-2").textContent = '100 New Street, Garden East ';
 document.getElementById("P8-2A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
-document.getElementById("P4-1").textContent = 'About Us: ';
+document.getElementById("P4-1").textContent = 'About us: ';
 document.getElementById("P9").textContent = 'Courses: ';
 document.getElementById("P10").textContent = 'Address: ';
 document.getElementById("P-BOX5").textContent = 'We are one of the most distinguish art schools ' +
@@ -252,6 +253,111 @@ document.getElementById("P-BOX5").textContent = 'We are one of the most distingu
       const textnode17 = document.createTextNode("e-mail:  Sophia@gmail.com ");
       node17.appendChild(textnode17);
       document.getElementById("adrlist").appendChild(node17); 
+
+  }
+
+ if (localStorage.getItem("website") === "s2") {
+
+document.getElementById("aabout").textContent = 'Hakkımızda';
+document.getElementById("acourses").textContent = 'Kurslar';
+document.getElementById("aaddress").textContent = 'Adres';
+document.getElementById("aback").textContent = 'Geri';
+document.getElementById("dintl").textContent = 'Sophia Arts Uluslararası';
+            
+document.getElementById("P5").textContent = 'Sophia ';
+document.getElementById("P52").textContent = 'Sophia ';
+document.getElementById("P53").textContent = 'Sophia ';
+document.getElementById("P6").textContent = 'Sanat ';
+document.getElementById("P62").textContent = 'Sanat';
+document.getElementById("P63").textContent = 'Sanat ';
+document.getElementById("P7").textContent = 'Uluslararası. ';
+document.getElementById("P72").textContent = 'Uluslararası. ';
+document.getElementById("P73").textContent = 'Uluslararası. ';
+document.getElementById("P8").textContent = '100 New Street, Garden East ';
+document.getElementById("P8A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-1").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-1A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-2").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-2A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P4-1").textContent = 'Hakkımızda: ';
+document.getElementById("P9").textContent = 'Kurslar: ';
+document.getElementById("P10").textContent = 'Adres: ';
+document.getElementById("P-BOX5").textContent = 'We are one of the most distinguish art schools ' +
+                                                          ' in our city.  We have vast selection of art courses for all students ' +
+                                                          ' irrespective of wether thay are regular student or only attending  ' +
+                                                          ' classes in the week ends. We offer related courses to students if they  ' +
+                                                          ' are already in art industry or if they are new comers and want to  ' +
+                                                          ' make a name in the art industry. There is a hidden love for art  ' +
+                                                          'within every man or women, we create and cultivate the desire ' +
+                                                          ' in our student to bring out their hidden art potentials.  ' +
+                                                           ' Our graduates are in top demand in the art industry  ' +
+                                                           ' and start getting employment offers even before the graduate.  ' +
+                                                          ' We are proud of our students and of our high standards.  ' +
+                                                          ' Our students have won top positions in many local and ' +
+                                                          ' International contests and they have been admired by artists ' +
+                                                           ' of International repute around the globe';
+
+  const node1 = document.createElement("li");
+       const textnode1 = document.createTextNode("Doğa Portreleri Çizmek.");
+      node1.appendChild(textnode1);
+      document.getElementById("servlist").appendChild(node1);
+
+      const node2 = document.createElement("li");
+      const textnode2 = document.createTextNode("İnsan Portreleri Çizmek.");
+      node2.appendChild(textnode2);
+      document.getElementById("servlist").appendChild(node2);
+
+       const node3 = document.createElement("li");
+       const textnode3 = document.createTextNode("Renk Kombinasyonları.");
+      node3.appendChild(textnode3);
+      document.getElementById("servlist").appendChild(node3);
+
+      const node4 = document.createElement("li");
+      const textnode4 = document.createTextNode("Mimari");
+      node4.appendChild(textnode4);
+      document.getElementById("servlist").appendChild(node4);
+
+       const node5 = document.createElement("li");
+       const textnode5 = document.createTextNode("İç Tasarım.");
+      node5.appendChild(textnode5);
+      document.getElementById("servlist").appendChild(node5);
+
+  const node11 = document.createElement("li");
+      const textnode11 = document.createTextNode("100. New Street,");
+      node11.appendChild(textnode11);
+      document.getElementById("adrlist").appendChild(node11);
+
+      const node12 = document.createElement("li");
+      const textnode12 = document.createTextNode("Garden East,");
+      node12.appendChild(textnode12);
+      document.getElementById("adrlist").appendChild(node12);
+
+       const node13 = document.createElement("li");
+      const textnode13 = document.createTextNode("New City,");
+      node13.appendChild(textnode13);
+      document.getElementById("adrlist").appendChild(node13);
+
+      const node14 = document.createElement("li");
+      const textnode14 = document.createTextNode("North Province,");
+      node14.appendChild(textnode14);
+      document.getElementById("adrlist").appendChild(node14);
+
+       const node15 = document.createElement("li");
+      const textnode15 = document.createTextNode("Far East Country.");
+      node15.appendChild(textnode15);
+      document.getElementById("adrlist").appendChild(node15);
+
+     const node16 = document.createElement("li");
+      const textnode16 = document.createTextNode("Tel:    647-766-5597");
+      node16.appendChild(textnode16);
+      document.getElementById("adrlist").appendChild(node16);
+
+      const node17 = document.createElement("li");
+      const textnode17 = document.createTextNode("e-mail:  Sophia@gmail.com ");
+      node17.appendChild(textnode17);
+      document.getElementById("adrlist").appendChild(node17); 
+
+}
 
 </script> 
       

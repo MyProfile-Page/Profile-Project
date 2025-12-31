@@ -38,13 +38,13 @@
 <div class="gap14vh"></div>
 
 
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>About us</a>
+<a  id="aabout"  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>About us</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Services</a>
+<a  id="aservices" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Services</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
+<a  id="aaddress"  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
+<a  id="aback" href="index.html" style = "font-size: clamp(1rem, 1.9vw, 2.0rem);" >Back</a>
 
 </div> 
  
@@ -147,7 +147,7 @@
             <div id="R1_D1" class="col-sm-12"> 
                 
                    <img src="makeup-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-                   <div class="top-left" >Erina Makeup Intl.</div>  
+                   <div id="dmakeup" class="top-left" >Erina Makeup Intl.</div>  
             </div>  
             
        </div>  
@@ -170,6 +170,7 @@ function toggleSection(id) {
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
 
+ if (localStorage.getItem("website") === "s1") {
 
 document.getElementById("P5").textContent = 'Erina ';
 document.getElementById("P52").textContent = 'Erina ';
@@ -272,6 +273,120 @@ document.getElementById("P-BOX5").textContent = 'We enhance your natural beauty,
       const textnode17 = document.createTextNode("e-mail:  Erina@gmail.com ");
       node17.appendChild(textnode17);
       document.getElementById("adrlist").appendChild(node17); 
+
+  }
+
+ if (localStorage.getItem("website") === "s2") {
+
+document.getElementById("aabout").textContent = 'Hakkımızda ';
+document.getElementById("aservices").textContent = 'Hizmetler ';
+document.getElementById("aaddress").textContent = 'Adres ';
+document.getElementById("aback").textContent = 'Geri ';
+document.getElementById("dmakeup").textContent = 'Erina Makyaj Uluslararası ';
+
+document.getElementById("P5").textContent = 'Erina ';
+document.getElementById("P52").textContent = 'Erina ';
+document.getElementById("P53").textContent = 'Erina ';
+document.getElementById("P6").textContent = 'Makyaj ';
+document.getElementById("P62").textContent = 'Makyaj ';
+document.getElementById("P63").textContent = 'Makyaj ';
+document.getElementById("P7").textContent = 'Uluslararası ';
+document.getElementById("P72").textContent = 'Uluslararası ';
+document.getElementById("P73").textContent = 'Uluslararası ';
+document.getElementById("P8").textContent = '100 New Street, Garden East ';
+document.getElementById("P8A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-1").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-1A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P8-2").textContent = '100 New Street, Garden East ';
+document.getElementById("P8-2A").textContent = 'New City, North Province, Z9Y 9Z9 Far East Country';
+document.getElementById("P4-1").textContent = 'Hakkımızda: ';
+document.getElementById("P9").textContent = 'Hizmetler: ';
+document.getElementById("P10").textContent = 'Adres: ';
+document.getElementById("P-BOX5").textContent = 'We enhance your natural beauty, through our  ' +
+                                                          'powerful makeup techniques. We apply perfect ' +
+                                                          ' makeup services designed to suit your skin type.  ' +
+                                                          ' No matter whether you’re a bride-to-be, or going to attend  ' +
+                                                          ' a glamorous party, or simply want a polished everyday look,   ' +
+                                                          ' we take care of all of your needs.   ' +
+                                                          'We make you a stunning beauty by unleashing your beauty potentials,  ' +
+                                                          ' We make your hair color matching like international stars do.  ' +
+                                                           ' Your looks are changed completly to suit any occassion you are going.  ' +
+                                                           ' Once you start using our services then there will be no other choice  ' +                                  
+                                                          ' other than us you which will ever like to try  ' +
+                                                           ' The art of Makeup can be handled only by certified artits.  ' +
+                                                           ' Please make sure that your Makeup plan is in hands of a professional ';
+
+  const node1 = document.createElement("li");
+       const textnode1 = document.createTextNode("Cilt temizleme ve nemlendirme.");
+      node1.appendChild(textnode1);
+      document.getElementById("servlist").appendChild(node1);
+
+      const node2 = document.createElement("li");
+      const textnode2 = document.createTextNode("Astar ve temel uygulama.");
+      node2.appendChild(textnode2);
+      document.getElementById("servlist").appendChild(node2);
+
+       const node3 = document.createElement("li");
+       const textnode3 = document.createTextNode("Kapatıcı ve kontür.");
+      node3.appendChild(textnode3);
+      document.getElementById("servlist").appendChild(node3);
+
+      const node4 = document.createElement("li");
+      const textnode4 = document.createTextNode("Göz Farı, Eyeliner ve Maskara");
+      node4.appendChild(textnode4);
+      document.getElementById("servlist").appendChild(node4);
+
+      const node5 = document.createElement("li");
+      const textnode5 = document.createTextNode("Kaş şekillendirme.");
+      node5.appendChild(textnode5);
+      document.getElementById("servlist").appendChild(node5);
+
+      const node6 = document.createElement("li");
+      const textnode6 = document.createTextNode("Dudak rengi ve kalemi..");
+      node6.appendChild(textnode6);
+      document.getElementById("servlist").appendChild(node6);
+
+      const node7 = document.createElement("li");
+      const textnode7 = document.createTextNode("Kalıcılık için sabitleyici sprey.");
+      node7.appendChild(textnode7);
+      document.getElementById("servlist").appendChild(node7);
+
+  const node11 = document.createElement("li");
+      const textnode11 = document.createTextNode("100. New Street,");
+      node11.appendChild(textnode11);
+      document.getElementById("adrlist").appendChild(node11);
+
+      const node12 = document.createElement("li");
+      const textnode12 = document.createTextNode("Garden East,");
+      node12.appendChild(textnode12);
+      document.getElementById("adrlist").appendChild(node12);
+
+       const node13 = document.createElement("li");
+      const textnode13 = document.createTextNode("New City,");
+      node13.appendChild(textnode13);
+      document.getElementById("adrlist").appendChild(node13);
+
+      const node14 = document.createElement("li");
+      const textnode14 = document.createTextNode("North Province,");
+      node14.appendChild(textnode14);
+      document.getElementById("adrlist").appendChild(node14);
+
+       const node15 = document.createElement("li");
+      const textnode15 = document.createTextNode("Far East Country.");
+      node15.appendChild(textnode15);
+      document.getElementById("adrlist").appendChild(node15);
+
+     const node16 = document.createElement("li");
+      const textnode16 = document.createTextNode("Tel:    647-766-5597");
+      node16.appendChild(textnode16);
+      document.getElementById("adrlist").appendChild(node16);
+
+      const node17 = document.createElement("li");
+      const textnode17 = document.createTextNode("e-mail:  Erina@gmail.com ");
+      node17.appendChild(textnode17);
+      document.getElementById("adrlist").appendChild(node17); 
+
+   }
 
 </script> 
       

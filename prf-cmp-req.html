@@ -49,7 +49,7 @@
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
   
    <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
-       <h5 style="text-align: center; text-decoration: underline">Web Profile Request Form For Companies</h5> 
+       <h5 id="h5" style="text-align: center; text-decoration: underline"></h5> 
       
        
         
@@ -61,7 +61,7 @@
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
        
  <!--       <form onsubmit="handleSubmit(event)">   -->   
-       <form id="contactForm" action="https://formspree.io/f/myzbzwnv" method="POST"> 
+       <form id="EcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST"> 
     <div class="gap14vh"></div>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div> 
@@ -150,6 +150,97 @@
 <div class="gap14vh"></div>
     <button type="submit" style="font-weight: 600; font-size: clamp(1rem, 1.4vw, 1.6rem);">Submit</button>
   </form>
+
+    <form id="TcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST"> 
+    <div class="gap14vh"></div>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div> 
+    <img src="thumb-sectors.jpg"><label for="sector">&nbsp&nbspSektör:</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+<input list="sectorsT" id="sectorT" name="sectorT" class="form-control" placeholder="Şirket sektörünüzü seçin veya yazın."   required>
+<datalist id="sectorsT">
+  <option value="İnşaat">
+  <option value="Ulaşım">
+  <option value="Bankacılık">
+   <option value="Üretme">
+  <option value="Pazarlama">
+  <option value="Genel Hizmetler">
+  <option value="Tesisat">
+  <option value="Elektriklenme">
+  <option value="Sağlık hizmeti">
+  <option value="Devlet">
+  <option value="Gönüllülük">
+  <option value="">
+</datalist>  
+
+  <div class="gap14vh"></div>
+<div class="gap14vh"></div>
+  <img src="thumb-name.jpg"><label for="username">&nbsp&nbspBaşlık:</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <input type="text" id="username"   name="username" class="form-control"  required>
+<div class="gap14vh"></div> 
+<div class="gap14vh"></div> 
+     <img src="thumb-email.jpg"><label for="useremail">&nbsp&nbspE-posta:</label>
+<div class="gap14vh"></div> 
+<div class="gap14vh"></div>
+    <input type="text" id="useremail" name="useremail"  class="form-control">
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <img src="thumb-biography.jpg"><label for="bio">&nbsp&nbspProfil: en fazla 10 satır..</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <textarea id="bio" rows="10" name="bio"  class="form-control"   required></textarea>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+   <img src="thumb-product.jpg"> <label for="qlf1">&nbsp&nbspÜrünler veya Beceriler:</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <input type="text" id="qlf1"  name="prd1" class="form-control" >
+<div class="gap14vh"></div>
+<!--    <label for="qlf2">Second Qualification:</label><div class="gap14vh"></div>  -->   
+ <!--    <input type="text" id="qlf2" size="40" ><div class="gap14vh"></div>  -->   
+<input type="search" id="qlf2" name="prd2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="search" id="qlf3" name="prd3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="search" id="qlf4" name="prd4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="search" id="qlf5" name="prd5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+  <img src="thumb-services.png"><label for="exp1">&nbsp&nbspHizmetler:</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <input type="text" id="exp1" name="ser1" class="form-control" >
+<div class="gap14vh"></div>
+<input type="search" id="exp2" name="ser2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="search" id="exp3" name="ser3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="search" id="exp4" name="ser4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="search" id="exp5" name="ser5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+ <img src="thumb-address.jpg"><label for="adr1">&nbsp&nbspKonum:</label>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <input type="text" id="adr1" name="adr1" class="form-control" >
+<div class="gap14vh"></div>
+<input type="search" id="adr2" name="adr2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="search" id="adr3" name="adr3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="search" id="adr4" name="adr4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="search" id="adr5" name="adr5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+    <button type="submit" style="font-weight: 600; font-size: clamp(1rem, 1.4vw, 1.6rem);">Gönder </button>
+  </form>
+
 
   
      <!-- THIRD ROW ENDS --> 
@@ -289,7 +380,14 @@
 //      e.preventDefault();     
 //    });
 
-
+ if (localStorage.getItem("website") === "s1") {
+     document.getElementById("TcontactForm").style.display = "none";
+     document.getElementById('h5').innerHTML = 'Web Profile Request Form For companies';        
+    }
+ if (localStorage.getItem("website") === "s2") {
+     document.getElementById("EcontactForm").style.display = "none";
+     document.getElementById('h5').innerHTML = 'Şirketler İçin Web Profil Talep Formu';   
+    }
 
  function handleSubmit(event) {
       // Prevent the form from reloading the page
