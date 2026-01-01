@@ -15,9 +15,9 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(3rem, 4.9vh, 5.0rem);  
+  top: clamp(3rem, 5.9vh, 6.0rem);  
   left: 15px;
-  font-size: clamp(1rem, 2.3vw, 2.5rem); 
+  font-size: clamp(1rem, 2.5vw, 2.8rem); 
    font-weight: 550;
   font-family: Calibri;
   color: white; 
@@ -33,9 +33,9 @@
 .top-left1 {
 
   position: absolute;
-  top: clamp(6rem, 7.9vh, 8.0rem);  
+  top: clamp(6rem, 11.9vh, 12.0rem);  
   left: 15px;
-  font-size: clamp(1rem, 2.3vw, 2.5rem); 
+  font-size: clamp(1rem, 2.5vw, 2.8rem); 
   font-weight: 550;
   font-family: Calibri;
  color: white; 
@@ -107,7 +107,7 @@ text-align: left;
 
  .a1 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.3vw, 2.5rem);  
+font-size: clamp(1rem, 2.5vw, 2.8rem);  
 Color: white;   
  font-weight: 550;
 /* text-decoration: underline;  */
