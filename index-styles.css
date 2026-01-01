@@ -15,7 +15,7 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(3rem, 5.9vh, 6.0rem);  
+  top: clamp(15px, 8.9vh, 50px);  
   left: 15px;
   font-size: clamp(1rem, 2.5vw, 2.8rem); 
    font-weight: 550;
@@ -33,7 +33,7 @@
 .top-left1 {
 
   position: absolute;
-  top: clamp(6rem, 11.9vh, 12.0rem);  
+  top: clamp(55px, 18.9vh, 105px);  
   left: 15px;
   font-size: clamp(1rem, 2.5vw, 2.8rem); 
   font-weight: 550;
