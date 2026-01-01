@@ -26,15 +26,15 @@
 .top-left0-1 {
   position: absolute;
   top: clamp(3rem, 4.9vh, 5.0rem);  
-  left: 155px;
+  left: 210px;
  
 }
 
 .top-left1 {
 
   position: absolute;
-  top: clamp(55px, 18.9vh, 105px);  
-  left: 15px;
+  top: clamp(15px, 8.9vh, 50px);
+  left: 170px;
   font-size: clamp(1rem, 2.5vw, 2.8rem); 
   font-weight: 550;
   font-family: Calibri;
