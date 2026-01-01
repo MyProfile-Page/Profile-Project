@@ -367,17 +367,18 @@ border: 0px solid blue;
   border: solid 0.0vh maroon;
 }
 
+
  .sectionBox {
     display: none;
     padding: 15px;
     background: #eef5ff;
     border-left: 4px solid #4a8cff;
-    margin: 3px 0 3px 0;
+    margin: 10px 0 20px 0;
     border-radius: 6px;
      border: 0px solid red;
      width: 100%;  
      animation: zoomIn .5s ease;
-     transition: .55s ease; 
+    
   }   
 @keyframes zoomIn {
   from { transform: scale(0.75); opacity: 0; }
