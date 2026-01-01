@@ -16,7 +16,7 @@
 .top-left {
   position: absolute;
   top: clamp(3rem, 4.9vh, 5.0rem);  
-  left: 50px;
+  left: 15px;
   font-size: clamp(1rem, 2.3vw, 2.5rem); 
    font-weight: 550;
   font-family: Calibri;
@@ -26,7 +26,7 @@
 .top-left0-1 {
   position: absolute;
   top: clamp(3rem, 4.9vh, 5.0rem);  
-  left: 15px;
+  left: 155px;
  
 }
 
@@ -34,7 +34,7 @@
 
   position: absolute;
   top: clamp(6rem, 7.9vh, 8.0rem);  
-  left: 50px;
+  left: 15px;
   font-size: clamp(1rem, 2.3vw, 2.5rem); 
   font-weight: 550;
   font-family: Calibri;
@@ -45,7 +45,7 @@
 
   position: absolute;
   top: clamp(6rem, 7.9vh, 8.0rem);  
-  left: 15px;
+  left: 155px;
  
 }
 .gap14vh {
