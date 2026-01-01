@@ -15,8 +15,7 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(15px, 8.9vh, 50px);  
-  left: 15px;
+  top: clamp(15px, 10.9vh, 60px); 
   font-size: clamp(1rem, 2.5vw, 2.8rem); 
    font-weight: 550;
   font-family: Calibri;
@@ -34,7 +33,7 @@
 
   position: absolute;
   top: clamp(15px, 8.9vh, 50px);
-  left: 170px;
+  left: clamp(4rem, 8.9vw, 9rem);
   font-size: clamp(1rem, 2.5vw, 2.8rem); 
   font-weight: 550;
   font-family: Calibri;
