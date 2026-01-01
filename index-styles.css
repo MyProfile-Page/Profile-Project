@@ -386,7 +386,7 @@ border: 0px solid blue;
 }
   .menuBox {
     padding: 1px;
-    background: black;
+    background-color: black;
     border-left: 4px solid black;
     margin: 10px 0 20px 0;
     border-radius: 6px;
@@ -395,8 +395,9 @@ border: 0px solid blue;
  .menuPara {
 font-family: Calibri;
 font-size: clamp(1rem, 1.9vw, 2.2rem); 
+background-color: #382A2A;
 font-weight: 600;
- Color: yellow;   
+ Color: white;   
 display:inline-block;
   }
 
