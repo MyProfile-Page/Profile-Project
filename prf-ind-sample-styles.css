@@ -18,10 +18,10 @@
   position: absolute;
   top: clamp(3rem, 3.5vh, 4.0rem);  
   left: 30px;
-  font-size: 20px;
   color: white; 
+ font-size: clamp(1rem, 2.0vw, 2.3rem);
   text-decoration: underline;  
-  font-weight: 950;
+  font-weight: 600;
 }
 
 .top-left1 {

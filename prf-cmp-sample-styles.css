@@ -15,12 +15,12 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(1.5rem, 2.0vh, 2.5rem);  
+  top: clamp(1.5rem, 2.0vh, 2.3rem);  
   left: 30px;
-  font-size: 20px;
-  color: green; 
+  font-size: clamp(1rem, 2.0vw, 2.3rem);
+ color: green; 
  text-decoration: underline;  
- font-weight: 950;
+ font-weight: 600;
 }
 
 .top-left1 {
