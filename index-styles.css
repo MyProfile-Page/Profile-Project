@@ -17,7 +17,7 @@
   position: absolute;
   top: clamp(3rem, 4.9vh, 5.0rem);  
   left: 50px;
-  font-size: clamp(1rem, 2.0vw, 2.2rem); 
+  font-size: clamp(1rem, 2.3vw, 2.5rem); 
    font-weight: 550;
   font-family: Calibri;
   color: white; 
@@ -35,7 +35,7 @@
   position: absolute;
   top: clamp(6rem, 7.9vh, 8.0rem);  
   left: 50px;
-  font-size: clamp(1rem, 2.0vw, 2.2rem); 
+  font-size: clamp(1rem, 2.3vw, 2.5rem); 
   font-weight: 550;
   font-family: Calibri;
  color: white; 
@@ -107,7 +107,7 @@ text-align: left;
 
  .a1 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.0vw, 2.2rem);  
+font-size: clamp(1rem, 2.3vw, 2.5rem);  
 Color: white;   
  font-weight: 550;
 /* text-decoration: underline;  */
