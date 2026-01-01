@@ -15,7 +15,7 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(2.5rem, 3.0vh, 3.5rem);  
+  top: clamp(1.5rem, 2.0vh, 2.5rem);  
   left: 30px;
   font-size: 20px;
   color: green; 
