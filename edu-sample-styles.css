@@ -18,7 +18,7 @@
   position: absolute;
   top: clamp(1rem, 1.5vh, 2.0rem);  
   left: 30px;
-  font-size: clamp(1rem, 2.3vw, 2.6rem);
+  font-size: clamp(1.8rem, 2.3vw, 2.6rem);
   font-weight:  700;
   color: darkred; 
   text-decoration: underline; 
@@ -83,7 +83,7 @@ text-align: center;
 
  .a1 {
 font-family: Calibri;
-font-size: clamp(2rem, 2.0vw, 2.3rem); 
+font-size: clamp(1.8rem, 2.0vw, 2.3rem); 
 font-weight: 600;
  Color: white; 
 text-decoration: underline;  
