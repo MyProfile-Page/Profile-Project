@@ -16,8 +16,8 @@
 .top-left {
   position: absolute;
   top: clamp(15px, 10.9vh, 60px); 
-  font-size: clamp(1rem, 2.5vw, 2.8rem); 
-   font-weight: 550;
+  font-size: clamp(1.5rem, 2.0vw, 2.3rem);  
+   font-weight: 600;
   font-family: Calibri;
   color: white; 
 }
@@ -106,9 +106,9 @@ text-align: left;
 
  .a1 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.5vw, 2.8rem);  
+font-size: clamp(1.5rem, 2.0vw, 2.3rem); 
 Color: white;   
- font-weight: 550;
+ font-weight: 600;
 /* text-decoration: underline;  */
   }
 
