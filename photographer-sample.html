@@ -303,19 +303,14 @@ document.getElementById("P8-2A").textContent = 'New City, North Province, Z9Y 9Z
 document.getElementById("P4-1").textContent = 'Hakkımızda: ';
 document.getElementById("P9").textContent = 'Hizmetler: ';
 document.getElementById("P10").textContent = 'Adres: ';
-document.getElementById("P-BOX5").textContent = 'Serena With over ten years of experience in portrait ' +
-                                                          ' photography. Serena captures raw emotions and candid moments ' +
-                                                          ' like no other. Her passion for storytelling through her lens  ' +
-                                                          ' has earned her several prestigious awards and recognition ' +
-                                                          ' in the industry. Serena takes breathtaking shots that transport ' +
-                                                          ' viewers into the heart of nature’s beauty. Her attention to ' +
-                                                          'detail and ability to make models feel comfortable results ' +
-                                                          ' in captivating images that leave a lasting impression.  ' +
-                                                           ' She is living with her parents and a very loving little  ' +
-                                                           ' sister Serena. She and her sister are studying in same school.  ' +
-                                                            ' She has won many awards and trophies in local and global  ' +
-                                                            ' contests. Photgraphers of International repute have admired her work.  ' +
-                                                          ' Contact her to capture your beautiful moments.  ';
+document.getElementById("P-BOX5").innerHTML = '<Normal> ' +  
+  'Serena, portre fotoğrafçılığında on yılı aşkın deneyime sahip. Serena, eşsiz bir şekilde ham duyguları ve doğal anları yakalıyor. ' +
+  ' Objektifiyle hikaye anlatma tutkusu, ona sektörde birçok prestijli ödül ve takdir kazandırdı. Serena, izleyicileri doğanın güzelliğinin kalbine  ' +
+  'taşıyan nefes kesici fotoğraflar çekiyor. Detaylara verdiği önem ve modellerin kendilerini rahat hissetmelerini sağlama yeteneği,  ' +
+  ' kalıcı bir izlenim bırakan büyüleyici görüntüler ortaya çıkarıyor. Ailesi ve çok sevgi dolu küçük kız kardeşi Serena ile birlikte yaşıyor. Yerel  ' +
+  ' ve küresel yarışmalarda ödüller ve kupalar kazandı. Uluslararası üne sahip fotoğrafçılar çalışmalarına  ' +
+  ' hayran kaldı. Güzel anlarınızı yakalamak için onunla iletişime geçin. ' +
+                                                            '</Normal>';
   const node1 = document.createElement("li");
        const textnode1 = document.createTextNode("Aile Portreleri.");
       node1.appendChild(textnode1);
