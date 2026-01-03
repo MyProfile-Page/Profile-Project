@@ -15,11 +15,13 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(15px, 10.9vh, 60px); 
- font-size: clamp(1.8rem, 1.7vw, 2.1rem);   
-   font-weight: 600;
+ top: clamp(7rem, 15.9vh, 17rem); 
+ font-size: clamp(2.1rem, 2.5vw, 2.8rem);   
+ font-weight: 700;
   font-family: Calibri;
   color: white; 
+left: clamp(5rem, 12.9vh, 15rem); 
+text-decoration: underline;
 }
 
 .top-left0-1 {
@@ -109,7 +111,7 @@ font-family: Calibri;
 font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
 Color: white;   
  font-weight: 600;
-/* text-decoration: underline;  */
+text-decoration: underline;
   }
 
 
