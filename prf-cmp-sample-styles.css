@@ -15,9 +15,9 @@
             }
 .top-left {
   position: absolute;
-  top: clamp(1.5rem, 2.0vh, 2.3rem);  
+  top: clamp(1.8rem, 2.0vh, 2.3rem);  
   left: 30px;
-  font-size: clamp(1rem, 2.0vw, 2.3rem);
+  font-size: clamp(1.8rem, 1.7vw, 2.1rem);  
  color: green; 
  text-decoration: underline;  
  font-weight: 600;
@@ -89,12 +89,19 @@ text-align: center;
 
  .a1 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.0vw, 2.2rem); 
+  font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
 font-weight: 600;
 Color: white;   
 text-decoration: underline;  
   }
 
+#abac {
+font-family: Calibri;
+  font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+font-weight: 600;
+ 
+text-decoration: underline;  
+  }
 
 #P4-1 {
 font-family: Calibri;
