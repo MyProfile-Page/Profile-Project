@@ -12,6 +12,7 @@
           background: black;
       /*    background: lightblue;    */
           line-height: 0.8;
+          zoom: 100%;
             }
 
 .top-left {
@@ -83,7 +84,7 @@ text-align: center;
 
  .a1 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.8vw, 2.0rem);   
+ font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
 font-weight: 600;
  Color: white; 
 text-decoration: underline;  
@@ -91,7 +92,7 @@ text-decoration: underline;
 
  #aback {
 font-family: Calibri;
-font-size: clamp(1.5rem, 2.0vw, 2.3rem); 
+font-size: clamp(1.5rem, 1.5vw, 2.0rem); 
 font-weight: 600;
 text-decoration: underline;  
   }
