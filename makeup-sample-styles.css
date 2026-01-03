@@ -11,9 +11,17 @@
           background-color: black;
           
           line-height: 0.8;
-          zoom: 100%;
-    
+              
             }
+
+.dmenu {
+ background-color: #382A2A;
+ text-align: center;
+}
+
+.iclass {
+ height: clamp(3rem, 4vh, 5rem);
+}
 
 .top-left {
   position: absolute;

@@ -13,6 +13,12 @@
             background-color: black;  
           line-height: 0.8;
             }
+
+.dmenu {
+ background-color: #382A2A;
+ text-align: center;
+}
+
 .top-left {
   position: absolute;
  top: clamp(3rem, 8.9vh, 12rem); 

@@ -13,6 +13,16 @@
          
           line-height: 0.8;
             }
+
+.dmenu {
+ background-color: #382A2A;
+ text-align: center;
+}
+
+.iclass {
+ height: clamp(3rem, 4vh, 5rem);
+}
+
 .top-left {
   position: absolute;
   top: clamp(2rem, 2.5vh, 3.0rem);  
