@@ -350,7 +350,7 @@ display:inline-block;
 #servlist {
 font-family: calibri;
 font-size: clamp(1.0rem, 1.1vw, 1.5rem); 
-font-weight: 400;
+font-weight: 600;
  Color: black;   
 }
 
@@ -358,7 +358,7 @@ font-weight: 400;
   list-style-type: none; /* Remove bullets */
 font-family: calibri;
 font-size: clamp(1.0rem, 1.1vw, 1.5rem); 
-font-weight: 400;
+font-weight: 600;
  Color: black;   
 }
 
