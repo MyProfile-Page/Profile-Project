@@ -19,9 +19,7 @@
  text-align: center;
 }
 
-.iclass {
- height: clamp(3rem, 4vh, 5rem);
-}
+
 
 .top-left {
   position: absolute;
