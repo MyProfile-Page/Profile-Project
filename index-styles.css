@@ -16,7 +16,7 @@
 .top-left {
   position: absolute;
  top: clamp(3rem, 8.9vh, 12rem); 
- font-size: clamp(1.0rem, 1.8vw, 2.0rem);   
+ font-size: clamp(0.7rem, 1.8vw, 2.0rem);   
  font-weight: 700;
   font-family: Calibri;
   color: white; 
