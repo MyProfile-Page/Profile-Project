@@ -39,12 +39,6 @@
  color: white; 
 }
 
-style="width: 90%; height: 40vh;"
-
-.giclass {
-   width: 90%;
-   height: 40vh;
-}
 
 .gap14vw {
   height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
