@@ -40,13 +40,10 @@
 }
 
 .responsive-img {
-  width: 90%;
+  width: 100%;
   height: 40dvh;
   object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+ }
 
 .gap14vw {
   height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
