@@ -119,7 +119,7 @@ text-align:left; display:block;
 }
 
 .hclass {
- font-size: clamp(1.5rem, 1.5vw, 1.7rem); 
+ font-size: clamp(1.5rem, 1.8vw, 2.1rem); 
 font-family: calibri;
 font-weight: 600; 
 color:darkred;
