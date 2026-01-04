@@ -24,7 +24,7 @@
  top: clamp(3rem, 8.9vh, 12rem); 
  font-size: clamp(0.9rem, 1.8vw, 2.0rem);   
  font-weight: 700;
-  font-family: Calibri;
+  font-family: calibri;
   color: white; 
 left: clamp(3.0rem, 4.9vw, 6.0rem); 
 text-decoration: underline;
