@@ -41,6 +41,14 @@
 
 .responsive-img {
   width: 100%;
+  height: auto;          /* do NOT fix height */
+  max-height: 40dvh;     /* optional limit using dvh */
+  aspect-ratio: 16 / 9; /* or your image’s real ratio */
+  object-fit: contain;  /* or cover */
+}
+
+.responsive-img {
+  width: 100%;
   height: 40dvh;
   object-fit: cover;
  }
