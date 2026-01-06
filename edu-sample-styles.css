@@ -41,11 +41,9 @@
 
 .responsive-img {
   width: 100%;
-  height: auto;          /* do NOT fix height */
-  max-height: 40dvh;     /* optional limit using dvh */
-  aspect-ratio: 16 / 9; /* or your image’s real ratio */
-  object-fit:  cover;  /* or cover */
-}
+  height: 40dvh;
+  object-fit: cover;
+ }
 
 
 .gap14vw {
@@ -375,6 +373,7 @@ font-family: calibri;
 font-size: clamp(1.0rem, 1.1vw, 1.5rem); 
 font-weight: 600;
  Color: black;   
+line-height: clamp(1.2rem, 1.5vw, 1.8rem); 
 }
 
 #adrlist {
@@ -383,6 +382,7 @@ font-family: calibri;
 font-size: clamp(1.0rem, 1.1vw, 1.5rem); 
 font-weight: 600;
  Color: black;   
+line-height: clamp(1.1rem, 1.4vw, 1.7rem); 
 }
 
 
