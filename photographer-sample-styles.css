@@ -354,7 +354,7 @@ display:inline-block;
  #P-BOX5 { border: 0px solid yellow; color: black; font-family: 'calibri';  font-size: font-size: clamp(1.0rem, 1.1vw, 1.5rem); ; font-weight: 400;  width: 99%; padding-top:0%; padding-bottom:0%;
                   margin-left:2%; text-align: left; }
   #I-BOX5 { border: 0px solid red; width: 30%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
-                  filter: brightness(200%); filter: contrast(150%); height: 15dvh; }  
+                  filter: brightness(200%); filter: contrast(150%); height: 10dvh; }  
  .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
 
  
