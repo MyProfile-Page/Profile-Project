@@ -420,6 +420,13 @@ display:inline-block;
                   filter: brightness(200%); filter: contrast(150%); }  
  .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
 
+#P-EXP-ESSAY {
+font-family: calibri;
+font-size: clamp(1rem, 1.2vw, 1.5rem);
+font-weight: 400;
+ Color: black;   
+ text-align: left;
+  }
  
 #explist {
 font-family: calibri;
