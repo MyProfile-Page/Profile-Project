@@ -401,11 +401,11 @@ border: 0px solid blue;
 
  .sectionBox {
     display: none;
-    padding: 15px;
+    padding: 3.0dvh;
     background: #eef5ff;
     border-left: 4px solid #4a8cff;
-    margin: 10px 0 20px 0;
-    border-radius: 6px;
+    margin: 9dvh 0 4.5dvh 0;
+    border-radius: 1.3dvh;
      border: 0px solid red;
      width: 100%;  
      animation: zoomIn .5s ease;

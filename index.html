@@ -22,13 +22,13 @@
    
  
     <meta charset="UTF-8"> 
-   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" >
    <title></title>
 </head>
 
 <body class = "body_cls"; font-family: 'Poppins', sans-serif; >
 
- <div class="dmenu">
+ <div id ="dmenu" class="dmenu">
 
 <div class="gap14vh"></div>
 
@@ -53,6 +53,7 @@
   
 
 <div id="s1" class="sectionBox">   
+                     
                        <div class="gap10vh"></div>   
                         <div class="gap10vh"></div>    
                        <div class="hclass"> MiniWebSites</div>
@@ -81,8 +82,7 @@
                        <a href="photographer-sample.html" class="aclass">4. Photography Business.</a>
                        <div class="gap14vh"></div>                            
                        <a href="ind-sample.html" class="aclass">5. Individual Person.</a>
-                      <div class="gap10vh"></div>   
-                      <div class="gap10vh"></div>  
+                       <div class="gap10vh"></div>  
                        <div class="gap14vh"></div>   
                        <div class="gap14vh"></div>         
                       <a href="guide-codes.html" class="bclass">&nbspGuide</a>  
@@ -126,7 +126,7 @@
                       <div class="gap10vh"></div>   
                       <div class="gap10vh"></div>  
                        <div class="gap14vh"></div>   
-                       <div class="gap14vh"></div>         
+                          
                       <a href="guide-codes.html" class="bclass" >&nbspRehber</a>  
                       <div class="gap14vh"></div>   
                       
@@ -183,6 +183,8 @@ function toggleSection(id) {
   const website = id;
   localStorage.setItem('website', website);
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
+   dmenu.style.display = "none";
+  
 }
 
 
