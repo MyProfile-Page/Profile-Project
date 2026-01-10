@@ -83,8 +83,9 @@
 <div class="gap14vh"></div>
 <ul id="servlist" class="servlist"> </ul> 
 <div class="gap14vh"></div>
-<div class="gap14vh"></div>
 </div>
+<p id="P-CRS-ESSAY" class="P-ESSAY"></p>
+<div class="gap14vw"></div>
 <div>
 <img src="edu-img-ser.jpg" class="responsive-img">
 <div class="gap14vh"></div>
@@ -108,8 +109,10 @@
 <div>
 <ul id="adrlist" class="adrlist">   </ul> 
 <div class="gap14vh"></div>
-<div class="gap14vh"></div>
+
 </div>
+<p id="P-ADR-ESSAY" class="P-ESSAY"></p>
+<div class="gap14vw"></div>
 <div>
 <img src="img-adr.jpg" class="responsive-img">
 <div class="gap14vh"></div>
@@ -177,6 +180,7 @@ document.getElementById("P8-2A").textContent = 'New City, North Province, Far Ea
 document.getElementById("P4-1").textContent = 'About us: ';
 document.getElementById("P9").textContent = 'Courses: ';
 document.getElementById("P10").textContent = 'Address: ';
+
 document.getElementById("P-BOX5").textContent = 'We are one of the most distinguish art schools ' +
                                                           ' in our city.  We have vast selection of art courses for all students ' +
                                                           ' irrespective of wether thay are regular student or only attending  ' +
@@ -191,6 +195,45 @@ document.getElementById("P-BOX5").textContent = 'We are one of the most distingu
                                                           ' Our students have won top positions in many local and ' +
                                                           ' International contests and they have been admired by artists ' +
                                                            ' of International repute around the globe';
+
+    document.getElementById('P-CRS-ESSAY').innerHTML =  '<Normal>' +      
+'We offer Courses which provide knowledge and skills in a wide range of art skills, some of our best courses are in drawing, ' +
+' painting, sculpting, art history and appreciation. Students are normally guided by professional education assistants to chose ' +
+' courses which align with their interest and future goals. As you prepare for your next semester of college, choosing classes ' +
+' may be at the top of your to-do list. By picking the right courses based on your major and interests, you can create a more ' +
+' enriching learning experience. Learning about what factors to consider when choosing college classes can help you pick ones ' + 
+'that match your interests, when you come to an art school, you already know what to study, but the problem is: how do you ' +
+' choose an art school course from the hundreds of options out there? It’s a tough task. The solution is learning how to evaluate ' +
+' course content and the curriculum, as well as the teaching styles and tools combined with a few decision-making strategies. ' + 
+'This will set you on the right track. Often, schools use the same course names, but each course can have a different format, ' +
+' electives or modules, content, and teaching styles. Some degrees offer joint honors. There are majors that are  ' +
+'multidisciplinary, but also courses that specialize in one single subject area. First task is to evaluate the breadth and depth ' + 
+'of course content. Start with the core subject content. Does it provide the theoretical content and background required ' +
+' for your career choice? Then, the available electives. Are the electives up to date for your industry? Combined with core ' + 
+'subjects, does this provide the range of knowledge you need for your career? Can you choose electives that match closely ' +
+' with your chosen career? How flexible are the choices, and how widely will your studies range? ' +                                                                 
+                                                          '</Normal>';     
+
+
+
+document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +      
+'It is naturally obvious to know the exact location where a person lives in a village or a city. Addresses are not only a physical ' +
+'location used by the person himself, but it is used by local, provincial, central governments or even international bodies like ' +
+' UNO, UNICEF, etc. to reach out to a specific person. Addressing is simple and yet difficult also. It is not easy to mark every ' +
+'person, every dwelling, every shop or business, every public or semi-public facility, and to assign each a unique identifier that ' +
+' will be associated with a person or a business and be used as their official. Anyone who live in a place which has a street address, ' +
+' it seems obvious that he use his address every day to receive services, including mail, solid waste removal, electric, water and ' +
+' other utility services, and he can expect that all governmental and private utilities will be delivered to him reliably, ' +
+'in a way that is equitable, orderly and cost-effective. Many of us use our smartphones to navigate to a destination and we ' +
+'expect that a street name and an address number will bring us to the exact place we need. For most of us, it is hard to imagine ' +
+' how we can spend a normal life without an address. The Address is normally composed of a person full name, street name, ' + 
+'dwelling number on the street, apartment or unit number if the dwelling is an apartment or condo building, city name, ' +
+'province name, country name and often a postal code. It is essential to include all necessary information to identify a unique  ' +
+'address. Abbreviations are mostly used to describe the address elements like Apt. For apartments, Blvd. for boulevard, St. ' +
+'It is also to be noted that a country might have its own formatting of addresses, so it is better to know first the format if any ' + 
+'is followed for composing an individual address. ' +                                                                                   
+                                                          '</Normal>';         
+
 
   const node1 = document.createElement("li");
        const textnode1 = document.createTextNode("Drawing Nature Portraits.");
@@ -280,6 +323,7 @@ document.getElementById("P8-2A").textContent = 'New City, North Province, Far Ea
 document.getElementById("P4-1").textContent = 'Hakkımızda: ';
 document.getElementById("P9").textContent = 'Kurslar: ';
 document.getElementById("P10").textContent = 'Adres: ';
+
 document.getElementById("P-BOX5").innerHTML =  '<Normal> ' +
    'Şehrimizdeki en seçkin sanat okullarından biriyiz. Düzenli öğrencilerden sadece hafta sonları derslere katılanlara kadar tüm öğrenciler için ' +
    'geniş bir sanat kursu yelpazemiz var. Sanat sektöründe zaten çalışan veya yeni başlayan ve sanat sektöründe adını duyurmak isteyen öğrencilere  ' +
@@ -288,6 +332,46 @@ document.getElementById("P-BOX5").innerHTML =  '<Normal> ' +
    ' ve yüksek standartlarımızla gurur duyuyoruz. Öğrencilerimiz birçok yerel ve uluslararası yarışmada üst sıralarda yer aldı ve dünyanın dört   ' +
    ' bir yanından uluslararası üne sahip sanatçılar tarafından takdir edildi. ' +
     '</Normal>';
+
+
+document.getElementById('P-CRS-ESSAY').innerHTML =  '<Normal>' +   
+
+'Sanat alanında geniş bir yelpazede bilgi ve beceri sağlayan kurslar sunuyoruz; en iyi kurslarımızdan bazıları çizim, resim, ' +
+'heykel, sanat tarihi ve sanat takdiri üzerinedir. Öğrenciler genellikle ilgi alanlarına ve gelecekteki hedeflerine uygun dersleri ' + 
+'seçmeleri için profesyonel eğitim asistanları tarafından yönlendirilirler. Üniversitedeki bir sonraki döneminize hazırlanırken, ' + 
+'ders seçimi yapılacaklar listenizin başında olabilir. Bölümünüze ve ilgi alanlarınıza göre doğru dersleri seçerek daha zengin ' + 
+'bir öğrenme deneyimi yaratabilirsiniz. Üniversite derslerini seçerken hangi faktörleri göz önünde bulundurmanız gerektiğini ' + 
+'öğrenmek, ilgi alanlarınıza uygun olanları seçmenize yardımcı olabilir. Bir sanat okuluna geldiğinizde, ne okuyacağınızı zaten ' + 
+'biliyorsunuz, ancak sorun şu: yüzlerce seçenek arasından bir sanat okulu dersini nasıl seçersiniz? Bu zor bir görev. Çözüm, ' + 
+'ders içeriğini ve müfredatı, ayrıca öğretim stillerini ve araçlarını birkaç karar verme stratejisiyle birleştirerek değerlendirmeyi ' + 
+'öğrenmektir. Bazı dereceler çift anadal sunmaktadır. Çok disiplinli bölümler olduğu gibi, tek bir konu alanında uzmanlaşmış ' + 
+'dersler de vardır. İlk görev, ders içeriğinin genişliğini ve derinliğini değerlendirmektir. Öncelikle temel ders içeriğiyle başlayalım. ' + 
+'Seçtiğiniz kariyer için gerekli teorik içeriği ve altyapıyı sağlıyor mu? Ardından, mevcut seçmeli derslere bakalım. Seçmeli dersler ' + 
+'sektörünüz için güncel mi? Temel derslerle birlikte, kariyeriniz için ihtiyaç duyduğunuz bilgi yelpazesini sağlıyor mu? Seçtiğiniz ' + 
+'kariyerle yakından eşleşen seçmeli dersler seçebiliyor musunuz? Çalışmalarınız geniş bir yelpazeyi kapsayacak mı? ' +
+                                                                      
+                                                          '</Normal>';         
+
+
+ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +   
+
+'Bir kişinin bir köyde veya şehirde tam olarak nerede yaşadığını bilmek doğal olarak çok açıktır. Adresler sadece kişinin ' +
+'kendisi tarafından kullanılan fiziksel bir konum değil, aynı zamanda yerel, il, merkezi hükümetler veya hatta BM, UNICEF ' +
+'gibi uluslararası kuruluşlar tarafından belirli bir kişiye ulaşmak için de kullanılır. Adresleme basit ama aynı zamanda zordur. ' + 
+'Her kişiyi, her konutu, her dükkanı veya işletmeyi, her kamu veya yarı kamu tesisini işaretlemek ve her birine, bir kişi veya ' +
+'işletmeyle ilişkilendirilecek ve resmi olarak kullanılacak benzersiz bir tanımlayıcı atamak kolay değildir. Sokak adresi olan ' +
+'bir yerde yaşayan herkesin, posta, katı atık toplama, elektrik, su ve diğer kamu hizmetleri de dahil olmak üzere hizmetleri ' + 
+'almak için adresini her gün kullandığı ve tüm kamu ve özel hizmetlerin kendisine güvenilir, adil, düzenli ve uygun maliyetli ' + 
+'bir şekilde ulaştırılmasını bekleyebileceği açıktır. Birçoğumuz bir yere gitmek için akıllı telefonlarımızı kullanıyoruz ve bir ' + 
+'sokak adı ve adres numarasının bizi tam olarak ihtiyacımız olan yere götüreceğini bekliyoruz. Çoğumuz için, adres olmadan ' + 
+'normal bir hayatı nasıl geçirebileceğimizi hayal etmek zordur. Adres genellikle kişinin tam adı, sokak adı, sokaktaki konut ' + 
+'numarası, apartman veya site binası ise daire numarası, şehir adı, il adı, ülke adı ve genellikle posta kodundan oluşur. ' + 
+'Benzersiz bir adresi tanımlamak için gerekli tüm bilgileri eklemek önemlidir. Adres öğelerini tanımlamak için çoğunlukla ' + 
+'kısaltmalar kullanılır; örneğin, apartmanlar için Apt., bulvar için Blvd., sokak için St. ve daha birçok kısaltma. Ayrıca, bir ' + 
+'ülkenin kendi adres formatına sahip olabileceği de unutulmamalıdır; bu nedenle, bireysel bir adres oluştururken izlenen ' + 
+'herhangi bir format varsa, önceden bilmek daha iyidir. ' +
+                                                                      
+                                                          '</Normal>';         
                                                          
 
   const node1 = document.createElement("li");

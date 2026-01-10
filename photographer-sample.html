@@ -93,10 +93,10 @@
 <div class="gap14vh"></div>
 <ul id="servlist" class="servlist"> </ul> 
 <div class="gap14vh"></div>
-<div class="gap14vh"></div>
 </div>
+<p id="P-SER-ESSAY" class="P-ESSAY"></p>
+<div class="gap14vw"></div>
 <div>
-
 <img src="photographer-img-ser.jpg" class="responsive-img">
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
@@ -122,8 +122,10 @@
 <div>
 <ul id="adrlist" class="adrlist">   </ul> 
 <div class="gap14vh"></div>
-<div class="gap14vh"></div>
+
 </div>
+<p id="P-ADR-ESSAY" class="P-ESSAY"></p>
+<div class="gap14vw"></div>
 <div>
 <img src="img-adr.jpg" class="responsive-img">
 <div class="gap14vh"></div>
@@ -207,6 +209,41 @@ document.getElementById("P-BOX5").textContent = 'Serena With over ten years of e
                                                             ' She has won many awards and trophies in local and global  ' +
                                                             ' contests. Photgraphers of International repute have admired her work.  ' +
                                                           ' Contact her to capture your beautiful moments.  ';
+
+ document.getElementById('P-SER-ESSAY').innerHTML =  '<Normal>' +      
+'Service sector offers a wide range of activities to take action instead doing production. Objective of the service sector ' +  
+'is to look for need of customers and provide them help using technical expertise. There are Innumerable activities which ' +  
+'can be listed under service sector, few of most important services sectors are Finance, Health Care, Hospitality and ' +  
+'Tourism, Real estate, Information, Transport, etc. Importance of the service sector lies in its role as a job generator ' +  
+'Various service-related industries, such as healthcare, education, and hospitality, provide employment to a big portion ' +  
+'of the workforce. It not only helps reduce unemployment rates but it also contributes to the economic growth. ' +  
+'Services such as healthcare, education, Transport, entertainment, etc. contribute to an improvement in the wellbeing ' +  
+'of the whole society. Access to quality healthcare and education services, for example, promotes overall well-being ' +  
+'and personal development, elevating the standard of living in society. High-quality services, in finance, technology, ' +  
+'or tourism, makes a country more attractive to universal markets and in turn, fosters international trade relationships ' +  
+' and economic collaborations with other countries of the world. ' +                                                                   
+                                                          '</Normal>';     
+
+
+
+document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +      
+'It is naturally obvious to know the exact location where a person lives in a village or a city. Addresses are not only a physical ' +
+'location used by the person himself, but it is used by local, provincial, central governments or even international bodies like ' +
+' UNO, UNICEF, etc. to reach out to a specific person. Addressing is simple and yet difficult also. It is not easy to mark every ' +
+'person, every dwelling, every shop or business, every public or semi-public facility, and to assign each a unique identifier that ' +
+' will be associated with a person or a business and be used as their official. Anyone who live in a place which has a street address, ' +
+' it seems obvious that he use his address every day to receive services, including mail, solid waste removal, electric, water and ' +
+' other utility services, and he can expect that all governmental and private utilities will be delivered to him reliably, ' +
+'in a way that is equitable, orderly and cost-effective. Many of us use our smartphones to navigate to a destination and we ' +
+'expect that a street name and an address number will bring us to the exact place we need. For most of us, it is hard to imagine ' +
+' how we can spend a normal life without an address. The Address is normally composed of a person full name, street name, ' + 
+'dwelling number on the street, apartment or unit number if the dwelling is an apartment or condo building, city name, ' +
+'province name, country name and often a postal code. It is essential to include all necessary information to identify a unique  ' +
+'address. Abbreviations are mostly used to describe the address elements like Apt. For apartments, Blvd. for boulevard, St. ' +
+'It is also to be noted that a country might have its own formatting of addresses, so it is better to know first the format if any ' + 
+'is followed for composing an individual address. ' +                                                                                   
+                                                          '</Normal>';         
+
 
   const node1 = document.createElement("li");
        const textnode1 = document.createTextNode("Family Portraits.");
@@ -302,6 +339,7 @@ document.getElementById("P8-2A").textContent = 'New City, North Province, Far Ea
 document.getElementById("P4-1").textContent = 'Hakkımızda: ';
 document.getElementById("P9").textContent = 'Hizmetler: ';
 document.getElementById("P10").textContent = 'Adres: ';
+
 document.getElementById("P-BOX5").innerHTML = '<Normal> ' +  
   'Serena, portre fotoğrafçılığında on yılı aşkın deneyime sahip. Serena, eşsiz bir şekilde ham duyguları ve doğal anları yakalıyor. ' +
   ' Objektifiyle hikaye anlatma tutkusu, ona sektörde birçok prestijli ödül ve takdir kazandırdı. Serena, izleyicileri doğanın güzelliğinin kalbine  ' +
@@ -310,6 +348,45 @@ document.getElementById("P-BOX5").innerHTML = '<Normal> ' +
   ' ve küresel yarışmalarda ödüller ve kupalar kazandı. Uluslararası üne sahip fotoğrafçılar çalışmalarına  ' +
   ' hayran kaldı. Güzel anlarınızı yakalamak için onunla iletişime geçin. ' +
                                                             '</Normal>';
+
+
+ document.getElementById('P-SER-ESSAY').innerHTML =  '<Normal>' +   
+
+'Hizmet sektörü, üretim yapmak yerine harekete geçmek için geniş bir yelpazede faaliyet sunmaktadır. Hizmet sektörünün  ' + 
+'amacı, müşterilerin ihtiyaçlarını tespit etmek ve teknik uzmanlık kullanarak onlara yardımcı olmaktır. Hizmet sektörü  ' + 
+'altında sayısız faaliyet listelenebilir; en önemli hizmet sektörlerinden bazıları Finans, Sağlık, Konaklama ve Turizm,  ' + 
+'Gayrimenkul, Bilgi, Ulaşım vb.dir. Hizmet sektörünün önemi, iş yaratma rolünde yatmaktadır. Sağlık, eğitim ve konaklama  ' + 
+'gibi çeşitli hizmetle ilgili sektörler, işgücünün büyük bir bölümüne istihdam sağlamaktadır. Bu, sadece işsizlik oranlarını  ' + 
+'düşürmeye yardımcı olmakla kalmaz, aynı zamanda ekonomik büyümeye de katkıda bulunur. Sağlık, eğitim, ulaşım,  ' + 
+'eğlence vb. hizmetler, tüm toplumun refahının iyileştirilmesine katkıda bulunur. Örneğin, kaliteli sağlık ve eğitim  ' + 
+'hizmetlerine erişim, genel refahı ve kişisel gelişimi teşvik ederek toplumdaki yaşam standardını yükseltir. Finans,  ' + 
+'teknoloji veya turizmde yüksek kaliteli hizmetler, bir ülkeyi evrensel pazarlar için daha çekici hale getirir ve bu da  ' + 
+'uluslararası ticaret ilişkilerini ve dünyanın diğer ülkeleriyle ekonomik iş birliklerini teşvik eder.  ' +
+                                                                      
+                                                          '</Normal>';         
+
+
+ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +   
+
+'Bir kişinin bir köyde veya şehirde tam olarak nerede yaşadığını bilmek doğal olarak çok açıktır. Adresler sadece kişinin ' +
+'kendisi tarafından kullanılan fiziksel bir konum değil, aynı zamanda yerel, il, merkezi hükümetler veya hatta BM, UNICEF ' +
+'gibi uluslararası kuruluşlar tarafından belirli bir kişiye ulaşmak için de kullanılır. Adresleme basit ama aynı zamanda zordur. ' + 
+'Her kişiyi, her konutu, her dükkanı veya işletmeyi, her kamu veya yarı kamu tesisini işaretlemek ve her birine, bir kişi veya ' +
+'işletmeyle ilişkilendirilecek ve resmi olarak kullanılacak benzersiz bir tanımlayıcı atamak kolay değildir. Sokak adresi olan ' +
+'bir yerde yaşayan herkesin, posta, katı atık toplama, elektrik, su ve diğer kamu hizmetleri de dahil olmak üzere hizmetleri ' + 
+'almak için adresini her gün kullandığı ve tüm kamu ve özel hizmetlerin kendisine güvenilir, adil, düzenli ve uygun maliyetli ' + 
+'bir şekilde ulaştırılmasını bekleyebileceği açıktır. Birçoğumuz bir yere gitmek için akıllı telefonlarımızı kullanıyoruz ve bir ' + 
+'sokak adı ve adres numarasının bizi tam olarak ihtiyacımız olan yere götüreceğini bekliyoruz. Çoğumuz için, adres olmadan ' + 
+'normal bir hayatı nasıl geçirebileceğimizi hayal etmek zordur. Adres genellikle kişinin tam adı, sokak adı, sokaktaki konut ' + 
+'numarası, apartman veya site binası ise daire numarası, şehir adı, il adı, ülke adı ve genellikle posta kodundan oluşur. ' + 
+'Benzersiz bir adresi tanımlamak için gerekli tüm bilgileri eklemek önemlidir. Adres öğelerini tanımlamak için çoğunlukla ' + 
+'kısaltmalar kullanılır; örneğin, apartmanlar için Apt., bulvar için Blvd., sokak için St. ve daha birçok kısaltma. Ayrıca, bir ' + 
+'ülkenin kendi adres formatına sahip olabileceği de unutulmamalıdır; bu nedenle, bireysel bir adres oluştururken izlenen ' + 
+'herhangi bir format varsa, önceden bilmek daha iyidir. ' +
+                                                                      
+                                                          '</Normal>';         
+
+
   const node1 = document.createElement("li");
        const textnode1 = document.createTextNode("Aile Portreleri.");
       node1.appendChild(textnode1);

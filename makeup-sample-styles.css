@@ -357,12 +357,20 @@ display:inline-block;
                   filter: brightness(200%); filter: contrast(150%); }  
  .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
 
- 
+.P-ESSAY {
+font-family: calibri;
+font-size: clamp(1.0rem, 1.2vw, 1.5rem);
+font-weight: 400;
+ Color: black;   
+ text-align: left;
+  }
+
 #servlist {
 font-family: calibri;
 font-size: clamp(1.0rem, 1.1vw, 1.5rem); 
 font-weight: 600;
  Color: black;   
+line-height: clamp(1.2rem, 1.5vw, 1.8rem); 
 }
 
 #adrlist {
@@ -371,6 +379,7 @@ font-family: calibri;
 font-size: clamp(1.0rem, 1.1vw, 1.5rem); 
 font-weight: 600;
  Color: black;   
+line-height: clamp(1.1rem, 1.4vw, 1.7rem); 
 }
 
 
