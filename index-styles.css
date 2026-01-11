@@ -19,6 +19,8 @@
  text-align: center;
 }
 
+
+
 .top-left {
   position: absolute;
  top: clamp(3rem, 8.9vh, 12rem); 
