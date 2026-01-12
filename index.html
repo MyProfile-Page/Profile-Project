@@ -32,9 +32,10 @@
 
 <div class="gap14vh"></div>
 
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')">English</a>
+
+<a class="a1" onclick="toggleSection('s1')" >English</a> 
 <p style="display:inline-block;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</P>
-<a  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon"></span>Türkçe</a>
+<a class="a1" onclick="toggleSection('s2')"><span id="icon"></span>Türkçe</a>
 
 
 </div>     
@@ -49,93 +50,6 @@
 
 
   
-
-  
-
-<div id="s1" class="sectionBox">   
-                     
-                       <div class="gap10vh"></div>   
-                        <div class="gap10vh"></div>    
-                       <div class="hclass"> MiniWebSites</div>
-                        <div class="gap10vh"></div>  
-                        <div class="hclass">Free of any Cost</div>
-                       <div class="gap10vh"></div>   
-                       <div class="gap10vh"></div>  
-                       <div class="gap10vh"></div>  
-                       <p class = "P1">MiniWebSite Requests</p>  
-                       <div class="gap14vh"></div>            
-                       <a href="shop-req.html" class="aclass">1. Small Companies</a>
-                       <div class="gap14vh"></div>
-                       
-                      <a href="ind-req.html" class="aclass">2. Individuals.</a>
-                       <div class="gap14vh"></div>   
-                       <div class="gap10vh"></div>
-                      <p class = "P1">MiniWebSite Samples</p>                     
-                         
-                         <div class="gap10vh"></div>            
-                      <a href="shop-sample.html" class="aclass">1. Shop.</a> 
-                        <div class="gap14vh"></div>
-                      <a href="edu-sample.html" class="aclass">2. Educational Institute.</a> 
-                        <div class="gap14vh"></div>
-                      <a href="makeup-sample.html" class="aclass">3. Makeup business.</a> 
-                       <div class="gap14vh"></div>              
-                       <a href="photographer-sample.html" class="aclass">4. Photography Business.</a>
-                       <div class="gap14vh"></div>                            
-                       <a href="ind-sample.html" class="aclass">5. Individual Person.</a>
-                       <div class="gap10vh"></div>  
-                       <div class="gap14vh"></div>   
-                       <div class="gap14vh"></div>         
-                      <a href="guide-codes.html" class="bclass">&nbspGuide</a>  
-                      <div class="gap14vh"></div>   
-                      
-                      <a href="index.html" class="bclass">&nbspExit</a>  
-                      <div class="gap14vh"></div>   
-                       <div class="gap14vh"></div>                         
-            
-
- </div>    
-
-<div id="s2" class="sectionBox">      
-                       
-                       <div class="gap10vh"></div>   
-                        <div class="gap10vh"></div>    
-                       <div class="hclass">MiniWeb Siteleri</div>
-                        <div class="gap10vh"></div>  
-                        <div class="hclass">Tamamen ücretsiz</div>
-                       <div class="gap10vh"></div>   
-                       <div class="gap10vh"></div>  
-                       <div class="gap10vh"></div>  
-                       <p class = "P1">MiniWeb Sitesi Talebi</p>  
-                       <div class="gap14vh"></div>            
-                       <a href="shop-req.html" class="aclass">1. Küçük Şirketler.</a>
-                       <div class="gap14vh"></div>
-                      <a href="ind-req.html" class="aclass">2. bireysel kişiler.</a>
-                       <div class="gap14vh"></div>   
-                       <div class="gap10vh"></div>
-                      <p class = "P1">MiniWeb Sitesi Örnekler</p>
-                        <div class="gap14vh"></div>                            
-                       <a href="shop-sample.html" class="aclass">1. Dükkan İşletmesi.</a>
-                         <div class="gap14vh"></div>              
-                       <a href="edu-sample.html" class="aclass">2. Eğitim Kurumu.</a> 
-                         <div class="gap14vh"></div>            
-                      <a href="photographer-sample.html" class="aclass">3. Fotoğrafçılık İşletmesi.</a> 
-                        <div class="gap14vh"></div>
-                      <a href="makeup-sample.html" class="aclass">4. Makyaj işletmesi.</a> 
-                        <div class="gap14vh"></div>
-                      <a href="ind-sample.html" class="aclass">5. bireysel kişiler.</a> 
-                      <div class="gap10vh"></div>   
-                      <div class="gap10vh"></div>  
-                       <div class="gap14vh"></div>   
-                          
-                      <a href="guide-codes.html" class="bclass" >&nbspRehber</a>  
-                      <div class="gap14vh"></div>   
-                      
-                      <a href="index.html" class="bclass" >&nbspÇıkış</a>  
-                      <div class="gap14vh"></div>   
-                       <div class="gap14vh"></div>                         
-            
-
- </div>    
 
 
  <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
@@ -185,8 +99,14 @@ function toggleSection(id) {
   const sec = document.getElementById(id);
   const website = id;
   localStorage.setItem('website', website);
-  sec.style.display = (sec.style.display === "block") ? "none" : "block";
-   dmenu.style.display = "none";
+ 
+ if (localStorage.getItem("website") === "s1") {
+  window.location.href = "index-menu-eng.html";
+}
+ if (localStorage.getItem("website") === "s2") {
+ window.location.href = "index-menu-tur.html";
+}
+ 
   
 }
 

@@ -15,7 +15,7 @@
             }
 
 .dmenu {
- background-color: #382A2A;
+ background-color: white;
  text-align: center;
 }
 
@@ -137,10 +137,10 @@ color:darkgreen;
 text-align:left; display:block;
 }
 
- .a1 {
+.a1 {
 font-family: Calibri;
 font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
-Color: white;   
+color:white;   
  font-weight: 600;
 text-decoration: underline;
   }
@@ -402,7 +402,7 @@ border: 0px solid blue;
 
 
  .sectionBox {
-    display: none;
+/*    display: none;  */
     padding: 2.5dvh;
     background: #eef5ff;
     border-left: 0px solid #4a8cff;
