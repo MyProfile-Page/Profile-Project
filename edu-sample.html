@@ -27,10 +27,12 @@
 
 <body class = "body_cls"; font-family: 'Poppins', sans-serif; >
 
+  <!-- 🌍 Navigation Bar Start -->
+
  <nav class="navbar navbar-dark bg-dark">
   <div class="container">
 
-   <a class="navbar-brand" href="#">Sophia Arts Intl.</a>
+   <a class="navbar-brand Menubar-header" href="#">Sophia Arts Intl.</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -47,22 +49,22 @@
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)"
+          <a id="aabout" class="nav-link a1" href="javascript:void(0)"
              onclick="toggleSection('s1')">About us</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)"
+          <a id="acourses" class="nav-link a1" href="javascript:void(0)"
              onclick="toggleSection('s2')">Courses</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)"
+          <a id="aaddress" class="nav-link a1" href="javascript:void(0)"
              onclick="toggleSection('s3')">Address</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#" onclick="checkback(event)">Back</a>
+          <a id="aback" class="nav-link aback" href="#" onclick="checkback(event)">Back</a>
         </li>
 
       </ul>
@@ -71,7 +73,7 @@
   </div>
 </nav>
 
-
+ <!-- 🌍 Navigation Bar End -->
 
 
    <!--  Main Container   -->
@@ -344,7 +346,7 @@ document.getElementById("aabout").textContent = 'Hakkımızda';
 document.getElementById("acourses").textContent = 'Kurslar';
 document.getElementById("aaddress").textContent = 'Adres';
 document.getElementById("aback").textContent = 'Geri'; 
-document.getElementById("dintl").textContent = 'Sophia Arts Uluslararası';
+<!--  document.getElementById("dintl").textContent = 'Sophia Arts Uluslararası';  -->
             
 document.getElementById("P5").textContent = 'Sophia ';
 document.getElementById("P52").textContent = 'Sophia ';
