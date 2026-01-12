@@ -15,7 +15,7 @@
             }
 
 .dmenu {
- background-color: white;
+ background-color: darkgrey;
  text-align: center;
 }
 
@@ -24,7 +24,7 @@
 .top-left {
   position: absolute;
  top: clamp(3rem, 8.9vh, 12rem); 
- font-size: clamp(0.9rem, 1.8vw, 2.0rem);   
+ font-size: clamp(0.9rem, 1.6vw, 1.8rem);   
  font-weight: 700;
   font-family: calibri;
   color: white; 
@@ -140,8 +140,7 @@ text-align:left; display:block;
 .a1 {
 font-family: Calibri;
 font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
-color:white;   
- font-weight: 600;
+font-weight: 600;
 text-decoration: underline;
   }
 

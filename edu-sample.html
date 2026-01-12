@@ -38,7 +38,7 @@
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
 <a  id="aaddress" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a id="aback" class="aback" href="index.html"  >Back</a>
+<a id="aback" class="aback" href="#" onclick = "checkback(event)" >Back</a>
 </div> 
 
    <!--  Main Container   -->
@@ -160,6 +160,15 @@ function toggleSection(id) {
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
 
+function checkback(event) {
+event.preventDefault();
+if (localStorage.getItem("website") === "s1") {
+  window.location.href = "index-menu-eng.html";
+}
+ if (localStorage.getItem("website") === "s2") {
+ window.location.href = "index-menu-tur.html";
+}
+}
  if (localStorage.getItem("website") === "s1") {
 
 document.getElementById("P5").textContent = 'Sophia ';
@@ -302,7 +311,7 @@ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +
 document.getElementById("aabout").textContent = 'Hakkımızda';
 document.getElementById("acourses").textContent = 'Kurslar';
 document.getElementById("aaddress").textContent = 'Adres';
-document.getElementById("aback").textContent = 'Geri';
+document.getElementById("aback").textContent = 'Geri'; 
 document.getElementById("dintl").textContent = 'Sophia Arts Uluslararası';
             
 document.getElementById("P5").textContent = 'Sophia ';
@@ -435,6 +444,9 @@ document.getElementById('P-CRS-ESSAY').innerHTML =  '<Normal>' +
       document.getElementById("adrlist").appendChild(node17); 
 
 }
+
+
+
 
 </script> 
       

@@ -35,7 +35,7 @@
       </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-           <li class="nav-item"><a class="nav-link active" href="index.html">Back</a></li>
+           <li class="nav-item"><a class="nav-link active" href="#" onclick = "checkback(event)">Back</a></li>
           
           
         </ul>
@@ -413,6 +413,16 @@
 //    document.addEventListener('contextmenu', function (e) {
 //      e.preventDefault();     
 //    });
+
+function checkback(event) {
+event.preventDefault();
+if (localStorage.getItem("website") === "s1") {
+  window.location.href = "index-menu-eng.html";
+}
+ if (localStorage.getItem("website") === "s2") {
+ window.location.href = "index-menu-tur.html";
+}
+}
 
  if (localStorage.getItem("website") === "s1") {
      document.getElementById("TcontactForm").style.display = "none";

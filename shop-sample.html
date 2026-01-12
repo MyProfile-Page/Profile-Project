@@ -39,7 +39,7 @@
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
 <a   id="aloc" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Location</a>
 <P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  id="abac" href="index.html" class = "abac" >Back</a>
+<a id="abac" class="abac" href="#" onclick = "checkback(event)" >Back</a>
 
 </div> 
  
@@ -204,6 +204,16 @@
 function toggleSection(id) {
   const sec = document.getElementById(id);
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
+}
+
+function checkback(event) {
+event.preventDefault();
+if (localStorage.getItem("website") === "s1") {
+  window.location.href = "index-menu-eng.html";
+}
+ if (localStorage.getItem("website") === "s2") {
+ window.location.href = "index-menu-tur.html";
+}
 }
 
 if (localStorage.getItem("website") === "s1") {
