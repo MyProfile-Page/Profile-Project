@@ -19,6 +19,23 @@
  text-align: center;
 }
 
+ .a1 {
+font-family: Calibri;
+ font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
+font-weight: 300;
+ Color: lightblue; 
+text-decoration: none;
+}
+
+
+.bar {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.6vw, 1.7rem); 
+font-weight: 500;
+color: white;
+
+}
+
 
 
 .top-left {

@@ -20,22 +20,77 @@
 </head>
 <body class = "body_cls";>
 
-      <!-- 🌍 Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Ess Digital Profiles Intl.</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Back</a></li>
-          
-         
-        </ul>
-      </div>
+   <!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header bar" href="#">           
+     MiniWebSites  Şirketi</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav" >
+      <ul id="ul_top_hypers" class="navbar-nav ms-auto">
+          <li class="nav-item">
+           <p class = "P1"></p>   
+        </li>     
+         <li class="nav-item">
+           <p id="facilitieshead1" class = "facilitieshead">WebSites Requests</p>   
+        </li>     
+        <li class="nav-item">
+          <a id="Shop" href="shop-req.html" class="a1">Small Companies</a>      
+        </li>     
+        <li class="nav-item">
+          <a id="Shop" href="ind-req.html" class="a1">Individuals</a>      
+        </li> 
+         <li class="nav-item">
+           <p class = "P1"></p>   
+        </li>         
+         <li class="nav-item">
+          <p id="facilitieshead2" class = "facilitieshead">WebSites Samples</p>     
+        </li>    
+         <li class="nav-item">
+          <a id="Shop" href="shop-sample.html" class="a1">Shop</a>      
+        </li>      
+         <li class="nav-item">
+          <a id="Shop" href="edu-sample.html" class="a1">Educational Institute.</a>      
+        </li>     
+         <li class="nav-item">
+          <a id="Shop" href="makeup-sample.html" class="a1">Makeup business</a>      
+        </li>     
+         <li class="nav-item">
+          <a id="Shop" href="photographer-sample.html" class="a1">Photography Business</a>      
+        </li>     
+         <li class="nav-item">
+          <a id="Shop" href="ind-sample.html" class="a1">  Individual Person.</a>      
+        </li>     
+        <li class="nav-item">
+          <a id="Back" href="index.html" class="aback">Back</a>
+        </li>
+
+      </ul>
     </div>
-  </nav>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+
+<div class="gap10vh"></div>
+<div id="apl-hdr" class="apl-hdr"></div>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
 
 
   <div class="container">
@@ -46,7 +101,7 @@
 
         <div id="R1" class="row">
             <div id="R1_D1" class="col-sm-12"> 
-                   <img src="guide-image.png" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+                  <img src="guide-image.png" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
             </div>  
             
        </div>  
@@ -60,7 +115,7 @@
        <div id="R2" class="row">
                   
            <div id="R2_D1" class="col-sm-12">
-                 <h3>&nbsp&nbsp</h3>
+                
                  <p id="P1" ></p>
                 <p id="P2" ></p>
                 <p id="P3" ></p> 
@@ -97,13 +152,21 @@ window.addEventListener('load', () => {
         
         // Change Text of a PARAGRAPH
 
-
+function checkback(event) {
+event.preventDefault();
+if (localStorage.getItem("website") === "s1") {
+  window.location.href = "index.html";
+}
+ if (localStorage.getItem("website") === "s2") {
+ window.location.href = "index-menu-tur.html";
+}
+}
 
 
 
   if (localStorage.getItem("website") === "s2") {
 
-  
+        document.getElementById("apl-hdr").textContent = 'Şirketimiz';
         document.getElementById('P3').innerHTML = 'Ne yapıyoruz? ';   
           document.getElementById('P4').innerHTML = '<Normal> ' +                                                               
                                                            'Ana ekranda gösterilen bağlantılarda bireyler ve mikro işletmeler ' + 
@@ -147,9 +210,9 @@ window.addEventListener('load', () => {
 
      if (localStorage.getItem("website") === "s1") {
     
-
+       
       document.getElementById('P3').innerHTML = 'What We Do: ';                                                                                                          
-  
+       document.getElementById("apl-hdr").textContent = 'Our Company';
        document.getElementById('P4').innerHTML = '<Normal>Sample Mini Websites for individuals and ' +                                                               
                                                            "microbusinesses are available in the links shown in \n" +
                                                           "main screen. Plesae first view the samples and if you like \n" +

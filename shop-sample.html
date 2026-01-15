@@ -17,8 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
    
  
     <meta charset="UTF-8"> 
@@ -28,21 +27,63 @@
 
 <body class = "body_cls"; font-family: 'Poppins', sans-serif; >
 
-<div class="dmenu">
-<div class="gap14vh"></div>
+<!-- 🌍 Navigation Bar Start -->
 
-<a  id="abio" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>Biography</a>
-<P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a   id="aprd" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Products</a>
-<P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a   id="aser" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2A')"><span id="icon">^</span>Services</a>
-<P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a   id="aloc" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Location</a>
-<P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a id="abac" class="abac" href="#" onclick = "checkback(event)" >Back</a>
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
 
-</div> 
- 
+   <a class="navbar-brand Menubar-header" href="#">MiniWebSites  Şirketi</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a id="abio" class="nav-link a1" href="javascript:void(0)"
+             onclick="toggleSection('s1')">About us</a>
+        </li>
+
+        <li class="nav-item">
+          <a id="aprd" class="nav-link a1" href="javascript:void(0)"
+             onclick="toggleSection('s2')">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a id="aser" class="nav-link a1" href="javascript:void(0)"
+             onclick="toggleSection('s2A')">Services</a>
+        </li>
+
+     <li class="nav-item">
+          <a id="aloc" class="nav-link a1" href="javascript:void(0)"
+             onclick="toggleSection('s3')">Address</a>
+        </li>
+
+        <li class="nav-item">
+          <a id="abac" class="nav-link aback" href="#" onclick="checkback(event)">Back</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+
+ <div class="gap10vh"></div>
+<div id="apl-hdr" class="apl-hdr"></div>
+
    <!--  Main Container   -->
 
 <div id="main-container-first" class="container">
@@ -176,7 +217,7 @@
            
           
                    <img src="shop-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-                   <div class="top-left" >Kingston & Sons Intl.</div> 
+                  <!--   <div class="top-left" >Kingston & Sons Intl.</div> -->
                    <div class="gap10vw"></div>
                    <img src="shop-img-main1.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >  
                    <div class="gap10vw">&nbsp</div>
@@ -209,15 +250,15 @@ function toggleSection(id) {
 function checkback(event) {
 event.preventDefault();
 if (localStorage.getItem("website") === "s1") {
-  window.location.href = "index-menu-eng.html";
+  window.location.href = "guide-codes.html";
 }
  if (localStorage.getItem("website") === "s2") {
- window.location.href = "index-menu-tur.html";
+ window.location.href = "guide-codes.html";
 }
 }
 
 if (localStorage.getItem("website") === "s1") {
-
+document.getElementById("apl-hdr").textContent = 'Kingston & Sons Intl. ';
 document.getElementById("P4-1").textContent = 'Company Biography: ';
 document.getElementById("P9").textContent = 'Products: ';
 document.getElementById("P9A").textContent = 'Services/Technology: ';
@@ -389,7 +430,7 @@ document.getElementById("P8-3A").textContent = 'New City, North Province, Far Ea
 }
 
 if (localStorage.getItem("website") === "s2") {
-
+document.getElementById("apl-hdr").textContent = 'Kingston & Sons Uluslararası ';
 document.getElementById("abio").textContent = 'Şirket Biyografisi ';
 document.getElementById("aprd").textContent = 'Ürünler ';
 document.getElementById("aser").textContent = 'Hizmetler/Teknolojiler ';

@@ -21,12 +21,19 @@
 }
 
 .Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: white;
+}
+
+#apl-hdr {
   font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
   font-weight:  700;
   color: white; 
-  text-decoration: underline; 
+  text-decoration: none; 
+  text-align: center;
 }
-
 .top-left {
   position: absolute;
   top: clamp(3rem, 3.5vh, 4.0rem);  
@@ -74,9 +81,9 @@
       background-color: black; 
       border: 2px solid #ddd;
       border-radius: 15px;
-      padding: 20px;
+      padding: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 3px; /* spacing from top */
+      margin-top: 0px; /* spacing from top */
       margin-bottom: 40px; /* spacing from bottom */
       border: 0px solid red;
     }
@@ -102,12 +109,14 @@ text-align: center;
 
  .a1 {
 font-family: Calibri;
- font-size: clamp(1.0rem, 1.2vw, 1.4rem);   
-font-weight: 600;
- Color: white; 
-text-decoration: underline;  
+ font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
+font-weight: 300;
+ Color: lightblue; 
+text-decoration: none;
 
   }
+
+
 
  #aback {
 font-family: Calibri;

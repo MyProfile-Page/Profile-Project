@@ -24,22 +24,42 @@
 </head>
 <body class = "body_cls";>
 
-      <!-- 🌍 Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">MiniWebSites  Şirketi</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="#" onclick = "checkback(event)">Back</a></li>
-            
-        
-        </ul>
-      </div>
+  <!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header" href="#">MiniWebSites  Şirketi</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+  
+
+        <li class="nav-item">
+          <a class="nav-link " href="#" onclick="checkback(event)">Back</a>
+        </li>
+
+      </ul>
     </div>
-  </nav>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+
+    
 
  <!--  First Container for entering client data. -->
 
@@ -48,13 +68,7 @@
     <div class="row justify-content-center">
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
   
-   <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
-       <h5 id="h5" style="text-align: center; text-decoration: underline"></h5> 
-      
-       
-        
-
-   <!-- FIRST ROW ENDS -->
+  
   
     
 
@@ -384,10 +398,10 @@
 function checkback(event) {
 event.preventDefault();
 if (localStorage.getItem("website") === "s1") {
-  window.location.href = "index-menu-eng.html";
+  window.location.href = "guide-codes.html";
 }
  if (localStorage.getItem("website") === "s2") {
- window.location.href = "index-menu-tur.html";
+ window.location.href = "guide-codes.html";
 }
 }
 

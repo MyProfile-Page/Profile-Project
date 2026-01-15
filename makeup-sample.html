@@ -23,8 +23,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
 
  
     <meta charset="UTF-8"> 
@@ -34,20 +33,57 @@
 </head>
 <body class = "body_cls";>
 
-<div class="dmenu">
-<div class="gap14vh"></div>
+  <!-- 🌍 Navigation Bar Start -->
 
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
 
-<a  id="aabout"  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s1')"><span id="icon">^</span>About us</a>
-<P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  id="aservices" href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s2')"><span id="icon">^</span>Services</a>
-<P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a  id="aaddress"  href="javascript:void(0)"  class="a1 toggle-link"  onclick="toggleSection('s3')"><span id="icon">^</span>Address</a>
-<P class="menupara">&nbsp&nbsp&nbsp&nbsp</P>
-<a id="aback" class="aback" href="#" onclick = "checkback(event)" >Back</a>
+   <a class="navbar-brand Menubar-header" href="#"> MiniWebSites  Şirketi</a>
 
-</div> 
- 
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a id="aabout" class="nav-link a1" href="javascript:void(0)"
+             onclick="toggleSection('s1')">About us</a>
+        </li>
+
+        <li class="nav-item">
+          <a id="acourses" class="nav-link a1" href="javascript:void(0)"
+             onclick="toggleSection('s2')">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a id="aaddress" class="nav-link a1" href="javascript:void(0)"
+             onclick="toggleSection('s3')">Address</a>
+        </li>
+
+        <li class="nav-item">
+          <a id="aback" class="nav-link aback" href="#" onclick="checkback(event)">Back</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+ <div class="gap10vh"></div>
+<div id="apl-hdr" class="apl-hdr"></div>
+
    <!--  Main Container   -->
 
 <div id="main-container-first" class="container">
@@ -147,8 +183,7 @@
             <div id="R1_D1" class="col-sm-12"> 
                 
                    <img src="makeup-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-                   <div id="dmakeup" class="top-left" >Erina Makeup Intl.</div>  
-                  <img src="makeup-img-main1.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
+                   <img src="makeup-img-main1.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
                  <img src="makeup-img-main2.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
             </div>  
             
@@ -175,15 +210,15 @@ function toggleSection(id) {
 function checkback(event) {
 event.preventDefault();
 if (localStorage.getItem("website") === "s1") {
-  window.location.href = "index-menu-eng.html";
+  window.location.href = "guide-codes.html";
 }
  if (localStorage.getItem("website") === "s2") {
- window.location.href = "index-menu-tur.html";
+ window.location.href = "guide-codes.html";
 }
 }
 
  if (localStorage.getItem("website") === "s1") {
-
+document.getElementById("apl-hdr").textContent = 'Erina Makeup Intl.';
 document.getElementById("P5").textContent = 'Erina ';
 document.getElementById("P52").textContent = 'Erina ';
 document.getElementById("P53").textContent = 'Erina ';
@@ -333,12 +368,12 @@ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +
   }
 
  if (localStorage.getItem("website") === "s2") {
-
+document.getElementById("apl-hdr").textContent = 'Erina Makyaj Uluslararası';
 document.getElementById("aabout").textContent = 'Hakkımızda ';
 document.getElementById("aservices").textContent = 'Hizmetler ';
 document.getElementById("aaddress").textContent = 'Adres ';
 document.getElementById("aback").textContent = 'Geri ';
-document.getElementById("dmakeup").textContent = 'Erina Makyaj Uluslararası ';
+ <!--  document.getElementById("dmakeup").textContent = 'Erina Makyaj Uluslararası ';  -->
 
 document.getElementById("P5").textContent = 'Erina ';
 document.getElementById("P52").textContent = 'Erina ';

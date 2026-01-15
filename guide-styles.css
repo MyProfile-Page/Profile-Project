@@ -11,15 +11,52 @@
           line-height: 1.5;
             }
 
+.gap14vh {
+  height: clamp(0.5rem, 1.9vh, 2.0rem);   /* or any size you want; mobile = desktop */
+}
+
+.gap10vh {
+  height: clamp(0.4rem, 1.5vh, 1.9rem);   /* or any size you want; mobile = desktop */
+}
+
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: white; 
+  text-decoration: none; 
+  text-align: center;
+}
  .custom-container {
       background-color: #f8f9fa;
       border: 2px solid #ddd;
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 40px; /* spacing from top */
+      margin-top: 0px; /* spacing from top */
       margin-bottom: 40px; /* spacing from bottom */
     }
+
+#ul_top_hypers {
+    display: inline;
+}
+
+.a1 {
+font-family: Calibri;
+ font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
+font-weight: 300;
+ Color: lightblue; 
+text-decoration: none;
+}
+
+
+
+.aback {
+ font-size: clamp(1.0rem, 1.1vw, 1.5rem); 
+font-family: calibri;
+font-weight: 500; 
+color:blue;
+text-decoration: none;
+}
 
 #R1_D1 {
     border: 0px solid #333;
@@ -51,18 +88,35 @@
   display: block;
 }
 
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: white;
+}
+
+.facilitieshead {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem); 
+font-weight: 500;
+color: yellow;
+text-decoration: underline;
+}
+
+#P0 {
+font-family: calibri;
+ font-size: clamp(1rem, 1.2vw, 1.5rem);
+font-weight: 700;
+ Color: blue;   
+
+}
 #P1 {
 font-family: calibri;
-font-size: clamp(1rem, 3.0vw, 1.5rem);
+ font-size: clamp(1rem, 3.0vw, 1.5rem);
 font-weight: 500;
  Color: black;   
-text-decoration: underline;
-
-  }
-
-
-
-
+text-decoration:underline;
+}
 
 #P2 {
 font-family: calibri;

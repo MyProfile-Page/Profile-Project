@@ -19,6 +19,21 @@
  text-align: center;
 }
 
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: white; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: white;
+}
+
 
 
 .top-left {
@@ -85,17 +100,17 @@ text-decoration: underline;
 text-align: center;
   }
 
- .a1 {
+.a1 {
 font-family: Calibri;
-font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
-font-weight: 600;
- Color: white;   
-text-decoration: underline;  
-  }
+ font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
+font-weight: 300;
+ Color: lightblue; 
+text-decoration: none;
+}
 
  #aback {
 font-family: Calibri;
-font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+font-size: clamp(1.0rem, 1.2vw, 1.4rem);       
 font-weight: 600;
 
 text-decoration: underline;  

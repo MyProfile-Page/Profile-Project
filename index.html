@@ -17,8 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
    
  
     <meta charset="UTF-8"> 
@@ -28,17 +26,48 @@
 
 <body class = "body_cls"; font-family: 'Poppins', sans-serif; >
 
- <div id ="dmenu" class="dmenu">
+  <!-- 🌍 Navigation Bar Start -->
 
-<div class="gap14vh"></div>
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header bar" href="#">MiniWebSites  Şirketi</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+                
+        <li class="nav-item">
+          <a  id = "English" class="nav-link a1" href="#"
+             onclick="toggleSection('s1')">English</a>
+        </li>
+
+        <li class="nav-item">
+          <a id = "Turkish" class="nav-link a1" href="#"
+             onclick="toggleSection('s2')">Türkçe</a>
+        </li>
+
+     
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
 
 
-<a class="a1" style="color:white" onclick="toggleSection('s1')" >English</a> 
-<p style="display:inline-block;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</P>
-<a class="a1" style="color:white" onclick="toggleSection('s2')"><span id="icon"></span>Türkçe</a>
-
-
-</div>     
  
    <!--  Main Container   -->
 
@@ -60,9 +89,7 @@
                 
                   <div class="gap14vh"></div>   
                    <img src="index-img-atmonogram.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >     
-                   <div class="top-left" >MiniWebSites  Şirketi</div>
-                   
-                   
+                                     
                  <img src="index-img-webdesign.png" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
                    <img src="index-img-html-codes.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
 
@@ -101,10 +128,10 @@ function toggleSection(id) {
   localStorage.setItem('website', website);
  
  if (localStorage.getItem("website") === "s1") {
-  window.location.href = "index-menu-eng.html";
+  window.location.href = "guide-codes.html";
 }
  if (localStorage.getItem("website") === "s2") {
- window.location.href = "index-menu-tur.html";
+ window.location.href = "guide-codes.html";
 }
  
   
