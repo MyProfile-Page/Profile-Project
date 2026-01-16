@@ -75,7 +75,7 @@
           <a id="indv-sample" href="ind-sample.html" class="a1">  Sample of an individual person  Profile</a>      
         </li>     
         <li class="nav-item">
-          <a id="Back" href="index.html" class="aback">Back</a>
+          <a id="Back" class="nav-link aback" href="#" onclick="checkback(event)">Back</a>   
         </li>
 
       </ul>
@@ -155,10 +155,10 @@ window.addEventListener('load', () => {
 function checkback(event) {
 event.preventDefault();
 if (localStorage.getItem("website") === "s1") {
-  window.location.href = "index.html";
+  window.location.href = "orders-heading.html";
 }
  if (localStorage.getItem("website") === "s2") {
- window.location.href = "index-menu-tur.html";
+ window.location.href = "orders-heading.html";
 }
 }
 
@@ -222,7 +222,7 @@ if (localStorage.getItem("website") === "s1") {
     
        
       document.getElementById('P3').innerHTML = 'What We Do: ';                                                                                                          
-       document.getElementById("apl-hdr").textContent = 'Our Company';
+       document.getElementById("apl-hdr").textContent = 'Guide';
        document.getElementById('P4').innerHTML = '<Normal>Sample Mini Websites for individuals and ' +                                                               
                                                            "microbusinesses are available in the links shown in \n" +
                                                           "main screen. Plesae first view the samples and if you like \n" +

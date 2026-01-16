@@ -64,6 +64,13 @@ font-weight: 300;
 text-decoration: none;
 }
 
+.aguide {
+font-family: Calibri;
+ font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
+font-weight: 300;
+ Color: yellow; 
+text-decoration: none;
+}
 
 
 .aback {
@@ -94,8 +101,8 @@ color: white;
 font-family: calibri;
  font-size: clamp(1.0rem, 1.2vw, 1.3rem); 
 font-weight: 500;
-color: yellow;
-text-decoration: underline;
+color: lightblue;
+text-decoration: none;
 }
 
  
