@@ -42,10 +42,10 @@ color: white;
  text-align: center;
 }
 
- .a1 {
+.indx-link-font {
 font-family: Calibri;
- font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
-font-weight: 300;
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);   
+font-weight: 800;
  Color: lightblue; 
 text-decoration: none;
 }

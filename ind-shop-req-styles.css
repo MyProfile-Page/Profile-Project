@@ -13,6 +13,11 @@
      /*     background: lightblue;    */
           line-height: 0.8;
             }
+.h6class {
+font-family: calibri;
+ text-align: center;
+color:black;
+}
 
 .gap14vh {
   height: clamp(0.5rem, 0.6vh, 1.0rem);   /* or any size you want; mobile = desktop */

@@ -47,7 +47,7 @@
   
 
         <li class="nav-item">
-          <a class="nav-link " href="#" onclick="checkback(event)">Back</a>
+          <a id = "Back" class="nav-link " href="#" onclick="checkback(event)">Back</a>
         </li>
 
       </ul>
@@ -69,7 +69,7 @@
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
   
   
-  
+  <h6 id = "h6" class="h6class"></h6> 
     
 
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
@@ -407,11 +407,12 @@ if (localStorage.getItem("website") === "s1") {
 
  if (localStorage.getItem("website") === "s1") {
      document.getElementById("TcontactForm").style.display = "none";
-     document.getElementById('h5').innerHTML = 'Mini WebSite Request Form - Companies';           
+     document.getElementById('h6').innerHTML = 'Mini WebSite Request Form - Companies';           
     }
  if (localStorage.getItem("website") === "s2") {
      document.getElementById("EcontactForm").style.display = "none";
-     document.getElementById('h5').innerHTML = 'Mini Web Sitesi Talep Formu -Şirketler';  
+     document.getElementById('h6').innerHTML = 'Mini Web Sitesi Talep Formu -Şirketler'; 
+     document.getElementById("Back").innerHTML = 'Geri'; 
     }
 
  function handleSubmit(event) {
