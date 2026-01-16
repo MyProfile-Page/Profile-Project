@@ -41,16 +41,25 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Select Language</span>
     </button>
 
     <!-- Collapsible menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
+
+       <li class="nav-item">
+          <P></P> 
+        </li>
                 
         <li class="nav-item">
           <a  id = "English" class="nav-link a1" href="#"
              onclick="toggleSection('s1')">English</a>
+        </li>
+
+          <li class="nav-item">
+          <P></P> 
         </li>
 
         <li class="nav-item">
@@ -129,10 +138,10 @@ function toggleSection(id) {
   localStorage.setItem('website', website);
  
  if (localStorage.getItem("website") === "s1") {
-  window.location.href = "guide-codes.html";
+  window.location.href = "facilities-heading.html";
 }
  if (localStorage.getItem("website") === "s2") {
- window.location.href = "guide-codes.html";
+ window.location.href = "facilities-heading.html";
 }
  
   

@@ -45,34 +45,34 @@
            <p class = "P1"></p>   
         </li>     
          <li class="nav-item">
-           <p id="facilitieshead1" class = "facilitieshead">WebSites Requests</p>   
+           <p id="facilitieshead1" class = "facilitieshead">Order Forms</p>   
         </li>     
         <li class="nav-item">
-          <a id="Shop" href="shop-req.html" class="a1">Small Companies</a>      
+          <a id="shop-order" href="shop-req.html" class="a1">Order Form For Small Companies</a>      
         </li>     
         <li class="nav-item">
-          <a id="Shop" href="ind-req.html" class="a1">Individuals</a>      
+          <a id="indv-order" href="ind-req.html" class="a1">Order Form For Individual Person Profile</a>      
         </li> 
          <li class="nav-item">
            <p class = "P1"></p>   
         </li>         
          <li class="nav-item">
-          <p id="facilitieshead2" class = "facilitieshead">WebSites Samples</p>     
+          <p id="facilitieshead2" class = "facilitieshead">Samples</p>     
         </li>    
          <li class="nav-item">
-          <a id="Shop" href="shop-sample.html" class="a1">Shop</a>      
+          <a id="shop-sample" href="shop-sample.html" class="a1">Sample of a Shop</a>      
         </li>      
          <li class="nav-item">
-          <a id="Shop" href="edu-sample.html" class="a1">Educational Institute.</a>      
+          <a id="edu-sample" href="edu-sample.html" class="a1">Sample of an Educational Institute</a>      
         </li>     
          <li class="nav-item">
-          <a id="Shop" href="makeup-sample.html" class="a1">Makeup business</a>      
+          <a id="makeup-sample" href="makeup-sample.html" class="a1">Sample of a Makeup Entity</a>      
         </li>     
          <li class="nav-item">
-          <a id="Shop" href="photographer-sample.html" class="a1">Photography Business</a>      
+          <a id="photography-sample" href="photographer-sample.html" class="a1">Sample of a Photography Entity</a>      
         </li>     
          <li class="nav-item">
-          <a id="Shop" href="ind-sample.html" class="a1">  Individual Person.</a>      
+          <a id="indv-sample" href="ind-sample.html" class="a1">  Sample of an individual person  Profile</a>      
         </li>     
         <li class="nav-item">
           <a id="Back" href="index.html" class="aback">Back</a>
@@ -165,6 +165,16 @@ if (localStorage.getItem("website") === "s1") {
 
 
   if (localStorage.getItem("website") === "s2") {
+
+       document.getElementById("facilitieshead1").textContent = 'Sipariş Formları';
+        document.getElementById("facilitieshead2").textContent = 'Örnekler';
+               document.getElementById("shop-order").textContent = 'Küçük İşletmeler İçin Sipariş Formu';
+         document.getElementById("indv-order").textContent = 'Bireysel Kişi Profili Sipariş Formu';
+         document.getElementById("shop-sample").textContent = 'Mağazalar için örnek';
+                            document.getElementById("edu-sample").textContent = 'Eğitim Kurumları İçin Örnek';
+         document.getElementById("makeup-sample").textContent = 'Makyaj Ürünleri Örneği';
+                   document.getElementById("photography-sample").textContent = 'Fotoğrafçılık Kuruluşları İçin Örnek';
+            document.getElementById("indv-sample").textContent = 'Bir bireyin örnek profili'; 
 
         document.getElementById("apl-hdr").textContent = 'Şirketimiz';
         document.getElementById('P3').innerHTML = 'Ne yapıyoruz? ';   

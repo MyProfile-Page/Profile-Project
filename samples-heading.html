@@ -1,0 +1,155 @@
+﻿ 
+
+
+<html class = "html_cls";>
+
+<!--  To test application on varoius screen reolutions https://screenfly.org/ -->
+
+<head>
+     
+  <head>
+    <!-- ✅ Bootstrap 5 CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="headings-styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">  
+    <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   
+</head>
+<body class = "body_cls";>
+
+   <!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header bar" href="#">           
+     MiniWebSites  Şirketi</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav" >
+      <ul id="ul_top_hypers" class="navbar-nav ms-auto">
+          <li class="nav-item">
+           <p class = "P1"></p>   
+        </li>     
+       
+         <li class="nav-item">
+          <a id="shop-sample" href="shop-sample.html" class="a1">Sample of a Shop</a>      
+        </li>      
+         <li class="nav-item">
+          <a id="edu-sample" href="edu-sample.html" class="a1">Sample of an Educational Institute</a>      
+        </li>     
+         <li class="nav-item">
+          <a id="makeup-sample" href="makeup-sample.html" class="a1">Sample of a Makeup Entity</a>      
+        </li>     
+         <li class="nav-item">
+          <a id="photography-sample" href="photographer-sample.html" class="a1">Sample of a Photography Entity</a>      
+        </li>     
+         <li class="nav-item">
+          <a id="indv-sample" href="ind-sample.html" class="a1">  Sample of an individual person  Profile</a>      
+        </li>     
+       
+        <li class="nav-item">
+           <a id="abac" class="nav-link aback" href="#" onclick="checkback(event)">Back</a>
+          
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+
+
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
+   
+   <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
+
+        <div id="R1" class="row">
+            <div id="R1_D1" class="col-sm-12"> 
+                  <img src="sample-heading-img-1.jpg" class="img-fluid rounded shadow"   alt="Image REST is notavialable" > 
+                  <img src="sample-heading-img-2.jpg" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+            </div>  
+            
+       </div>  
+       
+        
+
+   <!-- FIRST ROW ENDS -->
+
+   
+
+  
+      
+       </div>
+   </div>
+ </div>
+
+
+  <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <script>
+window.addEventListener('load', () => {
+        const website = localStorage.getItem('website');
+        console.log(website);
+      }); 
+
+        //
+       //   alert("Right-click is disabled on this page.");
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();     
+    });
+        
+        // Change Text of a PARAGRAPH
+
+function checkback(event) {
+event.preventDefault();
+if (localStorage.getItem("website") === "s1") {
+  window.location.href = "facilities-heading.html";
+}
+ if (localStorage.getItem("website") === "s2") {
+ window.location.href = "facilities-heading.html";
+}
+}
+
+
+
+  if (localStorage.getItem("website") === "s2") {
+
+     document.getElementById("shop-sample").textContent = 'Mağazalar için örnek';
+                            document.getElementById("edu-sample").textContent = 'Eğitim Kurumları İçin Örnek';
+         document.getElementById("makeup-sample").textContent = 'Makyaj Ürünleri Örneği';
+                   document.getElementById("photography-sample").textContent = 'Fotoğrafçılık Kuruluşları İçin Örnek';
+            document.getElementById("indv-sample").textContent = 'Bir bireyin örnek profili'; 
+
+            
+
+        document.getElementById("apl-hdr").textContent = 'Şirketimiz';
+       
+     }                 
+    </script>
+      
+     
+      
+</body>
+</html>
