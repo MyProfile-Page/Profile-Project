@@ -69,7 +69,8 @@
  <!-- 🌍 Navigation Bar End -->
 
 
-
+<div class="gap10vh"></div>
+<div id="apl-hdr" class="apl-hdr"></div>
 
 
   <div class="container">
@@ -80,11 +81,10 @@
          
         <div id="R1" class="row">
             <div id="R1_D1" class="col-sm-12"> 
-                  <div class="gap14vh"></div>
-                  <div class="gap14vh"></div> 
-                  <div class="gap14vh"></div>
-                  <div class="gap14vh"></div>
-                  <img src="facilities-heading-img-1.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+                 
+                  
+                  <img src="facilities-heading-img-3.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+                  <img src="facilities-heading-img-2.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
             </div>  
             
        </div>  
@@ -128,15 +128,19 @@ if (localStorage.getItem("website") === "s1") {
 }
 }
 
+ if (localStorage.getItem("website") === "s1") {
 
+ document.getElementById("apl-hdr").textContent = 'Click or Tap Menu';
+
+}
 
   if (localStorage.getItem("website") === "s2") {
-
+        document.getElementById("apl-hdr").textContent = 'Menüye Tıklayın veya Dokunun'; 
        document.getElementById("facilitieshead1").textContent = 'Sipariş Formları';
         document.getElementById("facilitieshead2").textContent = 'Örnekler';
          document.getElementById("Back").textContent = 'Geri';   
-
-        document.getElementById("apl-hdr").textContent = 'Şirketimiz';
+         document.getElementById("menu-word-prp").innerHTML = 'Menü'; 
+        
        
      }                 
     </script>

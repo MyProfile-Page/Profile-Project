@@ -40,7 +40,8 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
     </button>
 
     <!-- Collapsible menu -->
@@ -435,6 +436,7 @@ document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager a
 }
 
 if (localStorage.getItem("website") === "s2") {
+document.getElementById("menu-word-prp").textContent = 'Menü';
 document.getElementById("apl-hdr").textContent = 'Savanah Juliet Yuki ';
 document.getElementById("abio").textContent = 'Biyografi ';
 document.getElementById("aedu").textContent = 'Eğitim ';

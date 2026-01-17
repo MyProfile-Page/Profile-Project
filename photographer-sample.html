@@ -47,7 +47,8 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
     </button>
 
     <!-- Collapsible menu -->
@@ -82,6 +83,7 @@
  <!-- 🌍 Navigation Bar End -->
 
   <div class="gap10vh"></div>
+   <div class="gap10vh"></div>
 <div id="apl-hdr" class="apl-hdr"></div>
    <!--  Main Container   -->
 
@@ -215,9 +217,10 @@ function toggleSection(id) {
 function checkback(event) {
 event.preventDefault();
 if (localStorage.getItem("website") === "s1") {
-   window.location.href = "samples-heading.html";
- if (localStorage.getItem("website") === "s2") {
   window.location.href = "samples-heading.html";
+}
+ if (localStorage.getItem("website") === "s2") {
+ window.location.href = "samples-heading.html";
 }
 }
 
@@ -359,6 +362,7 @@ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +
   }
 
  if (localStorage.getItem("website") === "s2") {
+document.getElementById("menu-word-prp").textContent = 'Menü';
 document.getElementById("apl-hdr").textContent = 'Serena Fotoğrafları Uluslararası';
 document.getElementById("aabout").textContent = 'Hakkımızda ';
 document.getElementById("aservices").textContent = 'Hizmetler ';

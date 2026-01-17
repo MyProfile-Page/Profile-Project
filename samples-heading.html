@@ -36,7 +36,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation">
        <span class="navbar-toggler-icon menu-bar-prp"></span>
-      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Samples</span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span>
     </button>
 
     <!-- Collapsible menu -->
@@ -76,7 +76,8 @@
  <!-- 🌍 Navigation Bar End -->
 
 
-
+<div class="gap10vh"></div>
+<div id="apl-hdr" class="apl-hdr"></div>
 
 
   <div class="container">
@@ -87,11 +88,10 @@
 
         <div id="R1" class="row">
             <div id="R1_D1" class="col-sm-12"> 
-                <div class="gap14vh"></div>
-                  <div class="gap14vh"></div> 
-                  <div class="gap14vh"></div>
-                  <div class="gap14vh"></div>
+              
                  <img src="sample-heading-img-1.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+                 <img src="sample-heading-img-2.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+                 <img src="sample-heading-img-3.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
             </div>  
             
        </div>  
@@ -137,7 +137,14 @@ if (localStorage.getItem("website") === "s1") {
 
 
 
+ if (localStorage.getItem("website") === "s1") {
+
+ document.getElementById("apl-hdr").textContent = 'Click or Tap Menu';
+
+}
+
   if (localStorage.getItem("website") === "s2") {
+        document.getElementById("apl-hdr").textContent = 'Menüye Tıklayın veya Dokunun'; 
 
      document.getElementById("shop-sample").textContent = 'Mağazalar için örnek';
                             document.getElementById("edu-sample").textContent = 'Eğitim Kurumları İçin Örnek';
@@ -145,10 +152,10 @@ if (localStorage.getItem("website") === "s1") {
                    document.getElementById("photography-sample").textContent = 'Fotoğrafçılık Kuruluşları İçin Örnek';
             document.getElementById("indv-sample").textContent = 'Bir bireyin örnek profili'; 
             document.getElementById("abac").innerHTML = 'Geri'; 
-
+                    document.getElementById("menu-word-prp").innerHTML = 'Menü'; 
             
 
-        document.getElementById("apl-hdr").textContent = 'Şirketimiz';
+      
        
      }                 
     </script>

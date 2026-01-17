@@ -19,6 +19,22 @@ font-family: calibri;
 color:black;
 }
 
+#menu-word-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  400;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+.menu-bar-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  200;
+  color: yellow; 
+  text-decoration: none; 
+  text-align: center;
+}
+
 .gap14vh {
   height: clamp(0.5rem, 0.6vh, 1.0rem);   /* or any size you want; mobile = desktop */
 }

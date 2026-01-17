@@ -47,7 +47,8 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
     </button>
 
     <!-- Collapsible menu -->
@@ -60,7 +61,7 @@
         </li>
 
         <li class="nav-item">
-          <a id="acourses" class="nav-link a1" href="javascript:void(0)"
+          <a id="aservices" class="nav-link a1" href="javascript:void(0)"
              onclick="toggleSection('s2')">Services</a>
         </li>
 
@@ -368,6 +369,7 @@ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +
   }
 
  if (localStorage.getItem("website") === "s2") {
+document.getElementById("menu-word-prp").textContent = 'Menü';
 document.getElementById("apl-hdr").textContent = 'Erina Makyaj Uluslararası';
 document.getElementById("aabout").textContent = 'Hakkımızda ';
 document.getElementById("aservices").textContent = 'Hizmetler ';

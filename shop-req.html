@@ -38,7 +38,8 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+     <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
     </button>
 
     <!-- Collapsible menu -->
@@ -413,6 +414,7 @@ if (localStorage.getItem("website") === "s1") {
      document.getElementById("EcontactForm").style.display = "none";
      document.getElementById('h6').innerHTML = 'Mini Web Sitesi Talep Formu -Şirketler'; 
      document.getElementById("Back").innerHTML = 'Geri'; 
+     document.getElementById("menu-word-prp").textContent = 'Menü';
     }
 
  function handleSubmit(event) {

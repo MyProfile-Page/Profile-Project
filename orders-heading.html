@@ -36,7 +36,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation">
        <span class="navbar-toggler-icon menu-bar-prp"></span>
-      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Orders</span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span>
     </button>
 
     <!-- Collapsible menu -->
@@ -69,7 +69,8 @@
  <!-- 🌍 Navigation Bar End -->
 
 
-
+<div class="gap10vh"></div>
+<div id="apl-hdr" class="apl-hdr"></div>
 
 
   <div class="container">
@@ -80,11 +81,10 @@
 
         <div id="R1" class="row">
             <div id="R1_D1" class="col-sm-12"> 
-                 <div class="gap14vh"></div>
-                  <div class="gap14vh"></div> 
-                  <div class="gap14vh"></div>
-                  <div class="gap14vh"></div>
+                
                   <img src="order-heading-img-1.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+                    <img src="order-heading-img-2.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" > 
+                   <img src="order-heading-img-3.JPG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" > 
             </div>  
             
        </div>  
@@ -127,17 +127,20 @@ if (localStorage.getItem("website") === "s1") {
  window.location.href = "facilities-heading.html";
 }
 }
+ if (localStorage.getItem("website") === "s1") {
 
+ document.getElementById("apl-hdr").textContent = 'Click or Tap Menu';
 
+}
 
   if (localStorage.getItem("website") === "s2") {
-
+        document.getElementById("apl-hdr").textContent = 'Menüye Tıklayın veya Dokunun'; 
     document.getElementById("shop-order").textContent = 'Küçük İşletmeler İçin Sipariş Formu';
          document.getElementById("indv-order").textContent = 'Bireysel Kişi Profili Sipariş Formu';
       document.getElementById("guide").textContent = 'Rehber';
        document.getElementById("abac").textContent = 'Geri';
-   
-        document.getElementById("apl-hdr").textContent = 'Şirketimiz';
+      document.getElementById("menu-word-prp").innerHTML = 'Menü'; 
+       
        
      }                 
     </script>
