@@ -10,13 +10,14 @@
           background-color: white;
           background-color: #eef5ff;
        /*   background: linear-gradient(to right, #007bff, #00c6ff);   */
-            background-color: black;  
+            background-color: black;
+       
           line-height: 0.8;
             }
 
-#menu-word-prp {
+.menu-word-prp {
  font-size: clamp(1.0rem, 1.3vw, 1.4rem);  
-  font-weight:  400;
+  font-weight:  700;
   color: lightblue; 
   text-decoration: none; 
   text-align: center;
@@ -34,7 +35,7 @@
 font-family: calibri;
  font-size: clamp(1.0rem, 1.7vw, 1.9rem); 
 font-weight: 500;
-color: white;
+color: lightblue;
 }
 
 .dmenu {
@@ -56,32 +57,48 @@ text-decoration: none;
 
 
 .top-left {
-  position: absolute;
- top: clamp(3rem, 8.9vh, 12rem); 
- font-size: clamp(0.9rem, 1.6vw, 1.8rem);   
- font-weight: 700;
+  position: relative;
+ top: clamp(5.5rem, 7.5vh, 8.5rem);
+ font-size: clamp(1.2rem, 1.5vw, 1.6rem);   
+ font-weight: 750;
   font-family: calibri;
   color: white; 
-left: clamp(3.0rem, 4.9vw, 6.0rem); 
-text-decoration: underline;
+left: clamp(18.0rem, 19.9vw, 20.0rem); 
+text-decoration: none;
+}
+
+.top-left1 {
+  position: relative;
+  top: clamp(7rem, 8vh, 9rem);
+left: clamp(18.0rem, 19.9vw, 20.0rem); 
+   font-size: clamp(0.9rem, 1.2vw, 1.3rem);   
+  font-weight: 550;
+  font-family: Calibri;
+ color: white; 
+}
+
+.top-left2 {
+   position: relative;
+  top: clamp(8rem, 9vh, 10rem);
+left: clamp(18.0rem, 19.9vw, 20.0rem); 
+   font-size: clamp(0.9rem, 1.2vw, 1.3rem);   
+  font-weight: 550;
+  font-family: Calibri;
+ color: white; 
 }
 
 .top-left0-1 {
   position: absolute;
-  top: clamp(3rem, 4.9vh, 5.0rem);  
+   font-size: clamp(0.9rem, 1.6vw, 1.8rem);   
   left: 210px;
  
 }
 
-.top-left1 {
-
+.top-left0-1 {
   position: absolute;
-  top: clamp(15px, 8.9vh, 50px);
-  left: clamp(4rem, 8.9vw, 9rem);
-  font-size: clamp(1rem, 2.5vw, 2.8rem); 
-  font-weight: 550;
-  font-family: Calibri;
- color: white; 
+   font-size: clamp(0.9rem, 1.6vw, 1.8rem);   
+  left: 210px;
+ 
 }
 
 .top-left1-1 {
@@ -96,7 +113,7 @@ text-decoration: underline;
 }
 
 .gap10vh {
-  height: clamp(0.4rem, 1.5vh, 1.9rem);   /* or any size you want; mobile = desktop */
+  height: clamp(0.2rem, 0.4vh, 0.5rem);   /* or any size you want; mobile = desktop */
 }
 
  #main-container-third {
