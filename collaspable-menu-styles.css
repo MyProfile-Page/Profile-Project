@@ -17,10 +17,15 @@
 .bltlist {
   list-style-type: circle; 
 }
-.lmargin {
-  margin-left:26%; 
+.divcenter {
+text-align: center;
+
 }
 
+.myul {
+  display: inline-block;
+  text-align: left;
+}
 .dmenu {
  background-color: #382A2A;
  text-align: center;
