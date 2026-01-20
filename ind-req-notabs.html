@@ -6,6 +6,8 @@
 <!--  To test application on varoius screen reolutions https://screenfly.org/ -->
 <!--  1. Services  2. Products or Skills  3. Addrese are three good headers for company e-profile -->
 <!--  1. category or sector for companies instead title -->
+<!--  1THIS VERSION RUNNING CORRECTLY -->
+
 
 
 
@@ -24,6 +26,7 @@
 </head>
 <body class = "body_cls";>
 
+
   <!-- 🌍 Navigation Bar Start -->
 
  <nav class="navbar navbar-dark bg-dark">
@@ -38,7 +41,7 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-     <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span class="navbar-toggler-icon menu-bar-prp"></span>
       <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
     </button>
 
@@ -48,7 +51,7 @@
   
 
         <li class="nav-item">
-          <a id = "Back" class="nav-link " href="index.html">Back</a>
+          <a id="Back"class="nav-link " href="index.html">Back</a>
         </li>
 
       </ul>
@@ -60,7 +63,7 @@
  <!-- 🌍 Navigation Bar End -->
 
 
-    
+  
 
  <!--  First Container for entering client data. -->
 
@@ -69,193 +72,218 @@
     <div class="row justify-content-center">
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
   
+ <h6 id = "h6" class="h6class">Here is h6</h6> 
   
-  <h6 id = "h6" class="h6class"></h6> 
     
 
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
        
- <!--       <form onsubmit="handleSubmit(event)">   -->   
-       <form id="EcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST"> 
+ <!--      <form id="contactForm" onsubmit="handleSubmit(event)">   -->   
+           <form id="EcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST">     
+  <!--      <form id="contactForm" action= "https://formsubmit.co/asadsayeed@hotmail.com" method="POST">  -->
+     <div class="gap14vh"></div>
+     <div class="gap14vh"></div>
+     <div class="gap14vh"></div>
+    <img src="thumb-title.jpg"><label for="usertitle">&nbsp&nbspProfession:</label>
     <div class="gap14vh"></div>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div> 
-    <img src="thumb-sectors.jpg"><label for="sector">&nbsp&nbspSector:</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-<input list="sectors" id="sector" name="sector" class="form-control" placeholder="Select your Startup sector, or type."   required>
-<datalist id="sectors">
-  <option value="Construction">
-  <option value="Transport">
-  <option value="Banking">
-   <option value="Manufacturing">
-  <option value="Marketing">
-  <option value="General Services">
-  <option value="Plumbing">
-  <option value="Electring">
-  <option value="Health Care">
-  <option value="Government">
-  <option value="Volunteering">
-  <option value="">
+    <div class="gap14vh"></div>
+<input list="usertitles" id="usertitle" name="usertitle" class="form-control" placeholder="Select your profession, or type."  required>
+<datalist id="usertitles">
+  <option value="Banker">
+  <option value="Engineer">
+  <option value="Doctor">
+  <option value="Student">
+  <option value="Teacher">
+  <option value="Self Employed">
+  <option value="Shopkeeper">
+  <option value="Agent">
+  <option value="Nurse">
+  <option value="Technician">
+  <option value="Retired">
+  <option value="Volunteer">
 </datalist>  
-
   <div class="gap14vh"></div>
-<div class="gap14vh"></div>
-  <img src="thumb-name.jpg"><label for="username">&nbsp&nbspTitle:</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <input type="text" id="username"   name="username" class="form-control"  required>
-<div class="gap14vh"></div> 
-<div class="gap14vh"></div> 
+  <div class="gap14vh"></div>
+   <img src="thumb-name.jpg"><label for="username">&nbsp&nbspName:</label>
+   <div class="gap14vh"></div>
+   <div class="gap14vh"></div>
+    <input type="text" id="username" name="username"  class="form-control"  required>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>  
+   
      <img src="thumb-email.jpg"><label for="useremail">&nbsp&nbspEmail:</label>
-<div class="gap14vh"></div> 
-<div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
     <input type="text" id="useremail" name="useremail"  class="form-control">
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <img src="thumb-biography.jpg"><label for="bio">&nbsp&nbspCompany Profile: Max 10 lines.</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <textarea id="bio" rows="10" name="bio"  class="form-control"   required></textarea>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-   <img src="thumb-product.jpg"> <label for="qlf1">&nbsp&nbspProducts or Skills:</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <input type="text" id="qlf1"  name="prd1" class="form-control" >
-<div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <img src="thumb-biography.jpg"><label for="bio">&nbsp&nbspBiography: Max 10 lines.</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <textarea id="bio" rows="10"  name="bio" class="form-control"  required ></textarea>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <img src="thumb-qlf.png"><label for="qlf1">&nbsp&nbspQualifications:</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <input type="text" id="qlf1"  name="qlf1" class="form-control" >
+    <div class="gap14vh"></div>
 <!--    <label for="qlf2">Second Qualification:</label><div class="gap14vh"></div>  -->   
- <!--    <input type="text" id="qlf2" size="40" ><div class="gap14vh"></div>  -->   
-<input type="search" id="qlf2" name="prd2" placeholder=""  class="form-control"/>
+ <!--    <input type="text" id="qlf2" size="30" ><div class="gap14vh"></div>  -->   
+<input type="text" id="qlf2" name="qlf2" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="qlf3" name="prd3" placeholder=""  class="form-control"/>
+ <input type="text" id="qlf3" name="qlf3" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
-<input type="search" id="qlf4" name="prd4" placeholder=""  class="form-control"/>
+<input type="text" id="qlf4" name="qlf4" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
-<input type="search" id="qlf5" name="prd5" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-  <img src="thumb-services.png"><label for="exp1">&nbsp&nbspServices:</label>
+<input type="text" id="qlf5" name="qlf5" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
-    <input type="text" id="exp1" name="ser1" class="form-control" >
-<div class="gap14vh"></div>
-<input type="search" id="exp2" name="ser2" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
- <input type="search" id="exp3" name="ser3" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
-<input type="search" id="exp4" name="ser4" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
-<input type="search" id="exp5" name="ser5" placeholder=""  class="form-control"/>
+ <img src="thumb-services.png"><label for="exp1">&nbsp&nbspExperiences:</label>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
- <img src="thumb-address.jpg"><label for="adr1">&nbsp&nbspLocation:</label>
+    <input type="text" id="exp1"  name="exp1" class="form-control" >
+<div class="gap14vh"></div>
+<input type="text" id="exp2" name="exp2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="text" id="exp3" name="exp3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="exp4" name="exp4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="exp5" name="exp5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+ <img src="thumb-address.jpg"><label for="adr1">&nbsp&nbspAddress:</label>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
     <input type="text" id="adr1" name="adr1" class="form-control" >
 <div class="gap14vh"></div>
-<input type="search" id="adr2" name="adr2" placeholder=""  class="form-control"/>
+<input type="text" id="adr2" name="adr2" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="adr3" name="adr3" placeholder=""  class="form-control"/>
+ <input type="text" id="adr3" name="adr3" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="adr4" name="adr4" placeholder=""  class="form-control"/>
+<input type="text" id="adr4" name="sdr4" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="adr5" name="adr5" placeholder=""  class="form-control"/>
+<input type="text" id="adr5" name="adr5" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
     <button type="submit" style="font-weight: 600; font-size: clamp(1rem, 1.4vw, 1.6rem);">Submit</button>
   </form>
 
-    <form id="TcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST"> 
+ <!--      <form id="contactForm" onsubmit="handleSubmit(event)">   -->   
+           <form id="TcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST">     
+  <!--      <form id="contactForm" action= "https://formsubmit.co/asadsayeed@hotmail.com" method="POST">  -->
+     <div class="gap14vh"></div>
+     <div class="gap14vh"></div>
+     <div class="gap14vh"></div>
+    <img src="thumb-title.jpg"><label for="usertitle">&nbsp&nbspMeslek:</label>
     <div class="gap14vh"></div>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div> 
-    <img src="thumb-sectors.jpg"><label for="sector">&nbsp&nbspSektör:</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-<input list="sectorsT" id="sectorT" name="sectorT" class="form-control" placeholder="Şirket sektörünüzü seçin veya yazın."   required>
-<datalist id="sectorsT">
-  <option value="İnşaat">
-  <option value="Ulaşım">
-  <option value="Bankacılık">
-   <option value="Üretme">
-  <option value="Pazarlama">
-  <option value="Genel Hizmetler">
-  <option value="Tesisat">
-  <option value="Elektriklenme">
-  <option value="Sağlık hizmeti">
-  <option value="Devlet">
-  <option value="Gönüllülük">
-  <option value="">
+    <div class="gap14vh"></div>
+<input list="usertitlesT" id="usertitleT" name="usertitle" class="form-control" placeholder="Mesleğinizi seçin veya yazın."  required>
+<datalist id="usertitlesT">
+  <option value="Bankacı">
+  <option value="Mühendis">
+  <option value="Doktor">
+  <option value="Öğrenci">
+  <option value="Öğretmen">
+  <option value="Serbest meslek">
+  <option value="Dükkâncı">
+  <option value="Ajan">
+  <option value="Hemşire">
+  <option value="Teknisyen">
+  <option value="Emekli">
+  <option value="Gönüllü">
 </datalist>  
-
   <div class="gap14vh"></div>
-<div class="gap14vh"></div>
-  <img src="thumb-name.jpg"><label for="username">&nbsp&nbspBaşlık:</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <input type="text" id="username"   name="username" class="form-control"  required>
-<div class="gap14vh"></div> 
-<div class="gap14vh"></div> 
+  <div class="gap14vh"></div>
+   <img src="thumb-name.jpg"><label for="username">&nbsp&nbspİsim:</label>
+   <div class="gap14vh"></div>
+   <div class="gap14vh"></div>
+    <input type="text" id="username" name="username"  class="form-control"  required>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>  
+   
      <img src="thumb-email.jpg"><label for="useremail">&nbsp&nbspE-posta:</label>
-<div class="gap14vh"></div> 
-<div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
     <input type="text" id="useremail" name="useremail"  class="form-control">
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <img src="thumb-biography.jpg"><label for="bio">&nbsp&nbspŞirket Profili: en fazla 10 satır..</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <textarea id="bio" rows="10" name="bio"  class="form-control"   required></textarea>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-   <img src="thumb-product.jpg"> <label for="qlf1">&nbsp&nbspÜrünler veya Beceriler:</label>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-    <input type="text" id="qlf1"  name="prd1" class="form-control" >
-<div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <img src="thumb-biography.jpg"><label for="bio">&nbsp&nbspBiyografi: en fazla 10 satır.</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <textarea id="bio" rows="10"  name="bio" class="form-control"  required ></textarea>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <img src="thumb-qlf.png"><label for="qlf1">&nbsp&nbspNitelikler:</label>
+    <div class="gap14vh"></div>
+    <div class="gap14vh"></div>
+    <input type="text" id="qlf1"  name="qlf1" class="form-control" >
+    <div class="gap14vh"></div>
 <!--    <label for="qlf2">Second Qualification:</label><div class="gap14vh"></div>  -->   
- <!--    <input type="text" id="qlf2" size="40" ><div class="gap14vh"></div>  -->   
-<input type="search" id="qlf2" name="prd2" placeholder=""  class="form-control"/>
+ <!--    <input type="text" id="qlf2" size="30" ><div class="gap14vh"></div>  -->   
+<input type="text" id="qlf2" name="qlf2" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="qlf3" name="prd3" placeholder=""  class="form-control"/>
+ <input type="text" id="qlf3" name="qlf3" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
-<input type="search" id="qlf4" name="prd4" placeholder=""  class="form-control"/>
+<input type="text" id="qlf4" name="qlf4" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
-<input type="search" id="qlf5" name="prd5" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div>
-  <img src="thumb-services.png"><label for="exp1">&nbsp&nbspHizmetler:</label>
+<input type="text" id="qlf5" name="qlf5" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
-    <input type="text" id="exp1" name="ser1" class="form-control" >
-<div class="gap14vh"></div>
-<input type="search" id="exp2" name="ser2" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
- <input type="search" id="exp3" name="ser3" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
-<input type="search" id="exp4" name="ser4" placeholder=""  class="form-control"/>
-<div class="gap14vh"></div>
-<input type="search" id="exp5" name="ser5" placeholder=""  class="form-control"/>
+ <img src="thumb-services.png"><label for="exp1">&nbsp&nbspDeneyimler:</label>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
- <img src="thumb-address.jpg"><label for="adr1">&nbsp&nbspKonum:</label>
+    <input type="text" id="exp1"  name="exp1" class="form-control" >
+<div class="gap14vh"></div>
+<input type="text" id="exp2" name="exp2" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+ <input type="text" id="exp3" name="exp3" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="exp4" name="exp4" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<input type="text" id="exp5" name="exp5" placeholder=""  class="form-control"/>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+ <img src="thumb-address.jpg"><label for="adr1">&nbsp&nbspAdres:</label>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
     <input type="text" id="adr1" name="adr1" class="form-control" >
 <div class="gap14vh"></div>
-<input type="search" id="adr2" name="adr2" placeholder=""  class="form-control"/>
+<input type="text" id="adr2" name="adr2" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="adr3" name="adr3" placeholder=""  class="form-control"/>
+ <input type="text" id="adr3" name="adr3" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="adr4" name="adr4" placeholder=""  class="form-control"/>
+<input type="text" id="adr4" name="sdr4" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
- <input type="search" id="adr5" name="adr5" placeholder=""  class="form-control"/>
+<input type="text" id="adr5" name="adr5" placeholder=""  class="form-control"/>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
     <button type="submit" style="font-weight: 600; font-size: clamp(1rem, 1.4vw, 1.6rem);">Gönder </button>
   </form>
 
+
+   <form id="hcontactForm" action="https://xxxformspree.io/f/myzbzwnv" method="POST">
+  <input type="hidden" id="husertitle" name="husertitle">
+   <input type="hidden" id="husername" name="husername">
+ <input type="hidden" id="huseremail" name="huseremail">
+ <input type="hidden" id="hbio" name="hbio">
+  <input type="hidden" id="hqlf1" name="hqlf1">
+  <input type="hidden" id="hqlf2" name="hqlf2">
+  <input type="hidden" id="hqlf3" name="hqlf3">
+  <input type="hidden" id="hqlf4" name="hqlf4">
+  <input type="hidden" id="hqlf5" name="hqlf5">
+ <input type="hidden" id="hexp1" name="hexp1">
+  <input type="hidden" id="hexp2" name="hexp2">
+  <input type="hidden" id="hexp3" name="hexp3">
+   <input type="hidden" id="hexp4" name="hexp4">
+  <input type="hidden" id="hexp5" name="hexp5">
+ <input type="hidden" id="hadr1" name="hadr1">
+  <input type="hidden" id="hadr2" name="hadr2">
+  <input type="hidden" id="hadr3" name="hadr3">
+  <input type="hidden" id="hadr4" name="hadr4">
+  <input type="hidden" id="hadr5" name="hadr5">
+  </form>
 
   
      <!-- THIRD ROW ENDS --> 
@@ -280,8 +308,10 @@
        <div id="VR1" class="row">
                  <div id="VR1_D1" class="col-sm-12">
                 
-       <!--       <img src="company1.png" class="img-fluid"   alt="fromphp" >   -->  
-              <img src="kiosk.jpg" class="img-fluid"   alt="fromphp" >  
+      <!--        <img src="individualjp1.jpg" class="img-fluid"   alt="fromphp" >   -->   
+               <img src="face-girl2.jpg" class="img-fluid"   alt="fromphp" >  
+                
+                
                </div> 
           
         </div>  
@@ -304,10 +334,11 @@
         <div id="VR2" class="row">
             <div id="VR2_D1" class="col-sm-12"> 
                   <div class="gap14vh"></div>
-                  <p id="VP2-1">third missing</p>  
-                  <p id="VP1">first missing</p>
-                  <p id="VP2">SEcond Missing</p>  
-                  <a href="mailto:you@example.com" class="btn">Email Us</a>
+                  <p id="VP2-1"></p>
+                  <p id="VP1"></p>
+                  <p id="VP2"></p>  
+                   
+                  <a href="mailto:you@example.com" class="btn">email me</a>
                   <div class="gap14vh"></div>
              
                               
@@ -334,7 +365,7 @@
   <img src="google-icon.png" class = "igg" title = "igg";>
   </a> 
  
-                  <div class="gap14vh"></div>
+<div class="gap14vh"></div>
 <div class="gap14vh"></div>
                               
             </div>  
@@ -354,17 +385,19 @@
            <div id="VR3_D1" class="col-sm-12">
                 <div id="VR3-D1-BIO"></div>       
                   <div class="gap14vh"></div>
-<div class="gap14vh"></div>
-                <p id="VP4" ></p><img src="thumb-product.jpg">
-<div class="gap14vh"></div>
-                <ul id="qlflist"></ul>  
+               <div class="gap14vh"></div>
+                <p id="VP4" ></p><img src="thumb-qlf.png">
+                   <div class="gap14vh"></div>
+                <ul id="qlflist">   </ul>  
+                <div class="gap14vh"></div>
                 <div class="gap14vh"></div>
                 <p id="VP6" ></p><img src="thumb-services.png">
-<div class="gap14vh"></div>      
-                <ul id="explist"></ul>  
+               <div class="gap14vh"></div>
+                <ul id="explist">   </ul>  
+                <div class="gap14vh"></div>
                 <div class="gap14vh"></div>                                    
-                <p id="VP8" ></p><img src="thumb-address.jpg">
-<div class="gap14vh"></div>
+               <p id="VP8" ></p><img src="thumb-address.jpg">
+              <div class="gap14vh"></div>
                 <ul id="adrlist"> </ul>        
                 
           <!--       <a href="#" class="btn btn-primary btn-sm">Read More</a>   -->
@@ -388,13 +421,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
   <script>
 
-  
+ 
+
         //
               //   alert("Right-click is disabled on this page.");
 //    document.addEventListener('contextmenu', function (e) {
 //      e.preventDefault();     
 //    });
-
 
 function checkback(event) {
 event.preventDefault();
@@ -408,11 +441,11 @@ if (localStorage.getItem("website") === "s1") {
 
  if (localStorage.getItem("website") === "s1") {
      document.getElementById("TcontactForm").style.display = "none";
-     document.getElementById('h6').innerHTML = 'Mini WebSite Request Form - Companies';           
+     document.getElementById('h6').innerHTML = 'Mini WebSite Request Form - Individuals';        
     }
  if (localStorage.getItem("website") === "s2") {
      document.getElementById("EcontactForm").style.display = "none";
-     document.getElementById('h6').innerHTML = 'Mini Web Sitesi Talep Formu -Şirketler'; 
+     document.getElementById('h6').innerHTML = 'Mini Web Sitesi Talep Formu - kişiler';   
      document.getElementById("Back").innerHTML = 'Geri'; 
      document.getElementById("menu-word-prp").textContent = 'Menü';
     }
@@ -421,18 +454,25 @@ if (localStorage.getItem("website") === "s1") {
       // Prevent the form from reloading the page
       event.preventDefault();
       // Get user input   
-      let name = document.getElementById("username").value;
-       let email = document.getElementById("useremail").value;
+      let pusertitle = document.getElementById("usertitle").value;
+       let pusername = document.getElementById("username").value;
+       let puseremail = document.getElementById("useremail").value;
        let pbio = document.getElementById("bio").value;
      let pqlf1 = document.getElementById("qlf1").value;
       let pqlf2 = document.getElementById("qlf2").value;
        let pqlf3 = document.getElementById("qlf3").value;
+      let pqlf4 = document.getElementById("qlf4").value;
+       let pqlf5 = document.getElementById("qlf5").value;
       let pexp1 = document.getElementById("exp1").value;
       let pexp2 = document.getElementById("exp2").value;
        let pexp3 = document.getElementById("exp3").value;
+      let pexp4 = document.getElementById("exp4").value;
+       let pexp5 = document.getElementById("exp5").value;
       let padr1 = document.getElementById("adr1").value;
       let padr2 = document.getElementById("adr2").value;
        let padr3 = document.getElementById("adr3").value;
+      let padr4 = document.getElementById("adr4").value;
+       let padr5 = document.getElementById("adr5").value;
 
  
  
@@ -440,20 +480,20 @@ if (localStorage.getItem("website") === "s1") {
   //    document.getElementById('P1').innerHTML = "Hello, " + email + "!";
       document.getElementById('VP1').innerHTML = document.getElementById("username").value;
        document.getElementById('VP2').innerHTML = document.getElementById("useremail").value;
-       document.getElementById('VP2-1').innerHTML = document.getElementById("sector").value;    
+       document.getElementById('VP2-1').innerHTML = document.getElementById("usertitle").value;    
         
     
 
 
 
              
-            document.getElementById('VP4').innerHTML = '<Normal>Products/Skills:&nbsp&nbsp ' +                                                                                                               
+            document.getElementById('VP4').innerHTML = '<Normal>Qualification:&nbsp&nbsp ' +                                                                                                               
                                                           '</Normal>';
 
-            document.getElementById('VP6').innerHTML = '<Normal>Services:&nbsp&nbsp ' +                                                                                                               
+            document.getElementById('VP6').innerHTML = '<Normal>Experience:&nbsp&nbsp ' +                                                                                                               
                                                           '</Normal>';
     
-         document.getElementById('VP8').innerHTML = '<Normal>Company Location:&nbsp&nbsp ' +                                                                                                               
+         document.getElementById('VP8').innerHTML = '<Normal>Address:&nbsp&nbsp ' +                                                                                                               
                                                           '</Normal>';
 
         document.getElementById('VR3-D1-BIO').innerHTML = document.getElementById("bio").value;       
@@ -486,7 +526,7 @@ if (localStorage.getItem("website") === "s1") {
      document.getElementById("qlflist").appendChild(node);
   }
 
- if (document.getElementById("qlf4").value === "") {    
+  if (document.getElementById("qlf4").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -495,7 +535,7 @@ if (localStorage.getItem("website") === "s1") {
      document.getElementById("qlflist").appendChild(node);
   }
 
- if (document.getElementById("qlf5").value === "") {    
+  if (document.getElementById("qlf5").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -532,7 +572,7 @@ if (localStorage.getItem("website") === "s1") {
      document.getElementById("explist").appendChild(node);
   }
 
-if (document.getElementById("exp4").value === "") {    
+  if (document.getElementById("exp4").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -541,7 +581,7 @@ if (document.getElementById("exp4").value === "") {
      document.getElementById("explist").appendChild(node);
   }
 
-if (document.getElementById("exp5").value === "") {    
+  if (document.getElementById("exp5").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -577,7 +617,7 @@ if (document.getElementById("exp5").value === "") {
      document.getElementById("adrlist").appendChild(node);
   }
 
- if (document.getElementById("adr4").value === "") {    
+  if (document.getElementById("adr4").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -586,7 +626,7 @@ if (document.getElementById("exp5").value === "") {
      document.getElementById("adrlist").appendChild(node);
   }
 
- if (document.getElementById("adr5").value === "") {    
+  if (document.getElementById("adr5").value === "") {    
      }
  else {
      const node = document.createElement("li");
@@ -597,10 +637,31 @@ if (document.getElementById("exp5").value === "") {
  
    document.getElementById("container-div-second").style.display = "block";
    document.getElementById("container-div").style.display = "none";
-   alert("Review the created Digital page and contact us for its deployment on web");
-    
-                                   
+   alert("Review the created Digital page and contact us for its deployment on web");                                
                                                       
+
+  // Move data to Form 2
+    document.getElementById("husertitle").value = pusertitle;
+    document.getElementById("husername").value = pusername;
+    document.getElementById("huseremail").value = puseremail;
+    document.getElementById("hbio").value = pbio;
+    document.getElementById("hqlf1").value = pqlf1;
+     document.getElementById("hqlf2").value = pqlf2;
+     document.getElementById("hqlf3").value = pqlf3;
+     document.getElementById("hqlf4").value = pqlf4;
+     document.getElementById("hqlf5").value = pqlf5;
+     document.getElementById("hexp1").value = pexp1;
+    document.getElementById("hexp2").value = pexp2;
+    document.getElementById("hexp3").value = pexp3;
+    document.getElementById("hexp4").value = pexp4;
+    document.getElementById("hexp5").value = pexp5;
+     document.getElementById("hadr1").value = padr1;
+     document.getElementById("hadr2").value = padr2;
+     document.getElementById("hadr3").value = padr3;
+      document.getElementById("hadr4").value = padr4;
+      document.getElementById("hadr5").value = padr5;
+
+
 
     }
 

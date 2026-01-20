@@ -8,32 +8,26 @@
 <!--  1. category or sector for companies instead title -->
 <!--  1THIS VERSION RUNNING CORRECTLY -->
 
-
-
-
-<head>
      
   <head>
-
-
-
     <!-- ✅ Bootstrap 5 CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="photographer-sample-styles.css" />
+     
+    <link rel="stylesheet" type="text/css" href="edu-sample-notabs-styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   
-
  
     <meta charset="UTF-8"> 
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title></title>
-   
 </head>
-<body class = "body_cls";>
 
- <!-- 🌍 Navigation Bar Start -->
+<body class = "body_cls"; font-family: 'Poppins', sans-serif; >
+
+  <!-- 🌍 Navigation Bar Start -->
 
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
@@ -47,7 +41,7 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon menu-bar-prp"></span>
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
       <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
     </button>
 
@@ -55,24 +49,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
 
-        <li class="nav-item">
-          <a id="aabout" class="nav-link a1" href="javascript:void(0)"
-             onclick="toggleSection('s1')">About us</a>
-        </li>
-
-        <li class="nav-item">
-          <a id="aservices" class="nav-link a1" href="javascript:void(0)"
-             onclick="toggleSection('s2')">Services</a>
-        </li>
-
-        <li class="nav-item">
-          <a id="aaddress" class="nav-link a1" href="javascript:void(0)"
-             onclick="toggleSection('s3')">Address</a>
-        </li>
-
-        <li class="nav-item">
-          <a id="aback" class="nav-link aback" href="index.html">Back</a>
-        </li>
+      <li class="nav-item">
+          <a id="aback" class="nav-link aback" href="index.html" >Back</a>
+        </li>      
 
       </ul>
     </div>
@@ -81,17 +60,29 @@
 </nav>
 
  <!-- 🌍 Navigation Bar End -->
-
-  <div class="gap14vh"></div>
-   <div class="gap14vh"></div>
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
 <div id="apl-hdr" class="apl-hdr"></div>
+<div class="gap10vh"></div>
+
    <!--  Main Container   -->
 
 <div id="main-container-first" class="container">
  <div id="main-container-second" class="main-container-second row justify-content-center">
       <div id="main-container-third" class= "main-container-third col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
-    
 
+ <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
+
+        <div id="R1" class="row">
+            <div id="R1_D1" class="col-sm-12">        
+                  <img src="edu-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
+                  <img src="edu-img-main1.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
+                <img src="edu-img-main2.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
+            </div>  
+            
+       </div>  
+
+<!-- FIRST ROW Ends -->
 
 <div id="s1" class="sectionBox">
 <div class="gap14vh"></div>
@@ -99,16 +90,16 @@
  <P id="P4-1" class="P4-1"></P>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
- <img id="I-BOX5" src="photographer-img-abt.jpg" class="img-rounded img-fluid pull-left I-BOX5"
+
+ <img id="I-BOX5" src="edu-img-abt.jpg" class="img-rounded img-fluid pull-left I-BOX5"
                                               title = "ins">
                                               <p id="P-BOX5" class="P-BOX5" >                  
                                               </p>
 <div>
 <div class="gap14vw"></div>
 <div class="gap14vw"></div>
-<img src="photographer-img-bio.jpg" class="responsive-img">
-</div> 
-
+<img src="edu-img-bio.jpg" class="responsive-img">
+</div>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
  <P id="P5" class="P5"></P>
@@ -116,8 +107,6 @@
  <P id="P7" class="P7"></P>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
-<div class="gap14vw"></div>
-<div class="gap14vw"></div>
 <P id="P8" class="P8"></P>
 <P id="P8A" class="P8A"></P>
 </div>
@@ -127,22 +116,18 @@
 <div class="gap14vh"></div>
  <P id="P9" class="P9"></P>
  <div>
-
 <div class="gap14vh"></div>
 <ul id="servlist" class="servlist"> </ul> 
 <div class="gap14vh"></div>
 </div>
-<p id="P-SER-ESSAY" class="P-ESSAY"></p>
+<p id="P-CRS-ESSAY" class="P-ESSAY"></p>
 <div class="gap14vw"></div>
 <div>
-<img src="photographer-img-ser.jpg" class="responsive-img">
+<img src="edu-img-ser.jpg" class="responsive-img">
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
 </div>
-<div>
 
-<div class="gap14vh"></div>
-</div>
   <P id="P52" class="P52"></P>
  <P id="P62" class="P62"></P>
  <P id="P72" class="P72"></P>
@@ -169,7 +154,6 @@
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
 </div>
-<div class="gap14vh"></div>
 
   <P id="P53" class="P53"></P>
  <P id="P63" class="P63"></P>
@@ -182,21 +166,7 @@
 <div class="gap14vh"></div>
 </div>
 
- <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
 
-        <div id="R1" class="row">
-            <div id="R1_D1" class="col-sm-12"> 
-                   
-            
-                   <img src="photographer-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >  
-                   
-                  <img src="photographer-img-main1.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-                  <img src="photographer-img-main2.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-            </div>  
-            
-       </div>  
-
-<!-- FIRST ROW Ends -->
          
        </div>
    </div>
@@ -209,7 +179,14 @@
   <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
   <script>
-function toggleSection(id) {
+window.addEventListener('load', () => {
+  // 👇️ for primitive variables
+ 
+ 
+});
+
+  
+   function toggleSection(id) {
   const sec = document.getElementById(id);
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
@@ -223,15 +200,14 @@ if (localStorage.getItem("website") === "s1") {
  window.location.href = "samples-heading.html";
 }
 }
-
-if (localStorage.getItem("website") === "s1") {
-document.getElementById("apl-hdr").textContent = 'Serena Photos Intl.';
-document.getElementById("P5").textContent = 'Serena ';
-document.getElementById("P52").textContent = 'Serena ';
-document.getElementById("P53").textContent = 'Serena ';
-document.getElementById("P6").textContent = 'Photos ';
-document.getElementById("P62").textContent = 'Photos ';
-document.getElementById("P63").textContent = 'Photos ';
+ if (localStorage.getItem("website") === "s1") {
+document.getElementById("apl-hdr").textContent = 'Sophia Arts Intl. ';
+document.getElementById("P5").textContent = 'Sophia ';
+document.getElementById("P52").textContent = 'Sophia ';
+document.getElementById("P53").textContent = 'Sophia ';
+document.getElementById("P6").textContent = 'Art ';
+document.getElementById("P62").textContent = 'Art ';
+document.getElementById("P63").textContent = 'Art ';
 document.getElementById("P7").textContent = 'Intl. ';
 document.getElementById("P72").textContent = 'Intl. ';
 document.getElementById("P73").textContent = 'Intl. ';
@@ -241,35 +217,41 @@ document.getElementById("P8-1").textContent = '100 New Street, Garden East ';
 document.getElementById("P8-1A").textContent = 'New City, North Province, Far East Country';
 document.getElementById("P8-2").textContent = '100 New Street, Garden East ';
 document.getElementById("P8-2A").textContent = 'New City, North Province, Far East Country';
-document.getElementById("P4-1").textContent = 'About Us: ';
-document.getElementById("P9").textContent = 'Our Services: ';
+document.getElementById("P4-1").textContent = 'About us: ';
+document.getElementById("P9").textContent = 'Courses: ';
 document.getElementById("P10").textContent = 'Address: ';
-document.getElementById("P-BOX5").textContent = 'Serena With over ten years of experience in portrait ' +
-                                                          ' photography. Serena captures raw emotions and candid moments ' +
-                                                          ' like no other. Her passion for storytelling through her lens  ' +
-                                                          ' has earned her several prestigious awards and recognition ' +
-                                                          ' in the industry. Serena takes breathtaking shots that transport ' +
-                                                          ' viewers into the heart of nature’s beauty. Her attention to ' +
-                                                          'detail and ability to make models feel comfortable results ' +
-                                                          ' in captivating images that leave a lasting impression.  ' +
-                                                           ' She is living with her parents and a very loving little  ' +
-                                                           ' sister Serena. She and her sister are studying in same school.  ' +
-                                                            ' She has won many awards and trophies in local and global  ' +
-                                                            ' contests. Photgraphers of International repute have admired her work.  ' +
-                                                          ' Contact her to capture your beautiful moments.  ';
 
- document.getElementById('P-SER-ESSAY').innerHTML =  '<Normal>' +      
-'Service sector offers a wide range of activities to take action instead doing production. Objective of the service sector ' +  
-'is to look for need of customers and provide them help using technical expertise. There are Innumerable activities which ' +  
-'can be listed under service sector, few of most important services sectors are Finance, Health Care, Hospitality and ' +  
-'Tourism, Real estate, Information, Transport, etc. Importance of the service sector lies in its role as a job generator ' +  
-'Various service-related industries, such as healthcare, education, and hospitality, provide employment to a big portion ' +  
-'of the workforce. It not only helps reduce unemployment rates but it also contributes to the economic growth. ' +  
-'Services such as healthcare, education, Transport, entertainment, etc. contribute to an improvement in the wellbeing ' +  
-'of the whole society. Access to quality healthcare and education services, for example, promotes overall well-being ' +  
-'and personal development, elevating the standard of living in society. High-quality services, in finance, technology, ' +  
-'or tourism, makes a country more attractive to universal markets and in turn, fosters international trade relationships ' +  
-' and economic collaborations with other countries of the world. ' +                                                                   
+document.getElementById("P-BOX5").textContent = 'We are one of the most distinguish art schools ' +
+                                                          ' in our city.  We have vast selection of art courses for all students ' +
+                                                          ' irrespective of wether thay are regular student or only attending  ' +
+                                                          ' classes in the week ends. We offer related courses to students if they  ' +
+                                                          ' are already in art industry or if they are new comers and want to  ' +
+                                                          ' make a name in the art industry. There is a hidden love for art  ' +
+                                                          'within every man or women, we create and cultivate the desire ' +
+                                                          ' in our student to bring out their hidden art potentials.  ' +
+                                                           ' Our graduates are in top demand in the art industry  ' +
+                                                           ' and start getting employment offers even before the graduate.  ' +
+                                                          ' We are proud of our students and of our high standards.  ' +
+                                                          ' Our students have won top positions in many local and ' +
+                                                          ' International contests and they have been admired by artists ' +
+                                                           ' of International repute around the globe';
+
+    document.getElementById('P-CRS-ESSAY').innerHTML =  '<Normal>' +      
+'We offer Courses which provide knowledge and skills in a wide range of art skills, some of our best courses are in drawing, ' +
+' painting, sculpting, art history and appreciation. Students are normally guided by professional education assistants to chose ' +
+' courses which align with their interest and future goals. As you prepare for your next semester of college, choosing classes ' +
+' may be at the top of your to-do list. By picking the right courses based on your major and interests, you can create a more ' +
+' enriching learning experience. Learning about what factors to consider when choosing college classes can help you pick ones ' + 
+'that match your interests, when you come to an art school, you already know what to study, but the problem is: how do you ' +
+' choose an art school course from the hundreds of options out there? It’s a tough task. The solution is learning how to evaluate ' +
+' course content and the curriculum, as well as the teaching styles and tools combined with a few decision-making strategies. ' + 
+'This will set you on the right track. Often, schools use the same course names, but each course can have a different format, ' +
+' electives or modules, content, and teaching styles. Some degrees offer joint honors. There are majors that are  ' +
+'multidisciplinary, but also courses that specialize in one single subject area. First task is to evaluate the breadth and depth ' + 
+'of course content. Start with the core subject content. Does it provide the theoretical content and background required ' +
+' for your career choice? Then, the available electives. Are the electives up to date for your industry? Combined with core ' + 
+'subjects, does this provide the range of knowledge you need for your career? Can you choose electives that match closely ' +
+' with your chosen career? How flexible are the choices, and how widely will your studies range? ' +                                                                 
                                                           '</Normal>';     
 
 
@@ -294,35 +276,29 @@ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +
 
 
   const node1 = document.createElement("li");
-       const textnode1 = document.createTextNode("Family Portraits.");
+       const textnode1 = document.createTextNode("Drawing Nature Portraits.");
       node1.appendChild(textnode1);
       document.getElementById("servlist").appendChild(node1);
 
       const node2 = document.createElement("li");
-      const textnode2 = document.createTextNode("Engagement Photos.");
+      const textnode2 = document.createTextNode("Drawing Human Portraits.");
       node2.appendChild(textnode2);
       document.getElementById("servlist").appendChild(node2);
 
        const node3 = document.createElement("li");
-       const textnode3 = document.createTextNode("Wedding Photography.");
+       const textnode3 = document.createTextNode("Color Combinations.");
       node3.appendChild(textnode3);
       document.getElementById("servlist").appendChild(node3);
 
       const node4 = document.createElement("li");
-      const textnode4 = document.createTextNode("Newborn Photos");
+      const textnode4 = document.createTextNode("Architecture");
       node4.appendChild(textnode4);
       document.getElementById("servlist").appendChild(node4);
 
        const node5 = document.createElement("li");
-       const textnode5 = document.createTextNode("Graduation Photos.");
+       const textnode5 = document.createTextNode("Interior Design.");
       node5.appendChild(textnode5);
       document.getElementById("servlist").appendChild(node5);
-
-      const node6 = document.createElement("li");
-       const textnode6 = document.createTextNode("Party Photos.");
-      node6.appendChild(textnode6);
-      document.getElementById("servlist").appendChild(node6);
-
 
   const node11 = document.createElement("li");
       const textnode11 = document.createTextNode("100. New Street,");
@@ -355,7 +331,7 @@ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +
       document.getElementById("adrlist").appendChild(node16);
 
       const node17 = document.createElement("li");
-      const textnode17 = document.createTextNode("e-mail:  Serena@gmail.com ");
+      const textnode17 = document.createTextNode("e-mail:  Sophia@gmail.com ");
       node17.appendChild(textnode17);
       document.getElementById("adrlist").appendChild(node17); 
 
@@ -363,23 +339,19 @@ document.getElementById('P-ADR-ESSAY').innerHTML =  '<Normal>' +
 
  if (localStorage.getItem("website") === "s2") {
 document.getElementById("menu-word-prp").textContent = 'Menü';
-document.getElementById("apl-hdr").textContent = 'Serena Fotoğrafları Uluslararası';
-document.getElementById("aabout").textContent = 'Hakkımızda ';
-document.getElementById("aservices").textContent = 'Hizmetler ';
-document.getElementById("aaddress").textContent = 'Adres ';
-document.getElementById("aback").textContent = 'Geri ';
-
-<!--  document.getElementById("dphoto").textContent = 'Serena Fotoğraf Uluslararası ';  -->
-
-document.getElementById("P5").textContent = 'Serena ';
-document.getElementById("P52").textContent = 'Serena ';
-document.getElementById("P53").textContent = 'Serena ';
-document.getElementById("P6").textContent = 'Fotoğraflar ';
-document.getElementById("P62").textContent = 'Fotoğraflar ';
-document.getElementById("P63").textContent = 'Fotoğraflar ';
-document.getElementById("P7").textContent = 'Uluslararası ';
-document.getElementById("P72").textContent = 'Uluslararası ';
-document.getElementById("P73").textContent = 'Uluslararası ';
+document.getElementById("apl-hdr").textContent = 'Sophia Sanatları Uluslararası ';
+document.getElementById("aback").textContent = 'Geri'; 
+<!--  document.getElementById("dintl").textContent = 'Sophia Arts Uluslararası';  -->
+            
+document.getElementById("P5").textContent = 'Sophia ';
+document.getElementById("P52").textContent = 'Sophia ';
+document.getElementById("P53").textContent = 'Sophia ';
+document.getElementById("P6").textContent = 'Sanat ';
+document.getElementById("P62").textContent = 'Sanat';
+document.getElementById("P63").textContent = 'Sanat ';
+document.getElementById("P7").textContent = 'Uluslararası. ';
+document.getElementById("P72").textContent = 'Uluslararası. ';
+document.getElementById("P73").textContent = 'Uluslararası. ';
 document.getElementById("P8").textContent = '100 New Street, Garden East ';
 document.getElementById("P8A").textContent = 'New City, North Province, Far East Country';
 document.getElementById("P8-1").textContent = '100 New Street, Garden East ';
@@ -387,31 +359,34 @@ document.getElementById("P8-1A").textContent = 'New City, North Province, Far Ea
 document.getElementById("P8-2").textContent = '100 New Street, Garden East ';
 document.getElementById("P8-2A").textContent = 'New City, North Province, Far East Country';
 document.getElementById("P4-1").textContent = 'Hakkımızda: ';
-document.getElementById("P9").textContent = 'Hizmetler: ';
+document.getElementById("P9").textContent = 'Kurslar: ';
 document.getElementById("P10").textContent = 'Adres: ';
 
-document.getElementById("P-BOX5").innerHTML = '<Normal> ' +  
-  'Serena, portre fotoğrafçılığında on yılı aşkın deneyime sahip. Serena, eşsiz bir şekilde ham duyguları ve doğal anları yakalıyor. ' +
-  ' Objektifiyle hikaye anlatma tutkusu, ona sektörde birçok prestijli ödül ve takdir kazandırdı. Serena, izleyicileri doğanın güzelliğinin kalbine  ' +
-  'taşıyan nefes kesici fotoğraflar çekiyor. Detaylara verdiği önem ve modellerin kendilerini rahat hissetmelerini sağlama yeteneği,  ' +
-  ' kalıcı bir izlenim bırakan büyüleyici görüntüler ortaya çıkarıyor. Ailesi ve çok sevgi dolu küçük kız kardeşi Serena ile birlikte yaşıyor. Yerel  ' +
-  ' ve küresel yarışmalarda ödüller ve kupalar kazandı. Uluslararası üne sahip fotoğrafçılar çalışmalarına  ' +
-  ' hayran kaldı. Güzel anlarınızı yakalamak için onunla iletişime geçin. ' +
-                                                            '</Normal>';
+document.getElementById("P-BOX5").innerHTML =  '<Normal> ' +
+   'Şehrimizdeki en seçkin sanat okullarından biriyiz. Düzenli öğrencilerden sadece hafta sonları derslere katılanlara kadar tüm öğrenciler için ' +
+   'geniş bir sanat kursu yelpazemiz var. Sanat sektöründe zaten çalışan veya yeni başlayan ve sanat sektöründe adını duyurmak isteyen öğrencilere  ' +
+   ' ilgili kurslar sunuyoruz. Her erkek veya kadının içinde gizli bir sanat sevgisi vardır; biz öğrencilerimizin gizli sanat potansiyellerini ortaya çıkarma arzusunu ' +
+   ' yaratıyor ve geliştiriyoruz. Mezunlarımız sanat sektöründe çok talep görüyor ve mezun olmadan önce bile iş teklifleri almaya başlıyorlar. Öğrencilerimizle ' +
+   ' ve yüksek standartlarımızla gurur duyuyoruz. Öğrencilerimiz birçok yerel ve uluslararası yarışmada üst sıralarda yer aldı ve dünyanın dört   ' +
+   ' bir yanından uluslararası üne sahip sanatçılar tarafından takdir edildi. ' +
+    '</Normal>';
 
 
- document.getElementById('P-SER-ESSAY').innerHTML =  '<Normal>' +   
+document.getElementById('P-CRS-ESSAY').innerHTML =  '<Normal>' +   
 
-'Hizmet sektörü, üretim yapmak yerine harekete geçmek için geniş bir yelpazede faaliyet sunmaktadır. Hizmet sektörünün  ' + 
-'amacı, müşterilerin ihtiyaçlarını tespit etmek ve teknik uzmanlık kullanarak onlara yardımcı olmaktır. Hizmet sektörü  ' + 
-'altında sayısız faaliyet listelenebilir; en önemli hizmet sektörlerinden bazıları Finans, Sağlık, Konaklama ve Turizm,  ' + 
-'Gayrimenkul, Bilgi, Ulaşım vb.dir. Hizmet sektörünün önemi, iş yaratma rolünde yatmaktadır. Sağlık, eğitim ve konaklama  ' + 
-'gibi çeşitli hizmetle ilgili sektörler, işgücünün büyük bir bölümüne istihdam sağlamaktadır. Bu, sadece işsizlik oranlarını  ' + 
-'düşürmeye yardımcı olmakla kalmaz, aynı zamanda ekonomik büyümeye de katkıda bulunur. Sağlık, eğitim, ulaşım,  ' + 
-'eğlence vb. hizmetler, tüm toplumun refahının iyileştirilmesine katkıda bulunur. Örneğin, kaliteli sağlık ve eğitim  ' + 
-'hizmetlerine erişim, genel refahı ve kişisel gelişimi teşvik ederek toplumdaki yaşam standardını yükseltir. Finans,  ' + 
-'teknoloji veya turizmde yüksek kaliteli hizmetler, bir ülkeyi evrensel pazarlar için daha çekici hale getirir ve bu da  ' + 
-'uluslararası ticaret ilişkilerini ve dünyanın diğer ülkeleriyle ekonomik iş birliklerini teşvik eder.  ' +
+'Sanat alanında geniş bir yelpazede bilgi ve beceri sağlayan kurslar sunuyoruz; en iyi kurslarımızdan bazıları çizim, resim, ' +
+'heykel, sanat tarihi ve sanat takdiri üzerinedir. Öğrenciler genellikle ilgi alanlarına ve gelecekteki hedeflerine uygun dersleri ' + 
+'seçmeleri için profesyonel eğitim asistanları tarafından yönlendirilirler. Üniversitedeki bir sonraki döneminize hazırlanırken, ' + 
+'ders seçimi yapılacaklar listenizin başında olabilir. Bölümünüze ve ilgi alanlarınıza göre doğru dersleri seçerek daha zengin ' + 
+'bir öğrenme deneyimi yaratabilirsiniz. Üniversite derslerini seçerken hangi faktörleri göz önünde bulundurmanız gerektiğini ' + 
+'öğrenmek, ilgi alanlarınıza uygun olanları seçmenize yardımcı olabilir. Bir sanat okuluna geldiğinizde, ne okuyacağınızı zaten ' + 
+'biliyorsunuz, ancak sorun şu: yüzlerce seçenek arasından bir sanat okulu dersini nasıl seçersiniz? Bu zor bir görev. Çözüm, ' + 
+'ders içeriğini ve müfredatı, ayrıca öğretim stillerini ve araçlarını birkaç karar verme stratejisiyle birleştirerek değerlendirmeyi ' + 
+'öğrenmektir. Bazı dereceler çift anadal sunmaktadır. Çok disiplinli bölümler olduğu gibi, tek bir konu alanında uzmanlaşmış ' + 
+'dersler de vardır. İlk görev, ders içeriğinin genişliğini ve derinliğini değerlendirmektir. Öncelikle temel ders içeriğiyle başlayalım. ' + 
+'Seçtiğiniz kariyer için gerekli teorik içeriği ve altyapıyı sağlıyor mu? Ardından, mevcut seçmeli derslere bakalım. Seçmeli dersler ' + 
+'sektörünüz için güncel mi? Temel derslerle birlikte, kariyeriniz için ihtiyaç duyduğunuz bilgi yelpazesini sağlıyor mu? Seçtiğiniz ' + 
+'kariyerle yakından eşleşen seçmeli dersler seçebiliyor musunuz? Çalışmalarınız geniş bir yelpazeyi kapsayacak mı? ' +
                                                                       
                                                           '</Normal>';         
 
@@ -435,38 +410,32 @@ document.getElementById("P-BOX5").innerHTML = '<Normal> ' +
 'herhangi bir format varsa, önceden bilmek daha iyidir. ' +
                                                                       
                                                           '</Normal>';         
-
+                                                         
 
   const node1 = document.createElement("li");
-       const textnode1 = document.createTextNode("Aile Portreleri.");
+       const textnode1 = document.createTextNode("Doğa Portreleri Çizmek.");
       node1.appendChild(textnode1);
       document.getElementById("servlist").appendChild(node1);
 
       const node2 = document.createElement("li");
-      const textnode2 = document.createTextNode("Nişan Fotoğrafları.");
+      const textnode2 = document.createTextNode("İnsan Portreleri Çizmek.");
       node2.appendChild(textnode2);
       document.getElementById("servlist").appendChild(node2);
 
        const node3 = document.createElement("li");
-       const textnode3 = document.createTextNode("Düğün Fotoğrafçılığı.");
+       const textnode3 = document.createTextNode("Renk Kombinasyonları.");
       node3.appendChild(textnode3);
       document.getElementById("servlist").appendChild(node3);
 
       const node4 = document.createElement("li");
-      const textnode4 = document.createTextNode("Yenidoğan Fotoğrafları");
+      const textnode4 = document.createTextNode("Mimari");
       node4.appendChild(textnode4);
       document.getElementById("servlist").appendChild(node4);
 
        const node5 = document.createElement("li");
-       const textnode5 = document.createTextNode("Mezuniyet Fotoğrafları.");
+       const textnode5 = document.createTextNode("İç Tasarım.");
       node5.appendChild(textnode5);
       document.getElementById("servlist").appendChild(node5);
-
-      const node6 = document.createElement("li");
-       const textnode6 = document.createTextNode("Parti Fotoğrafları.");
-      node6.appendChild(textnode6);
-      document.getElementById("servlist").appendChild(node6);
-
 
   const node11 = document.createElement("li");
       const textnode11 = document.createTextNode("100. New Street,");
@@ -499,13 +468,13 @@ document.getElementById("P-BOX5").innerHTML = '<Normal> ' +
       document.getElementById("adrlist").appendChild(node16);
 
       const node17 = document.createElement("li");
-      const textnode17 = document.createTextNode("e-mail:  Serena@gmail.com ");
+      const textnode17 = document.createTextNode("e-mail:  Sophia@gmail.com ");
       node17.appendChild(textnode17);
       document.getElementById("adrlist").appendChild(node17); 
 
- 
+}
 
-  }
+
 
 
 </script> 

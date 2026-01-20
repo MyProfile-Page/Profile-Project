@@ -138,11 +138,20 @@ text-decoration: underline;
 text-align: center;
   }
 
- .a1 {
+ .a1order {
+font-family: Calibri;
+ font-size: clamp(1.3rem, 1.7vw, 1.9rem);   
+font-weight: 400;
+ Color: lightyellow; 
+text-decoration: none;
+
+  }
+
+ .a1sample {
 font-family: Calibri;
  font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
 font-weight: 300;
- Color: lightyellow; 
+ Color: lightblue; 
 text-decoration: none;
 
   }

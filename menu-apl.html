@@ -9,7 +9,7 @@
   <head>
     <!-- ✅ Bootstrap 5 CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="index-styles.css" />
+    <link rel="stylesheet" type="text/css" href="menu-apl-styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -42,123 +42,80 @@
     <!-- Collapsible menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul id="ul_top_hypers" class="navbar-nav ms-auto">
-
+      <li class="nav-item">
+          <a class="nav-link coloreg" href="#" onclick="helpmenu()" data-target="help">Guide</a>
+        </li>
+      <li class="nav-item">
+          <a id="abac" class="nav-link aback" href="index.html">Back</a>
+        </li>
       
-        <li class="nav-item">
-          <a class="nav-link coloreg" href="#" onclick="ordersmenu()" data-target="orders">Orders</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link coloreg" href="#" onclick="samplesmenu()" data-target="samples">Samples</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link coloreg" href="#" onclick="helpmenu()" data-target="help">Help</a>
-        </li>
-            <li class="nav-item">
-          <a class="nav-link colortk" href="#" onclick="ordersmenu()" data-target="orderstk">Siparişlar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link colortk" href="#" onclick="samplesmenu()" data-target="samplestk">Örnekler</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link colortk" href="#" onclick="helpmenu()" data-target="helptk">Rehber</a>
-        </li>
+     
       </ul>
     </div>
   </div>
 </nav>
 
- 
+ <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
 
 
- <div id="orders" class=" content-section d-none divcenter" >  
+ <div id="orders" class="  divcenter" >  
           <div class="gap14vh"></div>
           <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>          
+          <div class="gap14vh"></div>    
+           <div class="gap14vh"></div>
+          <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>        
           <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">          
       <li class="nav-item">
-          <a id="shop-order" href="shop-req.html" class="a1 coloreg">Small Companies Website</a>      
+          <a id="shop-order" href="shop-req.html" class="a1order">Small Companies Website</a>      
         </li>  
         <div class="gap14vh"></div>        
         <li class="nav-item">
-          <a id="indv-order" href="ind-req.html" class="a1 coloreg">Individual Person Profile</a>      
+          <a id="indv-order" href="ind-req.html" class="a1order">Individual Person Profile</a>      
         </li>    
             
       </ul>
   </div>
 
-  <div id="samples" class=" content-section d-none divcenter">  
+  <div id="samples" class="  divcenter">  
         <div class="gap14vh"></div>
           <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>          
+          <div class="gap14vh"></div>   
+           <div class="gap14vh"></div>
+          <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>    
+           <div class="gap14vh"></div>
+          <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>         
+          <div class="Menubar-header">Few of our Sample Websites</div>  
+           <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>        
         <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">             
          <li class="nav-item">
-          <a id="shop-sample" href="shop-sample.html" class="a1 coloreg">Sample of a Shop</a>      
+          <a id="shop-sample" href="shop-sample.html" class="a1sample">Sample of a Shop</a>      
         </li>    
         <div class="gap14vh"></div>  
          <li class="nav-item">
-          <a id="edu-sample" href="edu-sample-notabs.html" class="a1 coloreg">Sample of an Educational Institute</a>      
+          <a id="edu-sample" href="edu-sample-notabs.html" class="a1sample">Sample of an Educational Institute</a>      
         </li>   
         <div class="gap14vh"></div>  
          <li class="nav-item">
-          <a id="makeup-sample" href="makeup-sample-notabs.html" class="a1 coloreg">Sample of a Makeup Entity</a>      
+          <a id="makeup-sample" href="makeup-sample-notabs.html" class="a1sample">Sample of a Makeup Entity</a>      
         </li>   
         <div class="gap14vh"></div>  
          <li class="nav-item">
-          <a id="photography-sample" href="photographer-sample-notabs.html" class="a1 coloreg">Sample of a Photography Entity</a>      
+          <a id="photography-sample" href="photographer-sample-notabs.html" class="a1sample">Sample of a Photography Entity</a>      
         </li>  
         <div class="gap14vh"></div>   
          <li class="nav-item">
-          <a id="indv-sample" href="ind-sample-notabs.html" class="a1 coloreg">Sample of an individual person  Profile</a>      
+          <a id="indv-sample" href="ind-sample-notabs.html" class="a1sample">Sample of an individual person  Profile</a>      
         </li>     
        </ul>
   </div>
 
 
-
-<div id="orderstk" class="content-section d-none divcenter"> 
-         <div class="gap14vh"></div>
-          <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>          
-          <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">   
-
-<li class="nav-item">
-          <a id="shop-order" class=" a1" href="#" onclick="shopreq()">Küçük İşletmeler İçin Sipariş Formu</a>    
-        </li>  
-         <div class="gap14vh"></div> 
-  <li class="nav-item">    
-  <a id="indv-order" class="a1" href="#" onclick="indreq()">Bireysel Kişi Profili Sipariş Formu</a>     
-        </li>  
-     
-      </ul>
-  </div>
-
- 
-  <div id="samplestk" class=" content-section d-none divcenter" > 
-        <div class="gap14vh"></div>
-          <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>           
-        <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">               
-         <li class="nav-item">
-          <a id="shop-sample" class="a1" href="#" onclick="shopsam()">Mağazalar için örnek</a>      
-        </li>     
-        <div class="gap14vh"></div> 
-         <li class="nav-item">
-          <a id="edu-sample" class="a1" href="#" onclick="edusam()">Eğitim Kurumları İçin Örnek</a>      
-        </li>  
-        <div class="gap14vh"></div>   
-         <li class="nav-item">
-          <a id="makeup-sample" class="a1" href="#" onclick="makeupsam()">Makyaj Ürünleri Örneği</a>      
-        </li> 
-       <div class="gap14vh"></div>     
-         <li class="nav-item">
-          <a id="photography-sample" class="a1" href="#" onclick="photosam()">Fotoğrafçılık Kuruluşları İçin Örnek</a>      
-        </li>  
-       <div class="gap14vh"></div>   
-         <li class="nav-item">
-          <a id="indv-sample" class="a1" href="#" onclick="indsam()">Bir bireyin örnek profili</a>      
-        </li>     
-       </ul>
-  </div>
 
   <div id="help" class="content-section d-none divcenter">
         <div class="gap14vh"></div>
@@ -174,32 +131,10 @@
       </ul>
   </div>
 
-  <div id="helptk" class="content-section d-none divcenter">
-        <div class="gap14vh"></div>
-          <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>           
-        <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">   
-       
-         <li class="nav-item">
-          <a id="guide" class="a1" href="#" onclick="help()" >Rehber</a>      
-        </li> 
-       
-
-      </ul>
-  </div>
-
-</div>
 
 
- <!--  Main Container   -->
 
- <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
 
- 
- 
-    <!--  Main Container   -->
 
  
 
@@ -254,7 +189,7 @@
 <script>
 window.addEventListener('load', () => {
   // 👇️ for primitive variables
- const website = 's1';
+ const website = 's2';
   localStorage.setItem('website', website);
  
 });
@@ -362,36 +297,24 @@ function turlan() {
   localStorage.setItem('website', website);
  }
 
-function ordersmenu() {
+
    
       if (localStorage.getItem("website") === "s2") {   
     document.getElementById("shop-order").textContent = 'Küçük İşletmeler İçin Sipariş Formu';
          document.getElementById("indv-order").textContent = 'Bireysel Kişi Profili Sipariş Formu';
-      
-    } 
-                  
- }
-
-function samplesmenu() {
-   
-      if (localStorage.getItem("website") === "s2") {   
-   
-     document.getElementById("shop-sample").textContent = 'Mağazalar için örnek';
+      document.getElementById("shop-sample").textContent = 'Mağazalar için örnek';
                             document.getElementById("edu-sample").textContent = 'Eğitim Kurumları İçin Örnek';
          document.getElementById("makeup-sample").textContent = 'Makyaj Ürünleri Örneği';
                    document.getElementById("photography-sample").textContent = 'Fotoğrafçılık Kuruluşları İçin Örnek';
             document.getElementById("indv-sample").textContent = 'Bir bireyin örnek profili'; 
+            document.getElementById("guide").textContent = 'Rehber';    
+      
     } 
                   
- }
 
-function helpmenu() {
-   
-      if (localStorage.getItem("website") === "s2") {   
-      document.getElementById("guide").textContent = 'Rehber';    
-    } 
-                  
- }
+
+
+
 </script>
 
 </body>

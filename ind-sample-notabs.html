@@ -12,7 +12,7 @@
   <head>
     <!-- ✅ Bootstrap 5 CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="ind-shop-sample-styles.css" />
+    <link rel="stylesheet" type="text/css" href="ind-shop-sample-notabs-styles.css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -48,26 +48,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
 
-        <li class="nav-item">
-          <a id="abio" class="nav-link a1" href="javascript:void(0)"
-             onclick="toggleSection('s1')">About me</a>
-        </li>
-
-        <li class="nav-item">
-          <a id="aedu" class="nav-link a1" href="javascript:void(0)"
-             onclick="toggleSection('s2')">Education</a>
-        </li>
-
-        <li class="nav-item">
-          <a id="aexp" class="nav-link a1" href="javascript:void(0)"
-             onclick="toggleSection('s2A')">Experience</a>
-        </li>
-
-     <li class="nav-item">
-          <a id="aadr" class="nav-link a1" href="javascript:void(0)"
-             onclick="toggleSection('s3')">Address</a>
-        </li>
-
+       
         <li class="nav-item">
           <a id="abac" class="nav-link aback" href="index.html">Back</a>
         </li>
@@ -90,7 +71,23 @@
 <div id="main-container-first" class="container">
  <div id="main-container-second" class="main-container-second row justify-content-center">
       <div id="main-container-third" class= "main-container-third col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
+ <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
+       
+        <div id="R1" class="row">
+            <div id="R1_D1" class="col-sm-12">      
+        
+                   <img src="ind-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >  
+                  
+                   <img src="ind-img-main1.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
+                  <img src="ind-img-main2.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
+            </div>  
+           <div class="gap14vw"></div>
+           <div class="gap14vw"></div> 
+           <div class="gap14vw"></div>
+           <div class="gap14vw"></div>
+       </div>  
 
+<!-- FIRST ROW Ends -->
  
 <div id="s1" class="sectionBox">
 <div class="gap14vw"></div>
@@ -212,23 +209,7 @@
 <div class="gap14vw"></div>
 <div class="gap14vw"></div>
 </div>
- <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
-       
-        <div id="R1" class="row">
-            <div id="R1_D1" class="col-sm-12">      
-        
-                   <img src="ind-img-main.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >  
-                  
-                   <img src="ind-img-main1.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-                  <img src="ind-img-main2.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
-            </div>  
-           <div class="gap14vw"></div>
-           <div class="gap14vw"></div> 
-           <div class="gap14vw"></div>
-           <div class="gap14vw"></div>
-       </div>  
 
-<!-- FIRST ROW Ends -->
 
 
          
@@ -259,7 +240,7 @@ if (localStorage.getItem("website") === "s1") {
 }
 
 if (localStorage.getItem("website") === "s1") {
-document.getElementById("apl-hdr").textContent = 'Savanah Juliet Yuki ';
+document.getElementById("apl-hdr").textContent = 'Savanah Juliet Yuki eng';
 document.getElementById("P5").textContent = 'Chief Accountant ';
 document.getElementById("P52").textContent = 'Chief Accountant ';
 document.getElementById("P53").textContent = 'Chief Accountant ';
@@ -284,6 +265,8 @@ document.getElementById("P4-1").textContent = 'Biography: ';
 document.getElementById("P9").textContent = 'Education: ';
 document.getElementById("P9A").textContent = 'Experience: ';
 document.getElementById("P10").textContent = 'Address: ';
+
+
 
 document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager at New Technologies. I have ' +
                                                           ' responsibility for keeping records of all company transactions. ' +
@@ -344,7 +327,6 @@ document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager a
 'It is also to be noted that a country might have its own formatting of addresses, so it is better to know first the format if any ' + 
 'is followed for composing an individual address. ' +                                                                                   
                                                           '</Normal>';         
-
 
     const node1 = document.createElement("li");
        const textnode1 = document.createTextNode("Secondary School Certificate.");
@@ -438,11 +420,7 @@ document.getElementById("P-BOX5").textContent = 'I am Chief Accounting Manager a
 
 if (localStorage.getItem("website") === "s2") {
 document.getElementById("menu-word-prp").textContent = 'Menü';
-document.getElementById("apl-hdr").textContent = 'Savanah Juliet Yuki ';
-document.getElementById("abio").textContent = 'Biyografi ';
-document.getElementById("aedu").textContent = 'Eğitim ';
-document.getElementById("aexp").textContent = 'Deneyim ';
-document.getElementById("aadr").textContent = 'Adres ';
+document.getElementById("apl-hdr").textContent = 'Savanah Juliet Yuki Tur ';
 document.getElementById("abac").textContent = 'Geri ';
 
 document.getElementById("P5").textContent = 'Baş Muhasebeci ';

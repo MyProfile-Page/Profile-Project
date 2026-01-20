@@ -7,27 +7,21 @@
     }
 
 .body_cls {
-           
-          background: linear-gradient(to right, #007bff, #00c6ff);
-         background: black;
-      /*    background: lightblue;    */
+          background-color: white;
+          background-color: black;
+          
           line-height: 0.8;
-         
+              
             }
-.bltlist {
-  list-style-type: circle; 
-}
-.divcenter {
-text-align: center;
 
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: lightblue;  
+  text-decoration: none; 
+  text-align: center;
 }
 
-.myul {
-  display: inline-block;
-  text-align: left;
-  list-style-type: disc;
-  color:white;
-}
 .dmenu {
  background-color: #382A2A;
  text-align: center;
@@ -38,14 +32,6 @@ font-family: calibri;
  font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
 font-weight: 500;
 color: lightblue; 
-}
-
-#apl-hdr {
-  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
-  font-weight:  700;
-  color: lightblue; 
-  text-decoration: none; 
-  text-align: center;
 }
 
 #menu-word-prp {
@@ -63,22 +49,15 @@ color: lightblue;
   text-decoration: none; 
   text-align: center;
 }
+
 .top-left {
   position: absolute;
   top: clamp(3rem, 3.5vh, 4.0rem);  
-  left: 100px;
-  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
-  font-weight:  700;
-  color: darkred; 
+  left: 27px;
+  font-size: clamp(1.8rem, 1.7vw, 2.1rem);  
+  font-weight:  600;
+  color: white; 
   text-decoration: underline; 
-}
-
-.top-left1 {
-  position: absolute;
-  top: clamp(7rem, 6.9vh, 7.0rem);  
-  left: 16px;
- font-size: clamp(1rem, 1.8vw, 2.0rem);
- color: white; 
 }
 
 .responsive-img {
@@ -86,7 +65,6 @@ color: lightblue;
   height: 40dvh;
   object-fit: cover;
  }
-
 
 .gap14vw {
   height: clamp(1rem, 1.4vw, 1.8rem);   /* or any size you want; mobile = desktop */
@@ -104,22 +82,20 @@ color: lightblue;
   height: clamp(0.4rem, 1.5vh, 1.9rem);   /* or any size you want; mobile = desktop */
 }
 
- .lang-hdr {
-      
+ #main-container-third {
+      background-color: #f8f9fa;
+      background: lightyellow;  
+      background-color: black; 
       border: 2px solid #ddd;
       border-radius: 15px;
-      padding: 10px;
+      padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 0px; /* spacing from top */
+      margin-top: 3px; /* spacing from top */
       margin-bottom: 40px; /* spacing from bottom */
-      border: 2px solid red;
-      width: 60%; 
+      border: 0px solid red;
     }
 
- .opt-hdr {
-     align: center;
-    }
-.R1_D1 {
+#R1_D1 {
     border: 0px solid #333;
   border-radius: 0px;
   /* padding: 15px;  */
@@ -131,43 +107,31 @@ color: lightblue;
 
 #P1 {
 font-family: Calibri;
-font-size: clamp(1rem, 2.4vw, 2.9rem); 
+font-size: clamp(1rem, 1.9vw, 2.9rem); 
 font-weight: 700;
 Color: white;   
 text-decoration: underline;
 text-align: center;
   }
-
- .a1 {
+.a1 {
 font-family: Calibri;
  font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
 font-weight: 300;
- Color: lightyellow; 
-text-decoration: none;
-
-  }
-
- .colortk {
- Color: lightyellow; 
-  }
-
- .coloreg {
  Color: lightblue; 
-  }
-
-
+text-decoration: none;
+}
 
  #aback {
 font-family: Calibri;
-font-size: clamp(1.0rem, 1.2vw, 1.4rem); 
+font-size: clamp(1.0rem, 1.2vw, 1.4rem);    
 font-weight: 600;
-text-decoration: underline;  
 
+text-decoration: underline;   
   }
 
 #P4-1 {
 font-family: Calibri;
-font-size: clamp(1.5rem, 1.7vw, 2.2rem);   
+ font-size: clamp(1.5rem, 1.7vw, 2.2rem);   
 font-weight: 550;
 Color: black;   
 text-decoration: underline;
@@ -183,7 +147,7 @@ text-align: left;
   }
 #P6 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   ;  
+ font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -217,28 +181,28 @@ text-align: left;
   }
 #P8-1A {
 font-family: Calibri;
- font-size: clamp(1.1rem, 1.3vw, 1,7rem);    
+ font-size: clamp(1.1rem, 1.3vw, 1,7rem);  
 font-weight: 550;
 Color: black;   
 text-align: left;
   }
 #P8-2A {
 font-family: Calibri;
- font-size: clamp(1.1rem, 1.3vw, 1,7rem);   
+ font-size: clamp(1.1rem, 1.3vw, 1,7rem);  
 font-weight: 550;
 Color: black;   
 text-align: left;
   }
 #P8-1 {
 font-family: Calibri;
- font-size: clamp(1.1rem, 1.3vw, 1,7rem);    
+ font-size: clamp(1.1rem, 1.3vw, 1,7rem);  
 font-weight: 550;
 Color: black;   
 text-align: left;
   }
 #P8-2 {
 font-family: Calibri;
- font-size: clamp(1.1rem, 1.3vw, 1,7rem);   
+ font-size: clamp(1.1rem, 1.3vw, 1,7rem);  
 font-weight: 550;
 Color: black;   
 text-align: left;
@@ -261,7 +225,7 @@ text-align: left;
   }
 #P72 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   ; 
+ font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -302,7 +266,7 @@ text-align: left;
   }
 #P10 {
 font-family: Calibri;
-font-size: clamp(1.5rem, 1.7vw, 2.2rem);   
+ font-size: clamp(1.5rem, 1.7vw, 2.2rem);   
 font-weight: 550;
 Color: black;   
 text-decoration: underline;
@@ -373,7 +337,7 @@ border: 0px solid blue;
 }
 
  .sectionBox {
-    display: none;
+ /*   display: none;   */
     padding: 15px;
     background: #eef5ff;
     border-left: 4px solid #4a8cff;
@@ -381,13 +345,15 @@ border: 0px solid blue;
     border-radius: 6px;
      border: 0px solid red;
      width: 100%;  
-     animation: zoomIn .5s ease;
-     transition: .55s ease; 
+   animation: zoomIn .5s ease;
   }   
+
 @keyframes zoomIn {
   from { transform: scale(0.75); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
 }
+
+
   .menuBox {
     padding: 1px;
     background: black;
@@ -402,9 +368,6 @@ font-size: clamp(1rem, 2.0vw, 2.2rem);
 font-weight: 600;
  Color: white;   
 display:inline-block;
-text-align: center;
-
-
   }
 
   a {
@@ -417,9 +380,9 @@ text-align: center;
   }
 
 #C-BOX5 { border:0px solid black; display: none;}
- #P-BOX5 { border: 0px solid yellow; color: black; font-family: calibri;   font-size: clamp(1.0rem, 1.1vw, 1.5rem); font-weight: 400;  width: 99%; padding-top:0%; padding-bottom:0%;
+ #P-BOX5 { border: 0px solid yellow; color: black; font-family: 'calibri';  font-size: font-size: clamp(1.0rem, 1.1vw, 1.5rem);  font-weight: 400;  width: 99%; padding-top:0%; padding-bottom:0%;
                   margin-left:2%; text-align: left; }
-  #I-BOX5 { border: 0px solid red; width: 30%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
+  #I-BOX5 { border: 0px solid red; width: 25%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
                   filter: brightness(200%); filter: contrast(150%); }  
  .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
 
@@ -430,7 +393,7 @@ font-weight: 400;
  Color: black;   
  text-align: left;
   }
- 
+
 #servlist {
 font-family: calibri;
 font-size: clamp(1.0rem, 1.1vw, 1.5rem); 

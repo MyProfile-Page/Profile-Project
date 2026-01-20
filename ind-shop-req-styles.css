@@ -19,6 +19,13 @@ font-family: calibri;
 color:black;
 }
 
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: lightblue; 
+}
+
 #menu-word-prp {
  font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
   font-weight:  400;
