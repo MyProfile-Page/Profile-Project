@@ -22,11 +22,13 @@
 </head>
 <body class="body_cls">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
+
    <a class="navbar-brand Menubar-header" href="#">MiniWebSites  Şirketi</a>
 
-     
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -35,199 +37,92 @@
             aria-expanded="false"
             aria-label="Toggle navigation">
        <span class="navbar-toggler-icon menu-bar-prp"></span>
-      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Language</span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
     </button>
-
 
     <!-- Collapsible menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul id="ul_top_hypers" class="navbar-nav ms-auto">
-
-      
-        <li class="nav-item">
-          <a class="nav-link coloreg" href="#" onclick="ordersmenu()" data-target="orders">Orders</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link coloreg" href="#" onclick="samplesmenu()" data-target="samples">Samples</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link coloreg" href="#" onclick="helpmenu()" data-target="help">Help</a>
-        </li>
-            <li class="nav-item">
-          <a class="nav-link colortk" href="#" onclick="ordersmenu()" data-target="orderstk">Siparişlar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link colortk" href="#" onclick="samplesmenu()" data-target="samplestk">Örnekler</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link colortk" href="#" onclick="helpmenu()" data-target="helptk">Rehber</a>
-        </li>
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item">
+           <a  href="#" onclick="closeapl123()"  >Close</a>   
+        </li>      
       </ul>
     </div>
+
   </div>
 </nav>
 
+ <!-- 🌍 Navigation Bar End -->
+
+<div class="gap14vh"></div>
+
+
+
+   <!--  Main Container   -->
+
+<div id="main-container-first" class="container">
+ <div id="main-container-second" class="main-container-second row justify-content-center">
+      <div id="main-container-third" class= "main-container-third col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
+
+
  
 
-
- <div id="orders" class=" content-section d-none divcenter" >  
+  <div id="samples" class="  divcenter">  
+        
+           
+          <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>    
           <div class="gap14vh"></div>
+          <div class="offer1-header">Welcome - Hoş geldiniz</div>
+           
+           <div class="gap14vh"></div>
           <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>          
-          <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">          
-      <li class="nav-item">
-          <a id="shop-order" href="shop-req.html" class="a1 coloreg">Small Companies Website</a>      
-        </li>  
-        <div class="gap14vh"></div>        
-        <li class="nav-item">
-          <a id="indv-order" href="ind-req.html" class="a1 coloreg">Individual Person Profile</a>      
-        </li>    
-            
-      </ul>
-  </div>
-
-  <div id="samples" class=" content-section d-none divcenter">  
-        <div class="gap14vh"></div>
+          <div class="gap14vh"></div>      
+          <div class="offer-header">Free Websites & WebProfiles</div>  
           <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>          
+          <div class="offer-header">Ücretsiz Web Siteleri ve Web Profilleri</div>
+           
+           <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>        
         <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">             
-         <li class="nav-item">
-          <a id="shop-sample" href="shop-sample.html" class="a1 coloreg">Sample of a Shop</a>      
-        </li>    
-        <div class="gap14vh"></div>  
-         <li class="nav-item">
-          <a id="edu-sample" href="edu-sample-notabs.html" class="a1 coloreg">Sample of an Educational Institute</a>      
-        </li>   
-        <div class="gap14vh"></div>  
-         <li class="nav-item">
-          <a id="makeup-sample" href="makeup-sample-notabs.html" class="a1 coloreg">Sample of a Makeup Entity</a>      
-        </li>   
-        <div class="gap14vh"></div>  
-         <li class="nav-item">
-          <a id="photography-sample" href="photographer-sample-notabs.html" class="a1 coloreg">Sample of a Photography Entity</a>      
-        </li>  
-        <div class="gap14vh"></div>   
-         <li class="nav-item">
-          <a id="indv-sample" href="ind-sample-notabs.html" class="a1 coloreg">Sample of an individual person  Profile</a>      
-        </li>     
+        
        </ul>
-  </div>
 
 
-
-<div id="orderstk" class="content-section d-none divcenter"> 
-         <div class="gap14vh"></div>
+      
+           
           <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>          
-          <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">   
-
-<li class="nav-item">
-          <a id="shop-order" class=" a1" href="#" onclick="shopreq()">Küçük İşletmeler İçin Sipariş Formu</a>    
-        </li>  
-         <div class="gap14vh"></div> 
-  <li class="nav-item">    
-  <a id="indv-order" class="a1" href="#" onclick="indreq()">Bireysel Kişi Profili Sipariş Formu</a>     
-        </li>  
-     
-      </ul>
-  </div>
-
+          <div class="gap14vh"></div>        
  
-  <div id="samplestk" class=" content-section d-none divcenter" > 
-        <div class="gap14vh"></div>
-          <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>           
-        <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">               
-         <li class="nav-item">
-          <a id="shop-sample" class="a1" href="#" onclick="shopsam()">Mağazalar için örnek</a>      
-        </li>     
+      <ul class=" bltlist myul">             
+      <li >
+          <a  href="#" onclick="langenglish123()"  class="a1order">English</a>      
+    </li> 
         <div class="gap14vh"></div> 
-         <li class="nav-item">
-          <a id="edu-sample" class="a1" href="#" onclick="edusam()">Eğitim Kurumları İçin Örnek</a>      
-        </li>  
-        <div class="gap14vh"></div>   
-         <li class="nav-item">
-          <a id="makeup-sample" class="a1" href="#" onclick="makeupsam()">Makyaj Ürünleri Örneği</a>      
-        </li> 
-       <div class="gap14vh"></div>     
-         <li class="nav-item">
-          <a id="photography-sample" class="a1" href="#" onclick="photosam()">Fotoğrafçılık Kuruluşları İçin Örnek</a>      
-        </li>  
-       <div class="gap14vh"></div>   
-         <li class="nav-item">
-          <a id="indv-sample" class="a1" href="#" onclick="indsam()">Bir bireyin örnek profili</a>      
-        </li>     
-       </ul>
+        <div class="gap14vh"></div>        
+      <li >
+          <a class="a1order"  href="#" onclick="langturkey123()"  >Türkçe</a>      
+       </li>    
+       </ul>     
+      <div class="gap14vh"></div>
+      <div class="gap14vh"></div>
   </div>
 
-  <div id="help" class="content-section d-none divcenter">
-        <div class="gap14vh"></div>
-          <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>           
-        <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">   
-       
-         <li class="nav-item">
-          <a id="guide" href="guide-codes.html" class="aguide coloreg">Guide</a>      
-        </li> 
-       
 
-      </ul>
-  </div>
-
-  <div id="helptk" class="content-section d-none divcenter">
-        <div class="gap14vh"></div>
-          <div class="gap14vh"></div> 
-          <div class="gap14vh"></div>           
-        <ul id="ul_top_hypers" class="navbar-nav ms-auto myul">   
-       
-         <li class="nav-item">
-          <a id="guide" class="a1" href="#" onclick="help()" >Rehber</a>      
-        </li> 
-       
-
-      </ul>
-  </div>
-
-</div>
-
-
- <!--  Main Container   -->
-
- <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
-
- 
- 
-    <!--  Main Container   -->
-
- 
-
- 
-
-
-
-
-
-  
 
 
  <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
 
     
-
-
         <div id="R1" class="row">
             <div id="R1_D1" class="col-sm-12">           
                          
                 
-                  <div class="gap14vh"></div> 
-                  <div class="gap14vh"></div>     
+                
                   
-                  <div class="gap14vh"></div> 
-                  <div class="gap14vh"></div>  
+                  
                     
-                   <img src="index-img-atmonogram.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >  
+                   <img src="facilities-heading-img-3.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >  
                   <img src="index-img-webdesign.png" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >   
                    <img src="index-img-html-codes.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
 
@@ -254,8 +149,7 @@
 <script>
 window.addEventListener('load', () => {
   // 👇️ for primitive variables
- const website = 's1';
-  localStorage.setItem('website', website);
+
  
 });
  
@@ -299,16 +193,31 @@ function toggleindreq(id) {
   window.location.href = "ind-req.html"; 
 }
 
+function closeapl123() {
 
-function shopreq() {
- 
- const website = 's2';
+alert("You can close this application by closing the browser tab\n \n Tarayıcı sekmesini kapatarak bu uygulamayı kapatabilirsiniz ");
+
   localStorage.setItem('website', website);
- window.location.href = "shop-req.html"; 
+ window.location.href = "menu-apl-notabs.html"; 
+ }
+
+function langenglish123() {
+
+ const website = 's1';
+
+  localStorage.setItem('website', website);
+ window.location.href = "menu-apl-notabs.html"; 
+ }
+function langturkey123() {
+
+ const website = 's2';
+
+  localStorage.setItem('website', website);
+ window.location.href = "menu-apl-notabs.html"; 
  }
 
 function indreq() {
- 
+ alert("Hello! S2!!");
  const website = 's2';
   localStorage.setItem('website', website);
  window.location.href = "ind-req.html"; 
@@ -362,36 +271,24 @@ function turlan() {
   localStorage.setItem('website', website);
  }
 
-function ordersmenu() {
+
    
       if (localStorage.getItem("website") === "s2") {   
-    document.getElementById("shop-order").textContent = 'Küçük İşletmeler İçin Sipariş Formu';
-         document.getElementById("indv-order").textContent = 'Bireysel Kişi Profili Sipariş Formu';
+    document.getElementById("shop-order").textContent = 'Şirket için Web Sitesi Siparişi';
+         document.getElementById("indv-order").textContent = 'Kişi için Web Profili Siparişi';
+      document.getElementById("shop-sample").textContent = 'Bir Mağaza Web Sitesi';
+                            document.getElementById("edu-sample").textContent = 'Bir Enstitü Web Sitesi';
+         document.getElementById("makeup-sample").textContent = 'Bir Makyaj Şirketi Web Sitesi';
+                   document.getElementById("photography-sample").textContent = 'Bir Fotoğrafçılık Kuruluşu Web Sitesi';
+            document.getElementById("indv-sample").textContent = 'Kişisel bir web profili'; 
+            document.getElementById("guide").textContent = 'Rehber';    
       
     } 
                   
- }
 
-function samplesmenu() {
-   
-      if (localStorage.getItem("website") === "s2") {   
-   
-     document.getElementById("shop-sample").textContent = 'Mağazalar için örnek';
-                            document.getElementById("edu-sample").textContent = 'Eğitim Kurumları İçin Örnek';
-         document.getElementById("makeup-sample").textContent = 'Makyaj Ürünleri Örneği';
-                   document.getElementById("photography-sample").textContent = 'Fotoğrafçılık Kuruluşları İçin Örnek';
-            document.getElementById("indv-sample").textContent = 'Bir bireyin örnek profili'; 
-    } 
-                  
- }
 
-function helpmenu() {
-   
-      if (localStorage.getItem("website") === "s2") {   
-      document.getElementById("guide").textContent = 'Rehber';    
-    } 
-                  
- }
+
+
 </script>
 
 </body>

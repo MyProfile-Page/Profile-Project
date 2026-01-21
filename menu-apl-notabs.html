@@ -1,0 +1,182 @@
+﻿ 
+
+
+<html class = "html_cls";>
+
+<!--  To test application on varoius screen reolutions https://screenfly.org/ -->
+<!--  1. Services  2. Products or Skills  3. Addrese are three good headers for company e-profile -->
+<!--  1. category or sector for companies instead title -->
+<!--  1THIS VERSION RUNNING CORRECTLY -->
+
+     
+  <head>
+    <!-- ✅ Bootstrap 5 CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     
+    <link rel="stylesheet" type="text/css" href="menu-apl-notabs-styles.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  
+ 
+    <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+</head>
+
+<body class = "body_cls"; font-family: 'Poppins', sans-serif; >
+
+  <!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header" href="#">MiniWebSites  Şirketi</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item">
+          <a id = "guide" class="nav-link aback" href="guide-codes.html" >Guide</a>
+        </li>      
+      <li class="nav-item">
+          <a id="aback" class="nav-link aback" href="index.html" >Back</a>
+        </li>      
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+<div class="gap14vh"></div>
+<div class="gap14vh"></div>
+
+
+   <!--  Main Container   -->
+
+<div id="main-container-first" class="container">
+ <div id="main-container-second" class="main-container-second row justify-content-center">
+      <div id="main-container-third" class= "main-container-third col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
+
+ <div class="  divcenter" >  
+         
+            <div class="gap14vh"></div>
+            <div class="gap14vh"></div>       
+            <ul class="colororder myul">             
+      <li >
+          <a id="company-order" href="shop-req.html" class="a1order">Order Website For a company</a>      
+        </li>  
+        <div class="gap14vh"></div> 
+           
+        <li >
+          <a id="self-order" href="ind-req.html" class="a1order">Order WebProfile For a Person</a>      
+        </li>    
+            
+      </ul>
+ 
+       
+          <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>    
+           <div class="gap14vh"></div>
+          <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>         
+          <div id = "apl-hdr" class="apl-hdr">Our Sample Websites</div>  
+           <div class="gap14vh"></div> 
+          <div class="gap14vh"></div>  
+                
+        <ul class="myul">             
+         <li>
+          <a id="shop-sample" href="shop-sample.html" class="a1sample">A Shop Website</a>      
+        </li>    
+        <div class="gap14vh"></div>  
+         <li >
+          <a id="edu-sample" href="edu-sample-notabs.html" class="a1sample">An Institute Website</a>      
+        </li>   
+        <div class="gap14vh"></div>  
+         <li >
+          <a id="makeup-sample" href="makeup-sample-notabs.html" class="a1sample">A Makeup Entity Website</a>      
+        </li>   
+        <div class="gap14vh"></div>  
+         <li ">
+          <a id="photography-sample" href="photographer-sample-notabs.html" class="a1sample">A Photography Entity Website</a>      
+        </li>  
+        <div class="gap14vh"></div>   
+         <li >
+          <a id="indv-sample" href="ind-sample-notabs.html" class="a1sample">A personal  Web Profile</a>      
+        </li>     
+       </ul>
+      <div class="gap14vh"></div>
+  </div>
+
+
+ <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
+
+        <div id="R1" class="row">
+            <div id="R1_D1" class="col-sm-12">   
+                   <div class="gap14vh"></div> 
+                    <div class="gap14vh"></div>      
+                  <img src="index-img-atmonogram.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >  
+                  <img src="index-img-webdesign.png" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" >   
+                   <img src="index-img-html-codes.jpg" class="img-fluid rounded pull-left"   alt="Image REST is notavialable" > 
+            </div>  
+            
+       </div>  
+
+<!-- FIRST ROW Ends -->
+
+
+         
+       </div>
+   </div>
+</div>
+
+
+
+
+
+  <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <script>
+window.addEventListener('load', () => {
+  // 👇️ for primitive variables
+ 
+ 
+});
+
+    if (localStorage.getItem("website") === "s2") {   
+    document.getElementById("company-order").textContent = 'Şirket için Web Sitesi Siparişi';
+         document.getElementById("self-order").textContent = 'Kişi için Web Profili Siparişi';
+     document.getElementById("shop-sample").textContent = 'Bir Mağaza Web Sitesi';
+                            document.getElementById("edu-sample").textContent = 'Bir Enstitü Web Sitesi';
+         document.getElementById("makeup-sample").textContent = 'Bir Makyaj Şirketi Web Sitesi';
+                   document.getElementById("photography-sample").textContent = 'Bir Fotoğrafçılık Kuruluşu Web Sitesi';
+            document.getElementById("indv-sample").textContent = 'Kişisel bir web profili'; 
+            document.getElementById("guide").textContent = 'Rehber';
+            document.getElementById("apl-hdr").textContent = 'Web sitemizden örnekler';
+            document.getElementById("menu-word-prp").textContent = 'Menü';
+             document.getElementById("aback").textContent = 'Geri';
+    
+            
+      
+    } 
+
+  
+</script> 
+      
+</body>
+</html>

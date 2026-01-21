@@ -7,25 +7,40 @@
     }
 
 .body_cls {
-           
+          background-color: white;
           background: linear-gradient(to right, #007bff, #00c6ff);
-         background: black;
+          background: black;
       /*    background: lightblue;    */
           line-height: 0.8;
          
             }
+#aback {
+font-family: Calibri;
+font-size: clamp(1.0rem, 1.2vw, 1.4rem); 
+font-weight: 600;
+text-decoration: none;  
+
+  }
+
 .bltlist {
-  list-style-type: circle; 
+  list-style-type: disc; 
 }
 .divcenter {
-text-align: center;
+text-align: left;
 background-color: #212529;
 
 }
 
- .a1order {
+.myul {
+  display: inline-block;
+  text-align: left;
+  list-style-type: disc;
+  color:blue;
+}
+
+.a1order {
 font-family: Calibri;
- font-size: clamp(1.0rem, 1.3vw, 1.5rem);   
+ font-size: clamp(1.1rem, 1.3vw, 1.6rem);   
 font-weight: 400;
  Color: lightyellow; 
 text-decoration: none;
@@ -41,12 +56,24 @@ text-decoration: none;
 
   }
 
-.myul {
-  display: inline-block;
-  text-align: left;
-  list-style-type: disc;
-  color:white;
-}
+ .colororder {
+ Color: lightyellow; 
+  }
+
+ .colorsample {
+ Color: lightblue; 
+  }
+
+
+
+ #aback {
+font-family: Calibri;
+font-size: clamp(1.0rem, 1.2vw, 1.4rem); 
+font-weight: 600;
+text-decoration: underline;  
+
+  }
+
 .dmenu {
  background-color: #382A2A;
  text-align: center;
@@ -60,27 +87,13 @@ color: lightblue;
 text-decoration: none;
 }
 
-.offer-header {
-font-family: calibri;
- font-size: clamp(1.0rem, 1.2vw, 1.3rem); 
-font-weight: 700;
-color: lightblue; 
-}
-
-.offer1-header {
-font-family: calibri;
- font-size: clamp(1.3rem, 1.8vw, 1.9rem); 
-font-weight: 900;
-color: lightblue; 
-}
-
-
 #apl-hdr {
-  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
-  font-weight:  700;
+  font-size: clamp(1.0rem, 1.1vw, 1.2rem);  
+  font-weight:  500;
   color: lightblue; 
-  text-decoration: none; 
-  text-align: center;
+  text-decoration: underline; 
+  text-align: left;
+  margin-left: 4%; 
 }
 
 #menu-word-prp {
@@ -139,22 +152,20 @@ color: lightblue;
   height: clamp(0.4rem, 1.5vh, 1.9rem);   /* or any size you want; mobile = desktop */
 }
 
- .lang-hdr {
-      
+ #main-container-third {
+      background-color: #f8f9fa;
+      background: lightyellow;  
+      background-color: black; 
       border: 2px solid #ddd;
       border-radius: 15px;
       padding: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-top: 0px; /* spacing from top */
       margin-bottom: 40px; /* spacing from bottom */
-      border: 2px solid red;
-      width: 60%; 
+      border: 0px solid red;
     }
 
- .opt-hdr {
-     align: center;
-    }
-.R1_D1 {
+#R1_D1 {
     border: 0px solid #333;
   border-radius: 0px;
   /* padding: 15px;  */
@@ -177,17 +188,9 @@ text-align: center;
 font-family: Calibri;
  font-size: clamp(1.0rem, 1.0vw, 1.2rem);   
 font-weight: 300;
- Color: lightyellow; 
+ Color: lightblue; 
 text-decoration: none;
 
-  }
-
- .colortk {
- Color: lightyellow; 
-  }
-
- .coloreg {
- Color: lightblue; 
   }
 
 
@@ -408,7 +411,7 @@ border: 0px solid blue;
 }
 
  .sectionBox {
-    display: none;
+ /*   display: none;   */
     padding: 15px;
     background: #eef5ff;
     border-left: 4px solid #4a8cff;
