@@ -13,14 +13,25 @@
          
           line-height: 0.8;
             }
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightblue;
+font-size: clamp(1.1rem, 1.4vw, 1.5rem); 
+font-weight: 750;
+
+}
+
 .dmenu {
  background-color: #382A2A;
  text-align: center;
 }
 
 #apl-hdr {
-  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
-  font-weight:  700;
+  font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  500;
   color: lightblue; 
   text-decoration: none; 
   text-align: center;

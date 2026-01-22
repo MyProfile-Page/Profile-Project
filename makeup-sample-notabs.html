@@ -39,7 +39,7 @@
   <div class="container-fluid">
 
    <a class="navbar-brand Menubar-header" href="#"> MiniWebSites  Şirketi</a>
-
+   <span id = "apl-hdr" class="navbar-brand navbar-center" href="#"></span>
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -58,7 +58,7 @@
     
 
         <li class="nav-item">
-          <a id="aback" class="nav-link aback" href="index.html" >Back</a>
+          <a id="aback" class="nav-link aback" href="#" onclick="checkback()" >Back</a>
         </li>
 
       </ul>
@@ -196,14 +196,10 @@ function toggleSection(id) {
   sec.style.display = (sec.style.display === "block") ? "none" : "block";
 }
 
-function checkback(event) {
+function checkback() {
 event.preventDefault();
-if (localStorage.getItem("website") === "s1") {
-   window.location.href = "samples-heading.html";
-}
- if (localStorage.getItem("website") === "s2") {
-  window.location.href = "samples-heading.html";
-}
+
+  window.location.href = "menu-apl-notabs.html";
 }
 
  if (localStorage.getItem("website") === "s1") {

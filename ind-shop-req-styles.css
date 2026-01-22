@@ -13,10 +13,15 @@
      /*     background: lightblue;    */
           line-height: 0.8;
             }
-.h6class {
-font-family: calibri;
- text-align: center;
-color:black;
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightblue;
+font-size: clamp(1.0rem, 1.2vw, 1.3rem); 
+font-weight: 600;
+
 }
 
 .Menubar-header {

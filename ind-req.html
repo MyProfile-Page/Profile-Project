@@ -43,6 +43,7 @@
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon menu-bar-prp"></span>
       <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
+      <span id = "apl-hdr" class="navbar-brand navbar-center" href="#"></span>
     </button>
 
     <!-- Collapsible menu -->
@@ -51,7 +52,7 @@
   
 
         <li class="nav-item">
-          <a id="Back"class="nav-link " href="#" onclick="checkback(event)">Back</a>
+          <a id="Back"class="nav-link " href="#" onclick="checkback123()">Back</a>
         </li>
 
       </ul>
@@ -72,8 +73,7 @@
     <div class="row justify-content-center">
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
   
- <h6 id = "h6" class="h6class">Here is h6</h6> 
-  
+ 
     
 
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
@@ -81,8 +81,7 @@
  <!--      <form id="contactForm" onsubmit="handleSubmit(event)">   -->   
            <form id="EcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST">     
   <!--      <form id="contactForm" action= "https://formsubmit.co/asadsayeed@hotmail.com" method="POST">  -->
-     <div class="gap14vh"></div>
-     <div class="gap14vh"></div>
+     
      <div class="gap14vh"></div>
     <img src="thumb-title.jpg"><label for="usertitle">&nbsp&nbspProfession:</label>
     <div class="gap14vh"></div>
@@ -429,23 +428,19 @@
 //      e.preventDefault();     
 //    });
 
-function checkback(event) {
+function checkback123() {
 event.preventDefault();
-if (localStorage.getItem("website") === "s1") {
-  window.location.href = "orders-heading.html";
+  window.location.href = "menu-apl-notabs.html";
 }
- if (localStorage.getItem("website") === "s2") {
- window.location.href = "orders-heading.html";
-}
-}
+
 
  if (localStorage.getItem("website") === "s1") {
      document.getElementById("TcontactForm").style.display = "none";
-     document.getElementById('h6').innerHTML = 'Mini WebSite Request Form - Individuals';        
+     document.getElementById('apl-hdr').innerHTML = 'Webprofile Request For Individuals';        
     }
  if (localStorage.getItem("website") === "s2") {
      document.getElementById("EcontactForm").style.display = "none";
-     document.getElementById('h6').innerHTML = 'Mini Web Sitesi Talep Formu - kişiler';   
+     document.getElementById('apl-hdr').innerHTML = 'Bireyler İçin Web Profili Talep Formu';   
      document.getElementById("Back").innerHTML = 'Geri'; 
      document.getElementById("menu-word-prp").textContent = 'Menü';
     }

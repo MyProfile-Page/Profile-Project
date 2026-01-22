@@ -14,6 +14,16 @@
               
             }
 
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightblue;
+font-size: clamp(1.1rem, 1.4vw, 1.5rem); 
+font-weight: 750;
+
+}
+
 #apl-hdr {
   font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
   font-weight:  700;

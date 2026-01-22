@@ -40,6 +40,7 @@
             aria-label="Toggle navigation">
      <span class="navbar-toggler-icon menu-bar-prp"></span>
       <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
+      <span id = "apl-hdr" class="navbar-brand navbar-center" href="#"></span>
     </button>
 
     <!-- Collapsible menu -->
@@ -48,7 +49,7 @@
   
 
         <li class="nav-item">
-          <a id = "Back" class="nav-link " href="index.html">Back</a>
+          <a id = "Back" class="nav-link " href="#" onclick="checkback()">Back</a>
         </li>
 
       </ul>
@@ -70,7 +71,7 @@
       <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
   
   
-  <h6 id = "h6" class="h6class"></h6> 
+
     
 
  <!-- THIRD  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
@@ -78,8 +79,7 @@
  <!--       <form onsubmit="handleSubmit(event)">   -->   
        <form id="EcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST"> 
     <div class="gap14vh"></div>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div> 
+
     <img src="thumb-sectors.jpg"><label for="sector">&nbsp&nbspSector:</label>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
@@ -168,8 +168,7 @@
 
     <form id="TcontactForm" action="https://formspree.io/f/myzbzwnv" method="POST"> 
     <div class="gap14vh"></div>
-<div class="gap14vh"></div>
-<div class="gap14vh"></div> 
+
     <img src="thumb-sectors.jpg"><label for="sector">&nbsp&nbspSektör:</label>
 <div class="gap14vh"></div>
 <div class="gap14vh"></div>
@@ -396,23 +395,20 @@
 //    });
 
 
-function checkback(event) {
+function checkback() {
 event.preventDefault();
-if (localStorage.getItem("website") === "s1") {
-  window.location.href = "orders-heading.html";
+
+  window.location.href = "menu-apl-notabs.html";
 }
- if (localStorage.getItem("website") === "s2") {
- window.location.href = "orders-heading.html";
-}
-}
+
 
  if (localStorage.getItem("website") === "s1") {
      document.getElementById("TcontactForm").style.display = "none";
-     document.getElementById('h6').innerHTML = 'Mini WebSite Request Form - Companies';           
+     document.getElementById('apl-hdr').innerHTML = 'WebSite Request For Companies';           
     }
  if (localStorage.getItem("website") === "s2") {
      document.getElementById("EcontactForm").style.display = "none";
-     document.getElementById('h6').innerHTML = 'Mini Web Sitesi Talep Formu -Şirketler'; 
+     document.getElementById('apl-hdr').innerHTML = 'Şirketler İçin Web Sitesi Talebi'; 
      document.getElementById("Back").innerHTML = 'Geri'; 
      document.getElementById("menu-word-prp").textContent = 'Menü';
     }

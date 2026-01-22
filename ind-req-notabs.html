@@ -51,7 +51,7 @@
   
 
         <li class="nav-item">
-          <a id="Back"class="nav-link " href="index.html">Back</a>
+          <a id="Back"class="nav-link " href="#" onclick="checkback()">Back</a>
         </li>
 
       </ul>
@@ -432,10 +432,10 @@
 function checkback(event) {
 event.preventDefault();
 if (localStorage.getItem("website") === "s1") {
-  window.location.href = "orders-heading.html";
+  window.location.href = "menu-apl-notabs.html";
 }
  if (localStorage.getItem("website") === "s2") {
- window.location.href = "orders-heading.html";
+ window.location.href = "menu-apl-notabs.html";
 }
 }
 
