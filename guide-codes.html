@@ -35,7 +35,8 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+     <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
+      <span id = "apl-hdr" class="navbar-brand navbar-center" href="#"></span>
     </button>
 
     <!-- Collapsible menu -->
@@ -61,9 +62,10 @@
 <div class="gap14vh"></div>
 
 
-  <div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-6">
+      <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
+   
    
    <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
 
@@ -137,31 +139,25 @@ if (localStorage.getItem("website") === "s1") {
         document.getElementById("Back").innerHTML = 'Geri'; 
         document.getElementById("apl-hdr").textContent = 'Şirketimiz';
         document.getElementById('P3').innerHTML = 'Ne yapıyoruz? ';   
-          document.getElementById('P4').innerHTML = '<Normal> ' +                                                               
-                                                           'Ana ekranda gösterilen bağlantılarda bireyler ve mikro işletmeler ' + 
-                                                           'için örnek profiller mevcuttur. Lütfen önce örnekleri ' + 
-                                                           'inceleyin ve beğenirseniz profil bilgilerinizi Profil talep formları ' + 
-                                                           'aracılığıyla bize gönderin. Formspree.IO üzerinden profil ' + 
-                                                           'bilgilerinizi aldıktan sonra, web profilinizi veya mikro işletme ' + 
-                                                            'profilinizi dünyanın en yaygın kullanılan uluslararası geliştirici ' + 
-                                                            'platformu GitHub da oluşturup yayınlayacağız ve profil bağlantınızı ' + 
-                                                            'e-posta adresinize göndereceğiz. Fotoğrafınızı bize ' + 
-                                                            'ali_albader_alsalem@yahoo.com adresine gönderirseniz, ' + 
-                                                              'standart fotoğrafın yerine kendi fotoğrafınız kullanılacaktır.  ' + 
-                                                           '</Normal>';                                                       
+          document.getElementById('P4').innerHTML = '<Normal> ' +        
+
+'Siparişler ve Örnekler ekranında gösterilen bağlantılarda bireyler için örnek web profilleri ve bazı işletmelerin örnek ' + 
+'web siteleri mevcuttur. Lütfen önce örnekleri inceleyin ve beğenirseniz, kişisel veya şirket bilgilerinizi çevrimiçi talep ' + 
+'formları aracılığıyla bize iletin. Talebinizi aldıktan sonra, talep türünüze bağlı olarak kişisel web profilinizi veya şirket ' + 
+'web sitenizi oluşturacak, internette yayınlayacak ve web bağlantılarınızı e-posta adresinize göndereceğiz. Fotoğraflarınızı ' + 
+'bize ali_albader_alsalem@yahoo.com adresine gönderirseniz, standart fotoğrafların yerini kendi fotoğraflarınız alacaktır. ' +                                             
+                                             '</Normal>';                                                       
       
 
        document.getElementById('P1').innerHTML = 'biz kimiz: ';       
  //      document.getElementById('P1').innerHTML = localStorage.getItem('website');                                                                                                       
                                                          
        document.getElementById('P2').innerHTML = '<Normal> ' + 
-                                                          'Biz, internetin geniş ağında kendi dijital kimliklerine sahip ' +
-                                                          'olmak isteyen ve web sitesi olmayan bireylere ve mikro ' +
-                                                          'işletmelere ücretsiz dijital profiller sunmak için çalışan küçük ' +
-                                                          'bir yazılım mühendisleri grubuyuz. Herhangi bir sosyal medya ' +
-                                                          'platformuna katılmış olan bireyler ve mikro işletmeler de, ' +
-                                                          'kendilerine ait ek ve benzersiz bir web sitesine sahip olarak  ' +
-                                                          'ücretsiz teklifimizden yararlanabilirler. HİZMETLERİMİZ ÜCRETSİZDİR. ' +                                                                                                         
+
+'Biz, internetin geniş ağında kendi dijital kimliklerine sahip olmak isteyen ve web varlığı bulunmayan bireylere ücretsiz ' + 
+'web profilleri ve işletmelere ücretsiz web siteleri sağlayan küçük bir yazılım mühendisleri grubuyuz. Herhangi bir sosyal ' + 
+'medya platformuna katılmış olan bireyler ve mikro işletmeler de, kendilerine ait ek ve benzersiz bir web sitesi/web ' + 
+'profiline sahip olarak ücretsiz teklifimizden yararlanabilirler. HİZMETLERİMİZ ÜCRETSİZDİR. ' +                                                                                                                                                            
                                                         '</Normal>';
     
          document.getElementById('P5').innerHTML = 'Profil Talep Formları Bilgileri: ';                                                                                                               
@@ -181,18 +177,17 @@ if (localStorage.getItem("website") === "s1") {
     
        
       document.getElementById('P3').innerHTML = 'What We Do: ';                                                                                                          
-       document.getElementById("apl-hdr").textContent = 'Guide';
-       document.getElementById('P4').innerHTML = '<Normal>Sample Mini Websites for individuals and ' +                                                               
-                                                           "microbusinesses are available in the links shown in \n" +
-                                                          "main screen. Plesae first view the samples and if you like \n" +
-                                                          "then submit your individual or your company details \n" +
-                                                          "to us through the Mini Websites request forms. After \n" +
-                                                           "receiving your Mini Website request details through Formspree.IO \n" +
-                                                          "we will construct and deploy your Individual Mini website  \n" +
-                                                            "or your Mini business Website on world’s most \n" +
-                                                          "widely adopted international developer platform GitHub \n" +
-                                                          "and send your weblinks to you through your email. \n" +
-                                                         "Your Photo will replace the standard phto, if you send us at  \n" +
+       document.getElementById("apl-hdr").textContent = 'Our Company';
+       document.getElementById('P4').innerHTML = '<Normal>Sample Web Profiles for individuals and ' +                                                               
+                                                           "Sample websites of few businesses are available in the links shown in \n" +
+                                                          "orders&Samples screen. Please first view the samples and if you like \n" +
+                                                          "then submit your personal or your company details \n" +
+                                                          "to us through the online request forms. After \n" +
+                                                           "receiving your request \n" +
+                                                          "we will construct your personal web profile  \n" +
+                                                            "or your company Website depending on your request type and deploy it on internet \n" +
+                                                            "and send your weblinks to you through your email. \n" +
+                                                         "Your Photos will replace the standard photos, if you send us at  \n" +
                                                           "ali_albader_alsalem@yahoo.com \n" +                                                                                
                                                           '</Normal>';
 
@@ -200,24 +195,24 @@ if (localStorage.getItem("website") === "s1") {
  //      document.getElementById('P1').innerHTML = localStorage.getItem('website');                                                                                                       
                                                          
        document.getElementById('P2').innerHTML = '<Normal>We are a small group of software engineers ' + 
-                                                        'who work to provide free Mini Websites to individuals ' + 
-                                                        'and micro businesses who do not have any web presence ' + 
+                                                        'who work to provide free Web Profiles to individuals ' + 
+                                                        'and free websites to businesses who do not have any web presence ' + 
                                                         'and like to have their own digital identification ' + 
                                                         'on the vast network of internet. Those Individuals and ' +
                                                         'micro businesses who have joined any of the social medias platform ' +
                                                         'can also get advantage from our free offer by having an additional ' +
-                                                        'and unique web site of their own. OUR SERVICES ARE FREE OF CHARGE. ' +
+                                                        'and unique web site/web profile of their own. OUR SERVICES ARE FREE OF CHARGE. ' +
                                                         '</Normal>';
     
          document.getElementById('P5').innerHTML = 'Profile Request Forms Information: ';                                                                                                               
                                                     
           document.getElementById('P6').innerHTML = '<Normal> ' + 
-                                                           "Mini Website request form of individuals contains their personal \n" +
+                                                           "Web Profile request form of individuals contains their personal \n" +
                                                             "information like Profession, Name, Email, Biography, Qualifications, \n" +
-                                                            "Experiences and Address of the individual. Mini Website request form \n" +
-                                                            "of small companies contain business information like Sector, Title, \n" +
-                                                            "Email, Products or Skills, Services and Location of the business. \n" +
-                                                             "Those who are unable to fill Mini Website request form online can  \n" +    
+                                                            "Experiences and Address. Website request form \n" +
+                                                            "of small companies contain their business information like Sector, Title, \n" +
+                                                            "Email, Products or Skills, Services and Location. \n" +
+                                                             "Those who are unable to fill request form online can  \n" +    
                                                              "send their details in an email to ali_albader_alsalem@yahoo.com \n" +                                                       
                                                         '</Normal>';
        }

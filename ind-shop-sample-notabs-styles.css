@@ -171,7 +171,7 @@ text-align: left;
   }
 #P5 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+ font-size: clamp(1.1rem, 1.2vw, 1.3rem);   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -179,7 +179,7 @@ text-align: left;
   }
 #P6 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+ font-size: clamp(1.1rem, 1.2vw, 1.3rem);     
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -187,7 +187,7 @@ text-align: left;
   }
 #P7 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+ font-size: clamp(1.1rem, 1.2vw, 1.3rem);     
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -255,7 +255,7 @@ text-align: left;
   }
 #P52 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem);     
 font-weight: 550;
 Color: black;  
 margin-left:2%; 
@@ -263,7 +263,7 @@ text-align: left;
   }
 #P62 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+ font-size: clamp(1.1rem, 1.2vw, 1.3rem);   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -271,7 +271,7 @@ text-align: left;
   }
 #P72 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem);    
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -280,7 +280,7 @@ text-align: left;
 
 #P53 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem);   
 font-weight: 550;
 Color: black;  
 margin-left:2%; 
@@ -288,7 +288,7 @@ text-align: left;
   }
 #P54 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+ font-size: clamp(1.1rem, 1.2vw, 1.3rem);   
 font-weight: 550;
 Color: black;  
 margin-left:2%; 
@@ -296,7 +296,7 @@ text-align: left;
   }
 #P63 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem);   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -304,7 +304,7 @@ text-align: left;
   }
 #P64 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+  font-size: clamp(1.1rem, 1.2vw, 1.3rem);   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -312,7 +312,7 @@ text-align: left;
   }
 #P73 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+ font-size: clamp(1.1rem, 1.2vw, 1.3rem);   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -320,7 +320,7 @@ text-align: left;
   }
 #P74 {
 font-family: Calibri;
- font-size: clamp(1.5rem, 1.5vw, 2.0rem);   
+ font-size: clamp(1.1rem, 1.2vw, 1.3rem);   ;   
 font-weight: 550;
 Color: black;   
 margin-left:2%;
@@ -458,7 +458,7 @@ display:inline-block;
 #C-BOX5 { border:0px solid black; display: none;}
  #P-BOX5 { border: 0px solid yellow; color: black; font-family: calibri;   font-size: font-size: clamp(1.0rem, 1.1vw, 1.5rem);  font-weight: 400;  width: 99%; padding-top:0%; padding-bottom:0%;
                   margin-left:2%; text-align: left; }
-  #I-BOX5 { border: 0px solid red; width: 25%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
+  #I-BOX5 { border: 0px solid red; width: 30%; margin-left:2%; margin-right:2%; margin-top:0%; margin-bottom:1.5%;
                   filter: brightness(200%); filter: contrast(150%); }  
  .Istripe1 { border: 0px solid red; width: 94%;  height: 20px, margin-left:2%; margin-right:2%;  filter: brightness(200%); filter: contrast(150%); }  
 
