@@ -119,13 +119,13 @@ border: 2px solid blue;
       background-color: #f8f9fa;
       background: lightyellow;  
       background-color: black; 
-      border: 2px solid #ddd;
+      border: 0px solid #ddd;
       border-radius: 15px;
-      padding: 10px;
+      padding: 0px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-top: 0px; /* spacing from top */
-      margin-bottom: 40px; /* spacing from bottom */
-      border: 2px solid red;
+      margin-bottom: 0px; /* spacing from bottom */
+      border: 0px solid red;
     }
 
 #R1_D1 {
