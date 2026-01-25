@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Responsive Page</title>
+
+  <style>
+    /* ---------- RESET ---------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ---------- CONTAINER ---------- */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display: grid;
+      place-items: center;
+      height: 40vh;
+      background: linear-gradient(120deg, #007bff, #00c6ff);
+      color: #fff;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    /* ---------- GRID LAYOUT ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Desktop columns */
+    .col-4 { grid-column: span 4; }
+    .col-6 { grid-column: span 6; }
+    .col-12 { grid-column: span 12; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* ---------- RESPONSIVE BREAKPOINTS ---------- */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .col-4,
+      .col-6 {
+        grid-column: span 6;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .col-4,
+      .col-6,
+      .col-12 {
+        grid-column: span 1;
+      }
+
+      .hero {
+        height: 30vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>My Website</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Responsive Page Using CSS Grid</h1>
+    <p>No Bootstrap. No Framework.</p>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="container">
+    <section class="grid">
+      <div class="card col-4">
+        <h3>Column 1</h3>
+        <p>This is a 4-column layout on desktop.</p>
+      </div>
+
+      <div class="card col-4">
+        <h3>Column 2</h3>
+        <p>Fully responsive using CSS Grid.</p>
+      </div>
+
+      <div class="card col-4">
+        <h3>Column 3</h3>
+        <p>No Bootstrap classes needed.</p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Half Width</h3>
+        <p>This spans 6 columns on desktop.</p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Half Width</h3>
+        <p>Stacks automatically on mobile.</p>
+      </div>
+
+      <div class="card col-12">
+        <h3>Full Width</h3>
+        <p>Equivalent to Bootstrap <code>col-12</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Grid Layout Demo</p>
+  </footer>
+
+</body>
+</html>
