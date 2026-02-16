@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firestore Table (IIS + Localhost)</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table { border-collapse: collapse; width: 60%; margin-top: 20px; }
+    th, td { border: 1px solid black; padding: 8px; text-align: center; }
+    input { margin: 5px; padding: 5px; }
+    button { padding: 6px 12px; }
+    .table-container {
+    height: 300px;        /* Fixed height */
+    overflow-y: auto;     /* Vertical scrollbar */
+    border: 1px solid #ccc;
+}
+
+.my-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.my-table thead th {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
+}
+
+.my-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  </style>
+</head>
+<body>
+
+  <h2>Cloud Firestore Student Table</h2>
+
+  <!-- Input Form -->
+  <input type="text" id="name" placeholder="Enter Name">
+  <input type="number" id="age" placeholder="Enter Age">
+  <input type="text" id="course" placeholder="Enter Course">
+ <button onclick="addStudent()">Add Student</button>
+<button onclick="updateStudent()">Update Student</button>
+
+
+  <!-- HTML Table -->
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+ </div>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { 
+  getFirestore, 
+  collection, 
+  addDoc, 
+  getDocs, 
+  deleteDoc, 
+  doc,
+  updateDoc
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+  // 🔴 PASTE YOUR REAL FIREBASE CONFIG HERE (from Firebase Console)
+  const firebaseConfig = {
+  apiKey: "AIzaSyDxjSLp6N0h9pvSG4wOrnFZJvNYtFsk-5Q",
+  authDomain: "dashboard-cloud-db.firebaseapp.com",
+  projectId: "dashboard-cloud-db",
+  storageBucket: "dashboard-cloud-db.firebasestorage.app",
+  messagingSenderId: "346196944726",
+  appId: "1:346196944726:web:244d43273d0b771d3e98f7"
+};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // 🔹 CREATE (Insert Data)
+  window.addStudent = async function () {
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
+    const course = document.getElementById("course").value;
+
+    if (name === "" || age === "" || course === "") {
+      alert("Please fill all fields");
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "students"), {
+        name: name,
+        age: parseInt(age),
+        course: course,
+        createdAt: new Date()
+      });
+
+      alert("Student added to Cloud Firestore!");
+      clearInputs();
+      loadStudents(); // refresh table
+    } catch (error) {
+      console.error("Error adding student:", error);
+    }
+  };
+
+  // 🔹 READ (Load Data into Table)
+ async function loadStudents() {
+  const table = document.getElementById("studentTable");
+  table.innerHTML = "";
+
+  const querySnapshot = await getDocs(collection(db, "students"));
+
+  querySnapshot.forEach((document) => {
+    const data = document.data();
+    const docId = document.id;
+
+    table.innerHTML += `
+      <tr>
+        <td>${data.name}</td>
+        <td>${data.age}</td>
+        <td>${data.course}</td>
+        <td>
+          <button onclick="editStudent('${docId}', '${data.name}', '${data.age}', '${data.course}')">Edit</button>
+          <button onclick="deleteStudent('${docId}')">Delete</button>
+        </td>
+      </tr>	
+    `;
+  });
+}
+
+
+  // 🔹 DELETE (Remove Record)
+  window.deleteStudent = async function (id) {
+    await deleteDoc(doc(db, "students", id));
+    alert("Student deleted from Firestore");
+    loadStudents();
+  };
+
+  // Clear input fields
+  function clearInputs() {
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("course").value = "";
+  }
+
+// Fill inputs when Edit button is clicked
+window.editStudent = function (id, name, age, course) {
+  document.getElementById("name").value = name;
+  document.getElementById("age").value = age;
+  document.getElementById("course").value = course;
+
+  // Store document ID for update
+  window.currentEditId = id;
+};
+
+// Update record in Firestore
+window.updateStudent = async function () {
+  if (!window.currentEditId) {
+    alert("Please select a record to edit first.");
+    return;
+  }
+
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+  const course = document.getElementById("course").value;
+
+  try {
+    await updateDoc(doc(db, "students", window.currentEditId), {
+      name: name,
+      age: parseInt(age),
+      course: course
+    });
+
+    alert("Student updated successfully!");
+    window.currentEditId = null;
+    loadStudents();
+  } catch (error) {
+    console.error("Update error:", error);
+  }
+};
+
+
+  // Auto-load data when page opens (like SQL SELECT * FROM table)
+  loadStudents();
+</script>
+
+</body>
+</html>
