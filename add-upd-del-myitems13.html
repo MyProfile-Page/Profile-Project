@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firestore Table (IIS + Localhost)</title>
+ 
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  .body_cls {
+          background-color: red;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background: white;
+      /*    background: lightblue;    */
+          line-height: 0.8;         
+            }
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightblue;
+font-size: clamp(1.1rem, 1.4vw, 1.5rem); 
+font-weight: 750;
+}
+  
+ 
+.table-container {
+    height: 75vh;        /* Fixed height */
+    overflow-y: auto;     /* Vertical scrollbar */
+    border: 0.25vw solid #ccc;
+}
+
+
+ .custom-table {
+    border-collapse: collapse;
+    table-layout: fixed; /* VERY IMPORTANT for percentage widths */
+    width: 100%;
+    font-family: Arial, sans-serif;
+    margin-top: 10vh; 
+    border: 1px solid yellow; /* Light grey borders */
+}   
+
+   .custom-table tr:nth-child(even) {
+     background-color: #D6EEEE;
+     background-color: rgba(150, 212, 212, 0.4);
+ }
+
+ .custom-table td:nth-child(2) {
+     text-align: left;
+     
+ }
+
+  
+  .custom-table th {
+    background-color: #f2f2f2; /* Light gray background for header */
+    color: #333;
+    background-color: red;
+    font-size: clamp(1.1rem, 1.3vw, 1.4rem); 
+    font-weight: 450;
+    text-align: center;
+    border: 1px solid green; /* Light grey borders */
+    padding: 1vw; /* Spacing inside cells */
+    height: 2vh; 
+
+
+  }
+
+  .custom-table tr {
+    background-color: Yellow; /* Light gray background for header */
+    border: 1px solid red; /* Light grey borders */    
+    height: 1.0vh;
+
+  }
+
+  .custom-table td {
+    /* background-color: #f2f2f2;  */ /* Light gray background for header */
+    /* color: #333;  */
+    font-size: clamp(0.5rem, 1.2vw, 1.3rem); 
+    font-weight: 350;
+    border: 1px solid red; /* Light grey borders */
+    padding: 0.5vw; /* Spacing inside cells */
+    text-align: center;
+
+  }
+  
+  
+ .custom-table tr:hover { background-color: #e6f2ff;
+  }
+  
+ .custom-table button { 
+   padding: 0.3vw; 
+   height: 4vh;
+   font-size: clamp(0.5rem, 1.2vw, 1.3rem); 
+ }
+
+
+
+
+ 
+
+
+  
+
+  </style>
+</head>
+<body class="body_cls">
+
+  <h2>Cloud Firestore Data Base</h2>
+  <h2>Material Management Table</h2> 
+
+  
+<div style="width: 100%;">
+ <!-- Input Form -->
+  <input type="number" id="nbr" placeholder="No." style="width: 7%; text-align: center"> 
+  <input type="text" id="name" placeholder="Name" style="width: 30%;  text-align: left">
+  <input type="text" id="uis" placeholder="uis" style="width: 7%; text-align: center">
+  <input type="number" id="qty" placeholder="Qty" style="width: 8%; text-align: center">
+  <input type="text" id="prc" placeholder="Price" style="width: 9%; text-align: center">
+  <input type="text" id="exp" placeholder="Expiry" style="width: 12%; text-align: center">
+  <label>&nbsp</label>
+ <button onclick="additem()"  style="width: 8%; text-align: center">Add</button>
+<button onclick="updateitem()"  style="width: 9%; text-align: center">Update</button>
+</div>
+
+  <!-- HTML Table For showing all records of database-->
+<div class="table-container">
+  <table class="custom-table">
+    <thead>
+     
+      <tr>
+        <th style="text-align: center; width: 7%;">No.</th>
+        <th style="text-align: center; width: 33%;">Name</th>
+        <th style="text-align: center; width: 7%;">uis</th>
+        <th style="text-align: center; width: 8%;">Qty</th>
+        <th style="text-align: center; width: 9%;">Price</th>
+        <th style="text-align: center; width: 15%;">Expiry</th>
+        <th style="text-align: center; width: 21%;">Action</th>
+      </tr>
+    </thead>
+    <tbody id="itemTable">
+       <tr>
+        <td style="text-align: center"></td>
+        <td style="text-align: left"></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"></td>
+        <td style="text-align: center"></td>
+      </tr>
+
+      
+     </tbody>
+  </table>
+ </div>
+<script type="module">
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { 
+  getFirestore, 
+  collection, 
+  query,
+  orderBy,
+  addDoc, 
+  getDocs, 
+  deleteDoc, 
+  doc,
+  updateDoc
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+
+  // 🔴 PASTE YOUR REAL FIREBASE CONFIG HERE (from Firebase Console)
+  const firebaseConfig = {
+  apiKey: "AIzaSyDxjSLp6N0h9pvSG4wOrnFZJvNYtFsk-5Q",
+  authDomain: "dashboard-cloud-db.firebaseapp.com",
+  projectId: "dashboard-cloud-db",
+  stornbrBucket: "dashboard-cloud-db.firebasestornbr.app",
+  messagingSenderId: "346196944726",
+  appId: "1:346196944726:web:244d43273d0b771d3e98f7"
+};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  
+
+  
+
+
+  // 🔹 CREATE (Insert Data)
+  window.additem = async function () {
+    const name = document.getElementById("name").value;
+    const nbr = document.getElementById("nbr").value;
+    const uis = document.getElementById("uis").value;
+    const qty = document.getElementById("qty").value;
+    const prc = document.getElementById("prc").value;
+    const exp = document.getElementById("exp").value;
+
+
+    if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || exp === "") {
+      alert("Please fill all fields");
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "myitemstable"), {
+        name: name,
+        nbr: parseInt(nbr),
+        qty: parseInt(qty),
+        prc: parseInt(prc),
+        uis: uis,
+        exp: exp
+   //     createdAt: new Date()
+      });
+
+      alert("item added to Cloud Firestore!");
+      clearInputs();
+      loadmyitemstable(); // refresh table
+    } catch (error) {
+      console.error("Error adding item:", error);
+    }
+  };
+
+  // 🔹 READ (Load Data into Table)
+async function loadmyitemstable() {
+  
+ // console.log("DB VALUE:", db); // ADD THIS LINE 
+  
+ const table = document.getElementById("itemTable");
+  
+  table.innerHTML = "";
+  
+  // 🔹 Firestore query with ORDER BY
+
+ const collectionRef = collection(db, "myitemstable");
+ const q = query(collectionRef, orderBy("nbr", "asc")); 
+
+
+//  const q = query(
+//    collection(db, "myitemstable")
+//    );
+
+  const querySnapshot = await getDocs(q);
+
+  querySnapshot.forEach((document) => {
+    const data = document.data();
+    const docId = document.id;
+    let displayPrice = formatCentsToDollars(data.prc);
+    table.innerHTML += `
+      <tr>
+        <td>${data.nbr}</td>
+        <td>${data.name}</td>
+        <td>${data.uis}</td>
+        <td>${data.qty}</td>
+        <td>$${displayPrice}</td>
+        <td>${data.exp}</td>
+        <td>
+          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}')">Edit</button>
+          <button onclick="deleteitem('${docId}')">Delete</button>
+        </td>
+      </tr>	
+    `;
+  });
+}
+
+// 🔹 cent to dollar convert func
+
+function formatCentsToDollars(cents) {
+  return (cents / 100).toFixed(2);
+}
+
+
+  // 🔹 DELETE (Remove Record)
+  window.deleteitem = async function (id) {
+    await deleteDoc(doc(db, "myitemstable", id));
+    alert("item deleted from Firestore");
+    loadmyitemstable();
+  };
+
+  // Clear input fields
+  function clearInputs() {
+    document.getElementById("name").value = "";
+    document.getElementById("nbr").value = "";
+    document.getElementById("qty").value = "";
+    document.getElementById("prc").value = "";
+    document.getElementById("exp").value = "";
+    document.getElementById("uis").value = "";
+    
+
+  }
+
+// Fill inputs when Edit button is clicked
+window.edititem = function (id, name, nbr, uis, qty, prc, exp) {
+  
+  document.getElementById("name").value = name;
+  document.getElementById("nbr").value = nbr;
+  document.getElementById("uis").value = uis;
+  document.getElementById("qty").value = qty;
+  document.getElementById("prc").value = prc;
+  document.getElementById("exp").value = exp;
+  
+
+
+  // Store document ID for update
+  window.currentEditId = id;
+};
+
+// Update record in Firestore
+window.updateitem = async function () {
+  if (!window.currentEditId) {
+    alert("Please select a record to edit first.");
+    return;
+  }
+
+  const name = document.getElementById("name").value;
+  const nbr = document.getElementById("nbr").value;
+  const uis = document.getElementById("uis").value;
+  const qty = document.getElementById("qty").value;
+  const prc = document.getElementById("prc").value;
+  const exp = document.getElementById("exp").value;
+
+
+
+  try {
+    await updateDoc(doc(db, "myitemstable", window.currentEditId), {
+      name: name,
+      nbr: parseInt(nbr),
+      qty: parseInt(qty),
+      prc: parseInt(prc),
+      exp: exp,
+      uis: uis
+    });
+
+    alert("item updated successfully!");
+    window.currentEditId = null;
+    loadmyitemstable();
+  } catch (error) {
+    console.error("Update error:", error);
+  }
+};
+
+
+  // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
+  
+  loadmyitemstable();
+</script>
+
+</body>
+</html>
