@@ -173,26 +173,31 @@ grid-auto-flow: row;
  
  <div class="box" style="border: 0.10vw solid green;">    <!-- 2nd Inner_div -->  
    
-    <div style="text-align: center; text-decoration: underline; margin-top: 1.5vh;  font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.6rem); Color: black;">     
-
-        <h2>
-        Items Management System<br> 
+    <div style="text-align: center; margin-top: 1.5vh;  font-family: calibri; font-size: clamp(0.6rem, 1.4vw, 1.5rem); Color: black;">     
+        <br>
+        <h3>
+        Items Management System<br>
+        <br> 
         Cloud Firestore Item Data Base
-        </h2>
-        <P style="text-align: left;">
-        The online Items management system stores all items of a company. it provides a tabular view
+        </h3>
+        <P style="text-align: left; padding-left: 5vw; padding-right: 5vw;">
+        This online Items management system stores all items of a company, providing a tabular view
         of all items of a company alongwith spot total and net asset values of the company. New items
         can be added, old items can be updated if needed or deleted if they are disposed off. Invoice 
         printing facility provides a hard copy of all current items.
         </P>
+        <br><br><br>
         <div>
-        <button type="button" onclick="printInvoice()"  style="width: 8%; text-align: center">Print</button>
+        <button type="button" onclick="printInvoice()"  style="width: 20%; text-align: center; color: blue;">Print Invoice</button>
         </div>
-        <div>
-        <label style="margin-left: 1vw;">Tax %:</label>
+        <br><br><br>
+        <!--
+         <div>
+          <label style="margin-left: 1vw;">Tax %:</label>
         <input type="number" id="taxRate" value="5" step="0.01" style="width: 6%; text-align: center;">
         <button type="button" onclick="loadmyitemstable()">Recalculate</button>
         </div>
+          -->
    </div>
 
  </div>
