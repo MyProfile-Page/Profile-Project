@@ -129,6 +129,18 @@ font-weight: 750;
             border: 2px solid steelblue;
         }
 
+@media (max-width: 768px) {
+.grid-container {
+  display: grid;
+ grid-template-columns: 1fr; /* Stack vertically */
+grid-auto-flow: row;
+height: 90vh;
+
+ gap: 0.5vw;
+ 
+}
+}
+
 .responsive-img {
   width: 100%;
   height: auto;
