@@ -33,7 +33,7 @@ font-weight: 750;
     height: 75vh;        /* Fixed height */
     
      overflow-x: auto;     /* horizontal scrollbar */
-    border: 0.25vw solid #ccc;
+    border: 0.0vw solid #ccc;
 }
 
 
@@ -43,7 +43,7 @@ font-weight: 750;
     width: 100%;
     font-family: Arial, sans-serif;
     margin-top: 3vh; 
-    border: 0.2vw solid grey; /* Light grey borders */
+    border: 0.0vw solid grey; /* Light grey borders */
 }   
 
    .custom-table tr:nth-child(even) {
@@ -60,12 +60,12 @@ font-weight: 750;
   .custom-table th {
     background-color: #f2f2f2; /* Light gray background for header */
    /* color: #333;  */
-    color:white;
-    background-color: black;
+    color:black;
+    background-color: #16A3A8;
     font-size: clamp(1.1rem, 1.3vw, 1.4rem); 
     font-weight: 450;
     text-align: center;
-    border: 0.2vw solid lightgrey; /* Light grey borders */
+    border: 0.0vw solid lightgrey; /* Light grey borders */
     padding: 1vw; /* Spacing inside cells */
     height: 2vh; 
 
@@ -74,7 +74,7 @@ font-weight: 750;
 
   .custom-table tr {
     background-color: white; /* Light gray background for header */
-    border: 0.2vw solid lightgrey; /* Light grey borders */    
+    border: 0.0vw solid lightgrey; /* Light grey borders */    
     height: 1.0vh;
 
   }
@@ -84,7 +84,7 @@ font-weight: 750;
     /* color: #333;  */
     font-size: clamp(0.5rem, 1.2vw, 1.3rem); 
     font-weight: 500;
-    border: 0.2vw solid lightgrey; /* Light grey borders */
+    border: 0.0vw solid lightgrey; /* Light grey borders */
     padding: 0.5vw; /* Spacing inside cells */
     text-align: center;
 
@@ -170,14 +170,17 @@ grid-auto-flow: row;
   </style>
 </head>
 <body class="body_cls">
-
-
+<div class="gap2vh"></div>
+<div style="background-color: white; color:black; font-weight: 550; font-size: clamp(1.1rem, 1.5vw, 1.6rem); border: 0.0vw solid lightgrey; font-style: italic;">Dashboard</div>
+<div class="gap3vh"></div>
 <div class="grid-container" style="border: 0.00vw solid green;">    <!-- Grid Div -->
 
   <div class="box" style="border: 0.10vw solid green;">    <!-- Start First col of grid -->
-       <div>
-       <img src="img-inventory3.PNG" class="responsive-img rounded" style="margin-top: 2.5vh; margin-left: 0.00vw;">   
+      <div style=" display: flex; justify-content: center; align-items: center;">
+       <div style=" width: 50%; height: 65%; margin-top: 1%;">
+       <img src="img-inventory7.PNG" class="responsive-img rounded" style="display: block;">   
        </div>
+      </div>
  </div>   
  
 <!--  -------------------------------------------------END--First column of grid---------------------------------------------     -->
@@ -187,11 +190,11 @@ grid-auto-flow: row;
  <div class="box" style="border: 0.10vw solid green;">    <!-- 2nd Inner_div -->  
    
     <div style="text-align: center; margin-top: 1.5vh;  font-family: calibri; font-size: clamp(0.6rem, 1.4vw, 1.5rem); Color: black;">     
-        <br>
+        <div class="gap3vh"></div>
         <h3>
-        Items Management System<br>
-        <br> 
-        Cloud Firestore Item Data Base
+        Items Management
+        <div class="gap2vh"></div>
+        Cloud Data Base
         </h3>
         <P style="text-align: left; padding-left: 5vw; padding-right: 5vw;">
         This online Items management system stores all items of a company, providing a tabular view
@@ -226,6 +229,7 @@ grid-auto-flow: row;
 
  
 <div class="gap4vh"></div>  
+<div class="gap4vh"></div>  
 <div style="width: 100%; ">
  <!-- Input Form -->
   <input type="number" id="nbr" placeholder="No." style="width: 7%; height: 5vh; background-color: #a5dde6; text-align: center; font-weight: 500;"> 
@@ -239,7 +243,7 @@ grid-auto-flow: row;
 </div>
 
 <div class="gap4vh"></div>
-
+<div class="gap4vh"></div>  
 
   <!-- HTML Table For showing all records of database-->
 <div class="custom-table-container">
@@ -404,26 +408,26 @@ async function loadmyitemstable() {
 
   // ✅ Add Summary Rows (ALL TOGETHER)
   table.innerHTML += `
-    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.4vw solid black; height: 7vh;">
+    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.0vw solid black; height: 7vh;">
       <td colspan="4" style="text-align: right; ">Grand Total Value</td>
-      <td style="border: 0.2vw solid black;"></td>
-      <td style="text-align: right; border: 0.2vw solid black;">$${grandTotalDollar}</td>
+      <td style="border: 0.0vw solid black;"></td>
+      <td style="text-align: right; border: 0.0vw solid black;">$${grandTotalDollar}</td>
       <td></td>
       <td></td>
     </tr>
 
-    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.4vw solid black; height: 7vh; ">
+    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.0vw solid black; height: 7vh; ">
       <td colspan="4" style="text-align: right;">Tax Total @(13%)</td>
-      <td style="border: 0.2vw solid black;"></td>
-      <td style="text-align: right; border: 0.2vw solid black;">$${taxDisplay}</td>
+      <td style="border: 0.0vw solid black;"></td>
+      <td style="text-align: right; border: 0.0vw solid black;">$${taxDisplay}</td>
       <td></td>
       <td></td>
     </tr>
 
-    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.4vw solid black; height: 7vh;">
+    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.0vw solid black; height: 7vh;">
       <td colspan="4" style="text-align: right; ">Net Total Value</td>
-      <td style="border: 0.2vw solid black;"></td>
-      <td style="text-align: right; border: 0.2vw solid black;">$${netTotalDisplay}</td>
+      <td style="border: 0.0vw solid black;"></td>
+      <td style="text-align: right; border: 0.0vw solid black;">$${netTotalDisplay}</td>
       <td></td>
       <td></td>
     </tr>
