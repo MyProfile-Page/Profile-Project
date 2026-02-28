@@ -32,7 +32,7 @@ font-weight: 750;
 .custom-table-container {
     height: 75vh;        /* Fixed height */
     
-     overflow-x: auto;     /* horizontal scrollbar */
+     overflow-y: auto;     /* vertical scrollbar */
     border: 0.0vw solid #ccc;
 }
 
@@ -192,17 +192,15 @@ grid-auto-flow: row;
  <div class="box" style="border: 0.10vw solid green;">    <!-- 2nd Inner_div -->  
    
     <div style="text-align: center; margin-top: 1.5vh;  font-family: calibri; font-size: clamp(0.6rem, 1.4vw, 1.5rem); Color: black;">     
-        <div class="gap3vh"></div>
-        <h3>
-        Items Management
         <div class="gap2vh"></div>
-        Cloud Data Base
+        <h3 style="font-weight: 550;" >
+        Items Management System
         </h3>
-        <P style="text-align: left; padding-left: 5vw; padding-right: 5vw;">
-        This online Items management system stores all items of a company, providing a tabular view
-        of all items of a company alongwith spot total and net asset values of the company. New items
-        can be added, old items can be updated if needed or deleted if they are disposed off. Invoice 
-        printing facility provides a hard copy of all current items.
+        <P style="font-weight: 450; text-align: left; padding-left: 7vw; padding-right: 7vw; ">
+        This online Items management system stores all items of a company in cloud data base. It provides a tabular view
+        of all items of the company alongwith their spot total, Tax & net values. New items
+        can be added and old items can be updated/deleted from items database. Invoice printing facility provides a hard
+        copy of all current items of the company with their spot total values.
         </P>
         <div class="gap2vh"></div>
         <div>
@@ -234,13 +232,9 @@ grid-auto-flow: row;
 </div>  <!--  -------------------------------------------------END--of Grid         -----------     -->
 
 
-
-
-
-
- 
-<div class="gap4vh"></div>  
-<div class="gap4vh"></div>  
+<div class="gap2vh"></div> 
+<div style="background-color: white; color:black; font-weight: 450; font-size: clamp(1.0rem, 1.2vw, 1.3rem); border: 0.0vw solid lightgrey; text-align: center;">Add/Update Screen</div> 
+<div class="gap3vh"></div>  
 <div style="width: 100%; ">
  <!-- Input Form -->
   <input type="number" id="nbr" placeholder="No." style="width: 7%; height: 5vh; background-color: #a5dde6; text-align: center; font-weight: 500;"> 
@@ -253,8 +247,9 @@ grid-auto-flow: row;
 <button onclick="updateitem()" type="button" style="width: 6%; height: 5vh; text-align: center; font-weight: 500;">U</button>
 </div>
 
-<div class="gap4vh"></div>
-<div class="gap4vh"></div>  
+<div class="gap3vh"></div>
+<div style="background-color: white; color:black; font-weight: 450; font-size: clamp(1.1rem, 1.3vw, 1.4rem); border: 0.0vw solid lightgrey; text-align: center;">Items Table</div> 
+<div class="gap1vh"></div>  
 
   <!-- HTML Table For showing all records of database-->
 <div class="custom-table-container">
@@ -263,11 +258,11 @@ grid-auto-flow: row;
      
       <tr>
         <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">No.</th>
-        <th style="text-align: center; width: 30%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Name</th>
+        <th style="text-align: left; width: 30%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Name</th>
         <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Uis</th>
         <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Qty</th>
-        <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Price</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">value</th>
+        <th style="text-align: right; width: 8%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Price</th>
+        <th style="text-align: right; width: 10%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">value</th>
         <th style="text-align: center; width: 12%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Expiry</th>
         <th style="text-align: center; width: 18%; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Action</th>
       </tr>
