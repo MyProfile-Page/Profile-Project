@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault(), false);
+</script>
+
   <title>Firestore Table (IIS + Localhost)</title>
  <link rel="stylesheet" type="text/css" href="div-positioning-bootstrap2-styles.css" />
     <meta charset="UTF-8">
@@ -523,10 +528,6 @@ function isValidExpiryDate(expiry) {
   // Ensure parsed values match input
   return date.getFullYear() === year && date.getMonth() === month - 1;
 }
-
-
-
-
 
 
   // 🔹 DELETE (Remove Record)
