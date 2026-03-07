@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+  <title>Firestore Table (IIS + Localhost)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+  <style>
+ 
+
+   /* Firebase : website https://console.firebase.google.com your project in firebase =   */
+   /*   dashboard-cloud-db  your localhost project dashboard      */
+   /*    login = asadsaeed124@gmail.com pw asstnpw of 15/2/2026   */ 
+          
+
+ /*  https://console.firebase.google.com/   for firebase website  */
+ /*  No Gemini */
+ /*  No Google Analytic */
+ /*  hsmart-appl-pr */
+ /*  hsmart-appl-pr */
+ 
+
+ 
+
+  .body_cls {
+          background-color: red;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background: white;
+      /*    background: lightblue;    */
+          line-height: 0.8;         
+            }
+
+
+  
+ 
+.custom-table-container {
+    height: 76vh;        /* Fixed height */
+   
+     overflow-y: auto;     /* vertical scrollbar */
+    border: 0.0vw solid #ccc;
+    
+}
+
+@media (max-width: 768px) {
+.custom-table-container {
+  height: 76vh;        /* Fixed height */
+    
+     overflow-x: auto;     /* horizontal scrollbar */
+    border: 0.0vw solid #ccc;
+ 
+}
+}
+
+
+ .custom-table {
+    border-collapse: collapse;
+    table-layout: fixed; /* VERY IMPORTANT for percentage widths */
+    width: 98%;
+    font-family: Arial, sans-serif;
+    margin-top: 3vh; 
+    margin-left: 1vw; 
+    border: 0.01vw solid grey; /* Light grey borders */
+    
+}   
+
+   .custom-table tr:nth-child(even) {
+     background-color: #D6EEEE;
+     background-color: rgba(150, 212, 212, 0.4);
+ }
+
+ .custom-table td:nth-child(2) {
+     text-align: left;
+     
+ }
+
+  
+  .custom-table th {
+    background-color: #f2f2f2; /* Light gray background for header */
+   /* color: #333;  */
+    color:black;
+    background-color: #c5effd;
+    /* font-size: clamp(1.1rem, 1.3vw, 1.4rem);  */ 
+    font-size: 12px; 
+    font-weight: 400;
+    text-align: center;
+    border: 0.1vw solid lightgrey; /* Light grey borders */
+    padding: 1vw; /* Spacing inside cells */
+    height: 2vh; 
+
+
+  }
+
+  .custom-table tr {
+    background-color: white; /* Light gray background for header */
+    border: 0.1vw solid lightgrey; /* Light grey borders */    
+    height: 1.0vh;
+
+  }
+
+  .custom-table td {
+    /* background-color: #f2f2f2;  */ /* Light gray background for header */
+    /* color: #333;  */
+    font-size: clamp(0.5rem, 1.2vw, 1.3rem); 
+    font-weight: 500;
+    border: 0.1vw solid lightgrey; /* Light grey borders */
+    padding: 0.5vw; /* Spacing inside cells */
+    text-align: center;
+
+  }
+  
+  
+ .custom-table tr:hover { background-color: #e6f2ff;
+  }
+  
+ .custom-table button { 
+   padding: 0.3vw; 
+   height: 4vh;
+   font-size: clamp(0.5rem, 1.2vw, 1.3rem); 
+ }
+
+ .custom-table td:nth-child(5),
+ .custom-table td:nth-child(6) {
+  text-align: center;
+  }
+
+.custom-table tr:last-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #e6f2ff;
+  background-color: #f0f0f0;
+  border-top: 0.4vh solid #000;
+}
+
+ .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            gap: 2vw;
+            padding: 0.4vw;
+            grid-auto-rows: auto;
+        }
+
+ .grid-container > div {
+  border: 0.00vw solid red;
+  padding: 0.25vw;
+}
+
+.box {
+            background-color: #c5effd;
+            padding: 10vw;
+            text-align: center;
+            font-size: 20px;
+            border: 0.4vw solid steelblue;
+        }
+
+@media (max-width: 768px) {
+.grid-container {
+  display: grid;
+ grid-template-columns: 1fr; /* Stack vertically */
+grid-auto-flow: row;
+/* height: 90vh; */
+/* gap: 0.5vw; */
+ 
+}
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ }
+
+.gap1vh {
+  height: 1.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap2vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap3vh {
+  height: 3.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap4vh {
+  height: 4.0vh;  /* or any size you want; mobile = desktop */
+}
+
+
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: black; 
+font-style: italic;
+font-weight: 550;
+}
+
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+#menu-word-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  400;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+.menu-bar-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  200;
+  color: yellow; 
+  text-decoration: none; 
+  text-align: center;
+  border: none;
+}
+
+::placeholder {
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem); 
+  font-weight: 400;
+  color: black; 
+}
+
+  </style>
+</head><body class="body_cls">
+
+
+ <!-- 🌍 Navigation Bar Start -->
+<nav class="navbar " >
+  <div class="container-fluid" style ="background-color: white;">
+
+   <a class="navbar-brand Menubar-header" href="#" style="font-family: calibri; font-size: clamp(0.6rem, 1.5vw, 1.6rem); font-style: italic; Color: black; font-weight: 700;">Dashboard</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" style="border: none;"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon menu-bar-prp" ></span>
+   <!--   <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp" >Menu</span> -->
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+    
+
+        <li class="nav-item">
+       <!--   <a  class="nav-link aback" href="index.html" >Back</a> -->
+          <a class="nav-link " href="javascript:void(0)" onclick="guidealert()" style="font-weight: 400; font-size: clamp(0.6rem, 1.1vw, 1.2rem);">Help</a> 
+          <a class="nav-link " href="javascript:void(0)" onclick="contactalert()" style="font-weight: 400; font-size: clamp(0.6rem, 1.1vw, 1.2rem);">contact</a> 
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+  <!-- 🌍 Navigation Bar End --> 
+
+
+
+
+
+
+<div class="grid-container" style="border: 0.00vw solid green;">    <!-- Grid Div -->
+
+
+
+<!--  --------------------------------------------------START-secnd column of grid---------------------------------------     -->
+ 
+ <div class="box" style="border: 0.10vw solid green;">    <!-- 2nd Inner_div -->  
+   
+    <div style="text-align: center; margin-top: 1.6vh;  font-family: calibri; font-size: clamp(0.6rem, 1.2vw, 1.3rem); Color: black;">     
+        <div class="gap2vh"></div>
+        <h5 style="font-weight: 450;" >
+        Maya Enterprise
+        </h5>
+        <h5 style="font-weight: 450;" >
+        Items Catalog System
+        </h5>
+        <div class="gap1vh"></div>
+        <P style="font-size: clamp(0.6rem, 1.2vw, 1.3rem); font-weight: 400; text-align: left; padding-left: 6vw; padding-right: 6vw; ">
+        This online Items catalog system stores catalog information of all items of a company in the cloud data base. It provides a tabular view
+        of all items of the company alongwith their spot total, Tax & net values. New items
+        can be added in the catalog database and old items can be updated/deleted from catalog database. Invoice printing facility provides a hard
+        copy of all current items of the company with their spot total values.
+        </P>
+        <div class="gap1vh"></div>
+        <div>
+        <button type="button" onclick="printInvoice()"  style="height: 7vh; font-size: clamp(0.6rem, 1.2vw, 1.3rem); width: 20%; text-align: center; color: white; background-color: #1b3bb9;">Print Invoice</button>
+        </div>
+        <div class="gap3vh"></div>
+        <!--
+         <div>
+          <label style="margin-left: 1vw;">Tax %:</label>
+        <input type="number" id="taxRate" value="5" step="0.01" style="width: 6%; text-align: center;">
+        <button type="button" onclick="loadnewitemstable()">Recalculate</button>
+        </div>
+          -->
+   </div>
+
+ </div>
+
+<!--  -------------------------------------------------END--Second column of grid---------------------------------------------     -->
+<!--  -------------------------------------------------START--First column of grid---------------------------------------------     -->
+  <div class="box" style="border: 0.10vw solid green;">    <!-- Start First col of grid -->
+      <div style=" display: flex; justify-content: center; align-items: center;">
+       <div style=" width: 50%; height: 65%; margin-top: 2.4%;">
+       <img src="img-inventory9.png" class="responsive-img rounded" style="display: block;">   
+       </div>
+      </div>
+ </div>   
+ 
+<!--  -------------------------------------------------END--First column of grid---------------------------------------------     -->
+</div>  <!--  -------------------------------------------------END--of Grid         -----------     -->
+
+
+<div class="gap2vh"></div>
+<div style="display: flex; justify-content: center;">
+<div style="width: 98%; margin-left: 1vw;  ">
+ <!-- Input Form -->
+  <input type="number" id="nbr" placeholder="Item No." style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 8%; height: 4.5vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
+  <input type="text" id="name" placeholder="Item Name" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 28%; height: 4.5vh; background-color: #51DEED; text-align: left; font-weight: 400;">
+
+<input list="units" id="uis" name="a" placeholder="Unit" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 7%; height: 4.5vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
+<datalist id="units">
+  <option value="GR">
+  <option value="KM">
+  <option value="MR">
+   <option value="MM">
+  <option value="KG">
+  <option value="EA">
+  <option value="BX">
+  <option value="CM">
+  <option value="FT">
+  <option value="IN">
+  <option value="DZ">
+  <option value="PD">
+</datalist>  
+  <input type="number" id="qty" placeholder="Qty" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 7%; height: 4.5vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+  <input type="text" id="prc" placeholder="Price (in Cents)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 11%; height: 4.5vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+  <input type="text" id="exp" placeholder="Expiry (YYYY-MM)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 14%; height: 4.5vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+  <button onclick="additem()" type="button" style="width: 7.5%; height: 4.5vh;  text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem); ">Add</button>
+<button onclick="updateitem()" type="button" style="width: 7.5%; height: 4.5vh; text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem);">Upd</button>
+</div>
+</div>
+
+
+  <!-- HTML Table For showing all records of database-->
+<div id = "wholeitemTable" class="custom-table-container">
+  <table class="custom-table">
+    <thead>
+     
+      <tr>
+        <th style="text-align: center; width: 7%; ">No.</th>
+        <th style="text-align: left; width: 30%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>
+        <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
+        <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
+        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
+        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Expiry</th>
+        <th style="text-align: center; width: 16%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
+      </tr>
+    </thead>
+    <tbody id="itemTable">
+       <tr>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+        <td style="text-align: left; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+        <td style="text-align: cente; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem);"></td>
+      </tr>
+
+      
+     </tbody>
+  </table>
+ </div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { 
+  getFirestore, 
+  collection, 
+  query,
+  orderBy,
+  addDoc, 
+  setDoc,
+  getDocs, 
+  getDoc,
+  deleteDoc, 
+  doc,
+  updateDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCPjQ6I6XZ2EZGNRFi_1iQYZv5tjYFGdfk",
+  authDomain: "smart-appl-pr.firebaseapp.com",
+  projectId: "smart-appl-pr",
+  storageBucket: "smart-appl-pr.firebasestorage.app",
+  messagingSenderId: "491870622637",
+  appId: "1:491870622637:web:5364e766463c77c3094724"
+};
+
+
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  
+
+  
+
+
+// 🔹 CREATE (Insert Data)
+window.additem = async function () {
+
+  const name = document.getElementById("name").value;
+  const nbr = document.getElementById("nbr").value;
+  const uis = document.getElementById("uis").value;
+  const qty = document.getElementById("qty").value;
+  const prc = document.getElementById("prc").value;
+  const exp = document.getElementById("exp").value;
+  const ownerId = document.getElementById("name").value;
+
+  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || exp === "") {
+    alert("Please fill all fields");
+    return;
+  }
+
+  const expiryInput = document.getElementById("exp").value.trim();
+
+  if (!isValidExpiryDate(expiryInput)) {
+    alert("Please enter a valid expiry date in YYYY-MM format (e.g. 2026-03)");
+    return; // Stop update if invalid
+  }
+
+
+
+
+  try {
+
+    // 🔹 Use nbr as document ID
+    const docRef = doc(db, "newitemstable", nbr.toString());
+
+    // 🔹 Check if document already exists
+    const existingDoc = await getDoc(docRef);
+
+    if (existingDoc.exists()) {
+      alert("Item number already exists!");
+      return;
+    }
+
+    // 🔹 Create document with nbr as ID
+    await setDoc(docRef, {
+      name: name,
+      nbr: parseInt(nbr),
+      qty: parseInt(qty),
+      prc: parseInt(prc),
+      uis: uis,
+      exp: exp,
+      ownerId: ownerId,
+      createdAt: serverTimestamp()
+      // createdAt: new Date()
+    });
+
+    alert("Item added to Cloud Firestore!");
+    clearInputs();
+    loadnewitemstable(); // refresh table
+
+  } catch (error) {
+    console.error("Error adding item:", error);
+    alert("Error adding item. Check console.");
+  }
+};
+  // 🔹 READ (Load Data into Table)
+async function loadnewitemstable() {
+
+  const table = document.getElementById("itemTable");
+  table.innerHTML = "";
+
+  const collectionRef = collection(db, "newitemstable");
+  const q = query(collectionRef, orderBy("nbr", "asc"));
+
+  const querySnapshot = await getDocs(q);
+
+  let grandTotalCents = 0; // ✅ accumulator for grand total
+
+  querySnapshot.forEach((document) => {
+    const data = document.data();
+    const docId = document.id;
+
+    // Price (cents → dollars)
+    const dollarprice = formatCentsToDollars(data.prc);
+
+    // Row total (qty × price in cents)
+    const centvalue = calculatevalueincent(data.qty, data.prc);
+    const dollarvalue = formatCentsToDollars(centvalue);
+    // Add to grand total (SAFE integer math)
+    grandTotalCents += centvalue;
+
+ //   const displayTotal = formatCentsToDollars(grandTotalCents);
+
+    table.innerHTML += `
+      <tr>
+        <td>${data.nbr}</td>
+        <td>${data.name}</td>
+        <td>${data.uis}</td>
+        <td>${data.qty}</td>
+        <td>$${dollarprice}</td>
+        <td>$${dollarvalue}</td>
+        <td>${data.exp}</td>
+        <td>
+          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}')" style="font-weight: 500; font-size: clamp(0.5rem, 1.0vw, 1.1rem); height: 3vh;">Edit</button>
+          <button onclick="deleteitem('${docId}')" style="font-weight: 500; font-size: clamp(0.5rem, 1.0vw, 1.1rem); height: 3vh;">Delete</button>
+        </td>
+      </tr>
+    `;
+  });
+
+     // ✅ Convert grand total cents to dollars
+  const grandTotalDollar = formatCentsToDollars(grandTotalCents);
+
+  // ✅ Calculate Tax (example 13%)
+  const taxRate = 0.13;
+  const taxCents = Math.round(grandTotalCents * taxRate);
+  const taxDisplay = formatCentsToDollars(taxCents);
+
+  // ✅ Net Total
+  const netTotalCents = grandTotalCents + taxCents;
+  const netTotalDisplay = formatCentsToDollars(netTotalCents);
+
+  // ✅ Add Summary Rows (ALL TOGETHER)
+  table.innerHTML += `
+    <tr></tr>
+    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; ">
+      <td colspan="5" style="text-align: center; border: 0.1vw solid black;">Total Value of all items</td>
+      <td style="text-align: right; border: 0.1vw solid black;">$${grandTotalDollar}</td>
+      <td colspan="2" style="text-align: right; border: 0.1vw solid black;"></td>
+    </tr>
+
+    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; ">
+      <td colspan="5" style="text-align: center; border: 0.1vw solid black;">Total value of Tax@(13%)</td>
+      <td style="text-align: right; border: 0.1vw solid black;">$${taxDisplay}</td>
+      <td colspan="2" style="text-align: right; border: 0.1vw solid black;"></td>
+    </tr>
+
+    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; ">
+      <td colspan="5" style="text-align: center; border: 0.1vw solid black;">Net Value of all items</td>
+      <td style="text-align: right; border: 0.1vw solid black;">$${netTotalDisplay}</td>
+      <td colspan="2" style="text-align: right; border: 0.1vw solid black;"></td>
+    </tr>
+  `;
+
+}   // ✅ ONLY ONE closing bracket for function
+
+// 🔹 Guidefunction
+
+function guidealert() {
+  alert('At the start of the system, all items of the catalog are displayed ' +            
+        'in the item number sequence.\n ' +
+        '\n ' +
+        '1. Add a new item,\n ' + 
+        
+        '   Type new item details in the line at the top of your items table ' +
+        '   and then click the Add Item button which is also in the same line\n ' +
+        '\n ' +
+        '2. Changes details of any item,\n ' +
+        
+        '   click the update tab in the row of your items table where your ' + 
+        '   item is being displayed. It will bring all details of your' +  
+        '   selected item at the line which is on top of your items table,' + 
+        '   type needed changes and then click Upd Item button which is' + 
+        '   also in the same line\n ' +
+        '\n ' +        
+        '3. Delete an unwanted item,\n ' +
+         
+        '   select in items table the row of your item to be deleted' + 
+        '   then click Delete button of the row.\n ' + 
+        '\n ' +
+        '4. Print invoice,\n ' +
+        
+        '   click Print Invoice tab which is under your company name on' + 
+        '   this screen.');
+
+
+}
+window.guidealert = guidealert; // ⭐ IMPORTANT LINE
+
+function contactalert() {
+  alert("Email: ali_albader_alsalem@yahoo.com");
+
+}
+window.contactalert = contactalert; // ⭐ IMPORTANT LINE
+
+function myalert() {
+  alert("I am in print11 function.");
+
+}
+window.myalert = myalert; // ⭐ IMPORTANT LINE
+
+function formatCentsToDollars(cents) {
+  return (cents / 100).toFixed(2);
+}
+
+// 🔹 Itenm Value calculate func
+
+
+function calculatevalueincent(qty, prc) {
+  const q = parseInt(qty) || 0;
+  const p = parseInt(prc) || 0;
+  return q * p; // stays in cents (safe, no floating errors)
+}
+
+// Tax calculation functions
+
+function calculateTaxCents(grandTotalCents, taxPercent) {
+  const taxRate = parseFloat(taxPercent) || 0;
+  return Math.round((grandTotalCents * taxRate) / 100);
+}
+
+function calculateNetTotalCents(grandTotalCents, taxCents) {
+  return grandTotalCents + taxCents;
+}
+
+function isValidExpiryDate(expiry) {
+  // Check format using Regular Expression (YYYY-MM)
+  const regex = /^\d{4}-(0[1-9]|1[0-2])$/;
+
+  if (!regex.test(expiry)) {
+    return false; // Invalid format
+  }
+
+  // Optional: check if it is a real calendar date
+  const [year, month] = expiry.split("-").map(Number);
+
+  const date = new Date(year, month - 1); // month is 0-based in JS
+
+  // Ensure parsed values match input
+  return date.getFullYear() === year && date.getMonth() === month - 1;
+}
+
+
+  // 🔹 DELETE (Remove Record)
+  window.deleteitem = async function (id) {
+    await deleteDoc(doc(db, "newitemstable", id));
+    alert("item deleted from Firestore");
+    clearInputs();
+    loadnewitemstable();
+  };
+
+  // Clear input fields
+  function clearInputs() {
+    document.getElementById("name").value = "";
+    document.getElementById("nbr").value = "";
+    document.getElementById("qty").value = "";
+    document.getElementById("prc").value = "";
+    document.getElementById("exp").value = "";
+    document.getElementById("uis").value = "";
+    
+
+  }
+
+// Fill inputs when Edit button is clicked
+window.edititem = function (id, name, nbr, uis, qty, prc, exp) {
+  
+  document.getElementById("name").value = name;
+  document.getElementById("nbr").value = nbr;
+  document.getElementById("uis").value = uis;
+  document.getElementById("qty").value = qty;
+  document.getElementById("prc").value = prc;
+  document.getElementById("exp").value = exp;
+  
+
+
+  // Store document ID for update
+  window.currentEditId = id;
+};
+
+// Update record in Firestore
+window.updateitem = async function () {
+  if (!window.currentEditId) {
+    alert("Please select a record to edit first.");
+    return;
+  }
+
+  const name = document.getElementById("name").value;
+  const nbr = document.getElementById("nbr").value;
+  const uis = document.getElementById("uis").value;
+  const qty = document.getElementById("qty").value;
+  const prc = document.getElementById("prc").value;
+  const exp = document.getElementById("exp").value;
+
+
+
+  try {
+    await updateDoc(doc(db, "newitemstable", window.currentEditId), {
+      name: name,
+      nbr: parseInt(nbr),
+      qty: parseInt(qty),
+      prc: parseInt(prc),
+      exp: exp,
+      uis: uis
+    });
+
+    alert("item updated successfully!");
+    window.currentEditId = null;
+     clearInputs();
+    loadnewitemstable();
+  } catch (error) {
+    console.error("Update error:", error);
+  }
+};
+
+
+  // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
+  
+  loadnewitemstable();
+
+
+
+//  PRINT FUNCTION START
+
+function printInvoice() {
+  
+
+  const table = document.getElementById("wholeitemTable").outerHTML;
+
+  const printWindow = window.open('', '', 'width=900,height=700');
+
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Invoice</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 5vw;
+          }
+
+          h2 {
+            text-align: center;
+            margin-bottom: 5vw;
+          }
+
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+
+          th, td {
+            border: 0.1vw solid black;
+            padding: 2vw;
+            text-align: left;
+          }
+
+           td:nth-child(5),
+           td:nth-child(6) {
+            text-align: center;
+          }
+
+           td:nth-child(7),
+           td:nth-child(8) {
+            colspan="2";
+          }
+
+
+          th {
+             font-size: 60px;
+          }
+
+          .right {
+            text-align: right;
+          }
+
+          .center {
+            text-align: center;
+          }
+
+          .summary-row {
+            font-weight: bold;
+          }
+
+          @media print {
+            button {
+              display: none;
+              
+            }
+          }
+
+          @media print {
+            table th:last-child,
+            table td:last-child {
+            display: none;
+            }
+         }
+
+          @media print {
+            table th {
+            font-weight: 525;
+            font-size: 20px;
+            color: #3b021c;
+            
+            }
+         }
+
+        </style>
+      </head>
+      <body>
+
+        <h2>INVOICE</h2>
+
+        <p>
+          <strong>Date:</strong> ${new Date().toLocaleDateString()}<br>
+          <strong>Invoice #:</strong> INV-${Date.now()}
+        </p>
+        
+
+    
+        <table>
+          ${table}
+        </table>
+
+        <br>
+        <p style="text-align:center;">Thank you for your business!</p>
+
+      </body>
+    </html>
+  `);
+
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+  printWindow.close();
+}
+
+window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
+
+
+
+//  PRINT FUNCTION END
+
+
+
+</script>
+
+</body>
+</html>
