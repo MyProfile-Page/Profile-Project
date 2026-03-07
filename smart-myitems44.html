@@ -243,7 +243,7 @@ font-weight: 550;
 <nav class="navbar " >
   <div class="container-fluid" style ="background-color: white;">
 
-   <a class="navbar-brand Menubar-header" href="#" style="font-family: calibri; font-size: clamp(0.6rem, 1.5vw, 1.3rem); font-style: italic; Color: black; font-weight: 700;">Dashboard</a>
+   <a class="navbar-brand Menubar-header" href="#" style="font-family: calibri; font-size: clamp(0.6rem, 1.5vw, 1.6rem); font-style: italic; Color: black; font-weight: 700;">Dashboard</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button" style="border: none;"
@@ -264,8 +264,8 @@ font-weight: 550;
 
         <li class="nav-item">
        <!--   <a  class="nav-link aback" href="index.html" >Back</a> -->
-          <a class="nav-link " href="javascript:void(0)" onclick="guidealert()";>Help</a> 
-          <a class="nav-link " href="javascript:void(0)" onclick="contactalert()";>contact</a> 
+          <a class="nav-link " href="javascript:void(0)" onclick="guidealert()" style="font-weight: 400; font-size: clamp(0.6rem, 1.1vw, 1.2rem);">Help</a> 
+          <a class="nav-link " href="javascript:void(0)" onclick="contactalert()" style="font-weight: 400; font-size: clamp(0.6rem, 1.1vw, 1.2rem);">contact</a> 
         </li>
 
       </ul>
@@ -582,8 +582,8 @@ async function loadnewitemstable() {
 // 🔹 Guidefunction
 
 function guidealert() {
-  alert('At the start of the system, all items are displayed in the\n ' +            
-        'screen in the item number sequence.\n ' +
+  alert('At the start of the system, all items are displayed in the ' +            
+        'item number sequence.\n ' +
         '\n ' +
         '1. Add a new item,\n ' + 
         
