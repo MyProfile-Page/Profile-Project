@@ -336,10 +336,10 @@ font-weight: 550;
 <div style="display: flex; justify-content: center;">
 <div style="width: 98%; margin-left: 1vw;  ">
  <!-- Input Form -->
-  <input type="number" id="nbr" placeholder="Item No." style="width: 8%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
-  <input type="text" id="name" placeholder="Item Name" style="font-weight: 550; width: 28%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;">
+  <input type="number" id="nbr" placeholder="Item No." style="width: 8%; height: 4vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
+  <input type="text" id="name" placeholder="Item Name" style="font-weight: 550; width: 28%; height: 4vh; background-color: #51DEED; text-align: left; font-weight: 400;">
 
-<input list="units" id="uis" name="a" placeholder="Unit" style="width: 7%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
+<input list="units" id="uis" name="a" placeholder="Unit" style="width: 7%; height: 4vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
 <datalist id="units">
   <option value="GR">
   <option value="KM">
@@ -354,11 +354,11 @@ font-weight: 550;
   <option value="DZ">
   <option value="PD">
 </datalist>  
-  <input type="number" id="qty" placeholder="Qty" style="width: 7%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
-  <input type="text" id="prc" placeholder="Price (in Cents)" style="width: 11%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
-  <input type="text" id="exp" placeholder="Expiry (YYYY-MM)" style="width: 14%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
-  <button onclick="additem()" type="button" style="width: 8%; height: 5vh;  text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem); ">Adp</button>
-<button onclick="updateitem()" type="button" style="width: 8%; height: 5vh; text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem);">Upd</button>
+  <input type="number" id="qty" placeholder="Qty" style="width: 7%; height: 4vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+  <input type="text" id="prc" placeholder="Price (in Cents)" style="width: 11%; height: 4vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+  <input type="text" id="exp" placeholder="Expiry (YYYY-MM)" style="width: 14%; height: 4vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+  <button onclick="additem()" type="button" style="width: 7.5%; height: 4vh;  text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem); ">Adr</button>
+<button onclick="updateitem()" type="button" style="width: 7.5%; height: 4vh; text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem);">Upd</button>
 </div>
 </div>
 
@@ -537,7 +537,7 @@ async function loadnewitemstable() {
         <td>${data.exp}</td>
         <td>
           <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}')" style="font-weight: 500; font-size: clamp(0.5rem, 1.0vw, 1.1rem); height: 3vh;">Edit</button>
-          <button onclick="deleteitem('${docId}')" style="font-weight: 500; font-size: clamp(0.5rem, 1.0vw, 1.1rem); height: 3vh;">Deletp</button>
+          <button onclick="deleteitem('${docId}')" style="font-weight: 500; font-size: clamp(0.5rem, 1.0vw, 1.1rem); height: 3vh;">Deletk</button>
         </td>
       </tr>
     `;
