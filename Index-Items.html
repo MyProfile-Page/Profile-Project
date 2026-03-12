@@ -1,0 +1,302 @@
+﻿ 
+
+
+<html class = "html_cls";>
+
+<!--  To test application on varoius screen reolutions https://screenfly.org/ -->
+<!--  1. Services  2. Products or Skills  3. Addrese are three good headers for company e-profile -->
+<!--  1. category or sector for companies instead title -->
+<!--  1THIS VERSION RUNNING CORRECTLY -->
+
+     
+  <head>
+    <!-- ✅ Bootstrap 5 CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     
+    
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  
+ 
+    <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+   <title></title>
+ <style>
+ 
+
+   /* Firebase : website https://console.firebase.google.com your project in firebase =   */
+   /*   dashboard-cloud-db  your localhost project dashboard      */
+   /*    login = asadsaeed124@gmail.com pw asstnpw of 15/2/2026   */ 
+          
+
+ /*  https://console.firebase.google.com/   for firebase website  */
+ /*  No Gemini */
+ /*  No Google Analytic */
+ /*  hsmart-appl-pr */
+ /*  hsmart-appl-pr */
+ 
+
+ 
+
+  .body_cls {
+          background-color: red;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background: white;
+          background-color: #c5effd;
+          background-color: #f5f4a6;
+      /*    background: lightblue;    */
+          line-height: 0.8;         
+            }
+
+
+  
+ 
+
+ .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            gap: 2vw;
+            padding: 0.4vw;
+            grid-auto-rows: auto;
+        }
+
+ .grid-container > div {
+  border: 0.00vw solid red;
+  padding: 0.25vw;
+}
+
+.box {
+          /*  background-color: #c5effd;  */
+            padding: 10vw;
+            text-align: center;
+            font-size: 20px;
+            border: 0.4vw solid steelblue;
+        }
+
+@media (max-width: 768px) {
+.grid-container {
+  display: grid;
+ grid-template-columns: 1fr; /* Stack vertically */
+grid-auto-flow: row;
+/* height: 90vh; */
+/* gap: 0.5vw; */
+ 
+}
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ }
+
+.gap1vh {
+  height: 1.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap2vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap3vh {
+  height: 3.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap4vh {
+  height: 4.0vh;  /* or any size you want; mobile = desktop */
+}
+
+
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: white; 
+font-style: italic;
+font-weight: 550;
+}
+
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+#menu-word-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  400;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+.menu-bar-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  200;
+  color: yellow; 
+  text-decoration: none; 
+  text-align: center;
+  border: none;
+}
+
+
+
+  </style>
+   
+</head>
+
+<body class = "body_cls"; font-family: 'Poppins', sans-serif; >
+
+  <!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Dashboard</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Items Catalog Management System</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      
+    
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item">
+          <a class="nav-link " href="Items-DataBase.html" >Items DataBase</a>
+        </li>      
+       <li class="nav-item">
+          <a id = "guide" class="nav-link aback" href="guide-codes.html" >Guide</a>
+        </li>      
+      
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+
+
+
+<div class="grid-container" style="border: 0.00vw solid green; width: 98%; border: 0.0vw solid black; margin: 0 auto;">    <!-- Grid Div -->
+
+
+
+<!--  --------------------------------------------------START-secnd column of grid---------------------------------------     -->
+ 
+ <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- 2nd Inner_div -->  
+   
+    <div style="text-align: center; margin-top: 1.6vh;  font-family: calibri; font-size: clamp(0.6rem, 1.2vw, 1.3rem); Color: black;">     
+        <div class="gap2vh"></div>
+        <h5 style="font-weight: 550; font-family: calibri; font-size: clamp(0.7rem, 1.5vw, 1.6rem);" >
+        Introduction
+        </h5>
+       
+        <div class="gap1vh"></div>
+        <div class="gap1vh"></div>
+        <P style="font-size: clamp(0.6rem, 1.2vw, 1.3rem); font-weight: 400; text-align: left; padding-left: 4vw; padding-right: 4vw; ">
+       
+        Create and manage, your items on a cloud database through entering few basic item details such as Category, Manufacturer, supplier, Number, Name, Unit, Price, Quantity, Reorder level, Expiry Date, etc.
+        of your company's items. The system displays on screen all catalog items of the company in a table with a facility to add or update or delete items right in the the display table itself.
+        Additionally a hard copy of the all catalog items can also be printed. The system is available on all medias such as laptop, desktop and mobile phones and needs just an internet connection. 
+
+        
+       
+         <div style=" width: 75%; height: auto; margin-top: 2%;  margin-bottom: 4vh; margin: 0 auto;">
+       <img src="img-inventory9.png" class="responsive-img rounded" style="display: block;">   
+       </div>
+        <!--
+         <div>
+          <label style="margin-left: 1vw;">Tax %:</label>
+        <input type="number" id="taxRate" value="5" step="0.01" style="width: 6%; text-align: center;">
+        <button type="button" onclick="loadnewitemstable()">Recalculate</button>
+        </div>
+          -->
+   </div>
+
+ </div>
+
+<!--  -------------------------------------------------END--Second column of grid---------------------------------------------     -->
+<!--  -------------------------------------------------START--First column of grid---------------------------------------------     -->
+  <div class="box" style="border: 0.00vw solid green; width: 85%; margin: 0 auto;">    <!-- Start First col of grid -->
+      <div style=" display: flex; justify-content: center; align-items: center;">
+       <div style=" width: 100%; height: auto; margin-top: 15vh;  ">
+       <img src="WH5.png" class="responsive-img rounded" style="display: block;">   
+       </div>
+      </div>
+ </div>   
+ 
+<!--  -------------------------------------------------END--First column of grid---------------------------------------------     -->
+</div>  <!--  -------------------------------------------------END--of Grid         -----------     -->
+</div>
+
+<div class="gap2vh"></div>
+
+
+
+  <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <script>
+// 🔹 Guidefunction
+
+function guidealert() {
+  alert('At the start of the system, all items of the catalog are displayed ' +            
+        'in the item number sequence.\n ' +
+        '\n ' +
+        '1. Add a new item,\n ' + 
+        
+        '   Type new item details in the line at the top of your items table ' +
+        '   and then click the Add Item button which is also in the same line\n ' +
+        '\n ' +
+        '2. Change details of any item,\n ' +
+        
+        '   click the update tab in the row of your items table where your ' + 
+        '   item is being displayed. It will bring all details of your' +  
+        '   selected item at the line which is on top of your items table,' + 
+        '   type needed changes and then click Upd Item button which is' + 
+        '   also in the same line\n ' +
+        '\n ' +        
+        '3. Delete an unwanted item,\n ' +
+         
+        '   select in items table the row of your item to be deleted' + 
+        '   then click Delete button of the row.\n ' + 
+        '\n ' +
+        '4. Print invoice,\n ' +
+        
+        '   click Print Invoice tab which is under your company name on' + 
+        '   this screen.');
+
+
+}
+
+function contactalert() {
+  alert("Email: ali_albader_alsalem@yahoo.com");
+
+}
+
+
+function myalert() {
+  alert("I am in print11 function.");
+
+}
+
+</script> 
+      
+</body>
+</html>
