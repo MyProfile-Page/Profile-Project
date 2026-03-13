@@ -289,6 +289,21 @@ font-weight: 550;
  text-align: center; 
 }
 }
+
+.input-field {
+ font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+ height: 6vh;
+ background-color: #51DEED;  
+ font-weight: 450; 
+}
+@media (max-width: 768px) {
+.input-field {
+ font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+ height: 4vh;
+ background-color: #51DEED;  
+ font-weight: 500; 
+}
+}
   </style>
 </head><body class="body_cls">
 
@@ -318,10 +333,10 @@ font-weight: 550;
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" id="nbr" placeholder="Item No." style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 8%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
+  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 8%; text-align: center;"> 
   
 
-   <input list="ctgs" id="ctg" name="actg" placeholder="Item Category" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 30%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;" required>
+   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 30%; text-align: left;" required>
    <datalist id="ctgs">
    <option value="Electrical Items">
    <option value="Chemical Items">
@@ -333,8 +348,8 @@ font-weight: 550;
    <option value="Furniture">
    <option value="Crokeries">
  </datalist>   
- <input type="text" id="name" placeholder="Item Name" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 31%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;">
-<input list="units" id="uis" name="auis" placeholder="Unit" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 7%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
+ <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 31%; text-align: left;">
+<input list="units" class="input-field" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;">
 <datalist id="units">
   <option value="GR">
   <option value="KM">
@@ -349,14 +364,14 @@ font-weight: 550;
   <option value="DZ">
   <option value="PD">
 </datalist>
-<input type="text" id="prc" placeholder="Price(in Cents)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+<input type="text" class="input-field" id="prc" placeholder="Price(in Cents)" style="width: 15%; text-align: center;">
  
 </div>
 
 
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="sups" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 30%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;" required>
+<input list="sups" class="input-field" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 30%; text-align: left;" >
  <datalist id="sups">
    <option value="Mazda Canada">
    <option value="Magna International">
@@ -365,29 +380,29 @@ font-weight: 550;
    <option value="Suncor Canada">
    <option value="L3Harris Wescam Canada">
  </datalist>   
-<input list="imps" id="imp" name="aimp" placeholder="Importance" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
+<input list="imps" class="input-field" id="imp" name="aimp" placeholder="Importance" style="width: 15%; text-align: center;" >
  <datalist id="imps">
    <option value="Strategic">
    <option value="Non-Strategic">
  </datalist>   
-  <input list="cons" id="con" name="acon" placeholder="Consumable/Permanent" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
+  <input list="cons" class="input-field" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 15%; text-align: center;" >
   <datalist id="cons">
    <option value="Consumable">
    <option value="Permanent">
  </datalist>   
 
 
-  <input type="number" id="qty" placeholder="Qty" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 11%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+  <input type="number" class="input-field" id="qty" placeholder="Qty" style="width: 11%; text-align: center;">
 
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-   <input type="number" id="rol" placeholder="Reorder Lvl(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
-  <input type="number" id="mnl" placeholder="Minimum Lvl(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">   
-  <input type="text" id="exp" placeholder="Expiry(yyyy-mm)(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 16%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
-  <input type="text" id="lmd" placeholder="Last Mvnt DT(yyyy-mm-dd)(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 20%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
-  <button onclick="additem()" type="button" style="width: 7.5%; height: 6vh;  text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem); ">Add</button>
-  <button onclick="updateitem()" type="button" style="width: 7.5%; height: 6vh; text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem);">Update</button>
+   <input type="number" class="input-field" id="rol" placeholder="Reorder Lvl(optional)" style="width: 15%; text-align: center;"> 
+  <input type="number" class="input-field" id="mnl" placeholder="Minimum Lvl(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">   
+  <input type="text" class="input-field" id="exp" placeholder="Expiry(yyyy-mm)(optional)" style="width: 16%; text-align: center;">
+  <input type="text" class="input-field" id="lmd" placeholder="Last Mvnt DT(yyyy-mm-dd)(optional)" style="width: 20%; text-align: center; ">
+  <button class="input-field" onclick="additem()" type="button" style="width: 7.5%; text-align: center; background-color: #eaebc3;">Add</button>
+  <button class="input-field" onclick="updateitem()" type="button" style="width: 7.5%; text-align: center; background-color: #eaebc3;">Update</button>
 </div>
 <div class="gap3vh"></div>
 </div>
