@@ -280,8 +280,8 @@ font-weight: 550;
 
 @media (max-width: 768px) {
 .items-add-upd  {
- font-size: clamp(1.7rem, 2.3vw, 2.5rem);
- font-weight: 600;
+ font-size: clamp(1.7rem, 2.1vw, 2.3rem);
+ font-weight: 500;
  width: 98%; 
  border: 0.0vw solid black;
  margin: 0 auto; 
@@ -333,7 +333,7 @@ font-weight: 550;
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 9%; text-align: center;"> 
+  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 10%; text-align: center;"> 
   
 
    <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 30%; text-align: left;" required>
@@ -364,7 +364,7 @@ font-weight: 550;
   <option value="DZ">
   <option value="PD">
 </datalist>
-<input type="text" class="input-field" id="prc" placeholder="Price(in Cents)" style="width: 15%; text-align: center;">
+<input type="text" class="input-field" id="prc" placeholder="Price(in Cents)" style="width: 16%; text-align: center;">
  
 </div>
 
@@ -385,7 +385,7 @@ font-weight: 550;
    <option value="Strategic">
    <option value="Non-Strategic">
  </datalist>   
-  <input list="cons" class="input-field" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 20%; text-align: center;" >
+  <input list="cons" class="input-field" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 24%; text-align: center;" >
   <datalist id="cons">
    <option value="Consumable">
    <option value="Permanent">
@@ -397,12 +397,12 @@ font-weight: 550;
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-   <input type="number" class="input-field" id="rol" placeholder="Reorder Lvl(optional)" style="width: 20%; text-align: center;"> 
-  <input type="number" class="input-field" id="mnl" placeholder="Minimum Lvl(optional)" style="width: 20%; text-align: center;">   
-  <input type="text" class="input-field" id="exp" placeholder="Expiry(yyyy-mm)(optional)" style="width: 16%; text-align: center;">
-  <input type="text" class="input-field" id="lmd" placeholder="Last Mvnt DT(yyyy-mm-dd)(optional)" style="width: 23%; text-align: center; ">
+   <input type="number" class="input-field" id="rol" placeholder="Reorder Level" style="width: 18%; text-align: center;"> 
+  <input type="number" class="input-field" id="mnl" placeholder="Minimum Level" style="width: 18%; text-align: center;">   
+  <input type="text" class="input-field" id="exp" placeholder="Expiry(yyyy-mm)(optional)" style="width: 18%; text-align: center;">
+  <input type="text" class="input-field" id="lmd" placeholder="Last Mvnt DT(yyyy-mm-dd)(optional)" style="width: 25%; text-align: center; ">
   <button class="input-field" onclick="additem()" type="button" style="width: 9%; text-align: center; background-color: #eaebc3;">Add</button>
-  <button class="input-field" onclick="updateitem()" type="button" style="width: 9%; text-align: center; background-color: #eaebc3;">Update</button>
+  <button class="input-field" onclick="updateitem()" type="button" style="width: 11%; text-align: center; background-color: #eaebc3;">Update</button>
 </div>
 <div class="gap3vh"></div>
 </div>
