@@ -1,0 +1,197 @@
+﻿ 
+
+
+<html class = "html_cls";>
+
+<!--  To test application on varoius screen reolutions https://screenfly.org/ -->
+
+<head>
+     
+  <head>
+    <!-- ✅ Bootstrap 5 CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="guide-styles-inventory.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">  
+    <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   
+</head>
+<body class = "body_cls";>
+
+  <!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header bar" href="#"></a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon menu-bar-prp"></span>
+     <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
+      <span id = "apl-hdr" class="navbar-brand navbar-center" href="#"></span>
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav" >
+      <ul id="ul_top_hypers" class="navbar-nav ms-auto">
+         
+   
+        <li class="nav-item">
+           <a id = "Back" class="nav-link aback" href="Index-Items.html">Back</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+<div class="gap14vh"></div>
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="custom-container col-11 col-sm-10 col-md-8 col-lg-6 col-xl-8">
+   
+   
+   <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
+
+        <div id="R1" class="row">
+            <div id="R1_D1" class="col-sm-12"> 
+                  <img src="guide-image-inventory.png" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+            </div>  
+            
+       </div>  
+       
+        
+
+   <!-- FIRST ROW ENDS -->
+
+   <!-- SECOND  ROW (Two columns) ) One image in first column and one header & one Paragraph in second column -->   
+       <br>
+       <div id="R2" class="row">
+                  
+           <div id="R2_D1" class="col-sm-12">
+                
+                 <p id="P1" ></p>
+                <p id="P2" ></p>
+                
+               
+          </div>
+
+  
+     <!-- SECOND ROW ENDS -->   
+
+  
+      
+       </div>
+   </div>
+ </div>
+
+
+  <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <script>
+window.addEventListener('load', () => {
+        const website = localStorage.getItem('website');
+        console.log(website);
+      }); 
+
+        //
+       //   alert("Right-click is disabled on this page.");
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();     
+    });
+        
+        // Change Text of a PARAGRAPH
+
+
+
+
+
+  if (localStorage.getItem("website") === "s2") {
+
+        document.getElementById("Back").innerHTML = 'Geri'; 
+        document.getElementById("apl-hdr").textContent = 'Şirketimiz';
+                                                     
+      
+
+       document.getElementById('P1').innerHTML = 'biz kimiz: ';       
+ //      document.getElementById('P1').innerHTML = localStorage.getItem('website');                                                                                                       
+                                                         
+       document.getElementById('P2').innerHTML = '<Normal> ' + 
+
+'Biz, internetin geniş ağında kendi dijital kimliklerine sahip olmak isteyen ve web varlığı bulunmayan bireylere ücretsiz ' + 
+'web profilleri ve işletmelere ücretsiz web siteleri sağlayan küçük bir yazılım mühendisleri grubuyuz. Herhangi bir sosyal ' + 
+'medya platformuna katılmış olan bireyler ve mikro işletmeler de, kendilerine ait ek ve benzersiz bir web sitesi/web ' + 
+'profiline sahip olarak ücretsiz teklifimizden yararlanabilirler. HİZMETLERİMİZ ÜCRETSİZDİR. ' +                                                                                                                                                            
+                                                        '</Normal>';
+    
+  }       
+
+     if (localStorage.getItem("website") === "s1") {
+    
+       
+                                                                                                               
+       document.getElementById("apl-hdr").textContent = 'Managing Items DataBase';
+       
+
+       document.getElementById('P1').innerHTML = 'Data Entry Instructions: ';       
+ //      document.getElementById('P1').innerHTML = localStorage.getItem('website');                                                                                                       
+       document.getElementById('P2').style.whiteSpace = 'pre-line';                                                  
+       document.getElementById('P2').innerHTML = '<Normal> ' +
+        'The system welcome screen directs user to proceed to items data\n  ' +            
+        'base or system Guide through menu icon at top right of welcome screen.\n ' +
+        'Following functions can be done at Items DataBase screen.\n\n ' +
+        '1. Add a new item:\n\n ' + 
+        '   Type new item details in the Items Add/Update Input form\n ' +
+        '   and then click the Add Item button in the form.\n\n ' +
+        '2. Change details of any item:\n\n ' +        
+        '   click the update tab in the row of your items table where your\n ' + 
+        '   item is being displayed. It will bring all details of your\n' +  
+        '   selected item at Items Add/Update input form,\n' + 
+        '   type needed changes and then click Update Item button which is\n' + 
+        '   also in the form.\n\n ' +
+        ' ' +        
+        '3. Delete an unwanted item:\n\n ' +
+         
+        '   select in items Display Grid the row of your item to be deleted\n' + 
+        '   then click Delete button of the row.\n\n' + 
+        '\n ' +
+        '4. Print invoice:\n\n ' +
+        
+        '   click Print Invoice link which is at the topright corner of\n ' + 
+        '   Items DataBase screen.' +
+        '</Normal>';
+    
+        
+       }
+
+       //
+       //   p8 = p5   p6 = p1   p1 = p2    
+
+       //
+       //
+       // 
+       // Change src path of an IMAGE
+      //  document.getElementById("I1").src = "https://tse2.mm.bing.net/th?id=OIP.5U5m3oYK1fVc7Ma2xUjCqQHaD-&pid=Api&P=0&h=180";  
+       //
+       //   
+                      
+    </script>
+      
+     
+      
+</body>
+</html>

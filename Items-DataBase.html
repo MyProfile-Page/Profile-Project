@@ -92,20 +92,16 @@
     background-color: #f2f2f2; /* Light gray background for header */
    /* color: #333;  */
     color:black;
-    background-color: #c5effd;        
-
-    text-align: center;
-    border: 0.1vw solid lightgrey; /* Light grey borders */
-    padding: 1vw; /* Spacing inside cells */
-    height: 2vh; 
-
+    background-color: #c5effd;  
+    height: 6vh;      
+  
 
   }
 
   .custom-table tr {
     background-color: white; /* Light gray background for header */
     border: 0.05vw solid lightgrey; /* Light grey borders */    
-    height: 0.7vh;
+    height: 3vh;
 
   }
 
@@ -114,7 +110,7 @@
     /* color: #333;  */
     
     border: 0.05vw solid lightgrey; /* Light grey borders */
-    padding: 0.5vw; /* Spacing inside cells */
+    padding: 0.0vw; /* Spacing inside cells */
     text-align: center;
 
   }
@@ -295,17 +291,28 @@ font-weight: 550;
 
 
 
-
+ <!-- Input Form -->
 <div class="gap3vh"></div>
 <div style="font-size: clamp(0.7rem, 1.5vw, 1.6rem); font-weight: 650; width: 98%; border: 0.0vw solid black; margin: 0 auto; justify-content: center; text-align: center; "> Items Add/Update Input Form
-
 <div class="gap3vh"></div>
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<!-- <div style="width: 97%; margin-left: 1vw; border: 0.1vw solid black; margin-left: auto; margin-right: auto; ">  -->
- <!-- Input Form -->
-  <input type="number" id="nbr" placeholder="Item No." style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 8%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
-  <input type="text" id="name" placeholder="Item Name" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 31%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;">
 
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  <input type="number" id="nbr" placeholder="Item No." style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 8%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
+  
+
+   <input list="ctgs" id="ctg" name="actg" placeholder="Item Category" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 30%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;" required>
+   <datalist id="ctgs">
+   <option value="Electrical Items">
+   <option value="Chemical Items">
+   <option value="Plants & Vegetables">
+   <option value="Dairy Items">
+   <option value="Hard Metal Items">
+   <option value="Plastic Items">
+   <option value="Wooden Items">
+   <option value="Furniture">
+   <option value="Crokeries">
+ </datalist>   
+ <input type="text" id="name" placeholder="Item Name" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 31%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;">
 <input list="units" id="uis" name="auis" placeholder="Unit" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 7%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
 <datalist id="units">
   <option value="GR">
@@ -321,19 +328,14 @@ font-weight: 550;
   <option value="DZ">
   <option value="PD">
 </datalist>
-   <input list="ctgs" id="ctg" name="actg" placeholder="Item Category" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 30%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
-   <datalist id="ctgs">
-   <option value="Electrical Items">
-   <option value="Chemical Items">
-   <option value="Plants & Vegetables">
-   <option value="Dairy Items">
-   <option value="Hard Metal Items">
-   <option value="Plastic Items">
-   <option value="Wooden Items">
-   <option value="Furniture">
-   <option value="Crokeries">
- </datalist>   
-<input list="sups" id="sup" name="asup" placeholder="Item Supplier" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 30%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
+<input type="text" id="prc" placeholder="Price(in Cents)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+ 
+</div>
+
+
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<input list="sups" id="sup" name="asup" placeholder="Manuf/Supplr" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 30%; height: 6vh; background-color: #51DEED; text-align: left; font-weight: 400;" required>
  <datalist id="sups">
    <option value="Mazda Canada">
    <option value="Magna International">
@@ -342,15 +344,6 @@ font-weight: 550;
    <option value="Suncor Canada">
    <option value="L3Harris Wescam Canada">
  </datalist>   
- 
-</div>
-
-
-
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<!-- <div style="width: 97%; margin-left: 1vw; border: 0.1vw solid black; margin-left: auto; margin-right: auto; ">  -->
- <!-- Input Form -->
- 
 <input list="imps" id="imp" name="aimp" placeholder="Importance" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;" required>
  <datalist id="imps">
    <option value="Strategic">
@@ -362,19 +355,15 @@ font-weight: 550;
    <option value="Permanent">
  </datalist>   
 
-<input type="text" id="prc" placeholder="Price(in Cents)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+
   <input type="number" id="qty" placeholder="Qty" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 11%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
- <input type="number" id="rol" placeholder="Reorder Lvl(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
-  <input type="number" id="mnl" placeholder="Minimum Lvl(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">   
-  <input type="text" id="exp" placeholder="Expiry(yyyy-mm)(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 16%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
+
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<!-- <div style="width: 97%; margin-left: 1vw; border: 0.1vw solid black; margin-left: auto; margin-right: auto; ">  -->
- <!-- Input Form -->
- 
- 
- 
+   <input type="number" id="rol" placeholder="Reorder Lvl(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;"> 
+  <input type="number" id="mnl" placeholder="Minimum Lvl(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 15%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">   
+  <input type="text" id="exp" placeholder="Expiry(yyyy-mm)(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 16%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
   <input type="text" id="lmd" placeholder="Last Mvnt DT(yyyy-mm-dd)(optional)" style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); width: 20%; height: 6vh; background-color: #51DEED; text-align: center; font-weight: 400;">
   <button onclick="additem()" type="button" style="width: 7.5%; height: 6vh;  text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem); ">Add</button>
   <button onclick="updateitem()" type="button" style="width: 7.5%; height: 6vh; text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem);">Update</button>
@@ -392,7 +381,7 @@ font-weight: 550;
 
 
 
-<div style="font-size: clamp(0.7rem, 1.5vw, 1.6rem); font-weight: 650; width: 97%; border: 0.0vw solid black; margin: 0 auto; text-align: center;"> Items Display Table
+<div style="font-size: clamp(0.7rem, 1.5vw, 1.6rem); font-weight: 650; width: 97%; border: 0.0vw solid black; margin: 0 auto; text-align: center;"> Items Display Grid
 
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -408,7 +397,7 @@ font-weight: 550;
         <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
         <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
       
-        <th style="padding: 0.5vw; text-align: left; width: 23%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Additional Details</th>
+        <th style="padding: 0.0vw; text-align: left; width: 23%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Additional Details</th>
       </tr>
     </thead>
     <tbody id="itemTable">
@@ -581,7 +570,7 @@ async function loadnewitemstable() {
  //   const displayTotal = formatCentsToDollars(grandTotalCents);
 
     table.innerHTML += `
-      <tr style="height: 2vh;">
+      <tr style="height: 3vh;">
         <td style="font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
         <td style="font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.name}</td>
         <td style="font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.sup}</td>
@@ -594,38 +583,38 @@ async function loadnewitemstable() {
         
       </tr>
 
-   <tr style="height: 2vh;">
+   <tr style="height: 3vh;">
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Durability:&nbsp&nbsp${data.con}</td>
       </tr>
 
-    <tr style="height: 2vh;">
+    <tr style="height: 3vh;">
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Importance:&nbsp&nbsp${data.imp}</td>
       </tr>
    
 
-      <tr style="height: 2vh;">
+      <tr style="height: 3vh;">
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Reorder levl:&nbsp&nbsp${data.rol}</td>
       </tr>
 
-      <tr style="height: 2vh;"> 
+      <tr style="height: 3vh;"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Minimum levl:&nbsp&nbsp${data.mnl}</td>
       </tr>
 
-       <tr style="height: 2vh;"> 
+       <tr style="height: 3vh;"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Last Mvnt:&nbsp&nbsp${data.lmd}</td>
       </tr>
 
-       <tr style="height: 2vh;">  
+       <tr style="height: 3vh;">  
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Item Expiry:&nbsp&nbsp${data.exp}</td>
       </tr>
 
-       <tr class="no-print" style="height: 5vh;"> 
+       <tr class="no-print" style="height: 4vh;"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>
         <td style="border: 0.0vw solid black; text-align: center;">
 
@@ -675,31 +664,31 @@ async function loadnewitemstable() {
 // 🔹 Guidefunction
 
 function guidealert() {
-  alert('At the start of the system, all items of the catalog are displayed ' +            
-        'in the item number sequence.\n ' +
-        '\n ' +
+  alert('The system welcome screen directs user to proceed to items data  ' +            
+        'base or system Guide through menu icon at top right of welcome screen.\n ' +
+        'Following functions can be done at Items DataBase screen\n ' +
         '1. Add a new item,\n ' + 
         
-        '   Type new item details in the line at the top of your items table ' +
-        '   and then click the Add Item button which is also in the same line\n ' +
+        '   Type new item details in the Items Add/Update Input form ' +
+        '   and then click the Add Item button in the form\n ' +
         '\n ' +
         '2. Change details of any item,\n ' +
         
         '   click the update tab in the row of your items table where your ' + 
         '   item is being displayed. It will bring all details of your' +  
-        '   selected item at the line which is on top of your items table,' + 
-        '   type needed changes and then click Upd Item button which is' + 
-        '   also in the same line\n ' +
+        '   selected item at Items Add/Update input form,' + 
+        '   type needed changes and then click Update Item button which is' + 
+        '   also in the form\n ' +
         '\n ' +        
         '3. Delete an unwanted item,\n ' +
          
-        '   select in items table the row of your item to be deleted' + 
+        '   select in items Display Grid the row of your item to be deleted' + 
         '   then click Delete button of the row.\n ' + 
         '\n ' +
         '4. Print invoice,\n ' +
         
-        '   click Print Invoice tab which is under your company name on' + 
-        '   this screen.');
+        '   click Print Invoice link which is at the topright corner of ' + 
+        '   Items DataBase screen.');
 
 
 }
