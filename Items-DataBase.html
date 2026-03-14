@@ -252,6 +252,14 @@ font-weight: 550;
   font-size: clamp(0.5rem, 1.0vw, 1.1rem); 
   font-weight: 400;
   color: black; 
+  background-color: #E6E6FA;
+  text-align: center;
+}
+
+
+
+::webkit-placeholder {
+  text-align: center;
 }
 
 .pr-bk-links {
@@ -315,7 +323,9 @@ font-weight: 550;
 .input-field {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 6vh;
- background-color: #51DEED;  
+ background-color: #51DEED; 
+ background-color: LightYellow;  
+ background-color: #E6E6FA;
  font-weight: 450; 
 }
 @media (max-width: 768px) {
@@ -325,6 +335,11 @@ font-weight: 550;
  background-color: #51DEED;  
  font-weight: 600; 
 }
+}
+
+
+.input-field::placeholder{
+  text-align: center;
 }
   </style>
 </head><body class="body_cls">
@@ -355,10 +370,10 @@ font-weight: 550;
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 10%; text-align: center;"> 
+  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 9%; text-align: center;" > 
   
 
-   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 30%; text-align: left;" required>
+   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 30%; text-align: left;">
    <datalist id="ctgs">
    <option value="Electrical Items">
    <option value="Chemical Items">
@@ -423,8 +438,8 @@ font-weight: 550;
   <input type="number" class="input-field" id="mnl" placeholder="Minimum Level" style="width: 18%; text-align: center;">   
   <input type="text" class="input-field" id="exp" placeholder="Expiry (yyyy-mm)" style="width: 18%; text-align: center;">
   <input type="text" class="input-field" id="lmd" placeholder="Last Mvnt Dt (yyyy-mm-dd)" style="width: 25%; text-align: center; ">
-  <button class="input-field" onclick="additem()" type="button" style="width: 9%; text-align: center; background-color: #f0f0f0;">Add</button>
-  <button class="input-field" onclick="updateitem()" type="button" style="width: 11%; text-align: center; background-color: #f0f0f0; ">Update</button>
+  <button class="input-field" onclick="additem()" type="button" style="width: 9%; text-align: center; background-color: LightYellow;">Add</button>
+  <button class="input-field" onclick="updateitem()" type="button" style="width: 11%; text-align: center; background-color: LightYellow; ">Update</button>
 </div>
 <div class="gap3vh"></div>
 </div>
@@ -698,19 +713,19 @@ async function loadnewitemstable() {
   // ✅ Add Summary Rows (ALL TOGETHER)
   table.innerHTML += `
     <tr></tr>
-    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; ">
+    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 6vh; ">
       <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
-    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; ">
+    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 6vh;">
       <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${taxDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
-    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; ">
+    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 6vh; ">
       <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
