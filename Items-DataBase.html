@@ -116,11 +116,7 @@
  .custom-table tr:hover { background-color: #e6f2ff;
   }
   
- .custom-table button { 
-   padding: 0.3vw; 
-   height: 4vh;
-   font-size: clamp(0.5rem, 1.2vw, 1.3rem); 
- }
+ 
 
  .custom-table td:nth-child(5),
  .custom-table td:nth-child(6) {
@@ -379,7 +375,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .edit-delt-btn  {
-  width: 40%;
+  width: 60%;
   height: 2.0vh;
   text-align: center; 
   font-weight: 400; 
@@ -387,6 +383,43 @@ background-color: #9bc7be;
 
 }
 }
+.add-btn {
+  width: 9%; 
+  text-align: center;
+  background-color: LightYellow;
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 6vh;
+  font-weight: 600; 
+ }
+.upd-btn {
+  width: 11%; 
+  text-align: center;
+  background-color: LightYellow;
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 6vh;
+  font-weight: 600; 
+ }
+@media (max-width: 768px) {
+.add-btn {
+  width: 9%; 
+  text-align: center;
+  background-color: #9bc7be;
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 4vh;
+  font-weight: 600; 
+ }
+ }
+@media (max-width: 768px) {
+.upd-btn {
+  width: 11%; 
+  text-align: center;
+  background-color: #9bc7be;
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 4vh;
+  font-weight: 600; 
+ }
+}
+
 
   </style>
 </head><body class="body_cls">
@@ -413,7 +446,7 @@ background-color: #9bc7be;
 
  <!-- Input Form -->
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Gtems Add/Update Input Form
+<div class = "items-add-upd" > Items Add/Update Input Form
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
@@ -485,8 +518,8 @@ background-color: #9bc7be;
   <input type="number" class="input-field" id="mnl" placeholder="Minimum Level" style="width: 18%; text-align: center;">   
   <input type="text" class="input-field" id="exp" placeholder="Expiry (yyyy-mm)" style="width: 18%; text-align: center;">
   <input type="text" class="input-field" id="lmd" placeholder="Last Mvnt Dt (yyyy-mm-dd)" style="width: 25%; text-align: center; ">
-  <button class="input-field" onclick="additem()" type="button" style="width: 9%; text-align: center; background-color: LightYellow;">Add</button>
-  <button class="input-field" onclick="updateitem()" type="button" style="width: 11%; text-align: center; background-color: LightYellow; ">Update</button>
+  <button onclick="additem()" type="button" class="add-btn";>Add</button>
+  <button onclick="updateitem()" type="button" class="upd-btn";>Update</button>
 </div>
 <div class="gap3vh"></div>
 </div>
