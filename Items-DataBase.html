@@ -71,7 +71,7 @@
     font-family: Arial, sans-serif;
     margin-top: 3vh; 
     margin-left: 1vw; 
-    border: 0.00vw solid grey; /* Light grey borders */
+    border: 0.2vw solid grey; /* Light grey borders */
     
 }   
 
@@ -94,7 +94,7 @@
     color:black;
     background-color: #c5effd;  
     height: 6vh;      
-  
+    border: 0.2vw solid grey;
 
   }
 
@@ -453,7 +453,7 @@ font-weight: 550;
         <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
         <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
       
-        <th style="padding: 0.0vw; text-align: left; width: 23%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Additional Details</th>
+        <th style="padding: 0.0vw; text-align: center; width: 23%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Additional Details</th>
       </tr>
     </thead>
     <tbody id="itemTable">
@@ -635,24 +635,24 @@ async function loadnewitemstable() {
         <td style="font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarprice}</td>
         <td style="font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarvalue}</td>
         
-        <td style="text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Category:&nbsp&nbsp${data.ctg}</td>
+        <td style="text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Catg:${data.ctg}</td>
         
       </tr>
 
    <tr style="height: 3vh;">
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Durability:&nbsp&nbsp${data.con}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Durability:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp${data.con}</td>
       </tr>
 
     <tr style="height: 3vh;">
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Importance:&nbsp&nbsp${data.imp}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Importance:&nbsp&nbsp&nbsp&nbsp${data.imp}</td>
       </tr>
    
 
       <tr style="height: 3vh;">
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Reorder levl:&nbsp&nbsp${data.rol}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Reorder levl:&nbsp&nbsp&nbsp${data.rol}</td>
       </tr>
 
       <tr style="height: 3vh;"> 
@@ -662,15 +662,15 @@ async function loadnewitemstable() {
 
        <tr style="height: 3vh;"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Last Mvnt:&nbsp&nbsp${data.lmd}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Last Mvnt Dt:&nbsp&nbsp&nbsp${data.lmd}</td>
       </tr>
 
        <tr style="height: 3vh;">  
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Item Expiry:&nbsp&nbsp${data.exp}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Item Expiry Dt:&nbsp${data.exp}</td>
       </tr>
 
-       <tr class="no-print" style="height: 4vh;"> 
+       <tr class="no-print" style="height: 6vh;"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>
         <td style="border: 0.0vw solid black; text-align: center;">
 
