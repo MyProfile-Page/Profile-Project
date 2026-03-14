@@ -368,7 +368,25 @@ background-color: #9bc7be;
 }
 }
 
+.edit-delt-btn  {
+  width: 40%;
+  height: 4.0vh;
+  text-align: center; 
+  font-weight: 400; 
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
 
+}
+
+@media (max-width: 768px) {
+.edit-delt-btn  {
+  width: 40%;
+  height: 4.0vh;
+  text-align: center; 
+  font-weight: 400; 
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+
+}
+}
 
   </style>
 </head><body class="body_cls">
@@ -720,8 +738,8 @@ async function loadnewitemstable() {
         <td colspan="7" style="border: 0.0vw solid black;"></td>
         <td style="border: 0.0vw solid black; text-align: center;">
 
-          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.lmd}')" style="width: 40%; height: 4.0vh;  text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem); ">Edit</button>
-          <button onclick="deleteitem('${docId}')" style="width: 40%; height: 4.0vh;  text-align: center; font-weight: 400; font-size: clamp(0.5rem, 1.0vw, 1.1rem); ">Delete</button>
+          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.lmd}')" class = "edit-delt-btn";>Edit</button>
+          <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
         </td>          
       </tr>
     `;
