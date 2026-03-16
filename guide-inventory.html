@@ -10,7 +10,7 @@
   <head>
     <!-- ✅ Bootstrap 5 CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="guide-styles-inventory.css" />
+    
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">  
     <meta charset="UTF-8"> 
@@ -36,10 +36,47 @@
   .body_cls {                
           
           background: LightCyan;
-          line-height: 0.8;         
+          line-height: 0.8;   
+          background: LightYellow;      
             }
+#P1 {
+font-family: calibri;
+ font-size: clamp(1rem, 2.0vw, 1.2rem);
+font-weight: 500;
+ Color: black;   
+text-decoration:underline;
+}
 
+#P2 {
+font-family: calibri;
+font-size: clamp(1rem, 1.2vw, 1.5rem);
+ /* font-size: 12.5vh; */
+ /* font-size: 12.5vh; */
+  font-weight: 400;
+ Color: black;   
+ /*    background-color: transparent;  */
+ /* #46D1F3 is a light blue color */
+  /*  box-shadow: 1.5vh 1.5vh 1.0vh black; */
+   /* border: solid 0.0vh red; */
+text-align: left;
+  }
 
+.gap3vh {
+  height: 3.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap3vh {
+  height: 1.5vh;  /* or any size you want; mobile = desktop */
+}
+}
+.gap4vh {
+  height: 4.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap4vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+}
 </style> 
 </head>
 <body class = "body_cls";>
@@ -49,7 +86,7 @@
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-   <a class="navbar-brand Menubar-header bar" href="#"></a>
+   <a class="navbar-brand " href="#">Guide</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -59,8 +96,8 @@
             aria-expanded="false"
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon menu-bar-prp"></span>
-     <span id = "menu-word-prp" class="d-none d-sm-inline menu-word-prp">Menu</span> 
-      <span id = "apl-hdr" class="navbar-brand navbar-center" href="#"></span>
+     
+      
     </button>
 
     <!-- Collapsible menu -->
@@ -80,8 +117,7 @@
 
  <!-- 🌍 Navigation Bar End -->
 
-<div class="gap14vh"></div>
-
+<div class="gap4vh"></div>
 
 
 <div class="container-fluid">
@@ -92,13 +128,14 @@
    <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
 
         <div id="R1" class="row">
-            <div id="R1_D1" class="col-sm-12"> 
-                  <img src="guide-image-inventory.png" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
+            <div id="R1_D1" class="col-sm-12" style="margin-top: 4vh;"> 
+                  <img src="WH4.png" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
             </div>  
             
        </div>  
        
-        
+   <div class="gap4vh"></div>
+
 
    <!-- FIRST ROW ENDS -->
 
@@ -108,8 +145,8 @@
                   
            <div id="R2_D1" class="col-sm-12">
                 
-                 <p id="P1" ></p>
-                <p id="P2" ></p>
+                 <p id="P1" class="P1" ></p>
+                <p id="P2" class="P2" ></p>
                 
                
           </div>
@@ -133,7 +170,7 @@
     
        
                                                                                                                
-       document.getElementById("apl-hdr").textContent = 'Managing Items DataBase';
+       
        
 
        document.getElementById('P1').innerHTML = 'Data Entry Instructions: ';       
@@ -143,22 +180,22 @@
         'The system welcome screen directs user to proceed to items data\n  ' +            
         'base or system Guide through menu icon at top right of welcome screen.\n ' +
         'Following functions can be done at Items DataBase screen.\n\n ' +
-        '1. Add a new item:\n\n ' + 
+        '<u>1. Add a new item:</u>\n\n ' + 
         '   Type new item details in the Items Add/Update Input form\n ' +
         '   and then click the Add Item button in the form.\n\n ' +
-        '2. Change details of any item:\n\n ' +        
+        '<u>2. Change details of any item:</u>\n\n ' +        
         '   click the update tab in the row of your items table where your\n ' + 
         '   item is being displayed. It will bring all details of your\n' +  
         '   selected item at Items Add/Update input form,\n' + 
         '   type needed changes and then click Update Item button which is\n' + 
         '   also in the form.\n\n ' +
         ' ' +        
-        '3. Delete an unwanted item:\n\n ' +
+        '<u>3. Delete an unwanted item:</u>\n\n ' +
          
         '   select in items Display Grid the row of your item to be deleted\n' + 
         '   then click Delete button of the row.\n\n' + 
         '\n ' +
-        '4. Print invoice:\n\n ' +
+        '<u>4. Print invoice:</u>\n\n ' +
         
         '   click Print Invoice link which is at the topright corner of\n ' + 
         '   Items DataBase screen.' +
