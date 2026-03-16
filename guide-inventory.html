@@ -39,13 +39,7 @@
           line-height: 0.8;   
           background: LightYellow;      
             }
-#P1 {
-font-family: calibri;
- font-size: clamp(1rem, 2.0vw, 1.2rem);
-font-weight: 500;
- Color: black;   
-text-decoration:underline;
-}
+
 
 #P2 {
 font-family: calibri;
@@ -86,8 +80,8 @@ text-align: left;
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-   <a class="navbar-brand " href="#">Guide</a>
-
+   <a class="navbar-brand" style="text-align: left; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;" href="#">Guide</a>
+    <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Data Entry Instructions</a>
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -145,7 +139,7 @@ text-align: left;
                   
            <div id="R2_D1" class="col-sm-12">
                 
-                 <p id="P1" class="P1" ></p>
+                
                 <p id="P2" class="P2" ></p>
                 
                
@@ -173,8 +167,7 @@ text-align: left;
        
        
 
-       document.getElementById('P1').innerHTML = 'Data Entry Instructions: ';       
- //      document.getElementById('P1').innerHTML = localStorage.getItem('website');                                                                                                       
+                                                                                                            
        document.getElementById('P2').style.whiteSpace = 'pre-line';                                                  
        document.getElementById('P2').innerHTML = '<Normal> ' +
         'The system welcome screen directs user to proceed to items data\n  ' +            
