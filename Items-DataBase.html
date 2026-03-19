@@ -15,19 +15,6 @@
 
 
   <style>
- 
-
-   /* Firebase : website https://console.firebase.google.com your project in firebase =   */
-   /*   dashboard-cloud-db  your localhost project dashboard      */
-   /*    login = asadsaeed124@gmail.com pw asstnpw of 15/2/2026   */ 
-          
-
- /*  https://console.firebase.google.com/   for firebase website  */
- /*  No Gemini */
- /*  No Google Analytic */
- /*  hsmart-appl-pr */
- /*  hsmart-appl-pr */
- 
 
  
 
@@ -85,7 +72,8 @@
      text-align: left;    
  }
 
-.custom-table td:nth-child(3)  {
+.custom-table td:nth-child(3),
+.custom-table td:nth-child(8)   {
      text-align: left;    
  }
 
@@ -277,7 +265,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .tr-main-row {
-height: 3vh;
+height: 5vh;
 background-color: #9bc7be;
 }
 }
@@ -364,9 +352,27 @@ background-color: #9bc7be;
 }
 }
 
+.input-field-opt {
+ font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+ height: 6vh;
+ background-color: #51DEED; 
+ background-color: LightYellow; 
+ font-weight: 450; 
+}
+
+@media (max-width: 768px) {
+.input-field-opt {
+ font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+ height: 4vh;
+ background-color: #51DEED; 
+ background-color: LightYellow;  
+ font-weight: 600; 
+}
+}
+
 .edit-delt-btn  {
-  width: 40%;
-  height: 4.0vh;
+  width: 30%;
+  height: 5.0vh;
   text-align: center; 
   font-weight: 400; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -384,26 +390,35 @@ background-color: #9bc7be;
 }
 }
 .add-btn {
-  width: 9%; 
+  width: 7%; 
   text-align: center;
-  background-color: LightYellow;
+  background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
   height: 6vh;
   font-weight: 600; 
  }
 .upd-btn {
-  width: 11%; 
+  width: 9%; 
   text-align: center;
-  background-color: LightYellow;
+  background-color: #fafafa; 
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 6vh;
+  font-weight: 600; 
+ }
+.clr-btn {
+  width: 9%; 
+  text-align: center;
+  background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
   height: 6vh;
   font-weight: 600; 
  }
 @media (max-width: 768px) {
 .add-btn {
-  width: 9%; 
+  width: 7%; 
   text-align: center;
-  background-color: #9bc7be;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
   height: 4vh;
   font-weight: 600; 
@@ -411,9 +426,21 @@ background-color: #9bc7be;
  }
 @media (max-width: 768px) {
 .upd-btn {
-  width: 11%; 
+  width: 9%; 
+  te xt-align: center;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 4vh;
+  font-weight: 600; 
+ }
+}
+@media (max-width: 768px) {
+.clr-btn {
+  width: 9%; 
   text-align: center;
-  background-color: #9bc7be;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
   height: 4vh;
   font-weight: 600; 
@@ -422,38 +449,63 @@ background-color: #9bc7be;
 
 
   </style>
-</head><body class="body_cls">
+</head>
+
+<body class="body_cls">
 
 
+  <!-- 🌍 Navigation Bar Start -->
 
-    <div style=" width: 100%; background-color: black">
-      <div class="gap1vh"></div>
-     <div class="item-db" >
-       <label style="color: white; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-weight: 600;">Items Data Base</label> 
-     </div>
-     <div class="pr-bk-links" >
-        <a  href="#" onclick="printInvoice()"  style="font-weight: 500; font-size: clamp(0.6rem, 1.2vw, 1.3rem);  ">Print Invoice</a>
-        <label>&nbsp&nbsp&nbsp</label>
-        <a  href="Index-Items.html"  style="font-weight: 500; font-weight: 400; font-size: clamp(0.6rem, 1.2vw, 1.3rem);">back</a> 
-     </div>
-       <div class="gap4vh"></div>
-       <div class="gap1vh"></div>
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">DataBase Management</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Materials Management System</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      
+    
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item">
+          <a class="nav-link " href="#" onclick="printInvoice()" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Print Invoicee</a>
+        </li>      
+       <li class="nav-item">
+          <a class="nav-link aback" href="INdex-Items.html" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Back</a>
+        </li>  
+            
+      
+
+      </ul>
     </div>
-        <div class="gap2vh"></div>
 
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
 
 
 
  <!-- Input Form -->
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Items Add/Update Input Form
+<div class = "items-add-upd" > Input Form
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 9%; text-align: center;" > 
+  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Item No." style="width: 9%; text-align: center;" > 
   
 
-   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 30%; text-align: left;">
+   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 28%; text-align: left;">
    <datalist id="ctgs">
    <option value="Electrical Items">
    <option value="Chemical Items">
@@ -464,8 +516,9 @@ background-color: #9bc7be;
    <option value="Wooden Items">
    <option value="Furniture">
    <option value="Crokeries">
+   <option value="Other">
  </datalist>   
- <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 31%; text-align: left;">
+ <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 28%; text-align: left;">
 <input list="units" class="input-field" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;">
 <datalist id="units">
   <option value="GR">
@@ -480,8 +533,10 @@ background-color: #9bc7be;
   <option value="IN">
   <option value="DZ">
   <option value="PD">
+  <option value="Other">
 </datalist>
-<input type="text" class="input-field" id="prc" placeholder="Price(in Cents)" style="width: 16%; text-align: center;">
+ <input type="number" class="input-field" id="qty" min="1" max="99999999" placeholder="Qty" style="width: 11%; text-align: center;">
+<input type="number" class="input-field" id="prc" min="1" max="99999999" placeholder="Price(in Cents)" style="width: 16%; text-align: center;">
  
 </div>
 
@@ -496,11 +551,12 @@ background-color: #9bc7be;
    <option value="McCain Foods">
    <option value="Suncor Canada">
    <option value="L3Harris Wescam Canada">
+   <option value="Other">
  </datalist>   
 <input list="imps" class="input-field" id="imp" name="aimp" placeholder="Importance" style="width: 15%; text-align: center;" >
  <datalist id="imps">
    <option value="Strategic">
-   <option value="Non-Strategic">
+   <option value="Normal">
  </datalist>   
   <input list="cons" class="input-field" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 24%; text-align: center;" >
   <datalist id="cons">
@@ -509,18 +565,24 @@ background-color: #9bc7be;
  </datalist>   
 
 
-  <input type="number" class="input-field" id="qty" placeholder="Qty" style="width: 11%; text-align: center;">
+ 
 
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-   <input type="number" class="input-field" id="rol" placeholder="Reorder Level" style="width: 18%; text-align: center;"> 
-  <input type="number" class="input-field" id="mnl" placeholder="Minimum Level" style="width: 18%; text-align: center;">   
-  <input type="text" class="input-field" id="exp" placeholder="Expiry (yyyy-mm)" style="width: 18%; text-align: center;">
-  <input type="text" class="input-field" id="lmd" placeholder="Last Mvnt Dt (yyyy-mm-dd)" style="width: 25%; text-align: center; ">
+   <input type="number" class="input-field-opt" id="rol" min="1" max="99999999" placeholder="Reorder Level (optional)" style="width: 18%; text-align: center;"> 
+  <input type="number" class="input-field-opt" id="mnl" min="1" max="99999999" placeholder="Minimum Level (optional)" style="width: 18%; text-align: center;">   
+  <input type="text" class="input-field-opt" id="exp" placeholder="Expiry (yyyy-mm-dd optional)" style="width: 18%; text-align: center;">
+  <input type="text" class="input-field-opt" id="fmd" placeholder="Last Mdt(yyyy-mm-dd optional)" style="width: 18%; text-align: center; ">
+ 
+</div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  
   <button onclick="additem()" type="button" class="add-btn";>Add</button>
   <button onclick="updateitem()" type="button" class="upd-btn";>Update</button>
+  <button onclick="Clearinputdata()" type="button" class="clr-btn";>Clear</button>
 </div>
+
 <div class="gap3vh"></div>
 </div>
 
@@ -534,7 +596,7 @@ background-color: #9bc7be;
 
 
 
-<div class="items-add-upd" > Items Display Grid
+<div class="items-add-upd" >Display Grid
 
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -542,15 +604,15 @@ background-color: #9bc7be;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
-        <th style="text-align: center; width: 20%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>  
-        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Manf/Supplier</th>      
+        <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Item No.</th>
+        <th style="text-align: center; width: 20%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Category</th>  
+        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Name</th>      
         <th style="text-align: center; width: 4%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
         <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
         <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
         <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
       
-        <th style="padding: 0.0vw; text-align: center; width: 23%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Additional Details</th>
+        <th style="padding: 0.0vw; text-align: center; width: 23%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Manufac./Supplier</th>
       </tr>
     </thead>
     <tbody id="itemTable">
@@ -627,31 +689,47 @@ window.additem = async function () {
   const uis = document.getElementById("uis").value;
   const qty = document.getElementById("qty").value;
   const prc = document.getElementById("prc").value;
-  const exp = document.getElementById("exp").value;
   const ctg = document.getElementById("ctg").value;
   const sup = document.getElementById("sup").value;
   const imp = document.getElementById("imp").value;
-  const con = document.getElementById("con").value;
-  const rol = document.getElementById("rol").value;
-  const mnl = document.getElementById("mnl").value;
-  const lmd = document.getElementById("lmd").value;  
+  const con = document.getElementById("con").value; 
+   
   const ownerId = document.getElementById("name").value;
 
-  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || exp === "" || ctg === "" || sup === "" || imp === "" || con === ""){
-    alert("Please fill all Manadatory fields");
+  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || ctg === "" || sup === "" || imp === "" || con === ""){
+    alert("Please Enter all Manadatory data of the item");
     return;
   }
 
-  const expiryInput = document.getElementById("exp").value.trim();
-
-  if (!isValidExpiryDate(expiryInput)) {
-    alert("Please enter a valid expiry date in YYYY-MM format (e.g. 2026-03)");
+const expiryInput = document.getElementById("exp").value.trim();
+if (expiryInput !== "") {
+  if (!isValidDate(expiryInput)) {
+    alert("Please Enter a valid Expiry Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
     return; // Stop update if invalid
   }
+}
+ const exp = expiryInput;
+// const exp = expiryInput === "" ? null : expiryInput;
+
+const fmdInput = document.getElementById("fmd").value.trim();
+if (fmdInput !== "") {
+  if (!isValidDate(fmdInput)) {
+    alert("Please Enter a valid last Movement Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
+    return; // Stop update if invalid
+  }
+}
+ const fmd = fmdInput;
+// const fmd = fmdInput === "" ? null : fmdInput;
+
+// const rol = document.getElementById("rol").value; 
+// const mnl = document.getElementById("mnl").value; 
 
 
+ const rol = document.getElementById("rol").value === "" ? null : document.getElementById("rol").value;
+ const mnl = document.getElementById("mnl").value === "" ? null : document.getElementById("mnl").value;
 
 
+   
   try {
 
     // 🔹 Use nbr as document ID
@@ -672,14 +750,14 @@ window.additem = async function () {
       qty: parseInt(qty),
       prc: parseInt(prc),
       uis: uis,
-      exp: exp,
       ctg: ctg,
       sup: sup,
       imp: imp,
       con: con,
       rol: rol,
       mnl: mnl,
-      lmd: lmd,
+      exp: exp,
+      fmd: fmd,
       ownerId: ownerId,
       createdAt: serverTimestamp()
       // createdAt: new Date()
@@ -698,8 +776,8 @@ window.additem = async function () {
 async function loadnewitemstable() {
 
   const table = document.getElementById("itemTable");
+  
   table.innerHTML = "";
-
   const collectionRef = collection(db, "newitemstable");
   const q = query(collectionRef, orderBy("nbr", "asc"));
 
@@ -721,45 +799,51 @@ async function loadnewitemstable() {
     grandTotalCents += centvalue;
 
  //   const displayTotal = formatCentsToDollars(grandTotalCents);
-
+    
     table.innerHTML += `
+      
       <tr class="tr-main-row"  >
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.ctg}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.name}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.sup}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.uis}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.qty}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarprice}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarvalue}</td>
         
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; text-align: center; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">${data.ctg}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">${data.sup}</td>
         
       </tr>
 
+   <tr class="tr-adl-row" style="height: 4vh;" >
+        <td colspan="7" style="border: 0.0vw solid black;"></td>         
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; color: Blue;">Additional Details</td>
+      </tr>
+  
    <tr class="tr-adl-row" >
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Durability:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp${data.con}</td>
       </tr>
-
-    <tr class="tr-adl-row" >
+  
+  <tr class="tr-adl-row" >
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
         <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Importance:&nbsp&nbsp&nbsp&nbsp${data.imp}</td>
       </tr>
    
-
+      
       <tr class="tr-adl-row"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Reorder levl:&nbsp&nbsp&nbsp${data.rol}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Reorder levl:&nbsp&nbsp&nbsp${clean(data.rol)}</td>
       </tr>
 
       <tr class="tr-adl-row"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Minimum levl:&nbsp&nbsp${data.mnl}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Minimum levl:&nbsp&nbsp${clean(data.mnl)}</td>
       </tr>
 
        <tr class="tr-adl-row"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Last Mvnt Dt:&nbsp&nbsp&nbsp${data.lmd}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Last Mvnt Dt:&nbsp&nbsp&nbsp${clean(data.fmd)}</td>
       </tr>
 
       <tr class="tr-adl-row">  
@@ -771,7 +855,7 @@ async function loadnewitemstable() {
         <td colspan="7" style="border: 0.0vw solid black;"></td>
         <td style="border: 0.0vw solid black; text-align: center;">
 
-          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.lmd}')" class = "edit-delt-btn";>Edit</button>
+          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Edit</button>
           <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
         </td>          
       </tr>
@@ -883,10 +967,12 @@ function calculateNetTotalCents(grandTotalCents, taxCents) {
   return grandTotalCents + taxCents;
 }
 
-function isValidExpiryDate(expiry) {
-  // Check format using Regular Expression (YYYY-MM)
-  const regex = /^\d{4}-(0[1-9]|1[0-2])$/;
 
+
+function isValidDate(expiry) {
+  // Check format using Regular Expression (YYYY-MM-DD)
+//  const regex = /^\d{4}-(0[1-9]|1[0-2])$/;
+   const regex = /^\d{4}-\d{2}-\d{2}$/;
   if (!regex.test(expiry)) {
     return false; // Invalid format
   }
@@ -899,6 +985,37 @@ function isValidExpiryDate(expiry) {
   // Ensure parsed values match input
   return date.getFullYear() === year && date.getMonth() === month - 1;
 }
+
+function clean(value) {
+  return (value === null || 
+          value === "null" || 
+          value === "NaN" ||
+          value === "undefined" || 
+          value === "NaN" ||
+          (typeof value === "number" && isNaN(value)))
+         ? "" 
+         : value;
+}
+
+
+function cleanrol(valuerol, valueqty) {
+  return (valuerol === null || 
+          valuerol === "null" || 
+          valuerol === "NaN" ||
+          valuerol === "undefined" || 
+          valuerol === "NaN" ||
+          (typeof valuerol === "number" && isNaN(valuerol)))
+         ? "" 
+         : valuerol;
+
+  if (valueqty < valuerol) {
+    return "<span style='color:red;'>" + cleanrol + "</span>";
+  }
+
+  return cleanrol;
+}
+
+
 
 
   // 🔹 DELETE (Remove Record)
@@ -923,13 +1040,29 @@ function isValidExpiryDate(expiry) {
     document.getElementById("con").value = "";
     document.getElementById("rol").value = "";
     document.getElementById("mnl").value = "";
-    document.getElementById("lmd").value = "";
-    
+    document.getElementById("fmd").value = ""; 
+
+  }
+
+window.Clearinputdata = async function () {
+    document.getElementById("name").value = "";
+    document.getElementById("nbr").value = "";
+    document.getElementById("qty").value = "";
+    document.getElementById("prc").value = "";
+    document.getElementById("exp").value = "";
+    document.getElementById("uis").value = "";
+    document.getElementById("ctg").value = "";
+    document.getElementById("sup").value = "";
+    document.getElementById("imp").value = "";
+    document.getElementById("con").value = "";
+    document.getElementById("rol").value = "";
+    document.getElementById("mnl").value = "";
+    document.getElementById("fmd").value = ""; 
 
   }
 
 // Fill inputs when Edit button is clicked
-window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, lmd) {
+window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
   
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
@@ -944,7 +1077,7 @@ window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
   document.getElementById("con").value = con;
   document.getElementById("rol").value = rol;
   document.getElementById("mnl").value = mnl;
-  document.getElementById("lmd").value = lmd;
+  document.getElementById("fmd").value = fmd;
   
 
 
@@ -959,20 +1092,53 @@ window.updateitem = async function () {
     return;
   }
 
+
+
+ const ownerId = document.getElementById("name").value;
   const name = document.getElementById("name").value;
   const nbr = document.getElementById("nbr").value;
   const uis = document.getElementById("uis").value;
   const qty = document.getElementById("qty").value;
   const prc = document.getElementById("prc").value;
-  const exp = document.getElementById("exp").value;
-
+  
   const ctg = document.getElementById("ctg").value;
   const sup = document.getElementById("sup").value;
   const imp = document.getElementById("imp").value;
   const con = document.getElementById("con").value;
-  const rol = document.getElementById("rol").value;
-  const mnl = document.getElementById("mnl").value;
-  const lmd = document.getElementById("lmd").value;
+  
+
+  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || ctg === "" || sup === "" || imp === "" || con === ""){
+    alert("Please Enter all Manadatory data of the item");
+    return;
+  }
+
+const expiryInput = document.getElementById("exp").value.trim();
+if (expiryInput !== "") {
+  if (!isValidDate(expiryInput)) {
+    alert("Please Enter a valid Expiry Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
+    return; // Stop update if invalid
+  }
+}
+ const exp = expiryInput;
+// const exp = expiryInput === "" ? null : expiryInput;
+
+const fmdInput = document.getElementById("fmd").value.trim();
+if (fmdInput !== "") {
+  if (!isValidDate(fmdInput)) {
+    alert("Please Enter a valid last Movement Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
+    return; // Stop update if invalid
+  }
+}
+ const fmd = fmdInput;
+// const fmd = fmdInput === "" ? null : fmdInput;
+
+// const rol = document.getElementById("rol").value; 
+// const mnl = document.getElementById("mnl").value; 
+
+const rol = document.getElementById("rol").value === "" ? null : document.getElementById("rol").value;
+const mnl = document.getElementById("mnl").value === "" ? null : document.getElementById("mnl").value;
+
+
 
 
   try {
@@ -987,7 +1153,8 @@ window.updateitem = async function () {
       sup: sup,
       imp: imp,
       con: con,
-      lmd: lmd
+      fmd: fmd,
+      exp: exp 
       
     });
 
