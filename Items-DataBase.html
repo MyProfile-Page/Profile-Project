@@ -193,6 +193,17 @@ grid-auto-flow: row;
 }
 }
 
+@media (max-width: 768px) {
+ .itemTableBody-Cls {
+white-space: normal; 
+overflow-wrap: break-word;
+word-wrap: break-word; 
+word-break: break-all;
+text-wrap: balance;
+hyphens: auto;
+}
+}
+
 .Menubar-header {
 font-family: calibri;
  font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
@@ -615,7 +626,7 @@ background-color: #9bc7be;
         <th style="padding: 0.0vw; text-align: center; width: 23%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Manufac./Supplier</th>
       </tr>
     </thead>
-    <tbody id="itemTable">
+    <tbody id="itemTable" class = "itemTableBody-Cls">
        <tr>
         <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
         <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
