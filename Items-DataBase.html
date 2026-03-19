@@ -615,15 +615,15 @@ background-color: #9bc7be;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Item No.</th>
-        <th style="text-align: center; width: 20%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Category</th>  
+        <th style="text-align: center; width: 6%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
+        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Category</th>  
         <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Name</th>      
         <th style="text-align: center; width: 4%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
         <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
-        <th style="text-align: center; width: 13%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
+        <th style="text-align: center; width: 11%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
+        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
       
-        <th style="padding: 0.0vw; text-align: center; width: 18%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Manufac./Supplier</th>
+        <th style="padding: 0.0vw; text-align: center; width: 17%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Man./Supp.</th>
       </tr>
     </thead>
     <tbody id="itemTable" class = "itemTableBody-Cls">
@@ -828,38 +828,38 @@ async function loadnewitemstable() {
 
    <tr class="tr-adl-row" style="height: 4vh;" >
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; color: Blue;">Additional Details</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; color: Blue;">More Details</td>
       </tr>
   
    <tr class="tr-adl-row" >
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Durability:&nbsp${data.con}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Longevity:&nbsp${data.con}</td>
       </tr>
   
   <tr class="tr-adl-row" >
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Importance:&nbsp${data.imp}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Import:&nbsp${data.imp}</td>
       </tr>
    
       
       <tr class="tr-adl-row"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Reorder levl:&nbsp${clean(data.rol)}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Rord lvl:&nbsp${clean(data.rol)}</td>
       </tr>
 
       <tr class="tr-adl-row"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Minimum levl:&nbsp${clean(data.mnl)}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Min lvl:&nbsp${clean(data.mnl)}</td>
       </tr>
 
        <tr class="tr-adl-row"> 
         <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Last Mvnt Dt:&nbsp${clean(data.fmd)}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Lt Mvnt Dt:&nbsp${clean(data.fmd)}</td>
       </tr>
 
       <tr class="tr-adl-row">  
         <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Expiry Dt:&nbsp${data.exp}</td>
+        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Exp Dt:&nbsp${data.exp}</td>
       </tr>
 
        <tr class="no-print tr-btn-row" > 
