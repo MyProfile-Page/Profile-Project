@@ -907,7 +907,7 @@ async function loadnewitemstable() {
   // ✅ Add Summary Rows (ALL TOGETHER)
   table.innerHTML += `
     <tr></tr>
-    <tr class="tr-tl-row">
+   <tr class="tr-tl-row">
       <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
@@ -919,7 +919,7 @@ async function loadnewitemstable() {
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
-    <tr class="tr-tl-row">
+    <tr class="tr-tl-row" style="background-color: #acdbe8;">
       <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
