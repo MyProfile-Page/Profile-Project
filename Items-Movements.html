@@ -2,22 +2,13 @@
 <html>
 <head>
 
-
-
   <title>Firestore Table (IIS + Localhost)</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
-
-
   <style>
-
- 
-
   .body_cls {
           background-color: red;
           background: linear-gradient(to right, #007bff, #00c6ff);
@@ -29,9 +20,7 @@
       /*    background:  */
           line-height: 0.8;         
             }
-
-
-  
+ 
  
 .custom-table-container {
     height: 76vh;        /* Fixed height */
@@ -60,7 +49,7 @@
     margin-top: 3vh; 
     margin-left: 0.2vw; 
     margin-right: 0.0vw; 
-    border: 0.2vw solid black; /* Light grey borders */
+    border: 0.0vw solid grey; /* Light grey borders */
     
 }   
 
@@ -104,12 +93,8 @@
  .custom-table tr:hover { background-color: #e6f2ff;
   }
   
-   .custom-table td:nth-child(1) { 
-   border-left: 0.5vh solid Black;
-  }
-  
-    .custom-table td:nth-child(8) { 
-   border-right-width: 1;
+  .custom-table td:nth-child(1) {
+  border-left: 0.1vh solid Black;
   }
 
  .custom-table td:nth-child(5),
@@ -251,10 +236,6 @@ font-weight: 550;
   
 }
 
-
-
-
-
 .pr-bk-links {
     border: 0.0vw solid black; 
     text-align: right;
@@ -294,7 +275,7 @@ height: 3vh;
 background-color: #9bc7be;
 }
 }
-font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 6vh; 
+ 
 @media (max-width: 768px) {
 .tr-adl-row {
 height: 1.5vh;
@@ -376,6 +357,7 @@ background-color: #9bc7be;
  background-color: LightYellow;  
  background-color: #E6E6FA;
  font-weight: 450; 
+ border: 0.1vw solid black; 
 }
 
 @media (max-width: 768px) {
@@ -388,40 +370,45 @@ background-color: #9bc7be;
 }
 }
 
-.input-field-opt {
+.input-field-col {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 6vh;
  background-color: #51DEED; 
- background-color: LightYellow; 
+ background-color: LightYellow;  
+ background-color: #f8f2ed;
  font-weight: 450; 
+ border: 0.1vw solid black; 
 }
 
 @media (max-width: 768px) {
-.input-field-opt {
+.input-field-col {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 4vh;
  background-color: #51DEED; 
- background-color: LightYellow;  
+ background-color: #f8f2ed; 
  font-weight: 600; 
 }
 }
 
+
+
 .edit-delt-btn  {
-  width: 30%;
-  height: 5.0vh;
+  width: 50%;
+  height: 4.0vh;
   text-align: center; 
   font-weight: 400; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
-
+ 
 }
 
 @media (max-width: 768px) {
 .edit-delt-btn  {
-  width: 45%;
+  width: 40%;
   height: 2.0vh;
   text-align: center; 
   font-weight: 400; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  
 
 }
 }
@@ -434,7 +421,7 @@ background-color: #9bc7be;
   font-weight: 600; 
  }
 .upd-btn {
-  width: 14%; 
+  width: 9%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -442,7 +429,7 @@ background-color: #9bc7be;
   font-weight: 600; 
  }
 .clr-btn {
-  width: 14%; 
+  width: 7%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -462,7 +449,7 @@ background-color: #9bc7be;
  }
 @media (max-width: 768px) {
 .upd-btn {
-  width: 14%; 
+  width: 9%; 
   te xt-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
@@ -473,7 +460,7 @@ background-color: #9bc7be;
 }
 @media (max-width: 768px) {
 .clr-btn {
-  width: 14%; 
+  width: 7%; 
   text-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
@@ -495,7 +482,7 @@ background-color: #9bc7be;
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">DataBase Management</a>
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Movements</a>
    <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Materials Management System</a>
 
     <!-- Toggler -->
@@ -513,9 +500,9 @@ background-color: #9bc7be;
     <!-- Collapsible menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-       <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link " href="#" onclick="printInvoice()" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Print Invoicee</a>
-        </li>      
+        </li>            
        <li class="nav-item">
           <a class="nav-link aback" href="Index-Items.html" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
@@ -533,107 +520,36 @@ background-color: #9bc7be;
 
 
  <!-- Input Form -->
-<div class="gap3vh"></div>
-<div class = "items-add-upd" > Input Form
-<div class="gap3vh"></div>
-
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Item No." style="width: 9%; text-align: center;" > 
-  
-
-   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 28%; text-align: left;">
-   <datalist id="ctgs">
-   <option value="Electrical Items">
-   <option value="Chemical Items">
-   <option value="Plants & Vegetables">
-   <option value="Dairy Items">
-   <option value="Hard Metal Items">
-   <option value="Plastic Items">
-   <option value="Wooden Items">
-   <option value="Furniture">
-   <option value="Crokeries">
-   <option value="Other">
- </datalist>   
- <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 28%; text-align: left;">
-<input list="units" class="input-field" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;">
-<datalist id="units">
-  <option value="GR">
-  <option value="KM">
-  <option value="MR">
-  <option value="MG">
-  <option value="KG">
-  <option value="EA">
-  <option value="BX">
-  <option value="CM">
-  <option value="FT">
-  <option value="IN">
-  <option value="DZ">
-  <option value="PD">
-  <option value="OT">
-</datalist>
- <input type="number" class="input-field" id="qty" min="1" max="99999999" placeholder="Qty" style="width: 11%; text-align: center;">
-<input type="number" class="input-field" id="prc" min="1" max="99999999" placeholder="Price(in Cents)" style="width: 16%; text-align: center;">
- 
-</div>
-
-
-
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="sups" class="input-field" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 30%; text-align: left;" >
- <datalist id="sups">
-   <option value="Mazda Canada">
-   <option value="Magna International">
-   <option value="Linamar International">
-   <option value="McCain Foods">
-   <option value="Suncor Canada">
-   <option value="L3Harris Wescam Canada">
-   <option value="Other">
- </datalist>   
-<input list="imps" class="input-field" id="imp" name="aimp" placeholder="Importance" style="width: 15%; text-align: center;" >
- <datalist id="imps">
-   <option value="Strategic">
-   <option value="Normal">
- </datalist>   
-  <input list="cons" class="input-field" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 24%; text-align: center;" >
-  <datalist id="cons">
-   <option value="Consume">
-   <option value="Permanent">
- </datalist>   
-
-
- 
-
-</div>
-
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-   <input type="number" class="input-field-opt" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" style="width: 22%; text-align: center;"> 
-  <input type="number" class="input-field-opt" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" style="width: 24%; text-align: center;">   
-  <input type="text" class="input-field-opt" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" style="width: 24%; text-align: center;">
-  <input type="text" class="input-field-opt" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" style="width: 27%; text-align: center; ">
- 
-</div>
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  
-  <button onclick="additem()" type="button" class="add-btn";>Add</button>
-  <button onclick="updateitem()" type="button" class="upd-btn";>Update</button>
-  <button onclick="Clearinputdata()" type="button" class="clr-btn";>Clear</button>
-</div>
-
-<div class="gap3vh"></div>
-</div>
+<div class="gap4vh"></div>
+<div class="gap2vh"></div>
+<div class = "items-add-upd" > Movements Input
 
 <div class="gap4vh"></div>
 
+<div style="display: flex; justify-content: left; width: 97.6%; border: 0.0vw solid black; ">
+  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 9%; text-align: center;" disabled > 
+  <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 26%; text-align: center;" disabled >
+  <input type="text" class="input-field" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;" disabled >
+  <input type="number" class="input-field" id="qty" placeholder="present Qty" style="width: 11%; text-align: center;" disabled >
+  <input list="movtypes" class="input-field-col" id="movtype" name="amov" placeholder="Movement Type" style="width: 17%; text-align: center;" >
+  <datalist id="movtypes">
+   <option value="Receipt">
+   <option value="Return">
+   <option value="Issue">
+   <option value="Adjustment Up">
+   <option value="Adjustment Down">
+  </datalist>   
+  <input type="number" class="input-field-col" id="movqty" min="1" max="99999999" placeholder="Movement Quantity" style="width: 14%; text-align: center;">
+ <button onclick="updateitem()" type="button" class="upd-btn";>Submit</button>
+ <button onclick="clearInputs()" type="button" class="clr-btn";>Clear</button>
+</div>
 
- 
-   
 
-
-
-
-
-<div class="items-add-upd" >Display Grid
-
+<div class="gap4vh"></div>
+</div>
+<div class="gap2vh"></div>
+<div class="items-add-upd" >Items Display Grid
+<div class="gap2vh"></div>
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
   <table class="custom-table">
@@ -643,33 +559,26 @@ background-color: #9bc7be;
         <th style="text-align: center; width: 6%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
         <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Category</th>  
         <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
-        <th style="text-align: center; width: 4%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
-        <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
-        <th style="text-align: center; width: 11%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
-        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
+        <th style="text-align: center; width: 5%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
+        <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 12%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
+        <th style="text-align: center; width: 15%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
       
-        <th style="padding: 0.0vw; text-align: center; width: 17%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Man./Supp.</th>
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
       </tr>
     </thead>
     <tbody id="itemTable" class = "itemTableBody-Cls">
        <tr>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; border-right: 1px; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
       </tr>
-      <tr > 
-        <td colspan="7"></td>       
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>        
-      </tr>
-      <tr >
-        <td colspan="7"></td>        
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>        
-      </tr>
+     
      
      </tbody>
   </table>
@@ -710,76 +619,9 @@ const firebaseConfig = {
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  
-
-  
+  const db = getFirestore(app); 
 
 
-// 🔹 CREATE (Insert Data)
-window.additem = async function () {
-
-  const name = document.getElementById("name").value;
-  const nbr = document.getElementById("nbr").value;
-  const uis = document.getElementById("uis").value;
-  const qty = document.getElementById("qty").value;
-  const prc = document.getElementById("prc").value;
-  const ctg = document.getElementById("ctg").value;
-  const sup = document.getElementById("sup").value;
-  const imp = document.getElementById("imp").value;
-  const con = document.getElementById("con").value; 
-   
-  const ownerId = document.getElementById("name").value;
-
-  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || ctg === "" || sup === "" || imp === "" || con === ""){
-    alert("Please Enter all Manadatory data of the item");
-    return;
-  }
-
-   
-  try {
-
-    // 🔹 Use nbr as document ID
-    const docRef = doc(db, "newitemstable", nbr.toString());
-
-    // 🔹 Check if document already exists
-    const existingDoc = await getDoc(docRef);
-
-    if (existingDoc.exists()) {
-      alert("Item number already exists!");
-      return;
-    }
-
-    // 🔹 Create document with nbr as ID
-    await setDoc(docRef, {
-      name: name,
-      nbr: parseInt(nbr),
-      qty: parseInt(qty),
-      prc: parseInt(prc),
-      uis: uis,
-      ctg: ctg,
-      sup: sup,
-      imp: imp,
-      con: con,
-      rol: rol,
-      mnl: mnl,
-      exp: exp,
-      fmd: fmd,
-      ownerId: ownerId,
-      createdAt: serverTimestamp()
-      // createdAt: new Date()
-    });
-
-    alert("Item added to Cloud Firestore!");
-    clearInputs();
-    loadnewitemstable(); // refresh table
-
-  } catch (error) {
-    console.error("Error adding item:", error);
-    alert("Error adding item. Check console.");
-  }
-};
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
 
@@ -811,62 +653,23 @@ async function loadnewitemstable() {
     table.innerHTML += `
       
       <tr class="tr-main-row"  >
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.ctg}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.name}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.uis}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.qty}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${dollarprice}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${dollarvalue}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.ctg}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.name}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.uis}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.qty}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarprice}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarvalue}</td>
         
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400; border-right: 1px;">${data.sup}</td>
-        
-      </tr>
+        <td style="border: 0.05vw solid black; text-align: center;">
 
-   <tr class="tr-adl-row"  >
-        <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; color: Blue;">More Details</td>
-      </tr>
-  
-   <tr class="tr-adl-row" >
-        <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Durn:&nbsp${data.con}</td>
-      </tr>
-  
-  <tr class="tr-adl-row" >
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Impt:&nbsp${data.imp}</td>
-      </tr>
-   
-      
-      <tr class="tr-adl-row"> 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Rord lvl:&nbsp${clean(data.rol)}</td>
-      </tr>
-
-      <tr class="tr-adl-row"> 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Min lvl:&nbsp${clean(data.mnl)}</td>
-      </tr>
-
-       <tr class="tr-adl-row"> 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Lmvnt:&nbsp${clean(data.fmd)}</td>
-      </tr>
-
-      <tr class="tr-adl-row">  
-        <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Exp:&nbsp${data.exp}</td>
-      </tr>
-
-       <tr class="no-print tr-btn-row" > 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>
-        <td style="border: 0.0vw solid black; text-align: center;">
-
-          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Edit</button>
-          <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delt</button>
+          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}')" class = "edit-delt-btn";>Movement</button>
+          
         </td>          
+        
       </tr>
+
+    
     `;
   });
 
@@ -906,51 +709,6 @@ async function loadnewitemstable() {
 
 }   // ✅ ONLY ONE closing bracket for function
 
-// 🔹 Guidefunction
-
-function guidealert() {
-  alert('The system welcome screen directs user to proceed to items data  ' +            
-        'base or system Guide through menu icon at top right of welcome screen.\n ' +
-        'Following functions can be done at Items DataBase screen\n ' +
-        '1. Add a new item,\n ' + 
-        
-        '   Type new item details in the Items Add/Update Input form ' +
-        '   and then click the Add Item button in the form\n ' +
-        '\n ' +
-        '2. Change details of any item,\n ' +
-        
-        '   click the update tab in the row of your items table where your ' + 
-        '   item is being displayed. It will bring all details of your' +  
-        '   selected item at Items Add/Update input form,' + 
-        '   type needed changes and then click Update Item button which is' + 
-        '   also in the form\n ' +
-        '\n ' +        
-        '3. Delete an unwanted item,\n ' +
-         
-        '   select in items Display Grid the row of your item to be deleted' + 
-        '   then click Delete button of the row.\n ' + 
-        '\n ' +
-        '4. Print invoice,\n ' +
-        
-        '   click Print Invoice link which is at the topright corner of ' + 
-        '   Items DataBase screen.');
-
-
-}
-window.guidealert = guidealert; // ⭐ IMPORTANT LINE
-
-function contactalert() {
-  alert("Email: ali_albader_alsalem@yahoo.com");
-
-}
-window.contactalert = contactalert; // ⭐ IMPORTANT LINE
-
-function myalert() {
-  alert("I am in print11 function.");
-
-}
-window.myalert = myalert; // ⭐ IMPORTANT LINE
-
 function formatCentsToDollars(cents) {
   return (cents / 100).toFixed(2);
 }
@@ -975,24 +733,21 @@ function calculateNetTotalCents(grandTotalCents, taxCents) {
   return grandTotalCents + taxCents;
 }
 
+ // Clear input fields
+  window.clearInputs = async function () {
+  
+    
+    document.getElementById("name").value = "";
+    document.getElementById("nbr").value = "";
+    document.getElementById("qty").value = "";
+     document.getElementById("uis").value = "";
+    document.getElementById("movtype").value = "";
+    document.getElementById("movqty").value = "";
+    
 
-
-function isValidDate(expiry) {
-  // Check format using Regular Expression (YYYY-MM-DD)
-//  const regex = /^\d{4}-(0[1-9]|1[0-2])$/;
-   const regex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!regex.test(expiry)) {
-    return false; // Invalid format
   }
 
-  // Optional: check if it is a real calendar date
-  const [year, month] = expiry.split("-").map(Number);
 
-  const date = new Date(year, month - 1); // month is 0-based in JS
-
-  // Ensure parsed values match input
-  return date.getFullYear() === year && date.getMonth() === month - 1;
-}
 
 function clean(value) {
   return (value === null || 
@@ -1026,66 +781,21 @@ function cleanrol(valuerol, valueqty) {
 
 
 
-  // 🔹 DELETE (Remove Record)
-  window.deleteitem = async function (id) {
-    await deleteDoc(doc(db, "newitemstable", id));
-    alert("item deleted from Firestore");
-    clearInputs();
-    loadnewitemstable();
-  };
+ 
 
-  // Clear input fields
-  function clearInputs() {
-    document.getElementById("name").value = "";
-    document.getElementById("nbr").value = "";
-    document.getElementById("qty").value = "";
-    document.getElementById("prc").value = "";
-    document.getElementById("exp").value = "";
-    document.getElementById("uis").value = "";
-    document.getElementById("ctg").value = "";
-    document.getElementById("sup").value = "";
-    document.getElementById("imp").value = "";
-    document.getElementById("con").value = "";
-    document.getElementById("rol").value = "";
-    document.getElementById("mnl").value = "";
-    document.getElementById("fmd").value = ""; 
 
-  }
 
-window.Clearinputdata = async function () {
-    document.getElementById("name").value = "";
-    document.getElementById("nbr").value = "";
-    document.getElementById("qty").value = "";
-    document.getElementById("prc").value = "";
-    document.getElementById("exp").value = "";
-    document.getElementById("uis").value = "";
-    document.getElementById("ctg").value = "";
-    document.getElementById("sup").value = "";
-    document.getElementById("imp").value = "";
-    document.getElementById("con").value = "";
-    document.getElementById("rol").value = "";
-    document.getElementById("mnl").value = "";
-    document.getElementById("fmd").value = ""; 
-
-  }
 
 // Fill inputs when Edit button is clicked
-window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
+window.edititem = function (id, name, nbr, uis, qty) {
   
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
   document.getElementById("uis").value = uis;
   document.getElementById("qty").value = qty;
-  document.getElementById("prc").value = prc;
-  document.getElementById("exp").value = exp;
-
-  document.getElementById("ctg").value = ctg;
-  document.getElementById("sup").value = sup;
-  document.getElementById("imp").value = imp;
-  document.getElementById("con").value = con;
-  document.getElementById("rol").value = rol;
-  document.getElementById("mnl").value = mnl;
-  document.getElementById("fmd").value = fmd;
+  
+  
+ 
   
 
 
@@ -1096,80 +806,47 @@ window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
 // Update record in Firestore
 window.updateitem = async function () {
   if (!window.currentEditId) {
-    alert("Please select a record to edit first.");
+    alert("Please select an item first to submit its movemen!");
     return;
   }
+//  
+//  const selectedmovtype = "Return";
+   
+   alert("RI am before if check!");
+//   console.log("User data:", selectedmovtype);
+   
+  const chktype = "Receipt";
+  const movqty = document.getElementById("movqty").value;
+  const prvqty = document.getElementById("qty").value;
+  const movtype = document.getElementById("movtype").value;
+  const qtyup = parseInt(prvqty) + parseInt(movqty);
+  const qtydown = parseInt(prvqty) - parseInt(movqty);
+  let sumqty;  
 
-
-
- const ownerId = document.getElementById("name").value;
-  const name = document.getElementById("name").value;
-  const nbr = document.getElementById("nbr").value;
-  const uis = document.getElementById("uis").value;
-  const qty = document.getElementById("qty").value;
-  const prc = document.getElementById("prc").value;
-  
-  const ctg = document.getElementById("ctg").value;
-  const sup = document.getElementById("sup").value;
-  const imp = document.getElementById("imp").value;
-  const con = document.getElementById("con").value;
-  
-
-  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || ctg === "" || sup === "" || imp === "" || con === ""){
-    alert("Please Enter all Manadatory data of the item");
-    return;
-  }
-
-const expiryInput = document.getElementById("exp").value.trim();
-if (expiryInput !== "") {
-  if (!isValidDate(expiryInput)) {
-    alert("Please Enter a valid Expiry Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
-    return; // Stop update if invalid
-  }
+ if (movtype.trim() === "Issue" || movtype.trim() === "Adjustment Down" ) {
+   if (qtydown < 0) {
+     alert("The Item does not have sufficient Balance for This Movement!");
+  return;
 }
- const exp = expiryInput;
-// const exp = expiryInput === "" ? null : expiryInput;
-
-const fmdInput = document.getElementById("fmd").value.trim();
-if (fmdInput !== "") {
-  if (!isValidDate(fmdInput)) {
-    alert("Please Enter a valid last Movement Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
-    return; // Stop update if invalid
+   }
+ 
+  if (movtype.trim() === "Receipt" || movtype.trim() === "Return" || movtype.trim() === "Adjustment Up" ) {
+   sumqty = parseInt(qtyup);
+   }
+  else {
+   sumqty = parseInt(qtydown);
   }
-}
- const fmd = fmdInput;
-// const fmd = fmdInput === "" ? null : fmdInput;
-
-// const rol = document.getElementById("rol").value; 
-// const mnl = document.getElementById("mnl").value; 
-
-const rol = document.getElementById("rol").value === "" ? null : document.getElementById("rol").value;
-const mnl = document.getElementById("mnl").value === "" ? null : document.getElementById("mnl").value;
-
-
-
-
+ 
   try {
     await updateDoc(doc(db, "newitemstable", window.currentEditId), {
-      name: name,
-      nbr: parseInt(nbr),
-      qty: parseInt(qty),
-      prc: parseInt(prc),
-      rol: parseInt(rol),
-      mnl: parseInt(mnl),
-      ctg: ctg,
-      sup: sup,
-      imp: imp,
-      con: con,
-      fmd: fmd,
-      exp: exp,
-      uis: uis 
+      
+      qty: parseInt(sumqty)     
       
     });
 
-    alert("item updated successfully!");
+    alert("movement processed successfully!");
     window.currentEditId = null;
-     clearInputs();
+     
     loadnewitemstable();
   } catch (error) {
     console.error("Update error:", error);
@@ -1233,9 +910,8 @@ function printInvoice() {
             text-align: left;
          }
 
-           th:nth-child(2),
-            td:nth-child(3),
-           td:nth-child(8) {
+           th:nth-child(3)
+           {
             text-align: left;
           }
 
@@ -1247,15 +923,10 @@ function printInvoice() {
             text-align: center;
           }
 
-  /*         td:nth-child(7),       */
-  /*         td:nth-child(8) {      */
-  /*          colspan="2";          */
-  /*        }                       */
-
-
-                    
-              
-
+           td:nth-child(7),       
+          td:nth-child(8) {      
+            colspan="2";         
+          }                      
 
 
           th {
@@ -1281,12 +952,12 @@ function printInvoice() {
             }
           }
 
-  /*        @media print {        */
-  /*          table th:last-child,    */
-  /*          table td:last-child {    */
-  /*          display: none;     */
-  /*          }
-  /*       }                */
+   /*       @media print {            */       
+   /*         table th:last-child,    */    
+   /*         table td:last-child {   */    
+   /*         display: none;          */     
+   /*         }                       */
+   /*      }                          */
 
           @media print {
             table th {
@@ -1300,9 +971,16 @@ function printInvoice() {
          @media print {
           .no-print {
            display: none !important;
+           
       }
    }
-
+        @media print {
+        table td:nth-child(7),       
+        table td:nth-child(8) {      
+            colspan="2";         
+          }   
+    }   
+   
    
        table.invoice-wrapper {
     width: 100%;
@@ -1327,9 +1005,6 @@ function printInvoice() {
   }
 
  
-
-
-
         </style>
       </head>
       <body>
@@ -1400,6 +1075,10 @@ window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 
 
 //  PRINT FUNCTION END
+
+
+
+
 
 
 
