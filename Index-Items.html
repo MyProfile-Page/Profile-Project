@@ -48,9 +48,14 @@
           background-color: #c5effd;
           background-color: #f5f4a6;
            background: LightCyan;
+          background: #3399ff;
+          background: #66b3ff;
+          background: #99ccff;
+          background: #cce6ff;
       /*    background: lightblue;    */
-          line-height: 0.8;         
+          line-height: 1.0;         
             }
+
 
 
   
@@ -58,7 +63,7 @@
 
  .grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            grid-template-columns: 35% 65%; /* 2 equal columns */
     /*        gap: 2vw;  */
             padding: 0.4vw;
             grid-auto-rows: auto;
@@ -92,7 +97,7 @@ grid-auto-rows: auto;
 .second-box {
 width: 100%;
 height: auto;
-margin-top: 5vh;  
+margin-top: 2.5vh;  
 
 }
 
@@ -159,6 +164,7 @@ font-weight: 550;
   text-decoration: none; 
   text-align: center;
   border: none;
+  text-color: Blue; 
 }
 
 .mobile-only {
@@ -181,9 +187,10 @@ font-weight: 550;
 
   <!-- 🌍 Navigation Bar Start -->
 
+ 
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-
+  
    <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Dashboard</a>
    <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Basic Materials Management</a>
 
@@ -201,24 +208,28 @@ font-weight: 550;
 
     <!-- Collapsible menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="gap1vh"></div>
       <ul class="navbar-nav ms-auto">
        <li class="nav-item">
-          <a class="nav-link " href="Items-DataBase.html" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">DataBase Management</a>
+          <a class="nav-link " href="Items-DataBase.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">DataBase Management</a>
         </li>  
         <li class="nav-item">
-          <a class="nav-link " href="Items-Movements.html" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Movements</a>
-        </li>         
+          <a class="nav-link " href="Items-Movements.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Movements Processing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="Movements-Inq.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Movements Inquiry</a>
+        </li>                  
        <li class="nav-item">
-          <a class="nav-link aback" href="guide-inventory.html" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Guide</a>
+          <a class="nav-link aback" href="guide-inventory.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Guide</a>
         </li>  
        <li class="nav-item">
-          <a class="nav-link " href="javascript:void(0)" onclick="contactalert()" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">contact</a> 
+          <a class="nav-link " href="javascript:void(0)" onclick="contactalert()" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">contact</a> 
         </li>          
       
 
       </ul>
     </div>
-
+  
   </div>
 </nav>
 
@@ -235,36 +246,22 @@ font-weight: 550;
  
  <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- 2nd Inner_div -->  
    
-    <div style="text-align: center; margin-top: 1.0vh;  font-family: calibri; font-size: clamp(0.6rem, 1.2vw, 1.3rem); Color: black;">     
-        <div class="gap2vh"></div>
-        <h5 style="font-weight: 550; font-family: calibri; font-size: clamp(0.7rem, 1.5vw, 1.6rem);" >
-        Hello and welcome! ...
-        </h5>
-       
-        
-        <div class="gap1vh"></div>
-        <P style="font-size: clamp(0.6rem, 1.2vw, 1.3rem); font-weight: 400; text-align: left; padding-left: 2vw; padding-right: 2vw; ">
-       
-        Manage, your inventory on a cloud database through this basic, simple and cost effective online Material Management System
-        that will manage your inventory in much easier way than how you manage currently. The system displays on screen all items of the
-        company in a table with a facility to add or update or delete them right in the the display table itself. Another simple
-        screen of the system allows user to submit their item movements like Issue, Receipts & Adjustments.   
-        Additionally a hard copy of the all items can also be printed. The system is available on all medias such as laptop, desktop and mobile phones and needs just an internet connection. 
+    <div style="margin-top: 3.0vh; margin-left: 7.0vw; text-align: center;">     
+        <h5 style="font-family: calibri; font-size: clamp(1.6rem, 3.2vw, 3.3rem); Color: black; padding-left: 2vw; text-align: center; font-weight: 850; text-decoration: underline;">Hello Welcome!</h5>
+   </div>
+    <div style="margin-top: 9.0vh; margin-left: 4.6vw; text-align: center; width: 75%;">      
+        <h5 style="font-family: calibri; font-size: clamp(1.5rem, 2.2vw, 2.3rem); Color: black; padding-left: 8vw; text-align: center; font-weight: 750; ">Inventory management made simple!</h5>      
+   </div>
+<div style="margin-top: 15.0vh; margin-left: 4.0vw;   text-align: center;">      
+        <P style="font-family: calibri; font-size: clamp(0.7rem, 1.5vw, 1.6rem); Color: black; padding-left: 7vw; text-align: left; font-weight: 550;">
+       ✔  Mange Items In Cloud DB.<br>
+       ✔  Process Movements.<br>
+       ✔  View Items.<br>
+       ✔  View Movements.<br>
+       ✔  Print Items Invoice.<br>
+       ✔  Print Movements Invoice.   
 
-        
-       
-         <div style=" width: 75%; height: auto; margin: 0 auto; ">
-       <div class="gap2vh"></div> 
-       <img src="inv-img2.png" class="responsive-img rounded" style="display: block;">
-          
-       </div>
-        <!--
-         <div>
-          <label style="margin-left: 1vw;">Tax %:</label>
-        <input type="number" id="taxRate" value="5" step="0.01" style="width: 6%; text-align: center;">
-        <button type="button" onclick="loadnewitemstable()">Recalculate</button>
-        </div>
-          -->
+</P>      
    </div>
 
  </div>
@@ -273,11 +270,17 @@ font-weight: 550;
 <!--  -------------------------------------------------START--First column of grid---------------------------------------------     -->
   <div class="box" style="border: 0.00vw solid green; width: 85%; margin: 0 auto; ">    <!-- Start First col of grid -->
       <div style=" display: flex; justify-content: center; align-items: center;">
-       <div class = "second-box" style="width: 95%;">
-       <img src="item-db-screen.PNG" class="responsive-img rounded" style="display: block;">
-       <div class="gap4vh"></div>
-       
-       <img src="best-chart4.png" class="responsive-img rounded mobile-only">
+       <div class = "second-box" style="width: 100%;">
+        <div class="gap1vh"></div>
+    <div style="margin-top: 4vh; margin-left: 7vw; width: 65%; font-size: clamp(0.7rem, 1.6vw, 1.8rem); font-weight: 550;">
+    <P style="text-align: center; padding-left: 2vw; padding-right: 2vw; ">
+      
+        Keeping track of your stock doesn’t have to be complicated. 
+    </P>
+</div> 
+       <div style="margin-top: -6vh;">
+       <img src="wh-pic-27.png" class="responsive-img rounded" style="display: block; ">
+       </div>
           
        </div>
       </div>
