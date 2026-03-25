@@ -177,6 +177,34 @@ font-weight: 550;
     display: block;
   }
 }
+.sys-options  {
+margin-top: 15.0vh;
+margin-left: 4.0vw; 
+text-align: center;
+font-family: calibri;
+font-size: clamp(0.7rem, 1.5vw, 1.6rem);
+Color: black;
+font-weight: 550;
+padding-left: 7vw;
+ text-align: left; 
+}
+
+@media (max-width: 768px) {
+  .sys-options  {
+margin-top: 5.0vh;
+margin-left: 4.0vw; 
+text-align: center;
+font-family: calibri;
+font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+Color: black;
+font-weight: 550;
+padding-left: 7vw;
+ text-align: left; 
+}
+}
+
+
+
 
 
   </style>
@@ -252,8 +280,8 @@ font-weight: 550;
     <div style="margin-top: 9.0vh; margin-left: 4.6vw; text-align: center; width: 75%;">      
         <h5 style="font-family: calibri; font-size: clamp(1.5rem, 2.2vw, 2.3rem); Color: black; padding-left: 8vw; text-align: center; font-weight: 750; ">Inventory management made simple!</h5>      
    </div>
-<div style="margin-top: 15.0vh; margin-left: 4.0vw;   text-align: center;">      
-        <P style="font-family: calibri; font-size: clamp(0.7rem, 1.5vw, 1.6rem); Color: black; padding-left: 7vw; text-align: left; font-weight: 550;">
+<div class="sys-options" >      
+        <P style="">
        ✔  Mange Items In Cloud DB.<br>
        ✔  Process Movements.<br>
        ✔  View Items.<br>
