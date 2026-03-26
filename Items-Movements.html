@@ -483,8 +483,8 @@ background-color: #9bc7be;
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Movements</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Materials Management System</a>
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Inventory Control System</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Movements Management</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -502,10 +502,13 @@ background-color: #9bc7be;
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link " href="#" onclick="printInvoice()" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Print Invoicee</a>
-        </li>            
+          <a class="nav-link " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Print All Items (Main Information)</a>
+        </li> 
+      <li class="nav-item">
+          <a class="nav-link aback" href="Movements-Inq.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Movements Inquiry</a>
+        </li>           
        <li class="nav-item">
-          <a class="nav-link aback" href="Index-Items.html" style="font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Back</a>
+          <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
             
       
@@ -523,7 +526,7 @@ background-color: #9bc7be;
  <!-- Input Form -->
 <div class="gap4vh"></div>
 <div class="gap2vh"></div>
-<div class = "items-add-upd" > Movements Input
+<div class = "items-add-upd" > Movements Submit Form
 
 <div class="gap4vh"></div>
 
@@ -549,7 +552,7 @@ background-color: #9bc7be;
 <div class="gap4vh"></div>
 </div>
 <div class="gap2vh"></div>
-<div class="items-add-upd" >Items Display Grid
+<div class="items-add-upd" >Items (Main Information) Grid
 <div class="gap2vh"></div>
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -813,10 +816,13 @@ window.updateitem = async function () {
 //  
 //  const selectedmovtype = "Return";
    
-   alert("RI am before if check!");
+//   alert("RI am before if check!");
 //   console.log("User data:", selectedmovtype);
    
-  const chktype = "Receipt";
+  const nbr = document.getElementById("nbr").value;
+  const name = document.getElementById("name").value;
+  const uis = document.getElementById("uis").value;
+  const qty = document.getElementById("qty").value; 
   const movqty = document.getElementById("movqty").value;
   const prvqty = document.getElementById("qty").value;
   const movtype = document.getElementById("movtype").value;
@@ -839,11 +845,26 @@ window.updateitem = async function () {
   }
  
   try {
+
+
     await updateDoc(doc(db, "newitemstable", window.currentEditId), {
       
       qty: parseInt(sumqty)     
       
     });
+      alert("i am befoe move table add !");
+      await setDoc(doc(db, "movementstable", window.currentEditId), {
+      nbr: nbr,
+      name: name,
+      uis: uis,
+      qty: qty,
+      movtype: movtype,
+      movqty: parseInt(movqty),
+      clsqty: parseInt(sumqty),
+      ownerId: name,
+      createdAt: serverTimestamp()
+    });
+
 
     alert("movement processed successfully!");
     window.currentEditId = null;
@@ -852,7 +873,9 @@ window.updateitem = async function () {
   } catch (error) {
     console.error("Update error:", error);
   }
-};
+ };
+
+
 
 
   // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
