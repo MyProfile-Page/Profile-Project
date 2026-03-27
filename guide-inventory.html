@@ -46,7 +46,7 @@ font-family: calibri;
 font-size: clamp(1rem, 1.2vw, 1.5rem);
  /* font-size: 12.5vh; */
  /* font-size: 12.5vh; */
-  font-weight: 400;
+  font-weight: 500;
  Color: black;   
  /*    background-color: transparent;  */
  /* #46D1F3 is a light blue color */
@@ -81,7 +81,7 @@ text-align: left;
   <div class="container-fluid">
 
    <a class="navbar-brand" style="text-align: left; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;" href="#">Guide</a>
-    <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Data Entry Instructions</a>
+    <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Inventory Control</a>
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
@@ -125,7 +125,8 @@ text-align: left;
    <!-- FIRST ROW (One Column) One header & one Paragraph in the only column -->
 
         <div id="R1" class="row">
-            <div id="R1_D1" class="col-sm-12" style="margin-top: 4vh;"> 
+            <div id="R1_D1" class="col-sm-12" style="margin-top: 6vh;"> 
+            
                   <img src="WH4.PNG" class="img-fluid rounded shadow"   alt="Image REST is notavialable" >  
             </div>  
             
@@ -141,8 +142,9 @@ text-align: left;
        <div id="R2" class="row">
                   
            <div id="R2_D1" class="col-sm-12">
-                
-                
+            <P>&nbsp</P>     
+           <P style = "text-align: center; text-decoration: underline; font-family: calibri; font-size: clamp(1rem, 1.7vw, 1.8rem); font-weight: 550;">Data Entry Instructions</P> 
+                <P>&nbsp</P>
                 <p id="P2" class="P2" ></p>
                 
                
@@ -173,29 +175,37 @@ text-align: left;
                                                                                                             
        document.getElementById('P2').style.whiteSpace = 'pre-line';                                                  
        document.getElementById('P2').innerHTML = '<Normal> ' +
-        'The system welcome screen directs user to proceed to manage materials data\n  ' + 
+        'The system welcome screen directs user to proceed to manage Itemss data\n  ' + 
         'base or submit movements through menu icon at top right of welcome screen.\n  ' +           
-        'Following functions regarding items can be performed in the system.\n\n ' +
+        'Following functions can be performed in the system.\n\n ' +
+        '\n\n ' +
         '<u>1. Add a new item:</u>\n\n ' + 
+        '\n\n ' + 
         '   Type new item details in the Input form\n ' +
         '   and then click the Add Item button.\n\n ' +
-        '<u>2. Change details of an old item:</u>\n\n ' +        
+        '\n\n ' +
+        '<u>2. Change details of an old item:</u>\n\n ' + 
+        '\n\n ' +       
         '   click the update tab in the row of the items table where your\n ' + 
         '   item is being displayed. It will bring all details of that\n' +  
         '   selected item at input form window,\n' + 
         '   type needed changes and then click Update Item button which is\n' + 
         '   also in the Input form.\n\n ' +
-        ' ' +        
+        ' ' +  
+        '\n\n ' +     
         '<u>3. Delete an unwanted old item:</u>\n\n ' +
-         
+        '\n\n ' + 
         '   select in Display Grid the row of the item to be deleted\n' + 
         '   then click Delete button of the row.\n\n' + 
         '\n ' +
+        '\n\n ' +
         '<u>4. Print invoice:</u>\n\n ' +
+        '\n\n ' +
         '   click Print Invoice link in the Menu.\n ' + 
         '\n ' +
+        '\n\n ' +
         '<u>5. Movements:</u>\n\n ' +
-        
+        '\n\n ' +
         '   Click Movements in the menu then submit Issues, Receipts,.\n ' + 
         '   Adjustment Up & Adjustment Down.\n ' + 
         

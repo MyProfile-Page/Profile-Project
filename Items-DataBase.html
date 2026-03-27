@@ -348,6 +348,7 @@ background-color: #9bc7be;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
+ margin-top: 3vh;
  
 }
 
@@ -360,7 +361,7 @@ background-color: #9bc7be;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
- 
+  margin-top: 3vh;
 }
 }
 
@@ -482,7 +483,7 @@ background-color: #9bc7be;
   </style>
 </head>
 
-<body oncontextmenu="return false;" class="body_cls">
+<body  class="body_cls">
 
 
   <!-- 🌍 Navigation Bar Start -->
@@ -490,7 +491,7 @@ background-color: #9bc7be;
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Inventory Control System</a>
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Inventory Control</a>
    <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Items DataBase Management</a>
 
     <!-- Toggler -->
@@ -524,10 +525,11 @@ background-color: #9bc7be;
 </nav>
 
  <!-- 🌍 Navigation Bar End -->
-
-
+<div class="gap3vh"></div>
+<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto;">
 
  <!-- Input Form -->
+<div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div class = "items-add-upd" > Items Input Form
 <div class="gap3vh"></div>
@@ -535,20 +537,9 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Item No." style="width: 9%; text-align: center;" > 
   
-
-   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 28%; text-align: left;">
-   <datalist id="ctgs">
-   <option value="Electrical Items">
-   <option value="Chemical Items">
-   <option value="Plants & Vegetables">
-   <option value="Dairy Items">
-   <option value="Hard Metal Items">
-   <option value="Plastic Items">
-   <option value="Wooden Items">
-   <option value="Furniture">
-   <option value="Crokeries">
-   <option value="Other">
- </datalist>   
+   <input type="text" id="ctg" list="ctgs" placeholder="Start typing..." />
+   <datalist id="ctgs"></datalist>
+   
  <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 28%; text-align: left;">
 <input list="units" class="input-field" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;">
 <datalist id="units">
@@ -573,7 +564,7 @@ background-color: #9bc7be;
 
 
 
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input list="sups" class="input-field" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 30%; text-align: left;" >
  <datalist id="sups">
    <option value="Mazda Canada">
@@ -600,14 +591,14 @@ background-color: #9bc7be;
 
 </div>
 
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
    <input type="number" class="input-field-opt" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" style="width: 22%; text-align: center;"> 
   <input type="number" class="input-field-opt" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" style="width: 24%; text-align: center;">   
   <input type="text" class="input-field-opt" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" style="width: 24%; text-align: center;">
   <input type="text" class="input-field-opt" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" style="width: 27%; text-align: center; ">
  
 </div>
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
   
   <button onclick="additem()" type="button" class="add-btn";>Add</button>
   <button onclick="updateitem()" type="button" class="upd-btn";>Update</button>
@@ -620,8 +611,8 @@ background-color: #9bc7be;
 <div class="gap4vh"></div>
 
 
- 
-   
+</div> 
+ <div class="gap3vh"></div>  
 
 
 
@@ -671,6 +662,9 @@ background-color: #9bc7be;
  </div>
 </div>
 <!-- Bootstrap JS -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
@@ -1237,7 +1231,33 @@ const mnl = document.getElementById("mnl").value === "" ? null : document.getEle
   
   loadnewitemstable();
 
+//  Load Firestore data into <datalist>
+async function loadDatalist() {
+  const datalist = document.getElementById("ctgs");
+  alert("try datalist start");
+  
+  try {
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("ctgdatalist").get();
 
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.ctgname; // change field as needed
+
+      datalist.appendChild(option);
+    });
+
+  } catch (error) {
+    console.error("Error loading datalist:", error);
+  }
+
+alert("try datalist end");
+}
+
+loadDatalist();
 
 //  PRINT FUNCTION START
 
