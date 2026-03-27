@@ -230,6 +230,19 @@ text-align: left;
  }
 }
 
+.hello {
+ margin-top: 2.0vh;
+ margin-left: 5.2vw;
+ text-align: center;
+}
+
+@media (max-width: 768px) {
+.hello {
+ margin-top: 2.0vh;
+ margin-left: 2.2vw;
+ text-align: center;
+}
+}
 
 
 
@@ -297,7 +310,7 @@ text-align: left;
  
  <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- 2nd Inner_div -->  
    
-    <div style="margin-top: 2.0vh; margin-left: 5.2vw; text-align: center;">     
+    <div class="hello">     
         <h5 style="font-family: calibri; font-size: clamp(1.6rem, 3.2vw, 3.3rem); Color: black; padding-left: 2vw; text-align: center; font-weight: 850; text-decoration: underline;">Hello & Welcome!</h5>
    </div>
     <div style="margin-top: 4.0vh; margin-left: 3.8vw; text-align: center; width: 75%;">      
