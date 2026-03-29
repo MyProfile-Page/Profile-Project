@@ -526,7 +526,7 @@ background-color: #9bc7be;
 
  <!-- 🌍 Navigation Bar End -->
 <div class="gap3vh"></div>
-<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto;">
+<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
 
  <!-- Input Form -->
 <div class="gap3vh"></div>
@@ -537,7 +537,8 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Item No." style="width: 9%; text-align: center;" > 
   
-   <input type="text" id="ctg" list="ctgs" placeholder="Start typing..." />
+   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 28%; text-align: left;">
+<!--    <input type="text" id="ctg" list="ctgs" placeholder="Start typing..." />  -->
    <datalist id="ctgs"></datalist>
    
  <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 28%; text-align: left;">
@@ -1232,10 +1233,9 @@ const mnl = document.getElementById("mnl").value === "" ? null : document.getEle
   loadnewitemstable();
 
 //  Load Firestore data into <datalist>
-async function loadDatalist() {
+async function loadDatalistctg() {
   const datalist = document.getElementById("ctgs");
-  alert("try datalist start");
-  
+    
   try {
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
@@ -1254,10 +1254,9 @@ async function loadDatalist() {
     console.error("Error loading datalist:", error);
   }
 
-alert("try datalist end");
 }
 
-loadDatalist();
+loadDatalistctg();
 
 //  PRINT FUNCTION START
 
