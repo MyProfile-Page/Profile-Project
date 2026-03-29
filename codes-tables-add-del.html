@@ -718,7 +718,7 @@ window.additem = async function () {
 
     // 🔹 Create document with nbr as ID
     await setDoc(docRef, {
-      nbr: parseInt(nbr),
+      nbr: parseInt(nbr, 10),
       ctgname: ctgname,     
       createdAt: serverTimestamp()
       // createdAt: new Date()
