@@ -183,7 +183,7 @@ grid-auto-flow: row;
 }
 
 @media (max-width: 768px) {
- .itemTableBody-Cls {
+ .manfsupltableBody-Cls {
 white-space: normal; 
 overflow-wrap: break-word;
 word-wrap: break-word; 
@@ -269,7 +269,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .tr-main-row {
-height: 3vh;
+height: 4vh;
 background-color: #9bc7be;
 }
 }
@@ -485,7 +485,7 @@ background-color: #9bc7be;
   <div class="container-fluid">
 
    <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.5rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Movements Management</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.6rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Manufacturer/Supplier Table</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -523,12 +523,12 @@ background-color: #9bc7be;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Item Categories Addition Form
+<div class = "items-add-upd" > Manufacturers/Suppliers Addition Form
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Category No." style="width: 15%; text-align: center;" > 
-  <input type="text" class="input-field" id="ctgname" placeholder="Category Name" style="width: 36%; text-align: center;" >
+  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Manufacturer/Supplier No." style="width: 25%; text-align: center;" font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; > 
+  <input type="text" class="input-field" id="name" placeholder="Manufacturer/Supplier Name" style="width: 36%; text-align: center;" font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; >
   
   
 </div>
@@ -548,10 +548,10 @@ background-color: #9bc7be;
 
 
 </div> 
- <div class="gap3vh"></div>  <div class="items-add-upd" >Item Categories Grid
+ <div class="gap3vh"></div>  <div class="items-add-upd" >Manufacturers/Suppliers Grid
 <div class="gap2vh"></div>
   <!-- HTML Table For showing all records of database-->
-<div id = "wholeitemTable" class="custom-table-container">
+<div id = "wholemanfsupltable" class="custom-table-container">
   <table class="custom-table">
     <thead>
      
@@ -563,7 +563,7 @@ background-color: #9bc7be;
         <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
       </tr>
     </thead>
-    <tbody id="itemTable" class = "itemTableBody-Cls">
+    <tbody id="manfsupltable" class = "manfsupltableBody-Cls">
        <tr>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
@@ -614,12 +614,12 @@ const firebaseConfig = {
 
 
   // 🔹 READ (Load Data into Table)
-async function loadnewitemstable() {
+async function loadmanfsupltable() {
 
-  const table = document.getElementById("itemTable");
+  const table = document.getElementById("manfsupltable");
   
   table.innerHTML = "";
-  const collectionRef = collection(db, "ctgdatalist");
+  const collectionRef = collection(db, "mnspdatalist");
   const q = query(collectionRef, orderBy("nbr", "asc"));
   
   const querySnapshot = await getDocs(q);
@@ -637,7 +637,7 @@ async function loadnewitemstable() {
        
         
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.5vw;">${data.nbr}</td>
-<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.5vw;">${data.ctgname}</td>
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.5vw;">${data.name}</td>
                 <td style="border: 0.05vw solid black; text-align: center;">
 
            <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
@@ -664,7 +664,7 @@ async function loadnewitemstable() {
   
     
     document.getElementById("nbr").value = "";
-    document.getElementById("ctgname").value = "";
+    document.getElementById("name").value = "";
    
 
   }
@@ -678,9 +678,9 @@ async function loadnewitemstable() {
 
 
 // Fill inputs when Edit button is clicked
-window.edititem = function (id, ctgname) {
+window.edititem = function (id, name) {
   
-  document.getElementById("ctgname").value = ctgname;
+  document.getElementById("name").value = name;
   
   
  
@@ -693,22 +693,22 @@ window.edititem = function (id, ctgname) {
 
  // 🔹 DELETE (Remove Record)
   window.deleteitem = async function (id) {
-    await deleteDoc(doc(db, "ctgdatalist", id));
-    alert("item Category deleted");
+    await deleteDoc(doc(db, "mnspdatalist", id));
+    alert("Manufacturer/Supplier deleted");
     clearInputs();
-    loadnewitemstable();
+    loadmanfsupltable();
   };
 
 // 🔹 CREATE (Insert Data)
 window.additem = async function () {
 
   const nbr = document.getElementById("nbr").value;
-  const ctgname = document.getElementById("ctgname").value;
+  const name = document.getElementById("name").value;
      
   try {
 
     // 🔹 Use nbr as document ID
-     const docRef = doc(db, "ctgdatalist", nbr.toString());
+     const docRef = doc(db, "mnspdatalist", nbr.toString());
     
 
     // 🔹 Check if document already exists
@@ -719,23 +719,23 @@ window.additem = async function () {
     // 🔹 Create document with nbr as ID
     await setDoc(docRef, {
       nbr: parseInt(nbr),
-      ctgname: ctgname,     
+      name: name,     
       createdAt: serverTimestamp()
       // createdAt: new Date()
     });
 
-    alert("Item Category added");
+    alert("Manufacturer/Supplier added");
     
-    loadnewitemstable(); // refresh table
+    loadmanfsupltable(); // refresh table
 
   } catch (error) {
-    console.error("Error adding item:", error);
-    alert("Error adding item. Check console.");
+    console.error("Error adding Manufacturer/Supplier:", error);
+    alert("Error adding Manufacturer/Supplier. Check console.");
   }
 };
 
   
-  loadnewitemstable();
+  loadmanfsupltable();
 
 
 

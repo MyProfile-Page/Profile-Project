@@ -568,14 +568,8 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input list="sups" class="input-field" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 30%; text-align: left;" >
  <datalist id="sups">
-   <option value="Mazda Canada">
-   <option value="Magna International">
-   <option value="Linamar International">
-   <option value="McCain Foods">
-   <option value="Suncor Canada">
-   <option value="L3Harris Wescam Canada">
-   <option value="Other">
- </datalist>   
+
+</datalist>   
 <input list="imps" class="input-field" id="imp" name="aimp" placeholder="Importance" style="width: 15%; text-align: center;" >
  <datalist id="imps">
    <option value="Strategic">
@@ -856,8 +850,8 @@ async function loadnewitemstable() {
       
       <tr class="tr-main-row"  >
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.ctg}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.name}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; ">${data.ctg}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; ">${data.name}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.uis}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.qty}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${dollarprice}</td>
@@ -1232,11 +1226,12 @@ const mnl = document.getElementById("mnl").value === "" ? null : document.getEle
   
   loadnewitemstable();
 
-//  Load Firestore data into <datalist>
-async function loadDatalistctg() {
-  const datalist = document.getElementById("ctgs");
+//  Load Firestore data into <datalists>
+async function loadDatalistcodes() {
+  
     
   try {
+    const datalist = document.getElementById("ctgs");
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
     const snapshot = await db.collection("ctgdatalist").get();
@@ -1250,13 +1245,40 @@ async function loadDatalistctg() {
       datalist.appendChild(option);
     });
 
-  } catch (error) {
+ 
+ }
+
+    catch (error) {
     console.error("Error loading datalist:", error);
   }
 
+ try {
+    const datalist = document.getElementById("sups");
+//    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("mnspdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.name; // change field as needed
+
+      datalist.appendChild(option);
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Supplier datalist:", error);
+  }
+
+
 }
 
-loadDatalistctg();
+loadDatalistcodes();
+
+
 
 //  PRINT FUNCTION START
 
@@ -1475,6 +1497,7 @@ window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 
 
 //  PRINT FUNCTION END
+
 
 </script>
 
