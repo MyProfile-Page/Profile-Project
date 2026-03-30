@@ -63,7 +63,7 @@
 
 .custom-table td:nth-child(3),
 .custom-table td:nth-child(8)   {
-     text-align: left;    
+     text-align: center;    
  }
 
   
@@ -531,8 +531,8 @@ background-color: #9bc7be;
       <tr>
         <th style="text-align: center; width: 6%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
           
-        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
-        <th style="text-align: center; width: 5%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
+        <th style="text-align: center; width: 30%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
+        
         <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Type</th>
         <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Opening Bal</th>
         <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Qty</th>
@@ -544,7 +544,7 @@ background-color: #9bc7be;
     </thead>
     <tbody id="itemTable" class = "itemTableBody-Cls">
        <tr>
-        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
@@ -625,7 +625,7 @@ async function loadnewitemstable() {
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
         
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.2vw;">${data.name}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; text-align: center;">${data.uis}</td>
+       
         
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.movtype}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.qty}</td>
@@ -734,7 +734,7 @@ function printInvoice() {
 
            th:nth-child(3)
            {
-            text-align: left;
+            text-align: center;
           }
 
           td:nth-child(1),

@@ -63,7 +63,7 @@
 
 .custom-table td:nth-child(3),
 .custom-table td:nth-child(8)   {
-     text-align: left;    
+     text-align: center;    
  }
 
   
@@ -372,9 +372,9 @@ background-color: #9bc7be;
 .input-field-col {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 6vh;
- background-color: #51DEED; 
- background-color: LightYellow;  
- background-color: #f8f2ed;
+/* background-color: #51DEED; */
+ /* background-color: LightYellow;  */  
+/* background-color: #f8f2ed; */
  font-weight: 450; 
  border: 0.1vw solid black; 
 }
@@ -383,8 +383,8 @@ background-color: #9bc7be;
 .input-field-col {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 4vh;
- background-color: #51DEED; 
- background-color: #f8f2ed; 
+/* background-color: #51DEED; */
+/* background-color: #f8f2ed; */
  font-weight: 600; 
 }
 }
@@ -531,12 +531,30 @@ background-color: #9bc7be;
 <div class = "items-add-upd" > Movements Submit Form
 <div class="gap3vh"></div>
 
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
   <input type="number" class="input-field" id="nbr" placeholder="Item No." style="width: 9%; text-align: center;" disabled > 
-  <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 26%; text-align: center;" disabled >
-  <input type="text" class="input-field" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;" disabled >
+ 
+</div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  
+  <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 36%; text-align: left;" disabled >
+ 
+</div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  
   <input type="number" class="input-field" id="qty" placeholder="present Qty" style="width: 11%; text-align: center;" disabled >
-  <input list="movtypes" class="input-field-col" id="movtype" name="amov" placeholder="Movement Type" style="width: 17%; text-align: center;" >
+ 
+
+</div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  
+  <input list="movtypes" class="input-field-col" id="movtype" name="amov" placeholder="Movement Type" style="width: 22%; text-align: center;" >
   <datalist id="movtypes">
    <option value="Receipt">
    <option value="Return">
@@ -544,11 +562,20 @@ background-color: #9bc7be;
    <option value="Adjustment Up">
    <option value="Adjustment Down">
   </datalist>   
-  <input type="number" class="input-field-col" id="movqty" min="1" max="99999999" placeholder="Movement Quantity" style="width: 14%; text-align: center;"></div>
+ 
+
+</div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  
+ 
+  <input type="number" class="input-field-col" id="movqty" min="1" max="99999999" placeholder="Movement Quantity" style="width: 22%; text-align: center;">
+
+</div>
 
 
 
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
   
   <button onclick="updateitem()" type="button" class="upd-btn";>Submit</button>
   <button onclick="clearInputs()" type="button" class="clr-btn";>Clear</button>
@@ -569,22 +596,20 @@ background-color: #9bc7be;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 6%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
-        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Category</th>  
-        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
-        <th style="text-align: center; width: 5%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
-        <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
-        <th style="text-align: center; width: 12%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
-        <th style="text-align: center; width: 15%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
+        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
+          
+        <th style="text-align: center; width: 35%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
+        
+        <th style="text-align: center; width: 12%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 20%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
+        
       
-        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 20%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Movement</th>
       </tr>
     </thead>
     <tbody id="itemTable" class = "itemTableBody-Cls">
        <tr>
-        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
@@ -667,16 +692,16 @@ async function loadnewitemstable() {
       
       <tr class="tr-main-row"  >
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.2vw;">${data.ctg}</td>
+        
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.2vw;">${data.name}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.uis}</td>
+        
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.qty}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarprice}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">$${dollarvalue}</td>
+        
         
         <td style="border: 0.05vw solid black; text-align: center;">
 
-          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}')" class = "edit-delt-btn";>Movmt</button>
+          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.qty}')" class = "edit-delt-btn";>Select</button>
           
         </td>          
         
@@ -702,19 +727,19 @@ async function loadnewitemstable() {
   table.innerHTML += `
     <tr></tr>
    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
-      <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
+      <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh;">
-      <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
+      <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${taxDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
-      <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
+      <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -753,7 +778,7 @@ function calculateNetTotalCents(grandTotalCents, taxCents) {
     document.getElementById("name").value = "";
     document.getElementById("nbr").value = "";
     document.getElementById("qty").value = "";
-     document.getElementById("uis").value = "";
+     
     document.getElementById("movtype").value = "";
     document.getElementById("movqty").value = "";
     
@@ -800,11 +825,11 @@ function cleanrol(valuerol, valueqty) {
 
 
 // Fill inputs when Edit button is clicked
-window.edititem = function (id, name, nbr, uis, qty) {
+window.edititem = function (id, name, nbr, qty) {
   
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
-  document.getElementById("uis").value = uis;
+ 
   document.getElementById("qty").value = qty;
   
   
@@ -830,7 +855,7 @@ window.updateitem = async function () {
    
   const nbr = document.getElementById("nbr").value;
   const name = document.getElementById("name").value;
-  const uis = document.getElementById("uis").value;
+ 
   const qty = document.getElementById("qty").value; 
   const movqty = document.getElementById("movqty").value;
   const prvqty = document.getElementById("qty").value;
@@ -865,7 +890,7 @@ window.updateitem = async function () {
       await setDoc(doc(db, "movementstable", window.currentEditId), {
       nbr: nbr,
       name: name,
-      uis: uis,
+      
       qty: qty,
       movtype: movtype,
       movqty: parseInt(movqty),

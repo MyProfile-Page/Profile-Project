@@ -73,8 +73,8 @@
      text-align: left;    
  }
 
-.custom-table td:nth-child(3),
-.custom-table td:nth-child(8)   {
+
+.custom-table td:nth-child(2)   {
      text-align: left;    
  }
 
@@ -95,7 +95,7 @@
     /* background-color: #f2f2f2;  */ /* Light gray background for header */
     /* color: #333;  */
     
-    border: 0.00vw solid lightgrey; /* Light grey borders */
+    border: 0.05vw solid Black; /* Light grey borders */
     padding: 0.0vw; /* Spacing inside cells */
     text-align: center;
 
@@ -368,9 +368,9 @@ background-color: #9bc7be;
 .input-field {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 6vh;
- background-color: #51DEED; 
- background-color: LightYellow;  
- background-color: #E6E6FA;
+/* background-color: #51DEED;   */
+/*  background-color: LightYellow; */ 
+/* background-color: #E6E6FA; */
  font-weight: 450; 
 }
 
@@ -387,8 +387,8 @@ background-color: #9bc7be;
 .input-field-opt {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 6vh;
- background-color: #51DEED; 
- background-color: LightYellow; 
+/* background-color: #51DEED;  */
+/* background-color: LightYellow; */ 
  font-weight: 450; 
 }
 
@@ -396,8 +396,8 @@ background-color: #9bc7be;
 .input-field-opt {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 4vh;
- background-color: #51DEED; 
- background-color: LightYellow;  
+/* background-color: #51DEED;  */ 
+/* background-color: LightYellow; */ 
  font-weight: 600; 
 }
 }
@@ -413,7 +413,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .edit-delt-btn  {
-  width: 45%;
+  width: 30%;
   height: 2.0vh;
   text-align: center; 
   font-weight: 400; 
@@ -510,8 +510,11 @@ background-color: #9bc7be;
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
        <li class="nav-item">
-          <a class="nav-link " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Print All Items (Detail Information)</a>
-        </li>      
+          <a class="nav-link " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);">Print</a>
+        </li> 
+        <li class="nav-item">
+          &nbsp
+        </li>       
        <li class="nav-item">
           <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
@@ -531,20 +534,28 @@ background-color: #9bc7be;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Items Input Form
+<div class = "items-add-upd" > Item View/Add/Update
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Item No." style="width: 9%; text-align: center;" > 
-  
-   <input list="ctgs" class="input-field" id="ctg" name="actg" placeholder="Item Category" style="width: 28%; text-align: left;">
-<!--    <input type="text" id="ctg" list="ctgs" placeholder="Start typing..." />  -->
-   <datalist id="ctgs"></datalist>
-   
- <input type="text" class="input-field" id="name" placeholder="Item Name" style="width: 28%; text-align: left;">
-<input list="units" class="input-field" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;">
+<input type="number" class="input-field" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No." style="width: 9%; text-align: center;" >    
+ <input type="text" class="input-field" title="Enter Item Name" id="name" placeholder="Item Name" style="width: 28%; text-align: left;">
+</div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+ <input list="ctgs" class="input-field" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" style="width: 28%; text-align: left;">
+ <datalist id="ctgs"></datalist>
+</div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+ <input list="sups" class="input-field" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 30%; text-align: left;" >
+ <datalist id="sups"></datalist>   
+</div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<input list="units" class="input-field" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;">
 <datalist id="units">
-  <option value="GR">
+<option value="GR">
   <option value="KM">
   <option value="MR">
   <option value="MG">
@@ -557,47 +568,42 @@ background-color: #9bc7be;
   <option value="DZ">
   <option value="PD">
   <option value="OT">
-</datalist>
- <input type="number" class="input-field" id="qty" min="1" max="99999999" placeholder="Qty" style="width: 11%; text-align: center;">
-<input type="number" class="input-field" id="prc" min="1" max="99999999" placeholder="Price(in Cents)" style="width: 16%; text-align: center;">
- 
+</datalist> 
+<input type="number" class="input-field" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" style="width: 11%; text-align: center;">
+<input type="number" class="input-field" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" style="width: 16%; text-align: center;"> 
 </div>
 
-
-
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="sups" class="input-field" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 30%; text-align: left;" >
- <datalist id="sups">
-
-</datalist>   
-<input list="imps" class="input-field" id="imp" name="aimp" placeholder="Importance" style="width: 15%; text-align: center;" >
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<input list="imps" class="input-field" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance" style="width: 15%; text-align: center;" >
  <datalist id="imps">
    <option value="Strategic">
    <option value="Normal">
  </datalist>   
-  <input list="cons" class="input-field" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 24%; text-align: center;" >
+  <input list="cons" class="input-field" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 24%; text-align: center;" >
   <datalist id="cons">
    <option value="Consume">
    <option value="Permanent">
  </datalist>   
-
-
- 
-
 </div>
 
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-   <input type="number" class="input-field-opt" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" style="width: 22%; text-align: center;"> 
-  <input type="number" class="input-field-opt" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" style="width: 24%; text-align: center;">   
-  <input type="text" class="input-field-opt" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" style="width: 24%; text-align: center;">
-  <input type="text" class="input-field-opt" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" style="width: 27%; text-align: center; ">
- 
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+ <input type="number" class="input-field-opt" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" style="width: 22%; text-align: center;"> 
+  <input type="number" class="input-field-opt" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" style="width: 24%; text-align: center;">
 </div>
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  <input type="text" class="input-field-opt" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" style="width: 24%; text-align: center;">
+  <input type="text" class="input-field-opt" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" style="width: 27%; text-align: center; ">
+</div>
+
+
+
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
   
-  <button onclick="additem()" type="button" class="add-btn";>Add</button>
-  <button onclick="updateitem()" type="button" class="upd-btn";>Update</button>
-  <button onclick="Clearinputdata()" type="button" class="clr-btn";>Clear</button>
+  <button id="btn-for-add" onclick="additem()" type="button" class="add-btn";>Add</button>
+  <button id="btn-for-upd" onclick="updateitem()" type="button" class="upd-btn";>Update</button>
+  <button id="btn-for-clr" onclick="Clearinputdata()" type="button" class="clr-btn";>Clear</button>
 </div>
 
 <div class="gap3vh"></div>
@@ -622,35 +628,28 @@ background-color: #9bc7be;
      
       <tr>
         <th style="text-align: center; width: 6%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
-        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Category</th>  
-        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
-        <th style="text-align: center; width: 4%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Unit</th>
-        <th style="text-align: center; width: 7%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
+         
+        <th style="text-align: center; width: 35%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
+        
+        <th style="text-align: center; width: 9%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
         <th style="text-align: center; width: 11%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
-        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
-      
-        <th style="padding: 0.0vw; text-align: center; width: 17%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Man./Supp.</th>
+          <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
+        <th style="text-align: center; width: 24%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
+        
+        
       </tr>
     </thead>
     <tbody id="itemTable" class = "itemTableBody-Cls">
        <tr>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
-        <td rowspan="3" style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+       
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
         <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
       </tr>
-      <tr > 
-        <td colspan="7"></td>       
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>        
-      </tr>
-      <tr >
-        <td colspan="7"></td>        
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>        
-      </tr>
+    
      
      </tbody>
   </table>
@@ -850,61 +849,23 @@ async function loadnewitemstable() {
       
       <tr class="tr-main-row"  >
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.nbr}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; ">${data.ctg}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; ">${data.name}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.uis}</td>
+       
+        <td style="padding-left: 0.2vw; border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; ">${data.name}</td>
+        
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${data.qty}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${dollarprice}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${dollarvalue}</td>
-        
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">${data.sup}</td>
-        
-      </tr>
+        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${dollarvalue}</td> 
 
-   <tr class="tr-adl-row"  >
-        <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; color: Blue;">More Details</td>
-      </tr>
-  
-   <tr class="tr-adl-row" >
-        <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Durn:&nbsp${data.con}</td>
-      </tr>
-  
-  <tr class="tr-adl-row" >
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Impt:&nbsp${data.imp}</td>
-      </tr>
-   
-      
-      <tr class="tr-adl-row"> 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Rord lvl:&nbsp${clean(data.rol)}</td>
-      </tr>
-
-      <tr class="tr-adl-row"> 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Min lvl:&nbsp${clean(data.mnl)}</td>
-      </tr>
-
-       <tr class="tr-adl-row"> 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>          
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Lmvnt:&nbsp${clean(data.fmd)}</td>
-      </tr>
-
-      <tr class="tr-adl-row">  
-        <td colspan="7" style="border: 0.0vw solid black;"></td>         
-        <td style="border: 0.0vw solid black; text-decoration: None; text-align: left; font-size: clamp(0.5rem, 0.8vw, 1.0rem); font-weight: 400;">Exp:&nbsp${data.exp}</td>
-      </tr>
-
-       <tr class="no-print tr-btn-row" > 
-        <td colspan="7" style="border: 0.0vw solid black;"></td>
-        <td style="border: 0.0vw solid black; text-align: center;">
-
+        <td style="border: 0.05vw solid black; text-align: center;">
+          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Detail</button>
           <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Edit</button>
-          <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delt</button>
-        </td>          
-      </tr>  
+       
+         <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
+        </td>                     
+        
+        
+        
+     
     `;
   });
 
@@ -924,19 +885,19 @@ async function loadnewitemstable() {
   table.innerHTML += `
     <tr></tr>
    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
-      <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh;">
-      <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${taxDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
-      <td colspan="6" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -1111,11 +1072,46 @@ window.Clearinputdata = async function () {
     document.getElementById("rol").value = "";
     document.getElementById("mnl").value = "";
     document.getElementById("fmd").value = ""; 
+  document.getElementById("name").disabled = false;
+  document.getElementById("nbr").disabled = false; 
+  document.getElementById("uis").disabled = false;  
+  document.getElementById("qty").disabled = false;
+  document.getElementById("prc").disabled = false;
+  document.getElementById("exp").disabled = false;
+  document.getElementById("ctg").disabled = false;
+  document.getElementById("sup").disabled = false;
+  document.getElementById("imp").disabled = false;
+  document.getElementById("con").disabled = false;
+  document.getElementById("rol").disabled = false; 
+  document.getElementById("mnl").disabled = false;
+  document.getElementById("fmd").disabled = false;
+  document.getElementById("btn-for-add").disabled = false;
+  document.getElementById("btn-for-upd").disabled = false;
 
   }
 
 // Fill inputs when Edit button is clicked
 window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
+  document.getElementById("name").value = name;
+  document.getElementById("nbr").value = nbr;
+  document.getElementById("uis").value = uis;
+  document.getElementById("qty").value = qty;
+  document.getElementById("prc").value = prc;
+  document.getElementById("exp").value = exp;
+
+  document.getElementById("ctg").value = ctg;
+  document.getElementById("sup").value = sup;
+  document.getElementById("imp").value = imp;
+  document.getElementById("con").value = con;
+  document.getElementById("rol").value = rol;
+  document.getElementById("mnl").value = mnl;
+  document.getElementById("fmd").value = fmd; 
+ // Store document ID for update
+  window.currentEditId = id;
+};
+
+// Fill inputs when Detail button is clicked
+window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
   
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
@@ -1131,11 +1127,24 @@ window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
   document.getElementById("rol").value = rol;
   document.getElementById("mnl").value = mnl;
   document.getElementById("fmd").value = fmd;
-  
 
-
-  // Store document ID for update
-  window.currentEditId = id;
+  document.getElementById("name").disabled = true;
+  document.getElementById("nbr").disabled = true; 
+  document.getElementById("uis").disabled = true;  
+  document.getElementById("qty").disabled = true;
+  document.getElementById("prc").disabled = true; 
+  document.getElementById("exp").disabled = true;
+  document.getElementById("ctg").disabled = true;
+  document.getElementById("sup").disabled = true; 
+  document.getElementById("imp").disabled = true;
+  document.getElementById("con").disabled = true;
+  document.getElementById("rol").disabled = true; 
+  document.getElementById("mnl").disabled = true;
+  document.getElementById("fmd").disabled = true;
+  document.getElementById("btn-for-add").disabled = true;
+  document.getElementById("btn-for-upd").disabled = true;
+ // Store document ID for update
+ // window.currentEditId = id;
 };
 
 // Update record in Firestore
@@ -1312,7 +1321,7 @@ function printInvoice() {
           }
 
           th {
-            border: 0.00vw solid black;
+            border: 0.2vw solid black;
             padding: 1vw;
             height: 4px;
             text-align: left;
@@ -1325,33 +1334,37 @@ function printInvoice() {
           }
 
           td {
-            border: 0.00vw solid black;
+            border: 0.2vw solid black;
             padding: 0.2vw;
             text-align: left;
          }
 
-           th:nth-child(2),
-            td:nth-child(3),
-           td:nth-child(8) {
+           td:nth-child(5) {
+            border-right: 0.2vw solid black;
+             
+          }
+            
+           td:nth-child(2) {
             text-align: left;
+            padding-left: 2px; 
           }
 
           td:nth-child(1),
             td:nth-child(4),
              td:nth-child(5),
              td:nth-child(6),
-           td:nth-child(7) {
+           td:nth-child(3) {
             text-align: center;
           }
-
-  /*         td:nth-child(7),       */
-  /*         td:nth-child(8) {      */
-  /*          colspan="2";          */
-  /*        }                       */
-
+           @media print {
+            td:nth-child(5),        
+            td:nth-child(6) {       
+            colspan="2";           
+          }                        
+          }
 
                     
-              
+            
 
 
 
@@ -1378,12 +1391,12 @@ function printInvoice() {
             }
           }
 
-  /*        @media print {        */
-  /*          table th:last-child,    */
-  /*          table td:last-child {    */
-  /*          display: none;     */
-  /*          }
-  /*       }                */
+         @media print {       
+            table th:nth-child(6),    
+            table td:nth-child(6) {   
+           display: none;     
+           }
+         }                
 
           @media print {
             table th {
