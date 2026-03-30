@@ -422,7 +422,7 @@ background-color: #9bc7be;
 }
 }
 .add-btn {
-  width: 14%; 
+  width: 25%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -430,7 +430,7 @@ background-color: #9bc7be;
   font-weight: 600; 
  }
 .upd-btn {
-  width: 14%; 
+  width: 25%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -438,7 +438,7 @@ background-color: #9bc7be;
   font-weight: 600; 
  }
 .clr-btn {
-  width: 14%; 
+  width: 25%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -447,7 +447,7 @@ background-color: #9bc7be;
  }
 @media (max-width: 768px) {
 .add-btn {
-  width: 14%; 
+  width: 25%; 
   text-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
@@ -458,7 +458,7 @@ background-color: #9bc7be;
  }
 @media (max-width: 768px) {
 .upd-btn {
-  width: 14%; 
+  width: 25%; 
   te xt-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
@@ -469,7 +469,7 @@ background-color: #9bc7be;
 }
 @media (max-width: 768px) {
 .clr-btn {
-  width: 14%; 
+  width: 25%; 
   text-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
@@ -539,21 +539,21 @@ background-color: #9bc7be;
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input type="number" class="input-field" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No." style="width: 9%; text-align: center;" >    
- <input type="text" class="input-field" title="Enter Item Name" id="name" placeholder="Item Name" style="width: 28%; text-align: left;">
+ <input type="text" class="input-field" title="Enter Item Name" id="name" placeholder="Item Name" style="width: 35%; text-align: left;">
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="ctgs" class="input-field" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" style="width: 28%; text-align: left;">
+ <input list="ctgs" class="input-field" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" style="width: 40%; text-align: left;">
  <datalist id="ctgs"></datalist>
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="sups" class="input-field" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 30%; text-align: left;" >
+ <input list="sups" class="input-field" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 40%; text-align: left;" >
  <datalist id="sups"></datalist>   
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="units" class="input-field" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" style="width: 7%; text-align: center;">
+<input list="units" class="input-field" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" style="width: 12%; text-align: center;">
 <datalist id="units">
 <option value="GR">
   <option value="KM">
@@ -569,17 +569,17 @@ background-color: #9bc7be;
   <option value="PD">
   <option value="OT">
 </datalist> 
-<input type="number" class="input-field" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" style="width: 11%; text-align: center;">
-<input type="number" class="input-field" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" style="width: 16%; text-align: center;"> 
+<input type="number" class="input-field" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" style="width: 20%; text-align: center;">
+<input type="number" class="input-field" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" style="width: 26%; text-align: center;"> 
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="imps" class="input-field" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance" style="width: 15%; text-align: center;" >
+<input list="imps" class="input-field" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance" style="width: 30%; text-align: center;" >
  <datalist id="imps">
    <option value="Strategic">
    <option value="Normal">
  </datalist>   
-  <input list="cons" class="input-field" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 24%; text-align: center;" >
+  <input list="cons" class="input-field" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 30%; text-align: center;" >
   <datalist id="cons">
    <option value="Consume">
    <option value="Permanent">
@@ -587,13 +587,13 @@ background-color: #9bc7be;
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input type="number" class="input-field-opt" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" style="width: 22%; text-align: center;"> 
-  <input type="number" class="input-field-opt" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" style="width: 24%; text-align: center;">
+ <input type="number" class="input-field-opt" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" style="width: 32%; text-align: center;"> 
+  <input type="number" class="input-field-opt" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" style="width: 32%; text-align: center;">
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="text" class="input-field-opt" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" style="width: 24%; text-align: center;">
-  <input type="text" class="input-field-opt" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" style="width: 27%; text-align: center; ">
+  <input type="text" class="input-field-opt" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" style="width: 32%; text-align: center;">
+  <input type="text" class="input-field-opt" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" style="width: 32%; text-align: center; ">
 </div>
 
 
