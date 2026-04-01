@@ -403,7 +403,7 @@ background-color: #9bc7be;
 }
 
 .edit-delt-btn  {
-  width: 30%;
+  width: 60%;
   height: 5.0vh;
   text-align: center; 
   font-weight: 400; 
@@ -413,7 +413,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .edit-delt-btn  {
-  width: 30%;
+  width: 60%;
   height: 2.0vh;
   text-align: center; 
   font-weight: 400; 
@@ -422,7 +422,7 @@ background-color: #9bc7be;
 }
 }
 .add-btn {
-  width: 25%; 
+  width: 15.75%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -430,7 +430,7 @@ background-color: #9bc7be;
   font-weight: 600; 
  }
 .upd-btn {
-  width: 25%; 
+  width: 15.75%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -438,7 +438,7 @@ background-color: #9bc7be;
   font-weight: 600; 
  }
 .clr-btn {
-  width: 25%; 
+  width: 15.60%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -543,12 +543,12 @@ background-color: #9bc7be;
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="ctgs" class="input-field" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" style="width: 40%; text-align: left;">
+ <input list="ctgs" class="input-field" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" style="width: 44%; text-align: left;">
  <datalist id="ctgs"></datalist>
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="sups" class="input-field" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 40%; text-align: left;" >
+ <input list="sups" class="input-field" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier" style="width: 44%; text-align: left;" >
  <datalist id="sups"></datalist>   
 </div>
 
@@ -574,12 +574,12 @@ background-color: #9bc7be;
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="imps" class="input-field" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance" style="width: 30%; text-align: center;" >
+<input list="imps" class="input-field" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance" style="width: 29%; text-align: center;" >
  <datalist id="imps">
    <option value="Strategic">
    <option value="Normal">
  </datalist>   
-  <input list="cons" class="input-field" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 30%; text-align: center;" >
+  <input list="cons" class="input-field" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" style="width: 29%; text-align: center;" >
   <datalist id="cons">
    <option value="Consume">
    <option value="Permanent">
@@ -594,6 +594,7 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   <input type="text" class="input-field-opt" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" style="width: 32%; text-align: center;">
   <input type="text" class="input-field-opt" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" style="width: 32%; text-align: center; ">
+  <input type="hidden" id="docIdHolder">
 </div>
 
 
@@ -602,7 +603,11 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
   
   <button id="btn-for-add" onclick="additem()" type="button" class="add-btn";>Add</button>
+  <div>&nbsp</div>
   <button id="btn-for-upd" onclick="updateitem()" type="button" class="upd-btn";>Update</button>
+  <div>&nbsp</div>
+  <button id="btn-for-del" onclick="deleteitem()" type="button" class="upd-btn";>Delete</button>
+  <div>&nbsp</div>
   <button id="btn-for-clr" onclick="Clearinputdata()" type="button" class="clr-btn";>Clear</button>
 </div>
 
@@ -627,14 +632,14 @@ background-color: #9bc7be;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 6%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
+        <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
          
-        <th style="text-align: center; width: 34%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
+        <th style="text-align: center; width: 40%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
         
-        <th style="text-align: center; width: 9%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
-          <th style="text-align: center; width: 12%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
-        <th style="text-align: center; width: 28%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
+        <th style="text-align: center; width: 11%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Price</th>
+          <th style="text-align: center; width: 16%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">value</th>
+        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
         
         
       </tr>
@@ -678,7 +683,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 
-
+const savedid = 0;
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCPjQ6I6XZ2EZGNRFi_1iQYZv5tjYFGdfk",
@@ -857,10 +862,8 @@ async function loadnewitemstable() {
         <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400;">${dollarvalue}</td> 
 
         <td style="border: 0.05vw solid black; text-align: center;">
-          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Detail</button>
-          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Edit</button>
-       
-         <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
+          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>View</button>
+          
         </td>                     
         
         
@@ -1033,12 +1036,28 @@ function isValidSelection(inputId, datalistId) {
 
 
   // 🔹 DELETE (Remove Record)
-  window.deleteitem = async function (id) {
+  window.deleteitem = async function () {
+
+ const id = document.getElementById("docIdHolder").value;
+
+    if (!id) {
+        alert("No item selected for Delete");
+        console.log("No document selected");
+        return;
+    }
+
     await deleteDoc(doc(db, "newitemstable", id));
-    alert("item deleted from Firestore");
+    alert("item Deleted from Firestore");
     clearInputs();
     loadnewitemstable();
-  };
+//    console.log("Deleted:", id);
+};
+  
+//    await deleteDoc(doc(db, "newitemstable", id));
+//    alert("item deleted from Firestore");
+//    clearInputs();
+//    loadnewitemstable();
+//  };
 
   // Clear input fields
   function clearInputs() {
@@ -1055,6 +1074,10 @@ function isValidSelection(inputId, datalistId) {
     document.getElementById("rol").value = "";
     document.getElementById("mnl").value = "";
     document.getElementById("fmd").value = ""; 
+    document.getElementById("btn-for-upd").disabled = true;
+    document.getElementById("btn-for-del").disabled = true;
+    document.getElementById("btn-for-add").disabled = false;
+     
 
   }
 
@@ -1113,6 +1136,8 @@ window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
 // Fill inputs when Detail button is clicked
 window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
   
+ 
+  document.getElementById("docIdHolder").value = id;
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
   document.getElementById("uis").value = uis;
@@ -1128,29 +1153,17 @@ window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
   document.getElementById("mnl").value = mnl;
   document.getElementById("fmd").value = fmd;
 
-  document.getElementById("name").disabled = true;
-  document.getElementById("nbr").disabled = true; 
-  document.getElementById("uis").disabled = true;  
-  document.getElementById("qty").disabled = true;
-  document.getElementById("prc").disabled = true; 
-  document.getElementById("exp").disabled = true;
-  document.getElementById("ctg").disabled = true;
-  document.getElementById("sup").disabled = true; 
-  document.getElementById("imp").disabled = true;
-  document.getElementById("con").disabled = true;
-  document.getElementById("rol").disabled = true; 
-  document.getElementById("mnl").disabled = true;
-  document.getElementById("fmd").disabled = true;
+ 
   document.getElementById("btn-for-add").disabled = true;
-  document.getElementById("btn-for-upd").disabled = true;
+ 
  // Store document ID for update
- // window.currentEditId = id;
+  window.currentEditId = id;
 };
 
 // Update record in Firestore
 window.updateitem = async function () {
   if (!window.currentEditId) {
-    alert("Please select a record to edit first.");
+    alert("Please select a record to view first.");
     return;
   }
 

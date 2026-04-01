@@ -352,9 +352,7 @@ background-color: #9bc7be;
 .input-field {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 6vh;
- background-color: #51DEED; 
- background-color: LightYellow;  
- background-color: #E6E6FA;
+ 
  font-weight: 450; 
  border: 0.1vw solid black; 
 }
@@ -363,8 +361,7 @@ background-color: #9bc7be;
 .input-field {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 4vh;
- background-color: #51DEED; 
- background-color: #E6E6FA; 
+
  font-weight: 600; 
 }
 }
@@ -419,7 +416,7 @@ background-color: #9bc7be;
   font-weight: 600; 
  }
 .upd-btn {
-  width: 9%; 
+  width: 15%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -428,7 +425,7 @@ background-color: #9bc7be;
   border: 0.01vw solid black;
  }
 .clr-btn {
-  width: 7%; 
+  width: 15%; 
   text-align: center;
   background-color: #fafafa; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -547,14 +544,14 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
   
-  <input type="number" class="input-field" id="qty" placeholder="present Qty" style="width: 11%; text-align: center;" disabled >
+  <input type="number" class="input-field" id="qty" placeholder="present Item Qty" style="width: 18%; text-align: center;" disabled >
  
 
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   
-  <input list="movtypes" class="input-field-col" id="movtype" name="amov" placeholder="Movement Type" style="width: 22%; text-align: center;" >
+  <input list="movtypes" class="input-field-col" id="movtype" name="amov" placeholder="Movement Type    " style="width: 22%; text-align: center;" >
   <datalist id="movtypes">
    <option value="Receipt">
    <option value="Return">
@@ -578,6 +575,7 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
   
   <button onclick="updateitem()" type="button" class="upd-btn";>Submit</button>
+  <div>&nbsp</div>
   <button onclick="clearInputs()" type="button" class="clr-btn";>Clear</button>
 </div>
 
