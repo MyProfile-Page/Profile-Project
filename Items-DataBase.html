@@ -26,6 +26,7 @@
           background: #f7f681;
           background: LightCyan;
       //   background: #cce6ff;
+          background: #9bc7be;
          
       /*    background:  */
           line-height: 0.8;         
@@ -259,7 +260,8 @@ font-weight: 550;
 
 .tr-main-row {
 height: 5vh;
-background-color: #9bc7be;
+/* background-color: #9bc7be; */
+background-color: White;
 
 }
 
@@ -286,7 +288,7 @@ background-color: #9bc7be;
 @media (max-width: 768px) {
 .tr-main-row {
 height: 3vh;
-background-color: #9bc7be;
+/* background-color: #9bc7be; */
 }
 }
 font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 6vh; 
@@ -634,13 +636,13 @@ background-color: #9bc7be;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 8%; font-size: font-size: clamp(0.9rem, 1.5vw, 1.6rem); font-weight: 600; ">No.</th>
+        <th style="text-align: center; width: 8%; font-size: font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">No.</th>
          
-        <th style="text-align: center; width: 40%; font-size: font-size: clamp(0.9rem, 1.5vw, 1.6rem); font-weight: 600; ">Name</th>              
-        <th style="text-align: center; width: 11%; font-size: font-size: clamp(0.9rem, 1.5vw, 1.6rem); font-weight: 600; ">Qty</th>
-        <th style="text-align: center; width: 14%; font-size: font-size: clamp(0.9rem, 1.5vw, 1.6rem); font-weight: 600; ">Price</th>
-        <th style="text-align: center; width: 16%; font-size: font-size: clamp(0.9rem, 1.5vw, 1.6rem); font-weight: 600; ">value</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 600; ">Action</th>
+        <th style="text-align: center; width: 40%; font-size: font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Name</th>              
+        <th style="text-align: center; width: 11%; font-size: font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 14%; font-size: font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Price</th>
+        <th style="text-align: center; width: 16%; font-size: font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">value</th>
+        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
         
         
       </tr>
@@ -648,12 +650,12 @@ background-color: #9bc7be;
     <tbody id="itemTable" class = "itemTableBody-Cls">
        <tr>
        
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 550; "></td>
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 550; "></td>
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 550; "></td>
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 550; "></td>
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 550; "></td>
-        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 550; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 0.8vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 0.8vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
       </tr>
     
      
@@ -854,15 +856,15 @@ async function loadnewitemstable() {
     table.innerHTML += `
       
       <tr class="tr-main-row"  >
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.nbr}</td>
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.nbr}</td>
        
-        <td style="padding-left: 0.2vw; border-top: 0.05vw solid black; border-right: 0.00vw solid black;  ">${data.name}</td>
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; padding-left: 0.2vw; border-top: 0.05vw solid black; border-right: 0.00vw solid black;  ">${data.name}</td>
         
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.qty}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarprice}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarvalue}</td> 
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.qty}</td>
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarprice}</td>
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarvalue}</td> 
 
-        <td style="border: 0.05vw solid black; text-align: center;">
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border: 0.05vw solid black; text-align: center;">
           <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>View</button>
           
         </td>                     
