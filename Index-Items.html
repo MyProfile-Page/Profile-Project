@@ -63,7 +63,7 @@
 
  .grid-container {
             display: grid;
-            grid-template-columns: 35% 65%; /* 2 equal columns */
+            grid-template-columns: 50% 50%; /* 2 equal columns */
     /*        gap: 2vw;  */
             padding: 0.4vw;
             grid-auto-rows: auto;
@@ -179,7 +179,7 @@ font-weight: 550;
 }
 .sys-options  {
 margin-top: 7.0vh;
-margin-left: 4.0vw; 
+margin-left: 0.0vw; 
 text-align: center;
 font-family: calibri;
 font-size: clamp(0.7rem, 1.5vw, 1.6rem);
@@ -187,13 +187,14 @@ Color: black;
 font-weight: 550;
 padding-left: 4vw;
  text-align: left; 
+border: 0.0vw solid Black;
 
 }
 
 @media (max-width: 768px) {
   .sys-options  {
 margin-top: 5.0vh;
-margin-left: 4.0vw; 
+margin-left: 0.0vw; 
 text-align: center;
 font-family: calibri;
 font-size: clamp(0.9rem, 1.5vw, 1.6rem);
@@ -222,7 +223,8 @@ text-align: left;
  }
 
  .imagecls {
-  margin-top: 6vh;
+  margin-top: -4vh;
+  border: 0.0vw solid Black;
  }
 @media (max-width: 768px) {
 .imagecls {
@@ -231,7 +233,7 @@ text-align: left;
 }
 
 .hello {
- margin-top: 2.0vh;
+ margin-top: 17.0vh;
  margin-left: 5.2vw;
  text-align: center;
 }
@@ -278,14 +280,12 @@ text-align: left;
     <div class="collapse navbar-collapse" id="navbarNav">
     <div class="gap1vh"></div>
       <ul class="navbar-nav ms-auto">
-       <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="mnsp-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Manufacturers/Suppliers Management</a>
-        </li>  
+       
         <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="codes-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items Catagories Management</a>
+          <a class="nav-link " href="codes-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Codes Management</a>
         </li>  
          <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="Items-DataBase.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items DataBase Management</a>
+          <a class="nav-link " href="Items-DataBase.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">DataBase Management</a>
         </li>  
        <li class="nav-item" style="line-height: 6dvh;" >
           <a class="nav-link " href="Items-Movements.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Movements Management</a>
@@ -312,39 +312,32 @@ text-align: left;
 
 
 
-<!--  --------------------------------------------------START-secnd column of grid---------------------------------------     -->
+<!--  --------------------------------------------------START-First column of grid---------------------------------------     -->
  
- <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- 2nd Inner_div -->  
+ <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
    
-    <div class="hello">     
+    <div class="hello" style="border: 0.0vw solid green;">     
         <h5 style="font-family: calibri; font-size: clamp(1.6rem, 3.2vw, 3.3rem); Color: black; padding-left: 2vw; text-align: center; font-weight: 850; text-decoration: underline;">Hello & Welcome!</h5>
    </div>
-    <div style="margin-top: 4.0vh; margin-left: 0.8vw; text-align: center; width: 95%;">      
-        <h5 style="font-family: calibri; font-size: clamp(1.5rem, 2.2vw, 2.3rem); Color: black; padding-left: 8vw; text-align: center; font-weight: 750; ">Inventory management made simple!</h5>      
+    <div style="border: 0.0vw solid green; margin-top: 8.0vh; margin-left: 0.8vw; text-align: center; width: 95%;">      
+        <h5 style="font-family: calibri; font-size: clamp(1.5rem, 2.2vw, 2.3rem); Color: black; padding-left: 8vw; text-align: center; font-weight: 750; ">Inventory Management Made Simple & Easy!</h5>      
    </div>
-<div class="sys-options" style="width: 100%;" >      
-        <P style="">
-       ✔  Build Manufs./Suppls & Categories.<br>
-       ✔  Build Items DataBase.<br>
-       ✔  Process Movements.<br>
-       ✔  View Items in DataBase.<br>
-       ✔  View Movements In Database.<br>
-       ✔  Print Items Invoice.<br>
-       ✔  Print Movements Invoice.   
 
-</P>      
-   </div>
-<div class="sys-options" style="width: 100%;" >      
+<div class="sys-options" style="width: 100%; margin-top: 10.0vh;margin-left: 10vw;" >      
         <P style="">
-       ✔  Secure Cloud Based Platform.<br>
+       ✔  Secure Cloud Platform.<br>
        ✔  Best For New Startups.<br>
        ✔  Free For Eligible Users. <br>
        ✔  Chance To Upgrade From (Excel,etc.)<br>
        ✔  Only Internet connection Needed.<br>
-       ✔  No setup Needed.   
+       ✔  No setup Needed.<br>  
+       ✔  No Training Needed. Self Explanatory.  
+        
 
 </P>      
    </div>
+
+  
 
 
  </div>
@@ -359,12 +352,19 @@ text-align: left;
        <div class = "imagecls" >
        <img src="wh-pic-27.png" class="responsive-img rounded" style="display: block; ">
        </div>
-       <div class = "takecontrol">
-    <P style="text-align: center; padding-left: 2vw; padding-right: 2vw; ">
-      
-        Take Control of your Inventory with ease. 
-    </P>
-</div> 
+       <div class="sys-options" style="width: 100%; margin-top: 4.9vh; margin-left: 3vw;" >      
+        <P style="">
+       ✔  Build Codes.<br>
+       ✔  Build DataBase.<br>
+       ✔  Process Movements.<br>
+       ✔  View Items.<br>
+       ✔  View Movements.<br>
+       ✔  Print Items Invoice.<br>
+       ✔  Print Movements Invoice.   
+
+</P>      
+   </div>
+    
           
        </div>
       </div>
