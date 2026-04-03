@@ -535,11 +535,11 @@ background-color: #9bc7be;
         
         <th style="text-align: center; width: 11%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Type</th>
         <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Open. Bal</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Qty</th>
+        <th style="text-align: center; width: 9%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Qty</th>
         <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Clos. Bal</th>
         
       
-        <th  style="padding: 0.0vw; text-align: center; width: 16%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Movement Date</th>
+        <th  style="padding: 0.0vw; text-align: center; width: 17%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Movement Date</th>
       </tr>
     </thead>
     <tbody id="itemTable" class = "itemTableBody-Cls">
@@ -637,9 +637,8 @@ async function loadnewitemstable() {
 <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.0vw, 1.1rem); font-weight: 400; text-align: center;">${data.createdAt.toDate().toLocaleString('en-CA', {
     day: '2-digit',
     month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit'
+    year: 'numeric'
+    
   })}</td>
         
       </tr>
