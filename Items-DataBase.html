@@ -367,8 +367,8 @@ background-color: #9bc7be;
 }
 
 .input-field {
- font-clamp(0.6rem, 1.1vw, 1.2rem);
- font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+ 
+ font-size: clamp(0.9rem, 1.5vw, 1.6rem); 
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
 /* background-color: #51DEED;   */
 /*  background-color: LightYellow; */ 
@@ -378,7 +378,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .input-field {
- font-clamp(0.6rem, 1.1vw, 1.2rem);
+ font-size: clamp(0.6rem, 1.1vw, 1.2rem);
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
  height: 4vh;
 
@@ -387,7 +387,7 @@ background-color: #9bc7be;
 }
 
 .input-field-opt {
- font-clamp(0.6rem, 1.1vw, 1.2rem);
+ font-size: clamp(0.6rem, 1.1vw, 1.2rem);
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
  height: 6vh;
  font-weight: 500; 
@@ -395,7 +395,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .input-field-opt {
- font-clamp(0.6rem, 1.1vw, 1.2rem);
+ font-size: clamp(0.6rem, 1.1vw, 1.2rem);
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem);   */
  height: 4vh;
  font-weight: 500; 
@@ -404,7 +404,7 @@ background-color: #9bc7be;
 
 .edit-delt-btn  {
   width: 90%;
-  height: 5.0vh;
+  height: 6.0vh;
   text-align: center; 
   font-weight: 400; 
   font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -899,7 +899,8 @@ if (fmdInput !== "") {
 };
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
-
+  document.getElementById("btn-for-del").disabled = true;
+  document.getElementById("btn-for-upd").disabled = true;
   const table = document.getElementById("itemTable");
   
   table.innerHTML = "";
@@ -962,24 +963,27 @@ async function loadnewitemstable() {
   // ✅ Add Summary Rows (ALL TOGETHER)
   table.innerHTML += `
     <tr></tr>
-   <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
-      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${grandTotalDollar}</td>
+   <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 5vh; ">
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Value of all items</td>
+      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
-    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh;">
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
-      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${taxDisplay}</td>
+    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 5vh;">
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total value of Tax@(13%)</td>
+      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${taxDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
-    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
-      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${netTotalDisplay}</td>
+    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 5vh; ">
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of all items</td>
+      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
+<tr>&nbsp</tr>
   `;
+
+
 
 }   // ✅ ONLY ONE closing bracket for function
 
@@ -1136,6 +1140,7 @@ function isValidSelection(inputId, datalistId) {
 
   // Clear input fields
   function clearInputs() {
+    
     document.getElementById("name").value = "";
     document.getElementById("nbr").value = "";
     document.getElementById("qty").value = "";
@@ -1183,8 +1188,10 @@ window.Clearinputdata = async function () {
   document.getElementById("rol").disabled = false; 
   document.getElementById("mnl").disabled = false;
   document.getElementById("fmd").disabled = false;
+  document.getElementById("btn-for-upd").disabled = true;
+  document.getElementById("btn-for-del").disabled = true;
   document.getElementById("btn-for-add").disabled = false;
-  document.getElementById("btn-for-upd").disabled = false;
+  
 
   }
 
@@ -1211,7 +1218,8 @@ window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
 // Fill inputs when Detail button is clicked
 window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
   
- 
+  document.getElementById("btn-for-del").disabled = false;
+  document.getElementById("btn-for-upd").disabled = false;
   document.getElementById("docIdHolder").value = id;
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
