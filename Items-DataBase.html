@@ -1428,15 +1428,16 @@ function printInvoice() {
             height: 3px;
             
           }
-
+           @media print {
           td {
             border: 0.2vw solid black;
             padding: 0.2vw;
             text-align: left;
          }
+         }
 
-           td:nth-child(5) {
-            border-right: 0.2vw solid black;
+           td:nth-child(6) {
+            border-left: 0.2vw solid black;
              
           }
             
