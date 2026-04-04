@@ -368,7 +368,7 @@ background-color: #9bc7be;
 
 .input-field {
  
- font-size: clamp(0.9rem, 1.5vw, 1.6rem); 
+ font-size: clamp(0.6rem, 1.1vw, 1.2rem); 
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
 /* background-color: #51DEED;   */
 /*  background-color: LightYellow; */ 
@@ -631,19 +631,7 @@ background-color: #9bc7be;
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input list="units" class="input-field input-l9" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" >
 <datalist id="units">
-<option value="GR">
-  <option value="KM">
-  <option value="MR">
-  <option value="MG">
-  <option value="KG">
-  <option value="EA">
-  <option value="BX">
-  <option value="CM">
-  <option value="FT">
-  <option value="IN">
-  <option value="DZ">
-  <option value="PD">
-  <option value="OT">
+
 </datalist> 
 <input type="number" class="input-field input-l26" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" >
 <input type="number" class="input-field input-l26" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
@@ -1354,7 +1342,7 @@ async function loadDatalistcodes() {
  }
 
     catch (error) {
-    console.error("Error loading datalist:", error);
+    console.error("Error loading Categories datalist:", error);
   }
 
  try {
@@ -1376,6 +1364,27 @@ async function loadDatalistcodes() {
 
     catch (error) {
     console.error("Error loading Supplier datalist:", error);
+  }
+
+ try {
+    const datalist = document.getElementById("units");
+//    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("uisdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.uisname; // change field as needed
+
+      datalist.appendChild(option);
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Unit of Issue datalist:", error);
   }
 
 
