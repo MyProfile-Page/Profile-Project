@@ -242,7 +242,7 @@ font-weight: 550;
 }
 
 .tr-main-row {
-height: 5vh;
+height: 8vh;
 background-color: #9bc7be;
 
 }
@@ -258,18 +258,18 @@ font-weight: bold;
 font-size: 1.0rem;
 background-color: #acdbe8;
 border: 0.1vw solid black;
-height: 5vh; 
+height: 8vh; 
 }
 
 .tr-btn-row {
-height: 6vh;
+height: 8vh;
 background-color: #9bc7be;
 
 }
 
 @media (max-width: 768px) {
 .tr-main-row {
-height: 3vh;
+height: 5vh;
 background-color: #9bc7be;
 }
 }
@@ -287,12 +287,12 @@ font-weight: bold;
 font-size: 1.0rem;
 background-color: #acdbe8;
 border: 0.1vw solid black;
-height: 3vh; 
+height: 5vh; 
 }
 }
 @media (max-width: 768px) {
 .tr-btn-row {
-height: 2vh;
+height: 5vh;
 background-color: #9bc7be;
 }
 }
@@ -481,7 +481,7 @@ background-color: #9bc7be;
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Inventory Control</a>
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
    <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Movements Management</a>
 
     <!-- Toggler -->
@@ -724,23 +724,24 @@ async function loadnewitemstable() {
   // ✅ Add Summary Rows (ALL TOGETHER)
   table.innerHTML += `
     <tr></tr>
-   <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
+   <tr class="tr-tl-row" ">
       <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
-    <tr style="font-weight: bold; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh;">
+    <tr class="tr-tl-row" ">
       <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${taxDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
-    <tr style="font-weight: bold; font-size: 1.1rem; background-color: #acdbe8; border: 0.1vw solid black; height: 4vh; ">
+    <tr class="tr-tl-row">
       <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
+<tr>&nbsp</tr>
   `;
 
 }   // ✅ ONLY ONE closing bracket for function
