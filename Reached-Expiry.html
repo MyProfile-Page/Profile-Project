@@ -637,7 +637,7 @@ height: 5vh;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Details of The Item That is Above its Minimum Level
+<div class = "items-add-upd" > Details of The Item That Has Expired
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
@@ -705,7 +705,7 @@ height: 5vh;
 
 
 
-<div class="items-add-upd" >List Of All Items which are Above Their Minimum Level
+<div class="items-add-upd" >List Of All Items which Have Expired
 
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -717,7 +717,7 @@ height: 5vh;
          
         <th style="text-align: center; width: 38%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Name</th>              
         
-        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Minimum Lvl</th>
+        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Expiry Date</th>
         <th style="text-align: center; width: 11%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Qty</th>
         <th style="text-align: center; width: 18%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Value</th>
         <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Action</th>
@@ -796,18 +796,20 @@ async function loadnewitemstable() {
   const collectionRef = collection(db, "newitemstable");
   
   const q = query(collectionRef, orderBy("nbr", "asc"));
- //  new  const q = query(collectionRef, where("rol", "<", "qty"));
- //  new  const q = query(collectionRef, where("status", "==", "active"));
-  const querySnapshot = await getDocs(q);
 
+  const querySnapshot = await getDocs(q);
+  const today = new Date().toISOString().split("T")[0];
   const filtered = querySnapshot.docs.filter(doc => {
   const data = doc.data();
-  return data.qty > data.mnl;
-});
+//  return data.exp !== null && data.exp < today;
+  return data.exp !== "" && data.exp < today;
+//  return data.exp != null && "" && !isNaN(new Date(data.exp)) && new Date(data.exp) < today;
+  
+  });
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
 
-//  old  querySnapshot.forEach((document) => {
+//  querySnapshot.forEach((document) => {
   filtered.forEach((document) => {
     const data = document.data();
     const docId = document.id;
@@ -831,7 +833,7 @@ async function loadnewitemstable() {
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; padding-left: 0.2vw; border-top: 0.05vw solid black; border-right: 0.00vw solid black;  ">${data.name}</td>
         
         
-        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.mnl}</td>
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.exp}</td>
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.qty}</td>
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarvalue}</td> 
 
