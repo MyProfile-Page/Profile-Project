@@ -637,7 +637,7 @@ height: 5vh;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Details of Selected Item That is Above its Reorder Level
+<div class = "items-add-upd" > Details of Selected Item That Reached Reorder Level
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
@@ -705,7 +705,7 @@ height: 5vh;
 
 
 
-<div class="items-add-upd" >List Of All Items which Are Above Their Reorder Level
+<div class="items-add-upd" >List Of All Items which Reached Their Reorder Level
 
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -801,7 +801,7 @@ async function loadnewitemstable() {
 
   const filtered = querySnapshot.docs.filter(doc => {
   const data = doc.data();
-  return data.qty > data.rol;
+  return data.rol > data.qty;
 });
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
