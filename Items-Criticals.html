@@ -1,0 +1,461 @@
+﻿ 
+
+
+<html class = "html_cls";>
+
+<!--  To test application on varoius screen reolutions https://screenfly.org/ -->
+<!--  1. Services  2. Products or Skills  3. Addrese are three good headers for company e-profile -->
+<!--  1. category or sector for companies instead title -->
+<!--  1THIS VERSION RUNNING CORRECTLY -->
+
+     
+  <head>
+    <!-- ✅ Bootstrap 5 CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     
+    
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  
+ 
+    <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+   <title></title>
+ <style>
+ 
+
+   /* Firebase : website https://console.firebase.google.com your project in firebase =   */
+   /*   dashboard-cloud-db  your localhost project dashboard      */
+   /*    login = asadsaeed124@gmail.com pw asstnpw of 15/2/2026   */ 
+          
+
+ /*  https://console.firebase.google.com/   for firebase website  */
+ /*  No Gemini */
+ /*  No Google Analytic */
+ /*  hsmart-appl-pr */
+ /*  hsmart-appl-pr */
+ 
+
+ 
+
+  .body_cls {
+          background-color: red;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background: white;
+          background-color: #c5effd;
+          background-color: #f5f4a6;
+           background: LightCyan;
+          background: #3399ff;
+          background: #66b3ff;
+          background: #99ccff;
+          background: #cce6ff;
+      /*    background: lightblue;    */
+          line-height: 1.0;         
+            }
+
+
+
+  
+ 
+
+ .grid-container {
+            display: grid;
+            grid-template-columns: 55% 45%; /* 2 equal columns */
+    /*        gap: 2vw;  */
+            padding: 0.4vw;
+            grid-auto-rows: auto;
+        }
+
+ .grid-container > div {
+  border: 0.00vw solid red;
+  padding: 0.25vw;
+}
+
+.box {
+          /*  background-color: #c5effd;  */
+            padding: 20vw;
+            text-align: center;
+            font-size: 20px;
+            border: 0.4vw solid steelblue;
+        }
+
+@media (max-width: 768px) {
+.grid-container {
+  display: grid;
+ grid-template-columns: 1fr; /* Stack vertically */
+grid-auto-rows: auto;
+/* grid-auto-flow: row;  */
+/* height: 90vh; */
+/* gap: 0.5vw; */
+ 
+}
+}
+
+.second-box {
+width: 100%;
+height: auto;
+margin-top: 2.5vh;  
+margin-left: -11vw;
+
+}
+
+@media (max-width: 768px) {
+  .grid-container .second-box {
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+    margin: 0 auto;
+   
+  }
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ }
+
+.gap1vh {
+  height: 1.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap2vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap3vh {
+  height: 3.0vh;  /* or any size you want; mobile = desktop */
+}
+
+.gap4vh {
+  height: 4.0vh;  /* or any size you want; mobile = desktop */
+}
+
+
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: white; 
+font-style: italic;
+font-weight: 550;
+}
+
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+#menu-word-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  400;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+.menu-bar-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  200;
+  color: yellow; 
+  text-decoration: none; 
+  text-align: center;
+  border: none;
+  text-color: Blue; 
+}
+
+.mobile-only {
+  display: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+}
+.sys-options  {
+margin-top: 10.0vh;
+margin-left: 10.0vw; 
+text-align: center;
+font-family: calibri;
+font-size: clamp(0.7rem, 1.5vw, 1.6rem);
+Color: black;
+font-weight: 550;
+padding-left: 4vw;
+ text-align: left; 
+border: 0.0vw solid Black;
+width: 100%; 
+}
+
+@media (max-width: 768px) {
+  .sys-options  {
+margin-top: 4vh;
+margin-left: 10.0vw; 
+text-align: center;
+font-family: calibri;
+font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+Color: black;
+font-weight: 550;
+padding-left: 5vw;
+text-align: left; 
+width: 100%; 
+}
+}
+.sys-options-build  {
+margin-top: 4.8vh;
+margin-left: 7.0vw; 
+text-align: center;
+font-family: calibri;
+font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+Color: black;
+font-weight: 550;
+padding-left: 4vw;
+ text-align: left; 
+border: 0.0vw solid Black;
+width: 100%; 
+}
+@media (max-width: 768px) {
+.sys-options-build  {
+margin-top: 4.8vh;
+margin-left: 7.0vw; 
+text-align: center;
+font-family: calibri;
+font-size: clamp(0.9rem, 1.5vw, 1.6rem);
+Color: black;
+font-weight: 550;
+padding-left: 4vw;
+ text-align: left; 
+border: 0.0vw solid Black;
+width: 100%; 
+}
+}
+
+.takecontrol  {
+   margin-top: 0vh;
+   margin-left: 5vw;
+   width: 75%;
+   font-size: clamp(1.0rem, 1.6vw, 1.7rem);
+   font-weight: 550;
+  }
+@media (max-width: 768px) {
+.takecontrol  {
+   margin-top: 1vh;
+   margin-left: 5vw;
+   width: 75%;
+   font-size: clamp(1.0rem, 1.8vw, 1.9rem);
+   font-weight: 550;
+  }
+ }
+
+ .imagecls {
+  margin-top: 8vh;
+  border: 0.0vw solid Black;
+ }
+@media (max-width: 768px) {
+.imagecls {
+  margin-top: 6vh;
+ }
+}
+
+.hello {
+ margin-top: 25.0vh;
+ margin-left: 10vw;
+ text-align: left;
+}
+
+@media (max-width: 768px) {
+.hello {
+ margin-top: 10.0vh;
+ text-align: left;
+ 
+}
+}
+
+.inv-manage {
+border: 0.0vw solid green;
+margin-top: 8.0vh;
+margin-left: 0.8vw;
+text-align: center;
+width: 95%;
+}
+@media (max-width: 768px) {
+.inv-manage {
+border: 0.0vw solid green;
+margin-top: 6.0vh;
+margin-left: 0.8vw;
+text-align: center;
+width: 95%;
+}
+}
+
+
+  </style>
+   
+</head>
+
+<body oncontextmenu="return false;" class = "body_cls"; font-family: 'Poppins', sans-serif; >
+
+  <!-- 🌍 Navigation Bar Start -->
+
+ 
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+  
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.5vw, 1.6rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Critical Reports</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      
+    
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="gap1vh"></div>
+      <ul class="navbar-nav ms-auto">
+       
+        <li class="nav-item" style="line-height: 6dvh;" >
+          <a class="nav-link " href="Reorder-lvl-Reached.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Reached Reorder Level </a>
+        </li>  
+         <li class="nav-item" style="line-height: 6dvh;" >
+          <a class="nav-link " href="Minimum-lvl-Reached.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Reached Minimum Level</a>
+        </li>  
+  <li class="nav-item" style="line-height: 6dvh;" >
+          <a class="nav-link " href="Above-Reorder-lvl.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Are Above Their Reorder Level</a>
+        </li>  
+<li class="nav-item" style="line-height: 6dvh;" >
+          <a class="nav-link " href="Above-Minimum-lvl.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Are Above Their Minimum Level</a>
+        </li>  
+       
+       <li class="nav-item">
+          <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);" >Back</a>
+        </li>  
+                      
+       
+           
+      
+
+      </ul>
+    </div>
+  
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+
+
+
+<div class="grid-container" style="border: 0.00vw solid green; width: 98%; border: 0.0vw solid black; margin: 0 auto;">    <!-- Grid Div -->
+
+
+
+<!--  --------------------------------------------------START-First column of grid---------------------------------------     -->
+ 
+ <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
+   
+    <div class="hello" style="border: 0.0vw solid green; ">     
+        <h5 style="font-family: calibri; font-size: clamp(1.1rem, 2.5vw, 2.6rem); Color: blue; padding-left: 2vw;  font-weight: 850; text-decoration: underline;">Critical Inquiries & Reports</h5> 
+<br>
+
+   
+ <a href="Reorder-lvl-Reached.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">1. Items That Reached Their Reorder Level</a>
+ <br>
+ <br>       
+ <a  href="Minimum-lvl-Reached.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">2. Items That Reached Their Minimum Level</a>
+ <br>
+ <br>   
+<a href="Above-Reorder-lvl.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">3. Items That Are Above Their Reorder Level</a>
+ <br>
+ <br>       
+ <a  href="Above-Minimum-lvl.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">4. Items That Are Above Their Minimum Level</a>
+ <br>
+ <br>   
+   </div>
+    
+
+ </div>
+
+<!--  -------------------------------------------------END--Second column of grid---------------------------------------------     -->
+<!--  -------------------------------------------------START--First column of grid---------------------------------------------     -->
+  <div class="box" style="border: 0.00vw solid green; width: 85%; margin: 0 auto; ">    <!-- Start First col of grid -->
+      <div style=" display: flex; justify-content: center; align-items: center;">
+       <div class = "second-box" style="width: 100%;">
+        <div class="gap1vh"></div>
+    
+       <div class = "imagecls" >
+       <img src="img-reorder.png" class="responsive-img rounded" style="display: block; ">
+       </div>
+            </div>
+      </div>
+ </div>   
+ 
+<!--  -------------------------------------------------END--First column of grid---------------------------------------------     -->
+</div>  <!--  -------------------------------------------------END--of Grid         -----------     -->
+</div>
+
+<div class="gap2vh"></div>
+
+
+
+  <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+  <script>
+// 🔹 Guidefunction
+
+function guidealert() {
+  alert('At the start of the system, all items of the catalog are displayed ' +            
+        'in the item number sequence.\n ' +
+        '\n ' +
+        '1. Add a new item,\n ' + 
+        
+        '   Type new item details in the line at the top of your items table ' +
+        '   and then click the Add Item button which is also in the same line\n ' +
+        '\n ' +
+        '2. Change details of any item,\n ' +
+        
+        '   click the update tab in the row of your items table where your ' + 
+        '   item is being displayed. It will bring all details of your' +  
+        '   selected item at the line which is on top of your items table,' + 
+        '   type needed changes and then click Upd Item button which is' + 
+        '   also in the same line\n ' +
+        '\n ' +        
+        '3. Delete an unwanted item,\n ' +
+         
+        '   select in items table the row of your item to be deleted' + 
+        '   then click Delete button of the row.\n ' + 
+        '\n ' +
+        '4. Print invoice,\n ' +
+        
+        '   click Print Invoice tab which is under your company name on' + 
+        '   this screen.');
+
+
+}
+
+
+
+
+function myalert() {
+  alert("I am in print11 function.");
+
+}
+
+</script> 
+      
+</body>
+</html>
