@@ -343,26 +343,27 @@ background-color: #9bc7be;
 
 .items-add-upd  {
  font-size: clamp(0.7rem, 1.5vw, 1.6rem);
- font-weight: 650;
+ font-weight: 600;
  width: 98%; 
  border: 0.0vw solid black;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
  margin-top: 3vh;
- 
+ text-decoration: underline;
 }
 
 @media (max-width: 768px) {
 .items-add-upd  {
- font-size: clamp(1.3rem, 1.9vw, 2.1rem);
- font-weight: 450;
+ font-size: clamp(1.0rem, 1.5vw, 1.6rem);
+ font-weight: 400;
  width: 98%; 
  border: 0.0vw solid black;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
   margin-top: 3vh;
+ text-decoration: underline;
 }
 }
 
@@ -637,7 +638,7 @@ height: 5vh;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Details of The Item That Reached Reorder Level
+<div class = "items-add-upd" > Item That Reached Reorder Level
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
@@ -705,7 +706,7 @@ height: 5vh;
 
 
 
-<div class="items-add-upd" >List Of All Items which Have Reached Their Reorder Level
+<div class="items-add-upd" >Items which Have Reached Reorder Level
 
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -802,7 +803,9 @@ async function loadnewitemstable() {
 
   const filtered = querySnapshot.docs.filter(doc => {
   const data = doc.data();
+//  return data.rol !== null && data.rol > data.qty;
   return data.rol > data.qty;
+//  return data.exp !== "" && data.exp < today;
 });
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
