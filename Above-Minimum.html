@@ -802,7 +802,8 @@ async function loadnewitemstable() {
 
   const filtered = querySnapshot.docs.filter(doc => {
   const data = doc.data();
-  return data.qty > data.mnl;
+  return data.mnl !== null && data.qty > data.mnl;
+//  return data.qty > data.mnl;
 });
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
