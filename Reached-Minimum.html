@@ -351,13 +351,11 @@ background-color: #9bc7be;
  text-align: center; 
  margin-top: 3vh;
  text-decoration: underline;
-
- 
 }
 
 @media (max-width: 768px) {
 .items-add-upd  {
- font-size: clamp(1.0rem, 1.6vw, 1.6rem);
+ font-size: clamp(1.0rem, 1.5vw, 1.6rem);
  font-weight: 450;
  width: 98%; 
  border: 0.0vw solid black;
@@ -366,6 +364,7 @@ background-color: #9bc7be;
  text-align: center; 
   margin-top: 3vh;
  text-decoration: underline;
+}
 }
 
 .input-field {
@@ -707,7 +706,7 @@ height: 5vh;
 
 
 
-<div class="items-add-upd" >Items which Have Reached Minimum Level
+<div class="items-add-upd" >Items which Reached Minimum Level
 
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -804,7 +803,8 @@ async function loadnewitemstable() {
 
   const filtered = querySnapshot.docs.filter(doc => {
   const data = doc.data();
-  return data.mnl > data.qty;
+  return data.mnl !== null && data.qty < data.mnl;
+//  return data.qty > data.mnl;
 });
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
@@ -838,7 +838,7 @@ async function loadnewitemstable() {
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarvalue}</td> 
 
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border: 0.05vw solid black; text-align: center;">
-          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>View</button>
+          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Detail</button>
           
         </td>                     
         
@@ -864,7 +864,7 @@ async function loadnewitemstable() {
   table.innerHTML += `
     <tr></tr>
    <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Value of all items</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">TL Value of items which Reached Minimum Level</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -876,7 +876,7 @@ async function loadnewitemstable() {
     </tr>
 
     <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of all items</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of all items which Reached Minimum Level</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
