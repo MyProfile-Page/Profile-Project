@@ -825,7 +825,7 @@ async function loadnewitemstable() {
     // Add to grand total (SAFE integer math)
     grandTotalCents += centvalue;
 
- //   const displayTotal = formatCentsToDollars(grandTotalCents);
+  //   const displayTotal = formatCentsToDollars(grandTotalCents);
     
     table.innerHTML += `
       
@@ -840,7 +840,7 @@ async function loadnewitemstable() {
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarvalue}</td> 
 
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border: 0.05vw solid black; text-align: center;">
-          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>View</button>
+          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Detail</button>
           
         </td>                     
         
@@ -866,19 +866,19 @@ async function loadnewitemstable() {
   table.innerHTML += `
     <tr></tr>
    <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Value of all items</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Value of Expired items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total value of Tax@(13%)</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Tax value@(13%)</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${taxDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of all items</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of Expired items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
