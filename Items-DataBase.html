@@ -487,7 +487,7 @@ background-color: #9bc7be;
  }
 }
 
-.input-l9 {
+.input-nbr-uis {
   width: 9%; 
   text-align: center;
  }  
@@ -497,34 +497,34 @@ background-color: #9bc7be;
   text-align: center;
  }  
 
-.input-l26 {
+.input-prc {
   width: 26%; 
   text-align: center;
  }  
 
-.input-l29 {
+.input-imp {
   width: 29%; 
   text-align: center;
  }  
 
-.input-l32 {
+.input-dur-rol-mnl-exp-fmd {
   width: 32%; 
   text-align: center;
  }  
 
-.input-l35l {
+.input-naml {
   width: 35%; 
   text-align: left;
  }  
 
-.input-l44l {
+.input-ctg-supl {
   width: 44%; 
   text-align: left;
  }  
 
 @media (max-width: 768px) {
- .input-l9 {
-  width: 18%; 
+ .input-nbr-uis {
+  width: 20%; 
   text-align: center;
  } 
 } 
@@ -535,32 +535,32 @@ background-color: #9bc7be;
  }  
 }
 @media (max-width: 768px) {
-.input-l26 {
-  width: 28%; 
+.input-prc {
+  width: 40%; 
   text-align: center;
  }  
 }
 @media (max-width: 768px) {
-.input-l29 {
-  width: 35%; 
+.input-imp {
+  width: 50%; 
   text-align: center;
  }  
 }
 @media (max-width: 768px) {
-.input-l32 {
-  width: 45%; 
+.input-dur-rol-mnl-exp-fmd {
+  width: 50%; 
   text-align: center;
  }  
 }
 @media (max-width: 768px) {
-.input-l35l {
-  width: 60%; 
+.input-naml {
+  width: 80%; 
   text-align: left;
  } 
 } 
 @media (max-width: 768px) {
-.input-l44l {
-  width: 80%; 
+.input-ctg-supl {
+  width: 100%; 
   text-align: left;
  }  
 }
@@ -641,36 +641,36 @@ height: 5vh;
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input type="number" class="input-field input-l9" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No.">    
- <input type="text" class="input-field input-l35l" title="Enter Item Name" id="name" placeholder="Item Name" >
+<input type="number" class="input-field input-nbr-uis" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No.">    
+ <input type="text" class="input-field input-naml" title="Enter Item Name" id="name" placeholder="Item Name" >
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="ctgs" class="input-field input-l44l" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" >
+ <input list="ctgs" class="input-field input-ctg-supl" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" >
  <datalist id="ctgs"></datalist>
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="sups" class="input-field input-l44l" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
+ <input list="sups" class="input-field input-ctg-supl" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
  <datalist id="sups"></datalist>   
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="units" class="input-field input-l9" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" >
+<input list="units" class="input-field input-nbr-uis" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" >
 <datalist id="units">
 
 </datalist> 
-<input type="number" class="input-field input-l26" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" >
-<input type="number" class="input-field input-l26" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
+<input type="number" class="input-field input-prc" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" >
+<input type="number" class="input-field input-prc" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="imps" class="input-field input-l29" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance"> 
+<input list="imps" class="input-field input-imp" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance"> 
  <datalist id="imps">
    <option value="Strategic">
    <option value="Normal">
  </datalist>   
-  <input list="cons" class="input-field input-l32" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
+  <input list="cons" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
   <datalist id="cons">
    <option value="Consume">
    <option value="Permanent">
@@ -678,13 +678,13 @@ height: 5vh;
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input type="number" class="input-field input-l32" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
-  <input type="number" class="input-field input-l32" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
+ <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
+  <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="text" class="input-field input-l32" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
-  <input type="text" class="input-field input-l32" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
+  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
+  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
   <input type="hidden" id="docIdHolder">
 </div>
 
