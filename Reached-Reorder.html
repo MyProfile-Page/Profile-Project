@@ -404,51 +404,6 @@ background-color: #9bc7be;
 }
 }
 
-@media (max-width: 768px) {
- .input-nbr-uis {
-  width: 20%; 
-  text-align: center;
- } 
-} 
-@media (max-width: 768px) {
-.input-l20 {
-  width: 20%; 
-  text-align: center;
- }  
-}
-@media (max-width: 768px) {
-.input-prc {
-  width: 40%; 
-  text-align: center;
- }  
-}
-@media (max-width: 768px) {
-.input-imp {
-  width: 50%; 
-  text-align: center;
- }  
-}
-@media (max-width: 768px) {
-.input-dur-rol-mnl-exp-fmd {
-  width: 50%; 
-  text-align: center;
- }  
-}
-@media (max-width: 768px) {
-.input-naml {
-  width: 80%; 
-  text-align: left;
- } 
-} 
-@media (max-width: 768px) {
-.input-ctg-supl {
-  width: 100%; 
-  text-align: left;
- }  
-}
-
-
-
 .edit-delt-btn  {
   width: 90%;
   height: 6.0vh;
@@ -533,7 +488,7 @@ background-color: #9bc7be;
  }
 }
 
-.input-nbr-uis {
+.input-l9 {
   width: 9%; 
   text-align: center;
  }  
@@ -543,30 +498,73 @@ background-color: #9bc7be;
   text-align: center;
  }  
 
-.input-prc {
+.input-l26 {
   width: 26%; 
   text-align: center;
  }  
 
-.input-imp {
+.input-l29 {
   width: 29%; 
   text-align: center;
  }  
 
-.input-dur-rol-mnl-exp-fmd {
+.input-l32 {
   width: 32%; 
   text-align: center;
  }  
 
-.input-naml {
+.input-l35l {
   width: 35%; 
   text-align: left;
  }  
 
-.input-ctg-supl {
+.input-l44l {
   width: 44%; 
   text-align: left;
  }  
+
+@media (max-width: 768px) {
+ .input-l9 {
+  width: 18%; 
+  text-align: center;
+ } 
+} 
+@media (max-width: 768px) {
+.input-l20 {
+  width: 20%; 
+  text-align: center;
+ }  
+}
+@media (max-width: 768px) {
+.input-l26 {
+  width: 28%; 
+  text-align: center;
+ }  
+}
+@media (max-width: 768px) {
+.input-l29 {
+  width: 35%; 
+  text-align: center;
+ }  
+}
+@media (max-width: 768px) {
+.input-l32 {
+  width: 45%; 
+  text-align: center;
+ }  
+}
+@media (max-width: 768px) {
+.input-l35l {
+  width: 60%; 
+  text-align: left;
+ } 
+} 
+@media (max-width: 768px) {
+.input-l44l {
+  width: 80%; 
+  text-align: left;
+ }  
+}
 
 .tr-tl-row {
 font-weight: bold;
@@ -640,40 +638,40 @@ height: 5vh;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Ktem Detail
+<div class = "items-add-upd" > Item Detail
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input type="number" class="input-field input-nbr-uis" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No.">    
- <input type="text" class="input-field input-naml" title="Enter Item Name" id="name" placeholder="Item Name" >
+<input type="number" class="input-field input-l9" title="Item Number" id="nbr" min="1" max="99999999" placeholder="Item No.">    
+ <input type="text" class="input-field input-l35l" title="Item Name" id="name" placeholder="Item Name" >
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="ctgs" class="input-field input-ctg-supl" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" >
+ <input list="ctgs" class="input-field input-l44l" title="Item Category" id="ctg" name="actg" placeholder="Item Category" >
  <datalist id="ctgs"></datalist>
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="sups" class="input-field input-ctg-supl" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
+ <input list="sups" class="input-field input-l44l" title="Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
  <datalist id="sups"></datalist>   
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="units" class="input-field input-nbr-uis" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" >
+<input list="units" class="input-field input-l9" title="Item Unit" id="uis" name="auis" placeholder="Unit" >
 <datalist id="units">
 
 </datalist> 
-<input type="number" class="input-field input-prc" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" >
-<input type="number" class="input-field input-prc" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
+<input type="number" class="input-field input-l26" id="qty" title="Item Quantity" min="1" max="99999999" placeholder="Qty" >
+<input type="number" class="input-field input-l26" id="prc" title="Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="imps" class="input-field input-imp" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance"> 
+<input list="imps" class="input-field input-l29" title="Item Importance" id="imp" name="aimp" placeholder="Importance"> 
  <datalist id="imps">
    <option value="Strategic">
    <option value="Normal">
  </datalist>   
-  <input list="cons" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
+  <input list="cons" class="input-field input-l32" title="Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
   <datalist id="cons">
    <option value="Consume">
    <option value="Permanent">
@@ -681,16 +679,15 @@ height: 5vh;
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
-  <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
+ <input type="number" class="input-field input-l32" title="Item Reorder" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
+  <input type="number" class="input-field input-l32" title="Item Minimum" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
 </div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
-  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
+  <input type="text" class="input-field input-l32" title="Item Expiry Date" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
+  <input type="text" class="input-field input-l32" title="Item Last Movement Date" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
   <input type="hidden" id="docIdHolder">
 </div>
-
 
 
 
@@ -704,6 +701,8 @@ height: 5vh;
 
 </div> 
  <div class="gap3vh"></div>  
+
+
 
 
 
