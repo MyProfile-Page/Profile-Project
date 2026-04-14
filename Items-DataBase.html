@@ -639,31 +639,34 @@ height: 5vh;
 <div class="gap3vh"></div>
 <div class = "items-add-upd" > Item View/Add/Update
 <div class="gap3vh"></div>
-
+<div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input type="number" class="input-field input-nbr-uis" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No.">    
- <input type="text" class="input-field input-naml" title="Enter Item Name" id="name" placeholder="Item Name" >
+<input type="number" class="input-field input-nbr-uis" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No."> 
+<div class="gap1vh">&nbsp</div>
+<input type="text" class="input-field input-naml" title="Enter Item Name" id="name" placeholder="Item Name" >
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
  <input list="ctgs" class="input-field input-ctg-supl" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" >
  <datalist id="ctgs"></datalist>
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
  <input list="sups" class="input-field input-ctg-supl" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
  <datalist id="sups"></datalist>   
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input list="units" class="input-field input-nbr-uis" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" >
 <datalist id="units">
 
 </datalist> 
+<div class="gap1vh">&nbsp</div>
 <input type="number" class="input-field input-prc" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" >
+<div class="gap1vh">&nbsp</div>
 <input type="number" class="input-field input-prc" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input list="imps" class="input-field input-imp" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance"> 
  <datalist id="imps">
@@ -676,12 +679,12 @@ height: 5vh;
    <option value="Permanent">
  </datalist>   
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
  <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
   <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
   <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
@@ -690,7 +693,7 @@ height: 5vh;
 
 
 
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
   
   <button id="btn-for-add" onclick="additem()" type="button" class="add-btn";>Add</button>
