@@ -27,6 +27,7 @@
           background: LightCyan;
       //   background: #cce6ff;
           background: #9bc7be;
+          background: #d5f7d8;
          
       /*    background:  */
           line-height: 0.8;         
@@ -161,11 +162,11 @@ grid-auto-flow: row;
  }
 
 .gap1vh {
-  height: 1.0vh;  /* or any size you want; mobile = desktop */
+  height: 0.4vh;  /* or any size you want; mobile = desktop */
 }
 @media (max-width: 768px) {
 .gap1vh {
-  height: 0.5vh;  /* or any size you want; mobile = desktop */
+  height: 0.2vh;  /* or any size you want; mobile = desktop */
 }
 }
 
@@ -343,19 +344,19 @@ background-color: #9bc7be;
 
 .items-add-upd  {
  font-size: clamp(0.7rem, 1.5vw, 1.6rem);
- font-weight: 600;
+ font-weight: 650;
  width: 98%; 
  border: 0.0vw solid black;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
  margin-top: 3vh;
- text-decoration: underline;
+ 
 }
 
 @media (max-width: 768px) {
 .items-add-upd  {
- font-size: clamp(1.0rem, 1.5vw, 1.6rem);
+ font-size: clamp(1.3rem, 1.9vw, 2.1rem);
  font-weight: 450;
  width: 98%; 
  border: 0.0vw solid black;
@@ -363,7 +364,6 @@ background-color: #9bc7be;
  justify-content: center;
  text-align: center; 
   margin-top: 3vh;
- text-decoration: underline;
 }
 }
 
@@ -376,6 +376,7 @@ background-color: #9bc7be;
 /* background-color: #E6E6FA; */
  font-weight: 600;
  height: 8vh; 
+ border-radius: 12px;
 }
 
 @media (max-width: 768px) {
@@ -383,7 +384,7 @@ background-color: #9bc7be;
  font-size: clamp(0.7rem, 1.1vw, 1.2rem);
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
  height: 5vh;
-
+ border-radius: 12px;
  font-weight: 600; 
 }
 }
@@ -393,6 +394,7 @@ background-color: #9bc7be;
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
  height: 8vh;
  font-weight: 500; 
+ border-radius: 12px;
 }
 
 @media (max-width: 768px) {
@@ -401,6 +403,7 @@ background-color: #9bc7be;
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem);   */
  height: 5vh;
  font-weight: 500; 
+ border-radius: 12px;
 }
 }
 
@@ -488,7 +491,7 @@ background-color: #9bc7be;
  }
 }
 
-.input-l9 {
+.input-nbr-uis {
   width: 9%; 
   text-align: center;
  }  
@@ -498,34 +501,34 @@ background-color: #9bc7be;
   text-align: center;
  }  
 
-.input-l26 {
+.input-prc {
   width: 26%; 
   text-align: center;
  }  
 
-.input-l29 {
+.input-imp {
   width: 29%; 
   text-align: center;
  }  
 
-.input-l32 {
+.input-dur-rol-mnl-exp-fmd {
   width: 32%; 
   text-align: center;
  }  
 
-.input-l35l {
+.input-naml {
   width: 35%; 
   text-align: left;
  }  
 
-.input-l44l {
+.input-ctg-supl {
   width: 44%; 
   text-align: left;
  }  
 
 @media (max-width: 768px) {
- .input-l9 {
-  width: 18%; 
+ .input-nbr-uis {
+  width: 20%; 
   text-align: center;
  } 
 } 
@@ -536,32 +539,32 @@ background-color: #9bc7be;
  }  
 }
 @media (max-width: 768px) {
-.input-l26 {
-  width: 28%; 
+.input-prc {
+  width: 40%; 
   text-align: center;
  }  
 }
 @media (max-width: 768px) {
-.input-l29 {
-  width: 35%; 
+.input-imp {
+  width: 50%; 
   text-align: center;
  }  
 }
 @media (max-width: 768px) {
-.input-l32 {
-  width: 45%; 
+.input-dur-rol-mnl-exp-fmd {
+  width: 50%; 
   text-align: center;
  }  
 }
 @media (max-width: 768px) {
-.input-l35l {
-  width: 60%; 
+.input-naml {
+  width: 80%; 
   text-align: left;
  } 
 } 
 @media (max-width: 768px) {
-.input-l44l {
-  width: 80%; 
+.input-ctg-supl {
+  width: 100%; 
   text-align: left;
  }  
 }
@@ -598,7 +601,7 @@ height: 5vh;
   <div class="container-fluid">
 
    <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Critical Reporting</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">DataBase Management</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -620,7 +623,7 @@ height: 5vh;
         </li> 
          
        <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link aback" href="Items-Criticals.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);" >Back</a>
+          <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
             
       
@@ -633,64 +636,64 @@ height: 5vh;
 
  <!-- 🌍 Navigation Bar End -->
 <div class="gap3vh"></div>
-<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
+<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background: #709c95; ">
 
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Item Detail
+<div class = "items-add-upd" > Selected Item Detail
 <div class="gap3vh"></div>
-
+<div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input type="number" class="input-field input-l9" title="Item Number" id="nbr" min="1" max="99999999" placeholder="Item No.">    
- <input type="text" class="input-field input-l35l" title="Item Name" id="name" placeholder="Item Name" >
+<input type="number" class="input-field input-nbr-uis" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No."> 
+<div class="gap1vh">&thinsp;</div>
+<input type="text" class="input-field input-naml" title="Enter Item Name" id="name" placeholder="Item Name" >
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="ctgs" class="input-field input-l44l" title="Item Category" id="ctg" name="actg" placeholder="Item Category" >
- <datalist id="ctgs"></datalist>
+ <input list="ctgs" class="input-field input-ctg-supl" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" >
+ 
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input list="sups" class="input-field input-l44l" title="Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
- <datalist id="sups"></datalist>   
+ <input list="sups" class="input-field input-ctg-supl" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
+   
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="units" class="input-field input-l9" title="Item Unit" id="uis" name="auis" placeholder="Unit" >
+<input list="units" class="input-field input-nbr-uis" title="Select Item Unit" id="uis" name="auis" placeholder="Unit" >
 <datalist id="units">
 
 </datalist> 
-<input type="number" class="input-field input-l26" id="qty" title="Item Quantity" min="1" max="99999999" placeholder="Qty" >
-<input type="number" class="input-field input-l26" id="prc" title="Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
+<div class="gap1vh">&thinsp;</div>
+<input type="number" class="input-field input-prc" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" >
+<div class="gap1vh">&thinsp;</div>
+<input type="number" class="input-field input-prc" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="imps" class="input-field input-l29" title="Item Importance" id="imp" name="aimp" placeholder="Importance"> 
- <datalist id="imps">
-   <option value="Strategic">
-   <option value="Normal">
- </datalist>   
-  <input list="cons" class="input-field input-l32" title="Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
-  <datalist id="cons">
-   <option value="Consume">
-   <option value="Permanent">
- </datalist>   
+<input list="imps" class="input-field input-imp" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance"> 
+ <div class="gap1vh">&thinsp;</div>
+  <input list="cons" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
+  
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input type="number" class="input-field input-l32" title="Item Reorder" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
-  <input type="number" class="input-field input-l32" title="Item Minimum" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
+ <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
+<div class="gap1vh">&thinsp;</div> 
+ <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="text" class="input-field input-l32" title="Item Expiry Date" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
-  <input type="text" class="input-field input-l32" title="Item Last Movement Date" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
+  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
+ <div class="gap1vh">&thinsp;</div> 
+<input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
   <input type="hidden" id="docIdHolder">
 </div>
 
 
 
+<div class="gap1vh"></div>
 
 
 <div class="gap3vh"></div>
@@ -761,7 +764,6 @@ import {
   deleteDoc, 
   doc,
   updateDoc,
-  where,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -783,11 +785,7 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  
-
-  
-
-
+ 
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
   
@@ -864,19 +862,19 @@ async function loadnewitemstable() {
   table.innerHTML += `
     <tr></tr>
    <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">TL Value of all items Above Reorder Level</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">TL Value of Items at Reorder Level</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total TX value of Tax@(13%)</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Tax value@(13%)</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${taxDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
 
     <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of all items Above Reorder Level</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of Items at Reorder Level</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -886,51 +884,6 @@ async function loadnewitemstable() {
 
 
 }   // ✅ ONLY ONE closing bracket for function
-
-// 🔹 Guidefunction
-
-function guidealert() {
-  alert('The system welcome screen directs user to proceed to items data  ' +            
-        'base or system Guide through menu icon at top right of welcome screen.\n ' +
-        'Following functions can be done at Items DataBase screen\n ' +
-        '1. Add a new item,\n ' + 
-        
-        '   Type new item details in the Items Add/Update Input form ' +
-        '   and then click the Add Item button in the form\n ' +
-        '\n ' +
-        '2. Change details of any item,\n ' +
-        
-        '   click the update tab in the row of your items table where your ' + 
-        '   item is being displayed. It will bring all details of your' +  
-        '   selected item at Items Add/Update input form,' + 
-        '   type needed changes and then click Update Item button which is' + 
-        '   also in the form\n ' +
-        '\n ' +        
-        '3. Delete an unwanted item,\n ' +
-         
-        '   select in items Display Grid the row of your item to be deleted' + 
-        '   then click Delete button of the row.\n ' + 
-        '\n ' +
-        '4. Print invoice,\n ' +
-        
-        '   click Print Invoice link which is at the topright corner of ' + 
-        '   Items DataBase screen.');
-
-
-}
-window.guidealert = guidealert; // ⭐ IMPORTANT LINE
-
-function contactalert() {
-  alert("Email: ali_albader_alsalem@yahoo.com");
-
-}
-window.contactalert = contactalert; // ⭐ IMPORTANT LINE
-
-function myalert() {
-  alert("I am in print11 function.");
-
-}
-window.myalert = myalert; // ⭐ IMPORTANT LINE
 
 function formatCentsToDollars(cents) {
   return (cents / 100).toFixed(2);
@@ -958,104 +911,13 @@ function calculateNetTotalCents(grandTotalCents, taxCents) {
 
 
 
-function isValidDate(expiry) {
-  // Check format using Regular Expression (YYYY-MM-DD)
-//  const regex = /^\d{4}-(0[1-9]|1[0-2])$/;
-   const regex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!regex.test(expiry)) {
-    return false; // Invalid format
-  }
-
-  // Optional: check if it is a real calendar date
-  const [year, month] = expiry.split("-").map(Number);
-
-  const date = new Date(year, month - 1); // month is 0-based in JS
-
-  // Ensure parsed values match input
-  return date.getFullYear() === year && date.getMonth() === month - 1;
-}
-
-function clean(value) {
-  return (value === null || 
-          value === "null" || 
-          value === "NaN" ||
-          value === "undefined" || 
-          value === "NaN" ||
-          (typeof value === "number" && isNaN(value)))
-         ? "" 
-         : value;
-}
 
 
-function cleanrol(valuerol, valueqty) {
-  return (valuerol === null || 
-          valuerol === "null" || 
-          valuerol === "NaN" ||
-          valuerol === "undefined" || 
-          valuerol === "NaN" ||
-          (typeof valuerol === "number" && isNaN(valuerol)))
-         ? "" 
-         : valuerol;
-
-  if (valueqty < valuerol) {
-    return "<span style='color:red;'>" + cleanrol + "</span>";
-  }
-
-  return cleanrol;
-}
-
-function isValidSelection(inputId, datalistId) {
-  const input = document.getElementById(inputId).value;
-  const options = document.querySelectorAll(`#${datalistId} option`);
-
-  const validValues = Array.from(options).map(opt => opt.value);
-
-  return validValues.includes(input);
-}
+  
 
 
-   // Clear input fields
-  function clearInputs() {
-   alert("in clearinputs"); 
-  document.getElementById("name").disabled = true; 
-  document.getElementById("nbr").disabled = true; 
-  document.getElementById("uis").disabled = true;  
-  document.getElementById("qty").disabled = true; 
-  document.getElementById("prc").disabled = true; 
-  document.getElementById("exp").disabled = true; 
-  document.getElementById("ctg").disabled = true; 
-  document.getElementById("sup").disabled = true; 
-  document.getElementById("imp").disabled = true; 
-  document.getElementById("con").disabled = true; 
-  document.getElementById("rol").disabled = true; 
-  document.getElementById("mnl").disabled = true; 
-  document.getElementById("fmd").disabled = true;   
-    
-   
 
-  }
-
-// Fill inputs when Edit button is clicked
-window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
-  document.getElementById("name").value = name;
-  document.getElementById("nbr").value = nbr;
-  document.getElementById("uis").value = uis;
-  document.getElementById("qty").value = qty;
-  document.getElementById("prc").value = prc;
-  document.getElementById("exp").value = exp;
-
-  document.getElementById("ctg").value = ctg;
-  document.getElementById("sup").value = sup;
-  document.getElementById("imp").value = imp;
-  document.getElementById("con").value = con;
-  document.getElementById("rol").value = rol;
-  document.getElementById("mnl").value = mnl;
-  document.getElementById("fmd").value = fmd; 
- // Store document ID for update
-  window.currentEditId = id;
-};
-
-// Fill inputs when view button is clicked
+// Fill inputs when Detail button is clicked
 window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
   
   
@@ -1095,82 +957,9 @@ window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
 
 };
 
+  // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
   
   loadnewitemstable();
-
-//  Load Firestore data into <datalists>
-async function loadDatalistcodes() {
-  
-    
-  try {
-    const datalist = document.getElementById("ctgs");
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    const snapshot = await db.collection("ctgdatalist").get();
-
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-
-      const option = document.createElement("option");
-      option.value = data.ctgname; // change field as needed
-
-      datalist.appendChild(option);
-    });
-
- 
- }
-
-    catch (error) {
-    console.error("Error loading Categories datalist:", error);
-  }
-
- try {
-    const datalist = document.getElementById("sups");
-//    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    const snapshot = await db.collection("mnspdatalist").get();
-
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-
-      const option = document.createElement("option");
-      option.value = data.name; // change field as needed
-
-      datalist.appendChild(option);
-    });
-
-  }
-
-    catch (error) {
-    console.error("Error loading Supplier datalist:", error);
-  }
-
- try {
-    const datalist = document.getElementById("units");
-//    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-    const snapshot = await db.collection("uisdatalist").get();
-
-    snapshot.forEach((doc) => {
-      const data = doc.data();
-
-      const option = document.createElement("option");
-      option.value = data.uisname; // change field as needed
-
-      datalist.appendChild(option);
-    });
-
-  }
-
-    catch (error) {
-    console.error("Error loading Unit of Issue datalist:", error);
-  }
-
-
-}
-
-loadDatalistcodes();
-
 
 
 //  PRINT FUNCTION START
