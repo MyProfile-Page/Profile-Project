@@ -148,7 +148,7 @@ grid-auto-flow: row;
  }
 
 .gap1vh {
-  height: 1.0vh;  /* or any size you want; mobile = desktop */
+  height: 0.2vh;  /* or any size you want; mobile = desktop */
 }
 @media (max-width: 768px) {
 .gap1vh {
@@ -355,6 +355,7 @@ background-color: #9bc7be;
  
  font-weight: 500; 
  border: 0.1vw solid black; 
+ width: 40%;
 }
 
 @media (max-width: 768px) {
@@ -363,6 +364,7 @@ background-color: #9bc7be;
  height: 5vh;
  width: 100%;
  font-weight: 500; 
+ width: 100%;
 }
 }
 
@@ -374,6 +376,7 @@ background-color: #9bc7be;
 /* background-color: #f8f2ed; */
  font-weight: 500; 
  border: 0.1vw solid black; 
+ width: 40%;
 }
 
 @media (max-width: 768px) {
@@ -537,28 +540,28 @@ background-color: #9bc7be;
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
-  <input type="number" class="input-field" id="nbr" placeholder="Item No." style="padding-left: 2dvw;  text-align: left;" disabled > 
+  <input type="number" class="input-field" id="nbr" placeholder="Item No." title="Item No." style="padding-left: 2dvw;  text-align: left;" disabled > 
  
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
   
-  <input type="text" class="input-field" id="name" placeholder="Item Name" style="padding-left: 2dvw;  text-align: left;" disabled >
+  <input type="text" class="input-field" id="name" placeholder="Item Name" title="Item Name" style="padding-left: 2dvw;  text-align: left;" disabled >
  
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
   
-  <input type="number" class="input-field" id="qty" placeholder="present Item Qty" style="padding-left: 2dvw;  text-align: left;" disabled >
+  <input type="number" class="input-field" id="qty" placeholder="present Item Qty" title="Present Item Qty" style="padding-left: 2dvw;  text-align: left;" disabled >
  
 
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   
-  <input list="movtypes" class="input-field-col" id="movtype" name="amov" placeholder="Movement Type    " style=" text-align: center;" >
+  <input list="movtypes" class="input-field-col" id="movtype" name="amov" title="Movement Type" placeholder="Movement Type" style=" text-align: center;" >
   <datalist id="movtypes">
    <option value="Receipt">
    <option value="Return">
@@ -569,14 +572,14 @@ background-color: #9bc7be;
  
 
 </div>
-
+<div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   
  
-  <input type="number" class="input-field-col" id="movqty" min="1" max="99999999" placeholder="Movement Quantity" style=" text-align: center;">
+  <input type="number" class="input-field-col" id="movqty" min="1" max="99999999" title="Movement Qty" placeholder="Movement Quantity" style=" text-align: center;">
 
 </div>
-
+<div class="gap1vh"></div>
 
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
