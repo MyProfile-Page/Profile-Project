@@ -161,11 +161,11 @@ grid-auto-flow: row;
  }
 
 .gap1vh {
-  height: 1.0vh;  /* or any size you want; mobile = desktop */
+  height: 0.4vh;  /* or any size you want; mobile = desktop */
 }
 @media (max-width: 768px) {
 .gap1vh {
-  height: 0.5vh;  /* or any size you want; mobile = desktop */
+  height: 0.2vh;  /* or any size you want; mobile = desktop */
 }
 }
 
@@ -375,6 +375,7 @@ background-color: #9bc7be;
 /* background-color: #E6E6FA; */
  font-weight: 600;
  height: 8vh; 
+border-radius: 12px;
 }
 
 @media (max-width: 768px) {
@@ -382,7 +383,7 @@ background-color: #9bc7be;
  font-size: clamp(0.7rem, 1.1vw, 1.2rem);
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
  height: 5vh;
-
+border-radius: 12px;
  font-weight: 600; 
 }
 }
@@ -392,6 +393,7 @@ background-color: #9bc7be;
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
  height: 8vh;
  font-weight: 500; 
+ border-radius: 12px;
 }
 
 @media (max-width: 768px) {
@@ -400,6 +402,7 @@ background-color: #9bc7be;
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem);   */
  height: 5vh;
  font-weight: 500; 
+ border-radius: 12px;
 }
 }
 
@@ -642,7 +645,7 @@ height: 5vh;
 <div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input type="number" class="input-field input-nbr-uis" title="Enter Item Number" id="nbr" min="1" max="99999999" placeholder="Item No."> 
-<div class="gap1vh">&nbsp</div>
+<div class="gap1vh">&thinsp;</div>
 <input type="text" class="input-field input-naml" title="Enter Item Name" id="name" placeholder="Item Name" >
 </div>
 <div class="gap1vh"></div>
@@ -661,9 +664,9 @@ height: 5vh;
 <datalist id="units">
 
 </datalist> 
-<div class="gap1vh">&nbsp</div>
+<div class="gap1vh">&thinsp;</div>
 <input type="number" class="input-field input-prc" id="qty" title="Enter Item Quantity" min="1" max="99999999" placeholder="Qty" >
-<div class="gap1vh">&nbsp</div>
+<div class="gap1vh">&thinsp;</div>
 <input type="number" class="input-field input-prc" id="prc" title="Enter Item Price in cents" min="1" max="99999999" placeholder="Price(in Cents)" > 
 </div>
 <div class="gap1vh"></div>
@@ -672,7 +675,8 @@ height: 5vh;
  <datalist id="imps">
    <option value="Strategic">
    <option value="Normal">
- </datalist>   
+ </datalist> 
+<div class="gap1vh">&thinsp;</div>  
   <input list="cons" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
   <datalist id="cons">
    <option value="Consume">
@@ -682,12 +686,14 @@ height: 5vh;
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
  <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
-  <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
+<div class="gap1vh">&thinsp;</div> 
+ <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
 </div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
-  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
+<div class="gap1vh">&thinsp;</div>  
+<input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
   <input type="hidden" id="docIdHolder">
 </div>
 
