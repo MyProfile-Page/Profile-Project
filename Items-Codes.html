@@ -260,23 +260,61 @@ width: 100%;
  }
 @media (max-width: 768px) {
 .imagecls {
-  margin-top: 8vh;
+  margin-top: 6vh;
  }
 }
 
 .hello {
- margin-top: 19.0vh;
+ padding-left: 3vw;
  margin-left: 10vw;
  text-align: left;
+ margin-top: 25.0vh;
+ font-family: calibri;
+ font-size: clamp(0.9rem, 1.8vw, 1.9rem);
+ Color: black; 
+ font-weight: 850;
+ text-decoration: underline;
+}
+
+.hello1 {
+ padding-left: 3vw;
+ margin-left: 10vw;
+ text-align: left;
+ margin-top: 2.0vh;
+ font-family: calibri;
+ font-size: clamp(0.6rem, 1.5vw, 1.6rem);
+ Color: black; 
+ font-weight: 650;
+ text-decoration: none;
 }
 
 @media (max-width: 768px) {
 .hello {
- margin-top: 10.0vh;
+ margin-top: 6.0vh;
  text-align: left;
- 
+ padding-left: 2vw;
+ font-family: calibri;
+ font-size: clamp(1.2rem, 2.4vw, 2.6rem);
+ Color: black; 
+ font-weight: 850;
+ text-decoration: underline;
 }
 }
+@media (max-width: 768px) {
+.hello1 {
+ padding-left: 2vw;
+ margin-left: 10vw;
+ text-align: left;
+ margin-top: 1.5vh;
+ font-family: calibri;
+ font-size: clamp(1.0rem, 2.2vw, 2.4rem);
+ Color: black; 
+ font-weight: 650;
+ text-decoration: none;
+}
+}
+
+
 
 .inv-manage {
 border: 0.0vw solid green;
@@ -329,17 +367,17 @@ width: 95%;
       <ul class="navbar-nav ms-auto">
        
         <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="ctg-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Item Categories Codes</a>
+          <a class="nav-link " href="ctg-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Item Categories Codes</a>
         </li>  
          <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="mnsp-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Manufacturers/Suppliers Codes</a>
+          <a class="nav-link " href="mnsp-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Manufacturers/Suppliers Codes</a>
         </li>  
   <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="uis-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Unit of Issue Codes</a>
+          <a class="nav-link " href="uis-tables-add-del.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Unit of Issue Codes</a>
         </li>  
        
        <li class="nav-item">
-          <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);" >Back</a>
+          <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
                       
        
@@ -365,20 +403,22 @@ width: 95%;
  
  <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
    
-    <div class="hello" style="border: 0.0vw solid green; ">     
-        <h5 style="font-family: calibri; font-size: clamp(1.1rem, 2.5vw, 2.6rem); Color: blue; padding-left: 2vw;  font-weight: 850; text-decoration: underline;">System Codes Tables</h5> 
+    <div style="border: 0.0vw solid green; ">     
+        <h5 class="hello">System Codes Tables</h5> 
 <br>
+   </div>
+ <div  style="border: 0.0vw solid green; ">     
+        <h6 class="hello1">
+  Categories Codes<br>
+  Manufacturers/Suppliers Codes<br>
+  Unit of Issue Codes<br>
+  
+  </h6> 
+<br>   
+   </div>
 
    
- <a href="ctg-tables-add-del.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">1. Item Categories Codes</a>
- <br>
- <br>       
- <a  href="mnsp-tables-add-del.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">2. Manufacturers/Suppliers Codes</a>
- <br>
- <br>   
- <a  href="uis-tables-add-del.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">3. Unit of Issue Codes</a>
-        
-   </div>
+
     
 
  </div>
