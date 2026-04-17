@@ -265,7 +265,7 @@ width: 100%;
 }
 
 .hello {
- margin-top: 25.0vh;
+ padding-left: 2vw;
  margin-left: 10vw;
  text-align: left;
 }
@@ -274,7 +274,7 @@ width: 100%;
 .hello {
  margin-top: 10.0vh;
  text-align: left;
- 
+ padding-left: 2vw;
 }
 }
 
@@ -329,20 +329,22 @@ width: 95%;
       <ul class="navbar-nav ms-auto">
        
         <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="Reorder-lvl-Reached.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Reached Reorder Level </a>
+          <a class="nav-link " href="Reorder-lvl-Reached.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Reached Reorder Level </a>
         </li>  
          <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="Minimum-lvl-Reached.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Reached Minimum Level</a>
+          <a class="nav-link " href="Minimum-lvl-Reached.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Reached Minimum Level</a>
         </li>  
-  <li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="Above-Reorder-lvl.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Are Above Their Reorder Level</a>
+        <li class="nav-item" style="line-height: 6dvh;" >
+          <a class="nav-link " href="Above-Reorder-lvl.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Above Reorder Level</a>
         </li>  
-<li class="nav-item" style="line-height: 6dvh;" >
-          <a class="nav-link " href="Above-Minimum-lvl.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Items That Are Above Their Minimum Level</a>
+        <li class="nav-item" style="line-height: 6dvh;" >
+          <a class="nav-link " href="Above-Minimum-lvl.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Above Minimum Level</a>
         </li>  
-       
+       <li class="nav-item" style="line-height: 6dvh;" >
+          <a class="nav-link " href="Reached-Expiry.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Expired Items</a>
+        </li>  
        <li class="nav-item">
-          <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);" >Back</a>
+          <a class="nav-link aback" href="Index-Items.html" style="color: #cce6ff; font-weight: 500; font-size: clamp(1.1rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
                       
        
@@ -369,28 +371,20 @@ width: 95%;
  <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
    
     <div class="hello" style="border: 0.0vw solid green; ">     
-        <h5 style="font-family: calibri; font-size: clamp(1.1rem, 2.5vw, 2.6rem); Color: blue; padding-left: 2vw;  font-weight: 850; text-decoration: underline;">Critical Inquiries & Reports</h5> 
+        <h5 style="margin-top: 25.0vh; font-family: calibri; font-size: clamp(0.9rem, 1.8vw, 1.9rem); Color: black;  font-weight: 850; text-decoration: underline;">Critical Inquiries & Reports</h5> 
 <br>
-
-   
- <a href="Reached-Reorder.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">1. Items That Reached Their Reorder Level</a>
- <br>
- <br>       
- <a  href="Reached-Minimum.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">2. Items That Reached Their Minimum Level</a>
- <br>
- <br>   
-<a href="Above-Reorder.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">3. Items That Are Above Their Reorder Level</a>
- <br>
- <br>       
- <a  href="Above-Minimum.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">4. Items That Are Above Their Minimum Level</a>
- <br>
- <br>  
-<a  href="Reached-Expiry.html" style="padding-left: 2vw; font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">5. Items That Have Expired</a>
- <br>
- <br>    
    </div>
-    
-
+ <div  style="border: 0.0vw solid green; ">     
+        <h6 class="hello" style="margin-top: 3.0vh; font-family: calibri; font-size: clamp(0.6rem, 1.5vw, 1.6rem); Color: black; font-weight: 650; text-decoration: none;">
+  Reached Reorder Level<br>
+  Reached Minimum Level<br>
+  Above Reorder Level<br>
+  Above Minimum Level<br>
+  Expired<br> 
+  </h6> 
+<br>   
+   </div>
+  
  </div>
 
 <!--  -------------------------------------------------END--Second column of grid---------------------------------------------     -->
