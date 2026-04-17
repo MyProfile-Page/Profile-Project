@@ -265,16 +265,52 @@ width: 100%;
 }
 
 .hello {
- padding-left: 2vw;
+ padding-left: 3vw;
  margin-left: 10vw;
  text-align: left;
+ margin-top: 25.0vh;
+ font-family: calibri;
+ font-size: clamp(0.9rem, 1.8vw, 1.9rem);
+ Color: black; 
+ font-weight: 850;
+ text-decoration: underline;
+}
+
+.hello1 {
+ padding-left: 3vw;
+ margin-left: 10vw;
+ text-align: left;
+ margin-top: 3.0vh;
+ font-family: calibri;
+ font-size: clamp(0.6rem, 1.5vw, 1.6rem);
+ Color: black; 
+ font-weight: 650;
+ text-decoration: none;
 }
 
 @media (max-width: 768px) {
 .hello {
- margin-top: 10.0vh;
+ margin-top: 2.0vh;
  text-align: left;
  padding-left: 2vw;
+ font-family: calibri;
+ font-size: clamp(0.9rem, 1.8vw, 1.9rem);
+ Color: black; 
+ font-weight: 850;
+ text-decoration: underline;
+}
+}
+@media (max-width: 768px) {
+.hello1 {
+ padding-left: 2vw;
+ margin-left: 10vw;
+ text-align: left;
+ margin-top: 3.0vh;
+ font-family: calibri;
+ font-size: clamp(0.6rem, 1.5vw, 1.6rem);
+ Color: black; 
+ font-weight: 650;
+ text-decoration: none;
 }
 }
 
@@ -368,14 +404,14 @@ width: 95%;
 
 <!--  --------------------------------------------------START-First column of grid---------------------------------------     -->
  
- <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
+ <div style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
    
-    <div class="hello" style="border: 0.0vw solid green; ">     
-        <h5 style="margin-top: 25.0vh; font-family: calibri; font-size: clamp(0.9rem, 1.8vw, 1.9rem); Color: black;  font-weight: 850; text-decoration: underline;">Critical Inquiries & Reports</h5> 
+    <div style="border: 0.0vw solid green; ">     
+        <h5 class="hello">Critical Inquiries & Reports</h5> 
 <br>
    </div>
  <div  style="border: 0.0vw solid green; ">     
-        <h6 class="hello" style="margin-top: 3.0vh; font-family: calibri; font-size: clamp(0.6rem, 1.5vw, 1.6rem); Color: black; font-weight: 650; text-decoration: none;">
+        <h6 class="hello1">
   Reached Reorder Level<br>
   Reached Minimum Level<br>
   Above Reorder Level<br>
