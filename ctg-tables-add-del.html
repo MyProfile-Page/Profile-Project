@@ -352,19 +352,22 @@ background-color: #9bc7be;
 .input-field {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 8vh;
- 
  font-weight: 450; 
  border: 0.1vw solid black; 
+ text-align: center;
+ width: 70%;
 }
 
 @media (max-width: 768px) {
 .input-field {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
  height: 5vh;
-
  font-weight: 600; 
+ width: 100%.
+ text-align: center;
 }
 }
+
 
 .input-field-col {
  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
@@ -484,8 +487,8 @@ background-color: #9bc7be;
  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
 
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Items Category Table</a>
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(1.1rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(1.1rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 700;">Items Category Table</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -504,7 +507,7 @@ background-color: #9bc7be;
       <ul class="navbar-nav ms-auto">
        
         <li class="nav-item">
-          <a class="nav-link aback" href="Items-Codes.html" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.6vw, 1.7rem);" >Back</a>
+          <a class="nav-link aback" href="Items-Codes.html" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
             
       
@@ -527,8 +530,10 @@ background-color: #9bc7be;
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Category No." style="width: 25%; text-align: center;" > 
-  <input type="text" class="input-field" id="ctgname" placeholder="Category Name" style="width: 46%; text-align: center;" >
+  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Category No."  > 
+</div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  <input type="text" class="input-field" id="ctgname" placeholder="Category Name"  >
   
   
 </div>
