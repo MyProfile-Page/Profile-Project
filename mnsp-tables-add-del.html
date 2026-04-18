@@ -406,7 +406,7 @@ background-color: #9bc7be;
   height: 5.0vh;
   text-align: center; 
   font-weight: 500; 
-  font-size: clamp(0.9rem, 1.0vw, 1.1rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
   border-radius: 12px;
 }
 }
@@ -414,7 +414,7 @@ background-color: #9bc7be;
   width: 24%; 
   text-align: center;
   background-color: #fafafa; 
-  font-size: clamp(0.5rem, 1.1vw, 1.2rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
   height: 8vh;
   font-weight: 500; 
   border-radius: 12px;
@@ -443,7 +443,7 @@ background-color: #9bc7be;
   text-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
-  font-size: clamp(0.9rem, 1.0vw, 1.4rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
   height: 5vh;
   font-weight: 500;
   border-radius: 12px; 
@@ -562,11 +562,11 @@ background-color: #9bc7be;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 6%; font-size: clamp(0.6rem, 1.3vw, 1.4rem); font-weight: 500; ">No.</th>
-        <th style="text-align: center; width: 19%; font-size: clamp(0.6rem, 1.3vw, 1.4rem); font-weight: 500; ">Name</th>      
+        <th style="text-align: center; width: 6%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">No.</th>
+        <th style="text-align: center; width: 19%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Name</th>      
         
       
-        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.6rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
       </tr>
     </thead>
     <tbody id="manfsupltable" class = "manfsupltableBody-Cls">
@@ -642,8 +642,8 @@ async function loadmanfsupltable() {
       <tr class="tr-main-row"  >
        
         
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.5vw;">${data.nbr}</td>
-<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.6rem, 1.0vw, 1.1rem); font-weight: 400; padding-left: 0.5vw;">${data.name}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.nbr}</td>
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.name}</td>
                 <td style="border: 0.05vw solid black; text-align: center;">
 
            <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
