@@ -512,6 +512,9 @@ background-color: #9bc7be;
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li style="line-height: 2dvh;" >&nbsp</li>
+        <li class="nav-item" style="line-height: 4dvh;" >
+          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">Print</a>
+        </li> 
         <li class="nav-item">
         <a class="nav-link aback lkbg" href="Items-Codes.html" style="font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
@@ -748,6 +751,129 @@ window.additem = async function () {
   
   loadnewitemstable();
 
+
+//  PRINT FUNCTION START
+
+function printInvoice() {
+  
+
+  const table = document.getElementById("wholeitemTable").outerHTML;
+
+  const printWindow = window.open('', '', 'width=900,height=700');
+
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Invoice</title>
+        <style>
+          body {            
+            font-family: Arial, sans-serif;
+            padding: 5vw;
+            background: #a3c2c2;
+          }
+          h3 {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 20px;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }                    
+       @media print {
+          td {
+            border: 0.2vw solid black; 
+            padding: 9px;         
+         }
+                   
+           td:nth-child(1) {
+            text-align: center;
+          }
+           td:nth-child(2),        
+            td:nth-child(3) {       
+            colspan="2";           
+          }  
+            td:nth-child(2) {
+           border-right: 1px solid black !important;
+          } 
+            button {
+              display: none;           
+            }
+            table th:nth-child(3),
+            table td:nth-child(3) {   
+           display: none;     
+           }
+             table th {
+            font-weight: 600;
+            font-size: 50px;
+            color: #3b021c;
+            border: 0.2vw solid black;
+            padding: 12px;                                  
+            }            
+         }    
+    table.invoice-wrapper {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  @media print {
+    thead {
+      display: table-header-group;
+    }
+    .invoice-header {
+    padding-top: 25px;
+  }
+    body {
+    margin: 0;
+  } 
+    tr {
+      page-break-inside: avoid;
+    }
+  }
+  </style>
+ </head>
+<body>
+  <table class="invoice-wrapper">
+  <thead style="padding-top: 25px;">
+    <tr>
+      <td>
+        <div style="text-align: left;">
+          <!-- Your existing header -->
+          <h3>Categories Codes</h3>
+          <p>Maya Enterprise
+          <br>
+          North York Toronto - Phone: 647-999-9999<br>
+          email: ali_albader_alsalem@yahoo.com
+          <br><br>
+          </p>
+        </div>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="invoice-body">
+          <!-- Your existing invoice content -->
+           <table>
+          ${table}
+        </table>
+        <br>
+        <p style="text-align:center;">Thank you for your business!</p>      
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>          
+</body>
+</html>
+  `);
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+  printWindow.close();
+}
+window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
+//  PRINT FUNCTION END
 
 
 

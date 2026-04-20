@@ -883,7 +883,7 @@ async function loadnewitemstable() {
   table.innerHTML += `
     <tr></tr>
    <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">TL Value of Items at Reorder Level</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Value Above Reorder Levels</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -895,7 +895,7 @@ async function loadnewitemstable() {
     </tr>
 
     <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of Items at Reorder Level</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value Above Reorder Levels</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -997,150 +997,75 @@ function printInvoice() {
       <head>
         <title>Invoice</title>
         <style>
-          body {
-            
+          body {            
             font-family: Arial, sans-serif;
             padding: 5vw;
             background: #a3c2c2;
           }
-
           h3 {
             text-align: center;
-            margin-bottom: 5vw;
+            margin-top: 15px;
+            margin-bottom: 20px;
           }
-
           table {
-            width: 100%;
+            width: 112%;
             border-collapse: collapse;
-          }
-
-          th {
-            border: 0.2vw solid black;
-            padding: 1vw;
-            height: 4px;
-            text-align: left;
-            color: blue;
-          }
-
-           td {
-            height: 3px;
-            
-          }
-           @media print {
+          }                    
+       @media print {
           td {
-            border: 0.2vw solid black;
-            padding: 0.2vw;
-            text-align: left;
+            border: 0.2vw solid black; 
+            padding: 9px;         
          }
-         }
-
-           td:nth-child(6) {
-            border-left: 0.2vw solid black;
-             
-          }
-            
-           td:nth-child(2) {
-            text-align: left;
-            padding-left: 2px; 
-          }
-
-          td:nth-child(1),
-            td:nth-child(4),
+            td:nth-child(1),
+            td:nth-child(3),
+             td:nth-child(4),
              td:nth-child(5),
-             td:nth-child(6),
-           td:nth-child(3) {
+           td:nth-child(6) {
             text-align: center;
           }
-           @media print {
-            td:nth-child(5),        
+           td:nth-child(5),        
             td:nth-child(6) {       
             colspan="2";           
-          }                        
-          }
-
-                    
-            
-
-
-
-          th {
-             font-size: 80px;
-          }
-
-          .right {
-            text-align: right;
-          }
-
-          .center {
-            text-align: center;
-          }
-
-          .summary-row {
-            font-weight: bold;
-          }
-
-          @media print {
+          }  
+            td:nth-child(5) {
+           border-right: 1px solid black !important;
+          } 
             button {
-              display: none;
-              
+              display: none;           
             }
-          }
-
-         @media print {       
-            table th:nth-child(6),    
+             table th:nth-child(6),    
             table td:nth-child(6) {   
            display: none;     
            }
-         }                
-
-          @media print {
-            table th {
+             table th {
             font-weight: 600;
             font-size: 50px;
             color: #3b021c;
-            
-            }
-         }
-
-         @media print {
-          .no-print {
-           display: none !important;
-      }
-   }
-
-   
-       table.invoice-wrapper {
+            border: 0.2vw solid black;
+            padding: 12px;                                  
+            }            
+         }    
+    table.invoice-wrapper {
     width: 100%;
     border-collapse: collapse;
   }
-
   @media print {
     thead {
       display: table-header-group;
     }
-
     .invoice-header {
     padding-top: 25px;
   }
     body {
     margin: 0;
   } 
-
     tr {
       page-break-inside: avoid;
     }
   }
-
- 
-
-
-
-        </style>
-      </head>
-      <body>
-
-
-
+  </style>
+ </head>
+<body>
   <table class="invoice-wrapper">
   <thead style="padding-top: 25px;">
     <tr>
@@ -1152,60 +1077,37 @@ function printInvoice() {
           <br>
           North York Toronto - Phone: 647-999-9999<br>
           email: ali_albader_alsalem@yahoo.com
-          <br>
+          <br><br>
           </p>
         </div>
       </td>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
         <div class="invoice-body">
           <!-- Your existing invoice content -->
-
            <table>
           ${table}
         </table>
-
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>
-
-
-
-
-        
+        <p style="text-align:center;">Thank you for your business!</p>      
         </div>
       </td>
     </tr>
   </tbody>
-</table>
-
-
-
-
-
-
-
-
-          
-         </body>
-    </html>
+</table>          
+</body>
+</html>
   `);
-
   printWindow.document.close();
   printWindow.focus();
   printWindow.print();
   printWindow.close();
 }
-
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
-
-
-
 //  PRINT FUNCTION END
-
 
 </script>
 
