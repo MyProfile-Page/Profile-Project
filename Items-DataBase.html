@@ -1476,21 +1476,18 @@ function printInvoice() {
 
           th {
             border: 0.2vw solid black;
-            padding: 1vw;
+            padding: 15px;
             height: 4px;
             text-align: left;
             color: blue;
           }
-
            td {
             height: 3px;
-            
+            padding: 12px;
           }
            @media print {
           td {
-            border: 0.2vw solid black;
-            padding: 0.2vw;
-            text-align: left;
+            border: 0.2vw solid black;          
          }
          }
 
@@ -1516,6 +1513,11 @@ function printInvoice() {
             td:nth-child(6) {       
             colspan="2";           
           }                        
+          }
+          @media print {
+          td:nth-child(5) {
+           border-right: 1px solid black !important;
+          }
           }
 
                     
