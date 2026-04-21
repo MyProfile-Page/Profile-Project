@@ -573,8 +573,16 @@ background-color: #9bc7be;
  <div class="gap3vh"></div>  <div class="items-add-upd" >Unit of Issue Grid
 <div class="gap2vh"></div>
   <!-- HTML Table For showing all records of database-->
-<div id = "wholeitemTable" class="custom-table-container">
-  <table class="custom-table">
+
+<div id="invoiceContainer">
+  <h3>Unit of Issue Codes</h3>
+  <p>
+    Maya Enterprise<br>
+    North York Toronto - Phone: 647-999-9999<br>
+    email: ali_albader_alsalem@yahoo.com
+  </p>
+  
+ <table id="wholeitemTable" class="custom-table">
     <thead>
      
       <tr>
@@ -595,8 +603,16 @@ background-color: #9bc7be;
      
      </tbody>
   </table>
- </div>
+
+  <p class="thank-you">Thank you for your business!</p>
 </div>
+
+
+
+
+
+
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module">
@@ -766,7 +782,9 @@ function printInvoice() {
 
   const table = document.getElementById("wholeitemTable").outerHTML;
 
-  const printWindow = window.open('', '', 'width=900,height=700');
+// const printWindow = window.open('', '', 'width=900,height=700');
+
+ const printWindow = window.open('', '', '');
 
   printWindow.document.write(`
     <html>
@@ -874,13 +892,16 @@ function printInvoice() {
 </body>
 </html>
   `);
-  printWindow.document.close();
-  printWindow.focus();
+//  printWindow.document.close();
+//  printWindow.focus();
   printWindow.print();
-  printWindow.close();
+//  printWindow.close();
+  
 }
-window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
+  window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
+
+
 
 
 
