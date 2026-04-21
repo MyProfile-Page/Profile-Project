@@ -40,7 +40,15 @@
     display: inline-block; /* Ensures padding and background apply correctly */
     border-radius: 3vh;
  } 
-  
+ .liheight {
+   line-height: 2.5dvh;
+  } 
+
+ @media (max-width: 768px) {
+ .liheight {
+   line-height: 1.0dvh;
+ } 
+ }
  
 .custom-table-container {
     height: 76vh;        /* Fixed height */
@@ -625,11 +633,11 @@ height: 5vh;
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
        <li style="line-height: 2dvh;" >&nbsp</li>   
-       <li class="nav-item" style="line-height: 4dvh;" >
+       <li class="nav-item liheight"  >
           <a class="nav-link lkbg" href="#" onclick="printInvoice()" style=" font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);">Print</a>
         </li> 
        <li style="line-height: 2dvh;" >&nbsp</li>    
-       <li class="nav-item" style="line-height: 4dvh;" >
+       <li class="nav-item liheight"  >
           <a class="nav-link aback lkbg" href="Items-Criticals.html" style="font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem);" >Back</a>
         </li>  
         <li style="line-height: 2dvh;" >&nbsp</li>      
