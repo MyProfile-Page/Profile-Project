@@ -27,6 +27,15 @@
     display: inline-block; /* Ensures padding and background apply correctly */
     border-radius: 3vh;
  } 
+.liheight {
+   line-height: 2.5dvh;
+  } 
+
+ @media (max-width: 768px) {
+ .liheight {
+   line-height: 1.0dvh;
+ } 
+ }
  
 .custom-table-container {
     height: 76vh;        /* Fixed height */
@@ -509,12 +518,12 @@ background-color: #9bc7be;
       
       <ul class="navbar-nav ms-auto">
        <li style="line-height: 2dvh;" >&nbsp</li>
-       <li class="nav-item" style="line-height: 4dvh;" >
-          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.6vw, 1.7rem);;">Print All Movements</a>
+       <li class="nav-item liheight" >
+          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.6vw, 1.7rem);;">Print All Movements</a>
         </li>  
        <li style="line-height: 2dvh;" >&nbsp</li>          
-       <li class="nav-item" style="line-height: 4dvh;" >
-          <a class="nav-link aback lkbg" href="Items-Movements.html" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.6vw, 1.7rem);;" >Back</a>
+       <li class="nav-item liheight"  >
+          <a class="nav-link aback lkbg" href="Items-Movements.html" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.6vw, 1.7rem);;" >Back</a>
         </li>  
        <li style="line-height: 2dvh;" >&nbsp</li>     
       
