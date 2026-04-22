@@ -763,7 +763,7 @@ window.additem = async function () {
 
 function printInvoice() {
   
-
+  const viewportWidth = window.innerWidth;
   const table = document.getElementById("wholeitemTable").outerHTML;
 
   const printWindow = window.open('', '', '');
@@ -877,9 +877,9 @@ function printInvoice() {
   `);
   printWindow.document.close();
   printWindow.print();
-  setTimeout(function () {
-    printWindow.close();
-}, 2000);
+   if (window.matchMedia("(min-width: 768px)").matches) {
+        printWindow.close();
+    }
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
