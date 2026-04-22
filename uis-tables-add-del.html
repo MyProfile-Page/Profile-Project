@@ -502,7 +502,7 @@ background-color: #9bc7be;
   <div class="container-fluid">
 
    <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Unit of Issue Table</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Knit of Issue Table</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -875,12 +875,14 @@ function printInvoice() {
 </body>
 </html>
   `);
-   printWindow.print();
+ //  printWindow.print();
       if (window.matchMedia("(min-width: 768px)").matches) {
+          printWindow.print();
           printWindow.close();
       }
       else {
-     alert("Please Tap Back");
+     alert("After printing, Please Tap the back button to return.");
+     printWindow.print();
      // window.history.back();
      window.location.replace('uis-tables-add-del.html');
       } 
