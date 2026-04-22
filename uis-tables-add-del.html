@@ -871,16 +871,10 @@ function printInvoice() {
 </body>
 </html>
   `);
- //  printWindow.print();
-      if (window.matchMedia("(min-width: 768px)").matches) {
-          printWindow.print();
+  printWindow.print();
+  if (window.matchMedia("(min-width: 768px)").matches) {
           printWindow.close();
-      }
-      else {     
-     printWindow.print();
-     window.location.replace('uis-tables-add-del.html');
-      } 
-      
+      }     
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
