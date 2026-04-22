@@ -875,15 +875,10 @@ function printInvoice() {
 </body>
 </html>
   `);
-//  printWindow.document.close();
-//  printWindow.focus();
-//-------------------
-// printWindow.onafterprint = function() {
-//    printWindow.close();
-//  };
-//--------------
   printWindow.print();
-//  printWindow.close();
+  setTimeout(function () {
+    printWindow.close();
+}, 100);
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
