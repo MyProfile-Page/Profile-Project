@@ -875,6 +875,7 @@ function printInvoice() {
 </body>
 </html>
   `);
+  printWindow.document.close();
   printWindow.print();
   setTimeout(function () {
     printWindow.close();
