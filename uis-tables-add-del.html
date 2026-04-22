@@ -502,7 +502,7 @@ background-color: #9bc7be;
   <div class="container-fluid">
 
    <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Knit of Issue Table</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Mnit of Issue Table</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -521,7 +521,7 @@ background-color: #9bc7be;
       <ul class="navbar-nav ms-auto">
        <li style="line-height: 2dvh;" >&nbsp</li>
        <li class="nav-item liheight"  >
-          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Print</a>
+          <a class="nav-link lkbg " href="#" onclick="printAlert()" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Print</a>
         </li> 
         <li style="line-height: 2dvh;" >&nbsp</li>
         <li class="nav-item liheight">
@@ -756,12 +756,22 @@ window.additem = async function () {
   }
 };
 
+ loadnewitemstable(); 
   
-  loadnewitemstable();
+window.printAlert = async function () {
+
+  if (window.matchMedia("(min-width: 768px)").matches) {  
+       alert("Direct return. after print"); 
+      }
+      else {
+     alert("After printing, Please Tap the back button to return.");   
+      } 
+  printInvoice();
+}
 
 //  PRINT FUNCTION START
 
-function printInvoice() {
+async function printInvoice() {
   
   
   const table = document.getElementById("wholeitemTable").outerHTML;
@@ -880,10 +890,8 @@ function printInvoice() {
           printWindow.print();
           printWindow.close();
       }
-      else {
-     alert("After printing, Please Tap the back button to return.");
+      else {     
      printWindow.print();
-     // window.history.back();
      window.location.replace('uis-tables-add-del.html');
       } 
       
