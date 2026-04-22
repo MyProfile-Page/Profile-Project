@@ -765,12 +765,10 @@ window.additem = async function () {
 
 //  PRINT FUNCTION START
 
-function printInvoice() {
-  
-
+function printInvoice() {  
   const table = document.getElementById("wholeitemTable").outerHTML;
-
-  const printWindow = window.open('', '', 'width=900,height=700');
+  const printWindow = window.open('', '', '');
+//  const printWindow = window.open('', '', 'width=900,height=700');
 
   printWindow.document.write(`
     <html>
@@ -849,7 +847,7 @@ function printInvoice() {
       <td>
         <div style="text-align: left;">
           <!-- Your existing header -->
-          <h3>Categories Codes</h3>
+          <h3>Unit of Issue Codes</h3>
           <p>Maya Enterprise
           <br>
           North York Toronto - Phone: 647-999-9999<br>
@@ -878,13 +876,14 @@ function printInvoice() {
 </body>
 </html>
   `);
-  printWindow.document.close();
-  printWindow.focus();
   printWindow.print();
-  printWindow.close();
+  if (window.matchMedia("(min-width: 768px)").matches) {
+          printWindow.close();
+      }     
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
+
 
 
 
