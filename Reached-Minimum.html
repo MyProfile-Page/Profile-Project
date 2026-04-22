@@ -994,12 +994,10 @@ window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
 
 //  PRINT FUNCTION START
 
-function printInvoice() {
-  
-
+function printInvoice() {  
   const table = document.getElementById("wholeitemTable").outerHTML;
-
-  const printWindow = window.open('', '', 'width=900,height=700');
+  const printWindow = window.open('', '', '');
+//  const printWindow = window.open('', '', 'width=900,height=700');
 
   printWindow.document.write(`
     <html>
@@ -1017,7 +1015,7 @@ function printInvoice() {
             margin-bottom: 20px;
           }
           table {
-            width: 112%;
+            width: 100%;
             border-collapse: collapse;
           }                    
        @media print {
@@ -1025,25 +1023,22 @@ function printInvoice() {
             border: 0.2vw solid black; 
             padding: 9px;         
          }
-            td:nth-child(1),
-            td:nth-child(3),
-             td:nth-child(4),
-             td:nth-child(5),
-           td:nth-child(6) {
+                   
+           td:nth-child(1) {
             text-align: center;
           }
-           td:nth-child(5),        
-            td:nth-child(6) {       
+           td:nth-child(2),        
+            td:nth-child(3) {       
             colspan="2";           
           }  
-            td:nth-child(5) {
+            td:nth-child(2) {
            border-right: 1px solid black !important;
           } 
             button {
               display: none;           
             }
-             table th:nth-child(6),    
-            table td:nth-child(6) {   
+            table th:nth-child(3),
+            table td:nth-child(3) {   
            display: none;     
            }
              table th {
@@ -1081,7 +1076,7 @@ function printInvoice() {
       <td>
         <div style="text-align: left;">
           <!-- Your existing header -->
-          <h3>Invoice</h3>
+          <h3>Items That Reached Minimum Level</h3>
           <p>Maya Enterprise
           <br>
           North York Toronto - Phone: 647-999-9999<br>
@@ -1110,10 +1105,10 @@ function printInvoice() {
 </body>
 </html>
   `);
-  printWindow.document.close();
-  printWindow.focus();
   printWindow.print();
-  printWindow.close();
+  if (window.matchMedia("(min-width: 768px)").matches) {
+          printWindow.close();
+      }     
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
