@@ -732,14 +732,14 @@ height: 5vh;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 8%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">No.</th>
+        <th style="text-align: center; width: 8%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">No.</th>
          
-        <th style="text-align: center; width: 38%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Name</th>              
+        <th style="text-align: center; width: 38%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Name</th>              
         
-        <th style="text-align: center; width: 14%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Minimum Lvl</th>
-        <th style="text-align: center; width: 11%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Qty</th>
-        <th style="text-align: center; width: 18%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Value</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.6rem, 1.1vw, 1.6rem); font-weight: 500; ">Action</th>
+        <th style="text-align: center; width: 14%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Minimum Lvl</th>
+        <th style="text-align: center; width: 11%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 18%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Value</th>
+        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
         
         
       </tr>
@@ -994,11 +994,9 @@ window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
 //  PRINT FUNCTION START
 
 function printInvoice() {
-  
-
+ 
   const table = document.getElementById("wholeitemTable").outerHTML;
-
-  const printWindow = window.open('', '', 'width=900,height=700');
+  const printWindow = window.open('', '', '');
 
   printWindow.document.write(`
     <html>
@@ -1010,20 +1008,37 @@ function printInvoice() {
             padding: 5vw;
             background: #a3c2c2;
           }
-          h3 {
+          h6 {
             text-align: center;
-            margin-top: 15px;
             margin-bottom: 20px;
           }
           table {
-            width: 112%;
+            width: 112.5%;
             border-collapse: collapse;
-          }                    
-       @media print {
+          }           
+           @media print {
+           th {            
+             border: 0.2vw solid black;
+            padding: 15px;                                  
+            } 
           td {
             border: 0.2vw solid black; 
-            padding: 9px;         
+            padding: 10px;                   
          }
+           td:nth-child(5) {
+           border-right: 1px solid black !important;
+          }
+            td:nth-child(5),        
+            td:nth-child(6) {       
+            colspan="2";           
+          }  
+            button {
+              display: none;              
+            } 
+           table th:nth-child(6),    
+            table td:nth-child(6) {   
+           display: none;     
+           } 
             td:nth-child(1),
             td:nth-child(3),
              td:nth-child(4),
@@ -1031,32 +1046,18 @@ function printInvoice() {
            td:nth-child(6) {
             text-align: center;
           }
-           td:nth-child(5),        
-            td:nth-child(6) {       
-            colspan="2";           
-          }  
-            td:nth-child(5) {
-           border-right: 1px solid black !important;
-          } 
-            button {
-              display: none;           
-            }
-             table th:nth-child(6),    
-            table td:nth-child(6) {   
-           display: none;     
-           }
-             table th {
-            font-weight: 600;
-            font-size: 50px;
-            color: #3b021c;
-            border: 0.2vw solid black;
-            padding: 12px;                                  
-            }            
-         }    
-    table.invoice-wrapper {
+           td:nth-child(2) {
+            text-align: left;
+            padding-left: 2px; 
+          }                     
+
+         }        
+   
+       table.invoice-wrapper {
     width: 100%;
     border-collapse: collapse;
   }
+
   @media print {
     thead {
       display: table-header-group;
@@ -1071,26 +1072,27 @@ function printInvoice() {
       page-break-inside: avoid;
     }
   }
-  </style>
- </head>
-<body>
+        </style>
+      </head>
+      <body>
   <table class="invoice-wrapper">
   <thead style="padding-top: 25px;">
     <tr>
       <td>
         <div style="text-align: left;">
-          <!-- Your existing header -->
-          <h3>Invoice</h3>
-          <p>Maya Enterprise
+          <h6>Items That Are Above Minimum Level
+          </h6>
+          <p style="font-size: 13px;">Maya Enterprise
           <br>
           North York Toronto - Phone: 647-999-9999<br>
-          email: ali_albader_alsalem@yahoo.com
-          <br><br>
+          email: ali_albader_alsalem@yahoo.com 
+          <br>
           </p>
         </div>
       </td>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <td>
@@ -1100,19 +1102,20 @@ function printInvoice() {
           ${table}
         </table>
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>      
+        <p style="text-align:center;">Thank you for your business!</p>   
         </div>
       </td>
     </tr>
   </tbody>
-</table>          
-</body>
-</html>
+</table>
+   
+         </body>
+    </html>
   `);
-  printWindow.document.close();
-  printWindow.focus();
-  printWindow.print();
-  printWindow.close();
+   printWindow.print();
+  if (window.matchMedia("(min-width: 768px)").matches) {
+          printWindow.close();
+      }     
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
