@@ -988,10 +988,8 @@ window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
 //  PRINT FUNCTION START
 
 function printInvoice() {
-  
-
+ 
   const table = document.getElementById("wholeitemTable").outerHTML;
-
   const printWindow = window.open('', '', '');
 
   printWindow.document.write(`
@@ -1013,17 +1011,13 @@ function printInvoice() {
             border-collapse: collapse;
           }           
            @media print {
-           th {
-            
+           th {            
              border: 0.2vw solid black;
-            padding: 15px;
-                                  
+            padding: 15px;                                  
             } 
           td {
             border: 0.2vw solid black; 
-           
-            padding: 10px;  
-                  
+            padding: 10px;                   
          }
            td:nth-child(5) {
            border-right: 1px solid black !important;
@@ -1039,8 +1033,7 @@ function printInvoice() {
             table td:nth-child(6) {   
            display: none;     
            } 
-            
-             td:nth-child(1),
+            td:nth-child(1),
             td:nth-child(3),
              td:nth-child(4),
              td:nth-child(5),
@@ -1053,8 +1046,6 @@ function printInvoice() {
           }                     
 
          }        
-
-      
    
        table.invoice-wrapper {
     width: 100%;
@@ -1065,14 +1056,12 @@ function printInvoice() {
     thead {
       display: table-header-group;
     }
-
     .invoice-header {
     padding-top: 25px;
   }
     body {
     margin: 0;
   } 
-
     tr {
       page-break-inside: avoid;
     }
@@ -1085,8 +1074,8 @@ function printInvoice() {
     <tr>
       <td>
         <div style="text-align: left;">
-          <!-- Your existing header -->
-          <h6>Items That Reached Reorder Level</h6>
+          <h6>Items That Reached Reorder Level
+          </h6>
           <p style="font-size: 13px;">Maya Enterprise
           <br>
           North York Toronto - Phone: 647-999-9999<br>
@@ -1103,24 +1092,20 @@ function printInvoice() {
       <td>
         <div class="invoice-body">
           <!-- Your existing invoice content -->
-
            <table>
           ${table}
         </table>
-
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>
-       
+        <p style="text-align:center;">Thank you for your business!</p>   
         </div>
       </td>
     </tr>
   </tbody>
 </table>
-     
+   
          </body>
     </html>
   `);
-
    printWindow.print();
   if (window.matchMedia("(min-width: 768px)").matches) {
           printWindow.close();
