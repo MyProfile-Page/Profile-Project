@@ -661,23 +661,29 @@ height: 5vh;
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input type="number" class="input-field input-nbr-uis" title="Enter Applicant Number" id="nbr" min="1" max="99999999" placeholder="Applicant No."> 
+<input type="number" class="input-field input-nbr-uis" title="Enter Applicant Number" id="nbr" min="1" max="99999999" placeholder="Type Applicant Number."> 
 
 </div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
-<input type="text" class="input-field input-naml" title="Enter Applicant Name" id="name" placeholder="Applicant Name" >
-</div>
-<div class="gap1vh"></div>
-
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-
-<input type="text" class="input-field input-naml" title="Enter Applicant Address" id="adr" placeholder="Applicant Address" >
+<input type="text" class="input-field input-naml" title="Enter Applicant Name" id="name" placeholder="Type Applicant Name" >
 </div>
 <div class="gap1vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="nats" class="input-field input-nbr-uis" title="Select Applicant Nationality" id="nat" name="anat" placeholder="Nationality" >
+
+<input type="text" class="input-field input-naml" title="Enter Applicant Address" id="adr" placeholder="Type Applicant Address" >
+</div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+<input type="number" class="input-field input-prc" id="phn" title="Enter Applicant Phone" min="1" max="99999999" placeholder="Type Applicant Phone" >
+<div class="gap1vh">&thinsp;</div>
+ 
+</div>
+<div class="gap1vh"></div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<input list="nats" class="input-field input-nbr-uis" title="Select Applicant Nationality" id="nat" name="anat" placeholder="Select Nationality" >
 <datalist id="nats">
  <option value="Kuwaiti">
  <option value="Filipino">
@@ -691,15 +697,10 @@ height: 5vh;
  
 </div>
 
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
-<input type="number" class="input-field input-prc" id="phn" title="Enter Applicant Phone" min="1" max="99999999" placeholder="Phone No." >
-<div class="gap1vh">&thinsp;</div>
- 
-</div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-<input list="prps" class="input-field input-imp" title="Select Consultation Purpose" id="prp" name="aprp" placeholder="Consultation Purpose"> 
+<input list="prps" class="input-field input-imp" title="Select Consultation Purpose" id="prp" name="aprp" placeholder="Select Consultation Purpose"> 
  <datalist id="prps">
    <option value="Study">
    <option value="Job">
@@ -711,10 +712,10 @@ height: 5vh;
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   
-  <input list="stas" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Consultation Status" id="sta" name="asta" placeholder="Consultation Status" >
+  <input list="stas" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Consultation Status" id="sta" name="asta" placeholder="Select Consultation Status" >
   <datalist id="stas">
-   <option value="Waiting">
-   <option value="Complete">
+   <option value="Started">
+   <option value="Completed">
  </datalist>   
 </div>
 <div class="gap1vh"></div>
