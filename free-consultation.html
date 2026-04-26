@@ -693,13 +693,8 @@ height: 5vh;
  <option value="Pakistani">
  <option value="Other">
 </datalist> 
-
-
-
  
 </div>
-
-
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input list="prps" class="input-field input-imp" title="Select Consultation Purpose" id="prp" name="aprp" placeholder="Select Consultation Purpose"> 
@@ -1124,7 +1119,9 @@ window.updateitem = async function () {
  if (document.getElementById("prp").value === "") {
     document.getElementById("prp").value = document.getElementById("prp").placeholder;
    }
-
+ document.getElementById("nat").placeholder = "Select Nationality";
+ document.getElementById("sta").placeholder = "Select Consultation Status";
+ document.getElementById("prp").placeholder = "Select Consultation Purpose";
  const ownerId = document.getElementById("name").value;
   const name = document.getElementById("name").value;
   const nbr = document.getElementById("nbr").value;
