@@ -613,7 +613,7 @@ height: 5vh;
   </style>
 </head>
 
-<body  class="body_cls" oncontextmenu="return false;" >
+<body  class="body_cls"  >
 
 
   <!-- 🌍 Navigation Bar Start -->
@@ -818,6 +818,7 @@ import {
 
 
 const savedid = 0;
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCPjQ6I6XZ2EZGNRFi_1iQYZv5tjYFGdfk",
@@ -1088,13 +1089,16 @@ window.viewitem = function (id, nbr, name, adr, nat, phn, prp, sta, rqd, apd) {
   document.getElementById("nbr").value = nbr;
   document.getElementById("phn").value = phn;
   document.getElementById("adr").value = adr;
-  document.getElementById("nat").placeholder = nat;
- // itemInput.value = savedValue;
+  // itemInput.value = savedValue;
  // itemInput.dispatchEvent(new Event("input")); // re-run your logic
  //   This way:
  // User sees the previous value
  // Field is still connected to the <datalist>
- // User can click and pick a different option (no retyping required)  
+ // User can click and pick a different option (no retyping required)
+  document.getElementById("nat").value = ""; 
+  document.getElementById("sta").value = "";
+  document.getElementById("prp").value = ""; 
+  document.getElementById("nat").placeholder = nat; 
   document.getElementById("sta").placeholder = sta;
   document.getElementById("prp").placeholder = prp;
   document.getElementById("rqd").value = rqd;
@@ -1111,7 +1115,15 @@ window.updateitem = async function () {
     return;
   }
 
-
+ if (document.getElementById("nat").value === "") {
+    document.getElementById("nat").value = document.getElementById("nat").placeholder;
+   }
+ if (document.getElementById("sta").value === "") {
+    document.getElementById("sta").value = document.getElementById("sta").placeholder;
+   }
+ if (document.getElementById("prp").value === "") {
+    document.getElementById("prp").value = document.getElementById("prp").placeholder;
+   }
 
  const ownerId = document.getElementById("name").value;
   const name = document.getElementById("name").value;
@@ -1131,21 +1143,6 @@ window.updateitem = async function () {
     return;
   }
 
-if (!isValidSelection("nat", "nats")) {
-  alert("A valid Nationality not selected from the list.");
-  return;
-}
-
-
-if (!isValidSelection("prp", "prps")) {
-  alert("A valid Consultation Purpose not selected from the list.");
-  return;
-}
-
-if (!isValidSelection("sta", "stas")) {
-  alert("A valid Consultation request status not selected from the list.");
-  return;
-}
 
   try {
     await updateDoc(doc(db, "appttable", window.currentEditId), {
