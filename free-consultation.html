@@ -716,7 +716,8 @@ height: 5vh;
   
   <input list="stas" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Consultation Status" id="sta" name="asta" placeholder="Select Consultation Status" >
   <datalist id="stas">
-   <option value="Started">
+   <option value="Requested">
+   <option value="In Process">
    <option value="Completed">
  </datalist>   
 </div>
@@ -1085,20 +1086,21 @@ window.viewitem = function (id, nbr, name, adr, nat, phn, prp, sta, rqd, apd) {
   document.getElementById("docIdHolder").value = id;
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
-  document.getElementById("nat").value = nat;
   document.getElementById("phn").value = phn;
   document.getElementById("adr").value = adr;
-  document.getElementById("sta").value = sta;
-
-  document.getElementById("prp").value = prp;
+  document.getElementById("nat").placeholder = nat;
+ // itemInput.value = savedValue;
+ // itemInput.dispatchEvent(new Event("input")); // re-run your logic
+ //   This way:
+ // User sees the previous value
+ // Field is still connected to the <datalist>
+ // User can click and pick a different option (no retyping required)  
+  document.getElementById("sta").placeholder = sta;
+  document.getElementById("prp").placeholder = prp;
   document.getElementById("rqd").value = rqd;
-  document.getElementById("apd").value = apd;
- 
-
- 
+  document.getElementById("apd").value = apd; 
   document.getElementById("btn-for-add").disabled = true;
- 
- // Store document ID for update
+  // Store document ID for update
   window.currentEditId = id;
 };
 
