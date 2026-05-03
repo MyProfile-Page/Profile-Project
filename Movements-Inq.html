@@ -142,7 +142,7 @@
             padding: 10vw;
             text-align: center;
             font-size: 20px;
-            border: 0.4vw solid steelblue;
+            border: 0.0vw solid steelblue;
         }
 
 @media (max-width: 768px) {
@@ -486,11 +486,15 @@ background-color: #9bc7be;
  }
 }
 
-
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ }
   </style>
 </head>
 
-<body oncontextmenu="return false;" class="body_cls">
+<body class="body_cls">
 
 
   <!-- 🌍 Navigation Bar Start -->
@@ -499,7 +503,7 @@ background-color: #9bc7be;
   <div class="container-fluid">
 
    <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Movements Inquiry</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Invoice</a>
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button"
@@ -519,7 +523,7 @@ background-color: #9bc7be;
       <ul class="navbar-nav ms-auto">
        <li style="line-height: 2dvh;" >&nbsp</li>
        <li class="nav-item liheight" >
-          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.6vw, 1.7rem);;">Print All Movements</a>
+          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.6vw, 1.7rem);;">Print</a>
         </li>  
        <li style="line-height: 2dvh;" >&nbsp</li>          
        <li class="nav-item liheight"  >
@@ -539,25 +543,74 @@ background-color: #9bc7be;
 
 
  <div class="gap4vh"></div>
-<div class="items-add-upd" >Movements Grid
+<div class="items-add-upd" >
 <div class="gap4vh"></div>
-  <!-- HTML Table For showing all records of database-->
+  
+ <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
+ 
+
+ <div style = "display: flex; justify-content: space-between;">
+ <div style="text-align: left; margin-left: 0vw; display: inline-block ">
+          <!-- Your existing header -->
+        
+
+          <Label id="custname" style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);"></Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">North York Toronto</Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Phone: 647-999-9999</Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">email: info@MyCompany.com</Label>
+          <div class="gap4vh"></div> 
+          <div class="gap4vh"></div>            
+  </div>
+
+  <div>
+          
+           <img src="monogram9.PNG" class="responsive-img rounded" style="display: block;">          
+  </div>
+
+    
+ <div style="text-align: left; margin-right: 1vw; display: inline-block ">
+          <!-- Your existing header -->
+          <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice No.&nbsp</Label><Label id="invno" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+<div class="gap2vh"></div>
+          <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice Date&nbsp</Label><Label id="invdt" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+<div class="gap2vh"></div>
+           <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice Time&nbsp</Label><Label id="invtm" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+
+          <div class="gap4vh"></div>
+          <div class="gap4vh"></div>           
+  </div>
+
+
+</div>
+
+
+
+
+
+ 
   <table class="custom-table">
     <thead>
      
       <tr class="tr-main-row">
-        <th style="text-align: center; width: 6%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">No.</th>
+        <th style="text-align: center; width: 9.5%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Item No.</th>
           
-        <th style="text-align: center; width: 18%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Name</th>      
+        <th style="text-align: center; width: 19%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Name</th> 
+       <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Open. Bal</th>   
+    
+        <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Type</th>
         
-        <th style="text-align: center; width: 11%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Type</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Open. Bal</th>
-        <th style="text-align: center; width: 9%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Qty</th>
-        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Clos. Bal</th>
+        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Qty</th>
+        <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Clos. Bal</th>
         
       
-        <th  style="padding: 0.0vw; text-align: center; width: 17%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Movement Date</th>
+        <th  style="padding: 0.0vw; text-align: center; width: 9.5%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Time</th>
       </tr>
     </thead>
     <tbody id="itemTable" class = "itemTableBody-Cls">
@@ -594,6 +647,8 @@ import {
   deleteDoc, 
   doc,
   updateDoc,
+  where,
+  Timestamp,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -614,22 +669,57 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
+  let lscustname = localStorage.getItem("lscustomername");
+  document.getElementById("custname").textContent = lscustname;
+  let lsinvoice = localStorage.getItem("lsinvnbr");
+  document.getElementById("invno").textContent = lsinvoice;
+  document.getElementById("invdt").textContent = new Date().toLocaleDateString();
+  const now = new Date();
+   document.getElementById("invtm").textContent = now.toLocaleTimeString();
+//  if (localStorage.getItem("website") === "s1")
+  
+ 
 
+ 
 
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
-
+  const lsname = localStorage.getItem("lscustomername");
+  const lsstarttime = localStorage.getItem("InvStartTime");
+  const lsendtime = localStorage.getItem("InvEndTime");
+ ;
+  console.log(lsstarttime);
+  console.log(lsendtime);
+  console.log(lsname);
   const table = document.getElementById("itemTable");
   
   table.innerHTML = "";
-  const collectionRef = collection(db, "movementstable");
-  const q = query(collectionRef, orderBy("nbr", "asc"));
+//  const collectionRef = collection(db, "movementstable");
+//  const q = query(collectionRef, orderBy("sortnbr", "asc"));
+
+
+//  const q = query(collectionRef, orderBy("nbr", "asc"), orderBy("createdAt", "asc"));
+//   const q = query(collectionRef);
+//   const q = query(collectionRef, orderBy("nbr", "asc"));
+
+const q = query(
+  collection(db, "movementstable"),
+//  where("sortnbr", ">", 0),
+//  where("sortnbr", "<", 999999)
+  where("invnbr", "==", Number(lsinvoice)),
+  
+  orderBy("createdAt")
+//  orderBy("sortnbr", "asc")
+);
+
+
+
 
   const querySnapshot = await getDocs(q);
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
 
-
+   console.log(lsinvoice);
   querySnapshot.forEach((document) => {
     const data = document.data();
     const docId = document.id;
@@ -644,18 +734,19 @@ async function loadnewitemstable() {
         
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400; padding-left: 0.2vw;">${data.name}</td>
        
-        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.qty}</td> 
+      
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.movtype}</td>
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.qty}</td>
+        
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.movqty}</td>
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.clsqty}</td>
         
         
         
 <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.0vw, 1.1rem); font-weight: 400; text-align: center;">${data.createdAt.toDate().toLocaleString('en-CA', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric'
+    hour: '2-digit',
+  minute: '2-digit',
+  hour12: true
     
   })}</td>
         
@@ -703,19 +794,19 @@ function Dateformat(value) {
 
 function printInvoice() {
   
-
   const table = document.getElementById("wholeitemTable").outerHTML;
 
-  const printWindow = window.open('', '', 'width=900,height=700');
+  const printWindow = window.open('', '', '');
 
   printWindow.document.write(`
     <html>
       <head>
         <title>Invoice</title>
         <style>
+       
           body {            
             font-family: Arial, sans-serif;
-            padding: 5vw;
+            padding: 3vw;
             background: #a3c2c2;
           }
           h4 {
@@ -750,64 +841,55 @@ function printInvoice() {
             padding: 12px;                                  
             }            
          }    
-    table.invoice-wrapper {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  @media print {
-    thead {
-      display: table-header-group;
-    }
-    .invoice-header {
-    padding-top: 25px;
-  }
-    body {
-    margin: 0;
-  } 
+    
+  @media print { 
+ 
+.gap2vh {
+  height: 5px;  /* or any size you want; mobile = desktop */
+}
+.gap4vh {
+  height: 13px;  /* or any size you want; mobile = desktop */
+}
+
     tr {
       page-break-inside: avoid;
     }
   }
+.invoice-wrapper {
+  margin-top: 10px;
+  max-width: 800px;
+  margin: 20px auto; /* Centers the invoice */
+  padding: 30px;
+  background-color: #ffffff;
+  border: 0px solid #eee;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+
+
   </style>
  </head>
 <body>
-  <table class="invoice-wrapper">
-  <thead style="padding-top: 25px;">
-    <tr>
-      <td>
-        <div style="text-align: left;">
-          <!-- Your existing header -->
-          <h4>Invoice</h4>
-          <h4>Item Movements (Opening Bal, Movement Qty, Closing Bal, Movement Date)</h4>
-          <p>Maya Enterprise
-          <br>
-          North York Toronto - Phone: 647-999-9999<br>
-          email: ali_albader_alsalem@yahoo.com
-          <br><br>
-          </p>
-        </div>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <div class="invoice-body">
-          <!-- Your existing invoice content -->
-           <table>
-          ${table}
-        </table>
+      ${table}        
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>      
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>          
+        <p style="text-align:center;">Thank you for your business!</p> 
+        <br>     
+    <footer>
+    <p>Maya Enterprisw. All rights reserved.</p>
+    <address>
+      Contact us at: <a href="mailto:ali_albader_alsalem@yahoo.com">ali_albader_alsalem@yahoo.com</a>
+    </address>
+  </footer> 
+      
 </body>
 </html>
   `);
+  
   printWindow.print();
+  document.getElementById("custdata").textContent = lsname;
       if (window.matchMedia("(min-width: 768px)").matches) {
           printWindow.close();
       }

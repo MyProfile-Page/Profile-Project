@@ -1001,7 +1001,7 @@ function printInvoice() {
   printWindow.document.write(`
     <html>
       <head>
-        <title>Invoice</title>
+        <title>Above Minimum Level</title>
         <style>
           body {            
             font-family: Arial, sans-serif;
@@ -1072,6 +1072,30 @@ function printInvoice() {
       page-break-inside: avoid;
     }
   }
+.invoice-wrapper {
+  max-width: 800px;
+  margin: 20px auto; /* Centers the invoice */
+  padding: 30px;
+  background-color: #ffffff;
+  border: 0px solid #eee;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+@media print {
+  body {
+    background-color: transparent;
+  }
+  .invoice-wrapper {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
         </style>
       </head>
       <body>
@@ -1102,7 +1126,7 @@ function printInvoice() {
           ${table}
         </table>
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>   
+          
         </div>
       </td>
     </tr>
