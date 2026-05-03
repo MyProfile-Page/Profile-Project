@@ -371,7 +371,7 @@ background-color: #9bc7be;
  
  font-weight: 500; 
  border: 0.1vw solid black; 
- width: 40%;
+ width: 60%;
 }
 
 @media (max-width: 768px) {
@@ -392,7 +392,7 @@ background-color: #9bc7be;
 /* background-color: #f8f2ed; */
  font-weight: 500; 
  border: 0.1vw solid black; 
- width: 40%;
+ width: 60%;
 }
 
 @media (max-width: 768px) {
@@ -499,7 +499,7 @@ background-color: #9bc7be;
   </style>
 </head>
 
-<body oncontextmenu="return false;" class="body_cls">
+<body  class="body_cls">
 
 
   <!-- 🌍 Navigation Bar Start -->
@@ -526,13 +526,7 @@ background-color: #9bc7be;
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li style="line-height: 2dvh;" >&nbsp</li>
-        <li class="nav-item liheight"  >
-          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">Print All Items</a>
-        </li> 
-      <li style="line-height: 2dvh;" >&nbsp</li> 
-      <li class="nav-item liheight"  >
-          <a class="nav-link aback lkbg" href="Movements-Inq.html" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.2vw, 1.3rem);;" >Movements Inquiry</a>
-        </li> 
+       
        <li style="line-height: 2dvh;" >&nbsp</li>           
        <li class="nav-item liheight"  >
           <a class="nav-link aback lkbg" href="Index-Items.html" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.2vw, 1.3rem);;" >Back</a>
@@ -554,9 +548,19 @@ background-color: #9bc7be;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Movements Submit Form
+<div class = "items-add-upd" > Invoice Movements Submit Form
 <div class="gap3vh"></div>
 
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  <input list="cuss" class="input-field-col" title="Select Customer" id="cus" name="acus" placeholder="Customer" >
+<datalist id="cuss">
+
+</datalist> 
+</div>
+<div class="gap3vh"></div>
+<div class="gap3vh"></div>
+<div id="output" style="margin-top:10px; white-space: pre-wrap; display: none;"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
   <input type="number" class="input-field" id="nbr" placeholder="Item No." title="Item No." style="padding-left: 2dvw;  text-align: left;" disabled > 
@@ -597,17 +601,21 @@ background-color: #9bc7be;
  
   <input type="number" class="input-field-col" id="movqty" min="1" max="99999999" title="Movement Qty" placeholder="Movement Quantity" style=" text-align: center;">
 
+<input type="number" class="input-field-col" id="iser" min="1" max="99999999" title="invno" placeholder="invoice" style=" text-align: center; display: none;">
+
 </div>
 <div class="gap1vh"></div>
 
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
   
-  <button onclick="updateitem()" type="button" class="upd-btn";>Submit</button>
+  <button onclick="updateitem()" type="button" class="upd-btn";>Submit Movement</button>
   <div>&nbsp</div>
   <button onclick="clearInputs()" type="button" class="clr-btn";>Clear</button>
-</div>
-
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+  <button onclick="PrintCustInvoice()" type="button" class="upd-btn" style="Color: blue; font-weight: 750;">Print Invoice</button>
+  <div>&nbsp</div>
+ </div>
 <div class="gap3vh"></div>
 </div>
 
@@ -650,6 +658,9 @@ background-color: #9bc7be;
  </div>
 </div>
 <!-- Bootstrap JS -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
@@ -665,6 +676,7 @@ import {
   deleteDoc, 
   doc,
   updateDoc,
+  runTransaction,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -686,6 +698,8 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
 
+let firsttime = "yes";
+let newinvnbr = 0;
 
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
@@ -890,35 +904,43 @@ window.updateitem = async function () {
   const movtype = document.getElementById("movtype").value;
   const qtyup = parseInt(prvqty) + parseInt(movqty);
   const qtydown = parseInt(prvqty) - parseInt(movqty);
-  let sumqty;  
+  let sumqty; 
 
- if (movtype.trim() === "Issue" || movtype.trim() === "Adjustment Down" ) {
+ if (!isValidSelection("cus", "cuss")) {
+  alert("Customer not selected");
+  return;
+} else  {
+  document.getElementById("cuss").disabled = true; 
+}
+ if (movtype.trim() === "Issue" || movtype.trim() === "Adj Down" ) {
    if (qtydown < 0) {
      alert("The Item does not have sufficient Balance for This Movement!");
   return;
 }
    }
  
-  if (movtype.trim() === "Receipt" || movtype.trim() === "Return" || movtype.trim() === "Adjustment Up" ) {
+  if (movtype.trim() === "Receipt" || movtype.trim() === "Return" || movtype.trim() === "Adj Up" ) {
    sumqty = parseInt(qtyup);
    }
   else {
    sumqty = parseInt(qtydown);
-  }
- 
+  } 
+  if (firsttime === "yes") { 
+  // alert ("Inv No picking is done only once");
+  invread();
+  firsttime = "no"
+  } 
+  const movid = `${nbr}_${Date.now()}`;
+  // console.log(newinvnbr);
   try {
-
-
-    await updateDoc(doc(db, "newitemstable", window.currentEditId), {
-      
-      qty: parseInt(sumqty)     
-      
+    await updateDoc(doc(db, "newitemstable", window.currentEditId), {     
+      qty: parseInt(sumqty)    
     });
-      
-      await setDoc(doc(db, "movementstable", window.currentEditId), {
+           
+      await setDoc(doc(db, "movementstable", movid), {
       nbr: nbr,
+      invnbr: newinvnbr,
       name: name,
-      
       qty: qty,
       movtype: movtype,
       movqty: parseInt(movqty),
@@ -926,14 +948,13 @@ window.updateitem = async function () {
       ownerId: name,
       createdAt: serverTimestamp()
     });
-
-
     alert("movement processed successfully!");
+    // console.log(newinvnbr);
     window.currentEditId = null;
     clearInputs(); 
     loadnewitemstable();
   } catch (error) {
-    console.error("Update error:", error);
+    console.error("Movements Update error:", error);
   }
  };
 
@@ -945,6 +966,167 @@ window.updateitem = async function () {
   loadnewitemstable();
 
 
+//  Load Firestore data into <datalists>
+async function loadDatalistcodes() {
+      
+ try {
+    const datalist = document.getElementById("cuss");
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("custdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.name; // change field as needed
+
+      datalist.appendChild(option);
+      
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Customer Table:", error);
+  }
+
+
+}
+
+loadDatalistcodes();
+
+
+function isValidSelection(inputId, datalistId) {
+  const input = document.getElementById(inputId).value;
+  const customername = document.getElementById(inputId).value;
+  localStorage.setItem("lscustomername", customername);
+//  localStorage.setItem("lscustomername", "Asad Saeed");
+  const options = document.querySelectorAll(`#${datalistId} option`);
+
+  const validValues = Array.from(options).map(opt => opt.value);
+
+  return validValues.includes(input);
+}
+
+window.PrintCustInvoice = async function () {
+
+  window.location.href = "Movements-inq.html";
+}
+
+
+
+// -------  Inv read new para added 30/4
+async function invread() {
+ let iser = document.getElementById("iser").value.trim();
+ if (!iser) {
+ iser = 1; // fallback if nothing entered
+ }
+iser = 1;
+ try {  
+    const docRef1 = doc(db, "iref", iser.toString());
+    // 🔹 Check if inv ref record is found
+    const existingDoc = await getDoc(docRef1);
+    if (existingDoc.exists()) {
+    //  alert("Inv ref found!");
+       const data = existingDoc.data();
+     document.getElementById("output").innerText =
+        JSON.stringify(existingDoc.data(), null, 2);    
+      newinvnbr = data.inbr;
+      newinvnbr = newinvnbr + 1;
+      invupd(iser);
+  }  
+  else {
+    alert("Inv ref could not be found!");
+   } 
+  } catch (error) {
+    console.error("Error reading inv ref:", error);
+    alert("Error reading inv ref. Check console.");
+  }
+};
+
+// ------  inv read new para end 30/4
+
+// new iref update function
+
+async function invupd(iser) {
+console.log(newinvnbr);
+try {  
+      const docRef2 = doc(db, "iref", iser.toString());
+  
+     await setDoc(docRef2, { inbr: newinvnbr, createdAt: serverTimestamp() }, { merge: true });
+ 
+  // alert("Inv ref updated!");
+   localStorage.setItem("lsinvnbr", newinvnbr); 
+  // console.log(newinvnbr);
+
+  } catch (error) {
+    console.error("Error updating inv ref:", error);
+    alert("Error updating inv ref. Check console.");
+  }
+};
+
+// iref update func ends
+
+// new func which is replacement of invread() and invupd() combo
+
+async function invreadnew() {
+  let iser = document.getElementById("iser").value.trim();
+  if (!iser) iser = 1;
+
+  try {
+    const newinvnbr = await getNextInvoiceNumber(iser);
+
+    document.getElementById("output").innerText =
+      "New Invoice Number: " + newinvnbr;
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// new combo ends here
+
+//  new function from chatgpt to get invoice number incremented starts here
+
+
+
+async function getNextInvoiceNumber(iser) {
+  const docRef = doc(db, "iref", iser.toString());
+
+  try {
+    const newNumber = await runTransaction(db, async (transaction) => {
+      const docSnap = await transaction.get(docRef);
+
+      if (!docSnap.exists()) {
+        throw "Document does not exist!";
+      }
+
+      const current = docSnap.data().inbr || 0;
+      const next = current + 1;
+
+      transaction.update(docRef, {
+        inbr: next,
+        createdAt: serverTimestamp()
+      });
+
+      return next; // 🔹 this comes out of the transaction
+    });
+
+    console.log("New invoice number:", newNumber);
+    localStorage.setItem("lsinvnbr", newNumber);
+
+    return newNumber;
+
+  } catch (error) {
+    console.error("Transaction failed:", error);
+    alert("Failed to generate invoice number.");
+  }
+}
+
+// new incremented func ends here
+
+
 
 //  PRINT FUNCTION START
 
@@ -953,7 +1135,7 @@ function printInvoice() {
 
   const table = document.getElementById("wholeitemTable").outerHTML;
 
-  const printWindow = window.open('', '', 'width=900,height=700');
+  const printWindow = window.open('', '', '');
 
   printWindow.document.write(`
     <html>

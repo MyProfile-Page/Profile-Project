@@ -1491,7 +1491,7 @@ function printInvoice() {
   printWindow.document.write(`
     <html>
       <head>
-        <title>Invoice</title>
+        <title>Items Balances</title>
         <style>
           body {            
             font-family: Arial, sans-serif;
@@ -1559,16 +1559,40 @@ function printInvoice() {
       page-break-inside: avoid;
     }
   }
+
+.invoice-wrapper {
+  max-width: 800px;
+  margin: 20px auto; /* Centers the invoice */
+  padding: 30px;
+  background-color: #ffffff;
+  border: 0px solid #eee;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+@media print {
+  body {
+    background-color: transparent;
+  }
+  .invoice-wrapper {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
   </style>
  </head>
 <body>
-  <table class="invoice-wrapper">
-  <thead style="padding-top: 25px;">
+  <table class="invoice-wrapper" >
+  <thead style="padding-top: 2px;">
     <tr>
       <td>
         <div style="text-align: left;">
           <!-- Your existing header -->
-          <h4>Invoice</h4>
+          
           <h4>Item Balances (Qty, Price & Value)</h4>
           <p>Maya Enterprise
           <br>
@@ -1589,7 +1613,7 @@ function printInvoice() {
           ${table}
         </table>
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>      
+             
         </div>
       </td>
     </tr>
