@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Firestore Table (IIS + Localhost)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  .body_cls {
+          background-color: red;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background: white;
+          background: #f7f568;
+          background: #f7f681;
+          background: LightCyan;
+         
+      /*    background:  */
+          line-height: 0.8;         
+            }
+ .lkbg { 
+    color: #cce6ff;
+    background-color: Black; 
+    padding: 2.5vh 4vh; /* Adds space around the text */
+    display: inline-block; /* Ensures padding and background apply correctly */
+    border-radius: 3vh;
+ } 
+
+.liheight {
+   line-height: 2.5dvh;
+  } 
+
+ @media (max-width: 768px) {
+ .liheight {
+   line-height: 1.0dvh;
+ } 
+ }
+ 
+.custom-table-container {
+    height: 76vh;        /* Fixed height */
+   
+     overflow-y: auto;     /* vertical scrollbar */
+    border: 0.0vw solid black;
+    
+}
+
+@media (max-width: 768px) {
+.custom-table-container {
+  height: 76vh;        /* Fixed height */
+    
+     overflow-x: auto;     /* horizontal scrollbar */
+    border: 0.0vw solid #ccc;
+ 
+}
+}
+
+
+ .custom-table {
+    border-collapse: collapse;
+    table-layout: fixed; /* VERY IMPORTANT for percentage widths */
+    width: 99%;
+    font-family: Arial, sans-serif;
+    margin-top: 3vh; 
+    margin-left: 0.2vw; 
+    margin-right: 0.0vw; 
+    border: 0.0vw solid grey; /* Light grey borders */
+    
+}   
+
+ /*  .custom-table tr:nth-child(even) {   */
+ /*    background-color: #D6EEEE;         */ 
+ /*    background-color: rgba(150, 212, 212, 0.4);   */
+ /* }   */
+ .custom-table td:nth-child(2)  {
+     text-align: left;    
+ }
+
+.custom-table td:nth-child(3),
+.custom-table td:nth-child(8)   {
+     text-align: left;    
+ }
+
+  
+  .custom-table th {
+    background-color: #f2f2f2; /* Light gray background for header */
+   /* color: #333;  */
+    color:black;
+    background-color: #c5effd;  
+    height: 6vh;      
+    border: 0.2vw solid grey;
+
+  }
+
+ 
+
+  .custom-table td {
+    /* background-color: #f2f2f2;  */ /* Light gray background for header */
+    /* color: #333;  */
+    
+    border: 0.00vw solid lightgrey; /* Light grey borders */
+    padding: 0.0vw; /* Spacing inside cells */
+    text-align: center;
+
+  }
+  
+  
+ .custom-table tr:hover { background-color: #e6f2ff;
+  }
+  
+  
+
+ .custom-table td:nth-child(5),
+ .custom-table td:nth-child(6) {
+  text-align: center;
+  }
+
+.custom-table tr:last-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #e6f2ff;
+  background-color: #f0f0f0;
+  border-top: 0.4vh solid #000;
+}
+
+
+ .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            gap: 2vw;
+            padding: 0.4vw;
+            grid-auto-rows: auto;
+        }
+
+ .grid-container > div {
+  border: 0.00vw solid red;
+  padding: 0.25vw;
+}
+
+.box {
+            background-color: #c5effd;
+            padding: 10vw;
+            text-align: center;
+            font-size: 20px;
+            border: 0.4vw solid steelblue;
+        }
+
+@media (max-width: 768px) {
+.grid-container {
+  display: grid;
+ grid-template-columns: 1fr; /* Stack vertically */
+grid-auto-flow: row;
+/* height: 90vh; */
+/* gap: 0.5vw; */
+ 
+}
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ }
+
+.gap1vh {
+  height: 1.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap1vh {
+  height: 0.5vh;  /* or any size you want; mobile = desktop */
+}
+}
+
+.gap2vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap2vh {
+  height: 1.0vh;  /* or any size you want; mobile = desktop */
+}
+}
+
+.gap3vh {
+  height: 3.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap3vh {
+  height: 1.5vh;  /* or any size you want; mobile = desktop */
+}
+}
+.gap4vh {
+  height: 4.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap4vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+}
+
+@media (max-width: 768px) {
+ .itemTableBody-Cls {
+white-space: normal; 
+overflow-wrap: break-word;
+word-wrap: break-word; 
+word-break: break-all;
+text-wrap: balance;
+hyphens: auto;
+}
+}
+
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: black; 
+font-style: italic;
+font-weight: 550;
+}
+
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+#menu-word-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  400;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+.menu-bar-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  200;
+  color: yellow; 
+  text-decoration: none; 
+  text-align: center;
+  border: none;
+}
+
+::placeholder {
+  font-size: clamp(0.9rem, 1.0vw, 1.1rem); 
+  font-weight: 600;
+  color: black; 
+  
+}
+
+.pr-bk-links {
+    border: 0.0vw solid black; 
+    text-align: right;
+    margin-top: -3vh;
+    margin-right: 3vw;
+}
+
+.tr-main-row {
+height: 7vh;
+background-color: #9bc7be;
+
+}
+
+.tr-adl-row {
+height: 2vh;
+background-color: #9bc7be;
+
+}
+
+.tr-tl-row {
+font-weight: bold;
+font-size: 1.0rem;
+background-color: #acdbe8;
+border: 0.1vw solid black;
+height: 5vh; 
+}
+
+.tr-btn-row {
+height: 6vh;
+background-color: #9bc7be;
+
+}
+
+@media (max-width: 768px) {
+.tr-main-row {
+height: 3vh;
+background-color: #9bc7be;
+}
+}
+ 
+@media (max-width: 768px) {
+.tr-adl-row {
+height: 1.5vh;
+background-color: #9bc7be;
+}
+}
+
+@media (max-width: 768px) {
+.tr-tl-row {
+font-weight: bold;
+font-size: 1.0rem;
+background-color: #acdbe8;
+border: 0.1vw solid black;
+height: 3vh; 
+}
+}
+@media (max-width: 768px) {
+.tr-btn-row {
+height: 2vh;
+background-color: #9bc7be;
+}
+}
+
+@media (max-width: 768px) {
+.pr-bk-links {
+    border: 0.0vw solid black; 
+    text-align: right;
+    margin-top: -2vh;
+    margin-right: 3vw;
+}
+
+}
+
+.item-db {
+    border: 0.0vw solid black; 
+    text-align: center;
+    margin-top: 3vh;
+   
+}
+
+@media (max-width: 768px) {
+.item-db {
+    border: 0.0vw solid black; 
+    text-align: center;
+    margin-top: 2vh;
+    
+}
+
+}
+
+.items-add-upd  {
+ font-size: clamp(0.7rem, 1.5vw, 1.6rem);
+ font-weight: 650;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ margin-top: 4vh;
+}
+
+@media (max-width: 768px) {
+.items-add-upd  {
+ font-size: clamp(1.3rem, 1.9vw, 2.1rem);
+ font-weight: 450;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ margin-top: 2vh;
+ 
+}
+}
+
+.input-field {
+ font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+ height: 8vh;
+ font-weight: 450; 
+ border: 0.1vw solid black; 
+ text-align: center;
+ width: 70%;
+}
+
+@media (max-width: 768px) {
+.input-field {
+ font-size: clamp(0.9rem, 1.0vw, 1.1rem);
+ height: 5vh;
+ font-weight: 600; 
+ width: 100%;
+ text-align: center;
+}
+}
+
+
+.input-field-col {
+ font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+ height: 8vh;
+ background-color: #51DEED; 
+ background-color: LightYellow;  
+ background-color: #f8f2ed;
+ font-weight: 450; 
+ border: 0.1vw solid black; 
+}
+
+@media (max-width: 768px) {
+.input-field-col {
+ font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+ height: 5vh;
+ background-color: #51DEED; 
+ background-color: #f8f2ed; 
+ font-weight: 600; 
+}
+}
+
+
+
+.edit-delt-btn  {
+  width: 50%;
+  height: 8.0vh;
+  text-align: center; 
+  font-weight: 400; 
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+.edit-delt-btn  {
+  width: 80%;
+  height: 5.0vh;
+  text-align: center; 
+  font-weight: 400; 
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
+  border-radius: 12px; 
+  
+}
+}
+.add-btn {
+  width: 24%; 
+  text-align: center;
+  background-color: #fafafa; 
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+  height: 8vh;
+  font-weight: 550; 
+  border-radius: 12px;
+ }
+.upd-btn {
+  width: 9%; 
+  text-align: center;
+  background-color: #fafafa; 
+  font-size: clamp(0.9rem, 1.0vw, 1.1rem);
+  height: 6vh;
+  font-weight: 600; 
+  border: 0.01vw solid black;
+ }
+.clr-btn {
+  width: 7%; 
+  text-align: center;
+  background-color: #fafafa; 
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 8vh;
+  font-weight: 600; 
+  border: 0.01vw solid black;
+ }
+@media (max-width: 768px) {
+.add-btn {
+  width: 25%; 
+  text-align: center;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
+  font-size: clamp(0.9rem, 1.0vw, 1.1rem);
+  height: 5vh;
+  font-weight: 600; 
+  border-radius: 12px;
+ }
+ }
+@media (max-width: 768px) {
+.upd-btn {
+  width: 11%; 
+  text-align: center;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 4vh;
+  font-weight: 600; 
+   border: 0.02vw solid black;
+ }
+}
+@media (max-width: 768px) {
+.clr-btn {
+  width: 8%; 
+  text-align: center;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
+  height: 5vh;
+  font-weight: 600; 
+   border: 0.02vw solid black;
+ }
+}
+
+
+  </style>
+</head>
+
+<body  class="body_cls">
+
+
+  <!-- 🌍 Navigation Bar Start -->
+
+ <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+
+   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
+   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Invoice Counter Table</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon menu-bar-prp"></span>
+      
+    
+    </button>
+
+    <!-- Collapsible menu -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li style="line-height: 2dvh;" >&nbsp</li>
+        <li class="nav-item liheight"  >
+          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Print</a>
+        </li> 
+        <li style="line-height: 2dvh;" >&nbsp</li>
+        <li class="nav-item liheight">
+        <a class="nav-link aback lkbg" href="Items-Codes.html" style="font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);" >Back</a>
+        </li>  
+        <li style="line-height: 2dvh;" >&nbsp</li>    
+      
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ <!-- 🌍 Navigation Bar End -->
+
+<div class="gap3vh"></div>
+<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
+
+ <!-- Input Form -->
+<div class="gap3vh"></div>
+<div class="gap3vh"></div>
+<div class = "items-add-upd" > Item Categories Addition Form
+<div class="gap3vh"></div>
+<div class="gap3vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  <input type="number" class="input-field" id="iser" min="1" max="99999999" placeholder="inv serial No."  > 
+</div>
+<div class="gap1vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  <input type="text" class="input-field" id="inbr" placeholder="Inv counter no."  >
+ 
+</div>
+
+
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
+  
+  <button onclick="additem()" type="button" class="add-btn";>Add</button>
+  
+</div>
+<div class="gap3vh"></div>
+<div class="gap3vh"></div>
+</div>
+
+<div class="gap4vh"></div>
+
+
+</div> 
+ <div class="gap3vh"></div>  <div class="items-add-upd" >Item Categories Grid
+<div class="gap2vh"></div>
+  <!-- HTML Table For showing all records of database-->
+<div id = "wholeitemTable" class="custom-table-container">
+  <table class="custom-table">
+    <thead>
+     
+      <tr>
+        <th style="text-align: center; width: 6%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">No.</th>
+        <th style="text-align: center; width: 19%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Name</th>      
+        
+      
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.9rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
+      </tr>
+    </thead>
+    <tbody id="itemTable" class = "itemTableBody-Cls">
+       <tr>
+        <td  style="text-align: center; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; "></td>
+        <td  style="text-align: center; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; "></td>
+        <td style="text-align: center; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; "></td>
+      </tr>
+     
+     
+     </tbody>
+  </table>
+ </div>
+</div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { 
+  getFirestore, 
+  collection, 
+  query,
+  orderBy,
+  addDoc, 
+  setDoc,
+  getDocs, 
+  getDoc,
+  deleteDoc, 
+  doc,
+  updateDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCPjQ6I6XZ2EZGNRFi_1iQYZv5tjYFGdfk",
+  authDomain: "smart-appl-pr.firebaseapp.com",
+  projectId: "smart-appl-pr",
+  storageBucket: "smart-appl-pr.firebasestorage.app",
+  messagingSenderId: "491870622637",
+  appId: "1:491870622637:web:5364e766463c77c3094724"
+};
+
+
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app); 
+
+
+  // 🔹 READ (Load Data into Table)
+async function loadnewitemstable() {
+
+  const table = document.getElementById("itemTable");
+  
+  table.innerHTML = "";
+  const collectionRef = collection(db, "iref");
+  const q = query(collectionRef, orderBy("iser", "asc"));
+  
+  const querySnapshot = await getDocs(q);
+
+  let grandTotalCents = 0; // ✅ accumulator for grand total
+
+  querySnapshot.forEach((document) => {
+    const data = document.data();
+    const docId = document.id;
+
+   
+    table.innerHTML += `
+      
+      <tr class="tr-main-row"  >
+       
+        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 400; padding-left: 0.5vw;">${data.iser}</td>
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 400; padding-left: 0.5vw;">${data.inbr}</td>
+                <td style="border: 0.05vw solid black; text-align: center;">
+
+           <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
+        </td>  
+          
+        </td>          
+        
+      </tr>
+<tr>
+</tr>
+
+    
+    `;
+  });
+
+     }   // ✅ ONLY ONE closing bracket for function
+
+
+
+
+
+ // Clear input fields
+  window.clearInputs = async function () {
+  
+    
+    document.getElementById("iser").value = "";
+    document.getElementById("inbr").value = "";
+   
+
+  }
+
+
+
+
+ 
+
+
+
+
+// Fill inputs when Edit button is clicked
+window.edititem = function (iser, iref) {
+  
+  document.getElementById("inbr").value = inbr;
+  
+  
+ 
+  
+
+
+  // Store document ID for update
+  window.currentEditId = id;
+};
+
+ // 🔹 DELETE (Remove Record)
+  window.deleteitem = async function (id) {
+    await deleteDoc(doc(db, "iref", id));
+    alert("inv record deleted");
+    clearInputs();
+    loadnewitemstable();
+  };
+
+// 🔹 CREATE (Insert Data)
+window.additem = async function () {
+
+  const iser = document.getElementById("iser").value;
+  const inbr = document.getElementById("inbr").value;
+     
+  try {
+
+    // 🔹 Use nbr as document ID
+     const docRef = doc(db, "iref", iser.toString());
+    
+
+    // 🔹 Check if document already exists
+ //   const existingDoc = await getDoc(docRef);
+
+   
+
+    // 🔹 Create document with nbr as ID
+    await setDoc(docRef, {
+      iser: parseInt(iser),
+      inbr: parseInt(inbr),     
+      createdAt: serverTimestamp()
+      // createdAt: new Date()
+    });
+
+    alert("Invoice Record added");
+    
+    loadnewitemstable(); // refresh table
+
+  } catch (error) {
+    console.error("Error adding inv:", error);
+    alert("Error adding inv. Check console.");
+  }
+};
+
+  
+  loadnewitemstable();
+
+
+//  PRINT FUNCTION START
+
+function printInvoice() {  
+  const table = document.getElementById("wholeitemTable").outerHTML;
+  const printWindow = window.open('', '', '');
+//  const printWindow = window.open('', '', 'width=900,height=700');
+
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Invoice</title>
+        <style>
+          body {            
+            font-family: Arial, sans-serif;
+            padding: 5vw;
+            background: #a3c2c2;
+          }
+          h5 {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 20px;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }                    
+       @media print {
+          td {
+            border: 0.2vw solid black; 
+            padding: 9px;         
+         }
+                   
+           td:nth-child(1) {
+            text-align: center;
+          }
+           td:nth-child(2),        
+            td:nth-child(3) {       
+            colspan="2";           
+          }  
+            td:nth-child(2) {
+           border-right: 1px solid black !important;
+          } 
+            button {
+              display: none;           
+            }
+            table th:nth-child(3),
+            table td:nth-child(3) {   
+           display: none;     
+           }
+             table th {
+            font-weight: 600;
+            font-size: 50px;
+            color: #3b021c;
+            border: 0.2vw solid black;
+            padding: 12px;                                  
+            }            
+         }    
+    table.invoice-wrapper {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  @media print {
+    thead {
+      display: table-header-group;
+    }
+    .invoice-header {
+    padding-top: 25px;
+  }
+    body {
+    margin: 0;
+  } 
+    tr {
+      page-break-inside: avoid;
+    }
+  }
+  </style>
+ </head>
+<body>
+  <table class="invoice-wrapper">
+  <thead style="padding-top: 25px;">
+    <tr>
+      <td>
+        <div style="text-align: left;">
+          <!-- Your existing header -->
+          <h5>Catagories Codes</h5>
+          <p style="font-size: 13px;">Maya Enterprise
+          <br>
+          North York Toronto - Phone: 647-999-9999<br>
+          email: ali_albader_alsalem@yahoo.com
+          <br><br>
+          </p>
+        </div>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="invoice-body">
+          <!-- Your existing invoice content -->
+           <table>
+          ${table}
+        </table>
+        <br>
+        <p style="text-align:center;">Thank you for your business!</p>      
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>          
+</body>
+</html>
+  `);
+  printWindow.print();
+  if (window.matchMedia("(min-width: 768px)").matches) {
+          printWindow.close();
+      }     
+}
+window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
+//  PRINT FUNCTION END
+
+
+
+
+
+</script>
+
+</body>
+</html>
