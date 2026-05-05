@@ -372,10 +372,10 @@ background-color: #9bc7be;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
- margin-top: 3vh; 
+ margin-top: 0vh; 
   display: none; 
  position: fixed;
-  top: 3vh;
+  top: 0vh;
   left: 0;
  
   z-index: 1000; /* Keeps it on top of other content */
@@ -390,8 +390,7 @@ background-color: #9bc7be;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
- margin-top: 2vh;
- display: none; 
+ display: none;  
 }
 }
 
@@ -486,7 +485,7 @@ background-color: #9bc7be;
   font-weight: 600; 
   border: 0.00vw solid black;
   border-radius: 5px;
-  color: white;
+  color: Black;
  }
 .upd-btn {
   width: 15%; 
@@ -557,7 +556,7 @@ background-color: #9bc7be;
   font-weight: 500; 
   border: 0.00vw solid black;
   border-radius: 5px;
-  color: white;
+  color: Black;
  }
 }
 
@@ -567,7 +566,7 @@ background-color: #9bc7be;
 
 <body  class="body_cls">
 
-
+<div id = "nav-div">
 <div style = "display: flex; justify-content: space-between; background-color: black;">
 
 <div style="text-align: left; margin-left: 1vw; display: inline-block height: 7vh; margin-top: 3vh; ">
@@ -578,10 +577,12 @@ background-color: #9bc7be;
 </div> 
 
 <div style="text-align: left; margin-right: 2vw; margin-top: 3vh; display: inline-block ">
- <a class="ext-btn" href="Index-Items.html"   >Back</a> 
+ <a class="ext-btn" href="Index-Items.html" style="color: white;"   >Back</a> 
 
 </div>
  
+</div> 
+
 </div> 
 
 
@@ -700,19 +701,20 @@ background-color: #9bc7be;
 </div>
 
  
-<div id ="movements-div" class="movements-add-upd" >
+<div id ="movements-div" class="movements-add-upd"  >
 <div class="gap4vh"></div>
 <div class="gap4vh"></div>
 <div style = "display: flex; justify-content: space-between;">
 <div style="text-align: left; margin-left: 0vw; display: inline-block ">
 <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);"></Label>
 </div>
-<div style="text-align: left; margin-right: 0vw; display: inline-block ">
-
+<div style="text-align: left; margin-right: -88vw; margin-top: -2vh; display: inline-block ">
 <button onclick="printInvoice()" type="button" class="prt-btn"; >
 <img src="print-icon9.png" alt="Click Me"   >
 </button>
-<Label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</Label>
+</div> 
+
+<div style="text-align: left; margin-right: 0vw; display: inline-block ">
 <button onclick="exitInvoice()" type="button" class="ext-btn"; >Exit
 </button>
 </div> 
@@ -1377,6 +1379,8 @@ e2.setAttribute("style", "display: none;");
 viewableTable
 const e3 = document.getElementById("viewableTable");
 e3.setAttribute("style", "display: none;");
+const e13 = document.getElementById("nav-div");
+e13.setAttribute("style", "display: none;");
  
 
 }   // ✅ ONLY ONE closing bracket for function
@@ -1397,6 +1401,8 @@ e5.setAttribute("style", "display: block;");
 viewableTable
 const e6 = document.getElementById("viewableTable");
 e6.setAttribute("style", "display: block;");
+const e16 = document.getElementById("nav-div");
+e16.setAttribute("style", "display: block;");
  
 
 }
