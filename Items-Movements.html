@@ -372,10 +372,10 @@ background-color: #9bc7be;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
- margin-top: 4vh; 
+ margin-top: 3vh; 
   display: none; 
  position: fixed;
-  top: 0;
+  top: 3vh;
   left: 0;
  
   z-index: 1000; /* Keeps it on top of other content */
@@ -481,7 +481,7 @@ background-color: #9bc7be;
   width: 15%; 
   text-align: center;
   background-color: transparent; 
-  font-size: clamp(0.5rem, 1.3vw, 1.4rem);
+  font-size: clamp(0.6rem, 1.8vw, 2.1rem);
   height: 6vh;
   font-weight: 600; 
   border: 0.00vw solid black;
@@ -546,6 +546,19 @@ background-color: #9bc7be;
  }
 }
 
+@media (max-width: 768px) {
+.ext-btn {
+  width: 30%; 
+  text-align: center;
+  background-color: transparent; 
+  font-size: clamp(0.6rem, 1.8vw, 2.1rem);
+  height: 4vh;
+  font-weight: 600; 
+  border: 0.00vw solid black;
+  border-radius: 5px;
+ }
+}
+
 
   </style>
 </head>
@@ -603,7 +616,7 @@ background-color: #9bc7be;
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
-  <input list="cuss" class="input-field-col" title="Select Customer" id="cus" name="acus" placeholder="Customer" >
+  <input list="cuss" onfocus="this.value=''" class="input-field-col" title="Select Customer" id="cus" name="acus" placeholder="Customer" >
 <datalist id="cuss">
 
 </datalist> 
@@ -634,7 +647,7 @@ background-color: #9bc7be;
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   
-  <input list="movtypes" class="input-field-col" id="movtype" name="amov" title="Movement Type" placeholder="Movement Type" style=" text-align: center;" >
+  <input list="movtypes" onfocus="this.value=''" class="input-field-col" id="movtype" name="amov" title="Movement Type" placeholder="Movement Type" style=" text-align: center;" >
   <datalist id="movtypes">
    <option value="Receipt">
    <option value="Return">
@@ -663,7 +676,7 @@ background-color: #9bc7be;
   <div>&nbsp</div>
   <button onclick="clearInputs()" type="button" class="clr-btn";>Clear</button>
   <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
-  <button onclick="loadnewmovementstable()" type="button" class="upd-btn" style="Color: blue; font-weight: 750;">view Invoice</button>
+  <button onclick="loadnewmovementstable()" type="button" class="upd-btn" style="Color: blue; font-weight: 750;">Print Invoice</button>
   <div>&nbsp</div>
  </div>
 
@@ -715,10 +728,10 @@ background-color: #9bc7be;
 <div style="text-align: left; margin-left: 0vw; display: inline-block ">
 <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);"></Label>
 </div>
-<div style="text-align: left; margin-right: 2vw; display: inline-block ">
+<div style="text-align: left; margin-right: 0vw; display: inline-block ">
 
 <button onclick="printInvoice()" type="button" class="prt-btn"; >
-<img src="print-icon7.png" alt="Click Me" >
+<img src="print-icon9.png" alt="Click Me"   >
 </button>
 <Label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</Label>
 <button onclick="exitInvoice()" type="button" class="ext-btn"; >Exit
@@ -748,7 +761,7 @@ background-color: #9bc7be;
   </div>
 
   <div>
-           <img src="monogram9.PNG" class="responsive-img rounded" style="display: block;"> 
+           <img src="monogram9.png" class="responsive-img rounded" style="display: block;"> 
                 
   </div>
 
@@ -859,7 +872,7 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
-
+let datalist = " ";
 let firsttime = "yes";
 let newinvnbr = 0;
 let customername = " ";
@@ -1132,7 +1145,7 @@ window.updateitem = async function () {
 async function loadDatalistcodes() {
       
  try {
-    const datalist = document.getElementById("cuss");
+    datalist = document.getElementById("cuss");
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
     const snapshot = await db.collection("custdatalist").get();
@@ -1393,7 +1406,11 @@ e3.setAttribute("style", "display: none;");
 // alert("I finished loadnewmove table load");
 
  window.exitInvoice = async function () {
-
+ firsttime = "yes";
+ newinvnbr = 0;
+ customername = " ";
+ const table = document.getElementById("itemTable");
+ table.innerHTML = "";
 const e4 = document.getElementById("movements-div");
 e4.setAttribute("style", "display: none;");
 const e5 = document.getElementById("items-div");
