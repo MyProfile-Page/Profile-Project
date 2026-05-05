@@ -469,7 +469,7 @@ background-color: #9bc7be;
  }
 .prt-btn {
   width: 0%; 
-  text-align: center;
+  text-align: right;
 /*  background-color: #fafafa; */
   font-size: clamp(0.5rem, 1.3vw, 1.4rem);
   height: 0vh;
@@ -481,11 +481,12 @@ background-color: #9bc7be;
   width: 15%; 
   text-align: center;
   background-color: transparent; 
-  font-size: clamp(0.6rem, 1.8vw, 2.1rem);
+  font-size: clamp(0.9rem, 1.4vw, 1.6rem);
   height: 6vh;
   font-weight: 600; 
   border: 0.00vw solid black;
   border-radius: 5px;
+  color: white;
  }
 .upd-btn {
   width: 15%; 
@@ -551,11 +552,12 @@ background-color: #9bc7be;
   width: 30%; 
   text-align: center;
   background-color: transparent; 
-  font-size: clamp(0.9rem, 1.8vw, 2.1rem);
+  font-size: clamp(0.9rem, 1.4vw, 1.6rem);
   height: 4vh;
-  font-weight: 600; 
+  font-weight: 500; 
   border: 0.00vw solid black;
   border-radius: 5px;
+  color: white;
  }
 }
 
@@ -566,45 +568,22 @@ background-color: #9bc7be;
 <body  class="body_cls">
 
 
-  <!-- 🌍 Navigation Bar Start -->
+<div style = "display: flex; justify-content: space-between; background-color: black;">
 
- <nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
+<div style="text-align: left; margin-left: 1vw; display: inline-block height: 7vh; margin-top: 3vh; ">
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Lite Inventory Control</Label>
+</div>
+<div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; ">
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Movements Management</Label>
+</div> 
 
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Movements Management</a>
+<div style="text-align: left; margin-right: 2vw; margin-top: 3vh; display: inline-block ">
+ <a class="ext-btn" href="Index-Items.html"   >Back</a> 
 
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon menu-bar-prp"></span>
-      
-    
-    </button>
+</div>
+ 
+</div> 
 
-    <!-- Collapsible menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li style="line-height: 2dvh;" >&nbsp</li>
-       
-       <li style="line-height: 2dvh;" >&nbsp</li>           
-       <li class="nav-item liheight"  >
-          <a class="nav-link aback lkbg" href="Index-Items.html" style="color: #cce6ff; font-weight: 600; font-size: clamp(0.9rem, 1.2vw, 1.3rem);;" >Back</a>
-        </li>  
-       <li style="line-height: 2dvh;" >&nbsp</li>      
-      
-
-      </ul>
-    </div>
-
-  </div>
-</nav>
-
- <!-- 🌍 Navigation Bar End -->
 
 <div class="gap4vh"></div>
 <div id = "items-div" style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
