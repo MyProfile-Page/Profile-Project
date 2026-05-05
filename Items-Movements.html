@@ -93,7 +93,6 @@
 
   }
 
- 
 
   .custom-table td {
     /* background-color: #f2f2f2;  */ /* Light gray background for header */
@@ -348,7 +347,7 @@ background-color: #9bc7be;
  margin: 0 auto; 
  justify-content: center;
  text-align: center; 
- margin-top: 4vh;
+ margin-top: 4vh; 
 }
 
 @media (max-width: 768px) {
@@ -364,6 +363,38 @@ background-color: #9bc7be;
  
 }
 }
+
+.movements-add-upd  {
+ font-size: clamp(0.7rem, 1.5vw, 1.6rem);
+ font-weight: 650;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ margin-top: 4vh; 
+  display: none; 
+ position: fixed;
+  top: 0;
+  left: 0;
+ 
+  z-index: 1000; /* Keeps it on top of other content */
+}
+
+@media (max-width: 768px) {
+.movements-add-upd  {
+ font-size: clamp(1.3rem, 1.9vw, 2.1rem);
+ font-weight: 450;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ margin-top: 2vh;
+ display: none; 
+}
+}
+
 
 .input-field {
  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
@@ -435,6 +466,26 @@ background-color: #9bc7be;
   height: 6vh;
   font-weight: 480; 
   border-radius: 12px;
+ }
+.prt-btn {
+  width: 0%; 
+  text-align: center;
+/*  background-color: #fafafa; */
+  font-size: clamp(0.5rem, 1.3vw, 1.4rem);
+  height: 0vh;
+  font-weight: 480; 
+  border: 0.00vw solid black;
+  border-radius: 0px;
+ }
+.ext-btn {
+  width: 15%; 
+  text-align: center;
+  background-color: transparent; 
+  font-size: clamp(0.5rem, 1.3vw, 1.4rem);
+  height: 6vh;
+  font-weight: 600; 
+  border: 0.00vw solid black;
+  border-radius: 5px;
  }
 .upd-btn {
   width: 15%; 
@@ -542,13 +593,12 @@ background-color: #9bc7be;
 
  <!-- 🌍 Navigation Bar End -->
 
-<div class="gap3vh"></div>
-<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
+<div class="gap4vh"></div>
+<div id = "items-div" style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
 
  <!-- Input Form -->
-<div class="gap3vh"></div>
-<div class="gap3vh"></div>
-<div class = "items-add-upd" > Invoice Movements Submit Form
+
+<div  class = "items-add-upd" > Invoice Movements Submit Form
 <div class="gap3vh"></div>
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
@@ -613,20 +663,19 @@ background-color: #9bc7be;
   <div>&nbsp</div>
   <button onclick="clearInputs()" type="button" class="clr-btn";>Clear</button>
   <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
-  <button onclick="PrintCustInvoice()" type="button" class="upd-btn" style="Color: blue; font-weight: 750;">Print Invoice</button>
+  <button onclick="loadnewmovementstable()" type="button" class="upd-btn" style="Color: blue; font-weight: 750;">view Invoice</button>
   <div>&nbsp</div>
  </div>
-<div class="gap3vh"></div>
-</div>
 
 <div class="gap4vh"></div>
-
+</div>
 
 </div> 
- <div class="gap3vh"></div>  <div class="items-add-upd" >Items Grid
+  
+ <div class="items-add-upd" >
 <div class="gap2vh"></div>
   <!-- HTML Table For showing all records of database-->
-<div id = "wholeitemTable" class="custom-table-container">
+<div id = "viewableTable" class="custom-table-container">
   <table class="custom-table">
     <thead>
      
@@ -642,7 +691,7 @@ background-color: #9bc7be;
         <th class="no-print" style="padding: 0.0vw; text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Movement</th>
       </tr>
     </thead>
-    <tbody id="itemTable" class = "itemTableBody-Cls">
+    <tbody id="vitemTable" class = "itemTableBody-Cls">
        <tr>
         
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
@@ -657,6 +706,117 @@ background-color: #9bc7be;
   </table>
  </div>
 </div>
+
+ 
+<div id ="movements-div" class="movements-add-upd" >
+<div class="gap4vh"></div>
+<div class="gap4vh"></div>
+<div style = "display: flex; justify-content: space-between;">
+<div style="text-align: left; margin-left: 0vw; display: inline-block ">
+<Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);"></Label>
+</div>
+<div style="text-align: left; margin-right: 2vw; display: inline-block ">
+
+<button onclick="printInvoice()" type="button" class="prt-btn"; >
+<img src="print-icon7.png" alt="Click Me" >
+</button>
+<Label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</Label>
+<button onclick="exitInvoice()" type="button" class="ext-btn"; >Exit
+</button>
+</div> 
+</div> 
+<div class="gap4vh"></div> 
+
+ <!-- HTML Table For showing all records of database-->
+<div id = "wholeitemTable" class="custom-table-container">
+ 
+
+ <div style = "display: flex; justify-content: space-between;">
+ <div style="text-align: left; margin-left: 1vw; display: inline-block ">
+          <!-- Your existing header -->
+        
+       
+          <Label id="custname" style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);"></Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">North York Toronto</Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Phone: 647-999-9999</Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">email: info@MyCompany.com</Label>
+          <div class="gap4vh"></div> 
+          <div class="gap4vh"></div>            
+  </div>
+
+  <div>
+           <img src="monogram9.PNG" class="responsive-img rounded" style="display: block;"> 
+                
+  </div>
+
+    
+ <div style="text-align: left; margin-right: 1vw; display: inline-block ">
+          <!-- Your existing header -->
+          <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice No.&nbsp</Label><Label id="invno" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+<div class="gap2vh"></div>
+          <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice Date&nbsp</Label><Label id="invdt" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+<div class="gap2vh"></div>
+           <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice Time&nbsp</Label><Label id="invtm" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+
+          <div class="gap4vh"></div>
+          <div class="gap4vh"></div>           
+  </div>
+
+
+</div>
+
+
+
+
+
+ 
+  <table class="custom-table">
+    <thead>
+     
+      <tr class="tr-main-row">
+        <th style="text-align: center; width: 9.5%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Item No.</th>
+          
+        <th style="text-align: center; width: 19%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Name</th> 
+       <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Open. Bal</th>   
+    
+        <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Type</th>
+        
+        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Qty</th>
+        <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Clos. Bal</th>
+        
+      
+        <th  style="padding: 0.0vw; text-align: center; width: 9.5%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Mov Time</th>
+      </tr>
+    </thead>
+    <tbody id="itemTable" class = "itemTableBody-Cls">
+       <tr>
+        
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        
+      </tr>
+     
+     
+     </tbody>
+  </table>
+ </div>
+</div>
+
+
+
+
+
 <!-- Bootstrap JS -->
 
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -677,6 +837,8 @@ import {
   doc,
   updateDoc,
   runTransaction,
+  where,
+  Timestamp,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -700,11 +862,11 @@ const firebaseConfig = {
 
 let firsttime = "yes";
 let newinvnbr = 0;
-
+let customername = " ";
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
 
-  const table = document.getElementById("itemTable");
+  const table = document.getElementById("vitemTable");
   
   table.innerHTML = "";
   const collectionRef = collection(db, "newitemstable");
@@ -999,7 +1161,7 @@ loadDatalistcodes();
 
 function isValidSelection(inputId, datalistId) {
   const input = document.getElementById(inputId).value;
-  const customername = document.getElementById(inputId).value;
+  customername = document.getElementById(inputId).value;
   localStorage.setItem("lscustomername", customername);
 //  localStorage.setItem("lscustomername", "Asad Saeed");
   const options = document.querySelectorAll(`#${datalistId} option`);
@@ -1128,13 +1290,143 @@ async function getNextInvoiceNumber(iser) {
 
 // new incremented func ends here
 
+// movements loading in table func starts here
 
+// 🔹 READ (Load movement Data into Table)
+ window.loadnewmovementstable = async function () {
+ 
+ // alert("I am in loadnewmove");
+//  let lscustname = customername;
+  document.getElementById("custname").textContent = customername;
+  let lsinvoice = newinvnbr;
+  document.getElementById("invno").textContent = lsinvoice;
+  document.getElementById("invdt").textContent = new Date().toLocaleDateString();
+  const now = new Date();
+   document.getElementById("invtm").textContent = now.toLocaleTimeString();
+
+
+  const lsname = customername;
+//  const lsstarttime = localStorage.getItem("InvStartTime");
+//  const lsendtime = localStorage.getItem("InvEndTime");
+ 
+//  console.log(lsstarttime);
+//  console.log(lsendtime);
+  console.log(lsname);
+  const table = document.getElementById("itemTable");
+  
+  table.innerHTML = "";
+//  const collectionRef = collection(db, "movementstable");
+//  const q = query(collectionRef, orderBy("sortnbr", "asc"));
+
+
+//  const q = query(collectionRef, orderBy("nbr", "asc"), orderBy("createdAt", "asc"));
+//   const q = query(collectionRef);
+//   const q = query(collectionRef, orderBy("nbr", "asc"));
+
+const q = query(
+  collection(db, "movementstable"),
+//  where("sortnbr", ">", 0),
+//  where("sortnbr", "<", 999999)
+  where("invnbr", "==", Number(newinvnbr)),
+  
+  orderBy("createdAt")
+//  orderBy("sortnbr", "asc")
+);
+console.log(newinvnbr);
+// alert("I finished loadnewmove query");
+
+
+  const querySnapshot = await getDocs(q);
+
+  let grandTotalCents = 0; // ✅ accumulator for grand total
+
+//   console.log(lsinvoice);
+  querySnapshot.forEach((document) => {
+    const data = document.data();
+    const docId = document.id;
+//    dpdate1 = dtat.createdAt;
+//    dpdate = dpdate1.todate();
+//     dpdate = "2029-12-31";
+    
+    table.innerHTML += `
+      
+      <tr class="tr-main-row"  >
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.nbr}</td>
+        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400; padding-left: 0.2vw;">${data.name}</td>
+       
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.qty}</td> 
+      
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.movtype}</td>
+        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.movqty}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.clsqty}</td>
+        
+        
+        
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.0vw, 1.1rem); font-weight: 400; text-align: center;">${data.createdAt.toDate().toLocaleString('en-CA', {
+    hour: '2-digit',
+  minute: '2-digit',
+  hour12: true
+    
+  })}</td>
+        
+      </tr>
+
+     <tr></tr>
+    `;
+  });
+
+    
+const el = document.getElementById("movements-div");
+el.setAttribute("style", "display: block;");
+const e2 = document.getElementById("items-div");
+e2.setAttribute("style", "display: none;");
+viewableTable
+const e3 = document.getElementById("viewableTable");
+e3.setAttribute("style", "display: none;");
+ 
+
+}   // ✅ ONLY ONE closing bracket for function
+
+
+// alert("I finished loadnewmove table load");
+
+ window.exitInvoice = async function () {
+
+const e4 = document.getElementById("movements-div");
+e4.setAttribute("style", "display: none;");
+const e5 = document.getElementById("items-div");
+e5.setAttribute("style", "display: block;");
+viewableTable
+const e6 = document.getElementById("viewableTable");
+e6.setAttribute("style", "display: block;");
+ 
+
+}
+
+
+
+
+ 
+
+
+
+
+
+  // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
+ // movements-div.style.display = "block";
+  // alert("I am before printinv");
+ 
+
+
+
+// movements loading in table func ends here
 
 //  PRINT FUNCTION START
 
-function printInvoice() {
-  
-
+async function printInvoice() {
+  // alert("I am in printinv");
   const table = document.getElementById("wholeitemTable").outerHTML;
 
   const printWindow = window.open('', '', '');
@@ -1144,9 +1436,10 @@ function printInvoice() {
       <head>
         <title>Invoice</title>
         <style>
+       
           body {            
             font-family: Arial, sans-serif;
-            padding: 5vw;
+            padding: 3vw;
             background: #a3c2c2;
           }
           h4 {
@@ -1155,7 +1448,7 @@ function printInvoice() {
             margin-bottom: 20px;
           }
           table {
-            width: 129.5%;
+            width: 100%;
             border-collapse: collapse;
           }                    
        @media print {
@@ -1165,24 +1458,14 @@ function printInvoice() {
          }
             td:nth-child(1),
             td:nth-child(3),
-             td:nth-child(4),          
-           td:nth-child(5) {
+             td:nth-child(4),
+             td:nth-child(5),
+             td:nth-child(6),
+           td:nth-child(7) {
             text-align: center;
-          }
-           td:nth-child(4),        
-            td:nth-child(5) {       
-            colspan="2";           
-          }  
-            td:nth-child(4) {
-           border-right: 1px solid black !important;
-          } 
-            button {
-              display: none;           
-            }
-             table th:nth-child(5),    
-            table td:nth-child(5) {   
-           display: none;     
-           }
+          }    
+          
+                   
              table th {
             font-weight: 600;
             font-size: 50px;
@@ -1191,64 +1474,55 @@ function printInvoice() {
             padding: 12px;                                  
             }            
          }    
-    table.invoice-wrapper {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  @media print {
-    thead {
-      display: table-header-group;
-    }
-    .invoice-header {
-    padding-top: 25px;
-  }
-    body {
-    margin: 0;
-  } 
+    
+  @media print { 
+ 
+.gap2vh {
+  height: 5px;  /* or any size you want; mobile = desktop */
+}
+.gap4vh {
+  height: 13px;  /* or any size you want; mobile = desktop */
+}
+
     tr {
       page-break-inside: avoid;
     }
   }
+.invoice-wrapper {
+  margin-top: 10px;
+  max-width: 800px;
+  margin: 20px auto; /* Centers the invoice */
+  padding: 30px;
+  background-color: #ffffff;
+  border: 0px solid #eee;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+
+
   </style>
  </head>
 <body>
-  <table class="invoice-wrapper">
-  <thead style="padding-top: 25px;">
-    <tr>
-      <td>
-        <div style="text-align: left;">
-          <!-- Your existing header -->
-          <h4>Invoice</h4>
-          <h4>Item Balances (Qty & Value)</h4>
-          <p>Maya Enterprise
-          <br>
-          North York Toronto - Phone: 647-999-9999<br>
-          email: ali_albader_alsalem@yahoo.com
-          <br><br>
-          </p>
-        </div>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <div class="invoice-body">
-          <!-- Your existing invoice content -->
-           <table>
-          ${table}
-        </table>
+      ${table}        
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>      
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>          
+        <p style="text-align:center;">Thank you for your business!</p> 
+        <br>     
+    <footer>
+    <p>Maya Enterprisw. All rights reserved.</p>
+    <address>
+      Contact us at: <a href="mailto:ali_albader_alsalem@yahoo.com">ali_albader_alsalem@yahoo.com</a>
+    </address>
+  </footer> 
+      
 </body>
 </html>
   `);
+  
   printWindow.print();
+  document.getElementById("custdata").textContent = customername;
       if (window.matchMedia("(min-width: 768px)").matches) {
           printWindow.close();
       }
