@@ -56,6 +56,13 @@
           line-height: 1.0;         
             }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of content */
+}
+
    .lkbg { 
     color: #cce6ff;
     background-color: Black; 
@@ -271,12 +278,12 @@ width: 100%;
  }
 
  .imagecls {
-  margin-top: 8vh;
+  margin-top: 14vh;
   border: 0.0vw solid Black;
  }
 @media (max-width: 768px) {
 .imagecls {
-  margin-top: 6vh;
+  margin-top: 10vh;
  }
 }
 
