@@ -267,24 +267,24 @@ width: 100%;
  }
 
  .imagecls {
-  margin-top: -4vh;
+  margin-top: 8vh;
   border: 0.0vw solid Black;
  }
 @media (max-width: 768px) {
 .imagecls {
-  margin-top: -6vh;
+  margin-top: 0vh;
  }
 }
 
 .hello {
- margin-top: 10.0vh;
+ margin-top: 12.0vh;
  margin-left: 4.0vw;
  text-align: center;
 }
 
 @media (max-width: 768px) {
 .hello {
- margin-top: 4.0vh;
+ margin-top: 8.0vh;
  margin-left: -3vw;
  text-align: center;
 }
@@ -305,6 +305,12 @@ margin-left: 0.8vw;
 text-align: center;
 width: 95%;
 }
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of content */
 }
 
 
@@ -384,12 +390,14 @@ width: 95%;
 <div class="grid-container" style="border: 0.00vw solid green; width: 98%; border: 0.0vw solid black; margin: 0 auto;">    <!-- Grid Div -->
 
 
-
 <!--  --------------------------------------------------START-First column of grid---------------------------------------     -->
  
  <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
-   
-    <div class="hello" style="border: 0.0vw solid green;">     
+     
+    <div class="hello" style="border: 0.0vw solid green;"> 
+    <div class="gap4vh"></div>
+    <div class="gap3vh"></div>
+    
         <h5 style="font-family: calibri; font-size: clamp(1.6rem, 3.2vw, 3.3rem); Color: black; padding-left: 2vw; text-align: center; font-weight: 850; text-decoration: underline;">Hello & Welcome!</h5>
    </div>
     <div class = "inv-manage">      
