@@ -1069,8 +1069,12 @@ if (!isValidSelectionmov("movtype", "movtypes")) {
   alert("Movement Type not selected");
   return;
 } else  {
-  
 }
+
+ if (movqty.trim() === "") {   
+     alert("Please enter Movement Quantity!");
+  return;
+   }
  if (movtype.trim() === "Issue" || movtype.trim() === "Disposal" || movtype.trim() === "Adj Down" ) {
    if (qtydown < 0) {
      alert("The Item does not have sufficient Balance for This Movement!");
