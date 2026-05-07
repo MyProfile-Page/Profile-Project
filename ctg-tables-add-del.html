@@ -491,6 +491,48 @@ background-color: #9bc7be;
  }
 }
 
+.prt-btn {
+  width: 0%; 
+  text-align: right;
+  background-color: transparent;
+  font-size: clamp(0.9rem, 1.4vw, 1.6rem);
+  height: 0vh;
+  font-weight: 480; 
+  border: 0.0vw solid black;
+  border-radius: 0px;
+  margin-right: -22vw;
+  
+ }
+
+.ext-btn {
+  width: 20%; 
+  text-align: right;
+  background-color: transparent; 
+  font-size: clamp(0.9rem, 1.4vw, 1.6rem);
+ 
+  font-weight: 600; 
+  border: 0.00vw solid black;
+  border-radius: 5px;
+  color: white;
+  margin-right: 1vw;
+  margin-top: 3vh;
+ }
+
+@media (max-width: 768px) {
+.ext-btn {
+  width: 12%; 
+  text-align: center;
+  background-color: transparent; 
+  font-size: clamp(0.9rem, 1.8vw, 2.1rem);
+  height: 4vh;
+  font-weight: 600; 
+  border: 0.00vw solid black;
+  border-radius: 5px;
+  margin-top: 3vh:
+ }
+}
+
+
 
   </style>
 </head>
@@ -498,47 +540,23 @@ background-color: #9bc7be;
 <body  class="body_cls">
 
 
-  <!-- 🌍 Navigation Bar Start -->
+  <!-- Following is div which is replacement of Navigation Bar -->
 
- <nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
+<div style = "display: flex; justify-content: space-between; background-color: black;">
 
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 600;">Lite Inventory Control</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 700;">Items Category Table</a>
+<div style="text-align: left; margin-left: 1vw; display: inline-block height: 7vh; margin-top: 3vh; ">
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Items Categories Codes</Label>
+</div>
+<div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; ">
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
+</div> 
 
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon menu-bar-prp"></span>
-      
-    
-    </button>
+<div style="text-align: left; margin-right: 1vw; margin-top: -2.5vh; display: inline-block ">
+ <a class="ext-btn lkbg" href="Items-Codes.html">Back</a> 
+</div> 
+</div> 
 
-    <!-- Collapsible menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li style="line-height: 2dvh;" >&nbsp</li>
-        <li class="nav-item liheight"  >
-          <a class="nav-link lkbg " href="#" onclick="printInvoice()" style="color: #cce6ff; font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);">Print</a>
-        </li> 
-        <li style="line-height: 2dvh;" >&nbsp</li>
-        <li class="nav-item liheight">
-        <a class="nav-link aback lkbg" href="Items-Codes.html" style="font-weight: 600; font-size: clamp(1.1rem, 1.4vw, 1.5rem);" >Back</a>
-        </li>  
-        <li style="line-height: 2dvh;" >&nbsp</li>    
-      
-
-      </ul>
-    </div>
-
-  </div>
-</nav>
-
- <!-- 🌍 Navigation Bar End -->
+<!-- Above is div which is replacement of Navigation Bar -->
 
 <div class="gap3vh"></div>
 <div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
@@ -573,7 +591,12 @@ background-color: #9bc7be;
 
 
 </div> 
- <div class="gap3vh"></div>  <div class="items-add-upd" >Item Categories Grid
+ <div class="gap3vh"></div>  <div class="items-add-upd" style= "margin-top: -0.3vh;" >Item Categories Grid
+<div style="text-align: left; margin-right: 0vw; display: inline-block ">  
+<button onclick="printInvoice()" type="button" class="prt-btn"; >
+<img src="print-icon9.png" alt="Click Me"   >
+</button> 
+</div>
 <div class="gap2vh"></div>
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
