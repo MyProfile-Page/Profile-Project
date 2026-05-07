@@ -627,15 +627,9 @@ background-color: #9bc7be;
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   
-  <input list="movtypes" onfocus="this.value=''" class="input-field-col" id="movtype" name="amov" title="Movement Type" placeholder="Movement Type" style=" text-align: center;" >
-  <datalist id="movtypes">
-   <option value="Receipt">
-   <option value="Return">
-   <option value="Issue">
-   <option value="Adj Up">
-   <option value="Adj Down">
+  <input list="movtypes"  class="input-field-col" id="movtype" name="amov" title="Movement Type" placeholder="Movement Type" style=" text-align: center;" >
+  <datalist id="movtypes"> 
   </datalist>   
- 
 
 </div>
 <div class="gap1vh"></div>
@@ -855,7 +849,8 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
-let datalist = " ";
+let customerdatalist = " ";
+let movtypedatalist = " ";
 let firsttime = "yes";
 let newinvnbr = 0;
 let customername = " ";
@@ -1064,13 +1059,19 @@ window.updateitem = async function () {
   const qtydown = parseInt(prvqty) - parseInt(movqty);
   let sumqty; 
 
- if (!isValidSelection("cus", "cuss")) {
+ if (!isValidSelectioncus("cus", "cuss")) {
   alert("Customer not selected");
   return;
 } else  {
   document.getElementById("cuss").disabled = true; 
 }
- if (movtype.trim() === "Issue" || movtype.trim() === "Adj Down" ) {
+if (!isValidSelectionmov("movtype", "movtypes")) {
+  alert("Movement Type not selected");
+  return;
+} else  {
+  
+}
+ if (movtype.trim() === "Issue" || movtype.trim() === "Disposal" || movtype.trim() === "Adj Down" ) {
    if (qtydown < 0) {
      alert("The Item does not have sufficient Balance for This Movement!");
   return;
@@ -1124,11 +1125,11 @@ window.updateitem = async function () {
   loadnewitemstable();
 
 
-//  Load Firestore data into <datalists>
-async function loadDatalistcodes() {
+//  Load Firestore data into <datalists-cust>
+async function loadDatalistcust() {
       
  try {
-    datalist = document.getElementById("cuss");
+    customerdatalist = document.getElementById("cuss");
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
     const snapshot = await db.collection("custdatalist").get();
@@ -1139,7 +1140,7 @@ async function loadDatalistcodes() {
       const option = document.createElement("option");
       option.value = data.name; // change field as needed
 
-      datalist.appendChild(option);
+      customerdatalist.appendChild(option);
       
     });
 
@@ -1152,10 +1153,39 @@ async function loadDatalistcodes() {
 
 }
 
-loadDatalistcodes();
+//  Load Firestore data into <datalists-mvtp>
+async function loadDatalistmvtp() {
+      
+ try {
+    movtypedatalist = document.getElementById("movtypes");
+    
+    const db = firebase.firestore();
+    const snapshot = await db.collection("mvtpdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.name; // change field as needed
+
+      movtypedatalist.appendChild(option);
+      
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Movement Type Table:", error);
+  }
 
 
-function isValidSelection(inputId, datalistId) {
+}
+
+loadDatalistcust();
+loadDatalistmvtp();
+
+
+function isValidSelectioncus(inputId, datalistId) {
   const input = document.getElementById(inputId).value;
   customername = document.getElementById(inputId).value;
   localStorage.setItem("lscustomername", customername);
@@ -1164,6 +1194,13 @@ function isValidSelection(inputId, datalistId) {
 
   const validValues = Array.from(options).map(opt => opt.value);
 
+  return validValues.includes(input);
+}
+
+function isValidSelectionmov(inputId, datalistId) {
+  const input = document.getElementById(inputId).value;
+  const options = document.querySelectorAll(`#${datalistId} option`);
+  const validValues = Array.from(options).map(opt => opt.value);
   return validValues.includes(input);
 }
 

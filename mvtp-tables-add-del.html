@@ -199,7 +199,7 @@ grid-auto-flow: row;
 }
 
 @media (max-width: 768px) {
- .itemTableBody-Cls {
+ .manfsupltableBody-Cls {
 white-space: normal; 
 overflow-wrap: break-word;
 word-wrap: break-word; 
@@ -245,7 +245,7 @@ font-weight: 550;
 
 ::placeholder {
   font-size: clamp(0.9rem, 1.0vw, 1.1rem); 
-  font-weight: 600;
+  font-weight: 500;
   color: black; 
   
 }
@@ -285,7 +285,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .tr-main-row {
-height: 3vh;
+height: 4vh;
 background-color: #9bc7be;
 }
 }
@@ -411,8 +411,8 @@ background-color: #9bc7be;
   width: 50%;
   height: 8.0vh;
   text-align: center; 
-  font-weight: 400; 
-  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
+  font-weight: 500; 
+  font-size: clamp(0.7rem, 1.0vw, 1.1rem);
   border-radius: 12px;
 }
 
@@ -421,26 +421,25 @@ background-color: #9bc7be;
   width: 80%;
   height: 5.0vh;
   text-align: center; 
-  font-weight: 400; 
+  font-weight: 500; 
   font-size: clamp(0.9rem, 1.2vw, 1.3rem);
-  border-radius: 12px; 
-  
+  border-radius: 12px;
 }
 }
 .add-btn {
   width: 24%; 
   text-align: center;
   background-color: #fafafa; 
-  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
   height: 8vh;
-  font-weight: 550; 
+  font-weight: 500; 
   border-radius: 12px;
  }
 .upd-btn {
   width: 9%; 
   text-align: center;
   background-color: #fafafa; 
-  font-size: clamp(0.9rem, 1.0vw, 1.1rem);
+  font-size: clamp(0.5rem, 1.0vw, 1.1rem);
   height: 6vh;
   font-weight: 600; 
   border: 0.01vw solid black;
@@ -460,10 +459,10 @@ background-color: #9bc7be;
   text-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
-  font-size: clamp(0.9rem, 1.0vw, 1.1rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
   height: 5vh;
-  font-weight: 600; 
-  border-radius: 12px;
+  font-weight: 500;
+  border-radius: 12px; 
  }
  }
 @media (max-width: 768px) {
@@ -532,20 +531,18 @@ background-color: #9bc7be;
  }
 }
 
-
-
   </style>
 </head>
 
 <body  class="body_cls">
 
 
-  <!-- Following is div which is replacement of Navigation Bar -->
+ <!-- Following is div which is replacement of Navigation Bar -->
 
 <div style = "display: flex; justify-content: space-between; background-color: black;">
 
 <div style="text-align: left; margin-left: 1vw; display: inline-block height: 7vh; margin-top: 3vh; ">
-<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Items Categories Codes</Label>
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Movement Types Codes</Label>
 </div>
 <div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; ">
 <Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
@@ -564,16 +561,17 @@ background-color: #9bc7be;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Item Categories Addition Form
+<div class = "items-add-upd" > Movement Type Addition Form
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Category No."  > 
+  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Movement Type No."  > 
 </div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="text" class="input-field" id="ctgname" placeholder="Category Name"  >
- 
+  <input type="text" class="input-field" id="name" placeholder="Movement Type Description"  >
+<div class="gap3vh"></div> 
+  
 </div>
 
 
@@ -584,6 +582,7 @@ background-color: #9bc7be;
   
 </div>
 <div class="gap3vh"></div>
+
 <div class="gap3vh"></div>
 </div>
 
@@ -591,7 +590,7 @@ background-color: #9bc7be;
 
 
 </div> 
- <div class="gap3vh"></div>  <div class="items-add-upd" style= "margin-top: -0.3vh;" >Item Categories Grid
+ <div class="gap3vh"></div>  <div class="items-add-upd" style= "margin-top: -0.3vh;" >Movement Types Grid
 <div style="text-align: left; margin-right: 0vw; display: inline-block ">  
 <button onclick="printInvoice()" type="button" class="prt-btn"; >
 <img src="print-icon9.png" alt="Click Me"   >
@@ -608,14 +607,14 @@ background-color: #9bc7be;
         <th style="text-align: center; width: 19%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Name</th>      
         
       
-        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.9rem, 1.1vw, 1.2rem); font-weight: 500; ">Action</th>
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 13%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
       </tr>
     </thead>
-    <tbody id="itemTable" class = "itemTableBody-Cls">
+    <tbody id="manfsupltable" class = "manfsupltableBody-Cls">
        <tr>
-        <td  style="text-align: center; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; "></td>
-        <td  style="text-align: center; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; "></td>
-        <td style="text-align: center; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
       </tr>
      
      
@@ -662,12 +661,12 @@ const firebaseConfig = {
 
 
   // 🔹 READ (Load Data into Table)
-async function loadnewitemstable() {
+async function loadmanfsupltable() {
 
-  const table = document.getElementById("itemTable");
+  const table = document.getElementById("manfsupltable");
   
   table.innerHTML = "";
-  const collectionRef = collection(db, "ctgdatalist");
+  const collectionRef = collection(db, "mvtpdatalist");
   const q = query(collectionRef, orderBy("nbr", "asc"));
   
   const querySnapshot = await getDocs(q);
@@ -684,8 +683,8 @@ async function loadnewitemstable() {
       <tr class="tr-main-row"  >
        
         
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 400; padding-left: 0.5vw;">${data.nbr}</td>
-<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 400; padding-left: 0.5vw;">${data.ctgname}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.nbr}</td>
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.name}</td>
                 <td style="border: 0.05vw solid black; text-align: center;">
 
            <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
@@ -712,7 +711,7 @@ async function loadnewitemstable() {
   
     
     document.getElementById("nbr").value = "";
-    document.getElementById("ctgname").value = "";
+    document.getElementById("name").value = "";
    
 
   }
@@ -726,9 +725,9 @@ async function loadnewitemstable() {
 
 
 // Fill inputs when Edit button is clicked
-window.edititem = function (id, ctgname) {
+window.edititem = function (id, name) {
   
-  document.getElementById("ctgname").value = ctgname;
+  document.getElementById("name").value = name;
   
   
  
@@ -741,22 +740,22 @@ window.edititem = function (id, ctgname) {
 
  // 🔹 DELETE (Remove Record)
   window.deleteitem = async function (id) {
-    await deleteDoc(doc(db, "ctgdatalist", id));
-    alert("item Category deleted");
+    await deleteDoc(doc(db, "mvtpdatalist", id));
+    alert("Movement Type deleted");
     clearInputs();
-    loadnewitemstable();
+    loadmanfsupltable();
   };
 
 // 🔹 CREATE (Insert Data)
 window.additem = async function () {
 
   const nbr = document.getElementById("nbr").value;
-  const ctgname = document.getElementById("ctgname").value;
+  const name = document.getElementById("name").value;
      
   try {
 
     // 🔹 Use nbr as document ID
-     const docRef = doc(db, "ctgdatalist", nbr.toString());
+     const docRef = doc(db, "mvtpdatalist", nbr.toString());
     
 
     // 🔹 Check if document already exists
@@ -767,24 +766,23 @@ window.additem = async function () {
     // 🔹 Create document with nbr as ID
     await setDoc(docRef, {
       nbr: parseInt(nbr, 10),
-      ctgname: ctgname,     
+      name: name,     
       createdAt: serverTimestamp()
       // createdAt: new Date()
     });
 
-    alert("Item Category added");
+    alert("Movement Type added");
     
-    loadnewitemstable(); // refresh table
+    loadmanfsupltable(); // refresh table
 
   } catch (error) {
-    console.error("Error adding item:", error);
-    alert("Error adding item. Check console.");
+    console.error("Error adding Movement Type:", error);
+    alert("Error adding Movement Type. Check console.");
   }
 };
 
   
-  loadnewitemstable();
-
+  loadmanfsupltable();
 
 //  PRINT FUNCTION START
 
@@ -870,7 +868,7 @@ function printInvoice() {
       <td>
         <div style="text-align: left;">
           <!-- Your existing header -->
-          <h5>Catagories Codes</h5>
+          <h5>Movement Types</h5>
           <p style="font-size: 13px;">Maya Enterprise
           <br>
           North York Toronto - Phone: 647-999-9999<br>
@@ -889,8 +887,7 @@ function printInvoice() {
            <table>
           ${table}
         </table>
-        <br>
-        <p style="text-align:center;">Thank you for your business!</p>      
+            
         </div>
       </td>
     </tr>
@@ -906,6 +903,10 @@ function printInvoice() {
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
 //  PRINT FUNCTION END
+
+
+
+
 
 
 
