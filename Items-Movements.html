@@ -560,11 +560,39 @@ background-color: #9bc7be;
  }
 }
 
+.highlight {
+        background-color: yellow !important;
+    }
 
   </style>
 </head>
 
 <body  class="body_cls">
+<div id = "hide-div" style="margin-top: -23vh; display: none;">
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  <input type="number" class="input-field" id="nbr" placeholder="Item No." title="Item No." style="padding-left: 2dvw;  text-align: left;" disabled > 
+ 
+</div>
+<div class="gap1vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  
+  <input type="text" class="input-field" id="name" placeholder="Item Name" title="Item Name" style="padding-left: 2dvw;  text-align: left;" disabled >
+ 
+</div>
+<div class="gap1vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  
+  <input type="number" class="input-field" id="qty" placeholder="present Item Qty" title="Present Item Qty" style="padding-left: 2dvw;  text-align: left;" disabled >
+ 
+
+</div>
+
+
+</div>
+
 
 <div id = "nav-div">
 <div style = "display: flex; justify-content: space-between; background-color: black;">
@@ -596,7 +624,7 @@ background-color: #9bc7be;
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 
-  <input list="cuss" onfocus="this.value=''" class="input-field-col" title="Select Customer" id="cus" name="acus" placeholder="Customer" >
+  <input list="cuss"  class="input-field-col" title="Select Customer" id="cus" name="acus" placeholder="Customer" >
 <datalist id="cuss">
 
 </datalist> 
@@ -604,26 +632,6 @@ background-color: #9bc7be;
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div id="output" style="margin-top:10px; white-space: pre-wrap; display: none;"></div>
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-
-  <input type="number" class="input-field" id="nbr" placeholder="Item No." title="Item No." style="padding-left: 2dvw;  text-align: left;" disabled > 
- 
-</div>
-<div class="gap1vh"></div>
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-
-  
-  <input type="text" class="input-field" id="name" placeholder="Item Name" title="Item Name" style="padding-left: 2dvw;  text-align: left;" disabled >
- 
-</div>
-<div class="gap1vh"></div>
-<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-
-  
-  <input type="number" class="input-field" id="qty" placeholder="present Item Qty" title="Present Item Qty" style="padding-left: 2dvw;  text-align: left;" disabled >
- 
-
-</div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
   
@@ -675,7 +683,7 @@ background-color: #9bc7be;
         <th style="text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Value</th>
         
       
-        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Movement</th>
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
       </tr>
     </thead>
     <tbody id="vitemTable" class = "itemTableBody-Cls">
@@ -856,7 +864,7 @@ let newinvnbr = 0;
 let customername = " ";
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
-
+  let html = "";
   const table = document.getElementById("vitemTable");
   
   table.innerHTML = "";
@@ -867,7 +875,7 @@ async function loadnewitemstable() {
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
 
-  querySnapshot.forEach((document) => {
+  querySnapshot.forEach((document, index) => {
     const data = document.data();
     const docId = document.id;
 
@@ -881,10 +889,10 @@ async function loadnewitemstable() {
     grandTotalCents += centvalue;
 
  //   const displayTotal = formatCentsToDollars(grandTotalCents);
-    
-    table.innerHTML += `
-      
-      <tr class="tr-main-row"  >
+
+     
+    html += `      
+      <tr  id="row-${index}" class="tr-main-row"  >
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.nbr}</td>
         
         <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400; padding-left: 0.2vw;">${data.name}</td>
@@ -895,7 +903,7 @@ async function loadnewitemstable() {
         
         <td style="border: 0.05vw solid black; text-align: center;">
 
-          <button onclick="edititem('${docId}', '${data.name}', '${data.nbr}', '${data.qty}')" class = "edit-delt-btn";>Select</button>
+          <button id="edtbtn" onclick="edititem(this, '${docId}', '${data.name}', '${data.nbr}', '${data.qty}')" class = "edit-delt-btn";>Select</button>
           
         </td>          
         
@@ -903,7 +911,10 @@ async function loadnewitemstable() {
 
     
     `;
+  
   });
+
+ table.innerHTML = html;
 
      // ✅ Convert grand total cents to dollars
   const grandTotalDollar = formatCentsToDollars(grandTotalCents);
@@ -1020,12 +1031,22 @@ function cleanrol(valuerol, valueqty) {
 
 
 // Fill inputs when Edit button is clicked
-window.edititem = function (id, name, nbr, qty) {
-  
+window.edititem = function (edtbtn, id, name, nbr, qty,) {
+// console.log(index);
+// document.getElementById(`row-${index}`).style.backgroundColor = "yellow";
+ // document.getElementById("row-1").style.backgroundColor = "yellow"; 
+//  itemTable.target.parentNode.classList.toggle('highlight');
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
- 
   document.getElementById("qty").value = qty;
+// document.getElementById(`row-${index}`).classList.add("highlight");
+ // document.getElementById(`row-${index}`).style.backgroundColor = "yellow";
+
+// get clicked row
+    let row = edtbtn.closest("tr");
+    // highlight clicked row
+    row.classList.add("highlight");
+ 
   
   
  
@@ -1089,7 +1110,10 @@ if (!isValidSelectionmov("movtype", "movtypes")) {
    sumqty = parseInt(qtydown);
   } 
   if (firsttime === "yes") { 
-  // alert ("Inv No picking is done only once");
+//   alert ("Inv No picking is done only once");
+   const resetcuss1 = document.getElementById("cus");
+    resetcuss1.disabled = true;
+   
   invread();
   firsttime = "no"
   } 
@@ -1121,7 +1145,10 @@ if (!isValidSelectionmov("movtype", "movtypes")) {
   }
  };
 
-
+  // remove previous highlight
+    document.querySelectorAll(".tr-main-row").forEach(row => {
+        row.classList.remove("highlight");
+    });
 
 
   // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
@@ -1435,6 +1462,14 @@ e13.setAttribute("style", "display: none;");
  firsttime = "yes";
  newinvnbr = 0;
  customername = " ";
+ 
+ 
+ const resetcuss = document.getElementById("cus");
+    resetcuss.value = "";
+    resetcuss.disabled = false;
+    resetcuss.focus();
+
+
  const table = document.getElementById("itemTable");
  table.innerHTML = "";
 const e4 = document.getElementById("movements-div");
@@ -1446,6 +1481,7 @@ const e6 = document.getElementById("viewableTable");
 e6.setAttribute("style", "display: block;");
 const e16 = document.getElementById("nav-div");
 e16.setAttribute("style", "display: block;");
+
  
 
 }
