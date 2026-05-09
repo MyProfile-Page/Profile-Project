@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Firestore Table (IIS + Localhost)</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+  .body_cls {
+          background-color: red;
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          background: white;
+          background: #f7f568;
+          background: #f7f681;
+          background: LightCyan;
+         
+      /*    background:  */
+          line-height: 0.8;         
+            }
+  .lkbg { 
+    color: #cce6ff;
+    background-color: Black; 
+    padding: 2.0vh 2.0vh; /* Adds space around the text */
+    display: inline-block; /* Ensures padding and background apply correctly */
+    border-radius: 3vh;
+ } 
+
+ .liheight {
+   line-height: 2.5dvh;
+  } 
+
+ @media (max-width: 768px) {
+ .liheight {
+   line-height: 1.0dvh;
+ } 
+ }
+
+.custom-table-container {
+    height: 76vh;        /* Fixed height */
+   
+     overflow-y: auto;     /* vertical scrollbar */
+    border: 0.0vw solid black;
+    
+}
+
+@media (max-width: 768px) {
+.custom-table-container {
+  height: 76vh;        /* Fixed height */
+    
+     overflow-x: auto;     /* horizontal scrollbar */
+    border: 0.0vw solid #ccc;
+ 
+}
+}
+
+
+ .custom-table {
+    border-collapse: collapse;
+    table-layout: fixed; /* VERY IMPORTANT for percentage widths */
+    width: 99%;
+    font-family: Arial, sans-serif;
+    margin-top: 3vh; 
+    margin-left: 0.2vw; 
+    margin-right: 0.0vw; 
+    border: 0.0vw solid grey; /* Light grey borders */
+    
+}   
+
+ /*  .custom-table tr:nth-child(even) {   */
+ /*    background-color: #D6EEEE;         */ 
+ /*    background-color: rgba(150, 212, 212, 0.4);   */
+ /* }   */
+ .custom-table td:nth-child(2)  {
+     text-align: left;    
+ }
+
+.custom-table td:nth-child(3),
+.custom-table td:nth-child(8)   {
+     text-align: center;    
+ }
+
+  
+  .custom-table th {
+    background-color: #f2f2f2; /* Light gray background for header */
+   /* color: #333;  */
+    color:black;
+    background-color: #c5effd;  
+    height: 6vh;      
+    border: 0.2vw solid grey;
+
+  }
+
+
+  .custom-table td {
+    /* background-color: #f2f2f2;  */ /* Light gray background for header */
+    /* color: #333;  */
+    
+    border: 0.00vw solid lightgrey; /* Light grey borders */
+    padding: 0.0vw; /* Spacing inside cells */
+    text-align: center;
+
+  }
+  
+  
+ .custom-table tr:hover { background-color: #e6f2ff;
+  }
+  
+  
+
+ .custom-table td:nth-child(5),
+ .custom-table td:nth-child(6) {
+  text-align: center;
+  }
+
+.custom-table tr:last-child {
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #e6f2ff;
+  background-color: #f0f0f0;
+  border-top: 0.4vh solid #000;
+}
+
+
+ .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            gap: 2vw;
+            padding: 0.4vw;
+            grid-auto-rows: auto;
+        }
+
+ .grid-container > div {
+  border: 0.00vw solid red;
+  padding: 0.25vw;
+}
+
+.box {
+            background-color: #c5effd;
+            padding: 10vw;
+            text-align: center;
+            font-size: 20px;
+            border: 0.4vw solid steelblue;
+        }
+
+@media (max-width: 768px) {
+.grid-container {
+  display: grid;
+ grid-template-columns: 1fr; /* Stack vertically */
+grid-auto-flow: row;
+/* height: 90vh; */
+/* gap: 0.5vw; */
+ 
+}
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ }
+
+.gap1vh {
+  height: 0.2vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap1vh {
+  height: 0.5vh;  /* or any size you want; mobile = desktop */
+}
+}
+
+.gap2vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap2vh {
+  height: 1.0vh;  /* or any size you want; mobile = desktop */
+}
+}
+
+.gap3vh {
+  height: 3.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap3vh {
+  height: 1.5vh;  /* or any size you want; mobile = desktop */
+}
+}
+.gap4vh {
+  height: 4.0vh;  /* or any size you want; mobile = desktop */
+}
+@media (max-width: 768px) {
+.gap4vh {
+  height: 2.0vh;  /* or any size you want; mobile = desktop */
+}
+}
+
+@media (max-width: 768px) {
+ .itemTableBody-Cls {
+white-space: normal; 
+overflow-wrap: break-word;
+word-wrap: break-word; 
+word-break: break-all;
+text-wrap: balance;
+hyphens: auto;
+}
+}
+
+.Menubar-header {
+font-family: calibri;
+ font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
+font-weight: 500;
+color: black; 
+font-style: italic;
+font-weight: 550;
+}
+
+#apl-hdr {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
+  font-weight:  700;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+#menu-word-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  400;
+  color: lightblue; 
+  text-decoration: none; 
+  text-align: center;
+}
+
+.menu-bar-prp {
+ font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
+  font-weight:  200;
+  color: yellow; 
+  text-decoration: none; 
+  text-align: center;
+  border: none;
+}
+
+::placeholder {
+  font-size: clamp(0.8rem, 1.1vw, 1.2rem); 
+  font-weight: 480;
+  color: black;   
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.pr-bk-links {
+    border: 0.0vw solid black; 
+    text-align: right;
+    margin-top: -3vh;
+    margin-right: 3vw;
+}
+
+.tr-main-row {
+height: 8vh;
+background-color: #9bc7be;
+
+}
+
+.tr-adl-row {
+height: 2vh;
+background-color: #9bc7be;
+
+}
+
+.tr-tl-row {
+font-weight: bold;
+font-size: 1.0rem;
+background-color: #acdbe8;
+border: 0.1vw solid black;
+height: 8vh; 
+}
+
+.tr-btn-row {
+height: 8vh;
+background-color: #9bc7be;
+
+}
+
+@media (max-width: 768px) {
+.tr-main-row {
+height: 5vh;
+background-color: #9bc7be;
+}
+}
+ 
+@media (max-width: 768px) {
+.tr-adl-row {
+height: 1.5vh;
+background-color: #9bc7be;
+}
+}
+
+@media (max-width: 768px) {
+.tr-tl-row {
+font-weight: bold;
+font-size: 1.0rem;
+background-color: #acdbe8;
+border: 0.1vw solid black;
+height: 5vh; 
+}
+}
+@media (max-width: 768px) {
+.tr-btn-row {
+height: 5vh;
+background-color: #9bc7be;
+}
+}
+
+@media (max-width: 768px) {
+.pr-bk-links {
+    border: 0.0vw solid black; 
+    text-align: right;
+    margin-top: -2vh;
+    margin-right: 3vw;
+}
+
+}
+
+.item-db {
+    border: 0.0vw solid black; 
+    text-align: center;
+    margin-top: 3vh;
+   
+}
+
+@media (max-width: 768px) {
+.item-db {
+    border: 0.0vw solid black; 
+    text-align: center;
+    margin-top: 2vh;
+    
+}
+
+}
+
+.items-add-upd  {
+ font-size: clamp(0.7rem, 1.5vw, 1.6rem);
+ font-weight: 650;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ margin-top: 4vh; 
+}
+
+@media (max-width: 768px) {
+.items-add-upd  {
+ font-size: clamp(1.3rem, 1.9vw, 2.1rem);
+ font-weight: 450;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ margin-top: 2vh;
+ 
+}
+}
+
+.movements-add-upd  {
+ font-size: clamp(0.7rem, 1.5vw, 1.6rem);
+ font-weight: 650;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ margin-top: 0vh; 
+  display: none; 
+ position: fixed;
+  top: 0vh;
+  left: 0;
+ 
+  z-index: 1000; /* Keeps it on top of other content */
+}
+
+@media (max-width: 768px) {
+.movements-add-upd  {
+ font-size: clamp(1.3rem, 1.9vw, 2.1rem);
+ font-weight: 450;
+ width: 98%; 
+ border: 0.0vw solid black;
+ margin: 0 auto; 
+ justify-content: center;
+ text-align: center; 
+ display: none;  
+}
+}
+
+
+.input-field {
+ font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+ height: 8vh;
+ 
+ font-weight: 500; 
+ border: 0.1vw solid black; 
+ width: 60%;
+}
+
+@media (max-width: 768px) {
+.input-field {
+ font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+ height: 5vh;
+ width: 100%;
+ font-weight: 500; 
+ width: 100%;
+}
+}
+
+.input-field-col {
+ font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+ height: 8vh;
+/* background-color: #51DEED; */
+ /* background-color: LightYellow;  */  
+/* background-color: #f8f2ed; */
+ font-weight: 500; 
+ border: 0.1vw solid black; 
+ width: 60%;
+}
+
+@media (max-width: 768px) {
+.input-field-col {
+ font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+ height: 5vh;
+/* background-color: #51DEED; */
+/* background-color: #f8f2ed; */
+ font-weight: 500; 
+ width: 100%;
+}
+}
+
+
+
+.edit-delt-btn  {
+  width: 50%;
+  height: 8.0vh;
+  text-align: center; 
+  font-weight: 480; 
+  font-size: clamp(0.5rem, 1.2vw, 1.3rem);
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+.edit-delt-btn  {
+  width: 80%;
+  height: 5.0vh;
+  text-align: center; 
+  font-weight: 480; 
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+  border-radius: 12px;
+}
+}
+.add-btn {
+  width: 14%; 
+  text-align: center;
+  background-color: #fafafa; 
+  font-size: clamp(0.8rem, 1.3vw, 1.4rem);
+  height: 6vh;
+  font-weight: 480; 
+  border-radius: 12px;
+ }
+.prt-btn {
+  width: 0%; 
+  text-align: right;
+  background-color: transparent;
+  font-size: clamp(0.5rem, 1.3vw, 1.4rem);
+  height: 0vh;
+  font-weight: 480; 
+  border: 0.00vw solid black;
+  border-radius: 0px;
+ }
+.ext-btn {
+  width: 15%; 
+  text-align: center;
+  background-color: transparent; 
+  font-size: clamp(0.9rem, 1.4vw, 1.6rem);
+  height: 6vh;
+  font-weight: 600; 
+  border: 0.00vw solid black;
+  border-radius: 5px;
+  color: Black;
+ }
+.upd-btn {
+  width: 15%; 
+  text-align: center;
+  background-color: #fafafa; 
+  font-size: clamp(0.5rem, 1.3vw, 1.4rem);
+  height: 6vh;
+  font-weight: 480; 
+  border: 0.01vw solid black;
+  border-radius: 12px;
+ }
+.clr-btn {
+  width: 15%; 
+  text-align: center;
+  background-color: #fafafa; 
+  font-size: clamp(0.5rem, 1.3vw, 1.4rem);
+  height: 6vh;
+  font-weight: 480; 
+  border: 0.01vw solid black;
+  border-radius: 12px;
+ }
+@media (max-width: 768px) {
+.add-btn {
+  width: 14%; 
+  text-align: center;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
+  font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+  height: 4vh;
+  font-weight: 480;
+  border-radius: 12px;
+ }
+ }
+@media (max-width: 768px) {
+.upd-btn {
+  width: 30%; 
+  text-align: center;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
+  font-size: clamp(0.8rem, 1.3vw, 1.4rem);
+  height: 4vh;
+  font-weight: 480; 
+   border: 0.02vw solid black;
+   border-radius: 12px;
+ }
+}
+@media (max-width: 768px) {
+.clr-btn {
+  width: 30%; 
+  text-align: center;
+  /* background-color: LightGrey; */
+  background-color: #fafafa;
+  font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+  height: 4vh;
+  font-weight: 480; 
+   border: 0.02vw solid black;
+  border-radius: 12px;
+ }
+}
+
+@media (max-width: 768px) {
+.ext-btn {
+  width: 30%; 
+  text-align: center;
+  background-color: transparent; 
+  font-size: clamp(0.9rem, 1.4vw, 1.6rem);
+  height: 4vh;
+  font-weight: 500; 
+  border: 0.00vw solid black;
+  border-radius: 5px;
+  color: Black;
+ }
+}
+
+.highlight {
+        background-color: yellow !important;
+    }
+
+  </style>
+</head>
+
+<body  class="body_cls">
+<div id = "hide-div" style="margin-top: -23vh; display: none;">
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  <input type="number" class="input-field" id="nbr" placeholder="Item No." title="Item No." style="padding-left: 2dvw;  text-align: left;" disabled > 
+ 
+</div>
+<div class="gap1vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  
+  <input type="text" class="input-field" id="name" placeholder="Item Name" title="Item Name" style="padding-left: 2dvw;  text-align: left;" disabled >
+ 
+</div>
+<div class="gap1vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  
+  <input type="number" class="input-field" id="qty" placeholder="present Item Qty" title="Present Item Qty" style="padding-left: 2dvw;  text-align: left;" disabled >
+ 
+
+</div>
+
+
+</div>
+
+
+<div id = "nav-div">
+<div style = "display: flex; justify-content: space-between; background-color: black;">
+
+
+<div style="text-align: left; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Transactions Management</Label>
+</div> 
+
+
+ 
+</div> 
+
+</div> 
+
+
+<div class="gap4vh"></div>
+<div id = "items-div" style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;">
+<div class="gap4vh"></div>
+ <!-- Input Form -->
+
+<div  class = "items-add-upd" > Transactions Submit Form
+<div class="gap3vh"></div>
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+
+  <input list="cuss"  class="input-field-col" title="Select Customer" id="cus" name="acus" placeholder="Customer" >
+<datalist id="cuss">
+
+</datalist> 
+</div>
+<div class="gap3vh"></div>
+<div class="gap3vh"></div>
+<div id="output" style="margin-top:10px; white-space: pre-wrap; display: none;"></div>
+<div class="gap1vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  
+  <input list="movtypes"  class="input-field-col" id="movtype" name="amov" title="Transaction Type" placeholder="Transaction Type" style=" text-align: center;" >
+  <datalist id="movtypes"> 
+  </datalist>   
+
+</div>
+<div class="gap1vh"></div>
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+  
+ 
+  <input type="number" class="input-field-col" id="movqty" min="1" max="99999999" title="Transaction Qty" placeholder="Transaction Quantity" style=" text-align: center;">
+
+<input type="number" class="input-field-col" id="iser" min="1" max="99999999" title="invno" placeholder="invoice" style=" text-align: center; display: none;">
+
+</div>
+<div class="gap1vh"></div>
+
+
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
+  
+  <button onclick="updateitem()" type="button" class="upd-btn";>Submit Transaction</button>
+  <div>&nbsp</div>
+  <button onclick="clearInputs()" type="button" class="clr-btn";>Clear</button>
+  <div>&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+  <button onclick="PrintCustInvoice()" type="button" class="upd-btn" style="Color: blue; font-weight: 750;">Print Invoice</button>
+  <div>&nbsp</div>
+ </div>
+
+<div class="gap4vh"></div>
+</div>
+
+</div> 
+  
+ <div class="items-add-upd" > Select item for transaction 
+<div class="gap2vh"></div>
+  <!-- HTML Table For showing all records of database-->
+<div id = "viewableTable" class="custom-table-container">
+  <table class="custom-table">
+    <thead>
+     
+      <tr>
+        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">No.</th>
+          
+        <th style="text-align: center; width: 35%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Name</th>      
+        
+        <th style="text-align: center; width: 12%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Value</th>
+        
+      
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
+      </tr>
+    </thead>
+    <tbody id="vitemTable" class = "itemTableBody-Cls">
+       <tr>
+        
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+      </tr>
+     
+     
+     </tbody>
+  </table>
+ </div>
+</div>
+
+ 
+<div id ="movements-div" class="movements-add-upd"  >
+<div class="gap4vh"></div>
+<div class="gap4vh"></div>
+<div style = "display: flex; justify-content: space-between;">
+
+
+
+<div style="text-align: left; margin-left: 1vw; margin-top: 0vh; display: inline-block ">
+<button onclick="printInvoice()" type="button" class="prt-btn"; title="Click to Print" >
+<img src="print-icon9.png" alt="Click Me"   >
+</button>
+</div> 
+
+<div style="text-align: left; margin-right: 2vw; display: inline-block ">
+<button onclick="exitInvoice()" type="button" class="ext-btn"; >
+<img src="exit-icon3.png" alt="Click Me"   >
+</button>
+</div> 
+
+</div> 
+<div class="gap4vh"></div> 
+
+ <!-- HTML Table For showing all records of database-->
+<div id = "wholeitemTable" class="custom-table-container">
+ 
+
+ <div style = "display: flex; justify-content: space-between;">
+ <div style="text-align: left; margin-left: 1vw; display: inline-block ">
+          <!-- Your existing header -->
+        
+       
+          <Label id="custname" style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);"></Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">North York Toronto</Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Phone: 647-999-9999</Label>
+          <div class="gap2vh"></div>
+          <Label style="font-size: clamp(0.8rem, 1.1vw, 1.2rem);">email: info@MyCompany.com</Label>
+          <div class="gap4vh"></div> 
+          <div class="gap4vh"></div>            
+  </div>
+
+  <div>
+           <img src="monogram12.png" class="responsive-img rounded" style="display: block;"> 
+                
+  </div>
+
+    
+ <div style="text-align: left; margin-right: 1vw; display: inline-block ">
+          <!-- Your existing header -->
+          <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice No.&nbsp</Label><Label id="invno" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+<div class="gap2vh"></div>
+          <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice Date&nbsp</Label><Label id="invdt" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+<div class="gap2vh"></div>
+           <Label style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);">Invoice Time&nbsp</Label><Label id="invtm" style="display: inline-block; font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+"></Label>
+
+          <div class="gap4vh"></div>
+          <div class="gap4vh"></div>           
+  </div>
+
+
+</div>
+
+
+
+
+
+ 
+  <table class="custom-table">
+    <thead>
+     
+      <tr class="tr-main-row">
+        <th style="text-align: center; width: 9.5%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Item No.</th>
+          
+        <th style="text-align: center; width: 19%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Item Name</th> 
+       <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Open. Bal</th>   
+    
+        <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Trn Type</th>
+        
+        <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Trn Qty</th>
+        <th style="text-align: center; width: 11.0%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Clos. Bal</th>
+        
+      
+        <th  style="padding: 0.0vw; text-align: center; width: 9.5%; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 500; ">Trn Time</th>
+      </tr>
+    </thead>
+    <tbody id="itemTable" class = "itemTableBody-Cls">
+       <tr>
+        
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td  style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 400; "></td>
+        
+      </tr>
+     
+     
+     </tbody>
+  </table>
+ </div>
+</div>
+
+
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { 
+  getFirestore, 
+  collection, 
+  query,
+  orderBy,
+  addDoc, 
+  setDoc,
+  getDocs, 
+  getDoc,
+  deleteDoc, 
+  doc,
+  updateDoc,
+  runTransaction,
+  where,
+  Timestamp,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCPjQ6I6XZ2EZGNRFi_1iQYZv5tjYFGdfk",
+  authDomain: "smart-appl-pr.firebaseapp.com",
+  projectId: "smart-appl-pr",
+  storageBucket: "smart-appl-pr.firebasestorage.app",
+  messagingSenderId: "491870622637",
+  appId: "1:491870622637:web:5364e766463c77c3094724"
+};
+
+
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app); 
+let customerdatalist = " ";
+let movtypedatalist = " ";
+let firsttime = "yes";
+let newinvnbr = 0;
+let customername = " ";
+  // 🔹 READ (Load Data into Table)
+async function loadnewitemstable() {
+  let html = "";
+  const table = document.getElementById("vitemTable");
+  
+  table.innerHTML = "";
+  const collectionRef = collection(db, "newitemstable");
+  const q = query(collectionRef, orderBy("nbr", "asc"));
+
+  const querySnapshot = await getDocs(q);
+
+  let grandTotalCents = 0; // ✅ accumulator for grand total
+
+  querySnapshot.forEach((document, index) => {
+    const data = document.data();
+    const docId = document.id;
+
+    // Price (cents → dollars)
+    const dollarprice = formatCentsToDollars(data.prc);
+
+    // Row total (qty × price in cents)
+    const centvalue = calculatevalueincent(data.qty, data.prc);
+    const dollarvalue = formatCentsToDollars(centvalue);
+    // Add to grand total (SAFE integer math)
+    grandTotalCents += centvalue;
+
+ //   const displayTotal = formatCentsToDollars(grandTotalCents);
+
+     
+    html += `      
+      <tr  id="row-${index}" class="tr-main-row"  >
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.nbr}</td>
+        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400; padding-left: 0.2vw;">${data.name}</td>
+        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.qty}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">$${dollarvalue}</td>
+        
+        
+        <td style="border: 0.05vw solid black; text-align: center;">
+
+          <button id="edtbtn" onclick="edititem(this, '${docId}', '${data.name}', '${data.nbr}', '${data.qty}')" class = "edit-delt-btn";>Select</button>
+          
+        </td>          
+        
+      </tr>
+
+    
+    `;
+  
+  });
+
+ table.innerHTML = html;
+
+     // ✅ Convert grand total cents to dollars
+  const grandTotalDollar = formatCentsToDollars(grandTotalCents);
+
+  // ✅ Calculate Tax (example 13%)
+  const taxRate = 0.13;
+  const taxCents = Math.round(grandTotalCents * taxRate);
+  const taxDisplay = formatCentsToDollars(taxCents);
+
+  // ✅ Net Total
+  const netTotalCents = grandTotalCents + taxCents;
+  const netTotalDisplay = formatCentsToDollars(netTotalCents);
+
+  // ✅ Add Summary Rows (ALL TOGETHER)
+  table.innerHTML += `
+    <tr></tr>
+   <tr class="tr-tl-row" ">
+      <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total Value</td>
+      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${grandTotalDollar}</td>
+      <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
+    </tr>
+
+    <tr class="tr-tl-row" ">
+      <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Total value of Tax@(13%)</td>
+      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${taxDisplay}</td>
+      <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
+    </tr>
+
+    <tr class="tr-tl-row">
+      <td colspan="3" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">Net Value</td>
+      <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.6rem, 0.9vw, 1.1rem); font-weight: 450;">$${netTotalDisplay}</td>
+      <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
+    </tr>
+<tr>&nbsp</tr>
+  `;
+
+}   // ✅ ONLY ONE closing bracket for function
+
+function formatCentsToDollars(cents) {
+  return (cents / 100).toFixed(2);
+}
+
+// 🔹 Itenm Value calculate func
+
+
+function calculatevalueincent(qty, prc) {
+  const q = parseInt(qty) || 0;
+  const p = parseInt(prc) || 0;
+  return q * p; // stays in cents (safe, no floating errors)
+}
+
+// Tax calculation functions
+
+function calculateTaxCents(grandTotalCents, taxPercent) {
+  const taxRate = parseFloat(taxPercent) || 0;
+  return Math.round((grandTotalCents * taxRate) / 100);
+}
+
+function calculateNetTotalCents(grandTotalCents, taxCents) {
+  return grandTotalCents + taxCents;
+}
+
+ // Clear input fields
+  window.clearInputs = async function () {
+  
+    
+    document.getElementById("name").value = "";
+    document.getElementById("nbr").value = "";
+    document.getElementById("qty").value = "";
+     
+    document.getElementById("movtype").value = "";
+    document.getElementById("movqty").value = "";
+    
+
+  }
+
+
+
+function clean(value) {
+  return (value === null || 
+          value === "null" || 
+          value === "NaN" ||
+          value === "undefined" || 
+          value === "NaN" ||
+          (typeof value === "number" && isNaN(value)))
+         ? "" 
+         : value;
+}
+
+
+function cleanrol(valuerol, valueqty) {
+  return (valuerol === null || 
+          valuerol === "null" || 
+          valuerol === "NaN" ||
+          valuerol === "undefined" || 
+          valuerol === "NaN" ||
+          (typeof valuerol === "number" && isNaN(valuerol)))
+         ? "" 
+         : valuerol;
+
+  if (valueqty < valuerol) {
+    return "<span style='color:red;'>" + cleanrol + "</span>";
+  }
+
+  return cleanrol;
+}
+
+
+
+
+ 
+
+
+
+
+// Fill inputs when Edit button is clicked
+window.edititem = function (edtbtn, id, name, nbr, qty,) {
+	
+// console.log(index);
+// document.getElementById(`row-${index}`).style.backgroundColor = "yellow";
+ // document.getElementById("row-1").style.backgroundColor = "yellow"; 
+//  itemTable.target.parentNode.classList.toggle('highlight');
+  document.getElementById("name").value = name;
+  document.getElementById("nbr").value = nbr;
+  document.getElementById("qty").value = qty;
+
+// document.getElementById(`row-${index}`).classList.add("highlight");
+ // document.getElementById(`row-${index}`).style.backgroundColor = "yellow";
+
+// get clicked row
+    let row = edtbtn.closest("tr");
+    // highlight clicked row
+    row.classList.add("highlight");
+ 
+  
+  
+ 
+  
+
+
+  // Store document ID for update
+  window.currentEditId = id;
+};
+
+// Update record in Firestore
+window.updateitem = async function () {
+  if (!window.currentEditId) {
+    alert("Please select an item first to submit its Transaction!");
+    return;
+  }
+//  
+//  const selectedmovtype = "Return";
+   
+//   alert("RI am before if check!");
+//   console.log("User data:", selectedmovtype);
+   
+  const nbr = document.getElementById("nbr").value;
+  const name = document.getElementById("name").value;
+ 
+  const qty = document.getElementById("qty").value; 
+  const movqty = document.getElementById("movqty").value;
+  const prvqty = document.getElementById("qty").value;
+  const movtype = document.getElementById("movtype").value;
+  const qtyup = parseInt(prvqty) + parseInt(movqty);
+  const qtydown = parseInt(prvqty) - parseInt(movqty);
+  let sumqty; 
+
+ if (!isValidSelectioncus("cus", "cuss")) {
+  alert("Customer not selected");
+  return;
+} else  {
+  document.getElementById("cuss").disabled = true; 
+}
+if (!isValidSelectionmov("movtype", "movtypes")) {
+  alert("Transaction Type not selected");
+  return;
+} else  {
+}
+
+ if (movqty.trim() === "") {   
+     alert("Please enter Transaction Quantity!");
+  return;
+   }
+ if (movtype.trim() === "Issue" || movtype.trim() === "Disposal" || movtype.trim() === "Adj Down" ) {
+   if (qtydown < 0) {
+     alert("The Item does not have sufficient Balance for This Transaction!");
+  return;
+}
+   }
+ 
+  if (movtype.trim() === "Receipt" || movtype.trim() === "Return" || movtype.trim() === "Adj Up" ) {
+   sumqty = parseInt(qtyup);
+   }
+  else {
+   sumqty = parseInt(qtydown);
+  } 
+  if (firsttime === "yes") { 
+//   alert ("Inv No picking is done only once");
+   const resetcuss1 = document.getElementById("cus");
+    resetcuss1.disabled = true;
+   
+  invread();
+  firsttime = "no"
+  } 
+  const movid = `${nbr}_${Date.now()}`;
+  // console.log(newinvnbr);
+  try {
+    await updateDoc(doc(db, "newitemstable", window.currentEditId), {     
+      qty: parseInt(sumqty)    
+    });
+           
+      await setDoc(doc(db, "movementstable", movid), {
+      nbr: nbr,
+      invnbr: newinvnbr,
+      name: name,
+      qty: qty,
+      movtype: movtype,
+      movqty: parseInt(movqty),
+      clsqty: parseInt(sumqty),
+      ownerId: name,
+      createdAt: serverTimestamp()
+    });
+    alert("Transaction processed successfully!");
+    // console.log(newinvnbr);
+    window.currentEditId = null;
+    clearInputs(); 
+    loadnewitemstable();
+  } catch (error) {
+    console.error("Transaction Update error:", error);
+  }
+ };
+
+  // remove previous highlight
+    document.querySelectorAll(".tr-main-row").forEach(row => {
+        row.classList.remove("highlight");
+    });
+
+
+  // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
+  
+  loadnewitemstable();
+
+
+//  Load Firestore data into <datalists-cust>
+async function loadDatalistcust() {
+      
+ try {
+    customerdatalist = document.getElementById("cuss");
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("custdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.name; // change field as needed
+
+      customerdatalist.appendChild(option);
+      
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Customer Table:", error);
+  }
+
+
+}
+
+//  Load Firestore data into <datalists-mvtp>
+async function loadDatalistmvtp() {
+      
+ try {
+    movtypedatalist = document.getElementById("movtypes");
+    
+    const db = firebase.firestore();
+    const snapshot = await db.collection("mvtpdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.name; // change field as needed
+
+      movtypedatalist.appendChild(option);
+      
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Transaction Type Table:", error);
+  }
+
+
+}
+
+loadDatalistcust();
+loadDatalistmvtp();
+
+
+function isValidSelectioncus(inputId, datalistId) {
+  const input = document.getElementById(inputId).value;
+  customername = document.getElementById(inputId).value;
+  localStorage.setItem("lscustomername", customername);
+//  localStorage.setItem("lscustomername", "Asad Saeed");
+  const options = document.querySelectorAll(`#${datalistId} option`);
+
+  const validValues = Array.from(options).map(opt => opt.value);
+
+  return validValues.includes(input);
+}
+
+function isValidSelectionmov(inputId, datalistId) {
+  const input = document.getElementById(inputId).value;
+  const options = document.querySelectorAll(`#${datalistId} option`);
+  const validValues = Array.from(options).map(opt => opt.value);
+  return validValues.includes(input);
+}
+
+window.PrintCustInvoice = async function () {
+  
+  window.location.href = "./Movements-inq.html";
+//  window.location.href = "Movements-inq.html";
+  
+}
+
+
+
+// -------  Inv read new para added 30/4
+async function invread() {
+ let iser = document.getElementById("iser").value.trim();
+ if (!iser) {
+ iser = 1; // fallback if nothing entered
+ }
+iser = 1;
+ try {  
+    const docRef1 = doc(db, "iref", iser.toString());
+    // 🔹 Check if inv ref record is found
+    const existingDoc = await getDoc(docRef1);
+    if (existingDoc.exists()) {
+    //  alert("Inv ref found!");
+       const data = existingDoc.data();
+     document.getElementById("output").innerText =
+        JSON.stringify(existingDoc.data(), null, 2);    
+      newinvnbr = data.inbr;
+      newinvnbr = newinvnbr + 1;
+      invupd(iser);
+  }  
+  else {
+    alert("Inv ref could not be found!");
+   } 
+  } catch (error) {
+    console.error("Error reading inv ref:", error);
+    alert("Error reading inv ref. Check console.");
+  }
+};
+
+// ------  inv read new para end 30/4
+
+// new iref update function
+
+async function invupd(iser) {
+console.log(newinvnbr);
+try {  
+      const docRef2 = doc(db, "iref", iser.toString());
+  
+     await setDoc(docRef2, { inbr: newinvnbr, createdAt: serverTimestamp() }, { merge: true });
+ 
+  // alert("Inv ref updated!");
+   localStorage.setItem("lsinvnbr", newinvnbr); 
+  // console.log(newinvnbr);
+
+  } catch (error) {
+    console.error("Error updating inv ref:", error);
+    alert("Error updating inv ref. Check console.");
+  }
+};
+
+// iref update func ends
+
+// new func which is replacement of invread() and invupd() combo
+
+async function invreadnew() {
+  let iser = document.getElementById("iser").value.trim();
+  if (!iser) iser = 1;
+
+  try {
+    const newinvnbr = await getNextInvoiceNumber(iser);
+
+    document.getElementById("output").innerText =
+      "New Invoice Number: " + newinvnbr;
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// new combo ends here
+
+//  new function from chatgpt to get invoice number incremented starts here
+
+
+
+async function getNextInvoiceNumber(iser) {
+  const docRef = doc(db, "iref", iser.toString());
+
+  try {
+    const newNumber = await runTransaction(db, async (transaction) => {
+      const docSnap = await transaction.get(docRef);
+
+      if (!docSnap.exists()) {
+        throw "Document does not exist!";
+      }
+
+      const current = docSnap.data().inbr || 0;
+      const next = current + 1;
+
+      transaction.update(docRef, {
+        inbr: next,
+        createdAt: serverTimestamp()
+      });
+
+      return next; // 🔹 this comes out of the transaction
+    });
+
+    console.log("New invoice number:", newNumber);
+    localStorage.setItem("lsinvnbr", newNumber);
+
+    return newNumber;
+
+  } catch (error) {
+    console.error("Transaction failed:", error);
+    alert("Failed to generate invoice number.");
+  }
+}
+
+// new incremented func ends here
+
+// movements loading in table func starts here
+
+// 🔹 READ (Load movement Data into Table)
+ window.loadnewmovementstable = async function () {
+ 
+ // alert("I am in loadnewmove");
+//  let lscustname = customername;
+  document.getElementById("custname").textContent = customername;
+  let lsinvoice = newinvnbr;
+  document.getElementById("invno").textContent = lsinvoice;
+  document.getElementById("invdt").textContent = new Date().toLocaleDateString();
+  const now = new Date();
+   document.getElementById("invtm").textContent = now.toLocaleTimeString();
+
+
+  const lsname = customername;
+//  const lsstarttime = localStorage.getItem("InvStartTime");
+//  const lsendtime = localStorage.getItem("InvEndTime");
+ 
+//  console.log(lsstarttime);
+//  console.log(lsendtime);
+  console.log(lsname);
+  const table = document.getElementById("itemTable");
+  
+  table.innerHTML = "";
+//  const collectionRef = collection(db, "movementstable");
+//  const q = query(collectionRef, orderBy("sortnbr", "asc"));
+
+
+//  const q = query(collectionRef, orderBy("nbr", "asc"), orderBy("createdAt", "asc"));
+//   const q = query(collectionRef);
+//   const q = query(collectionRef, orderBy("nbr", "asc"));
+
+const q = query(
+  collection(db, "movementstable"),
+//  where("sortnbr", ">", 0),
+//  where("sortnbr", "<", 999999)
+  where("invnbr", "==", Number(newinvnbr)),
+  
+  orderBy("createdAt")
+//  orderBy("sortnbr", "asc")
+);
+console.log(newinvnbr);
+// alert("I finished loadnewmove query");
+
+
+  const querySnapshot = await getDocs(q);
+
+  let grandTotalCents = 0; // ✅ accumulator for grand total
+
+//   console.log(lsinvoice);
+  querySnapshot.forEach((document) => {
+    const data = document.data();
+    const docId = document.id;
+//    dpdate1 = dtat.createdAt;
+//    dpdate = dpdate1.todate();
+//     dpdate = "2029-12-31";
+    
+    table.innerHTML += `
+      
+      <tr class="tr-main-row"  >
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.nbr}</td>
+        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400; padding-left: 0.2vw;">${data.name}</td>
+       
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.qty}</td> 
+      
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.movtype}</td>
+        
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.movqty}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.1vw, 1.2rem); font-weight: 400;">${data.clsqty}</td>
+        
+        
+        
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.8rem, 1.0vw, 1.1rem); font-weight: 400; text-align: center;">${data.createdAt.toDate().toLocaleString('en-CA', {
+    hour: '2-digit',
+  minute: '2-digit',
+  hour12: true
+    
+  })}</td>
+        
+      </tr>
+
+     <tr></tr>
+    `;
+  });
+
+    
+const el = document.getElementById("movements-div");
+el.setAttribute("style", "display: block;");
+const e2 = document.getElementById("items-div");
+e2.setAttribute("style", "display: none;");
+viewableTable
+const e3 = document.getElementById("viewableTable");
+e3.setAttribute("style", "display: none;");
+const e13 = document.getElementById("nav-div");
+e13.setAttribute("style", "display: none;");
+ 
+
+}   // ✅ ONLY ONE closing bracket for function
+
+
+// alert("I finished loadnewmove table load");
+
+ window.exitInvoice = async function () {
+ firsttime = "yes";
+ newinvnbr = 0;
+ customername = " ";
+ 
+ 
+ const resetcuss = document.getElementById("cus");
+    resetcuss.value = "";
+    resetcuss.disabled = false;
+    resetcuss.focus();
+
+
+ const table = document.getElementById("itemTable");
+ table.innerHTML = "";
+const e4 = document.getElementById("movements-div");
+e4.setAttribute("style", "display: none;");
+const e5 = document.getElementById("items-div");
+e5.setAttribute("style", "display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #9bc7be;");
+viewableTable
+const e6 = document.getElementById("viewableTable");
+e6.setAttribute("style", "display: block;");
+const e16 = document.getElementById("nav-div");
+e16.setAttribute("style", "display: block;");
+
+ 
+
+}
+
+
+
+
+ 
+
+
+
+
+
+  // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
+ // movements-div.style.display = "block";
+  // alert("I am before printinv");
+ 
+
+
+
+// movements loading in table func ends here
+
+//  PRINT FUNCTION START
+
+async function printInvoice() {
+  // alert("I am in printinv");
+  const table = document.getElementById("wholeitemTable").outerHTML;
+
+  const printWindow = window.open('', '', '');
+
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Invoice</title>
+        <style>
+       
+          body {            
+            font-family: Arial, sans-serif;
+            padding: 3vw;
+            background: #a3c2c2;
+          }
+          h4 {
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 20px;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }                    
+       @media print {
+          td {
+            border: 0.2vw solid black; 
+            padding: 9px;         
+         }
+            td:nth-child(1),
+            td:nth-child(3),
+             td:nth-child(4),
+             td:nth-child(5),
+             td:nth-child(6),
+           td:nth-child(7) {
+            text-align: center;
+          }    
+          
+                   
+             table th {
+            font-weight: 600;
+            font-size: 50px;
+            color: #3b021c;
+            border: 0.2vw solid black;
+            padding: 12px;                                  
+            }            
+         }    
+    
+  @media print { 
+ 
+.gap2vh {
+  height: 5px;  /* or any size you want; mobile = desktop */
+}
+.gap4vh {
+  height: 13px;  /* or any size you want; mobile = desktop */
+}
+
+    tr {
+      page-break-inside: avoid;
+    }
+  }
+.invoice-wrapper {
+  margin-top: 10px;
+  max-width: 800px;
+  margin: 20px auto; /* Centers the invoice */
+  padding: 30px;
+  background-color: #ffffff;
+  border: 0px solid #eee;
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #555;
+}
+
+
+
+  </style>
+ </head>
+<body>
+      ${table}        
+        <br>
+        <p style="text-align:center;">Thank you for your business!</p> 
+        <br>     
+    <footer>
+    <p>Maya Enterprisw. All rights reserved.</p>
+    <address>
+      Contact us at: <a href="mailto:ali_albader_alsalem@yahoo.com">ali_albader_alsalem@yahoo.com</a>
+    </address>
+  </footer> 
+      
+</body>
+</html>
+  `);
+  
+  printWindow.print();
+  document.getElementById("custdata").textContent = customername;
+      if (window.matchMedia("(min-width: 768px)").matches) {
+          printWindow.close();
+      }
+}
+window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
+//  PRINT FUNCTION END
+
+</script>
+
+</body>
+</html>
