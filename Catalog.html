@@ -27,19 +27,19 @@
           background: LightCyan;
       //   background: #cce6ff;
           background: #9bc7be;
-          background: #d5f7d8;
          
       /*    background:  */
           line-height: 0.8;         
             }
 
-  .lkbg { 
+.lkbg { 
     color: #cce6ff;
     background-color: Black; 
     padding: 2.5vh 4vh; /* Adds space around the text */
     display: inline-block; /* Ensures padding and background apply correctly */
     border-radius: 3vh;
  } 
+
 .liheight {
    line-height: 2.5dvh;
   } 
@@ -391,7 +391,7 @@ background-color: #9bc7be;
 /* background-color: #E6E6FA; */
  font-weight: 600;
  height: 8vh; 
- border-radius: 12px;
+border-radius: 12px;
 }
 
 @media (max-width: 768px) {
@@ -399,7 +399,7 @@ background-color: #9bc7be;
  font-size: clamp(0.7rem, 1.1vw, 1.2rem);
 /* font-size: clamp(0.5rem, 1.0vw, 1.1rem); */
  height: 5vh;
- border-radius: 12px;
+border-radius: 12px;
  font-weight: 600; 
 }
 }
@@ -603,6 +603,12 @@ height: 5vh;
 }
 }
 
+::-webkit-calendar-picker-indicator {
+    width: 5dvh; /* Increase width */
+    height: 5dvh; /* Increase height */
+    cursor: pointer;
+}
+
 .prt-btn {
   width: 0%; 
   text-align: right;
@@ -610,9 +616,9 @@ height: 5vh;
   font-size: clamp(0.9rem, 1.4vw, 1.6rem);
   height: 0vh;
   font-weight: 480; 
-  border: 0.0vw solid black;
+  border: 0.00vw solid black;
   border-radius: 0px;
-  margin-right: -22vw;
+  margin-right: -40vw;
   
  }
 
@@ -644,38 +650,35 @@ height: 5vh;
  }
 }
 
+
+
   </style>
 </head>
 
 <body  class="body_cls">
 
-
- <!-- Following is div which is replacement of Navigation Bar -->
+<!-- Following is div which is replacement of Navigation Bar -->
 
 <div style = "display: flex; justify-content: space-between; background-color: black;">
 
-<div style="text-align: left; margin-left: 1vw; display: inline-block height: 7vh; margin-top: 3vh; ">
-<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Items Below Minimum Level</Label>
-</div>
-<div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 1.5vh; ">
-<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
+
+<div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Items Catalog Management</Label>
 </div> 
 
-<div style="text-align: left; margin-right: 1vw; margin-top: -3vh; display: inline-block ">
- <a class="ext-btn lkbg" href="reports.html">Back</a> 
-</div> 
+
 </div> 
 
 <!-- Above is div which is replacement of Navigation Bar -->
 
 
 <div class="gap3vh"></div>
-<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background: #709c95; ">
+<div style="display: flex; width: 98%; border: 0.2vw dashed black; margin: 0 auto; background-color: #709c95;">
 
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Selected Item Detail
+<div class = "items-add-upd" > Add Or Upd/Del/view Selected Item
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
@@ -686,12 +689,12 @@ height: 5vh;
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
  <input list="ctgs" class="input-field input-ctg-supl" title="Select Item Category" id="ctg" name="actg" placeholder="Item Category" >
- 
+ <datalist id="ctgs"></datalist>
 </div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
  <input list="sups" class="input-field input-ctg-supl" title="Select Item Manuf./Supplier" id="sup" name="asup" placeholder="Manufacturer/Supplier"  >
-   
+ <datalist id="sups"></datalist>   
 </div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
@@ -707,28 +710,44 @@ height: 5vh;
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
 <input list="imps" class="input-field input-imp" title="Select Item Importance" id="imp" name="aimp" placeholder="Importance"> 
- <div class="gap1vh">&thinsp;</div>
+ <datalist id="imps">
+   <option value="Strategic">
+   <option value="Normal">
+ </datalist> 
+<div class="gap1vh">&thinsp;</div>  
   <input list="cons" class="input-field input-dur-rol-mnl-exp-fmd" title="Select Item Durability" id="con" name="acon" placeholder="Consumable/Permanent" >
-  
+  <datalist id="cons">
+   <option value="Consume">
+   <option value="Permanent">
+ </datalist>   
 </div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
- <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt:)" >
+ <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Reorder Level (Optional)" id="rol" min="1" max="99999999" placeholder="Reorder Level (opt)" >
 <div class="gap1vh">&thinsp;</div> 
- <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt:)" >
+ <input type="number" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Minimum Level (Optional)" id="mnl" min="1" max="99999999" placeholder="Minimum Level (opt)" >
 </div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry (yyyy-mm-dd opt:)" >
- <div class="gap1vh">&thinsp;</div> 
-<input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mdt(yyyy-mm-dd opt:)" >
+  <input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Expiry Date (Optional)" id="exp" placeholder="Expiry Date (opt)" onfocus="(this.type='date')" onblur="(this.type='text')">
+<div class="gap1vh">&thinsp;</div>  
+<input type="text" class="input-field input-dur-rol-mnl-exp-fmd" title="Enter Item Last Movement Date (Optional)" id="fmd" placeholder="Last Mov Date (opt)"onfocus="(this.type='date')" onblur="(this.type='text')" >
   <input type="hidden" id="docIdHolder">
 </div>
 
 
 
 <div class="gap1vh"></div>
-
+<div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
+  
+  <button id="btn-for-add" onclick="additem()" type="button" class="add-btn";>Add</button>
+  <div>&nbsp</div>
+  <button id="btn-for-upd" onclick="updateitem()" type="button" class="upd-btn";>Update</button>
+  <div>&nbsp</div>
+  <button id="btn-for-del" onclick="deleteitem()" type="button" class="upd-btn";>Delete</button>
+  <div>&nbsp</div>
+  <button id="btn-for-clr" onclick="Clearinputdata()" type="button" class="clr-btn";>Clear</button>
+</div>
 
 <div class="gap3vh"></div>
 </div>
@@ -743,13 +762,12 @@ height: 5vh;
 
 
 
-<div class="items-add-upd" style= "margin-top: -0.3vh;" >Below Minimum Level&nbsp&nbsp
+<div class="items-add-upd" style= "margin-top: -1.0vh;">Grid Showing All Existing Items of The Company
 <div style="text-align: left; margin-right: 0vw; display: inline-block ">  
-<button onclick="printInvoice()" type="button" class="prt-btn"; title="Click to Print" >
+<button onclick="printInvoice()" type="button" class="prt-btn"; title="Click to print" >
 <img src="print-icon9.png" alt="Click Me"   >
 </button> 
 </div>
-
 
   <!-- HTML Table For showing all records of database-->
 <div id = "wholeitemTable" class="custom-table-container">
@@ -760,9 +778,8 @@ height: 5vh;
         <th style="text-align: center; width: 8%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">No.</th>
          
         <th style="text-align: center; width: 38%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Name</th>              
-        
-        <th style="text-align: center; width: 14%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Minimum Lvl</th>
         <th style="text-align: center; width: 11%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Qty</th>
+        <th style="text-align: center; width: 14%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Price</th>
         <th style="text-align: center; width: 18%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Value</th>
         <th style="text-align: center; width: 10%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
         
@@ -825,44 +842,146 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
- 
- // 🔹 READ (Load Data into Table)
-async function loadnewitemstable() {
-
-  document.getElementById("name").disabled = true; 
-  document.getElementById("nbr").disabled = true; 
-  document.getElementById("uis").disabled = true;  
-  document.getElementById("qty").disabled = true; 
-  document.getElementById("prc").disabled = true; 
-  document.getElementById("exp").disabled = true; 
-  document.getElementById("ctg").disabled = true; 
-  document.getElementById("sup").disabled = true; 
-  document.getElementById("imp").disabled = true; 
-  document.getElementById("con").disabled = true; 
-  document.getElementById("rol").disabled = true; 
-  document.getElementById("mnl").disabled = true; 
-  document.getElementById("fmd").disabled = true;    
   
+
+  
+
+
+// 🔹 CREATE (Insert Data)
+window.additem = async function () {
+
+  const name = document.getElementById("name").value;
+  const nbr = document.getElementById("nbr").value;
+  const uis = document.getElementById("uis").value;
+  const qty = document.getElementById("qty").value;
+  const prc = document.getElementById("prc").value;
+  const ctg = document.getElementById("ctg").value;
+  const sup = document.getElementById("sup").value;
+  const imp = document.getElementById("imp").value;
+  const con = document.getElementById("con").value; 
+   
+  const ownerId = document.getElementById("name").value;
+
+  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || ctg === "" || sup === "" || imp === "" || con === ""){
+    alert("Please Enter all Manadatory datas of the item");
+    return;
+  }
+
+if (!isValidSelection("ctg", "ctgs")) {
+  alert("A valid Item Category not selected from the Item Category list.");
+  return;
+}
+
+if (!isValidSelection("uis", "units")) {
+  alert("A valid Item Unit not selected from the Item Unit list.");
+  return;
+}
+
+if (!isValidSelection("sup", "sups")) {
+  alert("A valid Manf/Supplier not selected from the Manf/Sipplier list.");
+  return;
+}
+
+if (!isValidSelection("imp", "imps")) {
+  alert("A valid Item importance not selected from the Item importance list.");
+  return;
+}
+
+if (!isValidSelection("con", "cons")) {
+  alert("A valid Item consumption status not selected from the Item consumption list.");
+  return;
+}
+
+
+const expiryInput = document.getElementById("exp").value.trim();
+if (expiryInput !== "") {
+  if (!isValidDate(expiryInput)) {
+    alert("Please Enter a valid Expiry Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
+    return; // Stop update if invalid
+  }
+}
+ const exp = expiryInput;
+// const exp = expiryInput === "" ? null : expiryInput;
+
+const fmdInput = document.getElementById("fmd").value.trim();
+if (fmdInput !== "") {
+  if (!isValidDate(fmdInput)) {
+    alert("Please Enter a valid last Movement Date of Item in YYYY-MM-DD format (e.g. 2026-03-31)");
+    return; // Stop update if invalid
+  }
+}
+ const fmd = fmdInput;
+// const fmd = fmdInput === "" ? null : fmdInput;
+
+// const rol = document.getElementById("rol").value; 
+// const mnl = document.getElementById("mnl").value; 
+
+
+ const rol = document.getElementById("rol").value === "" ? null : document.getElementById("rol").value;
+ const mnl = document.getElementById("mnl").value === "" ? null : document.getElementById("mnl").value;
+
+ 
+// const exp = document.getElementById("exp").value === "" ? null : document.getElementById("exp").value;
+// const fmd = document.getElementById("fmd").value === "" ? null : document.getElementById("fmd").value;
+
+   
+  try {
+
+    // 🔹 Use nbr as document ID
+    const docRef = doc(db, "newitemstable", nbr.toString());
+
+    // 🔹 Check if document already exists
+    const existingDoc = await getDoc(docRef);
+
+    if (existingDoc.exists()) {
+      alert("Item number already exists!");
+      return;
+    }
+
+    // 🔹 Create document with nbr as ID
+    await setDoc(docRef, {
+      name: name,
+      nbr: parseInt(nbr),
+      qty: parseInt(qty),
+      prc: parseInt(prc),
+      uis: uis,
+      ctg: ctg,
+      sup: sup,
+      imp: imp,
+      con: con,
+      rol: rol,
+      mnl: mnl,
+      exp: exp,
+      fmd: fmd,
+      ownerId: ownerId,
+      createdAt: serverTimestamp()
+      // createdAt: new Date()
+    });
+
+    alert("Item added to Cloud Firestore!");
+    clearInputs();
+    loadnewitemstable(); // refresh table
+
+  } catch (error) {
+    console.error("Error adding item:", error);
+    alert("Error adding item. Check console.");
+  }
+};
+  // 🔹 READ (Load Data into Table)
+async function loadnewitemstable() {
+  document.getElementById("btn-for-del").disabled = true;
+  document.getElementById("btn-for-upd").disabled = true;
   const table = document.getElementById("itemTable");
   
   table.innerHTML = "";
   const collectionRef = collection(db, "newitemstable");
-  
   const q = query(collectionRef, orderBy("nbr", "asc"));
- //  new  const q = query(collectionRef, where("rol", "<", "qty"));
- //  new  const q = query(collectionRef, where("status", "==", "active"));
-  const querySnapshot = await getDocs(q);
 
-  const filtered = querySnapshot.docs.filter(doc => {
-  const data = doc.data();
-  return data.mnl !== null && data.qty < data.mnl;
-//  return data.qty > data.mnl;
-});
+  const querySnapshot = await getDocs(q);
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
 
-//  old  querySnapshot.forEach((document) => {
-  filtered.forEach((document) => {
+  querySnapshot.forEach((document) => {
     const data = document.data();
     const docId = document.id;
 
@@ -884,13 +1003,12 @@ async function loadnewitemstable() {
        
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; padding-left: 0.2vw; border-top: 0.05vw solid black; border-right: 0.00vw solid black;  ">${data.name}</td>
         
-        
-        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.mnl}</td>
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${data.qty}</td>
+        <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarprice}</td>
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border-top: 0.05vw solid black; border-right: 0.00vw solid black; ">${dollarvalue}</td> 
 
         <td style="font-size: clamp(0.7rem, 1.2vw, 1.3rem); font-weight: 500; border: 0.05vw solid black; text-align: center;">
-          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Detail</button>
+          <button onclick="viewitem('${docId}', '${data.name}', '${data.nbr}', '${data.uis}', '${data.qty}', '${data.prc}', '${data.exp}', '${data.ctg}', '${data.sup}', '${data.imp}', '${data.con}', '${data.rol}', '${data.mnl}', '${data.fmd}')" class = "edit-delt-btn";>Select</button>
           
         </td>                     
         
@@ -916,7 +1034,7 @@ async function loadnewitemstable() {
   table.innerHTML += `
     <tr></tr>
    <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">TL Value of items which Reached Minimum Level</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Total Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${grandTotalDollar}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -928,7 +1046,7 @@ async function loadnewitemstable() {
     </tr>
 
     <tr class="tr-tl-row"  >
-      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of all items which Reached Minimum Level</td>
+      <td colspan="4" style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">Net Value of all items</td>
       <td style="text-align: center; border: 0.0vw solid black; font-size: clamp(0.8rem, 1.2vw, 1.3rem); font-weight: 450;">$${netTotalDisplay}</td>
       <td colspan="1" style="text-align: right; border: 0.0vw solid black;"></td>
     </tr>
@@ -938,6 +1056,51 @@ async function loadnewitemstable() {
 
 
 }   // ✅ ONLY ONE closing bracket for function
+
+// 🔹 Guidefunction
+
+function guidealert() {
+  alert('The system welcome screen directs user to proceed to items data  ' +            
+        'base or system Guide through menu icon at top right of welcome screen.\n ' +
+        'Following functions can be done at Items DataBase screen\n ' +
+        '1. Add a new item,\n ' + 
+        
+        '   Type new item details in the Items Add/Update Input form ' +
+        '   and then click the Add Item button in the form\n ' +
+        '\n ' +
+        '2. Change details of any item,\n ' +
+        
+        '   click the update tab in the row of your items table where your ' + 
+        '   item is being displayed. It will bring all details of your' +  
+        '   selected item at Items Add/Update input form,' + 
+        '   type needed changes and then click Update Item button which is' + 
+        '   also in the form\n ' +
+        '\n ' +        
+        '3. Delete an unwanted item,\n ' +
+         
+        '   select in items Display Grid the row of your item to be deleted' + 
+        '   then click Delete button of the row.\n ' + 
+        '\n ' +
+        '4. Print invoice,\n ' +
+        
+        '   click Print Invoice link which is at the topright corner of ' + 
+        '   Items DataBase screen.');
+
+
+}
+window.guidealert = guidealert; // ⭐ IMPORTANT LINE
+
+function contactalert() {
+  alert("Email: ali_albader_alsalem@yahoo.com");
+
+}
+window.contactalert = contactalert; // ⭐ IMPORTANT LINE
+
+function myalert() {
+  alert("I am in print11 function.");
+
+}
+window.myalert = myalert; // ⭐ IMPORTANT LINE
 
 function formatCentsToDollars(cents) {
   return (cents / 100).toFixed(2);
@@ -965,18 +1128,145 @@ function calculateNetTotalCents(grandTotalCents, taxCents) {
 
 
 
+function isValidDate(expiry) {
+  // Check format using Regular Expression (YYYY-MM-DD)
+//  const regex = /^\d{4}-(0[1-9]|1[0-2])$/;
+   const regex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!regex.test(expiry)) {
+    return false; // Invalid format
+  }
+
+  // Optional: check if it is a real calendar date
+  const [year, month] = expiry.split("-").map(Number);
+
+  const date = new Date(year, month - 1); // month is 0-based in JS
+
+  // Ensure parsed values match input
+  return date.getFullYear() === year && date.getMonth() === month - 1;
+}
+
+function clean(value) {
+  return (value === null || 
+          value === "null" || 
+          value === "NaN" ||
+          value === "undefined" || 
+          value === "NaN" ||
+          (typeof value === "number" && isNaN(value)))
+         ? "" 
+         : value;
+}
 
 
+function cleanrol(valuerol, valueqty) {
+  return (valuerol === null || 
+          valuerol === "null" || 
+          valuerol === "NaN" ||
+          valuerol === "undefined" || 
+          valuerol === "NaN" ||
+          (typeof valuerol === "number" && isNaN(valuerol)))
+         ? "" 
+         : valuerol;
+
+  if (valueqty < valuerol) {
+    return "<span style='color:red;'>" + cleanrol + "</span>";
+  }
+
+  return cleanrol;
+}
+
+function isValidSelection(inputId, datalistId) {
+  const input = document.getElementById(inputId).value;
+  const options = document.querySelectorAll(`#${datalistId} option`);
+
+  const validValues = Array.from(options).map(opt => opt.value);
+
+  return validValues.includes(input);
+}
+
+
+  // 🔹 DELETE (Remove Record)
+  window.deleteitem = async function () {
+
+ const id = document.getElementById("docIdHolder").value;
+
+    if (!id) {
+        alert("No item selected for Delete");
+        console.log("No document selected");
+        return;
+    }
+
+    await deleteDoc(doc(db, "newitemstable", id));
+    alert("item Deleted from Firestore");
+    clearInputs();
+    loadnewitemstable();
+//    console.log("Deleted:", id);
+};
+  
+//    await deleteDoc(doc(db, "newitemstable", id));
+//    alert("item deleted from Firestore");
+//    clearInputs();
+//    loadnewitemstable();
+//  };
+
+  // Clear input fields
+  function clearInputs() {
+    
+    document.getElementById("name").value = "";
+    document.getElementById("nbr").value = "";
+    document.getElementById("qty").value = "";
+    document.getElementById("prc").value = "";
+    document.getElementById("exp").value = "";
+    document.getElementById("uis").value = "";
+    document.getElementById("ctg").value = "";
+    document.getElementById("sup").value = "";
+    document.getElementById("imp").value = "";
+    document.getElementById("con").value = "";
+    document.getElementById("rol").value = "";
+    document.getElementById("mnl").value = "";
+    document.getElementById("fmd").value = ""; 
+    document.getElementById("btn-for-upd").disabled = true;
+    document.getElementById("btn-for-del").disabled = true;
+    document.getElementById("btn-for-add").disabled = false;
+     
+
+  }
+
+window.Clearinputdata = async function () {
+    document.getElementById("name").value = "";
+    document.getElementById("nbr").value = "";
+    document.getElementById("qty").value = "";
+    document.getElementById("prc").value = "";
+    document.getElementById("exp").value = "";
+    document.getElementById("uis").value = "";
+    document.getElementById("ctg").value = "";
+    document.getElementById("sup").value = "";
+    document.getElementById("imp").value = "";
+    document.getElementById("con").value = "";
+    document.getElementById("rol").value = "";
+    document.getElementById("mnl").value = "";
+    document.getElementById("fmd").value = ""; 
+  document.getElementById("name").disabled = false;
+  document.getElementById("nbr").disabled = false; 
+  document.getElementById("uis").disabled = false;  
+  document.getElementById("qty").disabled = false;
+  document.getElementById("prc").disabled = false;
+  document.getElementById("exp").disabled = false;
+  document.getElementById("ctg").disabled = false;
+  document.getElementById("sup").disabled = false;
+  document.getElementById("imp").disabled = false;
+  document.getElementById("con").disabled = false;
+  document.getElementById("rol").disabled = false; 
+  document.getElementById("mnl").disabled = false;
+  document.getElementById("fmd").disabled = false;
+  document.getElementById("btn-for-upd").disabled = true;
+  document.getElementById("btn-for-del").disabled = true;
+  document.getElementById("btn-for-add").disabled = false;
   
 
+  }
 
-
-// Fill inputs when Detail button is clicked
-window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
-  
-  
-  
-  document.getElementById("docIdHolder").value = id;
+// Fill inputs when Edit button is clicked
+window.edititem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
   document.getElementById("name").value = name;
   document.getElementById("nbr").value = nbr;
   document.getElementById("uis").value = uis;
@@ -990,80 +1280,258 @@ window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, co
   document.getElementById("con").value = con;
   document.getElementById("rol").value = rol;
   document.getElementById("mnl").value = mnl;
-  document.getElementById("fmd").value = fmd;
-
- 
-  document.getElementById("name").disabled = true; 
-  document.getElementById("nbr").disabled = true; 
-  document.getElementById("uis").disabled = true;  
-  document.getElementById("qty").disabled = true; 
-  document.getElementById("prc").disabled = true; 
-  document.getElementById("exp").disabled = true; 
-  document.getElementById("ctg").disabled = true; 
-  document.getElementById("sup").disabled = true; 
-  document.getElementById("imp").disabled = true; 
-  document.getElementById("con").disabled = true; 
-  document.getElementById("rol").disabled = true; 
-  document.getElementById("mnl").disabled = true; 
-  document.getElementById("fmd").disabled = true;   
+  document.getElementById("fmd").value = fmd; 
  // Store document ID for update
   window.currentEditId = id;
-
 };
+
+// Fill inputs when Detail button is clicked
+window.viewitem = function (id, name, nbr, uis, qty, prc, exp, ctg, sup, imp, con, rol, mnl, fmd) {
+  
+  document.getElementById("btn-for-del").disabled = false;
+  document.getElementById("btn-for-upd").disabled = false;
+  document.getElementById("docIdHolder").value = id;
+  document.getElementById("name").value = name;
+  document.getElementById("nbr").value = nbr;
+  
+  document.getElementById("qty").value = qty;
+  document.getElementById("prc").value = prc;
+  document.getElementById("exp").value = exp;
+  document.getElementById("fmd").value = fmd;
+  document.getElementById("rol").value = rol;
+  document.getElementById("mnl").value = mnl;
+  document.getElementById("uis").value = ""; 
+  document.getElementById("ctg").value = "";
+  document.getElementById("sup").value = "";
+  document.getElementById("imp").value = "";
+  document.getElementById("con").value = "";
+  document.getElementById("uis").placeholder = uis; 
+  document.getElementById("ctg").placeholder = ctg;
+  document.getElementById("sup").placeholder = sup;
+  document.getElementById("imp").placeholder = imp;
+  document.getElementById("con").placeholder = con; 
+  document.getElementById("btn-for-add").disabled = true;
+ 
+ // Store document ID for update
+  window.currentEditId = id;
+};
+
+// Update record in Firestore
+window.updateitem = async function () {
+  if (!window.currentEditId) {
+    alert("Please select a record to view first.");
+    return;
+  }
+  if (document.getElementById("uis").value === "") {
+    document.getElementById("uis").value = document.getElementById("uis").placeholder;
+    }
+  if (document.getElementById("ctg").value === "") {
+    document.getElementById("ctg").value = document.getElementById("ctg").placeholder;
+    }
+   if (document.getElementById("sup").value === "") {
+    document.getElementById("sup").value = document.getElementById("sup").placeholder;
+   }
+   if (document.getElementById("imp").value === "") {
+    document.getElementById("imp").value = document.getElementById("imp").placeholder;
+    }
+   if (document.getElementById("con").value === "") {
+    document.getElementById("con").value = document.getElementById("con").placeholder;
+    }
+   document.getElementById("uis").placeholder = "Unit";
+   document.getElementById("ctg").placeholder = "Item Category";
+   document.getElementById("sup").placeholder = "Manufacturer/Supplier";
+   document.getElementById("imp").placeholder = "Importance";
+   document.getElementById("con").placeholder = "Consumable/Permanent";
+
+ const ownerId = document.getElementById("name").value;
+  const name = document.getElementById("name").value;
+  const nbr = document.getElementById("nbr").value;
+  const qty = document.getElementById("qty").value;
+  const prc = document.getElementById("prc").value;
+  const uis = document.getElementById("uis").value;
+  const ctg = document.getElementById("ctg").value;
+  const sup = document.getElementById("sup").value;
+  const imp = document.getElementById("imp").value;
+  const con = document.getElementById("con").value;
+  
+
+  if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || ctg === "" || sup === "" || imp === "" || con === ""){
+    alert("Please Enter all Manadatory data of the item");
+    return;
+  }
+
+const expiryInput = document.getElementById("exp").value.trim();
+if (expiryInput !== "") {
+  if (!isValidDate(expiryInput)) {
+    alert("Please Select a valid Expiry Date");
+    return; // Stop update if invalid
+  }
+}
+ const exp = expiryInput;
+// const exp = expiryInput === "" ? null : expiryInput;
+
+const fmdInput = document.getElementById("fmd").value.trim();
+if (fmdInput !== "") {
+  if (!isValidDate(fmdInput)) {
+    alert("Please Select a valid last Movement Date");
+    return; // Stop update if invalid
+  }
+}
+ const fmd = fmdInput;
+// const fmd = fmdInput === "" ? null : fmdInput;
+
+// const rol = document.getElementById("rol").value; 
+// const mnl = document.getElementById("mnl").value; 
+
+const rol = document.getElementById("rol").value === "" ? null : document.getElementById("rol").value;
+const mnl = document.getElementById("mnl").value === "" ? null : document.getElementById("mnl").value;
+
+// const exp = document.getElementById("exp").value === "" ? null : document.getElementById("exp").value;
+// const fmd = document.getElementById("fmd").value === "" ? null : document.getElementById("fmd").value;
+
+
+
+
+  try {
+    await updateDoc(doc(db, "newitemstable", window.currentEditId), {
+      name: name,
+      nbr: parseInt(nbr),
+      qty: parseInt(qty),
+      prc: parseInt(prc),
+      rol: parseInt(rol),
+      mnl: parseInt(mnl),
+      ctg: ctg,
+      sup: sup,
+      imp: imp,
+      con: con,
+      fmd: fmd,
+      exp: exp,
+      uis: uis 
+      
+    });
+
+    alert("item updated successfully!");
+    window.currentEditId = null;
+     clearInputs();
+    loadnewitemstable();
+  } catch (error) {
+    console.error("Update error:", error);
+  }
+};
+
 
   // Auto-load data when pnbr opens (like SQL SELECT * FROM table)
   
   loadnewitemstable();
 
+//  Load Firestore data into <datalists>
+async function loadDatalistcodes() {
+  
+    
+  try {
+    const datalist = document.getElementById("ctgs");
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("ctgdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.ctgname; // change field as needed
+
+      datalist.appendChild(option);
+    });
+
+ 
+ }
+
+    catch (error) {
+    console.error("Error loading Categories datalist:", error);
+  }
+
+ try {
+    const datalist = document.getElementById("sups");
+//    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("mnspdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.name; // change field as needed
+
+      datalist.appendChild(option);
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Supplier datalist:", error);
+  }
+
+ try {
+    const datalist = document.getElementById("units");
+//    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const snapshot = await db.collection("uisdatalist").get();
+
+    snapshot.forEach((doc) => {
+      const data = doc.data();
+
+      const option = document.createElement("option");
+      option.value = data.uisname; // change field as needed
+
+      datalist.appendChild(option);
+    });
+
+  }
+
+    catch (error) {
+    console.error("Error loading Unit of Issue datalist:", error);
+  }
+
+
+}
+
+loadDatalistcodes();
+
+
 
 //  PRINT FUNCTION START
 
 function printInvoice() {
- 
+  
+
   const table = document.getElementById("wholeitemTable").outerHTML;
-  const printWindow = window.open('', '', '');
+
+  const printWindow = window.open('', '', 'width=900,height=700');
 
   printWindow.document.write(`
     <html>
       <head>
-        <title>Reached Minimum Level</title>
+        <title>Items Balances</title>
         <style>
           body {            
             font-family: Arial, sans-serif;
             padding: 5vw;
             background: #a3c2c2;
           }
-          h6 {
+          h4 {
             text-align: center;
+            margin-top: 15px;
             margin-bottom: 20px;
           }
           table {
-            width: 112.5%;
+            width: 112%;
             border-collapse: collapse;
-          }           
-           @media print {
-           th {            
-             border: 0.2vw solid black;
-            padding: 15px;                                  
-            } 
+          }                    
+       @media print {
           td {
             border: 0.2vw solid black; 
-            padding: 10px;                   
+            padding: 9px;         
          }
-           td:nth-child(5) {
-           border-right: 1px solid black !important;
-          }
-            td:nth-child(5),        
-            td:nth-child(6) {       
-            colspan="2";           
-          }  
-            button {
-              display: none;              
-            } 
-           table th:nth-child(6),    
-            table td:nth-child(6) {   
-           display: none;     
-           } 
             td:nth-child(1),
             td:nth-child(3),
              td:nth-child(4),
@@ -1071,18 +1539,32 @@ function printInvoice() {
            td:nth-child(6) {
             text-align: center;
           }
-           td:nth-child(2) {
-            text-align: left;
-            padding-left: 2px; 
-          }                     
-
-         }        
-   
-       table.invoice-wrapper {
+           td:nth-child(5),        
+            td:nth-child(6) {       
+            colspan="2";           
+          }  
+            td:nth-child(5) {
+           border-right: 1px solid black !important;
+          } 
+            button {
+              display: none;           
+            }
+             table th:nth-child(6),    
+            table td:nth-child(6) {   
+           display: none;     
+           }
+             table th {
+            font-weight: 600;
+            font-size: 50px;
+            color: #3b021c;
+            border: 0.2vw solid black;
+            padding: 12px;                                  
+            }            
+         }    
+    table.invoice-wrapper {
     width: 100%;
     border-collapse: collapse;
   }
-
   @media print {
     thead {
       display: table-header-group;
@@ -1097,6 +1579,7 @@ function printInvoice() {
       page-break-inside: avoid;
     }
   }
+
 .invoice-wrapper {
   max-width: 800px;
   margin: 20px auto; /* Centers the invoice */
@@ -1120,28 +1603,27 @@ function printInvoice() {
     padding: 0;
   }
 }
-
-        </style>
-      </head>
-      <body>
-  <table class="invoice-wrapper">
-  <thead style="padding-top: 25px;">
+  </style>
+ </head>
+<body>
+  <table class="invoice-wrapper" >
+  <thead style="padding-top: 2px;">
     <tr>
       <td>
         <div style="text-align: left;">
-          <h6>Items That Reached Minimum Level
-          </h6>
-          <p style="font-size: 13px;">Maya Enterprise
+          <!-- Your existing header -->
+          
+          <h4>Items List</h4>
+          <p>Maya Enterprise
           <br>
           North York Toronto - Phone: 647-999-9999<br>
           email: ali_albader_alsalem@yahoo.com
-          <br>
+          <br><br>
           </p>
         </div>
       </td>
     </tr>
   </thead>
-
   <tbody>
     <tr>
       <td>
@@ -1151,23 +1633,23 @@ function printInvoice() {
           ${table}
         </table>
         <br>
-        <p style="text-align:center;">Thank you for your business!</p>   
+             
         </div>
       </td>
     </tr>
   </tbody>
-</table>
-   
-         </body>
-    </html>
+</table>          
+</body>
+</html>
   `);
-   printWindow.print();
-  if (window.matchMedia("(min-width: 768px)").matches) {
+  printWindow.print();
+      if (window.matchMedia("(min-width: 768px)").matches) {
           printWindow.close();
-      }     
+      }
 }
 window.printInvoice = printInvoice; // ⭐ IMPORTANT LINE
-//  PRINT FUNCTION END</script>
+//  PRINT FUNCTION END
+</script>
 
 </body>
 </html>
