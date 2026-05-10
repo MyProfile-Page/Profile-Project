@@ -355,29 +355,35 @@ width: 95%;
 }
 
 .input-field {
- font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+ font-size: 16px;
  height: 8vh;
-/* background-color: #51DEED; */
-  background-color: red;    
-/* background-color: #f8f2ed; */
- font-weight: 500; 
+ background-color: black; 
+ font-weight: 550; 
  border: 0.1vw solid black; 
- width: 60%;
+ width: 75%;
  color: white;
+ margin-top: 30vh;
+ margin-left: 5vw;
 }
 
 @media (max-width: 768px) {
 .input-field {
- font-size: clamp(0.8rem, 1.2vw, 1.3rem);
- height: 5vh;
-/* background-color: #51DEED; */
- background-color: #f8f2ed; */
- font-weight: 500; 
+ font-size: 16px;
+ height: 6vh;
+ background-color: black; 
+ font-weight: 550; 
+ border: 0.1vw solid black; 
  width: 100%;
+ color: white;
+ margin-top: 5vh;
+ margin-left: 0vw;
 }
 }
 
-
+.option[disabled][selected] {
+    font-size: 16px;
+    color: grey; 
+}
   </style>
    
 </head>
@@ -408,11 +414,11 @@ width: 95%;
 
 <!--  --------------------------------------------------START-First column of grid---------------------------------------     -->
  
- <div style="border: 0.00vw solid green; width: 75%; margin-top: 25vh; margin-left: 10vw;">    <!-- ist Inner_div -->  
+ <div>    <!-- ist Inner_div -->  
    
     <div style="border: 0.0vw solid green;">  
     
-  <select id ="reps" style="color: white; background: black; font-size: clamp(0.7rem, 1.6vw, 1.8rem);">   
+  <select id ="reps" class="input-field">   
  <option value="" disabled selected>&nbsp&nbsp&nbsp&nbsp--------Select Code Types--------&nbsp&nbsp&nbsp&nbsp</option>
    <option>Customer Codes</option>
    <option>Items Categories Codes</option>
