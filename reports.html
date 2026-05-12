@@ -90,19 +90,25 @@
   height: 4.0vh;  /* or any size you want; mobile = desktop */
 }
 
- .imagecls {
-  
-  
+  .box11 {  
   width: 75%;
-  margin: 0 auto;
-  
+  margin: 0 auto;  
  }
 @media (max-width: 768px) {
-.imagecls {
-  
+.box11 {  
   width: 75%;
-  margin: 0 auto;
-  
+  margin: 0 auto;  
+ }
+}
+
+ .box12 {  
+  width: 75%;
+  margin: 0 auto;  
+ }
+@media (max-width: 768px) {
+.box12 {  
+  width: 75%;
+  margin: 0 auto;  
  }
 }
 
@@ -112,7 +118,7 @@
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
- width: 80%;
+ width: 90%;
  color: white;
  margin-top: 17vh;
  margin-left: 1vw;
@@ -121,14 +127,14 @@
 @media (max-width: 768px) {
 .input-field {
  font-size: clamp(0.9rem, 1.6vw, 1.8rem);
- height: 4vh;
+ height: 8vh;
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
- width: 100%;
+ width: 90%;
  color: white;
- margin-top: 1.5vh;
- margin-left: 0vw;
+ margin-top: 12vh;
+ margin-left: 1vw;
 }
 }
 
@@ -156,7 +162,7 @@
 
 <div class="grid-container">
   <div class="grid-item">
-   <div  >
+   <div class="box11" >
     <select id ="reps" class = "input-field">   
     <option value="" disabled selected >&nbsp&nbsp&nbsp&nbsp--------Select Report--------       &nbsp&nbsp&nbsp&nbsp</option>
     <option>Below Reorder Level Items</option>
@@ -168,7 +174,7 @@
   </div>
   </div>
   <div class="grid-item">
-    <div class = "imagecls" >
+    <div class = "box12" >
        <img src="img-reports.png" class="responsive-img rounded" style="display: block; ">
      </div>
   </div> 
