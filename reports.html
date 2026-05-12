@@ -46,28 +46,27 @@
  .grid-container {
   display: grid; /* Enables grid layout */
   grid-template-columns: 50% 50%; /* Creates 2 columns of equal width */
-  gap: 10px; /* Space between rows and columns */
+  gap: 2vw; /* Space between rows and columns */
   background-color: #2196F3;
-  padding: 10px;
+  padding: 1.5vw;
 }
 
 @media (max-width: 768px) {
 .grid-container {
   display: grid; /* Enables grid layout */
-  grid-template-columns: 1001%;  /* Creates 1 columns of equal width */
-  gap: 10px; /* Space between rows and columns */
+  grid-template-columns: 100%;  /* Creates 1 columns of equal width */
+  gap: 2vw; /* Space between rows and columns */
   background-color: #2196F3;
-  padding: 10px;
+  padding: 1.5vw;
 }
 }
 
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
+  padding: 4vw;
+  font-size: clamp(1.1rem, 2.3vw, 2.4rem);
   text-align: center;
-  height: 300px;
   width: 95%;
   margin: 0 auto;
 }
@@ -108,33 +107,33 @@
 }
 
 .input-field {
- font-size: 16px;
- height: 30px;
+ font-size: clamp(0.9rem, 1.6vw, 1.8rem);
+ height: 6vh;
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
  width: 80%;
  color: white;
- margin-top: 70px;
- margin-left: 5px;
+ margin-top: 17vh;
+ margin-left: 1vw;
 }
 
 @media (max-width: 768px) {
 .input-field {
- font-size: 16px;
- height: 20px;
+ font-size: clamp(0.9rem, 1.6vw, 1.8rem);
+ height: 4vh;
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
  width: 100%;
  color: white;
- margin-top: 5px;
- margin-left: 0px;
+ margin-top: 1.5vh;
+ margin-left: 0vw;
 }
 }
 
 .option[disabled][selected] {
-    font-size: 16px;
+    font-size: clamp(1.1rem, 2.3vw, 2.4rem);
     color: grey; 
 }
 
