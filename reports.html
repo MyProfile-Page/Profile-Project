@@ -36,73 +36,42 @@
  /*  No Gemini */
  /*  No Google Analytic */
  /*  hsmart-appl-pr */
- /*  hsmart-appl-pr */
- 
-
- 
+ /*  hsmart-appl-pr */ 
 
   .body_cls {
-          background-color: red;
-          background: linear-gradient(to right, #007bff, #00c6ff);
-          background: white;
-          background-color: #c5effd;
-          background-color: #f5f4a6;
-           background: LightCyan;
-          background: #3399ff;
-          background: #66b3ff;
-          background: #99ccff;
           background: #cce6ff;
           line-height: 1.0;         
             }
 
  .grid-container {
-            display: grid;
-            grid-template-columns: 55% 45%; /* 2 equal columns */
-    /*        gap: 2vw;  */
-            padding: 0.4vw;
-            grid-auto-rows: auto;
-         border: 0.00vw solid green;
-         width: 98%; 
-         margin: 0 auto;
-        }
-
- .grid-container > div {
-  border: 0.00vw solid red;
-  padding: 0.25vw;
+  display: grid; /* Enables grid layout */
+  grid-template-columns: auto auto; /* Creates 2 columns of equal width */
+  gap: 10px; /* Space between rows and columns */
+  background-color: #2196F3;
+  padding: 10px;
 }
-
-.box {         
-      padding: 20vw;
-      text-align: center;
-      font-size: 20px;
-      border: 0.4vw solid steelblue;
-        }
 
 @media (max-width: 768px) {
 .grid-container {
-  display: grid;
- grid-template-columns: 1fr; /* Stack vertically */
-grid-auto-rows: auto;
-padding: 0.4vw;        
-border: 0.00vw solid green;
-width: 98%; 
-margin: 0 auto; 
+  display: grid; /* Enables grid layout */
+  grid-template-columns: auto  /* Creates 1 columns of equal width */
+  gap: 10px; /* Space between rows and columns */
+  background-color: #2196F3;
+  padding: 10px;
 }
 }
-.second-box {
-width: 100%;
-height: auto;
-margin-top: 2.5vh;  
-margin-left: -11vw;
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 300px;
+  width: 95%;
+  margin: 0 auto;
 }
-@media (max-width: 768px) {
-   .second-box {
-    width: 100%;
-    height: auto;
-    margin-top: 10vh;
-    margin: 0 auto;   
-  }
-}
+
 .responsive-img {
   width: 100%;
   height: auto;
@@ -123,66 +92,44 @@ margin-left: -11vw;
 }
 
  .imagecls {
-  margin-top: 7vh;
+  
   border: 0.0vw solid Black;
+  width: 75%;
+  margin: 0 auto;
+  
  }
 @media (max-width: 768px) {
 .imagecls {
-  margin-top: 4vh;
+  
+  width: 75%;
+  margin: 0 auto;
+  height: 60px;
  }
 }
 
-.hello {
- padding-left: 3vw;
- margin-left: 2vw;
- text-align: center;
- margin-top: 35.0vh;
- font-family: calibri;
- font-size: clamp(2.1rem, 3.0vw, 3.1rem);
- Color: #007acc; 
- font-weight: 850;
- text-decoration: underline;
-}
-
-
-@media (max-width: 768px) {
-.hello {
- margin-top: 10.0vh;
- text-align: left;
- padding-left: 2vw;
- font-family: calibri;
- font-size: clamp(2.4rem, 3.5vw, 3.8rem);
- Color: black; 
- font-weight: 850;
- text-decoration: underline;
-}
-}
-
-
-
 .input-field {
  font-size: 16px;
- height: 8vh;
+ height: 30px;
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
- width: 75%;
+ width: 80%;
  color: white;
- margin-top: 30vh;
- margin-left: 5vw;
+ margin-top: 70px;
+ margin-left: 5px;
 }
 
 @media (max-width: 768px) {
 .input-field {
  font-size: 16px;
- height: 6vh;
+ height: 20px;
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
  width: 100%;
  color: white;
- margin-top: 5vh;
- margin-left: 0vw;
+ margin-top: 5px;
+ margin-left: 0px;
 }
 }
 
@@ -198,7 +145,7 @@ margin-left: -11vw;
 
 <body  class = "body_cls"; font-family: 'Poppins', sans-serif; >
 
-  <!-- Following is Start of Header div -->
+ <!-- Following is Start of Header div -->
 
 <div style = "display: flex; justify-content: space-between; background-color: black;">
   <div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
@@ -208,52 +155,27 @@ margin-left: -11vw;
 
 <!-- Above is End of Header div  -->
 
-
-
-<!-- Following is start of Grid Container  -->
-
-<div class="grid-container" style="border: 0.00vw solid green; width: 98%; border: 0.0vw solid black; margin: 0 auto;">    <!-- Grid Div -->
-
-
-
-<!--  --------------------------------------------------START-First column of grid---------------------------------------     -->
- 
- <div >    <!-- ist Inner_div -->  
-   
-    <div style="border: 0.0vw solid green;">  
-    
-  <select id ="reps" class="input-field";>   
- <option value="" disabled selected >&nbsp&nbsp&nbsp&nbsp--------Select Report--------&nbsp&nbsp&nbsp&nbsp</option>
-   <option>Below Reorder Level Items</option>
-   <option>Below Minimum Level Items</option>
-   <option>Above Reorder Level Items</option>
-   <option>Above Minimum Level Items</option>
-   <option>Expired Items</option>   
- </select> 
-   </div>
- 
-  
- </div>
-
-<!--  -------------------------------------------------END--Second column of grid---------------------------------------------     -->
-<!--  -------------------------------------------------START--First column of grid---------------------------------------------     -->
-  <div class="box" style="border: 0.00vw solid green; width: 85%; margin: 0 auto; ">    <!-- Start First col of grid -->
-      <div style=" display: flex; justify-content: center; align-items: center;">
-       <div class = "second-box" style="width: 100%; ">
-        <div class="gap1vh"></div>
-    
-       <div class = "imagecls" >
-       <img src="img-reorder.png" class="responsive-img rounded" style="display: block; ">
-       </div>
-            </div>
-      </div>
- </div>   
- 
-<!--  -------------------------------------------------END--First column of grid---------------------------------------------     -->
-</div>  <!--  -------------------------------------------------END--of Grid         -----------     -->
+<div class="grid-container">
+  <div class="grid-item">
+   <div  >
+    <select id ="reps" class = "input-field">   
+    <option value="" disabled selected >&nbsp&nbsp&nbsp&nbsp--------Select Report--------       &nbsp&nbsp&nbsp&nbsp</option>
+    <option>Below Reorder Level Items</option>
+    <option>Below Minimum Level Items</option>
+    <option>Above Reorder Level Items</option>
+    <option>Above Minimum Level Items</option>
+    <option>Expired Items</option>   
+  </select> 
+  </div>
+  </div>
+  <div class="grid-item">
+    <div class = "imagecls" >
+       <img src="img-reports.png" class="responsive-img rounded" style="display: block; ">
+     </div>
+  </div> 
 </div>
 
-<div class="gap2vh"></div>
+ 
 
 
 
