@@ -803,6 +803,7 @@ import {
   getDoc,
   deleteDoc, 
   doc,
+  where, 
   updateDoc,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
@@ -824,6 +825,13 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
+
+const params = new URLSearchParams(window.location.search);
+let paramId = "none";
+let paramnm = "none";
+paramId = params.get("param1");
+paramnm = params.get("param2");
+// document.getElementById("comp-name").textContent = paramnm;
 
  
  // 🔹 READ (Load Data into Table)
@@ -848,7 +856,8 @@ async function loadnewitemstable() {
   table.innerHTML = "";
   const collectionRef = collection(db, "newitemstable");
   
-  const q = query(collectionRef, orderBy("nbr", "asc"));
+ // const q = query(collectionRef, orderBy("nbr", "asc"));
+  const q = query(collectionRef, where("ownerId", "==", paramId)); 
  //  new  const q = query(collectionRef, where("rol", "<", "qty"));
  //  new  const q = query(collectionRef, where("status", "==", "active"));
   const querySnapshot = await getDocs(q);

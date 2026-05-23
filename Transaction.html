@@ -600,11 +600,17 @@ background-color: #9bc7be;
 <div id = "nav-div">
 <div style = "display: flex; justify-content: space-between; background-color: black;">
 
+<div style="text-align: left; margin-left: 0.7vw; display: inline-block; height: 7vh; margin-top: 3vh;  ">
+<Label id="comp-name" style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
+</div> 
 
 <div style="text-align: left; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
 <Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Items Transactions Management</Label>
 </div> 
 
+<div style="text-align: left; margin-right: 0.7vw;  display: inline-block; margin-top: 3vh;  ">
+ <button onclick="goback()"  style="background: Transparent; border: 0 solid black; color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem);">Back</button> 
+</div> 
 
  
 </div> 
@@ -665,7 +671,7 @@ background-color: #9bc7be;
 
 </div> 
   
- <div class="items-add-upd" > Grid Showing All Items  
+ <div class="items-add-upd" >  
 <div class="gap2vh"></div>
   <!-- HTML Table For showing all records of database-->
 <div id = "viewableTable" class="custom-table-container">
@@ -855,11 +861,24 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
+const params = new URLSearchParams(window.location.search);
+let paramId = "none";
+let paramnm = "none";
+paramId = params.get("param1");
+paramnm = params.get("param2");
+document.getElementById("comp-name").textContent = paramnm;
+
 let customerdatalist = " ";
 let movtypedatalist = " ";
 let firsttime = "yes";
 let newinvnbr = 0;
 let customername = " ";
+let userownerId = " ";
+
+window.goback = async function () {
+  window.location.href = `./Index.html`;
+ } 
+
   // 🔹 READ (Load Data into Table)
 async function loadnewitemstable() {
   let html = "";
@@ -867,8 +886,7 @@ async function loadnewitemstable() {
   
   table.innerHTML = "";
   const collectionRef = collection(db, "newitemstable");
-  const q = query(collectionRef, orderBy("nbr", "asc"));
-
+  const q = query(collectionRef, where("ownerId", "==", paramId));
   const querySnapshot = await getDocs(q);
 
   let grandTotalCents = 0; // ✅ accumulator for grand total
@@ -1117,7 +1135,9 @@ if (!isValidSelectionmov("movtype", "movtypes")) {
   invread();
   firsttime = "no"
   } 
-  const movid = `${nbr}_${Date.now()}`;
+  const ownerId = paramId;
+  const movid = `${ownerId}_${nbr}_${Date.now()}`;
+  
   // console.log(newinvnbr);
   try {
     await updateDoc(doc(db, "newitemstable", window.currentEditId), {     
@@ -1132,7 +1152,7 @@ if (!isValidSelectionmov("movtype", "movtypes")) {
       movtype: movtype,
       movqty: parseInt(movqty),
       clsqty: parseInt(sumqty),
-      ownerId: name,
+      ownerId: paramId,
       createdAt: serverTimestamp()
     });
     alert("Transaction processed successfully!");
@@ -1163,7 +1183,11 @@ async function loadDatalistcust() {
     customerdatalist = document.getElementById("cuss");
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
-    const snapshot = await db.collection("custdatalist").get();
+//    const snapshot = await db.collection("custdatalist").get();
+    const snapshot = await db
+     .collection("custdatalist")
+     .where("ownerId", "==", paramId)
+     .get(); 
 
     snapshot.forEach((doc) => {
       const data = doc.data();
@@ -1219,8 +1243,10 @@ loadDatalistmvtp();
 function isValidSelectioncus(inputId, datalistId) {
   const input = document.getElementById(inputId).value;
   customername = document.getElementById(inputId).value;
-  localStorage.setItem("lscustomername", customername);
+//  localStorage.setItem("lscustomername", customername);
+  
 //  localStorage.setItem("lscustomername", "Asad Saeed");
+// console.log(lscustomername);
   const options = document.querySelectorAll(`#${datalistId} option`);
 
   const validValues = Array.from(options).map(opt => opt.value);
@@ -1246,30 +1272,27 @@ window.PrintCustInvoice = async function () {
 
 // -------  Inv read new para added 30/4
 async function invread() {
- let iser = document.getElementById("iser").value.trim();
- if (!iser) {
- iser = 1; // fallback if nothing entered
- }
-iser = 1;
+ const ownerId = paramId;
  try {  
-    const docRef1 = doc(db, "iref", iser.toString());
+    const docRef1 = doc(db, "ownerstable", ownerId.toString());
     // 🔹 Check if inv ref record is found
     const existingDoc = await getDoc(docRef1);
     if (existingDoc.exists()) {
-    //  alert("Inv ref found!");
+      alert("company ref found!");
        const data = existingDoc.data();
      document.getElementById("output").innerText =
         JSON.stringify(existingDoc.data(), null, 2);    
       newinvnbr = data.inbr;
       newinvnbr = newinvnbr + 1;
-      invupd(iser);
+      invupd(ownerId);
   }  
   else {
-    alert("Inv ref could not be found!");
+    console.log(paramId);
+    alert("company ref could not be accessed!");
    } 
   } catch (error) {
-    console.error("Error reading inv ref:", error);
-    alert("Error reading inv ref. Check console.");
+    console.error("Error reading owners ref:", error);
+    alert("Error reading owners ref. Check console.");
   }
 };
 
@@ -1277,20 +1300,20 @@ iser = 1;
 
 // new iref update function
 
-async function invupd(iser) {
+async function invupd(ownerId) {
 console.log(newinvnbr);
 try {  
-      const docRef2 = doc(db, "iref", iser.toString());
+      const docRef2 = doc(db, "ownerstable", ownerId.toString());
   
      await setDoc(docRef2, { inbr: newinvnbr, createdAt: serverTimestamp() }, { merge: true });
  
-  // alert("Inv ref updated!");
+   alert("company ref updated for next invoice number!");
    localStorage.setItem("lsinvnbr", newinvnbr); 
-  // console.log(newinvnbr);
+   console.log(newinvnbr);
 
   } catch (error) {
-    console.error("Error updating inv ref:", error);
-    alert("Error updating inv ref. Check console.");
+    console.error("Error updating company ref:", error);
+    alert("Error updating company ref. Check console.");
   }
 };
 
@@ -1392,6 +1415,7 @@ const q = query(
 //  where("sortnbr", ">", 0),
 //  where("sortnbr", "<", 999999)
   where("invnbr", "==", Number(newinvnbr)),
+  where("ownerId", "==", paramId),
   
   orderBy("createdAt")
 //  orderBy("sortnbr", "asc")

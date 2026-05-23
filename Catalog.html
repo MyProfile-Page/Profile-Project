@@ -661,15 +661,28 @@ height: 5vh;
 <!-- Following is div which is replacement of Navigation Bar -->
 
 <div style = "position relative; display: flex; justify-content: space-between; background-color: black;">
-
+<div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
+<Label id="comp-name" style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
+</div> 
 
 <div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
 <Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Items Catalog Management</Label>
+</div>
+
+<div style="position absolute; right: 0; height: 7vh; margin-top: 3vh; margin-right: 3vw; ">
+ <button onclick="transitem()" style="color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem); background: transparent;">Transactions</button>
+</div>  
+
+<div style="position absolute; right: 0; height: 7vh; margin-top: 3vh; margin-right: 3vw; ">
+ <button onclick="reportsitem()"  style="color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem); background: transparent;">Reports</button>
 </div> 
 
 <div style="position absolute; right: 0; height: 7vh; margin-top: 3vh; margin-right: 2vw; ">
- <a href="reports.html" style="color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem);">Reports</a>
+ <button onclick="codesitem()"  style="color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem); background: transparent;">Codes</button>
+</div> 
 
+<div style="text-align: left; margin-right: 0.0vw; margin-top: -2.5vh; display: inline-block ">
+ <a class="ext-btn lkbg" href="Index.html">Back</a> 
 </div> 
 
 
@@ -826,6 +839,7 @@ import {
   getDoc,
   deleteDoc, 
   doc,
+  where,
   updateDoc,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
@@ -848,10 +862,22 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-  
+  const params = new URLSearchParams(window.location.search);
+let paramId = "none";
+let paramnm = "none";
+paramId = params.get("param1");
+paramnm = params.get("param2");
+document.getElementById("comp-name").textContent = paramnm;
 
-  
-
+window.transitem = async function () {
+  window.location.href = `./Transaction.html?param1=${paramId}&param2=${paramnm}`;
+ } 
+window.reportsitem = async function () {
+  window.location.href = `./reports.html?param1=${paramId}&param2=${paramnm}`;
+ } 
+window.codesitem = async function () {
+  window.location.href = `./codes.html?param1=${paramId}&param2=${paramnm}`;
+ } 
 
 // 🔹 CREATE (Insert Data)
 window.additem = async function () {
@@ -865,8 +891,9 @@ window.additem = async function () {
   const sup = document.getElementById("sup").value;
   const imp = document.getElementById("imp").value;
   const con = document.getElementById("con").value; 
+  const ownerId = paramId;
    
-  const ownerId = document.getElementById("name").value;
+//  const ownerId = document.getElementById("name").value;
 
   if (name === "" || nbr === "" || uis === "" || qty === "" || prc === "" || ctg === "" || sup === "" || imp === "" || con === ""){
     alert("Please Enter all Manadatory datas of the item");
@@ -934,7 +961,8 @@ if (fmdInput !== "") {
   try {
 
     // 🔹 Use nbr as document ID
-    const docRef = doc(db, "newitemstable", nbr.toString());
+    const itemId = `${ownerId}_${nbr}`;
+    const docRef = doc(db, "newitemstable", itemId.toString());
 
     // 🔹 Check if document already exists
     const existingDoc = await getDoc(docRef);
@@ -959,7 +987,7 @@ if (fmdInput !== "") {
       mnl: mnl,
       exp: exp,
       fmd: fmd,
-      ownerId: ownerId,
+      ownerId: paramId,
       createdAt: serverTimestamp()
       // createdAt: new Date()
     });
@@ -981,7 +1009,7 @@ async function loadnewitemstable() {
   
   table.innerHTML = "";
   const collectionRef = collection(db, "newitemstable");
-  const q = query(collectionRef, orderBy("nbr", "asc"));
+  const q = query(collectionRef, where("ownerId", "==", paramId));
 
   const querySnapshot = await getDocs(q);
 
@@ -1412,7 +1440,8 @@ const mnl = document.getElementById("mnl").value === "" ? null : document.getEle
       con: con,
       fmd: fmd,
       exp: exp,
-      uis: uis 
+      uis: uis,
+      createdAt: serverTimestamp() 
       
     });
 

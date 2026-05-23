@@ -36,103 +36,39 @@
  /*  No Gemini */
  /*  No Google Analytic */
  /*  hsmart-appl-pr */
- /*  hsmart-appl-pr */
- 
-
- 
+ /*  hsmart-appl-pr */ 
 
   .body_cls {
-          background-color: red;
-          background: linear-gradient(to right, #007bff, #00c6ff);
-          background: white;
-          background-color: #c5effd;
-          background-color: #f5f4a6;
-           background: LightCyan;
-          background: #3399ff;
-          background: #66b3ff;
-          background: #99ccff;
-          background: #cce6ff;
-      /*    background: lightblue;    */
+          background-color: #b3ffb3;
           line-height: 1.0;         
             }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensures it stays on top of content */
-}
-
-   .lkbg { 
-    color: #cce6ff;
-    background-color: Black; 
-    padding: 2.0vh 2.0vh; /* Adds space around the text */
-    display: inline-block; /* Ensures padding and background apply correctly */
-    border-radius: 3vh;
- } 
-
- .liheight {
-   line-height: 3.5dvh;
-  } 
-
- @media (max-width: 768px) {
- .liheight {
-   line-height: 1.2dvh;
- } 
- }
-
-  
- 
-
  .grid-container {
-            display: grid;
-            grid-template-columns: 55% 45%; /* 2 equal columns */
-    /*        gap: 2vw;  */
-            padding: 0.4vw;
-            grid-auto-rows: auto;
-        }
-
- .grid-container > div {
-  border: 0.00vw solid red;
-  padding: 0.25vw;
+  display: grid; /* Enables grid layout */
+  grid-template-columns: 50% 50%; /* Creates 2 columns of equal width */
+  gap: 2vw; /* Space between rows and columns */
+ /* background-color: #2196F3; */
+  padding: 1.5vw;
 }
-
-.box {
-          /*  background-color: #c5effd;  */
-            padding: 20vw;
-            text-align: center;
-            font-size: 20px;
-            border: 0.4vw solid steelblue;
-        }
 
 @media (max-width: 768px) {
 .grid-container {
-  display: grid;
- grid-template-columns: 1fr; /* Stack vertically */
-grid-auto-rows: auto;
-/* grid-auto-flow: row;  */
-/* height: 90vh; */
-/* gap: 0.5vw; */
- 
+  display: grid; /* Enables grid layout */
+  grid-template-columns: 100%;  /* Creates 1 columns of equal width */
+  gap: 2vw; /* Space between rows and columns */
+/*  background-color: #2196F3;  */
+  padding: 1.5vw;
 }
 }
 
-.second-box {
-width: 100%;
-height: auto;
-margin-top: 2.5vh;  
-margin-left: -11vw;
-
-}
-
-@media (max-width: 768px) {
-  .grid-container .second-box {
-    width: 100%;
-    height: auto;
-    margin-top: 10vh;
-    margin: 0 auto;
-   
-  }
+.grid-item {
+  
+  border: 0px solid rgba(0, 0, 0, 0.8);
+  padding: 4vw;
+  font-size: clamp(1.1rem, 2.3vw, 2.4rem);
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .responsive-img {
@@ -140,15 +76,12 @@ margin-left: -11vw;
   height: auto;
   object-fit: cover;
  }
-
 .gap1vh {
   height: 1.0vh;  /* or any size you want; mobile = desktop */
 }
-
 .gap2vh {
   height: 2.0vh;  /* or any size you want; mobile = desktop */
 }
-
 .gap3vh {
   height: 3.0vh;  /* or any size you want; mobile = desktop */
 }
@@ -157,299 +90,109 @@ margin-left: -11vw;
   height: 4.0vh;  /* or any size you want; mobile = desktop */
 }
 
-
-.Menubar-header {
-font-family: calibri;
- font-size: clamp(1.0rem, 1.1vw, 1.2rem); 
-font-weight: 500;
-color: white; 
-font-style: italic;
-font-weight: 550;
-}
-
-#apl-hdr {
-  font-size: clamp(1.1rem, 1.3vw, 1.4rem);  
-  font-weight:  700;
-  color: lightblue; 
-  text-decoration: none; 
-  text-align: center;
-}
-
-#menu-word-prp {
- font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
-  font-weight:  400;
-  color: lightblue; 
-  text-decoration: none; 
-  text-align: center;
-}
-
-.menu-bar-prp {
- font-size: clamp(1.0rem, 1.2vw, 1.3rem);  
-  font-weight:  200;
-  color: yellow; 
-  text-decoration: none; 
-  text-align: center;
-  border: none;
-  text-color: Blue; 
-}
-
-.mobile-only {
-  display: none;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .mobile-only {
-    display: block;
-  }
-}
-.sys-options  {
-margin-top: 10.0vh;
-margin-left: 10.0vw; 
-text-align: center;
-font-family: calibri;
-font-size: clamp(0.7rem, 1.5vw, 1.6rem);
-Color: black;
-font-weight: 550;
-padding-left: 4vw;
- text-align: left; 
-border: 0.0vw solid Black;
-width: 100%; 
-}
-
-@media (max-width: 768px) {
-  .sys-options  {
-margin-top: 4vh;
-margin-left: 10.0vw; 
-text-align: center;
-font-family: calibri;
-font-size: clamp(0.9rem, 1.5vw, 1.6rem);
-Color: black;
-font-weight: 550;
-padding-left: 5vw;
-text-align: left; 
-width: 100%; 
-}
-}
-.sys-options-build  {
-margin-top: 4.8vh;
-margin-left: 7.0vw; 
-text-align: center;
-font-family: calibri;
-font-size: clamp(0.9rem, 1.5vw, 1.6rem);
-Color: black;
-font-weight: 550;
-padding-left: 4vw;
- text-align: left; 
-border: 0.0vw solid Black;
-width: 100%; 
-}
-@media (max-width: 768px) {
-.sys-options-build  {
-margin-top: 4.8vh;
-margin-left: 7.0vw; 
-text-align: center;
-font-family: calibri;
-font-size: clamp(0.9rem, 1.5vw, 1.6rem);
-Color: black;
-font-weight: 550;
-padding-left: 4vw;
- text-align: left; 
-border: 0.0vw solid Black;
-width: 100%; 
-}
-}
-
-.takecontrol  {
-   margin-top: 0vh;
-   margin-left: 5vw;
-   width: 75%;
-   font-size: clamp(1.0rem, 1.6vw, 1.7rem);
-   font-weight: 550;
-  }
-@media (max-width: 768px) {
-.takecontrol  {
-   margin-top: 1vh;
-   margin-left: 5vw;
-   width: 75%;
-   font-size: clamp(1.0rem, 1.8vw, 1.9rem);
-   font-weight: 550;
-  }
- }
-
- .imagecls {
-  margin-top: 7vh;
+.box11 {  
+  width: 75%;
+  margin: 0 auto; 
+  margin-top: 10vh; 
   border: 0.0vw solid Black;
  }
 @media (max-width: 768px) {
-.imagecls {
-  margin-top: 4vh;
+.box11 {  
+  width: 75%;
+  margin: 0 auto; 
+  margin-top: 5vh;
+  margin-top: 5vh;  
+ }
+}
+ .box12 {  
+  width: 85%;
+  margin-left: -1vw;  
+  border: 0.0vw solid Black;
+ }
+@media (max-width: 768px) {
+.box12 {  
+  width: 100%;
+  margin: 0 auto; 
+  margin-top: 3vh;
+  margin-top: 3vh; 
  }
 }
 
-.hello {
- padding-left: 3vw;
- margin-left: 2vw;
- text-align: center;
- margin-top: 35.0vh;
- font-family: calibri;
- font-size: clamp(2.1rem, 3.0vw, 3.1rem);
- Color: #007acc; 
- font-weight: 850;
- text-decoration: underline;
-}
-
-.hello1 {
- padding-left: 3vw;
- margin-left: 10vw;
- text-align: left;
- margin-top: 3.0vh;
- font-family: calibri;
- font-size: clamp(0.6rem, 1.5vw, 1.6rem);
- Color: black; 
- font-weight: 650;
- text-decoration: none;
-}
-
-@media (max-width: 768px) {
-.hello {
- margin-top: 10.0vh;
- text-align: left;
- padding-left: 2vw;
- font-family: calibri;
- font-size: clamp(2.4rem, 3.5vw, 3.8rem);
- Color: black; 
- font-weight: 850;
- text-decoration: underline;
-}
-}
-@media (max-width: 768px) {
-.hello1 {
- padding-left: 2vw;
- margin-left: 10vw;
- text-align: left;
- margin-top: 56.0vh;
- font-family: calibri;
- font-size: clamp(2.4rem, 3.5vw, 3.8rem);
- Color: black; 
- font-weight: 650;
- text-decoration: none;
-}
-}
-
-.inv-manage {
-border: 0.0vw solid green;
-margin-top: 8.0vh;
-margin-left: 0.8vw;
-text-align: center;
-width: 95%;
-}
-@media (max-width: 768px) {
-.inv-manage {
-border: 0.0vw solid green;
-margin-top: 6.0vh;
-margin-left: 0.8vw;
-text-align: center;
-width: 95%;
-}
-}
-
 .input-field {
- font-size: 16px;
+ font-size: clamp(0.9rem, 1.6vw, 1.8rem);
  height: 8vh;
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
- width: 75%;
+ width: 90%;
  color: white;
- margin-top: 30vh;
- margin-left: 5vw;
+ margin-top: 17vh;
+ margin-left: 1vw;
 }
 
 @media (max-width: 768px) {
 .input-field {
- font-size: 16px;
- height: 6vh;
+ font-size: clamp(0.9rem, 1.6vw, 1.8rem);
+ height: 8vh;
  background-color: black; 
  font-weight: 550; 
  border: 0.1vw solid black; 
- width: 100%;
+ width: 90%;
  color: white;
- margin-top: 5vh;
- margin-left: 0vw;
+ margin-top: 4vh;
+ margin-left: 1vw;
 }
-}
-
-.option[disabled][selected] {
-    font-size: 16px;
+}.option[disabled][selected] {
+    font-size: clamp(1.1rem, 2.3vw, 2.4rem);
     color: grey; 
 }
+
+
   </style>
    
 </head>
 
 <body  class = "body_cls"; font-family: 'Poppins', sans-serif; >
 
-  <!-- Following is div which is replacement of Navigation Bar -->
+ <!-- Following is Start of Header div -->
 
 <div style = "display: flex; justify-content: space-between; background-color: black;">
-
-
-<div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
-<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Codes Management</Label>
+  <div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
+<Label id="comp-name" style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
+</div> 
+  <div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
+    <Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">System Codes</Label>
+  </div> 
+  <div style="position absolute; right: 0; height: 7vh; margin-top: 3vh; margin-right: 2vw; ">
+ <a href="Index.html" style="color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem);">Back</a>
+</div> 
 </div> 
 
+<!-- Above is End of Header div  -->
 
-</div> 
-
-<!-- Above is div which is replacement of Navigation Bar -->
-
-
-
-
-
-<div class="grid-container" style="border: 0.00vw solid green; width: 98%; border: 0.0vw solid black; margin: 0 auto;">    <!-- Grid Div -->
-
-
-
-<!--  --------------------------------------------------START-First column of grid---------------------------------------     -->
- 
- <div>    <!-- ist Inner_div -->  
-   
-    <div style="border: 0.0vw solid green;">  
-    
-  <select id ="reps" class="input-field">   
- <option value="" disabled selected>&nbsp&nbsp&nbsp&nbsp--------Select Code Types--------&nbsp&nbsp&nbsp&nbsp</option>
+<div class="grid-container">
+  <div class="grid-item">
+   <div class="box11" >
+    <select id ="reps" class = "input-field">   
+    <option value="" disabled selected >&nbsp&nbsp&nbsp&nbsp--------Select Code Types--------       &nbsp&nbsp&nbsp&nbsp</option>
    <option>Customer Codes</option>
    <option>Items Categories Codes</option>
    <option>Manufacturers/Suppliers Codes</option>
    <option>Movement Type Codes</option>
-   <option>Items Unit Codes</option>   
- </select> 
-   </div>
- 
-  
- </div>
-
-<!--  -------------------------------------------------END--Second column of grid---------------------------------------------     -->
-<!--  -------------------------------------------------START--First column of grid---------------------------------------------     -->
-  <div class="box" style="border: 0.00vw solid green; width: 85%; margin: 0 auto; ">    <!-- Start First col of grid -->
-      <div style=" display: flex; justify-content: center; align-items: center;">
-       <div class = "second-box" style="width: 100%; ">
-        <div class="gap1vh"></div>
-    
-       <div class = "imagecls" >
+   <option>Items Unit Codes</option> 
+   <option>User Codes</option>  
+   <option>Owners Codes</option>   
+  </select> 
+  </div>
+  </div>
+  <div class="grid-item">
+    <div class = "box12" >
        <img src="chart-10.PNG" class="responsive-img rounded" style="display: block; ">
-       </div>
-            </div>
-      </div>
- </div>   
- 
-<!--  -------------------------------------------------END--First column of grid---------------------------------------------     -->
-</div>  <!--  -------------------------------------------------END--of Grid         -----------     -->
+     </div>
+  </div> 
 </div>
 
-<div class="gap2vh"></div>
+ 
 
 
 
@@ -478,26 +221,44 @@ import {
 
  const input = document.getElementById("reps");
 // const input = document.getElementByname("rep");
+ const params = new URLSearchParams(window.location.search);
+let paramId = "none";
+let paramnm = "none";
+paramId = params.get("param1");
+paramnm = params.get("param2");
+document.getElementById("comp-name").textContent = paramnm;
 
 input.addEventListener("input", function () {
      const selectedValue = input.value;      
       
     if (selectedValue === "Customer Codes") {        
-        window.location.href = "./cust-tables-add-del.html";
+        
+        window.location.href = `./cust-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Items Categories Codes") {        
-        window.location.href = "./ctg-tables-add-del.html";
+        
+        window.location.href = `./ctg-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Manufacturers/Suppliers Codes") {        
-        window.location.href = "./mnsp-tables-add-del.html";
+        
+        window.location.href = `./mnsp-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Movement Type Codes") {        
-        window.location.href = "./mvtp-tables-add-del.html";
+        
+        window.location.href = `./mvtp-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Items Unit Codes") {        
-        window.location.href = "./uis-tables-add-del.html";
+        
+        window.location.href = `./uis-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;
     }
-
+     if (selectedValue === "User Codes") {        
+        
+        window.location.href = `./user-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;
+    }
+    if (selectedValue === "Owners Codes") {        
+        
+        window.location.href = `./owners-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;
+    }
 });
 
 const inputf = document.getElementById('rep');

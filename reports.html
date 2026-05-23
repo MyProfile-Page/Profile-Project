@@ -159,12 +159,14 @@
  <!-- Following is Start of Header div -->
 
 <div style = "position: relative; display: flex; justify-content: space-between; background-color: black;">
+  <div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
+<Label id="comp-name" style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
+</div> 
   <div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
     <Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Items Reports</Label>
   </div> 
   <div style="position absolute; right: 0; height: 7vh; margin-top: 3vh; margin-right: 2vw; ">
- <a href="Catalog.html" style="color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem);">Back</a>
-
+ <a href="Index.html" style="color: white; font-size: clamp(0.9rem, 1.4vw, 1.6rem);">Back</a>
 </div> 
 </div> 
 
@@ -177,8 +179,6 @@
     <option value="" disabled selected >&nbsp&nbsp&nbsp&nbsp--------Select Report--------       &nbsp&nbsp&nbsp&nbsp</option>
     <option>Below Reorder Level Items</option>
     <option>Below Minimum Level Items</option>
-    <option>Above Reorder Level Items</option>
-    <option>Above Minimum Level Items</option>
     <option>Expired Items</option>   
   </select> 
   </div>
@@ -219,24 +219,30 @@ import {
 
  const input = document.getElementById("reps");
 // const input = document.getElementByname("rep");
+ const params = new URLSearchParams(window.location.search);
+let paramId = "none";
+let paramnm = "none";
+paramId = params.get("param1");
+paramnm = params.get("param2");
+document.getElementById("comp-name").textContent = paramnm;
 
 input.addEventListener("input", function () {
      const selectedValue = input.value;      
       
     if (selectedValue === "Expired Items") {        
-        window.location.href = "./Reached-Expiry.html";
+        window.location.href = `./Reached-Expiry.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Below Reorder Level Items") {        
-        window.location.href = "./Reached-Reorder.html";
+        window.location.href = `./Reached-Reorder.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Below Minimum Level Items") {        
-        window.location.href = "./Reached-Minimum.html";
+        window.location.href = `./Reached-Minimum.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Above Reorder Level Items") {        
-        window.location.href = "./Above-Reorder.html";
+        window.location.href = `./Above-Reorder.html?param1=${paramId}&param2=${paramnm}`;
     }
     if (selectedValue === "Above Minimum Level Items") {        
-        window.location.href = "./Above-Minimum.html";
+        window.location.href = `./Above-Minimum.html?param1=${paramId}&param2=${paramnm}`;
     }
 
 });
