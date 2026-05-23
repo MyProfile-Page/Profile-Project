@@ -382,7 +382,7 @@ background-color: #9bc7be;
 }
 
 .input-field {
- clamp(0.8rem, 1.2vw, 1.4rem);
+ font-size: clamp(0.7rem, 1.2vw, 1.4rem);
  font-weight: 500;
  height: 8vh;
   border: 0.1vw solid black; 
@@ -392,7 +392,7 @@ background-color: #9bc7be;
 
 @media (max-width: 768px) {
 .input-field {
- clamp(0.5rem, 1.2vw, 1.4rem);
+ font-size: clamp(0.5rem, 1.2vw, 1.4rem);
  font-weight: 500;
  height: 5vh;
  width: 100%;
@@ -545,6 +545,26 @@ background-color: #9bc7be;
   
  }
 
+.option[disabled][selected] {
+    font-size: clamp(1.1rem, 2.3vw, 2.4rem);
+    color: grey; 
+}
+
+  .box11 {  
+  width: 75%;
+  margin: 0 auto; 
+  margin-top: 10vh; 
+  border: 0.0vw solid Black;
+ }
+@media (max-width: 768px) {
+.box11 {  
+  width: 75%;
+  margin: 0 auto; 
+  margin-top: 5vh;
+  margin-top: 5vh;  
+ }
+}
+
 
   </style>
 </head>
@@ -561,7 +581,7 @@ background-color: #9bc7be;
 </div> 
 
 <div style="text-align: left; margin-left: 5vw; display: inline-block height: 7vh; margin-top: 3vh; ">
-<Label style="font-size: clamp(0.8rem, 1.2vw, 1.4rem);font-weight: 500; ">Catalog System Log In</Label>
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem);font-weight: 500; ">Welcome</Label>
 </div>
 
 
@@ -576,10 +596,10 @@ background-color: #9bc7be;
 
 
 
-
 <div class="gap3vh"></div>
 
-<div style="display: flex; width: 35%; border: 0.0vw dashed black; margin: 0 auto; background-color: Transparent; margin-top: 10vh;">
+<div style="display: flex; width: 35%; border: 0.0vw dashed black; margin: 0 auto; background-color: Transparent; margin-top: 0vh;">
+
 
  <!-- Input Form -->
 <div class="gap3vh"></div>
@@ -587,6 +607,9 @@ background-color: #9bc7be;
 <div class = "items-add-upd" > 
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
+
+
+
 
 <div style="justify-content: center; display: flex;  width: 97%; border: 0.0vw solid black; margin: 0 auto; ">
   <input type="text" class="input-field" id="userId" placeholder="User Id"    >
@@ -598,7 +621,15 @@ background-color: #9bc7be;
 <div class="gap1vh"></div> 
 
 <div class="gap1vh"></div> 
-
+<div style="justify-content: center; display: flex;  width: 97%; border: 0.0vw solid black; margin: 0 auto; ">
+<select id ="subsys" class = "input-field">   
+    <option style="font-size: 5px;" value="disabled selected">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-----Select Sub System-----</option>
+    <option style="font-size: 12px;" >Items Management</option>
+    <option style="font-size: 12px;" >Transactions Management</option>
+    <option style="font-size: 12px;" >Reports</option> 
+    <option style="font-size: 12px;" >Codes</option>  
+  </select> 
+</div>
 <div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
    <button onclick="additem()" type="button" class="add-btn"; style="clamp(0.8rem, 1.2vw, 1.4rem); font-weight: 500;">Log In</button>
 </div>
@@ -650,12 +681,91 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
-  let compname = "GrowLite";
-  
-
+ let userselection = "None";
+ const input = document.getElementById("subsys");
+ let compname = "GrowLite"; 
  const labelcomp = document.getElementById('comp-name');
  labelcomp.textContent = compname;
 //  comp-name.text = "GrowLite";
+
+input.addEventListener("input", function () {
+
+      const selectedValue = input.value;       
+    if (selectedValue === "Items Management") {        
+        userselection = "Items Management";
+    }
+    if (selectedValue === "Transactions Management") {        
+        userselection = "Transactions Management";
+    }
+    if (selectedValue === "Reports") {        
+        userselection = "Reports";
+    }
+    if (selectedValue === "Codes") {        
+        userselection = "Codes";
+    }   
+});
+
+// 🔹 CREATE (Insert Data)
+window.additem = async function () {
+
+  
+  const userId = document.getElementById("userId").value;
+  const password = document.getElementById("password").value;
+  
+if (userId === "" || password === "" ){
+    alert("Please Enter all Manadatory datas of the User");
+    return;
+  }
+     
+ alert("in add3");
+
+    const docRef = doc(db, "usertable", userId);    
+    const existingDoc = await getDoc(docRef);
+     if (!existingDoc.exists()) {
+      alert("User Not Found!");
+      return;
+    }
+    const data = existingDoc.data();
+        if (data.password !== password) {
+       alert("Invalid Password!");
+      return;
+    }
+    
+       alert("Password Matches!");  
+       const paramId = data.ownerId;
+       const paramnm = data.ownernm;
+    //   const paramId = "user1";
+    //   const paramnm = "Asad";
+       console.log(paramId);
+       console.log(paramnm);
+
+ if (userselection === "Items Management") {        
+        window.location.href = `./Catalog.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+ if (userselection === "Transactions Management") {        
+        window.location.href = `./Transaction.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+ if (userselection === "Reports") {        
+        window.location.href = `./reports.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+ if (userselection === "Codes") {        
+        window.location.href = `./codes.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+     
+     
+  
+     
+
+
+
+     
+};
+
+
+  
+  
+
+
 
   // 🔹 READ (Load Data into Table)
 async function loadusertable() {
@@ -748,56 +858,6 @@ window.edititem = function (id, name) {
     loadusertable();
   };
 
-// 🔹 CREATE (Insert Data)
-window.additem = async function () {
-
-  
-  const userId = document.getElementById("userId").value;
-  const password = document.getElementById("password").value;
-  
-if (userId === "" || password === "" ){
-    alert("Please Enter all Manadatory datas of the User");
-    return;
-  }
-     
- alert("in add3");
-
-    const docRef = doc(db, "usertable", userId);    
-    const existingDoc = await getDoc(docRef);
-     if (!existingDoc.exists()) {
-      alert("User Not Found!");
-      return;
-    }
-    const data = existingDoc.data();
-    if (data.password === password) {
-       alert("Password Matches!");  
-       const paramId = data.ownerId;
-       const paramnm = data.ownernm;
-    //   const paramId = "user1";
-    //   const paramnm = "Asad";
-       console.log(paramId);
-       console.log(paramnm);
-     
-     
-   //     window.location.href = `./cust-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;  
-        window.location.href = `./Catalog.html?param1=${paramId}&param2=${paramnm}`;  
-   //     window.location.href = `./Transaction.html?param1=${paramId}&param2=${paramnm}`;
-    }
-   else {
-    alert("Invalid Password");
-    return;
-   }
-// alert("in add4");
-//    if (password: == password) {
-  //     alert("Invalid Password!");
-  //    return;
- //   }
-     
-};
-
-
-  
-  
 
 //  PRINT FUNCTION START
 

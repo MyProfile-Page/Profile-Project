@@ -840,6 +840,7 @@ import {
   updateDoc,
   runTransaction,
   where,
+  and,
   Timestamp,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
@@ -876,7 +877,7 @@ let customername = " ";
 let userownerId = " ";
 
 window.goback = async function () {
-  window.location.href = `./Index.html`;
+  window.location.href = `./Index-sys.html`;
  } 
 
   // 🔹 READ (Load Data into Table)
@@ -1414,10 +1415,12 @@ const q = query(
   collection(db, "movementstable"),
 //  where("sortnbr", ">", 0),
 //  where("sortnbr", "<", 999999)
+//   and(
   where("invnbr", "==", Number(newinvnbr)),
-  where("ownerId", "==", paramId),
+  where("ownerId", "==", paramId)
+//  )
   
-  orderBy("createdAt")
+//  orderBy("createdAt")
 //  orderBy("sortnbr", "asc")
 );
 console.log(newinvnbr);
@@ -1616,7 +1619,7 @@ async function printInvoice() {
         <p style="text-align:center;">Thank you for your business!</p> 
         <br>     
     <footer>
-    <p>Maya Enterprisw. All rights reserved.</p>
+    <p>${paramnm}. All rights reserved.</p>
     <address>
       Contact us at: <a href="mailto:ali_albader_alsalem@yahoo.com">ali_albader_alsalem@yahoo.com</a>
     </address>
