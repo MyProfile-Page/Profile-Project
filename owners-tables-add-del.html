@@ -199,7 +199,7 @@ grid-auto-flow: row;
 }
 
 @media (max-width: 768px) {
- .custtableBody-Cls {
+ .ownerstableBody-Cls {
 white-space: normal; 
 overflow-wrap: break-word;
 word-wrap: break-word; 
@@ -540,13 +540,15 @@ background-color: #9bc7be;
   <!-- Following is div which is replacement of Navigation Bar -->
 
 <div style = "display: flex; justify-content: space-between; background-color: black;">
-<div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
+
+<div style="text-align: left; margin-left: 1vw; display: inline-block height: 7vh; margin-top: 3vh; ">
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Owners Table</Label>
+</div>
+<div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; ">
 <Label id="comp-name" style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;"></Label>
 </div> 
-<div style="text-align: left; margin-left: 0vw; display: inline-block height: 7vh; margin-top: 3vh; ">
-<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem); color: white;">Customers Table</Label>
-</div>
-<div style="text-align: left; margin-right: 0.0vw; margin-top: -2.5vh; display: inline-block ">
+
+<div style="text-align: left; margin-right: 1vw; margin-top: -2.5vh; display: inline-block ">
  <a class="ext-btn lkbg" href="codes.html">Back</a> 
 </div> 
 </div> 
@@ -560,19 +562,18 @@ background-color: #9bc7be;
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
-<div class = "items-add-upd" > Customers Addition Form
+<div class = "items-add-upd" > Database Sub Owners Addition Form
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="number" class="input-field" id="nbr" min="1" max="99999999" placeholder="Customer No."  > 
+  <input type="text" class="input-field" id="ownerId" placeholder="Owner Id"  > 
 </div>
 <div class="gap1vh"></div>
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
-  <input type="text" class="input-field" id="name" placeholder="Customer Name"  >
+  <input type="text" class="input-field" id="ownernm" placeholder="Owner Name"  >
 </div>
-<div class="gap3vh"></div> 
 
-<div class="gap3vh"></div> 
+<div class="gap1vh"></div> 
 
 <div style="display: flex; justify-content: left; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
    <button onclick="additem()" type="button" class="add-btn";>Add</button>
@@ -588,7 +589,7 @@ background-color: #9bc7be;
 
 </div> 
  <div class="gap3vh"></div> 
- <div class="items-add-upd" style= "margin-top: -0.75vh;" >Customers Grid
+ <div class="items-add-upd" style= "margin-top: -0.75vh;" >Database Sub Owners Grid
  <div style="text-align: left; margin-right: 0vw; display: inline-block ">  
 <button onclick="printInvoice()" type="button" class="prt-btn"; >
 <img src="print-icon9.png" alt="Click Me"   >
@@ -601,18 +602,20 @@ background-color: #9bc7be;
     <thead>
      
       <tr>
-        <th style="text-align: center; width: 12%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Customer No.</th>
-         
-  <th style="text-align: center; width: 68%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Customer Name</th>           
+        <th style="text-align: center; width: 12%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Owner Id</th>
+        <th style="text-align: center; width: 58%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Owner Name</th> 
+  <th style="text-align: center; width: 18%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Heighest Invoice</th> 
+            
         
       
-        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 20%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
+        <th class="no-print" style="padding: 0.0vw; text-align: center; width: 12%; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
       </tr>
     </thead>
-    <tbody id="custtable" class = "custtableBody-Cls">
+    <tbody id="ownerstable" class = "ownerstableBody-Cls">
        <tr>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
         <td  style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
+        <td style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
         <td style="text-align: center; font-size: clamp(0.5rem, 1.2vw, 1.3rem); font-weight: 400; "></td>
         
       </tr>
@@ -637,7 +640,6 @@ import {
   getDoc,
   deleteDoc, 
   doc,
-  where,
   updateDoc,
   serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
@@ -659,40 +661,20 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
+  let compname = "GrowLite";
 
-const params = new URLSearchParams(window.location.search);
-let paramId = "none";
-let paramnm = "none";
-paramId = params.get("param1");
-paramnm = params.get("param2");
-document.getElementById("comp-name").textContent = paramnm;
-console.log(paramId);
-console.log(paramnm);
-
-
-
-
-//  let lsownernm = "GrowLite";
-//  const syownernm = localStorage.getItem(lsownernm);
-//  const labelcomp = companynm;
-// labelcomp.textContent = lsownernm;
-//  comp-name.text = lsownernm;
-  
-
- 
-
-  
-//  document.getElementById("lsownernmsave").textContent = syownernm;
-//  document.getElementById('p2').innerHTML = 'Welcome back,' + syownernm;
+ const labelcomp = document.getElementById('comp-name');
+ labelcomp.textContent = compname;
+//  comp-name.text = "GrowLite";
 
   // 🔹 READ (Load Data into Table)
-async function loadcusttable() {
+async function loadownerstable() {
 
-  const table = document.getElementById("custtable");
+  const table = document.getElementById("ownerstable");
   
   table.innerHTML = "";
-  const collectionRef = collection(db, "custdatalist");
-  const q = query(collectionRef, where("ownerId", "==", paramId));
+  const collectionRef = collection(db, "ownerstable");
+  const q = query(collectionRef, orderBy("ownerId", "asc"));
   
   const querySnapshot = await getDocs(q);
 
@@ -708,12 +690,11 @@ async function loadcusttable() {
       <tr class="tr-main-row"  >
        
         
-        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.nbr}</td>
-
-<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.name}</td>
+        <td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.ownerId}</td>
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.ownernm}</td>
+<td style="border-top: 0.05vw solid black; border-right: 0.05vw solid black; font-size: clamp(0.9rem, 1.3vw, 1.4rem); font-weight: 450; padding-left: 0.5vw;">${data.inbr}</td>
 
                 <td style="border: 0.05vw solid black; text-align: center;">
-
            <button onclick="deleteitem('${docId}')" class="edit-delt-btn">Delete</button>
         </td>  
           
@@ -737,9 +718,9 @@ async function loadcusttable() {
   window.clearInputs = async function () {
   
     
-    document.getElementById("nbr").value = "";
-    document.getElementById("name").value = "";
-   document.getElementById("ownerId").value = "";
+    document.getElementById("ownernm").value = "";
+    document.getElementById("ownerId").value = "";
+  
 
   }
 
@@ -767,51 +748,60 @@ window.edititem = function (id, name) {
 
  // 🔹 DELETE (Remove Record)
   window.deleteitem = async function (id) {
-    await deleteDoc(doc(db, "custdatalist", id));
-    alert("Customer deleted");
+    await deleteDoc(doc(db, "ownerstable", id));
+    alert("Owner deleted");
     clearInputs();
-    loadcusttable();
+    loadownerstable();
   };
 
 // 🔹 CREATE (Insert Data)
 window.additem = async function () {
 
-  const nbr = document.getElementById("nbr").value;
-  const name = document.getElementById("name").value;
-  const ownerId = paramId;
+  const ownernm = document.getElementById("ownernm").value;
+    const ownerId = document.getElementById("ownerId").value;
+ 
+
+if (ownernm === "" || ownerId === "" ){
+    alert("Please Enter all Manadatory datas of the Database sub owner");
+    return;
+  }
      
   try {
 
     // 🔹 Use nbr as document ID
-     const docRef = doc(db, "custdatalist", nbr.toString());
-    
+     const docRef = doc(db, "ownerstable", ownerId);    
 
-    // 🔹 Check if document already exists
- //   const existingDoc = await getDoc(docRef);
+      // 🔹 Check if document already exists
+    const existingDoc = await getDoc(docRef);
+
+    if (existingDoc.exists()) {
+      alert("Sub Owner already exists!");
+      return;
+    }
 
    
 
     // 🔹 Create document with nbr as ID
     await setDoc(docRef, {
-      nbr: parseInt(nbr, 10),
-      name: name, 
-      ownerId: ownerId,    
+      inbr: 0,
+      ownerId: ownerId,
+      ownernm: ownernm,        
       createdAt: serverTimestamp()
       // createdAt: new Date()
     });
 
-    alert("Customer added");
+    alert("Database sub owner added");
     
-    loadcusttable(); // refresh table
+    loadownerstable(); // refresh table
 
   } catch (error) {
-    console.error("Error adding Customer:", error);
-    alert("Error adding Customer. Check console.");
+    console.error("Error adding Database sub owner:", error);
+    alert("Error adding owner. Check console.");
   }
 };
 
   
-  loadcusttable();
+  loadownerstable();
 
 //  PRINT FUNCTION START
 
@@ -897,7 +887,7 @@ function printInvoice() {
       <td>
         <div style="text-align: left;">
           <!-- Your existing header -->
-          <h5>Customers Codes</h5>
+          <h5>Users</h5>
           <p style="font-size: 13px;">Maya Enterprise
           <br>
           North York Toronto - Phone: 647-999-9999<br>
