@@ -568,6 +568,30 @@ background-color: #9bc7be;
  }
 }
 
+.top-div {  
+ border: 1px solid black;
+ margin: 0 auto; display: flex;
+ justify-content: space-between;
+ background-color: white;
+ color: black;
+ margin-top: 1vh; 
+ width: 99%;
+ height: 10vh;
+ }
+
+@media (max-width: 768px) {
+.top-div {  
+ border: 1px solid black;
+ margin: 0 auto; display: flex;
+ justify-content: space-between;
+ background-color: white;
+ color: black;
+ margin-top: 1vh; 
+ width: 99%;
+ height: 6vh;
+ }
+ }
+
 
   </style>
 </head>
@@ -577,7 +601,7 @@ background-color: #9bc7be;
 
   <!-- Following is div which is replacement of Navigation Bar old-->
 
-<div style = "border: 1px solid black; margin: 0 auto; display: flex; justify-content: space-between; background-color: white; color: black; margin-top: 1vh; width: 99%;">
+<div class="top-div">
 
 <div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
 <Label id="comp-name" style="font-size: clamp(0.8rem, 1.2vw, 1.4rem); font-weight: 500; "></Label>
