@@ -572,11 +572,11 @@ background-color: #9bc7be;
  border: 1px solid black;
  margin: 0 auto; display: flex;
  justify-content: space-between;
- background-color: white;
- color: black;
- margin-top: 1vh; 
- width: 99%;
- height: 10vh;
+ background-color: #666666;
+ color: white;
+ margin-top: 0vh; 
+ width: 100%;
+ height: 11vh;
  }
 
 @media (max-width: 768px) {
@@ -608,7 +608,7 @@ background-color: #9bc7be;
 </div> 
 
 <div style="text-align: left; margin-left: 5vw; display: inline-block height: 7vh; margin-top: 3vh; ">
-<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem);font-weight: 500; ">Welcome</Label>
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem);font-weight: 500; ">Lite Inventory Control</Label>
 </div>
 
 
@@ -632,8 +632,8 @@ background-color: #9bc7be;
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div class = "items-add-upd" > 
-<div class="gap3vh"></div>
-<div class="gap3vh"></div>
+<div class="gap4vh"></div>
+<div class="gap4vh"></div>
 
 
 
@@ -647,16 +647,7 @@ background-color: #9bc7be;
 </div>
 <div class="gap1vh"></div> 
 
-<div class="gap1vh"></div> 
-<div style="justify-content: center; display: flex;  width: 97%; border: 0.0vw solid black; margin: 0 auto; ">
-<select id ="subsys" class = "input-field" style="background: white;">   
-    <option style="font-size: 5px;" value="disabled selected">---------Select Sub System-----</option>
-    <option style="font-size: 12px;" >Items Management</option>
-    <option style="font-size: 12px;" >Transactions Management</option>
-    <option style="font-size: 12px;" >Reports</option> 
-    <option style="font-size: 12px;" >Codes</option>  
-  </select> 
-</div>
+
 <div style="display: flex; justify-content: center; width: 97%; border: 0px solid black; margin: 0 auto; margin-top: 3vh;">
    <button onclick="additem()" type="button" class="add-btn"; style="clamp(0.8rem, 1.2vw, 1.4rem); font-weight: 500;">Sign In</button>
 </div>
@@ -715,22 +706,7 @@ const firebaseConfig = {
  labelcomp.textContent = compname;
 //  comp-name.text = "GrowLite";
 
-input.addEventListener("input", function () {
 
-      const selectedValue = input.value;       
-    if (selectedValue === "Items Management") {        
-        userselection = "Items Management";
-    }
-    if (selectedValue === "Transactions Management") {        
-        userselection = "Transactions Management";
-    }
-    if (selectedValue === "Reports") {        
-        userselection = "Reports";
-    }
-    if (selectedValue === "Codes") {        
-        userselection = "Codes";
-    }   
-});
 
 // 🔹 CREATE (Insert Data)
 window.additem = async function () {
@@ -765,19 +741,8 @@ if (userId === "" || password === "" ){
     //   const paramnm = "Asad";
        console.log(paramId);
        console.log(paramnm);
+ window.location.href = `./Index-Items.html?param1=${paramId}&param2=${paramnm}`; 
 
- if (userselection === "Items Management") {        
-        window.location.href = `./Catalog.html?param1=${paramId}&param2=${paramnm}`; 
-    }
- if (userselection === "Transactions Management") {        
-        window.location.href = `./Transaction.html?param1=${paramId}&param2=${paramnm}`; 
-    }
- if (userselection === "Reports") {        
-        window.location.href = `./reports.html?param1=${paramId}&param2=${paramnm}`; 
-    }
- if (userselection === "Codes") {        
-        window.location.href = `./codes.html?param1=${paramId}&param2=${paramnm}`; 
-    }
      
      
   

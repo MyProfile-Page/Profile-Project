@@ -267,7 +267,7 @@ width: 100%;
  }
 
  .imagecls {
-  margin-top: 8vh;
+  margin-top: -3vh;
   border: 0.0vw solid Black;
  }
 @media (max-width: 768px) {
@@ -277,7 +277,7 @@ width: 100%;
 }
 
 .hello {
- margin-top: 12.0vh;
+ margin-top: 7.0vh;
  margin-left: 4.0vw;
  text-align: center;
 }
@@ -292,7 +292,7 @@ width: 100%;
 
 .inv-manage {
 border: 0.0vw solid green;
-margin-top: 8.0vh;
+margin-top: 10.0vh;
 margin-left: 2.5vw;
 text-align: center;
 width: 95%;
@@ -313,79 +313,48 @@ width: 95%;
   z-index: 1000; /* Ensures it stays on top of content */
 }
 
+.input-field {
+ font-size: 12px;
+ font-weight: 500;
+ height: 8vh;
+  border: 2px solid black; 
+ text-align: center;
+ width: 70%;
+}
+
+@media (max-width: 768px) {
+.input-field {
+ font-size: 12px;
+ font-weight: 500;
+ height: 5vh;
+ width: 100%;
+ text-align: center;
+ border: 2px solid black; 
+}
+}
+
 
   </style>
    
 </head>
 
-<body oncontextmenu="return false;" class = "body_cls"; font-family: 'Poppins', sans-serif; >
+<body  class = "body_cls"; font-family: 'Poppins', sans-serif; >
 
-  <!-- 🌍 Navigation Bar Start -->
+   <!-- Following is Start of Header div -->
 
- 
- <nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid">
-  
-   <a class="navbar-brand Menubar-header" href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); font-style: italic; Color: white; font-weight: 900;">Dashboard</a>
-   <a class="navbar-brand " href="#" style="text-align: center; font-family: calibri; font-size: clamp(0.8rem, 1.6vw, 1.7rem); font-style: italic; Color: white; font-weight: 900;">Lite Inventory Control</a>
+<div style = "position: relative; display: flex; justify-content: space-between; background-color: black;">
+  <div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
+<Label id="comp-name" style="font-size: clamp(0.8rem, 1.2vw, 1.4rem); color: white;"></Label>
+</div> 
+  <div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; ">
+    <Label style="font-size: clamp(0.9rem, 1.7vw, 1.8rem); color: white;">Welcome - Hello</Label>
+  </div> 
+  <div style="position absolute; right: 0; height: 7vh; margin-top: 3vh; margin-right: 2vw; ">
+ <a href="Index-sys.html" style="color: white; font-size: clamp(0.8rem, 1.2vw, 1.4rem);">Back</a>
+</div> 
+</div> 
 
-    <!-- Toggler -->
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon menu-bar-prp"></span>
-      
-    
-    </button>
-
-    <!-- Collapsible menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-    <div class="gap1vh"></div>
-      <ul class="navbar-nav ms-auto">
-        <li style="line-height: 4dvh;" >&nbsp</li>
-         
-        <li class="nav-item liheight">
-          <a class="nav-link lkbg " href="Items-DataBase.html" style="font-weight: 500; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">Items Management</a>
-        </li> 
-        <li style="line-height: 2dvh;" >&nbsp</li> 
-       <li class="nav-item liheight" >
-          <a class="nav-link lkbg  " href="Items-Movements.html" style="font-weight: 500; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">Transactions</a>
-        </li>
-        <li style="line-height: 2dvh;" >&nbsp</li> 
-       <li class="nav-item liheight"  >
-          <a class="nav-link lkbg " href="Items-Criticals.html" style=" font-weight: 500; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">Inquiries & Reports</a>
-        </li>
-       <li style="line-height: 2dvh;" >&nbsp</li>
-       <li class="nav-item liheight" >
-          <a class="nav-link lkbg  " href="Items-Codes.html" style=" font-weight: 500; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">System Codes</a>
-        </li>  
-        <li style="line-height: 2dvh;" >&nbsp</li>  
-        <li class="nav-item liheight"  >
-          <a class="nav-link aback lkbg " href="guide-inventory.html" style=" font-weight: 500; font-size: clamp(0.9rem, 1.2vw, 1.3rem);" >Guide</a>
-        </li>  
-      <li class="nav-item liheight"  >
-          <a class="nav-link lkbg " href="Only-Selected.html" style=" display: none; font-weight: 500; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">Selected Fields</a>
-        </li>
-      <li style="line-height: 2dvh;" >&nbsp</li> 
-      <li class="nav-item liheight"  >
-          <a class="nav-link lkbg " href="free-consultation.html" style=" display: none; font-weight: 500; font-size: clamp(0.9rem, 1.2vw, 1.3rem);">Appointments</a>
-        </li>
-       <li style="line-height: 2dvh;" >&nbsp</li>                
-       
-       <li style="line-height: 4dvh;" >&nbsp</li>   
-      
-
-      </ul>
-    </div>
-  
-  </div>
-</nav>
-
- <!-- 🌍 Navigation Bar End -->
-
+<!-- Above is End of Header div  -->
 
 
 
@@ -396,11 +365,15 @@ width: 95%;
  
  <div class="box" style="border: 0.00vw solid green; width: 95%; margin: 0 auto;">    <!-- ist Inner_div -->  
      
-    <div class="hello" style="border: 0.0vw solid green;"> 
-    <div class="gap4vh"></div>
-    <div class="gap3vh"></div>
+    <div class="hello" style="border: 0.0vw solid green;">   
     
-        <h5 style="font-family: calibri; font-size: clamp(1.6rem, 3.2vw, 3.3rem); Color: black; padding-left: 2vw; text-align: center; font-weight: 850; text-decoration: underline;">Hello & Welcome!</h5>
+        <select id ="subsys" class = "input-field" style="color: white; background: Black;">   
+    <option style="color: white; font-size: 12px; font-weight: 500;" value="disabled selected">---------Select System -----</option>
+    <option style="color: white; font-size: 12px; font-weight: 500;" >Items Management</option>
+    <option style="color: white; font-size: 12px; font-weight: 500;" >Transactions Management</option>
+    <option style="color: white; font-size: 12px; font-weight: 500;" >Reports</option> 
+    <option style="color: white; font-size: 12px; font-weight: 500;" >Codes</option>  
+  </select> 
    </div>
     <div class = "inv-manage">      
         <P style="font-family: calibri; font-size: clamp(0.8rem, 1.4vw, 1.5rem); Color: black; padding-left: 3vw; text-align: LEFT; font-weight: 550; ">Smart Startups and smartly managed new companies soon reach a point where using older spreadsheets for handling inventories does not remain practical any more. This cost effective ERP (enterprise resource planning) Lite Inventory Package helps companies manage their inventory easily, smoothly and efficiently while they continue expanding.</P>      
@@ -465,6 +438,44 @@ width: 95%;
   <!-- ✅ Bootstrap JavaScript (for navbar toggle) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
   <script>
+
+ const params = new URLSearchParams(window.location.search);
+let paramId = "none";
+let paramnm = "none";
+paramId = params.get("param1");
+paramnm = params.get("param2");
+ let compname = "GrowLite"; 
+ const labelcomp = document.getElementById('comp-name');
+ labelcomp.textContent = compname;
+
+ let userselection = "None";
+ const input = document.getElementById("subsys");
+// let compname = "GrowLite"; 
+// const labelcomp = document.getElementById('comp-name');
+// labelcomp.textContent = compname;
+//  comp-name.text = "GrowLite";
+//selectElement.addEventListener('change', function () {
+input.addEventListener("input", function () {
+      const selectedValue = input.value;   
+           
+   if (selectedValue === "Items Management") {             
+        window.location.href = `./Catalog.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+ if (selectedValue === "Transactions Management") {  
+      console.log(userselection);      
+        window.location.href = `./Transaction.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+ if (selectedValue === "Reports") {        
+        window.location.href = `./reports.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+ if (selectedValue === "Codes") {        
+        window.location.href = `./codes.html?param1=${paramId}&param2=${paramnm}`; 
+    }
+});
+
+// 🔹 CREATE (Insert Data)
+
+
 // 🔹 Guidefunction
 
 function guidealert() {
