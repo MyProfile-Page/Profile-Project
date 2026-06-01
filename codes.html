@@ -118,7 +118,7 @@
  }
 }
 
-.input-field {
+.select {
  font-size: 16px;
  height: 8vh;
  background-color: black; 
@@ -132,7 +132,7 @@
 }
 
 @media (max-width: 768px) {
-.input-field {
+.select {
  font-size: 16px;
  height: 8vh;
  background-color: black; 
@@ -150,13 +150,13 @@
     font-size: clamp(1.1rem, 2.3vw, 2.4rem);
     color: grey; 
 }
-.input-field {
+.select {
     -webkit-appearance: block;
  
     border-radius: 4px;
 }
 @media (max-width: 768px) {
-input-field, 
+select, 
 ::picker(select) {
   appearance: base-select;
 }
@@ -187,7 +187,7 @@ input-field,
 <div class="grid-container">
   <div class="grid-item">
    <div class="box11" >
-    <select id ="reps" class = "input-field">   
+    <select id ="reps" class = "select">   
     <option value="" disabled selected >Select Code Types</option>
    <option>Customer Codes</option>
    <option>Items Categories Codes</option>
