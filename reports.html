@@ -120,36 +120,42 @@
 }
 
 .select {
- font-size: 16px;
- height: 8vh;
- background-color: black; 
- font-weight: 550; 
- border: 0.1vw solid black; 
- width: 90%;
- color: white;
- margin-top: 17vh;
- margin-left: 1vw;
+  background-color: black; 
+  color: white;
+   font-size: 12px; 
+ font-weight: 500;
+  height: 8vh;
+  border: 2px solid black; 
  text-align: center;
+ width: 70%;
 }
+
+/* Apply background and text color to the options */
+.select option {
+  background-color: black; 
+  color: white;
+   font-size: 12px; 
+ font-weight: 500;
+  text-align: center;
+}
+
 
 @media (max-width: 768px) {
 .select {
- font-size: 16px;
- height: 8vh;
- background-color: black; 
- font-weight: 550; 
- border: 0.1vw solid black; 
- width: 90%;
- color: white;
- margin-top: 4vh;
- margin-left: 1vw;
+ /* background-color: black;  */
+ /* color: white;             */
+ /*  font-size: 12px;  */ 
+ font-weight: 500;
+ /* height: 6vh;   */
+  border: 2px solid black; 
  text-align: center;
+ width: 100%;
+ background: #000;
+    color: #fff;
+    font-size: 16px; /* better for mobile */
+    height: 35px;
+   
 }
-}
-
-.option[disabled][selected] {
-    font-size: clamp(1.1rem, 2.3vw, 2.4rem);
-    color: grey; 
 }
 .select {
     -webkit-appearance: block;
