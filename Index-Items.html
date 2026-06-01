@@ -373,14 +373,19 @@ width: 95%;
 
 @media (max-width: 768px) {
 .select {
-  background-color: black; 
-  color: white;
-   font-size: 12px; 
+ /* background-color: black;  */
+ /* color: white;             */
+ /*  font-size: 12px;  */ 
  font-weight: 500;
-  height: 6vh;
+ /* height: 6vh;   */
   border: 2px solid black; 
  text-align: center;
- width: 70%;
+ width: 80%;
+ background: #000;
+    color: #fff;
+    font-size: 16px; /* better for mobile */
+    height: 40px;
+   
 }
 
 /* Apply background and text color to the options */
@@ -394,6 +399,11 @@ width: 95%;
  text-align: center;
  width: 80%;
 }
+}
+.select {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 4px;
 }
 .divheight {
  height: 10vh;
@@ -438,10 +448,10 @@ width: 95%;
     
         <select id ="subsys" class = "select" >   
     <option  value="disabled selected">---------Select Module -----</option>
-    <option class = "select" >Items Management</option>
-    <option class = "select" >Transactions Management</option>
-    <option class = "select" >Reports</option> 
-    <option class = "select" >Codes</option>  
+    <option>Items Management</option>
+    <option>Transactions Management</option>
+    <option>Reports</option> 
+    <option>Codes</option>  
   </select> 
    </div>
     <div class = "inv-manage">      
