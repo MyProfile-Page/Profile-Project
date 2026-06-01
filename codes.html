@@ -119,7 +119,7 @@
 }
 
 .input-field {
- font-size: clamp(0.9rem, 1.6vw, 1.8rem);
+ font-size: 16px;
  height: 8vh;
  background-color: black; 
  font-weight: 550; 
@@ -128,11 +128,12 @@
  color: white;
  margin-top: 17vh;
  margin-left: 1vw;
+ text-align: center;
 }
 
 @media (max-width: 768px) {
 .input-field {
- font-size: clamp(0.9rem, 1.6vw, 1.8rem);
+ font-size: 16px;
  height: 8vh;
  background-color: black; 
  font-weight: 550; 
@@ -141,12 +142,25 @@
  color: white;
  margin-top: 4vh;
  margin-left: 1vw;
+ text-align: center;
 }
-}.option[disabled][selected] {
+}
+
+.option[disabled][selected] {
     font-size: clamp(1.1rem, 2.3vw, 2.4rem);
     color: grey; 
 }
-
+.input-field {
+    -webkit-appearance: block;
+ 
+    border-radius: 4px;
+}
+@media (max-width: 768px) {
+input-field, 
+::picker(select) {
+  appearance: base-select;
+}
+}
 
   </style>
    
@@ -174,7 +188,7 @@
   <div class="grid-item">
    <div class="box11" >
     <select id ="reps" class = "input-field">   
-    <option value="" disabled selected >&nbsp&nbsp&nbsp&nbsp--------Select Code Types--------       &nbsp&nbsp&nbsp&nbsp</option>
+    <option value="" disabled selected >Select Code Types</option>
    <option>Customer Codes</option>
    <option>Items Categories Codes</option>
    <option>Manufacturers/Suppliers Codes</option>
