@@ -394,6 +394,14 @@ width: 95%;
  width: 80%;
 }
 }
+.divheight {
+ height: 10vh;
+}
+@media (max-width: 768px) {
+.divheight {
+ height: 6vh;
+}
+}
   </style>
    
 </head>
@@ -402,7 +410,7 @@ width: 95%;
 
    <!-- Following is Start of Header div -->
 
-<div style = "position: relative; display: flex; justify-content: space-between; background-color: black;">
+<div class = "divheight" style = "position: relative; display: flex; justify-content: space-between; background-color: black;">
   <div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
 <Label id="comp-name" style="font-size: clamp(0.8rem, 1.2vw, 1.4rem); color: white;"></Label>
 </div> 
