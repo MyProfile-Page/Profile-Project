@@ -326,7 +326,7 @@ width: 95%;
 
 @media (max-width: 768px) {
 .input-field {
- font-size: 10px;
+ font-size: 8px;
  font-weight: 500;
  height: 5vh;
  width: 100%;
@@ -337,6 +337,18 @@ width: 95%;
 }
 }
 
+.module-cls { 
+ color: white;
+ font-size: 12px; 
+ font-weight: 500;
+}
+@media (max-width: 768px) {
+.module-cls { 
+ color: white;
+ font-size: 8px; 
+ font-weight: 500;
+}
+}
 
   </style>
    
@@ -372,7 +384,7 @@ width: 95%;
     <div class="hello" style="border: 0.0vw solid green;">   
     
         <select id ="subsys" class = "input-field" >   
-    <option style="color: white; font-size: 12px; font-weight: 500;" value="disabled selected">---------Select Module -----</option>
+    <option class="module-cls" value="disabled selected">---------Select Module -----</option>
     <option style="color: white; font-size: 12px; font-weight: 500;" >Items Management</option>
     <option style="color: white; font-size: 12px; font-weight: 500;" >Transactions Management</option>
     <option style="color: white; font-size: 12px; font-weight: 500;" >Reports</option> 
