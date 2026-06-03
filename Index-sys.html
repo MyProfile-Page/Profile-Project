@@ -720,7 +720,7 @@ if (userId === "" || password === "" ){
     return;
   }
      
- alert("in add3");
+ 
 
     const docRef = doc(db, "usertable", userId);    
     const existingDoc = await getDoc(docRef);
@@ -734,7 +734,7 @@ if (userId === "" || password === "" ){
       return;
     }
     
-       alert("Password Matches!");  
+       
        const paramId = data.ownerId;
        const paramnm = data.ownernm;
     //   const paramId = "user1";
