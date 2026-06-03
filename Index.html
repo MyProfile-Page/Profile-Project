@@ -248,12 +248,23 @@ font-weight: 550;
   border: none;
 }
 
-::placeholder {
-  clamp(0.8rem, 1.2vw, 1.4rem);
-  font-weight: 500;
-  color: black; 
-  
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 12px; /* Adjust size as needed */
+    font-weight: 500;
+    color: black; 
+  }
+
+@media (max-width: 767px) {
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 12px; /* Adjust size as needed */
+    font-weight: 500;
+    color: black; 
+  }
 }
+
 
 .pr-bk-links {
     border: 0.0vw solid black; 
@@ -371,21 +382,22 @@ background-color: #9bc7be;
 }
 
 .input-field {
- clamp(0.8rem, 1.2vw, 1.4rem);
+ font-size: 12px;
  font-weight: 500;
  height: 8vh;
-  border: 0.1vw solid black; 
+  border: 2px solid black; 
  text-align: center;
  width: 70%;
 }
 
 @media (max-width: 768px) {
 .input-field {
- clamp(0.8rem, 1.2vw, 1.4rem);
+ font-size: 12px;
  font-weight: 500;
  height: 5vh;
  width: 100%;
  text-align: center;
+ border: 2px solid black; 
 }
 }
 
@@ -435,10 +447,11 @@ background-color: #9bc7be;
   width: 24%; 
   text-align: center;
   background-color: #fafafa; 
-  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
+  font-size: 12px;
   height: 8vh;
   font-weight: 500; 
-  border-radius: 12px;
+  border-radius: 2px;
+  border: 2px solid black;
  }
 .upd-btn {
   width: 9%; 
@@ -460,12 +473,14 @@ background-color: #9bc7be;
  }
 @media (max-width: 768px) {
 .add-btn {
-  width: 25%; 
+  width: 100%; 
   text-align: center;
   /* background-color: LightGrey; */
   background-color: #fafafa;
-  height: 5vh;
-  border-radius: 12px; 
+  height: 6vh;
+  border-radius: 2px; 
+  font-size: 12px;
+  border: 2px solid black;
  }
  }
 @media (max-width: 768px) {
@@ -533,6 +548,50 @@ background-color: #9bc7be;
   
  }
 
+.option[disabled][selected] {
+    font-size: clamp(1.1rem, 2.3vw, 2.4rem);
+    color: grey; 
+}
+
+  .box11 {  
+  width: 75%;
+  margin: 0 auto; 
+  margin-top: 10vh; 
+  border: 0.0vw solid Black;
+ }
+@media (max-width: 768px) {
+.box11 {  
+  width: 75%;
+  margin: 0 auto; 
+  margin-top: 5vh;
+  margin-top: 5vh;  
+ }
+}
+
+.top-div {  
+ border: 1px solid black;
+ margin: 0 auto; display: flex;
+ justify-content: space-between;
+ background-color: #666666;
+ color: white;
+ margin-top: 0vh; 
+ width: 100%;
+ height: 11vh;
+ }
+
+@media (max-width: 768px) {
+.top-div {  
+ border: 1px solid black;
+ margin: 0 auto; display: flex;
+ justify-content: space-between;
+ background-color: white;
+ color: black;
+ margin-top: 0.35vh; 
+ width: 99%;
+ height: 6.5vh;
+ }
+ }
+
 
   </style>
 </head>
@@ -542,14 +601,14 @@ background-color: #9bc7be;
 
   <!-- Following is div which is replacement of Navigation Bar old-->
 
-<div style = "margin: 0 auto; display: flex; justify-content: space-between; background-color: white; color: black; margin-top: 1vh; width: 99%;">
+<div class="top-div">
 
 <div style="text-align: left; margin-center: 0vw; display: inline-block; height: 7vh; margin-top: 3vh; margin-left: 0.7vw; ">
 <Label id="comp-name" style="font-size: clamp(0.8rem, 1.2vw, 1.4rem); font-weight: 500; "></Label>
 </div> 
 
 <div style="text-align: left; margin-left: 5vw; display: inline-block height: 7vh; margin-top: 3vh; ">
-<Label style="font-size: clamp(0.8rem, 1.2vw, 1.4rem);font-weight: 500; ">Catalog System Log In</Label>
+<Label style="font-size: clamp(0.9rem, 1.4vw, 1.6rem);font-weight: 500; ">Lite Inventory Control</Label>
 </div>
 
 
@@ -564,17 +623,20 @@ background-color: #9bc7be;
 
 
 
-
 <div class="gap3vh"></div>
 
-<div style="display: flex; width: 35%; border: 0.0vw dashed black; margin: 0 auto; background-color: Transparent; margin-top: 10vh;">
+<div style="display: flex; width: 60%; border: 0.0vw dashed black; margin: 0 auto; background-color: Transparent; margin-top: 0vh;">
+
 
  <!-- Input Form -->
 <div class="gap3vh"></div>
 <div class="gap3vh"></div>
 <div class = "items-add-upd" > 
-<div class="gap3vh"></div>
-<div class="gap3vh"></div>
+<div class="gap4vh"></div>
+<div class="gap4vh"></div>
+
+
+
 
 <div style="justify-content: center; display: flex;  width: 97%; border: 0.0vw solid black; margin: 0 auto; ">
   <input type="text" class="input-field" id="userId" placeholder="User Id"    >
@@ -585,10 +647,9 @@ background-color: #9bc7be;
 </div>
 <div class="gap1vh"></div> 
 
-<div class="gap1vh"></div> 
 
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto; margin-top: 3vh;">
-   <button onclick="additem()" type="button" class="add-btn"; style="clamp(0.8rem, 1.2vw, 1.4rem); font-weight: 500;">Log In</button>
+<div style="display: flex; justify-content: center; width: 97%; border: 0px solid black; margin: 0 auto; margin-top: 3vh;">
+   <button onclick="additem()" type="button" class="add-btn"; style="clamp(0.8rem, 1.2vw, 1.4rem); font-weight: 500;">Sign In</button>
 </div>
 <div class="gap3vh"></div>
 </div>
@@ -638,12 +699,65 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app); 
-  let compname = "GrowLite";
-  
-
+ let userselection = "None";
+ const input = document.getElementById("subsys");
+ let compname = "GrowLite"; 
  const labelcomp = document.getElementById('comp-name');
  labelcomp.textContent = compname;
 //  comp-name.text = "GrowLite";
+
+
+
+// 🔹 CREATE (Insert Data)
+window.additem = async function () {
+
+  
+  const userId = document.getElementById("userId").value;
+  const password = document.getElementById("password").value;
+  
+if (userId === "" || password === "" ){
+    alert("Please Enter all Manadatory datas of the User");
+    return;
+  }
+     
+ 
+
+    const docRef = doc(db, "usertable", userId);    
+    const existingDoc = await getDoc(docRef);
+     if (!existingDoc.exists()) {
+      alert("User Not Found!");
+      return;
+    }
+    const data = existingDoc.data();
+        if (data.password !== password) {
+       alert("Invalid Password!");
+      return;
+    }
+    
+       
+       const paramId = data.ownerId;
+       const paramnm = data.ownernm;
+    //   const paramId = "user1";
+    //   const paramnm = "Asad";
+       console.log(paramId);
+       console.log(paramnm);
+ window.location.href = `./Index-Items.html?param1=${paramId}&param2=${paramnm}`; 
+
+     
+     
+  
+     
+
+
+
+     
+};
+
+
+  
+  
+
+
 
   // 🔹 READ (Load Data into Table)
 async function loadusertable() {
@@ -736,56 +850,6 @@ window.edititem = function (id, name) {
     loadusertable();
   };
 
-// 🔹 CREATE (Insert Data)
-window.additem = async function () {
-
-  
-  const userId = document.getElementById("userId").value;
-  const password = document.getElementById("password").value;
-  
-if (userId === "" || password === "" ){
-    alert("Please Enter all Manadatory datas of the User");
-    return;
-  }
-     
- alert("in add3");
-
-    const docRef = doc(db, "usertable", userId);    
-    const existingDoc = await getDoc(docRef);
-     if (!existingDoc.exists()) {
-      alert("User Not Found!");
-      return;
-    }
-    const data = existingDoc.data();
-    if (data.password === password) {
-       alert("Password Matches!");  
-       const paramId = data.ownerId;
-       const paramnm = data.ownernm;
-    //   const paramId = "user1";
-    //   const paramnm = "Asad";
-       console.log(paramId);
-       console.log(paramnm);
-     
-     
-   //     window.location.href = `./cust-tables-add-del.html?param1=${paramId}&param2=${paramnm}`;  
-        window.location.href = `./Catalog.html?param1=${paramId}&param2=${paramnm}`;  
-   //     window.location.href = `./Transaction.html?param1=${paramId}&param2=${paramnm}`;
-    }
-   else {
-    alert("Invalid Password");
-    return;
-   }
-// alert("in add4");
-//    if (password: == password) {
-  //     alert("Invalid Password!");
-  //    return;
- //   }
-     
-};
-
-
-  
-  
 
 //  PRINT FUNCTION START
 
