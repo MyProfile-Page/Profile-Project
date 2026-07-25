@@ -624,6 +624,16 @@ background-color: lightgrey;
   cursor: pointer;
 }
 
+select, select::picker(select) {
+  appearance: base-select; 
+}
+
+option {
+  font-size: clamp(0.7rem, 1.0vw, 1.1rem);
+  background-color: black;
+  color: white;  
+}
+
 .sel-cls {
  background-color: black; 
  color: white; 
@@ -631,22 +641,26 @@ background-color: lightgrey;
  height: 12vh;
  width: 41.3%; 
  text-align: left;
- padding-left: 0.5vw;
+ padding-left: 1.75vw;
+ padding-top: 4vh;
  font-weight: 550;
 } 
 .sel-cls option:disabled {
   text-align: left;
 }
+
 @media (max-width: 768px) { 
 .sel-cls {
  background-color: black; 
  color: white; 
- font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+ font-size: clamp(0.9rem, 1.2vw, 1.3rem);
  height: 6vh;
- width: 70%; 
+ width: 85%; 
  text-align: left;
- padding-left: 0.5vw;
- font-weight: 550;
+ padding-left: 3.3vw;
+ padding-top: 2vh;
+ font-weight: 600;
+ border:0px solid yellow; 
 } 
 .sel-cls option:disabled {
   text-align: left;
@@ -718,7 +732,6 @@ font-size: clamp(0.9rem, 1.6vw, 1.8rem); font-weight: 550; color: white; padding
  font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; margin-top: 2vh; 
 }
 .div0-3  { margin-left: 1%; border: 0.0vw solid yellow; margin-top: 3vh;
- 
 }
 .div0-3back  {
  font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; 
@@ -728,14 +741,16 @@ font-size: clamp(0.9rem, 1.6vw, 1.8rem); font-weight: 550; color: white; padding
 text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 40%; display: flex; height: 10vh;
 }
 .div1-a {
-font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1vw;
-margin-top: 3vh;}
+font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1.75vw;
+margin-top: 3vh;
+}
 .div2 {
 text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 40%; display: flex; height: 10vh;
 }
 .div2-a {
-font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1vw;
-margin-top: 3vh;}
+font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1.75vw;
+margin-top: 3vh;
+}
 
 @media (max-width: 768px) {
 .div-flex0  {
@@ -752,27 +767,40 @@ font-size: clamp(0.9rem, 1.6vw, 1.8rem); font-weight: 550; color: white; padding
 .div0-2print  {
  font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; margin-top: 2vh; 
 }
-.div0-3  { margin-left: 1%; border: 0.0vw solid yellow; margin-top: 2vh;
- 
+.div0-3  { margin-left: 1%; border: 0.0vw solid yellow; margin-top: 2vh; 
 }
 .div0-3back  {
  font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; margin-top: 2vh;
 }
 .div1 {
-text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 70%; display: flex; height: 6.4vh;
+text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 83%; display: flex; height: 6.4vh;
 }
 .div1-a {
-font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1vw;
-margin-top: 2vh;}
+font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 3.3vw;
+margin-top: 2.25vh; text-decoration: none;
+}
 .div2 {
-text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 70%; display: flex; height: 6.4vh;
+text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 83%; display: flex; height: 6.4vh;
 }
 .div2-a {
-font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1vw;
-margin-top: 2vh;}
+font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 3.3vw;
+margin-top: 2.25vh;
+}
 }
 
-
+.rightimg  {
+/* margin-top: 4.0vh;  */
+width: 1.2vw;
+height: 2vh;
+vertical-align: middle;
+}
+@media (max-width: 768px) {
+.rightimg  {
+vertical-align: middle;
+width: 2.3vw;
+height: 1.6vh;
+}
+}
 
 
   </style>
@@ -789,7 +817,7 @@ margin-top: 2vh;}
 <a href="#" onclick="printInvoice()" class="div0-2print" id = "printid" >Print</a>
 </div>
 <div class="div0-3">
-<a href="index.html"  id = "backlink" class="div0-3back" >Back</a>
+<a href="#" onclick="backpage()" id = "backlink" class="div0-3back" >Back</a>
 </div>
 </div> 
 
@@ -798,13 +826,21 @@ margin-top: 2vh;}
 <!-- Following is div1  which is replacement of Navigation Bar -->
 
 <div class="div1">
-<a class="div1-a" href="#" onclick="manageproject()"  id = "projectlink"></a>
+<a class="div1-a" href="#" onclick="manageproject()" style="text-decoration: none;" id = "projectlink">
+<span id="span1id"></span>
+<label>&nbsp&nbsp</label>
+<img src="img-right-arrow-nb2.jpg" class="rightimg"  >
+</a>
 </div> 
 <!-- Above is div1 which is replacement of Navigation Bar -->
-<div class="gap1vh"></div>
+
 <!-- Following is div2  which is replacement of Navigation Bar -->
 <div class="div2">
-<a class="div2-a" href="#" onclick="managetask()"  id = "tasklink" ></a>
+<a class="div2-a" href="#" onclick="managetask()" style="text-decoration: none;" id = "tasklink" >
+<span id="span2id"></span>
+<label>&nbsp&nbsp</label>
+<img src="img-right-arrow-nb2.jpg" class="rightimg">
+</a>
 </div>
  
 <div class="gap3vh"></div>
@@ -814,7 +850,7 @@ margin-top: 2vh;}
 
 
 <!-- following divs to select projects from datalist -->
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid black; margin: 0 auto;">
+<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid red; margin: 0 auto;">
 <select id="projnbr" class="sel-cls" autocomplete="off">
 </select>
 </div> 
@@ -969,6 +1005,7 @@ let paramtsdt = "";
 let paramtedt = "";
 let paramtstt = "";
 let selplaceholder = "";
+let finalentrygb = "";
 paramId = params.get("param1");
 paramnm = params.get("param2");
 paramdatatype = params.get("param3");
@@ -1064,8 +1101,9 @@ async function loadheaders() {
       alert("heading Names Not Found!");
       return;
     }
-    const datamain7 = existingDocmain7.data();  
-    document.getElementById("projectlink").textContent = datamain7.hds;
+    const datamain7 = existingDocmain7.data(); 
+ //   document.getElementById("projectlink").textContent = datamain7.hds;
+    document.getElementById("span1id").textContent = datamain7.hds;
 
       const recordId8 = `${paramdatatype}main8`;
   const docRefmain8 = doc(db, "hdrnames", recordId8);    
@@ -1075,7 +1113,20 @@ async function loadheaders() {
       return;
     }
     const datamain8 = existingDocmain8.data();  
-    document.getElementById("tasklink").textContent = datamain8.hds;
+ //   document.getElementById("tasklink").textContent = datamain8.hds;
+    document.getElementById("span2id").textContent = datamain8.hds;
+
+      const recordId9 = `${paramdatatype}maina1`;
+  const docRefmain9 = doc(db, "hdrnames", recordId9);    
+    const existingDocmain9 = await getDoc(docRefmain9);
+     if (!existingDocmain9.exists()) {
+      alert("heading Names Not Found!");
+      return;
+    }
+    const datamain9 = existingDocmain9.data();  
+    finalentrygb = datamain9.hds;
+
+
     
     loadcodestables();
 }
@@ -1117,14 +1168,15 @@ projlist.appendChild(placeholder);
 
       const option = document.createElement("option");
       option.value = data.projnbr; // This is what gets inserted into the input
-      option.textContent = `${data.projnbr} - ${data.projname}`;      
+  //  option.textContent = `${data.projnbr} - ${data.projname}`; 
+      option.textContent = `${data.projname}`;      
       projlist.appendChild(option);
     });
 
-// const option2 = document.createElement("option");
-// option2.value = ""; // This is what gets inserted into the input
-// option2.textContent = "";      
-// projlist.appendChild(option2);
+ const option2 = document.createElement("option");
+ option2.value = "9999"; // This is what gets inserted into the input
+ option2.textContent = finalentrygb;      
+ projlist.appendChild(option2);
 
 
   }
@@ -1165,6 +1217,12 @@ if (option) {
     projnbrgb = parseInt(projnbrgb, 10);
      console.log(projnbrgb);
     wholetaskTable.style.display = "block";
+    if (projnbrgb === 9999){
+     window.location.href = `./main-all-entities.html?param1=${paramId}&param2=${paramnm}` +
+                           `&param3=${paramdatatype}&param4=${paramuserId}` + 
+                           `&param5=""&param6=""&param7=""` +
+                           `&param8=""&param9=""`;  
+  }    
     loadtaskmaster();
     imagePanel.style.display = "none";
 //    projectdisplaydiv.style.display = "block";
@@ -1345,16 +1403,14 @@ window.Reloadpage = Reloadpage; // ⭐ IMPORTANT LINE
 
 function backpage() {  
 
-if (paramdatatype === "P") {
-         window.location = `./index.html`; 
-}
-if (paramdatatype === "E") {
-         window.location = `./index.html`; 
-}
-if (paramdatatype === "C") {
-         window.location = `./index.html`; 
-}
+if (paramuserId === "Admin") {
+   window.location = `./main-all-entities.html?param1=${paramId}&param2=${paramnm}&param3=
+${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param7=${paramtsdt}&param8=${paramtedt}&param9=${paramtstt}`; 
  }
+else {
+         window.location = `./index.html`; 
+}
+}
 window.backpage = backpage; // ⭐ IMPORTANT LINE
 
 
@@ -1675,7 +1731,7 @@ function printInvoice() {
         <div style="text-align: left;">
           <!-- Your existing header -->
           
-          <h4>Projects Listasad</h4>
+          <h4>Projects List</h4>
           <p>${paramnm}. All rights reserved.</p>
           <br>
           North York Toronto - Phone: 647-999-9999<br>
