@@ -27,9 +27,11 @@
           background: LightCyan;
       //   background: #cce6ff;
           background: #9bc7be;
-         
+          
           line-height: 0.8;         
             }
+
+
 
 .lkbg { 
     color: #cce6ff;
@@ -51,7 +53,7 @@
   
  
 .custom-table-container {
-    height: 250px;  
+    height: 40vh;  
      overflow-y: auto;     /* vertical scrollbar */
     border: 0.0vw solid black; 
     
@@ -69,12 +71,7 @@
 }
 }
 
-.container-cls {
- background-color: black;
- border: 0.0vw solid black; 
- width: 99.5%;
- height: 10vh;
-}
+
 
 
  .custom-table {
@@ -573,6 +570,72 @@ background-color: lightgrey;
 }
 }
 
+.adv-div {
+ border: 0.0vw solid black; 
+ width: 75%;
+ margin: 0 auto;
+ margin-top: 6.0vh;
+ background-image: url('index-img-html-700.jpg');
+ background-repeat: no-repeat;
+ /* Scale the image to perfectly fill the entire div space */
+ background-size: 90% 39.5vh;
+ /* Position the image directly in the center of the container */
+ background-position: center;
+  /* Ensure the container has height so the image is actually visible */
+/*  min-height: 400px;  */ 
+
+ 
+/* height: 60vh; */ 
+ height: 34vh;
+}
+.adv-div-txt {
+ width: 70%;
+ border: 0.0vw solid black; 
+ margin: 0 auto;
+ background-color: black;
+ margin-top: 0vh;
+ }
+.adv-div-txt-n { 
+ border: 0.0vw solid black; 
+ color: white;
+ font-size: clamp(0.6rem, 1.1vw, 1.2rem);
+ font-weight: 550; 
+ }
+
+@media (max-width: 768px) {
+.adv-div {
+border: 0.0vw solid black; 
+ width: 85%;
+ margin: 0 auto;
+ background-image: url('index-img-html.jpg');
+ background-repeat: no-repeat;
+ /* Scale the image to perfectly fill the entire div space */
+ background-size: cover;
+ /* Position the image directly in the center of the container */
+ background-position: center;
+  /* Ensure the container has height so the image is actually visible */
+/*  min-height: 400px;  */ 
+margin-top: 4vh;
+
+ height: 25vh;
+}
+.adv-div-txt {
+ width: 90%;
+ border: 0.0vw solid black; 
+ margin: 0 auto;
+ background-color: black;
+ margin-top: 0vh;
+ }
+.adv-div-txt-n { 
+ border: 0.0vw solid black; 
+ color: off-white;
+ font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+ font-weight: 550; 
+ 
+ }
+}
+
+
 
 
 
@@ -625,7 +688,7 @@ background-color: lightgrey;
 }
 
 select, select::picker(select) {
-  appearance: base-select; 
+  appearance: none; 
 }
 
 option {
@@ -636,14 +699,17 @@ option {
 
 .sel-cls {
  background-color: black; 
- color: white; 
+ color: #E0E0E0; 
  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
- height: 12vh;
- width: 41.3%; 
+ height: 6vh;
+ width: 70%; 
  text-align: left;
- padding-left: 1.75vw;
- padding-top: 4vh;
+ padding-left: 1.60vw;
+ padding-top: 0vh;
  font-weight: 550;
+ border: none;
+ outline: none;
+ margin-top: 0vh;
 } 
 .sel-cls option:disabled {
   text-align: left;
@@ -652,13 +718,12 @@ option {
 @media (max-width: 768px) { 
 .sel-cls {
  background-color: black; 
- color: white; 
- font-size: clamp(0.9rem, 1.2vw, 1.3rem);
- height: 6vh;
+ color: #E0E0E0; 
+ font-size: clamp(1.1rem, 1.8vw, 2.0rem);
  width: 85%; 
  text-align: left;
- padding-left: 3.3vw;
- padding-top: 2vh;
+ padding-left: 3.8vw;
+ padding-top: 0vh;
  font-weight: 600;
  border:0px solid yellow; 
 } 
@@ -716,89 +781,146 @@ option {
 
 }
 
+.div-boundry { background-color: black; margin: 0 auto; width: 40%;  height: 93vh; margin-top: 5vh;
+}
+@media (max-width: 768px) { 
+.div-boundry { background-color: black; margin: 0 auto; width: 100%;
+}
+}
 .div-flex0  {
-margin: 0 auto; width: 100%;   background-color: black; display: flex; height: 12vh;
+margin: 0 auto; width: 90%;   background-color: black; display: flex; height: 12vh;
 }
 
-.div0-1  {
- margin-left: 1%; width: 30%; flex-shrink: 0; border: 0.0vw solid yellow; margin-top: 3vh;
+.div0-1  { 
+ margin-left: 10%; width: 70%; flex-shrink: 0; border: 0.0vw solid yellow; margin-top: 3vh;
 }
 .div0-1label {
-font-size: clamp(0.9rem, 1.6vw, 1.8rem); font-weight: 550; color: white; padding-left 1%; 
+font-size: clamp(0.8rem, 1.4vw, 1.6rem); font-weight: 550; color: #E0E0E0; padding-left 1%; 
 }
-.div0-2  { margin-left: 59%; border: 0.0vw solid yellow; margin-top: 3vh;
+.div0-2  { margin-left: 2%; border: 0.0vw solid yellow; margin-top: 3.3vh;
 }
 .div0-2print  {
- font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; margin-top: 2vh; 
+ font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: #E0FFFF; margin-top: 2vh; text-decoration: none; 
 }
-.div0-3  { margin-left: 1%; border: 0.0vw solid yellow; margin-top: 3vh;
+.div0-3  { margin-left: 2%; border: 0.0vw solid yellow; margin-top: 3.3vh;
 }
 .div0-3back  {
- font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; 
+ font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: #E0FFFF; text-decoration: none;
 }
 
-.div1 {
-text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 40%; display: flex; height: 10vh;
+.div1 { 
+text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 60%; display: flex; height: 10vh;
 }
 .div1-a {
-font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1.75vw;
-margin-top: 3vh;
+font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: #E0E0E0; text-align: left; padding-left: 1.75vw; margin-top: 3vh; 
 }
-.div2 {
-text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 40%; display: flex; height: 10vh;
+.div2 { 
+text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 60%; display: flex; height: 10vh;
 }
 .div2-a {
-font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 1.75vw;
-margin-top: 3vh;
+font-weight: 500; font-size: clamp(0.6rem, 1.4vw, 1.5rem); color: #E0E0E0; text-align: left; padding-left: 1.75vw; margin-top: 3vh;
+}
+.divsel-cls { 
+display: flex;  width: 60%; justify-content: center; border: 0.0vw solid red; margin: 0 auto;
+margin-top: 6.8vh;
 }
 
 @media (max-width: 768px) {
 .div-flex0  {
-margin: 0 auto; width: 100%;   background-color: black; display: flex; height: 7vh;
+margin: 0 auto; width: 100%;   background-color: black; display: flex; height: 7vh; margin-top: 2vh;
 } 
 .div0-1  {
  margin-left: 1%; width: 70%; flex-shrink: 0; border: 0.0vw solid yellow; margin-top: 2vh;
 }
 .div0-1label {
-font-size: clamp(0.9rem, 1.6vw, 1.8rem); font-weight: 550; color: white; padding-left 1%; 
+font-size: clamp(1.2rem, 1.9vw, 2.1rem); font-weight: 550; color: #E0E0E0; padding-left 1%; 
+margin-top: 1vh;
 }
-.div0-2  { margin-left: 9%; border: 0.0vw solid yellow; margin-top: 2vh;
+.div0-2  { margin-left: 9%; border: 0.0vw solid yellow; margin-top: 2.2vh;
 }
 .div0-2print  {
- font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; margin-top: 2vh; 
+ font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: #E0FFFF; text-decoration: none;  
 }
-.div0-3  { margin-left: 1%; border: 0.0vw solid yellow; margin-top: 2vh; 
+.div0-3  { margin-left: 1%; border: 0.0vw solid yellow; margin-top: 2.2vh; 
 }
 .div0-3back  {
- font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: blue; margin-top: 2vh;
+ font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: #E0FFFF; margin-top: 2vh; text-decoration: none;
 }
 .div1 {
-text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 83%; display: flex; height: 6.4vh;
+display: flex;  width: 36%; justify-content: left; border: 0.0vw solid red; margin: 0 auto; margin-top: 2vh;
 }
 .div1-a {
-font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 3.3vw;
+font-weight: 500; font-size: clamp(1.1rem, 1.8vw, 2.0rem); color: #E0E0E0; text-align: left; padding-left: 3.3vw;
 margin-top: 2.25vh; text-decoration: none;
 }
 .div2 {
-text-align: left; margin: 0 auto; margin-top: 3vh; background-color: black; width: 83%; display: flex; height: 6.4vh;
+display: flex;  width: 36%; justify-content: left; border: 0.0vw solid red; margin: 0 auto;
 }
 .div2-a {
-font-weight: 500; font-size: clamp(0.9rem, 1.4vw, 1.5rem); color: white; text-align: left; padding-left: 3.3vw;
+font-weight: 500; font-size: clamp(1.1rem, 1.8vw, 2.0rem); color: #E0E0E0; text-align: left; padding-left: 3.3vw;
 margin-top: 2.25vh;
+}
+.divsel-cls {
+display: flex;  width: 29.5%; justify-content: left ;border: 0.0vw solid red; margin: 0 auto;
+margin-top: 2vh;
 }
 }
 
 .rightimg  {
 /* margin-top: 4.0vh;  */
-width: 1.2vw;
-height: 2vh;
+width: 2.4vw;
+height: 4vh;
 vertical-align: middle;
 }
 @media (max-width: 768px) {
 .rightimg  {
 vertical-align: middle;
-width: 2.3vw;
-height: 1.6vh;
+width: 7vw;
+height: 3.2vh;
+}
+}
+
+.prtimg  {
+/* margin-top: 4.0vh;  */
+width: 3.4vw;
+height: 5vh;
+vertical-align: middle;
+}
+@media (max-width: 768px) {
+.prtimg  {
+vertical-align: middle;
+width: 10vw;
+height: 3.5vh;
+}
+}
+
+.dropimg  {
+/* margin-top: 4.0vh;  */
+width: 2.4vw;
+height: 5vh;
+vertical-align: middle;
+}
+@media (max-width: 768px) {
+.dropimg  {
+margin-top: 1.5vh; 
+/* vertical-align: middle; */
+width: 7vw;
+height: 3vh;
+border: 0.0vw solid red;
+}
+}
+
+.backimg  {
+/* margin-top: 4.0vh;  */
+width: 2.4vw;
+height: 4vh;
+vertical-align: middle;
+}
+@media (max-width: 768px) {
+.backimg  {
+vertical-align: middle;
+width: 10vw;
+height: 3.5vh;
 }
 }
 
@@ -807,17 +929,18 @@ height: 1.6vh;
 </head>
 <body  class="body_cls">
 
-
 <!-- Following is div0  which is replacement of Navigation Bar -->
+<div class="div-boundry">
+
 <div class = "div-flex0">
 <div class="div0-1">
 <Label id="comp-name1" class="div0-1label" ></Label>
 </div>
-<div class="div0-2">
-<a href="#" onclick="printInvoice()" class="div0-2print" id = "printid" >Print</a>
-</div>
+
 <div class="div0-3">
-<a href="#" onclick="backpage()" id = "backlink" class="div0-3back" >Back</a>
+<a href="#" onclick="backpage()" id = "backlink" class="div0-3back" >
+<img src="img-back-icon-new5.JPG" class="backimg" title="Back">
+</a>
 </div>
 </div> 
 
@@ -825,62 +948,111 @@ height: 1.6vh;
 
 <!-- Following is div1  which is replacement of Navigation Bar -->
 
-<div class="div1">
+<div id="divop1" class="div1">
 <a class="div1-a" href="#" onclick="manageproject()" style="text-decoration: none;" id = "projectlink">
-<span id="span1id"></span>
+<img src="plus-icon-red.JPG" class="rightimg" title="Add"  >
 <label>&nbsp&nbsp</label>
-<img src="img-right-arrow-nb2.jpg" class="rightimg"  >
+<span id="span1id"></span>
 </a>
 </div> 
 <!-- Above is div1 which is replacement of Navigation Bar -->
 
 <!-- Following is div2  which is replacement of Navigation Bar -->
-<div class="div2">
+<div id="divop2" class="div2">
 <a class="div2-a" href="#" onclick="managetask()" style="text-decoration: none;" id = "tasklink" >
-<span id="span2id"></span>
+<img src="plus-icon-red.JPG" class="rightimg" title="Add">
 <label>&nbsp&nbsp</label>
-<img src="img-right-arrow-nb2.jpg" class="rightimg">
+<span id="span2id"></span>
 </a>
 </div>
  
-<div class="gap3vh"></div>
+
 <!-- Above is div2 which is replacement of Navigation Bar -->
 
 
 
 
 <!-- following divs to select projects from datalist -->
-<div style="display: flex; justify-content: center; width: 97%; border: 0.0vw solid red; margin: 0 auto;">
+<div id="divsel" class="divsel-cls">
+<img src="drop-icon-white1.JPG" class="dropimg" title="Select">
 <select id="projnbr" class="sel-cls" autocomplete="off">
 </select>
 </div> 
-<div class="gap3vh"></div> 
+
 
 <!-- Above divs to select projects from datalist -->
 
 
 
 
-<!-- Following are divs which are addition of Navigation Bar -->
 
 
-<div class = "div-hdr" style="display: none;" >
-<div style="text-align: center; margin: 0 auto;  height: 7vh; margin-top: 3vh; border: 0.0vw dashed green;">
-<Label style="font-size: clamp(0.9rem, 1.7vw, 1.9rem); color: blue; font-weight: 550; id="hdr-pr-wrd;"></Label>
-<span id="projdesc" style= "color:blue; "></span>
+ 
+
+  
+ <div id="txtPanel" class="adv-div-txt" >
+
+  <div class="adv-div-txt-n" style="text-decoration: underline; text-align: center; color: #FFF59D;">
+  <div class="gap3vh"></div>
+  <div class="gap2vh"></div>
+  <div class="gap3vh"></div>
+  
+  Cloud-Integrated Lite Digital systems Avialable Free  
+  </div>
+
+ <div class="adv-div-txt-n" style="text-decoration: underline; text-align: center; color: #FFF59D;" >
+  <div class="gap3vh"></div>
+  For the Resource-Constrained Small Organizations 
+  <div class="gap3vh"></div>
+  </div> 
+
+  <div class="adv-div-txt-n" style="text-align: center; color: #E0FFFF;">
+  <div class="gap3vh"></div> 
+  Please Contact info@growlite.online
+  </div>
+
+  <div class="adv-div-txt-n" style="padding-left: 3.6vw;">
+  <div class="gap3vh"></div> 
+  <div class="gap3vh"></div> 
+  1. Projects Management For Micro-businesses
+  </div>
+
+   <div class="adv-div-txt-n" style="padding-left: 3.6vw;">
+  <div class="gap3vh"></div> 
+  2. Employees/Volunteers Management For Micro-businesses 
+  </div>
+
+  <div class="adv-div-txt-n" style="padding-left: 3.6vw;">
+  <div class="gap3vh"></div> 
+  3. Courses Management For Micro-Institutes
+  </div>
+
+   <div class="adv-div-txt-n" style="padding-left: 3.6vw;">
+  <div class="gap3vh"></div> 
+  4. Books Circulation Management For Mini-Libraries
+  </div>
+
+  <div class="adv-div-txt-n" style="padding-left: 3.6vw;">
+  <div class="gap3vh"></div> 
+  5. Items Inventory Management For Mini-Stores
+  <div class="gap3vh"></div>
+  <div class="gap3vh"></div> 
+  <div class="gap3vh"></div>
+   <div class="gap3vh"></div>
+  </div>
+   
+ </div>
+
+<div id="advPanel" class="adv-div"  >
 </div>
-</div> 
 
+</div>
 
-
-<!-- Above are divs which are addition of Navigation Bar -->
-
-<div id="imagePanel" class="imagediv">
- <img src="index-img-html.jpg" class="img-fluid rounded pull-left"   alt="notavialable" class="responsive-img"> 
-    </div>
-
-
-
+<div id="divlink" class="div0-2">
+<a href="#" onclick="printInvoice()" class="div0-2print" id = "printid" >
+<img src="Printer-icon1.png" class="prtimg" title="Print">
+</a>
+</div>
 
 
 
@@ -907,7 +1079,7 @@ height: 1.6vh;
         <th style="text-align: center; width: 15%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; " id = "hdredate"></th>
         <th style="text-align: center; width: 15%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; " id = "hdrstatus"></th>             
         
-        <th style="text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; ">Action</th>
+        <th style="text-align: center; width: 20%; font-size: clamp(0.8rem, 1.3vw, 1.4rem); font-weight: 500; " id = "thaction"></th>
         
         
       </tr>
@@ -983,12 +1155,13 @@ const firebaseConfig = {
   const db = getFirestore(app);
   wholetaskTable.style.display = "none"; 
   const params = new URLSearchParams(window.location.search);
+let printgb = "Print";
 let selectedStatus = "none";
 let todaygb = new Date();
 todaygb.setHours(0, 0, 0, 0);
+let actiongb = "Action";
 let startgb = "";
 let endgb = "";
-let statusgb = "";
 let projnbrgb = "";
 let projname = "none";
 let prevprojname = "";
@@ -1006,6 +1179,11 @@ let paramtedt = "";
 let paramtstt = "";
 let selplaceholder = "";
 let finalentrygb = "";
+let compgb = "Mark As Completed";
+let dropgb = "Mark As Dropped";
+let stargb = "Mark As Started";
+let delegb = "Delete";
+let stopgb = "Mark As Stopped";
 paramId = params.get("param1");
 paramnm = params.get("param2");
 paramdatatype = params.get("param3");
@@ -1022,112 +1200,191 @@ console.log(paramdatatype);
 console.log(paramuserId);
 
 // document.getElementById("inv-btn").textContent = "Print";
- document.getElementById("comp-name1").textContent = paramnm;
 document.getElementById("hdrmainname").textContent = paramtt;
+document.getElementById("thaction").textContent = "Action";
+// document.getElementById("backlink").textContent = "Back";
 // document.getElementById("labelgridname").textContent = `Selected ${paramet} ${paramtt}s Grid`;
 
+if (paramdatatype === "TL") {
+   compgb = "İade edildi";
+   dropgb = "Veril rafa kaldırıldı";
+   stargb = "Veriliş";
+   delegb = "Sildir";
+   stopgb = "Belirtilmemiş";
+   actiongb = "Aksiyon";
+   printgb = "Yazdır";
+   document.getElementById("thaction").textContent = "Aksiyon";
+   // document.getElementById("backlink").textContent = "Geri";
+   
+}
+
+if (paramdatatype === "I") {
+   loadheadersinventory();
+}
+else {
 loadheaders();
+}
 
+if (paramuserId === "Admin") {
+   divop1.style.display = "none";
+   divop2.style.display = "none";
+   divsel.style.display = "none";
+   document.getElementById("comp-name1").textContent = "GrowLite OnLine Digital Systems";
+   txtPanel.style.display = "block";
+ //  advPanel.style.Display = "none"; 
+   advPanel.style.setProperty("display", "none", "important"); 
+}
+else {
+txtPanel.style.display = "none";
+document.getElementById("comp-name1").textContent = paramnm;
 
-async function loadheaders() {
+}
 
+async function loadheadersinventory() {
 
   const recordId1 = `${paramdatatype}main1`;
   const docRefmain1 = doc(db, "hdrnames", recordId1);    
     const existingDocmain1 = await getDoc(docRefmain1);
      if (!existingDocmain1.exists()) {
-      alert("heading Names Not Found!");
-      return;
+      selplaceholder = "Undefined-main1";
     }
+  else {
     const datamain1 = existingDocmain1.data();  
- //   const projnbrhd = document.getElementById("projnbr");
- //   projnbrhd.placeholder = datamain1.hds;
-      selplaceholder = datamain1.hds;
-      console.log("sel", selplaceholder);
+      selplaceholder = datamain1.hds;    
+  }
+     const recordId7 = `${paramdatatype}main7`;
+  const docRefmain7 = doc(db, "hdrnames", recordId7);    
+    const existingDocmain7 = await getDoc(docRefmain7);
+     if (!existingDocmain7.exists()) {
+      document.getElementById("span1id").textContent =  "Undefined-main7";
+    }
+  else {
+    const datamain7 = existingDocmain7.data(); 
+ //   document.getElementById("projectlink").textContent = datamain7.hds;
+    document.getElementById("span1id").textContent = datamain7.hds;
+   }
+      const recordId8 = `${paramdatatype}main8`;
+  const docRefmain8 = doc(db, "hdrnames", recordId8);    
+    const existingDocmain8 = await getDoc(docRefmain8);
+     if (!existingDocmain8.exists()) {
+      document.getElementById("span2id").textContent =  "Undefined-main8";
+    }
+  else {
+    const datamain8 = existingDocmain8.data();  
+ //   document.getElementById("tasklink").textContent = datamain8.hds;
+    document.getElementById("span2id").textContent = datamain8.hds;
+}
+  const recordId9 = `${paramdatatype}maina1`;
+  const docRefmain9 = doc(db, "hdrnames", recordId9);    
+    const existingDocmain9 = await getDoc(docRefmain9);
+     if (!existingDocmain9.exists()) {
+       finalentrygb = "Undefined-main8";
+    }
+  else {
+    const datamain9 = existingDocmain9.data();  
+    finalentrygb = datamain9.hds;  
+} 
+    loadcodestables();
+}
+
+
+
+async function loadheaders() {
+   const recordId1 = `${paramdatatype}main1`;
+  const docRefmain1 = doc(db, "hdrnames", recordId1);    
+    const existingDocmain1 = await getDoc(docRefmain1);
+     if (!existingDocmain1.exists()) {
+      selplaceholder = "Undefined-main1";
+    }
+  else {
+      const datamain1 = existingDocmain1.data();  
+      selplaceholder = datamain1.hds;    
+  }
+
   const recordId2 = `${paramdatatype}main2`;
   const docRefmain2 = doc(db, "hdrnames", recordId2);    
     const existingDocmain2 = await getDoc(docRefmain2);
      if (!existingDocmain2.exists()) {
-      alert("heading Names Not Found!");
-      return;
+ //  document.getElementById("labelgridname").textContent =  "Undefined-main2";
     }
+  else {
     const datamain2 = existingDocmain2.data();  
  //   document.getElementById("labelgridname").textContent = datamain2.hds;
-
+ }
     const recordId3 = `${paramdatatype}main3`;
   const docRefmain3 = doc(db, "hdrnames", recordId3);    
     const existingDocmain3 = await getDoc(docRefmain3);
      if (!existingDocmain3.exists()) {
-      alert("heading Names Not Found!");
-      return;
+      document.getElementById("hdrmainname").textContent = "Undefined-main3";
     }
+  else {
     const datamain3 = existingDocmain3.data();  
     document.getElementById("hdrmainname").textContent = datamain3.hds;
-
+ }
      const recordId4 = `${paramdatatype}main4`;
   const docRefmain4 = doc(db, "hdrnames", recordId4);    
     const existingDocmain4 = await getDoc(docRefmain4);
      if (!existingDocmain4.exists()) {
-      alert("heading Names Not Found!");
-      return;
+      document.getElementById("hdrsdate").textContent = "Undefined-main4";
     }
+  else {
     const datamain4 = existingDocmain4.data();  
     document.getElementById("hdrsdate").textContent = datamain4.hds;
+ }
 
      const recordId5 = `${paramdatatype}main5`;
   const docRefmain5 = doc(db, "hdrnames", recordId5);    
     const existingDocmain5 = await getDoc(docRefmain5);
      if (!existingDocmain5.exists()) {
-      alert("heading Names Not Found!");
-      return;
+       document.getElementById("hdredate").textContent = "Undefined-main5";
     }
+  else {
     const datamain5 = existingDocmain5.data();  
     document.getElementById("hdredate").textContent = datamain5.hds;
+ }
 
     const recordId6 = `${paramdatatype}main6`;
   const docRefmain6 = doc(db, "hdrnames", recordId6);    
     const existingDocmain6 = await getDoc(docRefmain6);
      if (!existingDocmain6.exists()) {
-      alert("heading Names Not Found!");
-      return;
+       document.getElementById("hdrstatus").textContent = "Undefined-main6";
     }
+  else {
     const datamain6 = existingDocmain6.data();  
     document.getElementById("hdrstatus").textContent = datamain6.hds;
-
+ }
     const recordId7 = `${paramdatatype}main7`;
   const docRefmain7 = doc(db, "hdrnames", recordId7);    
     const existingDocmain7 = await getDoc(docRefmain7);
      if (!existingDocmain7.exists()) {
-      alert("heading Names Not Found!");
-      return;
+      document.getElementById("span1id").textContent = "Undefined-main7";
     }
+  else {
     const datamain7 = existingDocmain7.data(); 
  //   document.getElementById("projectlink").textContent = datamain7.hds;
     document.getElementById("span1id").textContent = datamain7.hds;
-
+ }
       const recordId8 = `${paramdatatype}main8`;
   const docRefmain8 = doc(db, "hdrnames", recordId8);    
     const existingDocmain8 = await getDoc(docRefmain8);
      if (!existingDocmain8.exists()) {
-      alert("heading Names Not Found!");
-      return;
+       document.getElementById("span2id").textContent = "Undefined-main8";
     }
+  else {
     const datamain8 = existingDocmain8.data();  
  //   document.getElementById("tasklink").textContent = datamain8.hds;
     document.getElementById("span2id").textContent = datamain8.hds;
-
+}
       const recordId9 = `${paramdatatype}maina1`;
   const docRefmain9 = doc(db, "hdrnames", recordId9);    
     const existingDocmain9 = await getDoc(docRefmain9);
      if (!existingDocmain9.exists()) {
-      alert("heading Names Not Found!");
-      return;
+      finalentrygb = "Undefined-main9";
     }
+  else {
     const datamain9 = existingDocmain9.data();  
     finalentrygb = datamain9.hds;
-
-
-    
+  }  
     loadcodestables();
 }
 
@@ -1172,7 +1429,7 @@ projlist.appendChild(placeholder);
       option.textContent = `${data.projname}`;      
       projlist.appendChild(option);
     });
-
+  
  const option2 = document.createElement("option");
  option2.value = "9999"; // This is what gets inserted into the input
  option2.textContent = finalentrygb;      
@@ -1207,8 +1464,8 @@ if (option) {
     console.log(option.textContent);   // "P1001 - Building Construction"
 //    document.getElementById("projdesc").textContent = option.textContent;
 
-    document.getElementById("projdesc").textContent =
-    option.textContent.replace(option.value + " - ", "");
+//  now    document.getElementById("projdesc").textContent =
+//  now  option.textContent.replace(option.value + " - ", "");
 
 //    option.value = projdesc.projnbr;
 //    option.textContent = projdesc.projname;
@@ -1216,15 +1473,23 @@ if (option) {
     projnbrgb = projnbr.value.split(" ")[0];
     projnbrgb = parseInt(projnbrgb, 10);
      console.log(projnbrgb);
+    advPanel.style.display = "none";
+  //  document.getElementById("printid").textContent = printgb;
     wholetaskTable.style.display = "block";
-    if (projnbrgb === 9999){
+    if (paramdatatype != "I" && projnbrgb === 9999){
      window.location.href = `./main-all-entities.html?param1=${paramId}&param2=${paramnm}` +
                            `&param3=${paramdatatype}&param4=${paramuserId}` + 
                            `&param5=""&param6=""&param7=""` +
                            `&param8=""&param9=""`;  
-  }    
+  } 
+    if (paramdatatype === "I" && projnbrgb === 9999){
+     window.location.href = `./catalog.html?param1=${paramId}&param2=${paramnm}` +
+                           `&param3=${paramdatatype}&param4=${paramuserId}` + 
+                           `&param5=""&param6=""&param7=""` +
+                           `&param8=""&param9=""`;  
+  }       
     loadtaskmaster();
-    imagePanel.style.display = "none";
+//    imagePanel.style.display = "none";
 //    projectdisplaydiv.style.display = "block";
 //   projnbr.style.display = "none";
 //    dropdown.style.display = "none";
@@ -1277,14 +1542,14 @@ async function loadtaskmaster() {
     
  
         <td style="font-size: clamp(0.5rem, 1.0vw, 1.1rem); font-weight: 500; border: 0.05vw solid black; text-align: center; text-decoration: underline;">
-          <button onclick="showMenu(event,this)" ;>Actions ▼</button>
+          <button onclick="showMenu(event,this)" ;>${actiongb} ▼</button>
            <div class="popupMenu">
 
-    <a id = "mark11" href="#" onclick="markcompleted('${docId}');return false;">Mark ${statusgb} As Completed</a>
-    <a id = "mark12" href="#" onclick="markdropped('${docId}');return false;">Mark ${statusgb} As Dropped</a>
-    <a id = "mark13" href="#" onclick="markstarted('${docId}');return false;">Mark ${statusgb} As Started</a>
-    <a id = "mark14" href="#" onclick="markstopped('${docId}');return false;">Mark ${statusgb} As Stopped</a>
-    <a id = "mark15" href="#" onclick="deletetask('${docId}');return false;">Delete ${statusgb}</a>
+    <a id = "mark11" href="#" onclick="markcompleted('${docId}');return false;">${compgb}</a>
+    <a id = "mark12" href="#" onclick="markdropped('${docId}');return false;">${dropgb}</a>
+    <a id = "mark13" href="#" onclick="markstarted('${docId}');return false;">${stargb}</a>
+    <a id = "mark14" href="#" onclick="markstopped('${docId}');return false;">${stopgb}</a>
+    <a id = "mark15" href="#" onclick="deletetask('${docId}');return false;">${delegb}</a>
 
         </div>
           
@@ -1369,13 +1634,25 @@ else  {
 window.manageentity = manageentity; // ⭐ IMPORTANT LINE
 
 function manageproject() {  
-          window.location = `./add-del-proj-code.html?param1=${paramId}&param2=${paramnm}&param3=${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param7=${paramtsdt}&param8=${paramtedt}&param9=${paramtstt}`; 
+console.log(paramdatatype);
+
+if (paramdatatype === "I") {
+          window.location = `./catalog.html?param1=${paramId}&param2=${paramnm}&param3=${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param7=${paramtsdt}&param8=${paramtedt}&param9=${paramtstt}`; 
+}
+else {
+window.location = `./add-del-proj-code.html?param1=${paramId}&param2=${paramnm}&param3=${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param7=${paramtsdt}&param8=${paramtedt}&param9=${paramtstt}`; 
+}
  }
 window.manageproject = manageproject; // ⭐ IMPORTANT LINE
 
-function managetask() {        
+function managetask() {  
+if (paramdatatype === "I") {
+          window.location = `./transaction.html?param1=${paramId}&param2=${paramnm}&param3=${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param7=${paramtsdt}&param8=${paramtedt}&param9=${paramtstt}`; 
+}
+else {      
          window.location = `./add-del-task-code.html?param1=${paramId}&param2=${paramnm}&param3=${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param7=${paramtsdt}&param8=${paramtedt}&param9=${paramtstt}`; 
  }
+}
 window.managetask = managetask; // ⭐ IMPORTANT LINE
 
 function assigntask() {  
@@ -1402,62 +1679,11 @@ ${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param
 window.Reloadpage = Reloadpage; // ⭐ IMPORTANT LINE
 
 function backpage() {  
-
-if (paramuserId === "Admin") {
-   window.location = `./main-all-entities.html?param1=${paramId}&param2=${paramnm}&param3=
-${paramdatatype}&param4=${paramuserId}&param5=${paramet}&param6=${paramtt}&param7=${paramtsdt}&param8=${paramtedt}&param9=${paramtstt}`; 
- }
-else {
          window.location = `./index.html`; 
-}
 }
 window.backpage = backpage; // ⭐ IMPORTANT LINE
 
 
-
-// 🔹 user Login
-window.loginrtn = async function () {
-  
-  const userId = document.getElementById("userId").value;
-//  const usrpassword = document.getElementById("usrpassword").value;
-
-  const usrpassword = "usrno2pw";
-  
-if (userId === "" || usrpassword === "" ){
-    alert("Please Enter all Manadatory datas of the User");
-    return;
-  } 
- 
-    const docRef = doc(db, "usertable", userId);    
-    const existingDoc = await getDoc(docRef);
-     if (!existingDoc.exists()) {
-      alert("User Not Found!");
-      return;
-    }
-    const data = existingDoc.data();
-        if (data.password !== usrpassword) {
-       alert("Invalid Password!");
-      return;
-    }
-         
-       paramId = data.ownerId;
-       paramnm = data.ownernm;
-    //   document.getElementById("comp-name").textContent = paramnm;
-       document.getElementById("comp-name1").textContent = paramnm;
-    //   const paramId = "user1";
-    //   const paramnm = "Asad";
-       console.log(paramId);
-       console.log(paramnm);
-// window.location.href = `./Index-team.html?param1=${paramId}&param2=${paramnm}`; 
-    loadtaskmaster();
-//    projectdisplaydiv.style.display = "block";
-    const labelhdr = document.getElementById("hdr-pr-wrd");
-    labelhdr.innerText = "Project&nbsp&nbsp";
-    menubtn.style.display = "block";
-    document.getElementById("menubtn").disabled = false;  
- 
-  
-};
 
 
   function isTodayBetween() {     
@@ -1471,19 +1697,7 @@ function isTodaygreater() {
 } 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    // document.getElementById("projectlink").textContent = `Create ${paramet}s`;
-    // document.getElementById("tasklink").textContent = `Manage ${paramtt}s of the ${paramet}s `;
- //   document.getElementById("inv-btn").textContent = "Print";
-  if (paramuserId === "Admin") {
-    document.getElementById("adduserlink").style.display = "block";
-    document.getElementById("addentitylink").style.display = "block";
-    document.getElementById("addownerlink").style.display = "block";
-    document.getElementById("refreshlink").style.display = "block";
-    document.getElementById("allprojlink").style.display = "block";
-    
-  }
-});
+
 
  // 🔹 Update (Mark Task as completed)
   window.markcompleted = async function (id) {
@@ -1562,6 +1776,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Update error:", error);
   }
 };
+
+ // 🔹 DELETE (Remove Record)
+  window.deletetask = async function (id) {
+    await deleteDoc(doc(db, "taskmaster", id));
+    alert("Deleted");
+    loadtaskmaster();  
+  };
 
 window.showMenu = async function (event, button) {
 // function showMenu(event, button) {
