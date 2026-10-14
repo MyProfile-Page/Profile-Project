@@ -76,6 +76,7 @@ html, body {
   align-items: center;
   padding: 20px;
   position: relative;
+ border: 1vw solid red;
 }
 
 /* 3. The Image Component */
@@ -150,7 +151,8 @@ font-size: clamp(0.9rem, 1.4vw, 1.5rem);
 }
 	  /* Borders based on placement */
 .text-dock-top {
-  border-bottom: 1px solid #222;
+  color: white;
+ /* border-bottom: 1px solid #222;  */
 }
 
 .text-dock-bottom {
@@ -159,8 +161,8 @@ font-size: clamp(0.9rem, 1.4vw, 1.5rem);
 
  /* Individual Image Texts */
         .image-title-top {
-            font-size: 14px;
-            font-weight: bold;
+            font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+            font-weight: 600;
             color: #4a90e2;
 			color: white;
             margin: 0 0 8px 0;
@@ -169,7 +171,8 @@ font-size: clamp(0.9rem, 1.4vw, 1.5rem);
         }
 
         .image-title-bottom {
-            font-size: 12px;
+            font-size: clamp(0.7rem, 0.8vw, 0.9rem);
+            font-weight: 700;
             color: #b0b0b8;
             margin: 8px 0 0 0;
 			color: white;
@@ -189,35 +192,71 @@ font-size: clamp(0.9rem, 1.4vw, 1.5rem);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
     background-color: #1a1a1a; /* Slight contrast difference for the desktop background framing */
   }
-
+  
+  
   .image-wrapper img {
-    max-height: 75vh; /* Slightly smaller maximum height to account for different desktop viewing angles */
-    transition: transform 0.3s ease;
-  }
+  max-width: 100%;
+  max-height: 60vh;              /* Leaves room for padding and captions */
+  object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+
+/* .image-wrapper img {  */
+/*  max-height: 75vh; */ /* Slightly smaller maximum height to account for different desktop viewing angles */
+ /*   transition: transform 0.3s ease; */
+ /* }  */
   
   /* Adds a smooth hover animation on desktop screens */
   .image-wrapper img:hover {
     transform: scale(1.02);
   }
+  
+ 
 }
 
+/* ==========================================
+   MOBILE OPTIMIZATIONS (Screens smaller than 768px)
+   ========================================== */
+@media (max-width: 769px) {
+
+/* Individual Image Texts */
+        .top-mobonly {
+            
+			top: -40vh;
+        }
+
+        .bottom-mobonly {
+           
+			top: 9vh;
+        }
+}
   </style>
 </head>
 <body>
 
   <!-- The main scrolling timeline -->
   <div class="scroll-container">
-    
-    <!-- Image Wrapper 1 -->
+      <!-- MAIN TOP DOCK -->
+           
+    <!-- Image Wrapper 0 -->
     <div class="image-wrapper">
-	   <div class="image-title-top">Canada TimeLine</div>
-					<br>
+	 <div class="image-title-top"> 
+                <h3>🚀 Media Gallery</h3>
+            </div> 
+	   
+      <img src="Troy_2727-new.jpg" alt="Description">  
+	                    
+    </div>
+	
+	<!-- Image Wrapper 1 -->
+    <div class="image-wrapper">
+	 
+	   <div class="image-title-top top-mobonly">Canada RimeLine</div>					
 					<div class="image-title-top">From Indigineous civilization to
 					European contacts to a modern world state.</div>
-      <img src="Troy_2727-new.jpg" alt="Description">
-      <div class="caption">Image 1: Mountain Serenity</div>
-	  <br>
-                    <p class="image-title-bottom">Photograph By <a href="https://commons.wikimedia.org/wiki/File:National_Flag_of_Canada,_Brussels_2026.jpg">Boaventuravinicius</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons</p>
+      <img src="Troy_2727-new.jpg" alt="Description">  
+	                     <p class="image-title-bottom bottom-mobonly">Photograph By <a href="https://commons.wikimedia.org/wiki/File:National_Flag_of_Canada,_Brussels_2026.jpg">Boaventuravinicius</a>, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>, via Wikimedia Commons</p>
     </div>
 
     <!-- Image Wrapper 2 -->
@@ -230,6 +269,16 @@ font-size: clamp(0.9rem, 1.4vw, 1.5rem);
     <div class="image-wrapper">
       <img src="Eastbound_over_SCB.jpg" alt="Description">
       <div class="caption">Image 3: Mist in the Woods</div>
+    </div>
+	
+	 <!-- Image Wrapper last -->
+    <div class="image-wrapper">
+	 <div class="image-title-top"> 
+                <p>© Thanks For Viewing Our Excavation Gallery</p
+            </div> 
+	   
+      <img src="Troy_2727-new.jpg" alt="Description">  
+	                    
     </div>
 
   </div>
