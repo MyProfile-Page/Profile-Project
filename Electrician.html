@@ -375,7 +375,7 @@ text-decoration: underline;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   top: 12%;
-  position: absolute;
+  position: absolute;  
 }
 
 /* .image-wrapper top-percent-changed {  */
@@ -416,8 +416,17 @@ text-decoration: underline;
         }
      .element-cls-adl2w1 { 
             font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
-			top: 43vh;
+			top: 45vh;
 			text-align: left;
+        }
+		
+	.element-cls-img1w1 { 
+            font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
+			top: 40vh;
+			text-align: center;
+			width: 95%;
+			color: red;
+			position: absolute;
         }
 		
 		.progress-cls { 
@@ -434,15 +443,31 @@ text-decoration: underline;
         }
      .element-cls-adl2w2 { 
             font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
-			top: 54vh;
+			top: 46vh;
         }
 		
-		.element-cls-adl1w3 {  
+	 .element-cls-adl1w3 {  
             font-size: clamp(2.2rem, 3.5vw, 2.8rem);	  
 			top: 3vh;
 			text-decoration: underline;
         }
      .element-cls-adl2w3 { 
+            font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
+			top: 43vh;
+			display: flex;
+			flex-direction: row;
+			align-self: stretch;
+            align-items: center;
+			width: 95%;
+			border: 0.0px solid green;
+        }
+		
+		.element-cls-adl1w4 {  
+            font-size: clamp(2.2rem, 3.5vw, 2.8rem);	  
+			top: 3vh;
+			text-decoration: underline;
+        }
+     .element-cls-adl2w4 { 
             font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
 			top: 45vh;
 			display: flex;
@@ -551,6 +576,31 @@ text-decoration: underline;
       border: 1px solid #ccc;
       cursor: pointer;
     }
+	
+	.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
+    width: 100%;
+	position: absolute;
+}
+
+.image-item img {
+    max-width: 95%;
+    max-height: 75vh;
+    object-fit: contain;
+	 
+	
+}
+
+.image-item p {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: underline;
+}
  
     
  
@@ -570,7 +620,7 @@ text-decoration: underline;
            
     <!-- Image Wrapper 1 -->
 	
-    <div class="image-wrapper" id="about">	
+    <div class="image-wrapper " id="about">	
          <!-- Top Dropdown Navigation Menu -->
   <div class="top-nav">
     <label for="screen-jump">Slide ↕ or Jump to:</label>
@@ -582,19 +632,22 @@ text-decoration: underline;
       
     </select>
   </div>	
-         <div class="element-cls-gen element-cls-adl1w1">Alectrician</div> 
-         <div class="element-cls-gen element-cls-adl2w1">Ai Friends I’m Ahmed, a friendly Electrician ready to help with any  electric issue at your home or business location. I specialize in bringing modern convenience to your space, whether that’s upgrading your electrical panel, setting up smart home automation, installing EV home chargers, or safely rewiring faulty lines.
+         <div class="element-cls-gen element-cls-adl1w1">Ilectrician</div> 
+         <div class="element-cls-gen element-cls-adl2w1">Ii Friends I’m Ahmed, a friendly Electrician ready to help with any  electric issue at your home or business location. I specialize in bringing modern convenience to your space, whether that’s upgrading your electrical panel, setting up smart home automation, installing EV home chargers, or safely rewiring faulty lines.
 		 </div>
-	  
-         <img src="Orange_short_haired_anime_girl_portrait-new1.jpg" alt="Description">	
-         <progress value="75" max="100" class="progress-cls"></progress>		 
+		 <progress value="75" max="100" class="progress-cls"></progress>
+         <div class="image-wrapper image-item">		
+ 
+         <img src="Orange_short_haired_anime_girl_portrait-new1.jpg" alt="Description">		 
+         <p style="color: red; position: relative; ">Photograph By <a href="https://commons.wikimedia.org/wiki/File:Orange_short_haired_anime_girl_portrait.jpg">Artbreeder</a>, CC0, via Wikimedia Commons</p>
+         </div>		 
 	  <!-- 
       <img src="excavation-image.PNG" alt="Description"> 
       
          <p class="only-for-desktops-arrows">For Scrolling Press up & down Arrow Keys</p>
 		 <p class="only-for-mobiles-slide">For Scrolling slide image</p>
 	  -->	 	  
-         <p class="image-title-bottom bottom-line">Photograph By <a href="https://commons.wikimedia.org/wiki/File:Orange_short_haired_anime_girl_portrait.jpg">Artbreeder</a>, CC0, via Wikimedia Commons</p>		                    
+         		                    
     </div>
 	
 	<!-- Image Wrapper 2 -->
@@ -615,7 +668,8 @@ text-decoration: underline;
 </ul>    
 	   
 	   </div>
-       <img src="Neat_wiring_(505650307)-new2.jpg" alt="Description">  
+       <img src="Neat_wiring_(505650307)-new.jpg" alt="Description"> 
+       <progress value="85" max="100" class="progress-cls" style="top: 70vh;"></progress> 	   
 	   <p class="image-title-bottom bottom-line">Photograph By <a href="https://commons.wikimedia.org/wiki/File:Neat_wiring_(505650307).jpg">Marco d&#039;Itri from Milano, Italy</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
 	   <!--
 	   <div id="swipeHint" class="mobile-swipe-message">
@@ -656,7 +710,8 @@ text-decoration: underline;
 	   <a href= https://commons.wikimedia.org/wiki/File:House_of_Hubert_Lacroix,_St._Jean_Baptiste_Street,_Montreal.jpg">Henry Richard S. Bunnett</a>, Public domain, via Wikimedia Commons	   
 	   -->			   
 	   </div>
-       <img src="911sign-new.jpg" alt="Description">   
+       <img src="911sign-new.jpg" alt="Description"> 
+       <progress value="50" max="100" class="progress-cls" style="top: 68vh;"></progress>	   
 	   <p class="image-title-bottom bottom-line">Photograph By <a href="https://commons.wikimedia.org/wiki/File:911sign.jpg">nadbasher</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
     </div>
 	
@@ -664,17 +719,20 @@ text-decoration: underline;
     <div class="image-wrapper" id="review">
        
 	   
-	   <div class="element-cls-gen element-cls-adl1w3">Reviews</div>					
-	   <div class="element-cls-gen element-cls-adl2w3 ">
+	   <div class="element-cls-gen element-cls-adl1w4">Reviews</div>					
+	   <div class="element-cls-gen element-cls-adl2w4 ">
 	    <ul class="ul-cls-adr">
-  <li>Ahmed is best. I am glad to have my dish washer fixed by him.  .....John</li>
+  <li>Ahmed is best. I am glad to have my dish washer fixed by him.  .....</li>
   <li>&nbsp</li>
+  <li style="color: #ffffcc;">John Philip</li>
   <li>&nbsp</li>
-  <li>Very efficient. You can trust him for any electrial work in your home  ....Peter</li>
+  <li>Very efficient. You can trust him for any electrial work in your home  ....</li>
   <li>&nbsp</li>
+  <li style="color: #ffffcc;">Peter Lastman</li>
   <li>&nbsp</li>
-  <li>Fully Professional. He is highly skilled and finds the fault quickly.  ....Desouza</li>  
-  
+  <li>Fully Professional. He is highly skilled and finds the fault quickly.  ....</li>  
+  <li>&nbsp</li>
+  <li style="color: #ffffcc;">Desouza Ram</li>
   
         
 </ul> 
