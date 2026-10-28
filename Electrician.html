@@ -68,9 +68,8 @@ html, body {
   justify-content: center;  
   align-items: center;  
   padding: 20px;
- /* position: relative;  */
+  position: relative;
  border: 0vw solid red;
- box-sizing: border-box;
 }
 
 
@@ -371,37 +370,19 @@ text-decoration: underline;
 
 /* 3. The Image Component */
 .image-wrapper img {
-  
-  
-  display: block;
   max-width: 100%;
-  max-height: 55vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  flex-shrink: 1;
-  
+  max-height: 80vh;              /* Leaves room for padding and captions */
+  object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  top: 12%;
+  position: absolute;
 }
 
 /* .image-wrapper top-percent-changed {  */
 /* top: 5%;    */
  
 /* }  */
-
-.image-wrapper p {
-  position: static;
-  display: block;
-  margin: 5px 0 0;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.image-wrapper p a {
-  position: static;
-  display: inline;
-  visibility: visible;
-  opacity: 1;
-}
 
 /* Individual Image Texts */
         .element-cls-gen {
@@ -663,9 +644,9 @@ text-decoration: underline;
 </ul>    
 	   
 	   </div>
-	   <progress value="85" max="100" class="progress-cls" style="top: 70vh;"></progress> 	
-       <img src="Neat_wiring_(505650307)-new.jpg" alt="Description">      
-	   <p >Photograph By <a href="https://commons.wikimedia.org/wiki/File:Neat_wiring_(505650307).jpg">Marco d&#039;Itri from Milano, Italy</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
+       <img src="Neat_wiring_(505650307)-new.jpg" alt="Description"> 
+       <progress value="85" max="100" class="progress-cls" style="top: 70vh;"></progress> 	   
+	   <p class="image-title-bottom bottom-line-image-1-w2">Photograph By <a href="https://commons.wikimedia.org/wiki/File:Neat_wiring_(505650307).jpg">Marco d&#039;Itri from Milano, Italy</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
 	   <!--
 	   <div id="swipeHint" class="mobile-swipe-message">
          <span class="swipeIcon">↕</span>
@@ -706,8 +687,8 @@ text-decoration: underline;
 	   -->			   
 	   </div>
 	   <progress value="50" max="100" class="progress-cls" style="top: 68vh;"></progress>
-       <img src="911sign-new.jpg" alt="Description">        	   
-	   <p >Photograph By <a href="https://commons.wikimedia.org/wiki/File:911sign.jpg">nadbasher</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
+       <img src="911sign-new.jpg" alt="Description">       
+	   <p class="image-title-bottom bottom-line-image-1-w3">Photograph By <a href="https://commons.wikimedia.org/wiki/File:911sign.jpg">nadbasher</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
     </div>
 	
 	<!-- Image Wrapper 3 -->
@@ -734,7 +715,7 @@ text-decoration: underline;
 	   
 	   </div>
        <img src="A_Positive_Customer_Experience_in_Ecommerce-new.jpg" alt="Description">   
-	   <p >Photograph By <a href="https://commons.wikimedia.org/wiki/File:A_Positive_Customer_Experience_in_Ecommerce.jpg">Zuko.io Images</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons</p>
+	   <p class="image-title-bottom bottom-line-image-1-w4">Photograph By <a href="https://commons.wikimedia.org/wiki/File:A_Positive_Customer_Experience_in_Ecommerce.jpg">Zuko.io Images</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons</p>
     </div>
 
 	
