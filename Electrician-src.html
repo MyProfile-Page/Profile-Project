@@ -9,6 +9,10 @@
   
   
   /*  */
+  /* for wrappers  W1....                            */
+   /* for images img1...                             */
+    /* for text txt1...                            */
+	 /* for hyperlinks hp1....                            */
   /*  W3C CSS Validator	Invalid CSS syntax and properties   */
   /*  W3C HTML Validator	Incorrect HTML markup    */
   /*  Browser Developer Tools (F12)	JavaScript errors, console messages, and actual computed CSS  */
@@ -164,14 +168,7 @@ text-decoration: underline;
 
 .gap1vh {
   height: 1.0vh;  /* or any size you want; mobile = desktop */
-}
-
-
-
-  
-	
-
-      
+}      
 
 /* ==========================================
    DESKTOP OPTIMIZATIONS (Screens wider than 768px)
@@ -183,12 +180,11 @@ text-decoration: underline;
     margin: 0 auto;   /* Perfectly centers the app container on your monitor */
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
     background-color: #1a1a1a; /* Slight contrast difference for the desktop background framing */
-  }
+  }  
   
-  
-  .elm-img1 {
-   max-width: 100%;
-   max-height: 30vh;  
+  .w1-img1 {
+   max-width: 75%;
+   max-height: 35vh;  
               /* Leaves room for padding and captions */
   object-fit: contain;
             /* Keeps the photo aspect ratio intact without cropping */
@@ -196,11 +192,22 @@ text-decoration: underline;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
  /* top: 15%;  */
-  border: 1px solid red;
-    
+  border: 0px solid red;    
+  }
+  .w1-img2 {
+   max-width: 15%;
+   max-height: 3vh;  
+              /* Leaves room for padding and captions */
+  object-fit: contain;
+            /* Keeps the photo aspect ratio intact without cropping */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+ /* top: 15%;  */
+  border: 0px solid red;    
   }
   
-   .elm-img2 {
+   .w2-img1 {
   max-width: 100%;
   max-height: 30vh;              /* Leaves room for padding and captions */
   object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
@@ -208,10 +215,10 @@ text-decoration: underline;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
  /* top: 15%;  */
-  border: 1px solid red;
+  border: 0px solid red;
      
   }
-   .elm-img3 {
+   .w3-img1 {
   max-width: 100%;
   max-height: 30vh;              /* Leaves room for padding and captions */
   object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
@@ -219,10 +226,10 @@ text-decoration: underline;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
  /* top: 15%;  */
-  border: 1px solid red;
+  border: 0px solid red;
      
   }
-   .elm-img4 {
+   .w4-img1 {
   max-width: 100%;
   max-height: 30vh;              /* Leaves room for padding and captions */
   object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
@@ -230,7 +237,7 @@ text-decoration: underline;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
  /* top: 15%;  */
-  border: 1px solid red;
+  border: 0px solid red;
      
   }
   
@@ -244,39 +251,37 @@ text-decoration: underline;
     transform: scale(1.02);
   }
   
-  .elm-img1-ext-w1 {
+  .w1-img1-ext {
   top: 26%;
   position: absolute;
   }
-   .elm-img1-ext-w2 {
+   .w2-img1-ext {
   max-height: 20vh;
   top: 19%;
   }
-   .elm-img1-ext-w3 {
-   max-height: 20vh;
+   .w3-img1-ext {
+   max-height: 15vh;
    top: 19%;
   }
-   .elm-img1-ext-w4{
+   .w4-img1-ext{
    max-height: 20vh;
    top: 19%;
-  }
-  
+  } 
 
   
   /* Individual Image Texts */
-        .elm-gen {
+        .common-css-txt {
             font-weight: 600;
          /*   color: #4a90e2;  */
 			color: white;
             margin: 0 0 8px 0;
 		/*	background-color: black;  */
 			text-align: center;
-			position: absolute;
-			
+			position: absolute;		
 			
         }
 
-        .image-title-bottom {
+        .common-attr-lnk {
 		    font-size: clamp(0.4rem, 0.9vw, 1.0rem);           
             font-weight: 700;
             color: #b0b0b8;
@@ -285,53 +290,63 @@ text-decoration: underline;
 			background-color: black;
 			text-align: center;
 		/*	position: absolute;  */
-			padding: 0.2vw;
-			
+			padding: 0.2vw;			
         }
 		
  
-	  .elm0w1 {  
+	  .w1-txt-1 {  
             font-size: clamp(1.3rem, 2.ovw, 2.1rem);	  
 			top: 9vh;
 			text-decoration: underline;
         }
-		.elm1w1 {  
+		.w1-txt-2 {  
             font-size: clamp(1.3rem, 2.ovw, 2.1rem);	  
 			top: 16vh;
 			text-decoration: underline;
         }
-     .elm2w1 {  
+     .w1-txt-3 {  
              font-size: clamp(0.6rem, 1.2vw, 1.5rem);	 
 			top: 67vh;
 			width: 82%;
 			text-align: left;			
         }
 		
-		.progress-cls {             	 
+		.w1-gen-elm-css {             	 
 			top: 94vh;
 			position: absolute;
-        }
+		}
+		.w2-gen-elm-css {             	 
+			top: 94vh;
+			position: absolute;
+		}
+		.w3-gen-elm-css {             	 
+			top: 94vh;
+			position: absolute;
+		}
+		.w4-gen-elm-css {             	 
+			top: 94vh;
+			position: absolute;
+		}	
 		
 		
-		
-			.elm1w2 {  
+			.w2-txt-1 {  
            font-size: clamp(1.3rem, 2.ovw, 2.1rem);	  
 			top: 8vh;
 			text-decoration: underline;
         }
-     .elm2w2 { 
+     .w2-txt-2 { 
              font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
 			top: 58vh;
 			position: absolute;
 			width: 100%;
         }
 		
-		.elm1w3 {  
+		.w3-txt-1 {  
              font-size: clamp(1.3rem, 2.ovw, 2.1rem);	  
 			top: 8vh;
 			text-decoration: underline;
         }
-     .elm2w3 { 
+     .w3-txt-2 { 
              font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
 			top: 57vh;
 			width: 100%;
@@ -340,12 +355,12 @@ text-decoration: underline;
 			margin: 0 auto; 
         }
 		
-		.elm1w4 {  
+		.w4-txt-1 {  
              font-size: clamp(0.9rem, 2.4vw, 1.2rem);	  
 			top: 8vh;
 			text-decoration: underline;
         }
-     .elm2w4 { 
+     .w4-txt-2 { 
              font-size: clamp(0.9rem, 2.4vw, 1.2rem);	 
 			top: 54vh;
 			width: 69%;
@@ -353,14 +368,7 @@ text-decoration: underline;
 			text-align: left;
         }
 		
-		
-	 
-	 .bottom-line {
-             font-size: clamp(0.4rem, 0.9vw, 1.0rem);	 
-			top: 93vh;
-			
-        }
-		
+
 			
 		.ul-cls {
       text-align: left;
@@ -435,28 +443,35 @@ text-decoration: underline;
   height: 2vh;  /* or any size you want; mobile = desktop */
 }
 
-   .container-w1-post {
+   .w1-container-1-post {
        top: 26%;
        border: 0px solid red;        
            width: 65%;
 		   margin: 0 auto;
 	position: absolute;		
-        }		
-	 .container-w2-post {
+        }	
+     .w1-container-1-post-1 {
+       top: 92%;
+       border: 0px solid red;        
+           width: 65%;
+		   margin: 0 auto;
+	position: absolute;		
+        }				
+	 .w2-container-1-post {
        top: 18.5%;
        border: 0px solid red;            
            width: 62.5%;
 		   margin: 0 auto;
 	position: absolute;		
         }
-     .container-w3-post {
+     .w3-container-1-post {
        top: 18%;
        border: 0px solid red;            
            width: 65%;
 		   margin: 0 auto;
 	position: absolute;		
         }
-     .container-w4-post {
+     .w4-container-1-post {
        top: 17%;
        border: 0px solid red;            
            width: 65%;
@@ -464,58 +479,64 @@ text-decoration: underline;
 	position: absolute;		
         }  		
 
-  .container-w1 {
-            border: 1px solid white;
+  .w1-container-1 {
+            border: 0px solid white;
             display: flex;
             justify-content: center; 
             flex-direction: column; 			
             align-items: center;	
 	        }
- .container-w2-1 {
+ .w2-container-1 {
             border: 0px solid white;
             display: flex;
             justify-content: center; 
             flex-direction: column; 			
             align-items: center; 	
         }
- .container-w3-1 {
+ .w3-container-1 {
             border: 0px solid white;
             display: flex;
             justify-content: center; 
             flex-direction: column; 			
             align-items: center; 	
         }
-	.container-w4-1 {
+	.w4-container-1 {
             border: 0px solid white;
             display: flex;
             justify-content: center; 
             flex-direction: column; 			
             align-items: center; 	
         }
-.container-w2-2 {
+.w2-container-2 {
             border: 0px solid white;
             display: flex;
             align-items: flex-start;
-			width: 65%;
+			width: 60%;
 			margin: 0 auto;			
         }
- .container-w3-2 {
+ .w3-container-2 {
             border: 0px solid white;
             display: flex;
             align-items: flex-start;
 			width: 55%;
 			margin: 0 auto;			
         }		
-        .image {
+        .w2-img2 {
             margin-right: 0vw;			
 			height: 25vh;
+			border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
-		.wrap-elm-class  {
-		 padding-left: 0vw;
-		 padding-right: 0vw;
-		}
+		.w3-img2 {
+            margin-right: 0vw;			
+			height: 25vh;
+			border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+		
 		.adj-height { 
 		 height: 1vh;
+		 font-size: clamp(0.5rem, 0.7vw, 0.8rem);
 		 }
   	 
 }
@@ -526,36 +547,50 @@ text-decoration: underline;
 @media (max-width: 769px) {
 
 /* 3. The Image Component */
-.elm-img1 {
-               /* Leaves room for padding and captions */
+.w1-img1 {
+  max-width: 85%;
+  max-height: 20vh;              /* Leaves room for padding and captions */
   object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
   
+.w1-img2 {
+   max-width: 2%;
+   max-height: 0.25vh;  
+              /* Leaves room for padding and captions */
+  object-fit: contain;
+            /* Keeps the photo aspect ratio intact without cropping */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+ /* top: 15%;  */
+  border: 0px solid red;    
+  }  
+  
 }
-.elm-img2 {
+.w2-img1 {
   max-width: 100%;
   max-height: 20vh;              /* Leaves room for padding and captions */
   object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
 }
-.elm-img3 {
+.w3-img1 {
   max-width: 100%;
-  max-height: 80vh;              /* Leaves room for padding and captions */
+  max-height: 20vh;              /* Leaves room for padding and captions */
   object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
 }
-.elm-img4 {
+.w4-img1 {
   max-width: 100%;
-  max-height: 80vh;              /* Leaves room for padding and captions */
+  max-height: 20vh;              /* Leaves room for padding and captions */
   object-fit: contain;           /* Keeps the photo aspect ratio intact without cropping */
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
 }
 
- .elm-img1-ext-w1 {
+ .w1-img1-ext {
   top: 18%;
   width: 50%;
   height: 25vh;
@@ -563,15 +598,15 @@ text-decoration: underline;
   }
   
  
- .elm-img1-ext-w3 {
+ .w3-img1-ext {
   width: 60%; 
   height: 30vh;
   }
-  .elm-img1-ext-w2 { 
+  .w2-img1-ext { 
    width: 60%; 
   height: 30vh;  
   }  
- .elm-img1-ext-w4 { 
+ .w4-img1-ext { 
    width: 60%; 
   height: 30vh;   
   }
@@ -583,7 +618,7 @@ text-decoration: underline;
 /* }  */
 
 /* Individual Image Texts */
-        .elm-gen {
+        .common-css-txt {
             font-weight: 600;
             color: #4a90e2;
 			color: white;
@@ -593,7 +628,7 @@ text-decoration: underline;
 			position: absolute;
         }
 
-        .image-title-bottom {
+        .common-attr-lnk {
             font-size: clamp(0.7rem, 2.4vw, 0.9rem);
             font-weight: 700;
             color: #b0b0b8;
@@ -601,55 +636,60 @@ text-decoration: underline;
 			color: white;
 			background-color: black;
 			text-align: center;
-			
-			width: 65%;
+			width: 95%;
         }
 		
 
 /* Individual Image Texts */
       
-	  .elm0w1 {  
+	  .w1-txt-1 {  
             font-size: clamp(2.2rem, 3vw, 2.8rem);	  
 			top: 3vh;
 			text-decoration: underline;
         }
-		.elm1w1 {  
+		.w1-txt-2 {  
             font-size: clamp(2.2rem, 3vw, 2.8rem);	  
 			top: 10vh;
 			text-decoration: underline;
         }
-     .elm2w1 { 
+     .w1-txt-3 { 
             font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
-			top: 47vh;
+			top: 52vh;
 			text-align: left;
 			padding-left: 2vw;
 			padding-right: 2vw;
         }
 		
-		.progress-cls { 
-            	 
-			top: 70vh;
-			position: absolute;
-			
+		.w1-gen-elm-css {             	 
+			top: 82vh;
+			position: absolute;			
+        }
+		.w2-gen-elm-css {             	 
+			top: 82vh;
+			position: absolute;			
+        }
+		.w3-gen-elm-css {             	 
+			top: 82vh;
+			position: absolute;			
         }
 		
-		.elm1w2 {  
+		.w2-txt-1 {  
             font-size: clamp(2.2rem, 3vw, 2.8rem);	  
 			top: 3vh;
 			text-decoration: underline;
         }
-     .elm2w2 { 
+     .w2-txt-2 { 
             font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
 			top: 49vh;
 			width: 100%;
         }
 		
-	 .elm1w3 {  
+	 .w3-txt-1 {  
             font-size: clamp(2.2rem, 3vw, 2.8rem);	  
 			top: 3vh;
 			text-decoration: underline;
         }
-     .elm2w3 { 
+     .w3-txt-2 { 
             font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
 			top: 52vh;
 			width: 100%;
@@ -658,12 +698,12 @@ text-decoration: underline;
 			margin: 0 auto; 
         }
 		
-		.elm1w4 {  
+		.w4-txt-1 {  
              font-size: clamp(2.2rem, 3vw, 2.8rem);	  
 			top: 3vh;
 			text-decoration: underline;
         }
-     .elm2w4 { 
+     .w4-txt-2 { 
              font-size: clamp(0.9rem, 3.4vw, 1.2rem);	 
 			top: 51vh;
 			width: 95%;
@@ -671,11 +711,8 @@ text-decoration: underline;
 			text-align: center;
 			padding-left: 1vw;
 			padding-right: 1vw;
-        }
+        } 
 	 
-	 .bottom-line {           
-			top: 79vh;
-        }	
 		
      .ul-cls {
       text-align: left;
@@ -698,10 +735,8 @@ text-decoration: underline;
       display: none;      
      }	 
 	 .only-for-mobiles-slide {
-       display: none;
-      
+       display: none;      
      }	
-
 
       .mobile-swipe-message {
        display: block;
@@ -786,30 +821,38 @@ text-decoration: underline;
   display: inline; // Show BR tag for narrow screens
 }
 
-  .container-w1-post {
+  .w1-container-1-post {
        top: 23%;
               
            width: 80%;
 		   margin: 0 auto;
 	position: absolute;	
     border: 0px solid white;	
-	
-        }		
-	 .container-w2-post {
+        }
+	.w1-container-1-post-1 {
+       top: 80%;
+              
+           width: 80%;
+		   margin: 0 auto;
+	position: absolute;	
+    border: 0px solid white;	
+        }	
+		
+	 .w2-container-1-post {
        top: 16.5%;
        border: 0px solid red;            
            width: 62.5%;
 		   margin: 0 auto;
 	position: absolute;		
         }
-     .container-w3-post {
+     .w3-container-1-post {
        top: 16%;
        border: 0px solid red;            
            width: 65%;
 		   margin: 0 auto;
 	position: absolute;		
         }
-     .container-w4-post {
+     .w4-container-1-post {
        top: 15%;
        border: 0px solid red;            
            width: 65%;
@@ -817,28 +860,28 @@ text-decoration: underline;
 	position: absolute;		
         }  		
 
-  .container-w1 {
+  .w1-container-1 {
             border: 0px solid white;
             display: flex;
             justify-content: center; 
             flex-direction: column; 			
             align-items: center;	
 	        }
- .container-w2-1 {
+ .w2-container-1 {
             border: 0px solid white;
             display: flex;
             justify-content: center; 
             flex-direction: column; 			
             align-items: center; 	
         }
- .container-w3-1 {
+ .w3-container-1 {
             border: 0px solid white;
             display: flex;
             justify-content: center; 
             flex-direction: column; 			
             align-items: center; 	
         }
-	.container-w4-1 {
+	.w4-container-1 {
             border: 0px solid white;
             display: flex;
             justify-content: center; 
@@ -846,32 +889,39 @@ text-decoration: underline;
             align-items: center; 	
         }
 
-  .container-w2-2 {
+  .w2-container-2 {
             border: 0px solid white;
             display: flex;
             align-items: flex-start;
-			width: 96%;
+			width: 85%;
 			margin: 0 auto;			
         }
 
- .container-w3-2 {
+ .w3-container-2 {
             border: 0px solid white;
             display: flex;
             align-items: flex-start;
-			width: 70%;
+			width: 80%;
 			margin: 0 auto;			
         }
-        .image {
+        .w2-img2 {
             margin-right: 0vw;
 			height: 12vh;
-			width: 30vw;	
+			width: 30vw;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);			
         }
-		.wrap-elm-class  {
-		 padding-left: 0vw;
-		 padding-right: 1.5vw;
-		}
+		 .w3-img2 {
+            margin-right: 0vw;
+			height: 12vh;
+			width: 30vw;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 			
+        }
+		
 		.adj-height { 
-		 height: 0.5vh;
+		 height: 1.0vh;
+		 font-size: clamp(0.5rem, 0.7vw, 0.8rem);
 		 }
  
 }
@@ -902,19 +952,28 @@ text-decoration: underline;
       
     </select>
   </div>	
-         <div class="elm-gen elm0w1">Freelance</div> 
-		 <div class="elm-gen elm1w1">Electrician</div> 
+         <div class="common-css-txt w1-txt-1">Freelance</div> 
+		 <div class="common-css-txt w1-txt-2">Electrician</div> 
          
-		 <div class= "container-w1-post">
-	     <div class="container-w1">
-         <img class="elm-img1" src="olenchic-ai-generated-9395138_640.png" alt="Description">
-		  <p class="image-title-bottom">Photograph By <a href="https://pixabay.com/users/olenchic-16658974/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9395138">Olena</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9395138">Pixabay</a></p>
+		 <div class= "w1-container-1-post">
+	     <div class="w1-container-1">
+         <img class="w1-img1" src="olenchic-ai-generated-9395138_640.jpg" alt="Description">
+		  <p class="common-attr-lnk">Photograph By <a href="https://pixabay.com/users/olenchic-16658974/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9395138">Olena</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=9395138">Pixabay</a></p>
          </div>	
         </div> 
 		
-        <div class="elm-gen elm2w1">Hi Friends I’m Ahmed, a friendly and certified freelance electrician, ready to help with any  electric issue at your home or business location. I specialize in bringing modern convenience to your space, whether that’s upgrading your electrical panel, setting up smart home automation, installing EV home chargers, or safely rewiring faulty lines.
-		 </div>		
-         <progress value="75" max="100" class="progress-cls"></progress>		 
+        <div class="common-css-txt w1-txt-3">Hi Friends I’m Ahmed, a friendly and certified freelance electrician, ready to help with any  electric issue at your home or business location. I specialize in bringing modern convenience to your space, whether that’s upgrading your electrical panel, setting up smart home automation, installing EV home chargers, or safely rewiring faulty lines.
+		 </div>	
+        <div class= "w1-container-1-post-1">
+	     <div class="w1-container-1" style="flex-direction: row;">
+         <img class="w1-img2" src="whiterose-nb-AI-new1.jpg" alt="Description">
+		 <p>&nbsp&nbsp</p>
+		 <progress value="75" max="100" ></progress>
+         <p>&nbsp&nbsp</p>
+         <img class="w1-img2" src="whiterose-nb-AI-new2.jpg" alt="Description">		 
+         </div>	
+        </div> 		 
+         	 
 	  <!-- 
       <img src="excavation-image.PNG" alt="Description"> 
       
@@ -926,36 +985,48 @@ text-decoration: underline;
 	
 	<!-- Image Wrapper 2 -->
     <div class="image-wrapper" id="service" style="background: #101010;">
-	<div class="elm-gen elm1w2">My Services</div> 
-	 <div class= "container-w2-post">
-	     <div class="container-w2-1">
-          <img class="elm-img2" src="Neat_wiring_(505650307)-new.jpg" alt="Description"> 
+	<div class="common-css-txt w2-txt-1">My Services</div> 
+	 <div class= "w2-container-1-post">
+	     <div class="w2-container-1">
+          <img class="w2-img1" src="toolmash-expo-PkHf7BUWbtk-unsplash.jpg" alt="Description"> 
        	   
-	   <p class="image-title-bottom">Photograph By <a href="https://commons.wikimedia.org/wiki/File:Neat_wiring_(505650307).jpg">Marco d&#039;Itri from Milano, Italy</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
+	   <p class="common-attr-lnk">Photo by <a href="https://unsplash.com/@toolmash?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Toolmash Expo</a> on <a href="https://unsplash.com/photos/electrician-testing-electrical-panel-with-multimeter-PkHf7BUWbtk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
          </div>	
         </div>       
 	           
 	   
-	   <div class="elm-gen elm2w2 ">
-	   <div class="container-w2-2">
+	   <div class="common-css-txt w2-txt-2 ">
+	   <div class="w2-container-2">
 	   <ul class="ul-cls">
-  <li>Outlet and Switch Installation & Repair</li>
-  <li>Lighting Upgrades and Maintenance</li>
-  <li>Circuit Breaker Panel Upgrades</li>
-  <li>Electrical Troubleshooting & Diagnostics</li>
-  <li>Whole-Home Surge Protection</li>
-  <li>Specialized Instl, Kitchen Appliances</li>
+  <li>Outlet, Switch Instl/Repair</li>
+  <li>Lighting Upgrades/Maintain</li>
+  <li>Circuit Breaker/Panel Upg</li>
+  <li>Elec Troubleshooting/Diagnose</li>
+  <li>Home Surge & Protection</li>
+  <li>Special Instl, Kitchen Appl</li>
   
 </ul> 
 <div>  
 		  <div class="adj-height"></div >
-          <img src="20261101_010746.jpg" alt="Sample Image" class="image" >
+          <img src="jarvik-joshi-yjgE1xjyv60-unsplash.jpg" alt="Sample Image" class="w2-img2" >
+		  <div class="adj-height">
+Photo by <a href="https://unsplash.com/@kivraj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jarvik Joshi</a> on <a href="https://unsplash.com/photos/three-led-lights-yjgE1xjyv60?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+		  
+		  </div >
 	  	</div>
         
     </div>      
 	   
 	   </div>
-        <progress value="85" max="100" class="progress-cls" ></progress>
+        <div class= "w1-container-1-post-1">
+	     <div class="w1-container-1" style="flex-direction: row;">
+         <img class="w1-img2" src="whiterose-nb-AI-new1.jpg" alt="Description">
+		 <p>&nbsp&nbsp</p>
+		 <progress value="75" max="100" ></progress>
+         <p>&nbsp&nbsp</p>
+         <img class="w1-img2" src="whiterose-nb-AI-new1.jpg" alt="Description">		 
+         </div>	
+        </div> 		 
 	   <!--
 	   <div id="swipeHint" class="mobile-swipe-message">
          <span class="swipeIcon">↕</span>
@@ -967,17 +1038,17 @@ text-decoration: underline;
 	<!-- Image Wrapper 3 -->
     <div class="image-wrapper" id="contact">      
 	   
-	   <div class="elm-gen elm1w3">My Contact</div>	
+	   <div class="common-css-txt w3-txt-1">My Contact</div>	
 
-       <div class= "container-w3-post">
-	     <div class="container-w3-1">
-          <img class="elm-img3" src="911sign-new-1.jpg" alt="Description"> 
-       <p class="image-title-bottom">Photograph By <a href="https://commons.wikimedia.org/wiki/File:911sign.jpg">nadbasher</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
+       <div class= "w3-container-1-post">
+	     <div class="w3-container-1">
+          <img class="w3-img1" src="911sign-new-1.jpg" alt="Description"> 
+       <p class="common-attr-lnk">Photograph By <a href="https://commons.wikimedia.org/wiki/File:911sign.jpg">nadbasher</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons</p>
          </div>	
         </div>       
 	   
-	   <div class="elm-gen elm2w3">
-	    <div class="container-w3-2">
+	   <div class="common-css-txt w3-txt-2">
+	    <div class="w3-container-2">
 	   <ul class="ul-cls-adr">
          <li>House Number 786</li>
          <li>Main Street</li>
@@ -988,8 +1059,10 @@ text-decoration: underline;
          <li>Email: growlitem@online.com</li>        
         </ul>         
 	    <div>  
-		  <div class="adj-height"></div >
-          <img src="door.jpg" alt="Sample Image" class="image" >
+		  <img src="roger-starnes-sr-JxGZFKPx5n0-unsplash.jpg" alt="Sample Image" class="w3-img2" >
+		  <div class="adj-height">
+		  Photo by <a href="https://unsplash.com/@rstar50?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Roger Starnes Sr</a> on <a href="https://unsplash.com/photos/a-blue-house-with-a-white-porch-and-red-chimney-JxGZFKPx5n0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+		  </div >
 	  	</div>
         
     </div>
@@ -999,24 +1072,32 @@ text-decoration: underline;
 	   </div>
        
 	   
-	    <progress value="50" max="100" class="progress-cls" ></progress>	
+	   <div class= "w1-container-1-post-1">
+	     <div class="w1-container-1" style="flex-direction: row;">
+         <img class="w1-img2" src="whiterose-nb-AI-new1.jpg" alt="Description">
+		 <p>&nbsp&nbsp</p>
+		 <progress value="75" max="100" ></progress>
+         <p>&nbsp&nbsp</p>
+         <img class="w1-img2" src="whiterose-nb-AI-new1.jpg" alt="Description">		 
+         </div>	
+        </div> 		 
     </div>
 	
 	<!-- Image Wrapper 4 -->
     <div class="image-wrapper" id="review" style="background: #101010;">>
        
 	   
-	   <div class="elm-gen elm1w4">Reviews</div>
+	   <div class="common-css-txt w4-txt-1">Reviews</div>
 
-       <div class= "container-w4-post">
-	     <div class="container-w4-1">
-          <img class="elm-img4" src="A_Positive_Customer_Experience_in_Ecommerce-new-1.jpg" alt="Description">   
-	   <p class="image-title-bottom">Photograph By <a href="https://commons.wikimedia.org/wiki/File:A_Positive_Customer_Experience_in_Ecommerce.jpg">Zuko.io Images</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons</p>
+       <div class= "w4-container-1-post">
+	     <div class="w4-container-1">
+          <img class="w4-img1" src="A_Positive_Customer_Experience_in_Ecommerce-new-1.jpg" alt="Description">   
+	   <p class="common-attr-lnk">Photograph By <a href="https://commons.wikimedia.org/wiki/File:A_Positive_Customer_Experience_in_Ecommerce.jpg">Zuko.io Images</a>, <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a>, via Wikimedia Commons</p>
          </div>	
         </div>       
 
 	   
-	   <div class="elm-gen elm2w4 ">
+	   <div class="common-css-txt w4-txt-2 ">
 	   <ul class="ul-cls-rvw">
   <li>Ahmed is best. I am glad to have my dish washer fixed by him which was not working since last two months  .....</li>  
   <li style="color: #ffffcc;">John Philip</li>
